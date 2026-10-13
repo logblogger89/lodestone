@@ -21,8 +21,8 @@
 
 | ID | Deliverable | Phase | Status | Owner | Target | Link / notes |
 |---|---|---|---|---|---|---|
-| P0.1 | Program plan | 0 | 🟨 | Claude → Ayush | 10-13 | [PROGRAM_PLAN.md](./PROGRAM_PLAN.md) |
-| P0.2 | Tracker | 0 | 🟨 | Claude → Ayush | 10-13 | this file |
+| P0.1 | Program plan | 0 | 🟨 | Claude → Ayush | 10-13 | [PROGRAM_PLAN.md](./PROGRAM_PLAN.md) · [Doc](https://docs.google.com/document/d/1egG-ZGJoWSdLKffYtiW9phEdhZZ_-aYG2L2EUiCGWIM/edit) |
+| P0.2 | Tracker | 0 | 🟨 | Claude → Ayush | 10-13 | this file · [Sheet](https://docs.google.com/spreadsheets/d/1El802ncfxhE_QOeBwGuHp9YuiNWHwxoq_KaGapRPbLo/edit) |
 | P0.3 | Repo skeleton and README | 0 | ✅ | Claude | 10-13 | [README](../../README.md) |
 | P1.1 | Problem statement, goals, non-goals | 1 | ⬜ | Ayush + Claude | 10-14 | |
 | P1.2 | User profile and persona | 1 | ⬜ | Ayush + Claude | 10-14 | |
@@ -46,6 +46,7 @@
 | P3.3 | Ingestion design | 3 | ⬜ | Claude | 10-16 | |
 | P3.4 | Matching and scoring design and eval set | 3 | ⬜ | Claude + Ayush (labels) | 10-16 | |
 | P3.5 | Hosting, cost and ops | 3 | ⬜ | Claude | 10-16 | |
+| P3.5a | Extensibility design | 3 | ⬜ | Claude | 10-16 | See plan §2.1 |
 | P3.6 | Security and privacy | 3 | ⬜ | Claude | 10-16 | |
 | P3.7 | Test and eval strategy | 3 | ⬜ | Claude | 10-16 | |
 | P3.8 | ADRs | 3 | ⬜ | Claude → Ayush | 10-16 | `docs/tech/adr/` |
@@ -59,12 +60,14 @@
 | D-001 | 2026-10-13 | The program runs as gated phases: Requirements → Design / Prototype → Tech Design → Build | Ayush's direction | Ayush |
 | D-002 | 2026-10-13 | All program docs live in the repo under `docs/`. Status lives only in `TRACKER.md` | One source of truth, versioned | Proposed (Claude) |
 | D-003 | 2026-10-13 | No resume or personal contact details are committed to the repo | Privacy, since the repo may become public | Proposed (Claude) |
+| D-004 | 2026-10-13 | Readable copies of artifacts are published to the Lodestone Google Drive folder. The repo stays canonical | Easy to read and share for PM/PgM stakeholders | Ayush |
+| D-005 | 2026-10-13 | Built for one, ready for many: the MVP is single-user, but user, role, geography, leveling, comp, eligibility, sources and scoring are config or plugins (plan §2.1) | Extensibility to other users, roles and geographies after the MVP | Ayush |
 
 ## 4. Open questions (agenda for the Phase 1 brainstorm)
 
 | ID | Question | Feeds | Status | Answer |
 |---|---|---|---|---|
-| Q-01 | Who is Lodestone for: just you, or could it become multi-user later? This drives auth, data model and scope | P1.1 | Open | |
+| Q-01 | Who is Lodestone for: just you, or could it become multi-user later? This drives auth, data model and scope | P1.1 | Answered | The MVP is single-user. It should be extensible to other users, roles and geographies after the MVP (D-005). Still open: is multi-user auth in V1 or later? |
 | Q-02 | Comp target: what's the walk-away floor vs. the "would move for" number, in CAD? How should private-startup equity be valued against Google RSUs? | P1.6 | Open | |
 | Q-03 | Level target: L6-equivalent only, or also strong L5-equivalent roles with a clear promo path? Open to Group PM / Head of Product at startups? | P1.5 | Open | |
 | Q-04 | Geography: GTA in person, hybrid, or remote-in-Canada? Is Waterloo/Kitchener inside the radius? | P1.1, P1.8 | Open | |
@@ -87,6 +90,7 @@
 | R-04 | Risk | The compressed timeline (about 2 days of design) may cut design quality | Med | Strict time-boxes, MVP cut lines, defer non-MVP to "Later" | Ayush + Claude | Open |
 | R-05 | Risk | LLM fit scores may be noisy or uncalibrated | Med | A labeled eval set (P3.4) and explainable sub-scores | Claude | Open |
 | A-01 | Assumption | A Google L5 maps roughly to Amazon L6/L7 and to "Senior/Principal PM" at most others, and the target is L6-equivalent scope | — | Validate in P1.5 | Claude | Open |
+| R-06 | Risk | Extensibility over-engineering slows the MVP | Med | Build seams (interfaces, config) now, but only one implementation of each. No speculative packs | Claude | Open |
 | A-02 | Assumption | The comp anchor is about US$450K TC (US$229K base, 15% bonus target, about US$187K equity per year) | — | Confirm the equity figure and vesting in P1.6 | Ayush | Open |
 | D-01 | Dependency | Toolchain and hosting choice | — | ADRs in Phase 3 | Claude | Open |
 
@@ -95,3 +99,13 @@
 | Date | Change | By |
 |---|---|---|
 | 2026-10-13 | Created the program plan, tracker and README. Phase 0 ready for review | Claude |
+| 2026-10-13 | Added the extensibility principle (G5, plan §2.1, P3.5a, D-005, R-06) and the Google Drive companion folder (D-004, §7) | Claude |
+
+## 7. Published artifacts (Google Drive)
+
+Folder: [Lodestone](https://drive.google.com/drive/folders/1Lg2FCikLlqf2YzYX--DrWZ4w2fUCQ4GV)
+
+| Artifact | Type | Source in repo | Drive link | Last synced |
+|---|---|---|---|---|
+| Program Plan | Google Doc | docs/program/PROGRAM_PLAN.md | [Open](https://docs.google.com/document/d/1egG-ZGJoWSdLKffYtiW9phEdhZZ_-aYG2L2EUiCGWIM/edit) | 2026-10-13 |
+| Program Tracker | Google Sheet (one tab per section) | docs/program/TRACKER.md | [Open](https://docs.google.com/spreadsheets/d/1El802ncfxhE_QOeBwGuHp9YuiNWHwxoq_KaGapRPbLo/edit) | 2026-10-13 |

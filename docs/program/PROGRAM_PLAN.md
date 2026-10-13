@@ -30,6 +30,24 @@ Lodestone's job is to handle all three on every listing, so the user only spends
 | G2 | Rank by real fit (level, comp, domain, visa) | Most of the top 10 in each digest are worth applying to |
 | G3 | Track the pipeline from discovery to offer | One place for the status of every application |
 | G4 | Be fun and a showcase | A portfolio-quality product with PM artifacts behind it |
+| G5 | Be extensible after the MVP to other users, roles, geographies and criteria | Adding a new role family or geography takes configuration, not a rewrite |
+
+### 2.1 Design principle: built for one, ready for many
+
+The MVP serves one user: Ayush, a senior PM looking in the GTA. Everything specific to that user is modeled as **data or configuration, never hard-coded logic**, so the product can later serve other people with other roles, in other places, with other criteria:
+
+| Dimension | MVP value | Extension point |
+|---|---|---|
+| User | Ayush | User profile and preferences per user. The data model is ready for multiple tenants |
+| Role family | Product management (PM, GPM, TPM, Product Lead…) | A pluggable role taxonomy and title-synonym packs |
+| Geography | GTA (± Waterloo) | Geo packs: locations, currency, cost-of-living index, pay-transparency rules |
+| Leveling | Google ladder ↔ other companies | Leveling maps per role family, as versioned data |
+| Comp | USD→CAD with a cost-of-living adjustment and an equity liquidity discount | A comp model driven by per-user anchor and weights |
+| Eligibility | US H-1B → Canada work authorization | Eligibility rule packs per (origin status, destination country) |
+| Sources | Public ATS feeds and career pages | Source adapters behind a common interface |
+| Scoring | Fit criteria for Ayush | User-weighted criteria with explainable sub-scores |
+
+Rule of thumb for every requirement and design decision: *"Would this still work for a nurse in Berlin?"* If the answer is no, the specific part belongs in a profile or pack, not in the core.
 
 ## 3. Phases, deliverables and exit gates
 
@@ -55,7 +73,7 @@ Setup   -->  Requirements    -->  Design / Prototype -> Technical Design --> Bui
 ### Phase 1: Requirements brainstorm and PRD
 | ID | Deliverable | Notes |
 |---|---|---|
-| P1.1 | Problem statement, goals and non-goals | What Lodestone is and is not (e.g. not a multi-user product at launch?) |
+| P1.1 | Problem statement, goals and non-goals | The MVP is single-user, but the extensibility constraints in §2.1 are in scope as requirements |
 | P1.2 | User profile and job-search persona | Experience, domains (Enterprise AI, Trust & Safety, Data platforms, Commerce), must-haves and deal-breakers |
 | P1.3 | Critical user journeys (CUJs) | e.g. "Morning digest", "Evaluate a role", "Tailor and apply", "Track pipeline", "Prep for interview" |
 | P1.4 | Feature brainstorm, then a prioritized backlog | Diverge first, then converge with MoSCoW and RICE. MVP / V1 / Later cut lines |
@@ -89,6 +107,7 @@ Setup   -->  Requirements    -->  Design / Prototype -> Technical Design --> Bui
 | P3.3 | Ingestion design | Source adapters, deduplication, freshness, rate limits, ToS compliance |
 | P3.4 | Matching and scoring design | Rules plus LLM scoring that uses the P1.5–P1.7 frameworks. Explainable scores, eval set |
 | P3.5 | Hosting, cost and ops | Budget ceiling, deploy pipeline, monitoring |
+| P3.5a | Extensibility design | Plugin and config boundaries for sources, role taxonomies, geo, comp and eligibility packs. Multi-tenant-ready data model (see §2.1) |
 | P3.6 | Security and privacy | The resume and comp data are PII: auth, secrets, data retention |
 | P3.7 | Test strategy and eval plan | Unit, integration and scoring evals against a labeled set of jobs |
 | P3.8 | ADRs (Architecture Decision Records) | `docs/tech/adr/NNNN-*.md` |
@@ -115,6 +134,7 @@ The user wants to start coding in about two days, so the design phases are compr
 ## 5. Ways of working
 
 - **Single source of truth.** All docs live in this repo under `docs/`. Status lives only in `TRACKER.md`.
+- **Readable companion copies (Google Drive).** Shareable versions of key artifacts (docs, sheets, slides) are published to the [Lodestone Drive folder](https://drive.google.com/drive/folders/1Lg2FCikLlqf2YzYX--DrWZ4w2fUCQ4GV). The repo stays canonical. Drive copies are refreshed at milestones and gates, and links are listed in the tracker's §7.
 - **Session ritual.** Each working session starts with a tracker review (2 minutes) and ends with a tracker update: status, decisions, new questions and risks. Claude commits the updates.
 - **Decisions.** Every material choice gets a Decision Log entry (`D-###`) with its rationale. Major technical choices also get an ADR.
 - **Gates.** A phase moves to ✅ only with an explicit "approved" from the user, logged as a decision.
