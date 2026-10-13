@@ -1,17 +1,16 @@
 # Lodestone
 
-A personal job portal that finds, ranks and tracks senior product management roles in the Greater Toronto Area. It translates titles, levels, compensation and work eligibility across the US–Canada border.
+A personal job portal that finds, ranks and tracks roles in Canada for one user on a path to Canadian PR. Built for one user, but designed so it can later serve others.
 
 ## Status
 
-Planning. See the [program plan](docs/program/PROGRAM_PLAN.md) and the live [tracker](docs/program/TRACKER.md).
+Program setup (M0). See the [Program Plan](docs/program/PROGRAM_PLAN.md) and the live [Tracker](docs/program/TRACKER.md).
 
 ## Repo layout
 
 ```
 docs/
-  program/        Program plan and tracker
-  requirements/   PRD and the leveling, comp and eligibility frameworks   (Phase 1)
-  design/         IA, flows, wireframes, prototype, design doc            (Phase 2)
-  tech/           Tech design doc and ADRs                                (Phase 3)
+  program/   PgM: Program Plan, Tracker
+  product/   Product: PRD, CUJs, UX spec, mocks, prototype
+  eng/       Engineering: Eng Design Doc, ADRs
 ```
