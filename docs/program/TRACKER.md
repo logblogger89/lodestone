@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-14 · **Current milestone:** M0 → M1 · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14).** UX review questions are resolved (D-030 to D-032), and the prototype is at v3. **Awaiting:** Ayush's M2 approval. **Next:** M3 Eng Design Doc.
+**Status summary (2026-10-14).** **M2 approved** (D-033). **M3 (Eng Design) in progress.** First decision: where the app runs (Q-20). Ayush wants low friction moving between iPad and laptop.
 
 ---
 
@@ -15,8 +15,8 @@
 |---|---|---|---|---|---|---|
 | M0 | Program kickoff | 🟢 | ✅ Done | 10-13 | ✅ 10-14 (D-013) | |
 | M1 | PRD approved | 🟢 | ✅ Done | Rolling | ✅ 10-14 (D-029) | PRD v0 approved |
-| M2 | UX review passed | 🟢 | 🟦 In progress | Rolling | — | UX spec + clickable prototype |
-| M3 | Eng Design Doc approved | 🟢 | ⬜ | Rolling | — | M4 and M5 estimates get committed here |
+| M2 | UX review passed | 🟢 | ✅ Done | Rolling | ✅ 10-14 (D-033) | UX spec v0 + prototype v3 |
+| M3 | Eng Design Doc approved | 🟢 | 🟦 In progress | Rolling | — | Hosting/runtime decision first (Q-20) |
 | M4 | MVP dogfood | 🟢 | ⬜ | TBD at M3 | — | Placeholder: about 2 weeks after M3 |
 | M5 | Launch (v1) | 🟢 | ⬜ | TBD at M3 | — | |
 | M6 | Post-launch review | 🟢 | ⬜ | Launch + 2 weeks | — | |
@@ -34,9 +34,9 @@
 | D1.4 | DR-4 Job-source inventory and ToS | Data and sourcing | M1 | ✅ | Claude → Ayush | [DR-4_JOB_SOURCES.md](../product/research/DR-4_JOB_SOURCES.md). v1 done. ToS checks deferred to Eng Design |
 | D1.4a | DR-5 Company discovery and seed watchlist | Data and sourcing | M1 | ✅ | Claude → Ayush | [DR-5_COMPANY_DISCOVERY.md](../product/research/DR-5_COMPANY_DISCOVERY.md) · [watchlist_seed.csv](../../data/seed/watchlist_seed.csv) |
 | D1.5 | PRD v0 | Product | M1 | ✅ | Ayush + Claude | [PRD.md](../product/PRD.md). v0 in review: P0 R1–R15 with acceptance criteria, metrics, 4 open questions |
-| D2.1 | CUJ flows and IA | Product (UX) | M2 | 🟨 | Claude → Ayush | [UX_SPEC.md](../product/ux/UX_SPEC.md) §2–3 |
-| D2.2 | Screen specs and visual direction | Product (UX) | M2 | 🟨 | Claude → Ayush | [UX_SPEC.md](../product/ux/UX_SPEC.md) §4–6 |
-| D2.3 | Clickable prototype | Product (UX) | M2 | 🟨 | Claude → Ayush | [prototype.html](../product/ux/prototype.html) · [live link](https://claude.ai/artifact/C9f5CPbspLeydxtwVVBUKG) (private) |
+| D2.1 | CUJ flows and IA | Product (UX) | M2 | ✅ | Claude → Ayush | [UX_SPEC.md](../product/ux/UX_SPEC.md) §2–3 |
+| D2.2 | Screen specs and visual direction | Product (UX) | M2 | ✅ | Claude → Ayush | [UX_SPEC.md](../product/ux/UX_SPEC.md) §4–6 |
+| D2.3 | Clickable prototype | Product (UX) | M2 | ✅ | Claude → Ayush | [prototype.html](../product/ux/prototype.html) · [live link](https://claude.ai/artifact/C9f5CPbspLeydxtwVVBUKG) (private) |
 | D2.4 | UX review | Product (UX) | M2 | ✅ | Ayush | All 3 questions resolved (D-030 to D-032) |
 | D3.1 | Eng Design Doc | Engineering | M3 | ⬜ | Claude → Ayush | Includes the extensibility design (D-005) |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ⬜ | Claude → Ayush | |
@@ -82,6 +82,7 @@
 | D-030 | 10-14 | Job card content and density approved for iPad | UX review | Ayush |
 | D-031 | 10-14 | "Later" roles come back in the digest after 7 days (configurable) | UX review | Ayush |
 | D-032 | 10-14 | Interested automatically adds the role to Shortlisted in the pipeline | UX review | Ayush |
+| D-033 | 10-14 | **M2 approved:** UX spec v0 and prototype v3 | Gate review | Ayush |
 
 ## 4. Open questions
 
@@ -103,6 +104,7 @@
 | Q-14 | **Immigration profile.** Do you or your spouse have an Express Entry profile, a CRS estimate, language test results or an ECA? | — | ✅ Answered | There is an Express Entry profile with strong IELTS scores, but the CRS is low because of age (Ayush turns 37 on 11-15, his spouse turns 33 on 01-03). A PR route without a job offer isn't realistic on its own right now, so a job is the main path |
 | Q-15 | **Hard dates.** H-1B extension or expiry, vesting or refresh cliffs, parental leave: anything that constrains timing | — | ✅ Answered | The H-1B expires in Sep 2027 (D-016) |
 | Q-19 | Offer-by date? | — | ✅ Answered | None. Explore and apply to relevant roles (D-019) |
+| Q-20 | **Where does the app run?** On the local laptop (D-015), or on a cloud host so it works from any device with the laptop off? | M3 | Open | Options under discussion 10-14 |
 | Q-16 | Is a Google-internal transfer to Google Toronto or Waterloo on the table? If so, it's an LMIA-exempt channel to track | — | ✅ Answered | Yes. PM roles that fit at Google Canada are scarce, so Ayush is open to PM-adjacent roles inside or outside Google (D-011, D-012) |
 | Q-17 | Express Entry details for DR-3 | — | ✅ Resolved | They become optional in-app inputs: an Express Entry profile and CRS calculator that adjust listings (CR-5). Ayush has the details and will enter them in the app |
 | Q-18 | Which PM-adjacent families count? | — | ✅ Resolved | Delegated to Claude (D-017), with defaults in PRD §2b. No people-management roles by default, via a toggle (CR-6) |
@@ -154,6 +156,7 @@
 | 2026-10-14 | M1 approved (D-029). M2 (UX) started | Claude |
 | 2026-10-14 | UX spec v0 and clickable prototype v1 published for the M2 review | Claude |
 | 2026-10-14 | Prototype v2 and v3 (deep links, label explainer, exact-URL previews). UX review questions resolved (D-030 to D-032) | Claude |
+| 2026-10-14 | M2 approved (D-033). M3 started, beginning with the runtime decision (Q-20) | Claude |
 
 ## 7. Published artifacts (Google Drive)
 
