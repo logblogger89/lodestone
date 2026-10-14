@@ -42,7 +42,21 @@ Searching for jobs across borders comes down to three translation problems that 
 | CR-2 | **Toggle: include postings without a pay range.** On or off. When on, the listing shows "pay not disclosed", or an estimate with a confidence level if DR-2 supports one | D-014 | Ontario pay-transparency rules may make posted ranges more common. Check in DR-2 |
 | CR-3 | **Immigration-pathway signal per Canadian listing.** For example: LMIA-exempt (ICT), likely Global Talent Stream, sponsorship mentioned, and how it would build toward CEC or PNP. Usable as a filter or sort | Ayush (answer to Q-14) | Signals only, not advice (R-03). *Interpretation to confirm with Ayush* |
 | CR-4 | **Current-employer awareness and an "internal transfer" badge.** Know the user's current employer (via LinkedIn connect, import or manual entry). When a listing's employer matches it, label the listing "internal transfer" and show the ICT route | Ayush (answer to Q-16), D-012 | Feasibility risk R-10: LinkedIn API limits |
+| CR-5 | **Optional in-app Express Entry profile and CRS calculator.** The user enters their own and their spouse's details (age, education, language, work experience, ECA). Lodestone computes the CRS, shows which levers move it and by how much (a year of Canadian work experience, French, a provincial nomination, swapping the principal applicant), and weights or labels listings by how much they advance PR | Ayush (answer to Q-17) | Every field optional. CRS rules live in versioned config (R-12). Not advice (R-03) |
+| CR-6 | **People-management toggle.** Include or exclude roles that have direct reports. Defaults to exclude | Ayush (answer to Q-18) | Needs a "manages people" classifier on each listing |
 | NFR-1 | **Runs locally.** The MVP runs on the user's own machine | D-015 | Input to the Eng Design Doc |
+
+## 2b. Default role families (D-017, user-editable)
+
+Proposed by Claude. The defaults are based on Ayush's background: enterprise AI and data platforms, trust and safety, risk and compliance, commerce, and analytics.
+
+| Tier | Role families | Rationale |
+|---|---|---|
+| **Core** | Product Manager / Senior PM / Group PM (IC), Product Lead, Product Owner (at senior scope) | Direct match |
+| **Adjacent: strong** | Technical Program Manager, Product-facing Program Manager, Product Operations, Product Strategy / Strategy & Operations / BizOps, Chief of Staff (IC) | Same skills (roadmaps, cross-functional leadership, strategy). Common in Canadian tech, banks and scale-ups |
+| **Adjacent: domain** | Trust & Safety / Risk / Fraud / Compliance product or program roles, AI governance and responsible-AI roles, data platform or analytics product roles | Uses Ayush's domain depth. Banks and fintechs in Toronto hire these |
+| **Adjacent: stretch (off by default)** | Product Marketing Manager, Solutions or Customer Engineer, Product Analytics Lead | Partial overlap. Can be turned on if results are thin |
+| **Excluded by default** | Any role with direct reports (CR-6), project coordinator or junior PM titles | Ayush's preference and level fit |
 
 ## 3. Product principle: built for one, ready for many (D-005)
 

@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-14 · **Current milestone:** M0 → M1 · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14).** **M0 approved.** M1 (PRD) is now active. Ayush's answers turned several open questions into product requirements: an adjustable comp filter, pathway signals per listing, and an internal-transfer badge. Hosting is local. The program now has a hard deadline: the H-1B expires in Sep 2027, so we have a target offer-by date to agree on (Q-19). **Next:** the PRD session, including Q-17, Q-18 and Q-19 and the clarified Q-13.
+**Status summary (2026-10-14, later).** M1 (PRD) is in progress. Q-17 and Q-18 are resolved as product features and defaults: an optional in-app Express Entry profile with a CRS calculator (CR-5), a people-management toggle (CR-6), and Claude-proposed default role families (D-017). The Drive Sheet now syncs only at gates (D-018). **Open:** Q-13 (review time), Q-19 (offer-by date), and confirming the CR-3 interpretation. **Next:** the PRD session.
 
 ---
 
@@ -65,6 +65,8 @@
 | D-014 | 10-14 | Comp target is a user setting in the app, not a program input: an adjustable range filter, plus a toggle that includes postings without a pay range | Keeps the program unblocked, and it's better product (D-005) | Ayush |
 | D-015 | 10-14 | The MVP runs locally. Hosting budget isn't needed. LLM/API spend still gets decided at M3 | Ayush's direction | Ayush |
 | D-016 | 10-14 | Program deadline: the H-1B expires in Sep 2027, so the search aims to land an offer and work permit comfortably before then. The exact offer-by date is still open (Q-19) | Ayush's direction | Ayush |
+| D-017 | 10-14 | Claude defines the default PM-adjacent role families (PRD §2b). They are user-editable config, not hard-coded | Ayush delegated Q-18 | Ayush (delegated) |
+| D-018 | 10-14 | Batch syncing: the repo tracker updates every session, and the Drive Sheet and Docs refresh only at gates (or on request) | Less link churn and noise | Ayush |
 
 ## 4. Open questions
 
@@ -87,8 +89,8 @@
 | Q-15 | **Hard dates.** H-1B extension or expiry, vesting or refresh cliffs, parental leave: anything that constrains timing | — | ✅ Answered | The H-1B expires in Sep 2027 (D-016) |
 | Q-19 | **Offer-by date.** Proposal: a signed offer by **2027-03-31**. That leaves about 6 months for the work permit, the move, and a fallback if the first route stalls. Accept, or pick another date? | M1 | Open | |
 | Q-16 | Is a Google-internal transfer to Google Toronto or Waterloo on the table? If so, it's an LMIA-exempt channel to track | — | ✅ Answered | Yes. PM roles that fit at Google Canada are scarce, so Ayush is open to PM-adjacent roles inside or outside Google (D-011, D-012) |
-| Q-17 | **Express Entry details.** What is the current CRS score? Do you have an ECA for both spouses? What are your spouse's education, work experience and language scores (to compare her as principal applicant)? Any French? These help DR-3 find the levers that still move the score | M1 (DR-3) | Open | |
-| Q-18 | **Adjacent roles.** Which PM-adjacent families count, e.g. TPM/PgM, product strategy or ops, product marketing, solutions or customer engineering, chief of staff? Any that are ruled out? | M1 (PRD) | Open | |
+| Q-17 | Express Entry details for DR-3 | — | ✅ Resolved | They become optional in-app inputs: an Express Entry profile and CRS calculator that adjust listings (CR-5). Ayush has the details and will enter them in the app |
+| Q-18 | Which PM-adjacent families count? | — | ✅ Resolved | Delegated to Claude (D-017), with defaults in PRD §2b. No people-management roles by default, via a toggle (CR-6) |
 
 ## 5. RAID log (risks, assumptions, issues, dependencies)
 
@@ -107,6 +109,7 @@
 | R-09 | Risk | The CRS score drops at each birthday after 35 (Ayush on 11-15, spouse on 01-03), so a PR route without a job offer gets harder over time | High | Treat getting a work permit sooner as the priority (ICT and LMIA-exempt routes). DR-3 to check levers: CEC after Canadian work experience, PNP, category-based draws, spouse as principal applicant. Validate with a licensed consultant (RCIC) | Ayush + Claude | Open |
 | R-10 | Risk | LinkedIn's API probably won't expose the user's current employer to a personal app (OAuth sign-in returns only basic identity) | Med | DR-4 checks this. Fallbacks: import the LinkedIn data export or profile PDF, parse the resume, or enter it manually | Claude | Open |
 | R-11 | Risk | The deadline is fixed (Sep 2027), and a search, offer and work permit can take months | High | Ship the MVP fast. Set an offer-by date with buffer (Q-19). Run the Google transfer channel in parallel | Ayush + Claude | Open |
+| R-12 | Risk | The CRS rules (points grid, how job offers count, category draws) change over time, so a hard-coded calculator would go stale | Med | Put CRS rules in versioned config (D-005), show the rules version and date, and link to the official IRCC calculator for verification | Claude | Open |
 | A-03 | Assumption | The repo stays private. The PRD holds personal immigration and family context | — | Scrub it before any public release (M6) | Claude | Open |
 | DEP-1 | Dependency | Ayush's review time at each gate | — | See Q-13 | Ayush | Open |
 | DEP-2 | Dependency | Job sources that are legal to use | — | DR-4 | Claude | Open |
@@ -122,6 +125,7 @@
 | 2026-10-13 | Restructured to Google-style artifacts: the Program Plan is PgM only (OKRs, milestones M0–M6, staffing, governance), and product content moved to a PRD stub. Recorded Ayush's answers (D-006 to D-008). Added Q-13 to Q-16 and R-07, R-08 | Claude |
 | 2026-10-14 | Recorded the Q-14 and Q-16 answers. Added D-011, D-012, Q-17, Q-18 and R-09. Raised DR-3 priority | Claude |
 | 2026-10-14 | M0 approved. Recorded the answers to Q-02, Q-10, Q-12, Q-15 and Q-16 as D-013 to D-016, and moved the feature asks to the PRD. Added Q-19, R-10 and R-11. Clarified Q-13 | Claude |
+| 2026-10-14 | Resolved Q-17 and Q-18 as product features (CR-5, CR-6) and role-family defaults (D-017). Batch Drive sync (D-018). Added R-12 | Claude |
 
 ## 7. Published artifacts (Google Drive)
 
