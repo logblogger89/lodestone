@@ -134,7 +134,7 @@
 | R-12 | Risk | The CRS rules (points grid, how job offers count, category draws) change over time, so a hard-coded calculator would go stale | Med | Put CRS rules in versioned config (D-005), show the rules version and date, and link to the official IRCC calculator for verification | Claude | Open |
 | R-13 | Risk | Employer-level sponsorship signals from web research may be stale, wrong or unverifiable | Med | Prefer official data, e.g. ESDC's published positive-LMIA employer lists (to verify in DR-3/DR-4). Show the source, date and a confidence level, and never hide a listing because of it (D-021) | Claude | Open |
 | R-14 | Risk | A browser extension that reads LinkedIn or Wellfound pages could breach their terms, even when the user is looking at the page themselves | Med | Review ToS before building A3d. Fall back to paste URL or paste text (A3a, A3b), which are always available | Claude | Open |
-| I-01 | Issue | The environment's network blocks all 11 required domains (checked 10-14 with scripts/check_network.py) | **High** | Ayush sets Network access to Full (recommended) or adds the domains under Limited | Ayush | Open |
+| I-01 | Issue | The environment's network blocked the required domains | — | **Resolved 10-14:** Ayush set Network access to Full. All 10 refresh sources are reachable. www.canada.ca doesn't respond to cloud servers, but it isn't needed by refresh (only browser links) | Ayush | Closed |
 | A-03 | Assumption | The repo stays private. The PRD holds personal immigration and family context | — | Scrub it before any public release (M6) | Claude | Open |
 | DEP-1 | Dependency | Ayush's review time at each gate | — | See Q-13 | Ayush | Open |
 | DEP-2 | Dependency | Job sources that are legal to use | — | DR-4 | Claude | Open |
@@ -166,6 +166,7 @@
 | 2026-10-14 | Region changed to us-central1 (D-035). Plain-English summary added to the Eng Design Doc. Working agreement: explain in plain language for a PM audience | Claude |
 | 2026-10-14 | Architecture pivot: Phase 1 runs on a Claude Code engine with an Artifact app (D-036). Cloud Run moved to Phase 2. I-01 is now high priority | Claude |
 | 2026-10-14 | Freshness indicator added (R11a, D-037). Domain allowlist file and checker added (D-038) | Claude |
+| 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 
 ## 7. Published artifacts (Google Drive)
 
