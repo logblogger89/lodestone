@@ -6,7 +6,7 @@
 | **Sponsor and decision-maker** | Ayush Gupta |
 | **Program manager (TPgM)** | Claude |
 | **Doc status** | Draft v2, in review |
-| **Last updated** | 2026-10-13 |
+| **Last updated** | 2026-10-14 |
 | **Live status** | [`TRACKER.md`](./TRACKER.md) |
 
 > **Scope of this doc.** This is the *program* plan: why the program exists, what it commits to, milestones, timeline, staffing, governance and risks. *Product* content (users, CUJs, requirements, features, UX) lives in the PRD ([`docs/product/PRD.md`](../product/PRD.md)) and is worked in the Product phase.
@@ -40,6 +40,7 @@ The program's real outcome, Ayush landing a role, depends on the job market as w
 |---|---|
 | A single-user product for Ayush, kept private | Multi-user accounts, a public launch. Revisit after launch (D-006) |
 | Roles in Canada: GTA and Waterloo first, then the rest of Canada if results are thin | Roles outside Canada |
+| PM and PM-adjacent roles, both external and through a Google-internal transfer (D-011, D-012) | |
 | Discovery, fit evaluation and tracking of roles (details in the PRD) | Running the applications themselves or giving immigration legal advice |
 | An architecture that can extend to other users, roles and geographies later (D-005) | Building those extensions before the MVP launches |
 
@@ -114,6 +115,7 @@ The full RAID log is in the tracker. These are the risks that matter at program 
 |---|---|---|
 | R-04 | The compressed planning schedule (about 3 days to M3) could lower quality | Time-boxed gates, MVP cut line, and anything that isn't MVP goes to V1.x |
 | R-07 | The Canadian market may not have enough roles that fit: employers often avoid sponsoring foreign hires because of the work-permit (LMIA) process | Widen geography if needed (D-007). Weight LMIA-exempt routes in the PRD. Treat a PR route that doesn't need a job offer as a parallel track (Q-14) |
+| R-09 | The Express Entry CRS score drops at each birthday, so a PR route without a job offer keeps getting harder | Prioritize getting a work permit sooner (ICT and LMIA-exempt routes). DR-3 maps the remaining levers |
 | R-08 | Ayush's limited time slows the gates | Claude pre-drafts everything, and reviews are kept short and async-friendly |
 | R-03 | Immigration rules are complex and change over time | Lodestone only shows signals, never advice. Any decision gets validated with a licensed immigration consultant or lawyer |
 

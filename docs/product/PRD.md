@@ -25,6 +25,9 @@ Searching for jobs across borders comes down to three translation problems that 
 |---|---|
 | **Motivation** | A path to Canadian PR and then citizenship. Today: H-1B, approved I-140, stuck in the EB-2 India queue. Values geographic stability (newborn) and freedom from employer-tied status. Wants to stay in the developed world. Travel freedom from a Canadian passport |
 | **Level** | Open to any level, as long as the role is competitive and comparable to his current scope (Google L5, operating near L6) |
+| **Role family** | PM roles plus PM-adjacent roles, inside or outside Google. PM roles that fit at Google Canada are scarce (D-011). Which adjacent families count is open (Q-18) |
+| **Channels** | External roles plus a Google-internal transfer to Google Canada, which is LMIA-exempt (D-012) |
+| **Express Entry** | There is a profile with strong IELTS scores, but the CRS is low because of age, and it drops at each birthday (R-09). For now a job or work permit is the main path to PR |
 | **Work mode** | In-office, hybrid or remote are all fine |
 | **Geography** | GTA plus Waterloo first. Expand to the rest of Canada if results are thin |
 | **Audience** | Just for Ayush for now. It might go public later |
@@ -37,7 +40,7 @@ The MVP serves one user. Everything specific to that user is modeled as **data o
 | Dimension | MVP value | Extension point |
 |---|---|---|
 | User | Ayush | User profile and preferences per user. The data model is ready for multiple tenants |
-| Role family | Product management (PM, GPM, TPM, Product Lead…) | A pluggable role taxonomy and title-synonym packs |
+| Role family | PM plus PM-adjacent families (defined via Q-18) | A pluggable role taxonomy and title-synonym packs |
 | Geography | GTA plus Waterloo, then the rest of Canada | Geo packs: locations, currency, cost-of-living index, pay-transparency rules |
 | Leveling | Google ladder ↔ other companies | Leveling maps per role family, as versioned data |
 | Comp | USD→CAD with a cost-of-living adjustment and an equity liquidity discount | A comp model driven by a per-user anchor and weights |
@@ -53,7 +56,7 @@ Test for every requirement: *"Would this still work for a nurse in Berlin?"*
 |---|---|---|
 | DR-1 | **Leveling equivalency.** Google L5/L6 compared with Amazon, Meta, Microsoft, Shopify, Canadian banks and scale-ups, plus heuristics for startups | Level fit scoring |
 | DR-2 | **Comp normalization.** USD→CAD, cost of living, base/bonus/equity weighting, a liquidity discount for private equity, and the target and floor (Q-02) | Comp fit scoring |
-| DR-3 | **Immigration pathways.** Employer work permit with LMIA, Global Talent Stream, intra-company transfer (for example, Google US → Google Canada), Express Entry PR without a job offer, provincial programs (OINP). What signals can be read from job listings | Eligibility scoring and a parallel PR track |
+| DR-3 | **Immigration pathways.** Employer work permit with LMIA, Global Talent Stream, intra-company transfer (for example, Google US → Google Canada), Express Entry PR without a job offer, provincial programs (OINP), CEC after Canadian work experience, category-based draws, and comparing either spouse as principal applicant. What signals can be read from job listings | Eligibility scoring and a parallel PR track |
 | DR-4 | **Job-source inventory.** Public ATS feeds (Greenhouse, Lever, Ashby, Workday), career pages, aggregators. ToS and legal feasibility | Sourcing (also an input to the Eng Design Doc) |
 
 ## 5. Deferred to the PRD session (Ayush: "let's chat MVP and post-MVP in detail")
