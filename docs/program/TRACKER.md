@@ -115,6 +115,7 @@
 | R-11 | Risk | Starting the search late leaves less buffer before the H-1B expires (Sep 2027) | Med | Ship the MVP fast. Run the Google transfer channel in parallel. No fixed offer-by date (D-019) | Ayush + Claude | Open |
 | R-12 | Risk | The CRS rules (points grid, how job offers count, category draws) change over time, so a hard-coded calculator would go stale | Med | Put CRS rules in versioned config (D-005), show the rules version and date, and link to the official IRCC calculator for verification | Claude | Open |
 | R-13 | Risk | Employer-level sponsorship signals from web research may be stale, wrong or unverifiable | Med | Prefer official data, e.g. ESDC's published positive-LMIA employer lists (to verify in DR-3/DR-4). Show the source, date and a confidence level, and never hide a listing because of it (D-021) | Claude | Open |
+| R-14 | Risk | A browser extension that reads LinkedIn or Wellfound pages could breach their terms, even when the user is looking at the page themselves | Med | Review ToS before building A3d. Fall back to paste URL or paste text (A3a, A3b), which are always available | Claude | Open |
 | A-03 | Assumption | The repo stays private. The PRD holds personal immigration and family context | — | Scrub it before any public release (M6) | Claude | Open |
 | DEP-1 | Dependency | Ayush's review time at each gate | — | See Q-13 | Ayush | Open |
 | DEP-2 | Dependency | Job sources that are legal to use | — | DR-4 | Claude | Open |
@@ -134,6 +135,7 @@
 | 2026-10-14 | CR-3 confirmed and extended (CR-3a, D-021). Q-19: no deadline (D-019). Q-13: rolling, gate-sequenced dates (D-020). Added R-13 and revised R-08 and R-11. All PgM questions closed | Claude |
 | 2026-10-14 | Brainstorm results recorded in PRD §2c and §2d (D-022). DR-4 started | Claude |
 | 2026-10-14 | DR-4 v1 done: source inventory, ingest strategy, dedup design, and pay-transparency and LMIA findings | Claude |
+| 2026-10-14 | Added the paste-link capture features A3a to A3h (tiers proposed) and R-14 | Claude |
 
 ## 7. Published artifacts (Google Drive)
 
