@@ -17,7 +17,7 @@ No cloud servers and no paid API yet. **Phase 2** (Cloud Run + the Claude API, Â
 **How it works**
 1. **The app** is a private claude.ai Artifact (the prototype, made real). Ayush opens it on any device.
 2. **Its data** lives in the Artifact's built-in database (the `db` capability): jobs, scores, signals, and Ayush's triage, pipeline and preferences. The page reads it live. Claude reads and writes it from any Claude Code session.
-3. **A refresh** happens when Ayush asks for one in a Claude Code session ("refresh jobs", or `/refresh`, from the iPad or the laptop browser):
+3. **A refresh** happens when Ayush asks for one in a Claude Code session (`/refresh-jobs`, from the iPad or the laptop browser):
    - a repo script (`lodestone refresh`) pulls public job-system feeds for the watchlist, normalizes them, removes duplicates, applies the rules filter, and checks whether postings are still live
    - **Claude, in the session, reads and scores the new candidates.** This is covered by Ayush's Claude subscription, so there's no API bill
    - the results are written to the Artifact's database, and the code changes are pushed to GitHub
@@ -30,10 +30,18 @@ No cloud servers and no paid API yet. **Phase 2** (Cloud Run + the Claude API, Â
 
 **Prerequisite (one-time, Ayush):** let this Claude Code environment reach the public job feeds. Add these allowed domains in the environment's network settings: `boards-api.greenhouse.io`, `api.lever.co`, `api.eu.lever.co`, `api.ashbyhq.com`, `api.smartrecruiters.com`, `apply.workable.com`, `myworkdayjobs.com`, `open.canada.ca`, `www.canada.ca`, `hacker-news.firebaseio.com`, `hn.algolia.com`.
 
+**Commands (project skills, D-039).** Each command updates its own timestamp in the freshness panel (R11a):
+| Command | Does | Typical cadence |
+|---|---|---|
+| `/refresh-jobs` | Pull new postings, dedup, filter, score new jobs, flag closed postings, process the paste inbox | Whenever you like (e.g. a few times a week) |
+| `/discover-companies` | Run the discovery pathways and add new companies to the watchlist | Weekly |
+| `/refresh-signals` | Load the newest ESDC LMIA employer list and recompute pathway signals | Quarterly (`/refresh-jobs` warns when it's due) |
+| `/rescore` | Re-score every open job after a change to the scoring logic or your profile | After changes |
+
 **Phase 1 build plan**
 | Sprint | Scope | Exit |
 |---|---|---|
-| P1-S1 | Core library: Greenhouse, Lever, Ashby and SmartRecruiters adapters, normalization, Canada filter, dedup, rules, plus the `/refresh` runbook (project skill) | A refresh produces deduplicated Canadian candidates from the seed list |
+| P1-S1 | Core library: Greenhouse, Lever, Ashby and SmartRecruiters adapters, normalization, Canada filter, dedup, rules, plus the `/refresh-jobs` command (D-039) | A refresh produces deduplicated Canadian candidates from the seed list |
 | P1-S2 | The Artifact app wired to the `db` capability: digest, detail, triage, pipeline, settings, companies | Ayush triages real jobs on the iPad |
 | P1-S3 | Profile (from the CV, stored in the Artifact's database, never in the repo), Claude scoring with explanations, weights | Ranked, explained digest |
 | P1-S4 | Capture inbox, pay estimates, pathway signals (ESDC list), liveness | All P0 journeys work |

@@ -88,6 +88,7 @@
 | D-036 | 10-14 | **Phase 1 has no Cloud Run and no paid API.** Claude Code is the engine (refresh on request, with scoring covered by the Claude subscription), and a private Artifact with its built-in database is the app. Cloud Run + the Claude API (D-034, D-035) move to Phase 2, for when there are more users or a fixed schedule is needed | Ayush: avoid API costs until there's a need | Ayush |
 | D-037 | 10-14 | Infrequent refreshes are fine. Add a freshness indicator with the last-refresh time per component (job pulls, scoring and model version, signals, discovery, profile) (R11a) | Ayush | Ayush |
 | D-038 | 10-14 | Required domains live in `config/network_allowlist.txt`. `scripts/check_network.py` runs at every refresh and lists any that are blocked. Network settings can only be changed by Ayush (an environment setting) | Future sources need new domains | Claude |
+| D-039 | 10-14 | Command names: `/refresh-jobs` (main), `/discover-companies`, `/refresh-signals`, `/rescore`. Each updates its freshness timestamp | Specific names, room for more refresh types | Ayush |
 
 ## 4. Open questions
 
@@ -167,6 +168,7 @@
 | 2026-10-14 | Architecture pivot: Phase 1 runs on a Claude Code engine with an Artifact app (D-036). Cloud Run moved to Phase 2. I-01 is now high priority | Claude |
 | 2026-10-14 | Freshness indicator added (R11a, D-037). Domain allowlist file and checker added (D-038) | Claude |
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
+| 2026-10-14 | Command names set (D-039) | Claude |
 
 ## 7. Published artifacts (Google Drive)
 
