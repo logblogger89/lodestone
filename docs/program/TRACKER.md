@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-14 · **Current milestone:** M0 → M1 · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14).** Q-16 and Q-14 are answered. A Google-internal transfer is in play, and the role scope now includes PM-adjacent roles (D-011, D-012). The Express Entry score is low because of age and drops again at each birthday, which adds time pressure (R-09). **Next:** approve M0, then answer Q-02 (comp floor), Q-13 (capacity), Q-17 (Express Entry details) and Q-18 (adjacent-role families). After that, the PRD session.
+**Status summary (2026-10-14).** **M0 approved.** M1 (PRD) is now active. Ayush's answers turned several open questions into product requirements: an adjustable comp filter, pathway signals per listing, and an internal-transfer badge. Hosting is local. The program now has a hard deadline: the H-1B expires in Sep 2027, so we have a target offer-by date to agree on (Q-19). **Next:** the PRD session, including Q-17, Q-18 and Q-19 and the clarified Q-13.
 
 ---
 
@@ -13,8 +13,8 @@
 
 | # | Milestone | RAG | Status | Target | Gate approved | Notes |
 |---|---|---|---|---|---|---|
-| M0 | Program kickoff | 🟢 | 🟨 In review | 10-13 | — | Plan v2 and tracker restructured |
-| M1 | PRD approved | 🟢 | ⬜ | 10-14 | — | Depends on Q-02, Q-14 and DR-1 to DR-4 |
+| M0 | Program kickoff | 🟢 | ✅ Done | 10-13 | ✅ 10-14 (D-013) | |
+| M1 | PRD approved | 🟢 | 🟦 In progress | 10-14 | — | Product session next. Depends on DR-1 to DR-4 |
 | M2 | UX review passed | 🟢 | ⬜ | 10-15 | — | |
 | M3 | Eng Design Doc approved | 🟢 | ⬜ | 10-16 | — | M4 and M5 dates get committed here |
 | M4 | MVP dogfood | 🟢 | ⬜ | TBD at M3 | — | Placeholder: about 2 weeks after M3 |
@@ -25,8 +25,8 @@
 
 | ID | Deliverable | Workstream | Milestone | Status | Owner | Link / notes |
 |---|---|---|---|---|---|---|
-| D0.1 | Program Plan | PgM | M0 | 🟨 | Claude → Ayush | [PROGRAM_PLAN.md](./PROGRAM_PLAN.md) |
-| D0.2 | Tracker | PgM | M0 | 🟨 | Claude → Ayush | this file |
+| D0.1 | Program Plan | PgM | M0 | ✅ | Claude → Ayush | [PROGRAM_PLAN.md](./PROGRAM_PLAN.md) |
+| D0.2 | Tracker | PgM | M0 | ✅ | Claude → Ayush | this file |
 | D0.3 | Repo skeleton, README, CLAUDE.md | PgM | M0 | ✅ | Claude | |
 | D1.1 | DR-1 Leveling equivalency | Domain research | M1 | ⬜ | Claude | PRD §4 |
 | D1.2 | DR-2 Comp normalization | Domain research | M1 | ⬜ | Claude | Needs Q-02 |
@@ -61,13 +61,17 @@
 | D-010 | 10-13 | Milestones M0–M6 replace the earlier phases. Build dates (M4, M5) get committed at M3 | An honest schedule only exists after scope and design are set | Proposed (Claude) |
 | D-011 | 10-14 | Role scope widens from PM roles to PM and PM-adjacent roles, inside or outside Google. The exact adjacent families get defined in the PRD (Q-18) | Google Canada has few PM roles that fit, and Ayush is open to adjacent work | Ayush |
 | D-012 | 10-14 | A Google-internal transfer (Google Canada) is tracked as its own channel next to external roles | Intra-company transfers are LMIA-exempt, so this is likely the fastest route to a work permit | Ayush |
+| D-013 | 10-14 | **M0 approved:** Program Plan v2 and the tracker | Gate review | Ayush |
+| D-014 | 10-14 | Comp target is a user setting in the app, not a program input: an adjustable range filter, plus a toggle that includes postings without a pay range | Keeps the program unblocked, and it's better product (D-005) | Ayush |
+| D-015 | 10-14 | The MVP runs locally. Hosting budget isn't needed. LLM/API spend still gets decided at M3 | Ayush's direction | Ayush |
+| D-016 | 10-14 | Program deadline: the H-1B expires in Sep 2027, so the search aims to land an offer and work permit comfortably before then. The exact offer-by date is still open (Q-19) | Ayush's direction | Ayush |
 
 ## 4. Open questions
 
 | ID | Question | Blocks | Status | Answer |
 |---|---|---|---|---|
 | Q-01 | Single-user or multi-user? | — | ✅ Answered | Just Ayush for now, could go public later (D-006) |
-| Q-02 | Comp: the walk-away floor and the "would move for" number, in CAD. How should private equity be valued? | M1 (DR-2) | Open | |
+| Q-02 | Comp: the walk-away floor and the "would move for" number, in CAD. How should private equity be valued? | — | ✅ Resolved | It becomes an in-app setting (D-014). DR-2 still defines the normalization method and sensible defaults |
 | Q-03 | Target level? | — | ✅ Answered | Any level that is competitive and comparable to current scope (D-008) |
 | Q-04 | Geography and work mode? | — | ✅ Answered | GTA plus Waterloo, then the rest of Canada. Any work mode (D-007) |
 | Q-05 | Why Canada? What does the immigration goal look like? | — | ✅ Answered | PR, then citizenship. Stability with a newborn, no employer-tied status, travel freedom (PRD §2) |
@@ -75,12 +79,13 @@
 | Q-07 | Company-type preferences | — | ➡️ Deferred to PRD session | |
 | Q-08 | Scope beyond "find" (resume tailoring, referrals, interview prep) | — | ➡️ Deferred to PRD session | |
 | Q-09 | Delivery surface (web, email digest) | — | ➡️ Deferred to PRD session | |
-| Q-10 | Monthly budget for hosting and LLM/API costs | M3 | Open | |
+| Q-10 | Monthly budget for hosting and LLM/API costs | M3 | Partly answered | Hosting is local (D-015). LLM/API spend is deferred to M3 |
 | Q-11 | Should the repo be public or private? | — | ✅ Answered | Private for now (D-006). Scrub personal details before any public release (A-03) |
-| Q-12 | Is there a target date to start applying, have an offer, or move? | M3 (build priority) | Open | |
-| Q-13 | **Capacity.** How many hours a week can Ayush spend on reviews and gates? | Schedule for M1–M5 | Open | |
+| Q-12 | Is there a target date to start applying, have an offer, or move? | — | ✅ Answered | As soon as possible, and comfortably before the H-1B expires in Sep 2027 (D-016) |
+| Q-13 | **Capacity.** How many hours a week can Ayush spend on reviews and gates? (A "review" means reading a draft Claude produces, such as the PRD, mocks or the Eng Design Doc, then giving feedback or saying "approved". Most should take 15–45 minutes) | Schedule for M1–M5 | Open (clarified) | |
 | Q-14 | **Immigration profile.** Do you or your spouse have an Express Entry profile, a CRS estimate, language test results or an ECA? | — | ✅ Answered | There is an Express Entry profile with strong IELTS scores, but the CRS is low because of age (Ayush turns 37 on 11-15, his spouse turns 33 on 01-03). A PR route without a job offer isn't realistic on its own right now, so a job is the main path |
-| Q-15 | **Hard dates.** H-1B extension or expiry, vesting or refresh cliffs, parental leave: anything that constrains timing | M3 | Open | |
+| Q-15 | **Hard dates.** H-1B extension or expiry, vesting or refresh cliffs, parental leave: anything that constrains timing | — | ✅ Answered | The H-1B expires in Sep 2027 (D-016) |
+| Q-19 | **Offer-by date.** Proposal: a signed offer by **2027-03-31**. That leaves about 6 months for the work permit, the move, and a fallback if the first route stalls. Accept, or pick another date? | M1 | Open | |
 | Q-16 | Is a Google-internal transfer to Google Toronto or Waterloo on the table? If so, it's an LMIA-exempt channel to track | — | ✅ Answered | Yes. PM roles that fit at Google Canada are scarce, so Ayush is open to PM-adjacent roles inside or outside Google (D-011, D-012) |
 | Q-17 | **Express Entry details.** What is the current CRS score? Do you have an ECA for both spouses? What are your spouse's education, work experience and language scores (to compare her as principal applicant)? Any French? These help DR-3 find the levers that still move the score | M1 (DR-3) | Open | |
 | Q-18 | **Adjacent roles.** Which PM-adjacent families count, e.g. TPM/PgM, product strategy or ops, product marketing, solutions or customer engineering, chief of staff? Any that are ruled out? | M1 (PRD) | Open | |
@@ -100,6 +105,8 @@
 | A-01 | Assumption | Google L5 maps roughly to Amazon L6/L7 and to "Senior/Principal PM" elsewhere | — | Validate in DR-1 | Claude | Open |
 | A-02 | Assumption | Comp anchor of about US$450K TC (US$229K base, 15% bonus, about US$187K equity per year) | — | Confirm in DR-2 | Ayush | Open |
 | R-09 | Risk | The CRS score drops at each birthday after 35 (Ayush on 11-15, spouse on 01-03), so a PR route without a job offer gets harder over time | High | Treat getting a work permit sooner as the priority (ICT and LMIA-exempt routes). DR-3 to check levers: CEC after Canadian work experience, PNP, category-based draws, spouse as principal applicant. Validate with a licensed consultant (RCIC) | Ayush + Claude | Open |
+| R-10 | Risk | LinkedIn's API probably won't expose the user's current employer to a personal app (OAuth sign-in returns only basic identity) | Med | DR-4 checks this. Fallbacks: import the LinkedIn data export or profile PDF, parse the resume, or enter it manually | Claude | Open |
+| R-11 | Risk | The deadline is fixed (Sep 2027), and a search, offer and work permit can take months | High | Ship the MVP fast. Set an offer-by date with buffer (Q-19). Run the Google transfer channel in parallel | Ayush + Claude | Open |
 | A-03 | Assumption | The repo stays private. The PRD holds personal immigration and family context | — | Scrub it before any public release (M6) | Claude | Open |
 | DEP-1 | Dependency | Ayush's review time at each gate | — | See Q-13 | Ayush | Open |
 | DEP-2 | Dependency | Job sources that are legal to use | — | DR-4 | Claude | Open |
@@ -114,6 +121,7 @@
 | 2026-10-13 | Added the extensibility principle, the Drive companion folder and CLAUDE.md | Claude |
 | 2026-10-13 | Restructured to Google-style artifacts: the Program Plan is PgM only (OKRs, milestones M0–M6, staffing, governance), and product content moved to a PRD stub. Recorded Ayush's answers (D-006 to D-008). Added Q-13 to Q-16 and R-07, R-08 | Claude |
 | 2026-10-14 | Recorded the Q-14 and Q-16 answers. Added D-011, D-012, Q-17, Q-18 and R-09. Raised DR-3 priority | Claude |
+| 2026-10-14 | M0 approved. Recorded the answers to Q-02, Q-10, Q-12, Q-15 and Q-16 as D-013 to D-016, and moved the feature asks to the PRD. Added Q-19, R-10 and R-11. Clarified Q-13 | Claude |
 
 ## 7. Published artifacts (Google Drive)
 

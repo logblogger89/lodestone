@@ -5,7 +5,7 @@
 | **Program** | Lodestone: a personal job-search portal for roles in Canada |
 | **Sponsor and decision-maker** | Ayush Gupta |
 | **Program manager (TPgM)** | Claude |
-| **Doc status** | Draft v2, in review |
+| **Doc status** | v2, **approved 2026-10-14** (D-013) |
 | **Last updated** | 2026-10-14 |
 | **Live status** | [`TRACKER.md`](./TRACKER.md) |
 
@@ -32,7 +32,7 @@ The biggest lever on that path is a qualifying Canadian job offer, or a parallel
 | **O3. Build in a way that is portfolio-quality and extensible** | KR3.1 A complete set of Google-style artifacts (Program Plan, PRD, UX spec, Eng Design Doc, launch checklist) | By M5 |
 | | KR3.2 An architecture that allows other users, roles and geographies after the MVP, with no rewrite | Verified at the M3 design review |
 
-The program's real outcome, Ayush landing a role, depends on the job market as well as the product, so it is tracked as the North Star but isn't a KR the program controls.
+**Hard deadline:** the H-1B expires in Sep 2027 (D-016). The proposed offer-by date is 2027-03-31 (Q-19). The program's real outcome, Ayush landing a role, depends on the job market as well as the product, so it is tracked as the North Star but isn't a KR the program controls.
 
 ## 3. Program scope
 
@@ -115,6 +115,7 @@ The full RAID log is in the tracker. These are the risks that matter at program 
 |---|---|---|
 | R-04 | The compressed planning schedule (about 3 days to M3) could lower quality | Time-boxed gates, MVP cut line, and anything that isn't MVP goes to V1.x |
 | R-07 | The Canadian market may not have enough roles that fit: employers often avoid sponsoring foreign hires because of the work-permit (LMIA) process | Widen geography if needed (D-007). Weight LMIA-exempt routes in the PRD. Treat a PR route that doesn't need a job offer as a parallel track (Q-14) |
+| R-11 | A fixed deadline: the H-1B expires in Sep 2027 (D-016), and a search, offer and work permit can take months | Ship the MVP fast. Set an offer-by date with buffer (Q-19). Run the Google transfer channel in parallel |
 | R-09 | The Express Entry CRS score drops at each birthday, so a PR route without a job offer keeps getting harder | Prioritize getting a work permit sooner (ICT and LMIA-exempt routes). DR-3 maps the remaining levers |
 | R-08 | Ayush's limited time slows the gates | Claude pre-drafts everything, and reviews are kept short and async-friendly |
 | R-03 | Immigration rules are complex and change over time | Lodestone only shows signals, never advice. Any decision gets validated with a licensed immigration consultant or lawyer |

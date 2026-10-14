@@ -4,7 +4,7 @@
 |---|---|
 | **PM** | Ayush Gupta (lead), Claude (PM partner) |
 | **Status** | **Stub.** Inputs captured. Active work starts in the Product phase (gate M1) |
-| **Last updated** | 2026-10-13 |
+| **Last updated** | 2026-10-14 |
 | **Program** | [Program Plan](../program/PROGRAM_PLAN.md) · [Tracker](../program/TRACKER.md) |
 
 > This stub collects product inputs that came up during program setup so nothing is lost. The PRD will be written in full during the Product phase. Its planned outline is in §6.
@@ -27,11 +27,22 @@ Searching for jobs across borders comes down to three translation problems that 
 | **Level** | Open to any level, as long as the role is competitive and comparable to his current scope (Google L5, operating near L6) |
 | **Role family** | PM roles plus PM-adjacent roles, inside or outside Google. PM roles that fit at Google Canada are scarce (D-011). Which adjacent families count is open (Q-18) |
 | **Channels** | External roles plus a Google-internal transfer to Google Canada, which is LMIA-exempt (D-012) |
+| **Timeline** | As soon as possible, and comfortably before the H-1B expires in Sep 2027 (D-016) |
 | **Express Entry** | There is a profile with strong IELTS scores, but the CRS is low because of age, and it drops at each birthday (R-09). For now a job or work permit is the main path to PR |
 | **Work mode** | In-office, hybrid or remote are all fine |
 | **Geography** | GTA plus Waterloo first. Expand to the rest of Canada if results are thin |
 | **Audience** | Just for Ayush for now. It might go public later |
 | **Market hypothesis** | Canadian employers may be reluctant to hire people outside Canada or without Canadian work experience (because of LMIA), which could limit options. *To be validated in domain research* |
+
+## 2a. Candidate requirements from the sponsor (2026-10-14, not yet prioritized)
+
+| ID | Candidate requirement | Source | Notes |
+|---|---|---|---|
+| CR-1 | **Adjustable comp range.** The user sets a target comp range (normalized to CAD) in the app, and listings are filtered or scored against it | D-014 | DR-2 supplies the normalization and defaults. Uses the anchor from A-02 |
+| CR-2 | **Toggle: include postings without a pay range.** On or off. When on, the listing shows "pay not disclosed", or an estimate with a confidence level if DR-2 supports one | D-014 | Ontario pay-transparency rules may make posted ranges more common. Check in DR-2 |
+| CR-3 | **Immigration-pathway signal per Canadian listing.** For example: LMIA-exempt (ICT), likely Global Talent Stream, sponsorship mentioned, and how it would build toward CEC or PNP. Usable as a filter or sort | Ayush (answer to Q-14) | Signals only, not advice (R-03). *Interpretation to confirm with Ayush* |
+| CR-4 | **Current-employer awareness and an "internal transfer" badge.** Know the user's current employer (via LinkedIn connect, import or manual entry). When a listing's employer matches it, label the listing "internal transfer" and show the ICT route | Ayush (answer to Q-16), D-012 | Feasibility risk R-10: LinkedIn API limits |
+| NFR-1 | **Runs locally.** The MVP runs on the user's own machine | D-015 | Input to the Eng Design Doc |
 
 ## 3. Product principle: built for one, ready for many (D-005)
 
