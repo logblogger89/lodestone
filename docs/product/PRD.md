@@ -56,14 +56,14 @@ Tiers: **MVP** (v1 launch) · **V1** (fast follow) · **Later** · **Dropped**. 
 | A1 | Multi-source ingestion: ATS feeds, career pages, **niche boards** (e.g. a16z and other VC portfolio boards). **Dedup across boards.** Each listing shows **an icon for every source** it was found on | MVP | Full source inventory in DR-4 |
 | A2 | Company watchlist, managed in the UI and pre-seeded | MVP | |
 | A3 | Paste any job URL (including LinkedIn) to parse and score it | MVP | The legal way to use LinkedIn (R-01) |
-| A3a | **Quick add anywhere.** Paste a URL anywhere in the app (Cmd/Ctrl+V), or use a global "+ Add job" button. Accepts **several URLs at once**. Shows a confirmation card with the parsed fields so the user can correct them | MVP (proposed) | |
-| A3b | **Fallback: paste the JD text.** When a page can't be fetched (e.g. LinkedIn's login wall), the user pastes the job description text, which gets parsed the same way | MVP (proposed) | |
-| A3c | **Resolve to the source.** If a pasted posting links to the company's ATS, follow the link and attach the listing to the canonical ATS record. If the job is already known, say so ("already in Lodestone via Greenhouse") and just add the source icon | MVP (proposed) | Dedup (DR-4 §3) |
-| A3d | **One-click capture from the browser.** A bookmarklet or extension, "Send to Lodestone," that captures the job page the user is viewing | V1 (proposed) | ToS check before building (R-14) |
-| A3e | **Job-alert email ingestion.** Parse LinkedIn, Indeed and Glassdoor job-alert emails that the user already gets, from a Gmail label or by forwarding | V1 (proposed) | The user's own email, so no scraping |
-| A3f | **Search launcher.** Generate ready-made searches on LinkedIn, Indeed and Wellfound from the user's preferences (titles, locations, families), opening in the browser for fast manual browsing | V1 (proposed) | |
-| A3g | **Mobile share target.** Share a job from the phone (e.g. the LinkedIn app) straight into Lodestone | Later (proposed) | Needs the app reachable from the phone, which conflicts with local-only hosting (D-015) |
-| A3h | **In-app coaching.** Empty states and tips: "Found a role on LinkedIn? Paste the link or press Cmd+V," a first-run tour, and shortcut hints | MVP (proposed) | |
+| A3a | **Quick add anywhere.** Paste a URL anywhere in the app (Cmd/Ctrl+V), or use a global "+ Add job" button. Accepts **several URLs at once**. Shows a confirmation card with the parsed fields so the user can correct them | MVP | |
+| A3b | **Fallback: paste the JD text.** When a page can't be fetched (e.g. LinkedIn's login wall), the user pastes the job description text, which gets parsed the same way | MVP | |
+| A3c | **Resolve to the source.** If a pasted posting links to the company's ATS, follow the link and attach the listing to the canonical ATS record. If the job is already known, say so ("already in Lodestone via Greenhouse") and just add the source icon | MVP | Dedup (DR-4 §3) |
+| A3d | **One-click capture from the browser.** A bookmarklet or extension, "Send to Lodestone," that captures the job page the user is viewing | V1 | ToS check before building (R-14) |
+| A3e | **Job-alert email ingestion.** Parse LinkedIn, Indeed and Glassdoor job-alert emails that the user already gets, from a Gmail label or by forwarding | V1 | The user's own email, so no scraping |
+| A3f | **Search launcher.** Generate ready-made searches on LinkedIn, Indeed and Wellfound from the user's preferences (titles, locations, families), opening in the browser for fast manual browsing | V1 | |
+| A3g | **Mobile share target.** Share a job from the phone (e.g. the LinkedIn app) straight into Lodestone | Later | Needs the app reachable from the phone, which conflicts with local-only hosting (D-015) |
+| A3h | **In-app coaching.** Empty states and tips: "Found a role on LinkedIn? Paste the link or press Cmd+V," a first-run tour, and shortcut hints | MVP | |
 | A4 | Dedup, repost flag, posting age, "new since last visit" | MVP | |
 | A5 | Company hiring signals (funding, headcount, layoffs) | V1 | |
 | B6 | **Match engine:** fit score with explainable sub-scores. See §2d | MVP | **The core of the product** |

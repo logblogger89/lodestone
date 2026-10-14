@@ -71,6 +71,7 @@
 | D-020 | 10-14 | Milestones follow gate sequence, not the calendar. Dates are rolling and re-baselined as needed, and a slip from sponsor availability doesn't count against RAG | The sponsor's capacity is unpredictable (Q-13) | Ayush |
 | D-021 | 10-14 | Listings with no immigration-pathway info are never excluded. Missing signals get filled from employer-level research and shown with a source and a confidence level, or as "unknown" | Relevant roles often don't mention sponsorship (CR-3a) | Ayush |
 | D-022 | 10-14 | Feature backlog and MVP cut line approved after the brainstorm (PRD §2c). E23 dropped. The match engine (JD parsing plus profile understanding, then ranking) is the core of the MVP (PRD §2d) | Brainstorm with Ayush | Ayush |
+| D-023 | 10-14 | Capture-feature tiers approved: A3a, A3b, A3c and A3h in the MVP; A3d, A3e and A3f in V1; A3g later. A3e stays in V1 | Ayush's review | Ayush |
 
 ## 4. Open questions
 
