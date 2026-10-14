@@ -1,0 +1,4 @@
+[{"id": "abc-1", "text": "Technical Program Manager", "hostedUrl": "https://jobs.lever.co/acme/abc-1",
+  "categories": {"location": "Waterloo, Ontario", "team": "Eng", "allLocations": ["Waterloo, Ontario"]},
+  "country": "CA", "workplaceType": "hybrid", "createdAt": 1727740800000, "descriptionPlain": "Drive launches.",
+  "salaryRange": {"min": 150000, "max": 190000, "currency": "CAD", "interval": "per-year-salary"}}]

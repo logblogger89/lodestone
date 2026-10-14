@@ -1,0 +1,3 @@
+# Manual fixes for job-system detection. ats: greenhouse | lever | ashby | smartrecruiters | none
+# 'none' = no public feed we can read yet (e.g. Workday, in-house careers site); skip probing.
+company,ats,slug,note

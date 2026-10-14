@@ -1,0 +1,28 @@
+{
+  "_doc": "Geo pack for Canada (D-005). Regions are used for the default location preference (GTA + Waterloo + Remote-Canada).",
+  "country_names": ["canada", "canadá"],
+  "country_codes": ["ca", "can"],
+  "provinces": {
+    "ON": ["ontario"], "QC": ["quebec", "québec"], "BC": ["british columbia"], "AB": ["alberta"],
+    "MB": ["manitoba"], "SK": ["saskatchewan"], "NS": ["nova scotia"], "NB": ["new brunswick"],
+    "NL": ["newfoundland", "newfoundland and labrador"], "PE": ["prince edward island"]
+  },
+  "regions": {
+    "GTA": ["toronto", "mississauga", "markham", "vaughan", "richmond hill", "brampton", "oakville",
+            "burlington", "scarborough", "north york", "etobicoke", "pickering", "ajax", "whitby", "oshawa", "milton", "thornhill", "concord"],
+    "Waterloo Region": ["waterloo", "kitchener", "cambridge", "guelph", "kitchener-waterloo"],
+    "Ottawa": ["ottawa", "kanata", "gatineau"],
+    "Montreal": ["montreal", "montréal", "laval"],
+    "Vancouver": ["vancouver", "burnaby", "surrey", "richmond, bc", "north vancouver", "victoria"],
+    "Calgary": ["calgary"],
+    "Edmonton": ["edmonton"],
+    "Other Canada": ["winnipeg", "halifax", "quebec city", "hamilton", "london, on", "london, ontario",
+                     "saskatoon", "regina", "st. john's", "fredericton", "moncton", "kingston", "windsor"]
+  },
+  "ambiguous_cities": {"waterloo": ["iowa", ", ia", "belgium"], "london": ["uk", "united kingdom", "england"],
+                       "cambridge": ["ma", "massachusetts", "uk", "united kingdom", "england"],
+                       "richmond": ["va", "virginia", "ca 9"], "victoria": ["australia", "vic"], "burlington": ["vt", "ma", "vermont", "massachusetts", "nc"],
+                       "windsor": ["uk", "united kingdom"], "kingston": ["jamaica", "ny", "uk"], "surrey": ["uk", "united kingdom", "england"],
+                       "hamilton": ["new zealand", "oh", "nj", "bermuda"]},
+  "default_preferred_regions": ["GTA", "Waterloo Region", "Remote-Canada"]
+}

@@ -1,0 +1,28 @@
+{
+  "_doc": "Role-family pack for Product Management (D-005, D-017). Patterns are regexes matched against a normalized title (lowercase, punctuation removed, 'sr' -> 'senior'). First matching tier wins; 'exclude' is checked first.",
+  "exclude": [
+    "\\bintern(ship)?\\b", "\\bco op\\b", "\\bnew grad", "\\bjunior\\b", "\\bassociate product manager\\b", "\\bapm\\b",
+    "\\bproduct designer\\b", "\\bproject coordinator\\b", "\\bproduct support\\b", "\\bproduct specialist\\b"
+  ],
+  "tiers": {
+    "Core": [
+      "\\bproduct manager\\b", "\\bproduct management\\b", "\\bproduct lead\\b", "\\bproduct owner\\b",
+      "\\bgroup product manager\\b", "\\bhead of product\\b", "\\bdirector of product\\b", "\\bproduct director\\b",
+      "\\b(senior|staff|principal|lead|group) pm\\b", "\\bpm\\b.*\\b(ai|platform|growth|payments)\\b"
+    ],
+    "Adjacent": [
+      "\\btechnical program manager\\b", "\\btpm\\b", "\\bprogram manager\\b", "\\bprogram lead\\b",
+      "\\bproduct operations\\b", "\\bproduct ops\\b", "\\bstrategy (and|&)? ?operations\\b", "\\bbizops\\b",
+      "\\bbusiness operations\\b", "\\bchief of staff\\b",
+      "\\b(trust|safety|integrity|risk|fraud|compliance|governance|policy)\\b.*\\b(product|program|strategy)\\b",
+      "\\b(product|program|strategy)\\b.*\\b(trust|safety|integrity|risk|fraud|compliance|governance|policy)\\b"
+    ],
+    "Stretch": [
+      "\\bproduct marketing\\b", "\\bsolutions? (engineer|architect|consultant)\\b", "\\bcustomer engineer\\b",
+      "\\bproduct analytics\\b", "\\bproduct analyst\\b"
+    ]
+  },
+  "people_management_hints": [
+    "\\bdirector\\b", "\\bhead of\\b", "\\bvp\\b", "\\bvice president\\b", "\\bmanager,? product management\\b", "\\bmanager of product\\b"
+  ]
+}

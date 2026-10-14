@@ -16,8 +16,8 @@
 | M0 | Program kickoff | 🟢 | ✅ Done | 10-13 | ✅ 10-14 (D-013) | |
 | M1 | PRD approved | 🟢 | ✅ Done | Rolling | ✅ 10-14 (D-029) | PRD v0 approved |
 | M2 | UX review passed | 🟢 | ✅ Done | Rolling | ✅ 10-14 (D-033) | UX spec v0 + prototype v3 |
-| M3 | Eng Design Doc approved | 🟢 | 🟦 In progress | Rolling | — | Hosting/runtime decision first (Q-20) |
-| M4 | MVP dogfood | 🟢 | ⬜ | After S1–S5 (≈10–15 working sessions) | — | Rolling (D-020) |
+| M3 | Eng Design Doc approved | 🟢 | ✅ Done | Rolling | ✅ 10-14 (D-040) | Phase 1 design (Claude Code engine + Artifact app) |
+| M4 | MVP dogfood | 🟢 | 🟦 In progress | After P1-S1 to P1-S5 | — | Sprint P1-S1 started 10-14 |
 | M5 | Launch (v1) | 🟢 | ⬜ | TBD at M3 | — | |
 | M6 | Post-launch review | 🟢 | ⬜ | Launch + 2 weeks | — | |
 
@@ -38,10 +38,10 @@
 | D2.2 | Screen specs and visual direction | Product (UX) | M2 | ✅ | Claude → Ayush | [UX_SPEC.md](../product/ux/UX_SPEC.md) §4–6 |
 | D2.3 | Clickable prototype | Product (UX) | M2 | ✅ | Claude → Ayush | [prototype.html](../product/ux/prototype.html) · [live link](https://claude.ai/artifact/C9f5CPbspLeydxtwVVBUKG) (private) |
 | D2.4 | UX review | Product (UX) | M2 | ✅ | Ayush | All 3 questions resolved (D-030 to D-032) |
-| D3.1 | Eng Design Doc | Engineering | M3 | 🟨 | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v1: Phase 1 = Claude Code engine + Artifact app |
-| D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | 🟨 | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
-| D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | 🟨 | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
-| D4.1 | MVP build | Engineering | M4 | ⬜ | Claude | |
+| D3.1 | Eng Design Doc | Engineering | M3 | ✅ | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v1: Phase 1 = Claude Code engine + Artifact app |
+| D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ✅ | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
+| D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ✅ | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
+| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | |
 | D4.2 | Dogfood and bug bash | Launch | M4 | ⬜ | Ayush | |
 | D5.1 | Launch checklist (privacy, security, ToS, quality) | Launch | M5 | ⬜ | Claude | |
 | D6.1 | Post-launch review and V1.x roadmap | PgM / Product | M6 | ⬜ | Ayush + Claude | |
@@ -89,6 +89,7 @@
 | D-037 | 10-14 | Infrequent refreshes are fine. Add a freshness indicator with the last-refresh time per component (job pulls, scoring and model version, signals, discovery, profile) (R11a) | Ayush | Ayush |
 | D-038 | 10-14 | Required domains live in `config/network_allowlist.txt`. `scripts/check_network.py` runs at every refresh and lists any that are blocked. Network settings can only be changed by Ayush (an environment setting) | Future sources need new domains | Claude |
 | D-039 | 10-14 | Command names: `/refresh-jobs` (main), `/discover-companies`, `/refresh-signals`, `/rescore`. Each updates its freshness timestamp | Specific names, room for more refresh types | Ayush |
+| D-040 | 10-14 | **M3 approved:** Phase 1 design. Build starts with P1-S1 | Gate review | Ayush |
 
 ## 4. Open questions
 

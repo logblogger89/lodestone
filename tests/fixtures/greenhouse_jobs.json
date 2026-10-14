@@ -1,0 +1,11 @@
+{"jobs": [
+ {"id": 101, "title": "Senior Product Manager, Trust & Safety", "absolute_url": "https://boards.greenhouse.io/acme/jobs/101",
+  "location": {"name": "Toronto, ON"}, "departments": [{"name": "Product"}], "first_published": "2026-10-01T00:00:00Z",
+  "content": "&lt;p&gt;Own the &lt;b&gt;fraud&lt;/b&gt; roadmap.&lt;/p&gt;", "offices": [{"name": "Toronto"}]},
+ {"id": 102, "title": "Software Engineer", "absolute_url": "https://boards.greenhouse.io/acme/jobs/102",
+  "location": {"name": "Toronto, ON"}, "departments": [], "content": ""},
+ {"id": 103, "title": "Senior Product Manager", "absolute_url": "https://boards.greenhouse.io/acme/jobs/103",
+  "location": {"name": "Waterloo, Iowa"}, "departments": [], "content": ""},
+ {"id": 104, "title": "Associate Product Manager", "absolute_url": "https://boards.greenhouse.io/acme/jobs/104",
+  "location": {"name": "Remote - Canada"}, "departments": [], "content": ""}
+]}
