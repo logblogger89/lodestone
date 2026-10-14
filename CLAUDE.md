@@ -9,3 +9,4 @@
 - **No Google Drive syncing (D-024).** GitHub is the only home for artifacts. Don't create or update Google Drive copies unless Ayush explicitly asks again. The existing Drive files are frozen snapshots as of 2026-10-14.
 - **Built for one, ready for many (D-005).** User profile, role family, geography, leveling, comp, eligibility, sources and scoring weights are data, config or plugins, never hard-coded. Build the seams, but only one implementation of each.
 - **Privacy.** Never commit resumes or contact details. The repo is private (D-006). Personal immigration and family context must be scrubbed before any public release.
+- **Auto-push.** After every change, commit and push to the working branch (`claude/lodestone-portal-planning-32eoh2`) without asking. Ayush wants GitHub always up to date.
