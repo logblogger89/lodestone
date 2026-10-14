@@ -64,7 +64,7 @@ button,input,select{font:inherit;color:inherit}
 .pay{font-family:var(--font-mono);font-size:13px;display:inline-flex;gap:6px;align-items:center}
 .est{font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:.04em;padding:1px 5px;border-radius:4px;border:1px dashed var(--warn);color:var(--warn)}
 .srcs{display:inline-flex;gap:4px}
-a.src{text-decoration:none}a.src:hover{border-color:var(--accent)}
+button.src{cursor:pointer;padding:0}a.src{text-decoration:none}a.src:hover{border-color:var(--accent)}
 .drawer a,.tip a{color:var(--accent)}
 details.panel summary{cursor:pointer}
 details.panel p{margin:8px 0 0;font-size:14px}
@@ -117,7 +117,7 @@ kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);bor
 .tabs{display:flex;gap:6px;flex-wrap:wrap}
 .tabs button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;cursor:pointer}
 .tabs button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
-.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:8px;font-size:14px;z-index:30}
+.toast{max-width:calc(100% - 32px);word-break:break-word;position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:8px;font-size:14px;z-index:30}
 /* bottom tabs for iPad/phone */
 .tabbar{display:none}
 @media (max-width: 900px){
@@ -262,6 +262,13 @@ const LINKS = {
  11:{gh:"https://boards.greenhouse.io/coinbase",hn:"https://news.ycombinator.com/submitted?id=whoishiring",posting:"https://www.coinbase.com/careers"},
  12:{as:"https://jobs.ashbyhq.com/ada",hn:"https://news.ycombinator.com/submitted?id=whoishiring",posting:"https://www.ada.cx/careers"}
 };
+const PATTERN = {
+  gh:"boards.greenhouse.io/{co}/jobs/{id}", lv:"jobs.lever.co/{co}/{id}", as:"jobs.ashbyhq.com/{co}/{id}",
+  wd:"{co}.wd3.myworkdayjobs.com/en-US/careers/job/{id}", cs:"the posting on {co}'s careers site",
+  li:"linkedin.com/jobs/view/{id} (the link you pasted)", vc:"the posting on the VC board, e.g. careers.inovia.vc/companies/{co}/jobs/{id}",
+  hn:"news.ycombinator.com/item?id={id} (the comment)", bt:"builtintoronto.com/job/{slug}/{id}"
+};
+function exampleURL(j,k){const slug=j.co.toLowerCase().replace(/[^a-z0-9]+/g,"");return PATTERN[k].replace("{co}",slug).replace("{id}","<job-id>").replace("{slug}",slug)}
 const TIERLABEL = {Core:"Core PM role",Domain:"Adjacent role · domain fit",Stretch:"Stretch role"};
 const ext = (url,text) => `<a href="${url}" target="_blank" rel="noopener">${text}</a>`;
 function jobLink(j,k){const L=LINKS[j.id]||{};return L[k]||L.posting||L.cs||"#"}
@@ -269,8 +276,8 @@ function sigSource(j,src){
   if(/ESDC/.test(src)) return ext(REF.esdc.url,esc(src));
   if(/GTS/.test(src)) return ext(REF.gts.url,esc(src));
   if(/Current employer/.test(src)) return `${esc(src)} · <a href="#" data-goto-profile>your profile</a> · ${ext(REF.imp.url,"ICT rules")}`;
-  if(/CEC|Work location|Toronto|Waterloo|Remote/.test(src)) return `${ext(jobLink(j,"posting"),esc(src))} · ${ext(REF.cec.url,"CEC rules")}`;
-  return ext(jobLink(j,"posting"),esc(src));
+  if(/CEC|Work location|Toronto|Waterloo|Remote/.test(src)) return `${esc(src)} (the posting) · ${ext(REF.cec.url,"CEC rules")}`;
+  return `${esc(src)} (the posting)`;
 }
 const COMPANIES = [
  ["Google","Big tech","Company careers site","Seed",14,"Today"],["Cohere","Canadian AI","Ashby","Seed · Inovia board",9,"Today"],
@@ -306,11 +313,11 @@ function visible(){
 function ring(v){const r=26,c=2*Math.PI*r,off=c*(1-v/100);
   return `<div class="ring" role="img" aria-label="Fit ${v} of 100"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="${r}" fill="none" stroke="var(--surface-2)" stroke-width="6"/><circle cx="30" cy="30" r="${r}" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" transform="rotate(-90 30 30)"/><path d="M30 6 L33 13 L27 13 Z" fill="var(--fg)"/></svg><div class="val">${v}</div></div>`}
 function payHTML(p){return `<span class="pay">${p.cur==="USD"?"US$":"$"}${fmt(p.min)}–${fmt(p.max)}${p.est?' <span class="est" title="Estimated: no pay posted">est.</span>':''}</span>`}
-function srcHTML(list,j){return `<span class="srcs">${list.map(k=>j?`<a class="src" href="${jobLink(j,k)}" target="_blank" rel="noopener" title="Open on ${esc(srcName(j,k))}" aria-label="Open on ${esc(srcName(j,k))}">${SRC[k][0]}</a>`:`<span class="src" title="${esc(SRC[k][1])}">${SRC[k][0]}</span>`).join("")}</span>`}
+function srcHTML(list,j){return `<span class="srcs">${list.map(k=>j?`<button class="src" data-srclink="${j.id}|${k}" title="${esc(srcName(j,k))}" aria-label="${esc(srcName(j,k))}">${SRC[k][0]}</button>`:`<span class="src" title="${esc(SRC[k][1])}">${SRC[k][0]}</span>`).join("")}</span>`}
 function srcName(j,k){return k==="vc"&&LINKS[j.id]&&LINKS[j.id].vcName?LINKS[j.id].vcName:SRC[k][1]}
 function sigChips(j){return j.sig.map(([k,s,src])=>{const cls=/no CEC/.test(src)?"s-none":"s-"+s.toLowerCase();return `<span class="chip ${cls}" title="${esc(s+': '+src)}">${esc(k)} · ${s}</span>`}).join("")}
 function setView(v){state.view=v;state.open=null;save();render()}
-function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.hidden=false;clearTimeout(t._h);t._h=setTimeout(()=>t.hidden=true,2200)}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.hidden=false;clearTimeout(t._h);t._h=setTimeout(()=>t.hidden=true,4200)}
 function triage(id,t){
   const cur=state.triage[id]; state.triage[id]= cur&&cur.t===t? undefined : {t,reasons:[]};
   if(state.triage[id]===undefined) delete state.triage[id];
@@ -362,14 +369,14 @@ function viewDetail(j){
     <section class="panel"><h4>Fit breakdown · weighted</h4>${SUBS.map(k=>`<div class="bar"><span>${SUBLABEL[k]} <span class="note mono">${Math.round(W[k]/tot*100)}%</span></span><div class="track"><div class="fill" style="width:${j.s[k]}%"></div></div><span class="mono">${j.s[k]}</span><span class="why">${esc(j.why[k])}</span></div>`).join("")}<p class="note">Weights are editable in Settings › Advanced.</p></section>
     <section class="panel"><h4>Pay</h4><div>${payHTML(j.pay)}</div><p class="note" style="margin:0">${j.pay.est?`Estimate · confidence ${j.pay.conf} · source: ${esc(j.pay.tier)}. Ontario doesn't require posted pay for roles above $200K.`:"Posted by the employer."}</p></section>
     <section class="panel"><h4>Immigration pathway signals</h4><div class="tblwrap"><table class="tbl"><thead><tr><th>Signal</th><th>Status</th><th>Source</th><th>As of</th></tr></thead><tbody>${j.sig.map(([k,s,src,d])=>`<tr><td>${esc(k)}</td><td><span class="chip ${/no CEC/.test(src)?"s-none":"s-"+s.toLowerCase()}">${s}</span></td><td>${sigSource(j,src)}</td><td class="mono">${esc(d)}</td></tr>`).join("")}</tbody></table></div><p class="note" style="margin:0">Signals, not immigration advice. Confirm with a licensed consultant.</p></section>
-    <section class="panel"><h4>Found on</h4>${j.src.map(k=>`<div class="row">${srcHTML([k],j)}${ext(jobLink(j,k),esc(srcName(j,k)))}<span class="note mono">first seen ${j.age}d ago</span></div>`).join("")}<p class="note" style="margin:0">Sample links go to each source's page for this company. In the real app they open the exact posting.</p></section>
+    <section class="panel"><h4>Found on</h4>${j.src.map(k=>`<div class="row">${srcHTML([k],j)}<span>${esc(srcName(j,k))}</span><span class="note mono">first seen ${j.age}d ago</span></div><div class="note mono" style="margin:-4px 0 0 30px">opens ${esc(exampleURL(j,k))}</div>`).join("")}<p class="note" style="margin:0">This is an example job, so there is no real posting to open. In the real app each source gives Lodestone the exact posting URL (e.g. Greenhouse <span class="mono">absolute_url</span>, Lever <span class="mono">hostedUrl</span>, Ashby <span class="mono">jobUrl</span>), and these icons open it directly.</p></section>
     <details class="panel"><summary><b>What do these labels mean?</b></summary>
       <p><b>Role tier.</b> How closely the role family matches you. <i>Core PM role</i>: a product manager role (PM, Senior/Staff/Group PM, Product Lead). <i>Adjacent · domain fit</i>: a PM or program role in a field where you have depth (trust &amp; safety, risk, compliance, AI governance, data). <i>Stretch</i>: partial overlap (e.g. product marketing); off by default. Change tiers in Settings.</p>
       <p><b>ESDC positive-LMIA employers list.</b> Employment and Social Development Canada publishes, every quarter, the employers that got a positive Labour Market Impact Assessment: government approval to hire a foreign worker for a specific job. If an employer is on it, they have sponsored a work permit before, so they know the process. It shows positions approved, not permits issued. ${ext(REF.esdc.url,"Open the dataset")}.</p>
       <p><b>Stated / Inferred / Unknown.</b> <i>Stated</i>: the posting or your profile says it. <i>Inferred</i>: Lodestone found evidence elsewhere (linked in the Source column). <i>Unknown</i>: no evidence either way; the job is still shown.</p>
       <p><b>CEC credit.</b> Work done in Canada with a work permit counts toward the Canadian Experience Class after 12 months. Remote work from outside Canada does not. ${ext(REF.cec.url,"IRCC: CEC")}.</p>
     </details>
-    <div class="row"><button class="btn primary" data-toast="Opens the employer's posting in a new tab">Open posting</button><button class="btn" data-tri="${j.id}|i">Interested</button><button class="btn" data-tri="${j.id}|l">Later</button><button class="btn" data-tri="${j.id}|n">Not</button></div>
+    <div class="row"><button class="btn primary" data-srclink="${j.id}|${j.src[0]}">Open posting</button><button class="btn" data-tri="${j.id}|i">Interested</button><button class="btn" data-tri="${j.id}|l">Later</button><button class="btn" data-tri="${j.id}|n">Not</button></div>
   </aside>`;
 }
 function viewPipeline(){
@@ -448,6 +455,7 @@ function render(){
 document.addEventListener("click",e=>{
   if(e.target.closest("[data-goto-profile]")){e.preventDefault();state.open=null;state.view="settings";state.stab="profile";save();render();return}
   if(e.target.closest("a[href]")) return;
+  const sl=e.target.closest("[data-srclink]"); if(sl){e.stopPropagation();const [id,k]=sl.dataset.srclink.split("|");const j=JOBS.find(x=>x.id==id);toast("Example job · the real app opens "+exampleURL(j,k));return}
   const t=e.target.closest("[data-view],[data-tri],[data-open],[data-close],[data-reason],[data-ctab],[data-stab],[data-toast],[data-confirm],#parse,#resetw");
   if(!t) return;
   if(t.matches("[data-tri]")){e.stopPropagation();const [id,k]=t.dataset.tri.split("|");triage(+id,k);return}
