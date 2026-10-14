@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **PM** | Ayush Gupta (lead), Claude (PM partner) |
-| **Status** | **v0, in review.** Gate M1 (PRD approved) |
+| **Status** | **v0, approved 2026-10-14** (D-029, gate M1) |
 | **Last updated** | 2026-10-14 |
 | **Program** | [Program Plan](../program/PROGRAM_PLAN.md) · [Tracker](../program/TRACKER.md) |
 | **Research** | [DR-1 Leveling](research/DR-1_LEVELING.md) · [DR-2 Pay](research/DR-2_PAY.md) · [DR-3 Immigration](research/DR-3_IMMIGRATION_PATHWAYS.md) · [DR-4 Job sources](research/DR-4_JOB_SOURCES.md) |

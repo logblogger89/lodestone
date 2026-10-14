@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-14 · **Current milestone:** M0 → M1 · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14).** PRD v0's open questions are resolved (D-025 to D-028), and the R1a discovery engine plus a 210-company seed (DR-5) have been added. **Awaiting:** Ayush's M1 approval of the PRD. **Next:** M2 UX (flows, mocks, clickable prototype).
+**Status summary (2026-10-14).** **M1 approved** (D-029). **M2 (UX) in progress:** UX spec (IA, flows, screens, visual direction) and a clickable prototype. **Next:** Ayush's UX review, then M3 Eng Design Doc.
 
 ---
 
@@ -14,8 +14,8 @@
 | # | Milestone | RAG | Status | Target | Gate approved | Notes |
 |---|---|---|---|---|---|---|
 | M0 | Program kickoff | 🟢 | ✅ Done | 10-13 | ✅ 10-14 (D-013) | |
-| M1 | PRD approved | 🟢 | 🟦 In progress | Rolling (D-020) | — | Claude drafts PRD v0 async. Depends on DR-1 to DR-4 |
-| M2 | UX review passed | 🟢 | ⬜ | Rolling | — | |
+| M1 | PRD approved | 🟢 | ✅ Done | Rolling | ✅ 10-14 (D-029) | PRD v0 approved |
+| M2 | UX review passed | 🟢 | 🟦 In progress | Rolling | — | UX spec + clickable prototype |
 | M3 | Eng Design Doc approved | 🟢 | ⬜ | Rolling | — | M4 and M5 estimates get committed here |
 | M4 | MVP dogfood | 🟢 | ⬜ | TBD at M3 | — | Placeholder: about 2 weeks after M3 |
 | M5 | Launch (v1) | 🟢 | ⬜ | TBD at M3 | — | |
@@ -28,15 +28,15 @@
 | D0.1 | Program Plan | PgM | M0 | ✅ | Claude → Ayush | [PROGRAM_PLAN.md](./PROGRAM_PLAN.md) |
 | D0.2 | Tracker | PgM | M0 | ✅ | Claude → Ayush | this file |
 | D0.3 | Repo skeleton, README, CLAUDE.md | PgM | M0 | ✅ | Claude | |
-| D1.1 | DR-1 Leveling equivalency | Domain research | M1 | 🟨 | Claude → Ayush | [DR-1_LEVELING.md](../product/research/DR-1_LEVELING.md). v1 hypotheses, low-confidence rows flagged |
-| D1.2 | DR-2 Pay display and estimation | Domain research | M1 | 🟨 | Claude → Ayush | [DR-2_PAY.md](../product/research/DR-2_PAY.md) |
-| D1.3 | DR-3 Immigration pathways | Domain research | M1 | 🟨 | Claude → Ayush | [DR-3_IMMIGRATION_PATHWAYS.md](../product/research/DR-3_IMMIGRATION_PATHWAYS.md). Signals only, not advice |
-| D1.4 | DR-4 Job-source inventory and ToS | Data and sourcing | M1 | 🟨 | Claude → Ayush | [DR-4_JOB_SOURCES.md](../product/research/DR-4_JOB_SOURCES.md). v1 done. ToS checks deferred to Eng Design |
-| D1.4a | DR-5 Company discovery and seed watchlist | Data and sourcing | M1 | 🟨 | Claude → Ayush | [DR-5_COMPANY_DISCOVERY.md](../product/research/DR-5_COMPANY_DISCOVERY.md) · [watchlist_seed.csv](../../data/seed/watchlist_seed.csv) |
-| D1.5 | PRD v0 | Product | M1 | 🟨 | Ayush + Claude | [PRD.md](../product/PRD.md). v0 in review: P0 R1–R15 with acceptance criteria, metrics, 4 open questions |
-| D2.1 | CUJ flows and IA | Product (UX) | M2 | ⬜ | Claude | |
-| D2.2 | Mocks and visual direction | Product (UX) | M2 | ⬜ | Claude → Ayush | |
-| D2.3 | Clickable prototype | Product (UX) | M2 | ⬜ | Claude | |
+| D1.1 | DR-1 Leveling equivalency | Domain research | M1 | ✅ | Claude → Ayush | [DR-1_LEVELING.md](../product/research/DR-1_LEVELING.md). v1 hypotheses, low-confidence rows flagged |
+| D1.2 | DR-2 Pay display and estimation | Domain research | M1 | ✅ | Claude → Ayush | [DR-2_PAY.md](../product/research/DR-2_PAY.md) |
+| D1.3 | DR-3 Immigration pathways | Domain research | M1 | ✅ | Claude → Ayush | [DR-3_IMMIGRATION_PATHWAYS.md](../product/research/DR-3_IMMIGRATION_PATHWAYS.md). Signals only, not advice |
+| D1.4 | DR-4 Job-source inventory and ToS | Data and sourcing | M1 | ✅ | Claude → Ayush | [DR-4_JOB_SOURCES.md](../product/research/DR-4_JOB_SOURCES.md). v1 done. ToS checks deferred to Eng Design |
+| D1.4a | DR-5 Company discovery and seed watchlist | Data and sourcing | M1 | ✅ | Claude → Ayush | [DR-5_COMPANY_DISCOVERY.md](../product/research/DR-5_COMPANY_DISCOVERY.md) · [watchlist_seed.csv](../../data/seed/watchlist_seed.csv) |
+| D1.5 | PRD v0 | Product | M1 | ✅ | Ayush + Claude | [PRD.md](../product/PRD.md). v0 in review: P0 R1–R15 with acceptance criteria, metrics, 4 open questions |
+| D2.1 | CUJ flows and IA | Product (UX) | M2 | 🟦 | Claude | |
+| D2.2 | Mocks and visual direction | Product (UX) | M2 | 🟦 | Claude → Ayush | |
+| D2.3 | Clickable prototype | Product (UX) | M2 | 🟦 | Claude | |
 | D2.4 | UX spec and review | Product (UX) | M2 | ⬜ | Ayush | |
 | D3.1 | Eng Design Doc | Engineering | M3 | ⬜ | Claude → Ayush | Includes the extensibility design (D-005) |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ⬜ | Claude → Ayush | |
@@ -78,6 +78,7 @@
 | D-026 | 10-14 | Default score weights accepted, and editable in Advanced settings | PRD v0 review | Ayush |
 | D-027 | 10-14 | Watchlist = a continuous discovery engine (R1a) plus a 210-company seed, not a fixed list of 75 | PRD v0 review: "as many as possible" | Ayush |
 | D-028 | 10-14 | Pipeline stages confirmed: Discovered → Shortlisted → Applied → Screen → Interviewing → Offer → Closed | PRD v0 review | Ayush |
+| D-029 | 10-14 | **M1 approved:** PRD v0, with research DR-1 to DR-5 accepted as v1 inputs | Gate review | Ayush |
 
 ## 4. Open questions
 
@@ -147,6 +148,7 @@
 | 2026-10-14 | DR-1, DR-2 and DR-3 v1 done. Key findings: job-offer CRS points removed (Mar 2025), Ontario HCP and Employer Job Offer streams closed in 2026, ICT is the strongest route, and CEC is the main PR lever | Claude |
 | 2026-10-14 | PRD v0 written (Google-style, P0/P1/P2, acceptance criteria, metrics). Drive sync discontinued (D-024) | Claude |
 | 2026-10-14 | PRD v0 questions resolved (D-025 to D-028). DR-5 and the 210-company seed watchlist done. R1a discovery engine added | Claude |
+| 2026-10-14 | M1 approved (D-029). M2 (UX) started | Claude |
 
 ## 7. Published artifacts (Google Drive)
 
