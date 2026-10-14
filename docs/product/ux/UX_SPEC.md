@@ -105,8 +105,8 @@ flowchart LR
 - Visible focus states. Full keyboard support on desktop: **J/K** to move, **I/L/N** to triage, **Enter** to open, **Cmd/Ctrl+V** to add a job
 - Respects `prefers-reduced-motion`
 
-## 7. Open questions for the UX review
+## 7. UX review questions (resolved 2026-10-14)
 
-1. Does the card show the right things at a glance, or is it too dense on iPad?
-2. Should "Later" items come back in a future digest, e.g. after 7 days?
-3. Should the pipeline auto-add Interested roles to Shortlisted (current behaviour), or keep them separate?
+1. Card density on iPad: **fine as is.** The card shows the right things at a glance (D-030).
+2. "Later" roles **come back in the digest after 7 days** (adjustable in Settings) (D-031).
+3. Marking a role **Interested adds it to Shortlisted** in the pipeline automatically (D-032).

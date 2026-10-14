@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-14 · **Current milestone:** M0 → M1 · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14).** **M2 (UX) is in review.** UX spec v0 (IA, flows, screens, visual direction, accessibility) and a clickable prototype are ready ([live link](https://claude.ai/artifact/C9f5CPbspLeydxtwVVBUKG)). **Next:** Ayush's UX review (3 questions), then M3 Eng Design Doc.
+**Status summary (2026-10-14).** UX review questions are resolved (D-030 to D-032), and the prototype is at v3. **Awaiting:** Ayush's M2 approval. **Next:** M3 Eng Design Doc.
 
 ---
 
@@ -37,7 +37,7 @@
 | D2.1 | CUJ flows and IA | Product (UX) | M2 | 🟨 | Claude → Ayush | [UX_SPEC.md](../product/ux/UX_SPEC.md) §2–3 |
 | D2.2 | Screen specs and visual direction | Product (UX) | M2 | 🟨 | Claude → Ayush | [UX_SPEC.md](../product/ux/UX_SPEC.md) §4–6 |
 | D2.3 | Clickable prototype | Product (UX) | M2 | 🟨 | Claude → Ayush | [prototype.html](../product/ux/prototype.html) · [live link](https://claude.ai/artifact/C9f5CPbspLeydxtwVVBUKG) (private) |
-| D2.4 | UX review | Product (UX) | M2 | ⬜ | Ayush | 3 open questions in UX_SPEC §7 |
+| D2.4 | UX review | Product (UX) | M2 | ✅ | Ayush | All 3 questions resolved (D-030 to D-032) |
 | D3.1 | Eng Design Doc | Engineering | M3 | ⬜ | Claude → Ayush | Includes the extensibility design (D-005) |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ⬜ | Claude → Ayush | |
 | D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ⬜ | Claude → Ayush | |
@@ -79,6 +79,9 @@
 | D-027 | 10-14 | Watchlist = a continuous discovery engine (R1a) plus a 210-company seed, not a fixed list of 75 | PRD v0 review: "as many as possible" | Ayush |
 | D-028 | 10-14 | Pipeline stages confirmed: Discovered → Shortlisted → Applied → Screen → Interviewing → Offer → Closed | PRD v0 review | Ayush |
 | D-029 | 10-14 | **M1 approved:** PRD v0, with research DR-1 to DR-5 accepted as v1 inputs | Gate review | Ayush |
+| D-030 | 10-14 | Job card content and density approved for iPad | UX review | Ayush |
+| D-031 | 10-14 | "Later" roles come back in the digest after 7 days (configurable) | UX review | Ayush |
+| D-032 | 10-14 | Interested automatically adds the role to Shortlisted in the pipeline | UX review | Ayush |
 
 ## 4. Open questions
 
@@ -150,6 +153,7 @@
 | 2026-10-14 | PRD v0 questions resolved (D-025 to D-028). DR-5 and the 210-company seed watchlist done. R1a discovery engine added | Claude |
 | 2026-10-14 | M1 approved (D-029). M2 (UX) started | Claude |
 | 2026-10-14 | UX spec v0 and clickable prototype v1 published for the M2 review | Claude |
+| 2026-10-14 | Prototype v2 and v3 (deep links, label explainer, exact-URL previews). UX review questions resolved (D-030 to D-032) | Claude |
 
 ## 7. Published artifacts (Google Drive)
 
