@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-14 · **Current milestone:** M0 → M1 · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14).** **M2 approved** (D-033). **M3 (Eng Design) in progress.** First decision: where the app runs (Q-20). Ayush wants low friction moving between iPad and laptop.
+**Status summary (2026-10-14).** Hosting is Cloud Run (D-034). **Eng Design Doc v0 is in review** with 5 decisions for Ayush (database, Claude model and budget, provider, search approach, GCP setup). **Next:** decisions, then M3 approval, then M4 Sprint 1.
 
 ---
 
@@ -17,7 +17,7 @@
 | M1 | PRD approved | 🟢 | ✅ Done | Rolling | ✅ 10-14 (D-029) | PRD v0 approved |
 | M2 | UX review passed | 🟢 | ✅ Done | Rolling | ✅ 10-14 (D-033) | UX spec v0 + prototype v3 |
 | M3 | Eng Design Doc approved | 🟢 | 🟦 In progress | Rolling | — | Hosting/runtime decision first (Q-20) |
-| M4 | MVP dogfood | 🟢 | ⬜ | TBD at M3 | — | Placeholder: about 2 weeks after M3 |
+| M4 | MVP dogfood | 🟢 | ⬜ | After S1–S5 (≈10–15 working sessions) | — | Rolling (D-020) |
 | M5 | Launch (v1) | 🟢 | ⬜ | TBD at M3 | — | |
 | M6 | Post-launch review | 🟢 | ⬜ | Launch + 2 weeks | — | |
 
@@ -38,9 +38,9 @@
 | D2.2 | Screen specs and visual direction | Product (UX) | M2 | ✅ | Claude → Ayush | [UX_SPEC.md](../product/ux/UX_SPEC.md) §4–6 |
 | D2.3 | Clickable prototype | Product (UX) | M2 | ✅ | Claude → Ayush | [prototype.html](../product/ux/prototype.html) · [live link](https://claude.ai/artifact/C9f5CPbspLeydxtwVVBUKG) (private) |
 | D2.4 | UX review | Product (UX) | M2 | ✅ | Ayush | All 3 questions resolved (D-030 to D-032) |
-| D3.1 | Eng Design Doc | Engineering | M3 | ⬜ | Claude → Ayush | Includes the extensibility design (D-005) |
-| D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ⬜ | Claude → Ayush | |
-| D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ⬜ | Claude → Ayush | |
+| D3.1 | Eng Design Doc | Engineering | M3 | 🟨 | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v0. 5 decisions needed (§13, E-1 to E-5) |
+| D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | 🟨 | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
+| D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | 🟨 | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
 | D4.1 | MVP build | Engineering | M4 | ⬜ | Claude | |
 | D4.2 | Dogfood and bug bash | Launch | M4 | ⬜ | Ayush | |
 | D5.1 | Launch checklist (privacy, security, ToS, quality) | Launch | M5 | ⬜ | Claude | |
@@ -64,7 +64,7 @@
 | D-012 | 10-14 | A Google-internal transfer (Google Canada) is tracked as its own channel next to external roles | Intra-company transfers are LMIA-exempt, so this is likely the fastest route to a work permit | Ayush |
 | D-013 | 10-14 | **M0 approved:** Program Plan v2 and the tracker | Gate review | Ayush |
 | D-014 | 10-14 | Comp target is a user setting in the app, not a program input: an adjustable range filter, plus a toggle that includes postings without a pay range | Keeps the program unblocked, and it's better product (D-005) | Ayush |
-| D-015 | 10-14 | The MVP runs locally. Hosting budget isn't needed. LLM/API spend still gets decided at M3 | Ayush's direction | Ayush |
+| D-015 | 10-14 | The MVP runs locally. Hosting budget isn't needed. LLM/API spend still gets decided at M3 | Ayush's direction | Ayush. **Superseded by D-034** |
 | D-016 | 10-14 | Program deadline: the H-1B expires in Sep 2027, so the search aims to land an offer and work permit comfortably before then. The exact offer-by date is still open (Q-19) | Ayush's direction | Ayush |
 | D-017 | 10-14 | Claude defines the default PM-adjacent role families (PRD §2b). They are user-editable config, not hard-coded | Ayush delegated Q-18 | Ayush (delegated) |
 | D-018 | 10-14 | Batch syncing: the repo tracker updates every session, and the Drive Sheet and Docs refresh only at gates (or on request) | Less link churn and noise | Ayush |
@@ -83,6 +83,7 @@
 | D-031 | 10-14 | "Later" roles come back in the digest after 7 days (configurable) | UX review | Ayush |
 | D-032 | 10-14 | Interested automatically adds the role to Shortlisted in the pipeline | UX review | Ayush |
 | D-033 | 10-14 | **M2 approved:** UX spec v0 and prototype v3 | Gate review | Ayush |
+| D-034 | 10-14 | **Hosting: Google Cloud Run** (option B). The app runs in the cloud, so it's usable from any device with the laptop off and deploys on every push. **Supersedes D-015** (local-only). Personal data lives in Ayush's own GCP project | Least friction moving between iPad and laptop | Ayush |
 
 ## 4. Open questions
 
@@ -97,14 +98,14 @@
 | Q-07 | Company-type preferences | — | ➡️ Deferred to PRD session | |
 | Q-08 | Scope beyond "find" (resume tailoring, referrals, interview prep) | — | ➡️ Deferred to PRD session | |
 | Q-09 | Delivery surface (web, email digest) | — | ➡️ Deferred to PRD session | |
-| Q-10 | Monthly budget for hosting and LLM/API costs | M3 | Partly answered | Hosting is local (D-015). LLM/API spend is deferred to M3 |
+| Q-10 | Monthly budget for hosting and LLM/API costs | M3 | Open | Options in ENG_DESIGN §12: infra ≈$10–20/mo, LLM option A/B/C ≈ $105–270 / $25–45 / $5–10 per month |
 | Q-11 | Should the repo be public or private? | — | ✅ Answered | Private for now (D-006). Scrub personal details before any public release (A-03) |
 | Q-12 | Is there a target date to start applying, have an offer, or move? | — | ✅ Answered | As soon as possible, and comfortably before the H-1B expires in Sep 2027 (D-016) |
 | Q-13 | Capacity: how much review time per week? | — | ✅ Answered | Unpredictable (newborn). Dates will move as needed (D-020) |
 | Q-14 | **Immigration profile.** Do you or your spouse have an Express Entry profile, a CRS estimate, language test results or an ECA? | — | ✅ Answered | There is an Express Entry profile with strong IELTS scores, but the CRS is low because of age (Ayush turns 37 on 11-15, his spouse turns 33 on 01-03). A PR route without a job offer isn't realistic on its own right now, so a job is the main path |
 | Q-15 | **Hard dates.** H-1B extension or expiry, vesting or refresh cliffs, parental leave: anything that constrains timing | — | ✅ Answered | The H-1B expires in Sep 2027 (D-016) |
 | Q-19 | Offer-by date? | — | ✅ Answered | None. Explore and apply to relevant roles (D-019) |
-| Q-20 | **Where does the app run?** On the local laptop (D-015), or on a cloud host so it works from any device with the laptop off? | M3 | Open | Options under discussion 10-14 |
+| Q-20 | Where does the app run? | — | ✅ Answered | Google Cloud Run (D-034) |
 | Q-16 | Is a Google-internal transfer to Google Toronto or Waterloo on the table? If so, it's an LMIA-exempt channel to track | — | ✅ Answered | Yes. PM roles that fit at Google Canada are scarce, so Ayush is open to PM-adjacent roles inside or outside Google (D-011, D-012) |
 | Q-17 | Express Entry details for DR-3 | — | ✅ Resolved | They become optional in-app inputs: an Express Entry profile and CRS calculator that adjust listings (CR-5). Ayush has the details and will enter them in the app |
 | Q-18 | Which PM-adjacent families count? | — | ✅ Resolved | Delegated to Claude (D-017), with defaults in PRD §2b. No people-management roles by default, via a toggle (CR-6) |
@@ -157,6 +158,7 @@
 | 2026-10-14 | UX spec v0 and clickable prototype v1 published for the M2 review | Claude |
 | 2026-10-14 | Prototype v2 and v3 (deep links, label explainer, exact-URL previews). UX review questions resolved (D-030 to D-032) | Claude |
 | 2026-10-14 | M2 approved (D-033). M3 started, beginning with the runtime decision (Q-20) | Claude |
+| 2026-10-14 | Hosting decided: Cloud Run (D-034). Eng Design Doc v0 and ADR-0001 to ADR-0007 written | Claude |
 
 ## 7. Published artifacts (Google Drive)
 
