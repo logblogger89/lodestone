@@ -140,9 +140,9 @@ Test for every requirement: *"Would this still work for a nurse in Berlin?"*
 
 | ID | Research spec | Feeds |
 |---|---|---|
-| DR-1 | **Leveling equivalency.** Google L5/L6 compared with Amazon, Meta, Microsoft, Shopify, Canadian banks and scale-ups, plus heuristics for startups | Level fit scoring |
-| DR-2 | **Comp normalization.** USD→CAD, cost of living, base/bonus/equity weighting, a liquidity discount for private equity, and the target and floor (Q-02) | Comp fit scoring |
-| DR-3 | **Immigration pathways.** Employer work permit with LMIA, Global Talent Stream, intra-company transfer (for example, Google US → Google Canada), Express Entry PR without a job offer, provincial programs (OINP), CEC after Canadian work experience, category-based draws, and comparing either spouse as principal applicant. What signals can be read from job listings | Eligibility scoring and a parallel PR track |
+| DR-1 | **Leveling equivalency.** Google L5/L6 compared with Amazon, Meta, Microsoft, Shopify, Canadian banks and scale-ups, plus heuristics for startups **v1 done: [research/DR-1_LEVELING.md](research/DR-1_LEVELING.md).** | Level fit scoring |
+| DR-2 | **Comp normalization.** USD→CAD, cost of living, base/bonus/equity weighting, a liquidity discount for private equity, and the target and floor (Q-02) **v1 done: [research/DR-2_PAY.md](research/DR-2_PAY.md).** | Comp fit scoring |
+| DR-3 | **Immigration pathways.** Employer work permit with LMIA, Global Talent Stream, intra-company transfer (for example, Google US → Google Canada), Express Entry PR without a job offer, provincial programs (OINP), CEC after Canadian work experience, category-based draws, and comparing either spouse as principal applicant. What signals can be read from job listings **v1 done: [research/DR-3_IMMIGRATION_PATHWAYS.md](research/DR-3_IMMIGRATION_PATHWAYS.md).** | Eligibility scoring and a parallel PR track |
 | DR-4 | **Job-source inventory.** **v1 done: [research/DR-4_JOB_SOURCES.md](research/DR-4_JOB_SOURCES.md).** Summary: discover companies broadly, ingest from public ATS feeds, and use A3 (paste URL) for LinkedIn, Indeed and Wellfound | Sourcing (also an input to the Eng Design Doc) |
 
 ## 5. PRD session status

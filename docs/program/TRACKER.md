@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-14 · **Current milestone:** M0 → M1 · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14).** Brainstorm done and MVP cut approved (D-022). DR-4 v1 (job sources) is in review. Key findings: ATS public feeds are the backbone, LinkedIn, Indeed and Wellfound are paste-URL only, and Ontario exempts roles above $200K from posting pay. **Next:** DR-1 to DR-3, then PRD v0.
+**Status summary (2026-10-14).** All four domain-research docs (DR-1 to DR-4) are at v1 and in review. The big finding: a job helps toward PR mainly through Canadian work experience (CEC), because job-offer CRS points are gone and Ontario's tech stream is closed. **Next:** PRD v0 (personas and CUJs, P0/P1/P2 requirements with acceptance criteria, metrics).
 
 ---
 
@@ -28,9 +28,9 @@
 | D0.1 | Program Plan | PgM | M0 | ✅ | Claude → Ayush | [PROGRAM_PLAN.md](./PROGRAM_PLAN.md) |
 | D0.2 | Tracker | PgM | M0 | ✅ | Claude → Ayush | this file |
 | D0.3 | Repo skeleton, README, CLAUDE.md | PgM | M0 | ✅ | Claude | |
-| D1.1 | DR-1 Leveling equivalency | Domain research | M1 | ⬜ | Claude | PRD §4 |
-| D1.2 | DR-2 Comp normalization | Domain research | M1 | ⬜ | Claude | Needs Q-02 |
-| D1.3 | DR-3 Immigration pathways | Domain research | M1 | ⬜ | Claude | Signals only, not advice. Priority raised (R-09). Should cover CEC after a work permit, PNP, category-based draws, and comparing either spouse as principal applicant |
+| D1.1 | DR-1 Leveling equivalency | Domain research | M1 | 🟨 | Claude → Ayush | [DR-1_LEVELING.md](../product/research/DR-1_LEVELING.md). v1 hypotheses, low-confidence rows flagged |
+| D1.2 | DR-2 Pay display and estimation | Domain research | M1 | 🟨 | Claude → Ayush | [DR-2_PAY.md](../product/research/DR-2_PAY.md) |
+| D1.3 | DR-3 Immigration pathways | Domain research | M1 | 🟨 | Claude → Ayush | [DR-3_IMMIGRATION_PATHWAYS.md](../product/research/DR-3_IMMIGRATION_PATHWAYS.md). Signals only, not advice |
 | D1.4 | DR-4 Job-source inventory and ToS | Data and sourcing | M1 | 🟨 | Claude → Ayush | [DR-4_JOB_SOURCES.md](../product/research/DR-4_JOB_SOURCES.md). v1 done. ToS checks deferred to Eng Design |
 | D1.5 | PRD v1 | Product | M1 | 🟦 | Ayush + Claude | [PRD.md](../product/PRD.md). Brainstorm done (§2c, §2d). v0 next |
 | D2.1 | CUJ flows and IA | Product (UX) | M2 | ⬜ | Claude | |
@@ -111,7 +111,7 @@
 | R-08 | Risk | Ayush's review time is unpredictable (newborn), which slows the gates | Med | Claude pre-drafts, reviews stay short and async. Rolling, gate-sequenced dates (D-020) | Claude | Open |
 | A-01 | Assumption | Google L5 maps roughly to Amazon L6/L7 and to "Senior/Principal PM" elsewhere | — | Validate in DR-1 | Claude | Open |
 | A-02 | Assumption | Comp anchor of about US$450K TC (US$229K base, 15% bonus, about US$187K equity per year) | — | Confirm in DR-2 | Ayush | Open |
-| R-09 | Risk | The CRS score drops at each birthday after 35 (Ayush on 11-15, spouse on 01-03), so a PR route without a job offer gets harder over time | High | Treat getting a work permit sooner as the priority (ICT and LMIA-exempt routes). DR-3 to check levers: CEC after Canadian work experience, PNP, category-based draws, spouse as principal applicant. Validate with a licensed consultant (RCIC) | Ayush + Claude | Open |
+| R-09 | Risk | The CRS score drops at each birthday after 35 (Ayush on 11-15, spouse on 01-03), so a PR route without a job offer gets harder over time | High | Treat getting a work permit sooner as the priority (ICT and LMIA-exempt routes). DR-3 to check levers: Since DR-3: job-offer CRS points were removed (2025-03-25) and Ontario's HCP stream is closed, so CEC through Canadian work experience is the main lever. Validate with a licensed consultant (RCIC) | Ayush + Claude | Open |
 | R-10 | Risk | LinkedIn's API probably won't expose the user's current employer to a personal app (OAuth sign-in returns only basic identity) | Med | DR-4 checks this. Fallbacks: import the LinkedIn data export or profile PDF, parse the resume, or enter it manually | Claude | Open |
 | R-11 | Risk | Starting the search late leaves less buffer before the H-1B expires (Sep 2027) | Med | Ship the MVP fast. Run the Google transfer channel in parallel. No fixed offer-by date (D-019) | Ayush + Claude | Open |
 | R-12 | Risk | The CRS rules (points grid, how job offers count, category draws) change over time, so a hard-coded calculator would go stale | Med | Put CRS rules in versioned config (D-005), show the rules version and date, and link to the official IRCC calculator for verification | Claude | Open |
@@ -137,6 +137,7 @@
 | 2026-10-14 | Brainstorm results recorded in PRD §2c and §2d (D-022). DR-4 started | Claude |
 | 2026-10-14 | DR-4 v1 done: source inventory, ingest strategy, dedup design, and pay-transparency and LMIA findings | Claude |
 | 2026-10-14 | Added the paste-link capture features A3a to A3h (tiers proposed) and R-14 | Claude |
+| 2026-10-14 | DR-1, DR-2 and DR-3 v1 done. Key findings: job-offer CRS points removed (Mar 2025), Ontario HCP and Employer Job Offer streams closed in 2026, ICT is the strongest route, and CEC is the main PR lever | Claude |
 
 ## 7. Published artifacts (Google Drive)
 
