@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-14 · **Current milestone:** M0 → M1 · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14, brainstorm).** Feature brainstorm done and the MVP cut line approved (D-022, PRD §2c). The match engine is the core (§2d). **Now:** DR-4, the job-source inventory. **Next:** PRD v0 (CUJs, P0/P1/P2 requirements, metrics).
+**Status summary (2026-10-14).** Brainstorm done and MVP cut approved (D-022). DR-4 v1 (job sources) is in review. Key findings: ATS public feeds are the backbone, LinkedIn, Indeed and Wellfound are paste-URL only, and Ontario exempts roles above $200K from posting pay. **Next:** DR-1 to DR-3, then PRD v0.
 
 ---
 
@@ -31,7 +31,7 @@
 | D1.1 | DR-1 Leveling equivalency | Domain research | M1 | ⬜ | Claude | PRD §4 |
 | D1.2 | DR-2 Comp normalization | Domain research | M1 | ⬜ | Claude | Needs Q-02 |
 | D1.3 | DR-3 Immigration pathways | Domain research | M1 | ⬜ | Claude | Signals only, not advice. Priority raised (R-09). Should cover CEC after a work permit, PNP, category-based draws, and comparing either spouse as principal applicant |
-| D1.4 | DR-4 Job-source inventory and ToS | Data and sourcing | M1 | 🟦 | Claude | Ayush asked for a comprehensive inventory, including niche and VC boards (A1) |
+| D1.4 | DR-4 Job-source inventory and ToS | Data and sourcing | M1 | 🟨 | Claude → Ayush | [DR-4_JOB_SOURCES.md](../product/research/DR-4_JOB_SOURCES.md). v1 done. ToS checks deferred to Eng Design |
 | D1.5 | PRD v1 | Product | M1 | 🟦 | Ayush + Claude | [PRD.md](../product/PRD.md). Brainstorm done (§2c, §2d). v0 next |
 | D2.1 | CUJ flows and IA | Product (UX) | M2 | ⬜ | Claude | |
 | D2.2 | Mocks and visual direction | Product (UX) | M2 | ⬜ | Claude → Ayush | |
@@ -133,6 +133,7 @@
 | 2026-10-14 | Resolved Q-17 and Q-18 as product features (CR-5, CR-6) and role-family defaults (D-017). Batch Drive sync (D-018). Added R-12 | Claude |
 | 2026-10-14 | CR-3 confirmed and extended (CR-3a, D-021). Q-19: no deadline (D-019). Q-13: rolling, gate-sequenced dates (D-020). Added R-13 and revised R-08 and R-11. All PgM questions closed | Claude |
 | 2026-10-14 | Brainstorm results recorded in PRD §2c and §2d (D-022). DR-4 started | Claude |
+| 2026-10-14 | DR-4 v1 done: source inventory, ingest strategy, dedup design, and pay-transparency and LMIA findings | Claude |
 
 ## 7. Published artifacts (Google Drive)
 

@@ -60,7 +60,7 @@ Tiers: **MVP** (v1 launch) · **V1** (fast follow) · **Later** · **Dropped**. 
 | A5 | Company hiring signals (funding, headcount, layoffs) | V1 | |
 | B6 | **Match engine:** fit score with explainable sub-scores. See §2d | MVP | **The core of the product** |
 | B7 | Level translator (e.g. "Staff PM at X ≈ Google L6") | V1 | |
-| B8 | Pay shown **as posted**. An estimate when none is posted, with an "est." icon | MVP | Ties to CR-1 and CR-2 |
+| B8 | Pay shown **as posted**. An estimate when none is posted, with an "est." icon | MVP | Ties to CR-1 and CR-2. **More important than first thought:** Ontario exempts roles above $200K from pay disclosure (DR-4 §1) |
 | B9 | Immigration-pathway signals, **marked as inferred** when they come from research | MVP | Ties to CR-3 and CR-3a |
 | B10 | Internal-transfer badge, using the current employer from LinkedIn or the profile | MVP | Ties to CR-4. R-10 |
 | B11 | People-management toggle and role-family tiers | MVP | Ties to CR-6 and §2b |
@@ -135,7 +135,7 @@ Test for every requirement: *"Would this still work for a nurse in Berlin?"*
 | DR-1 | **Leveling equivalency.** Google L5/L6 compared with Amazon, Meta, Microsoft, Shopify, Canadian banks and scale-ups, plus heuristics for startups | Level fit scoring |
 | DR-2 | **Comp normalization.** USD→CAD, cost of living, base/bonus/equity weighting, a liquidity discount for private equity, and the target and floor (Q-02) | Comp fit scoring |
 | DR-3 | **Immigration pathways.** Employer work permit with LMIA, Global Talent Stream, intra-company transfer (for example, Google US → Google Canada), Express Entry PR without a job offer, provincial programs (OINP), CEC after Canadian work experience, category-based draws, and comparing either spouse as principal applicant. What signals can be read from job listings | Eligibility scoring and a parallel PR track |
-| DR-4 | **Job-source inventory.** Public ATS feeds (Greenhouse, Lever, Ashby, Workday), career pages, aggregators. ToS and legal feasibility | Sourcing (also an input to the Eng Design Doc) |
+| DR-4 | **Job-source inventory.** **v1 done: [research/DR-4_JOB_SOURCES.md](research/DR-4_JOB_SOURCES.md).** Summary: discover companies broadly, ingest from public ATS feeds, and use A3 (paste URL) for LinkedIn, Indeed and Wellfound | Sourcing (also an input to the Eng Design Doc) |
 
 ## 5. PRD session status
 
