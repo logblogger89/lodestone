@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-14 · **Current milestone:** M0 → M1 · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14).** **M1 approved** (D-029). **M2 (UX) in progress:** UX spec (IA, flows, screens, visual direction) and a clickable prototype. **Next:** Ayush's UX review, then M3 Eng Design Doc.
+**Status summary (2026-10-14).** **M2 (UX) is in review.** UX spec v0 (IA, flows, screens, visual direction, accessibility) and a clickable prototype are ready ([live link](https://claude.ai/artifact/C9f5CPbspLeydxtwVVBUKG)). **Next:** Ayush's UX review (3 questions), then M3 Eng Design Doc.
 
 ---
 
@@ -34,10 +34,10 @@
 | D1.4 | DR-4 Job-source inventory and ToS | Data and sourcing | M1 | ✅ | Claude → Ayush | [DR-4_JOB_SOURCES.md](../product/research/DR-4_JOB_SOURCES.md). v1 done. ToS checks deferred to Eng Design |
 | D1.4a | DR-5 Company discovery and seed watchlist | Data and sourcing | M1 | ✅ | Claude → Ayush | [DR-5_COMPANY_DISCOVERY.md](../product/research/DR-5_COMPANY_DISCOVERY.md) · [watchlist_seed.csv](../../data/seed/watchlist_seed.csv) |
 | D1.5 | PRD v0 | Product | M1 | ✅ | Ayush + Claude | [PRD.md](../product/PRD.md). v0 in review: P0 R1–R15 with acceptance criteria, metrics, 4 open questions |
-| D2.1 | CUJ flows and IA | Product (UX) | M2 | 🟦 | Claude | |
-| D2.2 | Mocks and visual direction | Product (UX) | M2 | 🟦 | Claude → Ayush | |
-| D2.3 | Clickable prototype | Product (UX) | M2 | 🟦 | Claude | |
-| D2.4 | UX spec and review | Product (UX) | M2 | ⬜ | Ayush | |
+| D2.1 | CUJ flows and IA | Product (UX) | M2 | 🟨 | Claude → Ayush | [UX_SPEC.md](../product/ux/UX_SPEC.md) §2–3 |
+| D2.2 | Screen specs and visual direction | Product (UX) | M2 | 🟨 | Claude → Ayush | [UX_SPEC.md](../product/ux/UX_SPEC.md) §4–6 |
+| D2.3 | Clickable prototype | Product (UX) | M2 | 🟨 | Claude → Ayush | [prototype.html](../product/ux/prototype.html) · [live link](https://claude.ai/artifact/C9f5CPbspLeydxtwVVBUKG) (private) |
+| D2.4 | UX review | Product (UX) | M2 | ⬜ | Ayush | 3 open questions in UX_SPEC §7 |
 | D3.1 | Eng Design Doc | Engineering | M3 | ⬜ | Claude → Ayush | Includes the extensibility design (D-005) |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ⬜ | Claude → Ayush | |
 | D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ⬜ | Claude → Ayush | |
@@ -149,6 +149,7 @@
 | 2026-10-14 | PRD v0 written (Google-style, P0/P1/P2, acceptance criteria, metrics). Drive sync discontinued (D-024) | Claude |
 | 2026-10-14 | PRD v0 questions resolved (D-025 to D-028). DR-5 and the 210-company seed watchlist done. R1a discovery engine added | Claude |
 | 2026-10-14 | M1 approved (D-029). M2 (UX) started | Claude |
+| 2026-10-14 | UX spec v0 and clickable prototype v1 published for the M2 review | Claude |
 
 ## 7. Published artifacts (Google Drive)
 

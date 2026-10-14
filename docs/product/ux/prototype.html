@@ -1,0 +1,454 @@
+<title>Lodestone Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: app shell — left rail on wide screens, bottom tab bar on iPad/phone; content column max 1100px. */
+:root{
+  --bg:#f3f5f6; --surface:#ffffff; --surface-2:#e9edef; --line:#d5dce0;
+  --fg:#16202a; --muted:#5b6873; --accent:#24507a; --accent-fg:#ffffff; --accent-soft:#dbe6f0;
+  --good:#1f7a4d; --good-soft:#dcefe4; --warn:#9a6200; --warn-soft:#f5e8cf; --unk:#6b6f78; --unk-soft:#e6e7ea; --bad:#a3342c; --bad-soft:#f4dedc;
+  --font-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono:"IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f151b; --surface:#16202a; --surface-2:#1d2935; --line:#2b3a47;
+  --fg:#e6ecf0; --muted:#9aa8b3; --accent:#7fb0e0; --accent-fg:#0b1620; --accent-soft:#1d3247;
+  --good:#6fcf9b; --good-soft:#173528; --warn:#e6b45c; --warn-soft:#3a2d12; --unk:#a7acb5; --unk-soft:#262b33; --bad:#ec8a80; --bad-soft:#3b1d1a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f151b; --surface:#16202a; --surface-2:#1d2935; --line:#2b3a47;
+  --fg:#e6ecf0; --muted:#9aa8b3; --accent:#7fb0e0; --accent-fg:#0b1620; --accent-soft:#1d3247;
+  --good:#6fcf9b; --good-soft:#173528; --warn:#e6b45c; --warn-soft:#3a2d12; --unk:#a7acb5; --unk-soft:#262b33; --bad:#ec8a80; --bad-soft:#3b1d1a; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.45}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:100%}
+.rail{border-right:1px solid var(--line);padding:20px 14px;display:flex;flex-direction:column;gap:6px;position:sticky;top:env(safe-area-inset-top,0px);height:100vh}
+.brand{font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-.01em;display:flex;align-items:center;gap:8px;margin:0 6px 14px}
+.brand small{display:block;font-family:var(--font-body);font-weight:400;font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;border:0;background:none;text-align:left;cursor:pointer;color:var(--muted);min-height:44px}
+.nav[aria-current="page"]{background:var(--accent-soft);color:var(--fg);font-weight:600}
+.nav .count{margin-left:auto;font-family:var(--font-mono);font-size:12px}
+.main{min-width:0;padding-block:18px 96px;padding-inline:24px}
+.wrap{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.topbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.topbar h1{font-family:var(--font-display);font-size:26px;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.topbar .sp{flex:1}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:9px 14px;cursor:pointer;min-height:40px}
+.btn.primary{background:var(--accent);color:var(--accent-fg);border-color:var(--accent);font-weight:600}
+.btn.ghost{background:none}
+.sample{font-size:12px;color:var(--warn);background:var(--warn-soft);padding:4px 10px;border-radius:999px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--surface-2);color:var(--fg);border:1px solid transparent;white-space:nowrap}
+.chip.filter{cursor:pointer;border-color:var(--line);background:var(--surface)}
+.chip.s-stated{background:var(--good-soft);color:var(--good)}
+.chip.s-inferred{background:var(--warn-soft);color:var(--warn)}
+.chip.s-unknown{background:var(--unk-soft);color:var(--unk)}
+.chip.s-none{background:var(--bad-soft);color:var(--bad)}
+.chip.transfer{background:var(--accent);color:var(--accent-fg);font-weight:600}
+.summary{display:flex;gap:10px;flex-wrap:wrap;align-items:baseline;color:var(--muted)}
+.summary strong{color:var(--fg);font-family:var(--font-display);font-size:18px}
+.list{display:flex;flex-direction:column;gap:10px}
+.section-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:8px 2px 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:start;cursor:pointer}
+.card.sel{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.card.done{opacity:.55}
+.card h3{margin:0;font-size:16px;font-weight:600;line-height:1.3}
+.meta{color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 12px;margin:2px 0 8px}
+.row{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.pay{font-family:var(--font-mono);font-size:13px;display:inline-flex;gap:6px;align-items:center}
+.est{font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:.04em;padding:1px 5px;border-radius:4px;border:1px dashed var(--warn);color:var(--warn)}
+.srcs{display:inline-flex;gap:4px}
+.src{width:22px;height:22px;border-radius:5px;display:inline-grid;place-items:center;font-size:10px;font-weight:700;font-family:var(--font-mono);background:var(--surface-2);color:var(--fg);border:1px solid var(--line)}
+.triage{display:flex;flex-direction:column;gap:6px}
+.tbtn{border:1px solid var(--line);background:var(--surface);border-radius:8px;min-width:96px;min-height:36px;cursor:pointer;font-size:13px}
+.tbtn.on-i{background:var(--good-soft);border-color:var(--good);color:var(--good);font-weight:600}
+.tbtn.on-l{background:var(--warn-soft);border-color:var(--warn);color:var(--warn);font-weight:600}
+.tbtn.on-n{background:var(--bad-soft);border-color:var(--bad);color:var(--bad);font-weight:600}
+.ring{position:relative;width:60px;height:60px}
+.ring svg{width:60px;height:60px;display:block}
+.ring .val{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--font-mono);font-weight:500;font-size:16px}
+.reasons{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.reasons button{font-size:12px;border:1px dashed var(--line);background:none;border-radius:999px;padding:4px 10px;cursor:pointer}
+.reasons button[aria-pressed="true"]{border-style:solid;border-color:var(--bad);color:var(--bad)}
+/* detail drawer */
+.scrim{position:fixed;inset:0;background:rgba(10,16,22,.45);z-index:20}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--bg);border-left:1px solid var(--line);z-index:21;overflow-y:auto;padding:calc(18px + env(safe-area-inset-top,0px)) 20px calc(24px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:16px}
+.drawer h2{font-family:var(--font-display);font-size:22px;margin:0;text-wrap:balance}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:10px}
+.panel h4{margin:0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.bar{display:grid;grid-template-columns:90px 1fr 42px;gap:10px;align-items:center;font-size:13px}
+.bar .track{height:8px;background:var(--surface-2);border-radius:4px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent)}
+.bar .why{grid-column:2 / 4;color:var(--muted);font-size:12px;margin-top:-6px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th,.tbl td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-weight:500;color:var(--muted);font-size:12px}
+.tblwrap{overflow-x:auto}
+.note{font-size:12px;color:var(--muted)}
+/* pipeline */
+.board{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:10px;overflow-x:auto;padding-bottom:6px}
+.col{background:var(--surface-2);border-radius:var(--r);padding:10px;display:flex;flex-direction:column;gap:8px;min-height:160px}
+.col h4{margin:0 2px 2px;font-size:13px;display:flex;justify-content:space-between}
+.pcard{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:6px;font-size:13px}
+.pcard select{font-size:12px;padding:4px;border-radius:6px;border:1px solid var(--line);background:var(--surface)}
+.flag{font-size:11px;font-weight:600;color:var(--bad)}
+/* forms */
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:13px;font-weight:500}
+textarea,input[type=text],input[type=number]{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:10px;width:100%}
+textarea{min-height:110px;resize:vertical;font-family:var(--font-mono);font-size:13px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.switch{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.switch:last-child{border-bottom:0}
+.switch input{width:20px;height:20px}
+.slider{display:grid;grid-template-columns:80px 1fr 48px;gap:10px;align-items:center}
+.tip{background:var(--accent-soft);border-radius:var(--r);padding:12px 14px;font-size:14px}
+kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 5px;background:var(--surface)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:8px;font-size:14px;z-index:30}
+/* bottom tabs for iPad/phone */
+.tabbar{display:none}
+@media (max-width: 900px){
+  .app{grid-template-columns:1fr}
+  .rail{display:none}
+  .main{padding-inline:16px}
+  .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));z-index:15}
+  .tabbar button{border:0;background:none;min-height:48px;font-size:12px;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer}
+  .tabbar button[aria-current="page"]{color:var(--accent);font-weight:600}
+}
+@media (max-width: 560px){
+  .card{grid-template-columns:52px 1fr;gap:10px}
+  .ring,.ring svg{width:50px;height:50px}
+  .ring .val{font-size:14px}
+  .triage{grid-column:1 / -1;flex-direction:row}
+  .tbtn{flex:1;min-width:0}
+  .topbar h1{font-size:22px}
+}
+@media (prefers-reduced-motion: no-preference){.fill{transition:width .3s ease}.card{transition:border-color .15s}}
+</style>
+
+<div class="app">
+  <nav class="rail" aria-label="Main">
+    <div class="brand"><span aria-hidden="true">◈</span><div>Lodestone<small>Canada job search</small></div></div>
+    <button class="nav" data-view="digest">Digest <span class="count" id="nc-digest"></span></button>
+    <button class="nav" data-view="pipeline">Pipeline <span class="count" id="nc-pipe"></span></button>
+    <button class="nav" data-view="add">Add job</button>
+    <button class="nav" data-view="companies">Companies</button>
+    <button class="nav" data-view="settings">Settings</button>
+  </nav>
+  <main class="main"><div class="wrap" id="view"></div></main>
+  <nav class="tabbar" aria-label="Main">
+    <button data-view="digest">Digest</button>
+    <button data-view="pipeline">Pipeline</button>
+    <button data-view="add">Add</button>
+    <button data-view="companies">Companies</button>
+    <button data-view="settings">Settings</button>
+  </nav>
+</div>
+<div id="overlay"></div>
+<div id="toast" class="toast" hidden></div>
+
+<script>
+const SRC = {gh:["GH","Greenhouse"],lv:["LV","Lever"],as:["AS","Ashby"],wd:["WD","Workday"],cs:["CS","Company careers site"],li:["in","LinkedIn (pasted)"],vc:["VC","VC portfolio board"],hn:["HN","Hacker News"],bt:["BT","Built In Toronto"]};
+const STAGES = ["Discovered","Shortlisted","Applied","Screen","Interviewing","Offer","Closed"];
+const SUBS = ["role","level","domain","pathway","pay","skills"];
+const SUBLABEL = {role:"Role",level:"Level",domain:"Domain",pathway:"Pathway",pay:"Pay",skills:"Skills"};
+const DEFAULT_W = {role:25,level:20,domain:20,pathway:15,pay:10,skills:10};
+// Sample listings (illustrative only; not real postings)
+const JOBS = [
+ {id:1,title:"Senior Product Manager, Cloud AI Governance",co:"Google",loc:"Toronto",mode:"Hybrid",age:1,isNew:true,tier:"Core",people:false,transfer:true,
+  pay:{min:186000,max:248000,cur:"CAD",est:true,conf:"Medium",tier:"Same company, adjacent level"},
+  s:{role:95,level:92,domain:96,pathway:98,pay:80,skills:90},
+  why:{role:"Core PM role, IC",level:"L5/L6 scope language: 'set strategy across teams'",domain:"AI governance matches your Gemini Enterprise governance work",pathway:"Internal transfer (ICT), no LMIA needed",pay:"Estimated; likely above the $200K disclosure threshold",skills:"Policy, compliance, platform"},
+  sig:[["ICT-eligible","Stated","Current employer = Google","Profile"],["Sponsorship mentioned","Unknown","Not in posting","—"],["CEC credit","Stated","Work location in Canada","Posting"]],
+  src:["cs"],summary:"Own governance capabilities for enterprise agents and data connectors in Google Cloud. Partner with legal and compliance.",must:["7+ yrs PM","AI/ML platforms","Regulated industries"]},
+ {id:2,title:"Staff Product Manager, Agent Platform",co:"Cohere",loc:"Toronto",mode:"Hybrid",age:2,isNew:true,tier:"Core",people:false,
+  pay:{min:205000,max:255000,cur:"CAD",est:true,conf:"Low",tier:"Market benchmark"},
+  s:{role:93,level:88,domain:95,pathway:62,pay:78,skills:86},
+  why:{role:"Core PM, IC",level:"Staff ≈ Google L6",domain:"Enterprise agents, tools and connectors",pathway:"Has sponsored before (ESDC list, Q2 2026)",pay:"No posted range; benchmark estimate",skills:"Platform, enterprise GTM"},
+  sig:[["Sponsored before","Inferred","ESDC positive-LMIA list","2026 Q2"],["GTS-likely","Inferred","Tech occupation on GTS list","2026-09"],["CEC credit","Stated","Toronto office","Posting"]],
+  src:["as","vc","li"],summary:"Define the roadmap for Cohere's agent platform: tool use, connectors and enterprise governance.",must:["Platform PM","LLM products","Enterprise customers"]},
+ {id:3,title:"Senior Product Lead, Trust & Safety",co:"Shopify",loc:"Remote — Canada",mode:"Remote",age:3,isNew:true,tier:"Domain",people:false,
+  pay:{min:190000,max:240000,cur:"CAD",est:true,conf:"Medium",tier:"Same company, same level"},
+  s:{role:90,level:86,domain:93,pathway:70,pay:82,skills:88},
+  why:{role:"Product Lead, IC",level:"Senior Lead ≈ L5–L6",domain:"Merchant risk and policy, like your Ads Safety work",pathway:"Canadian employer, remote-in-Canada counts toward CEC",pay:"Estimated from another Shopify posting",skills:"Policy, ML classifiers, enforcement"},
+  sig:[["Sponsorship mentioned","Unknown","Not in posting","—"],["Sponsored before","Inferred","ESDC list","2026 Q1"],["CEC credit","Stated","Remote within Canada (if you live in Canada)","Posting"]],
+  src:["cs","li","bt"],summary:"Lead merchant risk and policy enforcement products across the platform.",must:["T&S or risk product","Policy partnership","ML-driven enforcement"]},
+ {id:4,title:"Senior Product Manager, Fraud & Risk",co:"Wealthsimple",loc:"Toronto",mode:"Hybrid",age:2,isNew:true,tier:"Domain",people:false,
+  pay:{min:165000,max:200000,cur:"CAD",est:false},
+  s:{role:91,level:80,domain:90,pathway:55,pay:72,skills:85},
+  why:{role:"Core PM",level:"Senior ≈ L5",domain:"Fraud and verification, like your FS Ads verification work",pathway:"No sponsorship signal found",pay:"Posted range",skills:"Risk models, KYC"},
+  sig:[["Sponsorship mentioned","Unknown","Not in posting","—"],["Sponsored before","Unknown","Not on the ESDC list","2026 Q2"],["CEC credit","Stated","Toronto","Posting"]],
+  src:["as","li"],summary:"Own fraud prevention and account-risk products for Canada's largest fintech.",must:["Fintech or risk","Data-driven","Regulatory partnership"]},
+ {id:5,title:"Product Lead (IC), AI Assurance",co:"Armilla AI",loc:"Toronto",mode:"Hybrid",age:4,isNew:true,tier:"Domain",people:false,
+  pay:{min:160000,max:195000,cur:"CAD",est:false},
+  s:{role:84,level:78,domain:97,pathway:40,pay:68,skills:82},
+  why:{role:"Product lead at a startup, IC",level:"Early stage; scope larger than the title",domain:"AI assurance and governance, a direct match",pathway:"Small employer, sponsorship unlikely",pay:"Posted range",skills:"AI risk, policy frameworks"},
+  sig:[["Sponsorship mentioned","Unknown","Not in posting","—"],["Sponsored before","Unknown","Not on the ESDC list","2026 Q2"],["CEC credit","Stated","Toronto","Posting"]],
+  src:["vc","as"],summary:"Shape the product for AI model evaluation and assurance used by insurers and enterprises.",must:["AI governance","0→1 product","Enterprise"]},
+ {id:6,title:"Product Manager, Risk Intelligence",co:"Stripe",loc:"Toronto",mode:"On-site",age:6,isNew:true,tier:"Domain",people:false,
+  pay:{min:180000,max:230000,cur:"CAD",est:true,conf:"Medium",tier:"Same company, adjacent level"},
+  s:{role:88,level:76,domain:88,pathway:66,pay:79,skills:84},
+  why:{role:"Core PM",level:"Title is 'PM'; scope suggests L5",domain:"Payments risk",pathway:"Sponsored before (ESDC list)",pay:"Estimated",skills:"ML risk, payments"},
+  sig:[["Sponsored before","Inferred","ESDC list","2026 Q2"],["CEC credit","Stated","Toronto","Posting"]],
+  src:["gh","li"],summary:"Build risk signals and decisioning for Stripe's merchant network.",must:["Risk/fraud","Technical PM","Payments"]},
+ {id:7,title:"Senior Product Manager, Marketplace Integrity",co:"Faire",loc:"Waterloo / Toronto",mode:"Hybrid",age:5,isNew:true,tier:"Domain",people:false,
+  pay:{min:170000,max:210000,cur:"CAD",est:true,conf:"Low",tier:"Market benchmark"},
+  s:{role:89,level:82,domain:86,pathway:58,pay:74,skills:83},
+  why:{role:"Core PM",level:"Senior ≈ L5",domain:"Integrity and abuse, like your T&S work",pathway:"Waterloo office; sponsorship unknown",pay:"Estimated",skills:"Abuse detection"},
+  sig:[["Sponsorship mentioned","Unknown","Not in posting","—"],["CEC credit","Stated","Waterloo/Toronto","Posting"]],
+  src:["gh","li"],summary:"Protect a wholesale marketplace from fraud and policy abuse.",must:["Marketplace","Integrity","Experimentation"]},
+ {id:8,title:"Senior Manager, Product — AI Governance",co:"TD",loc:"Toronto",mode:"Hybrid",age:3,isNew:true,tier:"Domain",people:false,
+  pay:{min:125000,max:165000,cur:"CAD",est:false},
+  s:{role:80,level:70,domain:92,pathway:60,pay:55,skills:80},
+  why:{role:"Product role at a bank",level:"Bank 'Senior Manager' ≈ L5 (inflated title)",domain:"Model risk and AI governance",pathway:"Large employer; sponsorship possible",pay:"Posted range, below your usual band",skills:"Model risk, OSFI E-23"},
+  sig:[["Sponsored before","Inferred","ESDC list","2026 Q2"],["CEC credit","Stated","Toronto","Posting"]],
+  src:["wd"],summary:"Productize AI governance controls across the bank's model lifecycle.",must:["Model risk","Regulated FS","Stakeholder mgmt"]},
+ {id:9,title:"Director, Product Management — Enterprise Data",co:"RBC",loc:"Toronto",mode:"Hybrid",age:2,isNew:true,tier:"Core",people:true,
+  pay:{min:150000,max:195000,cur:"CAD",est:false},
+  s:{role:78,level:84,domain:85,pathway:60,pay:62,skills:80},
+  why:{role:"Includes 6 direct reports",level:"Director at a bank ≈ L6",domain:"Data governance",pathway:"Large employer",pay:"Posted range",skills:"Data platforms"},
+  sig:[["Sponsored before","Inferred","ESDC list","2026 Q2"],["CEC credit","Stated","Toronto","Posting"]],
+  src:["wd","li"],summary:"Lead a team of PMs for enterprise data governance products.",must:["People leadership","Data governance"]},
+ {id:10,title:"Senior PM, Identity Verification",co:"Trulioo",loc:"Remote — Canada",mode:"Remote",age:8,isNew:false,tier:"Domain",people:false,
+  pay:{min:150000,max:185000,cur:"CAD",est:false},
+  s:{role:86,level:78,domain:91,pathway:52,pay:66,skills:84},
+  why:{role:"Core PM",level:"Senior ≈ L5",domain:"Verification flows, like your advertiser verification work",pathway:"Remote within Canada",pay:"Posted range",skills:"KYC/KYB"},
+  sig:[["Sponsorship mentioned","Unknown","Not in posting","—"],["CEC credit","Stated","Remote within Canada","Posting"]],
+  src:["lv"],summary:"Own global identity verification products for businesses.",must:["Identity/KYC","Global markets"]},
+ {id:11,title:"Senior Product Manager, Trust & Safety",co:"Coinbase",loc:"Remote — US",mode:"Remote",age:9,isNew:false,tier:"Domain",people:false,
+  pay:{min:190000,max:225000,cur:"USD",est:false},
+  s:{role:88,level:82,domain:90,pathway:10,pay:88,skills:85},
+  why:{role:"Core PM",level:"Senior ≈ L5",domain:"T&S",pathway:"US-based remote: no CEC credit",pay:"Posted range (USD)",skills:"Policy, enforcement"},
+  sig:[["CEC credit","Stated","Work location outside Canada: no CEC credit","Posting"]],
+  src:["gh","hn"],summary:"Trust & Safety product for a global crypto exchange.",must:["T&S","Policy"]},
+ {id:12,title:"Senior PM, Agent Reasoning",co:"Ada",loc:"Toronto",mode:"Hybrid",age:10,isNew:false,tier:"Core",people:false,
+  pay:{min:170000,max:205000,cur:"CAD",est:true,conf:"Medium",tier:"Same company, same level"},
+  s:{role:90,level:80,domain:88,pathway:50,pay:72,skills:82},
+  why:{role:"Core PM",level:"Senior ≈ L5",domain:"AI agents",pathway:"Sponsorship unknown",pay:"Estimated",skills:"LLM evals"},
+  sig:[["Sponsorship mentioned","Unknown","Not in posting","—"],["CEC credit","Stated","Toronto","Posting"]],
+  src:["as","hn"],summary:"Improve agent reasoning quality for enterprise customer service.",must:["LLM products","Evals"]},
+];
+const COMPANIES = [
+ ["Google","Big tech","Company careers site","Seed",14,"Today"],["Cohere","Canadian AI","Ashby","Seed · Inovia board",9,"Today"],
+ ["Shopify","Canadian SaaS","Company careers site","Seed",22,"Today"],["Wealthsimple","Fintech","Ashby","Seed",6,"Today"],
+ ["Armilla AI","Canadian AI","Ashby","VC board",2,"Today"],["Stripe","Big tech","Greenhouse","Seed",11,"Today"],
+ ["TD","Bank","Workday","Seed · ESDC list",31,"Today"],["Trulioo","Fintech","Lever","Seed",4,"Yesterday"]];
+const CANDIDATES = [["Talking Computers","ATS reverse search (Ashby, Toronto)","Ashby","Auto-accept"],["Rootly","Rankings (Deloitte Fast 50)","Not found","Needs review"],["Digitail","Funding news (Series B)","Lever","Auto-accept"]];
+const SOURCES = [["Greenhouse feeds","OK","412 jobs","07:02"],["Ashby feeds","OK","288 jobs","07:03"],["Lever feeds","OK","96 jobs","07:03"],["Workday tenants","1 error","540 jobs","07:10"],["VC boards (Getro/Consider)","OK","61 companies","06:55"],["ESDC LMIA list","OK","2026 Q2","Weekly"]];
+
+const store = { get(k,d){try{const v=localStorage.getItem("lodestone-proto-"+k);return v?JSON.parse(v):d}catch(e){return d}}, set(k,v){try{localStorage.setItem("lodestone-proto-"+k,JSON.stringify(v))}catch(e){}} };
+const state = {
+  view: store.get("view","digest"),
+  triage: store.get("triage",{}),        // id -> {t:"i"|"l"|"n", reasons:[]}
+  stage: store.get("stage",{2:"Shortlisted",4:"Applied",6:"Screen"}),
+  w: store.get("w",{...DEFAULT_W}),
+  prefs: store.get("prefs",{digest:20,noPay:true,excludePeople:true,payMin:150000,tiers:{Core:true,Domain:true,Stretch:false}}),
+  sel: null, open: null, sort:"fit", ctab:"watch", stab:"prefs"
+};
+const save = ()=>{store.set("triage",state.triage);store.set("stage",state.stage);store.set("w",state.w);store.set("prefs",state.prefs);store.set("view",state.view)};
+const fmt = n => (n>=1000? Math.round(n/1000)+"K" : n);
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function score(j){const W=state.w,t=SUBS.reduce((a,k)=>a+W[k],0)||1;return Math.round(SUBS.reduce((a,k)=>a+j.s[k]*W[k],0)/t)}
+function toCAD(p){return p.cur==="USD"? p.max*1.37 : p.max}
+function visible(){
+  const P=state.prefs;
+  return JOBS.filter(j=>{
+    if(P.excludePeople && j.people) return false;
+    if(!P.tiers[j.tier]) return false;
+    if(P.payMin && toCAD(j.pay) < P.payMin && !j.pay.est) return false; // missing/estimated pay never excludes
+    return true;
+  });
+}
+function ring(v){const r=26,c=2*Math.PI*r,off=c*(1-v/100);
+  return `<div class="ring" role="img" aria-label="Fit ${v} of 100"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="${r}" fill="none" stroke="var(--surface-2)" stroke-width="6"/><circle cx="30" cy="30" r="${r}" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" transform="rotate(-90 30 30)"/><path d="M30 6 L33 13 L27 13 Z" fill="var(--fg)"/></svg><div class="val">${v}</div></div>`}
+function payHTML(p){return `<span class="pay">${p.cur==="USD"?"US$":"$"}${fmt(p.min)}–${fmt(p.max)}${p.est?' <span class="est" title="Estimated: no pay posted">est.</span>':''}</span>`}
+function srcHTML(list){return `<span class="srcs">${list.map(k=>`<span class="src" title="${esc(SRC[k][1])}">${SRC[k][0]}</span>`).join("")}</span>`}
+function sigChips(j){return j.sig.map(([k,s,src])=>{const cls=/no CEC/.test(src)?"s-none":"s-"+s.toLowerCase();return `<span class="chip ${cls}" title="${esc(s+': '+src)}">${esc(k)} · ${s}</span>`}).join("")}
+function setView(v){state.view=v;state.open=null;save();render()}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.hidden=false;clearTimeout(t._h);t._h=setTimeout(()=>t.hidden=true,2200)}
+function triage(id,t){
+  const cur=state.triage[id]; state.triage[id]= cur&&cur.t===t? undefined : {t,reasons:[]};
+  if(state.triage[id]===undefined) delete state.triage[id];
+  if(t==="i" && state.triage[id] && !state.stage[id]) state.stage[id]="Shortlisted";
+  save(); render(); toast({i:"Marked Interested · added to Shortlisted",l:"Saved for later",n:"Marked Not interested"}[t]);
+}
+
+function viewDigest(){
+  const list=visible().map(j=>({...j,sc:score(j)}));
+  list.sort((a,b)=> state.sort==="new"? a.age-b.age : state.sort==="pay"? toCAD(b.pay)-toCAD(a.pay) : b.sc-a.sc);
+  const N=state.prefs.digest, fresh=list.filter(j=>j.isNew).slice(0,N), rest=list.filter(j=>!fresh.includes(j));
+  const P=state.prefs;
+  const card=j=>{const tr=state.triage[j.id]||{};
+    return `<article class="card ${state.sel===j.id?"sel":""} ${tr.t==="n"?"done":""}" data-open="${j.id}" tabindex="0" aria-label="${esc(j.title+' at '+j.co)}">
+      ${ring(j.sc)}
+      <div style="min-width:0">
+        <h3>${esc(j.title)}</h3>
+        <div class="meta"><span><b>${esc(j.co)}</b></span><span>${esc(j.loc)} · ${j.mode}</span><span class="mono">${j.age}d ago</span></div>
+        <div class="row">${payHTML(j.pay)} ${srcHTML(j.src)} ${j.transfer?'<span class="chip transfer">Internal transfer</span>':''}</div>
+        <div class="chips" style="margin-top:8px">${sigChips(j)}</div>
+        ${tr.t==="n"?`<div class="reasons" aria-label="Why not?">${["Wrong level","Domain","Location","Pay","People mgmt","Company"].map(r=>`<button data-reason="${j.id}|${r}" aria-pressed="${(tr.reasons||[]).includes(r)}">${r}</button>`).join("")}</div>`:""}
+      </div>
+      <div class="triage">
+        <button class="tbtn ${tr.t==="i"?"on-i":""}" data-tri="${j.id}|i">Interested</button>
+        <button class="tbtn ${tr.t==="l"?"on-l":""}" data-tri="${j.id}|l">Later</button>
+        <button class="tbtn ${tr.t==="n"?"on-n":""}" data-tri="${j.id}|n">Not</button>
+      </div></article>`};
+  return `<div class="topbar"><h1>Digest</h1><span class="sample">Sample data</span><span class="sp"></span><button class="btn primary" data-view="add">+ Add job</button></div>
+  <div class="summary"><strong>${fresh.length} new</strong><span>since your last visit · showing top ${N} · sorted by
+    <select id="sort" aria-label="Sort"><option value="fit"${state.sort==="fit"?" selected":""}>fit</option><option value="new"${state.sort==="new"?" selected":""}>newest</option><option value="pay"${state.sort==="pay"?" selected":""}>pay</option></select></span></div>
+  <div class="chips">
+    <span class="chip filter" data-view="settings">GTA + Waterloo, remote-Canada</span>
+    <span class="chip filter" data-view="settings">Pay ≥ $${fmt(P.payMin)}${P.noPay?" (incl. no posted pay)":""}</span>
+    <span class="chip filter" data-view="settings">${P.excludePeople?"No people management":"Incl. people management"}</span>
+    <span class="chip filter" data-view="settings">Tiers: ${Object.keys(P.tiers).filter(k=>P.tiers[k]).join(", ")}</span>
+  </div>
+  <div class="tip">Found a role on LinkedIn? Copy the link and press <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>V</kbd> anywhere. Keyboard: <kbd>J</kbd>/<kbd>K</kbd> move · <kbd>I</kbd> <kbd>L</kbd> <kbd>N</kbd> triage · <kbd>Enter</kbd> open</div>
+  <div class="section-label">New · top ${N}</div><div class="list">${fresh.map(card).join("")||'<p class="note">No new matches. Check back tomorrow, or widen your preferences.</p>'}</div>
+  ${rest.length?`<div class="section-label">Earlier</div><div class="list">${rest.map(card).join("")}</div>`:""}
+  ${JOBS.length-list.length?`<p class="note">${JOBS.length-list.length} role(s) hidden by your preferences (e.g. people management). Change them in Settings.</p>`:""}`;
+}
+function viewDetail(j){
+  const sc=score(j),W=state.w,tot=SUBS.reduce((a,k)=>a+W[k],0);
+  return `<div class="scrim" data-close></div><aside class="drawer" role="dialog" aria-modal="true" aria-label="${esc(j.title)}">
+    <div class="row" style="justify-content:space-between"><span class="sample">Sample data</span><button class="btn ghost" data-close>Close</button></div>
+    <div class="row" style="flex-wrap:nowrap;gap:14px">${ring(sc)}<div style="min-width:0"><h2>${esc(j.title)}</h2><div class="meta"><b>${esc(j.co)}</b><span>${esc(j.loc)} · ${j.mode}</span><span class="mono">${j.age}d ago</span></div></div></div>
+    <div class="row">${payHTML(j.pay)} ${j.transfer?'<span class="chip transfer">Internal transfer</span>':''} <span class="chip">${j.tier} tier</span> ${j.people?'<span class="chip s-none">Manages people</span>':'<span class="chip">IC role</span>'}</div>
+    <section class="panel"><h4>Summary</h4><p style="margin:0">${esc(j.summary)}</p><div class="chips">${j.must.map(m=>`<span class="chip">${esc(m)}</span>`).join("")}</div></section>
+    <section class="panel"><h4>Fit breakdown · weighted</h4>${SUBS.map(k=>`<div class="bar"><span>${SUBLABEL[k]} <span class="note mono">${Math.round(W[k]/tot*100)}%</span></span><div class="track"><div class="fill" style="width:${j.s[k]}%"></div></div><span class="mono">${j.s[k]}</span><span class="why">${esc(j.why[k])}</span></div>`).join("")}<p class="note">Weights are editable in Settings › Advanced.</p></section>
+    <section class="panel"><h4>Pay</h4><div>${payHTML(j.pay)}</div><p class="note" style="margin:0">${j.pay.est?`Estimate · confidence ${j.pay.conf} · source: ${esc(j.pay.tier)}. Ontario doesn't require posted pay for roles above $200K.`:"Posted by the employer."}</p></section>
+    <section class="panel"><h4>Immigration pathway signals</h4><div class="tblwrap"><table class="tbl"><thead><tr><th>Signal</th><th>Status</th><th>Source</th><th>As of</th></tr></thead><tbody>${j.sig.map(([k,s,src,d])=>`<tr><td>${esc(k)}</td><td><span class="chip ${/no CEC/.test(src)?"s-none":"s-"+s.toLowerCase()}">${s}</span></td><td>${esc(src)}</td><td class="mono">${esc(d)}</td></tr>`).join("")}</tbody></table></div><p class="note" style="margin:0">Signals, not immigration advice. Confirm with a licensed consultant.</p></section>
+    <section class="panel"><h4>Found on</h4>${j.src.map(k=>`<div class="row">${srcHTML([k])}<span>${esc(SRC[k][1])}</span><span class="note mono">first seen ${j.age}d ago</span></div>`).join("")}</section>
+    <div class="row"><button class="btn primary" data-toast="Opens the employer's posting in a new tab">Open posting</button><button class="btn" data-tri="${j.id}|i">Interested</button><button class="btn" data-tri="${j.id}|l">Later</button><button class="btn" data-tri="${j.id}|n">Not</button></div>
+  </aside>`;
+}
+function viewPipeline(){
+  const by={};STAGES.forEach(s=>by[s]=[]);
+  Object.entries(state.stage).forEach(([id,s])=>{const j=JOBS.find(x=>x.id==id);if(j&&by[s])by[s].push(j)});
+  by["Closed"].push({id:99,title:"Senior PM, Research Platform",co:"BenchSci",dead:true,pay:{min:160000,max:190000,cur:"CAD",est:false},s:{role:80,level:75,domain:70,pathway:50,pay:70,skills:75}});
+  return `<div class="topbar"><h1>Pipeline</h1><span class="sample">Sample data</span></div>
+  <p class="note">Move cards with the stage menu. Lodestone flags postings that are no longer live and keeps them in your history.</p>
+  <div class="board">${STAGES.map(s=>`<div class="col"><h4><span>${s}</span><span class="mono">${by[s].length}</span></h4>${by[s].map(j=>`<div class="pcard"><b>${esc(j.title)}</b><span>${esc(j.co)} · <span class="mono">fit ${score(j)}</span></span>${payHTML(j.pay)}${j.dead?'<span class="flag">No longer live · removed 3d ago</span>':`<select aria-label="Stage for ${esc(j.title)}" data-stage="${j.id}">${STAGES.map(x=>`<option${x===s?" selected":""}>${x}</option>`).join("")}</select>`}</div>`).join("")||'<span class="note">Empty</span>'}</div>`).join("")}</div>`;
+}
+function viewAdd(prefill){
+  return `<div class="topbar"><h1>Add a job</h1><span class="sample">Prototype</span></div>
+  <div class="tip">Paste one or more links (LinkedIn, Indeed, Wellfound, any company page), or paste the job description text. Lodestone parses it, checks for duplicates and scores it.</div>
+  <div class="field"><label for="paste">Links or job description</label><textarea id="paste" placeholder="https://www.linkedin.com/jobs/view/4012345678&#10;https://jobs.ashbyhq.com/cohere/…">${esc(prefill||"")}</textarea></div>
+  <div class="row"><button class="btn primary" id="parse">Add and score</button><span class="note">Try a LinkedIn link, a Greenhouse link, or plain text.</span></div>
+  <div id="addResult"></div>`;
+}
+function addResult(txt){
+  const t=txt.trim(); if(!t) return `<p class="note">Paste a link or job description first.</p>`;
+  if(/greenhouse|cohere|ashby/i.test(t)) return `<section class="panel"><h4>Already in Lodestone</h4><p style="margin:0"><b>Staff Product Manager, Agent Platform</b> at Cohere is already here (found via Ashby and a VC board). Added the pasted source to it.</p><div class="row">${srcHTML(["as","vc","li"])}<button class="btn" data-open="2">Open listing</button></div></section>`;
+  if(/linkedin/i.test(t)) return `<section class="panel"><h4>Couldn't read this page</h4><p style="margin:0">LinkedIn needs a sign-in to show the job, so Lodestone can't fetch it. Copy the job description from LinkedIn and paste it below; the link is kept as the source.</p><textarea aria-label="Job description text" placeholder="Paste the job description here…"></textarea><button class="btn primary" data-confirm>Parse text</button></section>`;
+  return confirmCard();
+}
+function confirmCard(){return `<section class="panel"><h4>Check the details</h4><div class="grid2">
+  <div class="field"><label for="f1">Title</label><input id="f1" type="text" value="Senior Product Manager, Payments Risk"></div>
+  <div class="field"><label for="f2">Company</label><input id="f2" type="text" value="Interac"></div>
+  <div class="field"><label for="f3">Location</label><input id="f3" type="text" value="Toronto · Hybrid"></div>
+  <div class="field"><label for="f4">Pay</label><input id="f4" type="text" value="Not posted → est. $165K–$200K"></div></div>
+  <div class="row"><span class="chip">Domain tier</span><span class="chip">IC role</span><span class="chip s-unknown">Sponsorship · Unknown</span><span class="chip s-stated">CEC credit · Stated</span></div>
+  <div class="row"><button class="btn primary" data-toast="Saved · scored 84 · added to your digest">Save job</button><button class="btn ghost" data-view="digest">Cancel</button></div></section>`}
+function viewCompanies(){
+  const tabs=[["watch","Watchlist"],["cand","Candidates"],["src","Source health"]];
+  let body="";
+  if(state.ctab==="watch") body=`<div class="tblwrap"><table class="tbl"><thead><tr><th>Company</th><th>Segment</th><th>Job system</th><th>Found via</th><th>Open roles in Canada</th><th>Refreshed</th></tr></thead><tbody>${COMPANIES.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td class="mono">${r[4]}</td><td>${r[5]}</td></tr>`).join("")}</tbody></table></div><p class="note">Showing 8 of 210 seed companies. The list grows automatically from discovery.</p>`;
+  if(state.ctab==="cand") body=`<div class="tblwrap"><table class="tbl"><thead><tr><th>Company</th><th>Discovered via</th><th>Job system</th><th>Status</th><th></th></tr></thead><tbody>${CANDIDATES.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td><td><span class="chip ${r[3]==="Auto-accept"?"s-stated":"s-inferred"}">${r[3]}</span></td><td><button class="btn" data-toast="Added to watchlist">Add</button></td></tr>`).join("")}</tbody></table></div>`;
+  if(state.ctab==="src") body=`<div class="tblwrap"><table class="tbl"><thead><tr><th>Source</th><th>Status</th><th>Volume</th><th>Last run</th></tr></thead><tbody>${SOURCES.map(r=>`<tr><td>${r[0]}</td><td><span class="chip ${r[1]==="OK"?"s-stated":"s-none"}">${r[1]}</span></td><td class="mono">${r[2]}</td><td class="mono">${r[3]}</td></tr>`).join("")}</tbody></table></div>`;
+  return `<div class="topbar"><h1>Companies</h1><span class="sample">Sample data</span><span class="sp"></span><button class="btn" data-toast="Paste a company name or careers URL to add it">+ Add company</button></div>
+  <div class="tabs">${tabs.map(([k,l])=>`<button data-ctab="${k}" aria-pressed="${state.ctab===k}">${l}</button>`).join("")}</div>${body}`;
+}
+function viewSettings(){
+  const P=state.prefs,W=state.w,tot=SUBS.reduce((a,k)=>a+W[k],0);
+  const tabs=[["prefs","Preferences"],["profile","Profile"],["adv","Advanced"]];
+  let body="";
+  if(state.stab==="prefs") body=`<div class="grid2">
+    <section class="panel"><h4>What to show</h4>
+      <div class="switch"><label for="excl">Exclude roles that manage people</label><input id="excl" type="checkbox" ${P.excludePeople?"checked":""}></div>
+      <div class="switch"><label for="nopay">Include roles without posted pay (shown with an estimate)</label><input id="nopay" type="checkbox" ${P.noPay?"checked":""}></div>
+      ${["Core","Domain","Stretch"].map(t=>`<div class="switch"><label for="t-${t}">${t} role families</label><input id="t-${t}" data-tier="${t}" type="checkbox" ${P.tiers[t]?"checked":""}></div>`).join("")}
+    </section>
+    <section class="panel"><h4>Digest and pay</h4>
+      <div class="field"><label for="dsize">Digest size (1–100)</label><input id="dsize" type="number" min="1" max="100" value="${P.digest}"></div>
+      <div class="field"><label for="paymin">Minimum pay, CAD (posted pay only; estimates are never excluded)</label><input id="paymin" type="number" step="5000" value="${P.payMin}"></div>
+      <div class="field"><label>Locations</label><div class="chips"><span class="chip">Greater Toronto Area</span><span class="chip">Waterloo Region</span><span class="chip">Remote — Canada</span><button class="chip filter" data-toast="Expanding geography adds more roles">+ Add location</button></div></div>
+    </section></div>`;
+  if(state.stab==="profile") body=`<section class="panel"><h4>From your CV · editable</h4><div class="grid2">
+    <div class="field"><label for="p1">Current employer</label><input id="p1" type="text" value="Google"></div>
+    <div class="field"><label for="p2">Level</label><input id="p2" type="text" value="L5 (operating near L6)"></div>
+    <div class="field"><label for="p3">Domains</label><input id="p3" type="text" value="Enterprise AI & agents, data governance, trust & safety, FS policy, commerce"></div>
+    <div class="field"><label for="p4">Scope signals</label><input id="p4" type="text" value="Led ~80 people across 20 teams; $5B revenue protected; multi-PA strategy"></div></div>
+    <p class="note" style="margin:0">Your CV stays on this computer. LinkedIn data export is optional.</p></section>`;
+  if(state.stab==="adv") body=`<section class="panel"><h4>Score weights · total <span class="mono">${tot}%</span></h4>${SUBS.map(k=>`<div class="slider"><label for="w-${k}">${SUBLABEL[k]}</label><input id="w-${k}" data-w="${k}" type="range" min="0" max="50" value="${W[k]}"><span class="mono">${Math.round(W[k]/tot*100)}%</span></div>`).join("")}
+    <p class="note" style="margin:0">Weights are normalized to 100%. The digest re-ranks instantly.</p><div><button class="btn" id="resetw">Reset to defaults</button></div></section>`;
+  return `<div class="topbar"><h1>Settings</h1><span class="sample">Prototype</span></div>
+  <div class="tabs">${tabs.map(([k,l])=>`<button data-stab="${k}" aria-pressed="${state.stab===k}">${l}</button>`).join("")}</div>${body}`;
+}
+function render(){
+  const v=state.view;
+  document.querySelectorAll("[data-view].nav, .tabbar [data-view]").forEach(b=>b.setAttribute("aria-current", b.dataset.view===v?"page":"false"));
+  const el=document.getElementById("view");
+  el.innerHTML = v==="digest"?viewDigest(): v==="pipeline"?viewPipeline(): v==="add"?viewAdd(state.prefill): v==="companies"?viewCompanies(): viewSettings();
+  state.prefill=null;
+  document.getElementById("nc-digest").textContent = visible().filter(j=>j.isNew).length;
+  document.getElementById("nc-pipe").textContent = Object.keys(state.stage).length+1;
+  const ov=document.getElementById("overlay"); ov.innerHTML = state.open? viewDetail(JOBS.find(j=>j.id===state.open)) : "";
+}
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-view],[data-tri],[data-open],[data-close],[data-reason],[data-ctab],[data-stab],[data-toast],[data-confirm],#parse,#resetw");
+  if(!t) return;
+  if(t.matches("[data-tri]")){e.stopPropagation();const [id,k]=t.dataset.tri.split("|");triage(+id,k);return}
+  if(t.matches("[data-reason]")){e.stopPropagation();const [id,r]=t.dataset.reason.split("|");const tr=state.triage[id];if(!tr)return;const i=tr.reasons.indexOf(r);i<0?tr.reasons.push(r):tr.reasons.splice(i,1);save();render();return}
+  if(t.matches("[data-close]")){state.open=null;render();return}
+  if(t.matches("[data-open]")){state.open=+t.dataset.open;state.sel=state.open;if(state.view!=="digest"){state.view="digest"}render();return}
+  if(t.matches("[data-view]")){setView(t.dataset.view);return}
+  if(t.matches("[data-ctab]")){state.ctab=t.dataset.ctab;render();return}
+  if(t.matches("[data-stab]")){state.stab=t.dataset.stab;render();return}
+  if(t.id==="parse"){document.getElementById("addResult").innerHTML=addResult(document.getElementById("paste").value);return}
+  if(t.matches("[data-confirm]")){document.getElementById("addResult").innerHTML=confirmCard();return}
+  if(t.id==="resetw"){state.w={...DEFAULT_W};save();render();return}
+  if(t.matches("[data-toast]")){toast(t.dataset.toast);return}
+});
+document.addEventListener("change",e=>{
+  const t=e.target,P=state.prefs;
+  if(t.id==="sort"){state.sort=t.value;render();return}
+  if(t.dataset.stage){state.stage[t.dataset.stage]=t.value;save();render();toast("Moved to "+t.value);return}
+  if(t.id==="excl"){P.excludePeople=t.checked}
+  else if(t.id==="nopay"){P.noPay=t.checked}
+  else if(t.dataset.tier){P.tiers[t.dataset.tier]=t.checked}
+  else if(t.id==="dsize"){P.digest=Math.max(1,Math.min(100,+t.value||20))}
+  else if(t.id==="paymin"){P.payMin=Math.max(0,+t.value||0)}
+  else if(t.dataset.w){save();toast("Weights saved · digest re-ranked");return}
+  else return;
+  save();render();toast("Preferences saved");
+});
+document.addEventListener("input",e=>{const t=e.target;if(!t.dataset.w)return;state.w[t.dataset.w]=+t.value;const tot=SUBS.reduce((a,k)=>a+state.w[k],0)||1;
+  document.querySelectorAll("[data-w]").forEach(r=>{r.nextElementSibling.textContent=Math.round(state.w[r.dataset.w]/tot*100)+"%"});
+  const h=document.querySelector(".panel h4 .mono");if(h)h.textContent=tot+"%";});
+document.addEventListener("keydown",e=>{
+  if(e.target.matches("input,textarea,select")) return;
+  if(e.key==="Escape"&&state.open){state.open=null;render();return}
+  if(state.view!=="digest") return;
+  const ids=[...document.querySelectorAll(".card")].map(c=>+c.dataset.open); if(!ids.length) return;
+  let i=ids.indexOf(state.sel);
+  if(e.key==="j"){state.sel=ids[Math.min(ids.length-1,i+1)];render()}
+  else if(e.key==="k"){state.sel=ids[Math.max(0,i-1)];render()}
+  else if(e.key==="Enter"&&state.sel){state.open=state.sel;render()}
+  else if(["i","l","n"].includes(e.key)&&state.sel){triage(state.sel,e.key)}
+});
+document.addEventListener("paste",e=>{
+  if(e.target.matches("input,textarea")) return;
+  const txt=(e.clipboardData||window.clipboardData)?.getData("text")||"";
+  if(txt.trim()){state.view="add";state.prefill=txt;state.open=null;render();toast("Pasted into Add a job")}
+});
+render();
+</script>
