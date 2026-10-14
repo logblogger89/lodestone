@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-14 · **Current milestone:** M0 → M1 · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14).** Hosting is Cloud Run (D-034). **Eng Design Doc v0 is in review** with 5 decisions for Ayush (database, Claude model and budget, provider, search approach, GCP setup). **Next:** decisions, then M3 approval, then M4 Sprint 1.
+**Status summary (2026-10-14).** **Pivot (D-036):** Phase 1 uses Claude Code as the engine and a private Artifact as the app, with no Cloud Run or paid API. Eng Design v1 is in review. **Blocker:** network allowlist for the job feeds (I-01). **Next:** Ayush's approval of M3, then P1-S1.
 
 ---
 
@@ -38,7 +38,7 @@
 | D2.2 | Screen specs and visual direction | Product (UX) | M2 | ✅ | Claude → Ayush | [UX_SPEC.md](../product/ux/UX_SPEC.md) §4–6 |
 | D2.3 | Clickable prototype | Product (UX) | M2 | ✅ | Claude → Ayush | [prototype.html](../product/ux/prototype.html) · [live link](https://claude.ai/artifact/C9f5CPbspLeydxtwVVBUKG) (private) |
 | D2.4 | UX review | Product (UX) | M2 | ✅ | Ayush | All 3 questions resolved (D-030 to D-032) |
-| D3.1 | Eng Design Doc | Engineering | M3 | 🟨 | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v0. 5 decisions needed (§13, E-1 to E-5) |
+| D3.1 | Eng Design Doc | Engineering | M3 | 🟨 | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v1: Phase 1 = Claude Code engine + Artifact app |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | 🟨 | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
 | D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | 🟨 | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
 | D4.1 | MVP build | Engineering | M4 | ⬜ | Claude | |
@@ -85,6 +85,7 @@
 | D-033 | 10-14 | **M2 approved:** UX spec v0 and prototype v3 | Gate review | Ayush |
 | D-034 | 10-14 | **Hosting: Google Cloud Run** (option B). The app runs in the cloud, so it's usable from any device with the laptop off and deploys on every push. **Supersedes D-015** (local-only). Personal data lives in Ayush's own GCP project | Least friction moving between iPad and laptop | Ayush |
 | D-035 | 10-14 | GCP region: **us-central1 (Iowa)**, the cheapest tier, instead of Toronto. Canadian data residency isn't required for a personal tool. Prices get confirmed during setup | Ayush wants the cheapest region | Ayush |
+| D-036 | 10-14 | **Phase 1 has no Cloud Run and no paid API.** Claude Code is the engine (refresh on request, with scoring covered by the Claude subscription), and a private Artifact with its built-in database is the app. Cloud Run + the Claude API (D-034, D-035) move to Phase 2, for when there are more users or a fixed schedule is needed | Ayush: avoid API costs until there's a need | Ayush |
 
 ## 4. Open questions
 
@@ -99,7 +100,7 @@
 | Q-07 | Company-type preferences | — | ➡️ Deferred to PRD session | |
 | Q-08 | Scope beyond "find" (resume tailoring, referrals, interview prep) | — | ➡️ Deferred to PRD session | |
 | Q-09 | Delivery surface (web, email digest) | — | ➡️ Deferred to PRD session | |
-| Q-10 | Monthly budget for hosting and LLM/API costs | M3 | Open | Options in ENG_DESIGN §12: infra ≈$10–20/mo, LLM option A/B/C ≈ $105–270 / $25–45 / $5–10 per month |
+| Q-10 | Monthly budget for hosting and LLM/API costs | — | ✅ Deferred | Phase 1 costs $0 beyond the Claude subscription (D-036). Revisit in Phase 2 |
 | Q-11 | Should the repo be public or private? | — | ✅ Answered | Private for now (D-006). Scrub personal details before any public release (A-03) |
 | Q-12 | Is there a target date to start applying, have an offer, or move? | — | ✅ Answered | As soon as possible, and comfortably before the H-1B expires in Sep 2027 (D-016) |
 | Q-13 | Capacity: how much review time per week? | — | ✅ Answered | Unpredictable (newborn). Dates will move as needed (D-020) |
@@ -131,7 +132,7 @@
 | R-12 | Risk | The CRS rules (points grid, how job offers count, category draws) change over time, so a hard-coded calculator would go stale | Med | Put CRS rules in versioned config (D-005), show the rules version and date, and link to the official IRCC calculator for verification | Claude | Open |
 | R-13 | Risk | Employer-level sponsorship signals from web research may be stale, wrong or unverifiable | Med | Prefer official data, e.g. ESDC's published positive-LMIA employer lists (to verify in DR-3/DR-4). Show the source, date and a confidence level, and never hide a listing because of it (D-021) | Claude | Open |
 | R-14 | Risk | A browser extension that reads LinkedIn or Wellfound pages could breach their terms, even when the user is looking at the page themselves | Med | Review ToS before building A3d. Fall back to paste URL or paste text (A3a, A3b), which are always available | Claude | Open |
-| I-01 | Issue | This cloud environment's network policy blocks the ATS APIs (Greenhouse, Lever, Ashby, SmartRecruiters) and web-page fetches, so ATS detection can't be verified from here | Low | Detection runs in the app on Ayush's laptop (R1a). Or allow the hosts in the environment settings | Ayush | Open |
+| I-01 | Issue | This Claude Code environment's network policy blocks the job-system feeds, which Phase 1 refresh needs | **High** | Ayush adds the allowed domains in the environment's network settings (ENG_DESIGN Phase 1, prerequisite) | Ayush | Open |
 | A-03 | Assumption | The repo stays private. The PRD holds personal immigration and family context | — | Scrub it before any public release (M6) | Claude | Open |
 | DEP-1 | Dependency | Ayush's review time at each gate | — | See Q-13 | Ayush | Open |
 | DEP-2 | Dependency | Job sources that are legal to use | — | DR-4 | Claude | Open |
@@ -161,6 +162,7 @@
 | 2026-10-14 | M2 approved (D-033). M3 started, beginning with the runtime decision (Q-20) | Claude |
 | 2026-10-14 | Hosting decided: Cloud Run (D-034). Eng Design Doc v0 and ADR-0001 to ADR-0007 written | Claude |
 | 2026-10-14 | Region changed to us-central1 (D-035). Plain-English summary added to the Eng Design Doc. Working agreement: explain in plain language for a PM audience | Claude |
+| 2026-10-14 | Architecture pivot: Phase 1 runs on a Claude Code engine with an Artifact app (D-036). Cloud Run moved to Phase 2. I-01 is now high priority | Claude |
 
 ## 7. Published artifacts (Google Drive)
 

@@ -3,12 +3,41 @@
 | | |
 |---|---|
 | **Author** | Claude (SWE/TL), for Ayush's review |
-| **Status** | **v0, in review** (gate M3) |
+| **Status** | **v1, in review** (gate M3). Phase 1 = Claude Code engine + Artifact app (D-036). Cloud Run is Phase 2 |
 | **Implements** | [PRD v0](../product/PRD.md) P0 R1–R15 (+ R1a), [UX spec](../product/ux/UX_SPEC.md) |
 | **Decisions** | [ADRs](adr/) · [Tracker](../program/TRACKER.md) |
 | **Last updated** | 2026-10-14 |
 
 ---
+
+## Phase 1 (current): Claude Code as the engine, an Artifact as the app (D-036)
+
+No cloud servers and no paid API yet. **Phase 2** (Cloud Run + the Claude API, §1–§14 below) starts when there are more users or the data needs a fixed schedule.
+
+**How it works**
+1. **The app** is a private claude.ai Artifact (the prototype, made real). Ayush opens it on any device.
+2. **Its data** lives in the Artifact's built-in database (the `db` capability): jobs, scores, signals, and Ayush's triage, pipeline and preferences. The page reads it live. Claude reads and writes it from any Claude Code session.
+3. **A refresh** happens when Ayush asks for one in a Claude Code session ("refresh jobs", or `/refresh`, from the iPad or the laptop browser):
+   - a repo script (`lodestone refresh`) pulls public job-system feeds for the watchlist, normalizes them, removes duplicates, applies the rules filter, and checks whether postings are still live
+   - **Claude, in the session, reads and scores the new candidates.** This is covered by Ayush's Claude subscription, so there's no API bill
+   - the results are written to the Artifact's database, and the code changes are pushed to GitHub
+4. **Capture:** Ayush pastes a link or job description in the app. It lands in an "inbox" in the database and is processed at the next refresh. Pasted text can also be parsed right away inside the app via the `sample` capability (to verify during the build).
+5. **Learning:** Claude reads Ayush's triage from the database at each refresh, adjusts the rankings, and grows the eval set.
+
+**What stays the same for Phase 2:** the job-system adapters, dedup, rules, prompts, scoring schema and data model are shared code. Phase 2 only changes *who calls the model* (the API instead of the session) and *where data lives* (Postgres instead of the Artifact database).
+
+**Trade-offs:** data is only as fresh as the last refresh (fine for a personal search; a scheduled Claude Code routine can automate it later without the API). A large refresh uses a meaningful share of a Pro plan's usage, so score only what passes the rules filter, and upgrade to Max only if limits bite.
+
+**Prerequisite (one-time, Ayush):** let this Claude Code environment reach the public job feeds. Add these allowed domains in the environment's network settings: `boards-api.greenhouse.io`, `api.lever.co`, `api.eu.lever.co`, `api.ashbyhq.com`, `api.smartrecruiters.com`, `apply.workable.com`, `myworkdayjobs.com`, `open.canada.ca`, `www.canada.ca`, `hacker-news.firebaseio.com`, `hn.algolia.com`.
+
+**Phase 1 build plan**
+| Sprint | Scope | Exit |
+|---|---|---|
+| P1-S1 | Core library: Greenhouse, Lever, Ashby and SmartRecruiters adapters, normalization, Canada filter, dedup, rules, plus the `/refresh` runbook (project skill) | A refresh produces deduplicated Canadian candidates from the seed list |
+| P1-S2 | The Artifact app wired to the `db` capability: digest, detail, triage, pipeline, settings, companies | Ayush triages real jobs on the iPad |
+| P1-S3 | Profile (from the CV, stored in the Artifact's database, never in the repo), Claude scoring with explanations, weights | Ranked, explained digest |
+| P1-S4 | Capture inbox, pay estimates, pathway signals (ESDC list), liveness | All P0 journeys work |
+| P1-S5 | Discovery (ATS reverse search through the session's web search, VC boards, ESDC, capture spill-over), eval set | M4 dogfood |
 
 ## 0. Plain-English summary
 
@@ -17,6 +46,10 @@
 - **What it does every morning:** It checks hundreds of companies' job boards for new Canadian roles, removes duplicates, has Claude read and score each one against your profile, and fills your digest.
 - **What you decide:** a few product and cost choices (§13). I handle the engineering.
 - **Cost:** roughly $10–20/month for Google Cloud, plus the Claude cost of the option you pick ($5–270/month, §12).
+
+---
+
+# Phase 2 design (Cloud Run + Claude API). Deferred, kept for later
 
 ## 1. Context and goals
 
