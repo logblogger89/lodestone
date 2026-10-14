@@ -10,6 +10,14 @@
 
 ---
 
+## 0. Plain-English summary
+
+- **What runs where:** The app lives on Google Cloud, in your own account. You open it in any browser (iPad or laptop) and sign in with your Google account. Nobody else can get in.
+- **How it updates:** When I change the code and push it to GitHub, it tests itself and goes live automatically. You don't install or run anything.
+- **What it does every morning:** It checks hundreds of companies' job boards for new Canadian roles, removes duplicates, has Claude read and score each one against your profile, and fills your digest.
+- **What you decide:** a few product and cost choices (§13). I handle the engineering.
+- **Cost:** roughly $10–20/month for Google Cloud, plus the Claude cost of the option you pick ($5–270/month, §12).
+
 ## 1. Context and goals
 
 Lodestone is a single-user job-search portal (built so more users can be added later) hosted on **Google Cloud Run** (D-034). The design must:
@@ -32,7 +40,7 @@ flowchart LR
   end
   CI -->|Workload Identity Federation| AR[Artifact Registry]
   AR --> WEB
-  subgraph GCP project · northamerica-northeast2 Toronto
+  subgraph GCP project · us-central1 Iowa (cheapest tier)
     IAP[Google sign-in gate: IAP, allow-list = Ayush] --> WEB[Cloud Run service: web UI + API]
     SCH[Cloud Scheduler] --> JOBS[Cloud Run Jobs: ingest · discover · score · signals]
     WEB --> DB[(Postgres)]
@@ -46,7 +54,7 @@ flowchart LR
 ```
 
 - **One container image, two entry points.** The Cloud Run *service* serves the React UI and the JSON API. Cloud Run *Jobs* run batch work (ingestion, discovery, scoring, signal refresh) on a schedule from Cloud Scheduler. Jobs have no request timeout, so long pulls are safe.
-- **Region: Toronto (`northamerica-northeast2`)**, so data stays in Canada. *Verify that every service used is available there; fall back to Montréal (`northamerica-northeast1`).*
+- **Region: `us-central1` (Iowa)** (D-035). It's one of Google's lowest-price regions, has every service we need, and the latency difference from NYC or Toronto is unnoticeable. Data lives in the US instead of Canada, which is fine for a personal tool. *Prices are confirmed in the GCP pricing calculator during setup (Sprint 1).*
 
 ## 3. Tech stack (ADR-0002)
 
@@ -133,7 +141,7 @@ class SourceAdapter(Protocol):
 ## 10. Security and privacy (R14)
 
 - **Access:** the Google sign-in gate (**IAP**) lets in only Ayush's Google account. *Verify direct IAP-on-Cloud-Run support; the fallback is an HTTPS load balancer with IAP (adds cost) or in-app Google Sign-In with an allow-list.* No public endpoints except the health check.
-- **Data:** stored in Toronto. The CV is in a private GCS bucket, with uniform access and no public ACLs. Automated DB backups. Personal data is never logged.
+- **Data:** stored in `us-central1`. The CV is in a private GCS bucket, with uniform access and no public ACLs. Automated DB backups. Personal data is never logged.
 - **Secrets:** the Claude API key and any search key live in Secret Manager. Each component gets a least-privilege service account (web, jobs, CI deployer).
 - **CI/CD:** GitHub → GCP through Workload Identity Federation, so no long-lived keys.
 - **LLM:** only the JD text and the profile fields needed for scoring are sent. The Anthropic API data-retention terms apply.
@@ -172,7 +180,7 @@ Option C is roughly 40× cheaper per token than Option A. The quality difference
 
 | # | Decision | Recommendation |
 |---|---|---|
-| E-1 | **Database:** Cloud SQL Postgres (~$10–15/mo, all in GCP) vs. free external Postgres vs. Firestore | Cloud SQL Postgres: simplest operations, stays in your GCP project in Toronto |
+| E-1 | **Database:** Cloud SQL Postgres (~$10–15/mo, all in GCP) vs. free external Postgres vs. Firestore | Cloud SQL Postgres: simplest to run, and it stays in your own GCP project |
 | E-2 | **Claude models and budget** (Q-10): Option A, B or C in §12 | Your call. My suggestion is to start on B and confirm with the eval |
 | E-3 | **Claude via the Anthropic API or Google Vertex AI** | Anthropic API (newest features, server-side fallback). Vertex keeps billing in GCP if you prefer |
 | E-4 | **ATS reverse search:** Claude `web_search` tool vs. a separate search API | Claude `web_search`: one vendor, no extra key |

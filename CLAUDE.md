@@ -10,3 +10,4 @@
 - **Built for one, ready for many (D-005).** User profile, role family, geography, leveling, comp, eligibility, sources and scoring weights are data, config or plugins, never hard-coded. Build the seams, but only one implementation of each.
 - **Privacy.** Never commit resumes or contact details. The repo is private (D-006). Personal immigration and family context must be scrubbed before any public release.
 - **Auto-push.** After every change, commit and push to the working branch (`claude/lodestone-portal-planning-32eoh2`) without asking. Ayush wants GitHub always up to date.
+- **Audience: Ayush is a Google PM, not a hands-on developer.** He understands software at a high level. Explain trade-offs in product and cost terms, avoid unexplained jargon (define it in one line when needed), and give click-by-click steps for anything he has to do himself (e.g. GCP console setup). Claude does all the coding.

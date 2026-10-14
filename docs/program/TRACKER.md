@@ -84,6 +84,7 @@
 | D-032 | 10-14 | Interested automatically adds the role to Shortlisted in the pipeline | UX review | Ayush |
 | D-033 | 10-14 | **M2 approved:** UX spec v0 and prototype v3 | Gate review | Ayush |
 | D-034 | 10-14 | **Hosting: Google Cloud Run** (option B). The app runs in the cloud, so it's usable from any device with the laptop off and deploys on every push. **Supersedes D-015** (local-only). Personal data lives in Ayush's own GCP project | Least friction moving between iPad and laptop | Ayush |
+| D-035 | 10-14 | GCP region: **us-central1 (Iowa)**, the cheapest tier, instead of Toronto. Canadian data residency isn't required for a personal tool. Prices get confirmed during setup | Ayush wants the cheapest region | Ayush |
 
 ## 4. Open questions
 
@@ -159,6 +160,7 @@
 | 2026-10-14 | Prototype v2 and v3 (deep links, label explainer, exact-URL previews). UX review questions resolved (D-030 to D-032) | Claude |
 | 2026-10-14 | M2 approved (D-033). M3 started, beginning with the runtime decision (Q-20) | Claude |
 | 2026-10-14 | Hosting decided: Cloud Run (D-034). Eng Design Doc v0 and ADR-0001 to ADR-0007 written | Claude |
+| 2026-10-14 | Region changed to us-central1 (D-035). Plain-English summary added to the Eng Design Doc. Working agreement: explain in plain language for a PM audience | Claude |
 
 ## 7. Published artifacts (Google Drive)
 
