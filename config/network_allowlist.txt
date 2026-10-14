@@ -1,0 +1,14 @@
+# Domains the Claude Code environment must be allowed to reach for a Lodestone refresh.
+# Add new sources here. scripts/check_network.py reports any that are blocked.
+# Format: domain  probe-url  purpose
+boards-api.greenhouse.io     https://boards-api.greenhouse.io/v1/boards/stripe/jobs              Greenhouse job feeds
+api.lever.co                 https://api.lever.co/v0/postings/plaid?mode=json&limit=1             Lever job feeds
+api.eu.lever.co              https://api.eu.lever.co/v0/postings/x?mode=json&limit=1              Lever EU job feeds
+api.ashbyhq.com              https://api.ashbyhq.com/posting-api/job-board/ramp                   Ashby job feeds
+api.smartrecruiters.com      https://api.smartrecruiters.com/v1/companies/Visa/postings?limit=1   SmartRecruiters job feeds
+apply.workable.com           https://apply.workable.com/api/v1/widget/accounts/x                  Workable job feeds
+myworkdayjobs.com            https://wd5.myworkdayjobs.com                                        Workday job feeds (banks, enterprises)
+open.canada.ca               https://open.canada.ca/data/en/dataset/90fed587-1364-4f33-a9ee-208181dc0b97   ESDC positive-LMIA employers list
+www.canada.ca                https://www.canada.ca/en.html                                        IRCC / ESDC reference pages
+hacker-news.firebaseio.com   https://hacker-news.firebaseio.com/v0/maxitem.json                   HN "Who is hiring" (official API)
+hn.algolia.com               https://hn.algolia.com/api/v1/search?query=hiring&tags=story         HN search (official API)

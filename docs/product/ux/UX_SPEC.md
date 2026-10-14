@@ -66,6 +66,9 @@ flowchart LR
 - **Job card:** title · company · location and work mode · posting age · **fit score** (0–100, with a ring) · **source icons** (one per source, A1) · **pay** (as posted, or an estimate with an "est." icon, B8) · **pathway chips** (ICT, Sponsorship, Sponsored before, GTS, CEC credit), each marked Stated / Inferred / Unknown · **Internal transfer** badge (B10) · repost or "no longer live" flags · triage buttons
 - **Sort:** fit (default), newest, pay. **Group:** "New" (the top N), then "Earlier"
 
+### 4.1a Freshness panel (R11a)
+- A header chip on every screen: "Updated 2h ago". Tap it to open a panel listing job pulls (overall and per source), scoring (time, prompt and model version), pathway signals (ESDC quarter), discovery and profile, each with a timestamp. Items older than 7 days are flagged.
+
 ### 4.2 Listing detail
 - Parsed summary (role family and tier, level signals, domain, must-haves, people management)
 - **Fit breakdown:** six sub-scores with bars, weights and a reason for each. The overall score is the weighted blend

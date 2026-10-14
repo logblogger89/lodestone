@@ -86,6 +86,8 @@
 | D-034 | 10-14 | **Hosting: Google Cloud Run** (option B). The app runs in the cloud, so it's usable from any device with the laptop off and deploys on every push. **Supersedes D-015** (local-only). Personal data lives in Ayush's own GCP project | Least friction moving between iPad and laptop | Ayush |
 | D-035 | 10-14 | GCP region: **us-central1 (Iowa)**, the cheapest tier, instead of Toronto. Canadian data residency isn't required for a personal tool. Prices get confirmed during setup | Ayush wants the cheapest region | Ayush |
 | D-036 | 10-14 | **Phase 1 has no Cloud Run and no paid API.** Claude Code is the engine (refresh on request, with scoring covered by the Claude subscription), and a private Artifact with its built-in database is the app. Cloud Run + the Claude API (D-034, D-035) move to Phase 2, for when there are more users or a fixed schedule is needed | Ayush: avoid API costs until there's a need | Ayush |
+| D-037 | 10-14 | Infrequent refreshes are fine. Add a freshness indicator with the last-refresh time per component (job pulls, scoring and model version, signals, discovery, profile) (R11a) | Ayush | Ayush |
+| D-038 | 10-14 | Required domains live in `config/network_allowlist.txt`. `scripts/check_network.py` runs at every refresh and lists any that are blocked. Network settings can only be changed by Ayush (an environment setting) | Future sources need new domains | Claude |
 
 ## 4. Open questions
 
@@ -132,7 +134,7 @@
 | R-12 | Risk | The CRS rules (points grid, how job offers count, category draws) change over time, so a hard-coded calculator would go stale | Med | Put CRS rules in versioned config (D-005), show the rules version and date, and link to the official IRCC calculator for verification | Claude | Open |
 | R-13 | Risk | Employer-level sponsorship signals from web research may be stale, wrong or unverifiable | Med | Prefer official data, e.g. ESDC's published positive-LMIA employer lists (to verify in DR-3/DR-4). Show the source, date and a confidence level, and never hide a listing because of it (D-021) | Claude | Open |
 | R-14 | Risk | A browser extension that reads LinkedIn or Wellfound pages could breach their terms, even when the user is looking at the page themselves | Med | Review ToS before building A3d. Fall back to paste URL or paste text (A3a, A3b), which are always available | Claude | Open |
-| I-01 | Issue | This Claude Code environment's network policy blocks the job-system feeds, which Phase 1 refresh needs | **High** | Ayush adds the allowed domains in the environment's network settings (ENG_DESIGN Phase 1, prerequisite) | Ayush | Open |
+| I-01 | Issue | The environment's network blocks all 11 required domains (checked 10-14 with scripts/check_network.py) | **High** | Ayush sets Network access to Full (recommended) or adds the domains under Limited | Ayush | Open |
 | A-03 | Assumption | The repo stays private. The PRD holds personal immigration and family context | — | Scrub it before any public release (M6) | Claude | Open |
 | DEP-1 | Dependency | Ayush's review time at each gate | — | See Q-13 | Ayush | Open |
 | DEP-2 | Dependency | Job sources that are legal to use | — | DR-4 | Claude | Open |
@@ -163,6 +165,7 @@
 | 2026-10-14 | Hosting decided: Cloud Run (D-034). Eng Design Doc v0 and ADR-0001 to ADR-0007 written | Claude |
 | 2026-10-14 | Region changed to us-central1 (D-035). Plain-English summary added to the Eng Design Doc. Working agreement: explain in plain language for a PM audience | Claude |
 | 2026-10-14 | Architecture pivot: Phase 1 runs on a Claude Code engine with an Artifact app (D-036). Cloud Run moved to Phase 2. I-01 is now high priority | Claude |
+| 2026-10-14 | Freshness indicator added (R11a, D-037). Domain allowlist file and checker added (D-038) | Claude |
 
 ## 7. Published artifacts (Google Drive)
 
