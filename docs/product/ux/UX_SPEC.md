@@ -15,7 +15,8 @@
 2. **Never hide, always label.** Estimates ("est."), inferred signals and unknowns are visible and marked. Filters never drop a job just because data is missing (D-021).
 3. **Explain every number.** The fit score expands into sub-scores, each with a one-line reason.
 4. **Two taps to triage.** Interested, Later and Not are always visible. Reasons are optional chips.
-5. **Built for one, ready for many.** Every preference lives in Settings as data, not code (D-005).
+5. **Every claim links to its source.** Source icons, "found on" entries and pathway-signal sources are deep links (the exact posting, dataset or official page). Jargon (role tier, LMIA, CEC, Stated/Inferred/Unknown) is explained in place via a "What do these labels mean?" panel. (Ayush's review, 2026-10-14)
+6. **Built for one, ready for many.** Every preference lives in Settings as data, not code (D-005).
 
 ## 2. Information architecture
 
@@ -69,7 +70,7 @@ flowchart LR
 - Parsed summary (role family and tier, level signals, domain, must-haves, people management)
 - **Fit breakdown:** six sub-scores with bars, weights and a reason for each. The overall score is the weighted blend
 - **Pay:** posted range, or estimate plus its confidence and source tier (DR-2)
-- **Pathway signals table:** signal, status (Stated / Inferred / Unknown), source, as-of date. Footer: "Signals, not immigration advice"
+- **Pathway signals table:** signal, status (Stated / Inferred / Unknown), **linked** source (e.g. the ESDC dataset, the posting, IRCC rules), as-of date. Footer: "Signals, not immigration advice"
 - **Sources:** every sighting with first seen, last seen and a link
 - Actions: Open posting · Add to pipeline · Triage
 

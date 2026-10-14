@@ -64,6 +64,10 @@ button,input,select{font:inherit;color:inherit}
 .pay{font-family:var(--font-mono);font-size:13px;display:inline-flex;gap:6px;align-items:center}
 .est{font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:.04em;padding:1px 5px;border-radius:4px;border:1px dashed var(--warn);color:var(--warn)}
 .srcs{display:inline-flex;gap:4px}
+a.src{text-decoration:none}a.src:hover{border-color:var(--accent)}
+.drawer a,.tip a{color:var(--accent)}
+details.panel summary{cursor:pointer}
+details.panel p{margin:8px 0 0;font-size:14px}
 .src{width:22px;height:22px;border-radius:5px;display:inline-grid;place-items:center;font-size:10px;font-weight:700;font-family:var(--font-mono);background:var(--surface-2);color:var(--fg);border:1px solid var(--line)}
 .triage{display:flex;flex-direction:column;gap:6px}
 .tbtn{border:1px solid var(--line);background:var(--surface);border-radius:8px;min-width:96px;min-height:36px;cursor:pointer;font-size:13px}
@@ -237,6 +241,37 @@ const JOBS = [
   sig:[["Sponsorship mentioned","Unknown","Not in posting","—"],["CEC credit","Stated","Toronto","Posting"]],
   src:["as","hn"],summary:"Improve agent reasoning quality for enterprise customer service.",must:["LLM products","Evals"]},
 ];
+const REF = {
+  esdc:{url:"https://open.canada.ca/data/en/dataset/90fed587-1364-4f33-a9ee-208181dc0b97",label:"ESDC positive-LMIA employers list"},
+  gts:{url:"https://www.canada.ca/en/employment-social-development/services/foreign-workers/global-talent/requirements",label:"Global Talent Stream requirements (ESDC)"},
+  cec:{url:"https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html",label:"Canadian Experience Class (IRCC)"},
+  imp:{url:"https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/permit/temporary/international-mobility-program.html",label:"International Mobility Program, incl. intra-company transfers (IRCC)"}
+};
+// Sample deep links. In the real app each icon links to the exact posting on that source.
+const LINKS = {
+ 1:{cs:"https://www.google.com/about/careers/applications/jobs/results/?location=Toronto%20ON%2C%20Canada"},
+ 2:{as:"https://jobs.ashbyhq.com/cohere",vc:"https://radical.vc",li:"https://www.linkedin.com/jobs/search/?keywords=Cohere",posting:"https://cohere.com/careers",vcName:"Radical Ventures portfolio"},
+ 3:{cs:"https://www.shopify.com/careers",li:"https://www.linkedin.com/jobs/search/?keywords=Shopify",bt:"https://builtintoronto.com/jobs"},
+ 4:{as:"https://jobs.ashbyhq.com/wealthsimple",li:"https://www.linkedin.com/jobs/search/?keywords=Wealthsimple",posting:"https://www.wealthsimple.com/en-ca/careers"},
+ 5:{as:"https://jobs.ashbyhq.com/armilla",bt:"https://builtintoronto.com/jobs",posting:"https://www.armilla.ai"},
+ 6:{gh:"https://boards.greenhouse.io/stripe",li:"https://www.linkedin.com/jobs/search/?keywords=Stripe%20Toronto",posting:"https://stripe.com/jobs"},
+ 7:{gh:"https://boards.greenhouse.io/faire",li:"https://www.linkedin.com/jobs/search/?keywords=Faire",posting:"https://www.faire.com/careers"},
+ 8:{wd:"https://jobs.td.com",posting:"https://jobs.td.com"},
+ 9:{wd:"https://jobs.rbc.com",li:"https://www.linkedin.com/jobs/search/?keywords=RBC%20product",posting:"https://jobs.rbc.com"},
+ 10:{lv:"https://jobs.lever.co/trulioo",posting:"https://www.trulioo.com/careers"},
+ 11:{gh:"https://boards.greenhouse.io/coinbase",hn:"https://news.ycombinator.com/submitted?id=whoishiring",posting:"https://www.coinbase.com/careers"},
+ 12:{as:"https://jobs.ashbyhq.com/ada",hn:"https://news.ycombinator.com/submitted?id=whoishiring",posting:"https://www.ada.cx/careers"}
+};
+const TIERLABEL = {Core:"Core PM role",Domain:"Adjacent role · domain fit",Stretch:"Stretch role"};
+const ext = (url,text) => `<a href="${url}" target="_blank" rel="noopener">${text}</a>`;
+function jobLink(j,k){const L=LINKS[j.id]||{};return L[k]||L.posting||L.cs||"#"}
+function sigSource(j,src){
+  if(/ESDC/.test(src)) return ext(REF.esdc.url,esc(src));
+  if(/GTS/.test(src)) return ext(REF.gts.url,esc(src));
+  if(/Current employer/.test(src)) return `${esc(src)} · <a href="#" data-goto-profile>your profile</a> · ${ext(REF.imp.url,"ICT rules")}`;
+  if(/CEC|Work location|Toronto|Waterloo|Remote/.test(src)) return `${ext(jobLink(j,"posting"),esc(src))} · ${ext(REF.cec.url,"CEC rules")}`;
+  return ext(jobLink(j,"posting"),esc(src));
+}
 const COMPANIES = [
  ["Google","Big tech","Company careers site","Seed",14,"Today"],["Cohere","Canadian AI","Ashby","Seed · Inovia board",9,"Today"],
  ["Shopify","Canadian SaaS","Company careers site","Seed",22,"Today"],["Wealthsimple","Fintech","Ashby","Seed",6,"Today"],
@@ -271,7 +306,8 @@ function visible(){
 function ring(v){const r=26,c=2*Math.PI*r,off=c*(1-v/100);
   return `<div class="ring" role="img" aria-label="Fit ${v} of 100"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="${r}" fill="none" stroke="var(--surface-2)" stroke-width="6"/><circle cx="30" cy="30" r="${r}" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" transform="rotate(-90 30 30)"/><path d="M30 6 L33 13 L27 13 Z" fill="var(--fg)"/></svg><div class="val">${v}</div></div>`}
 function payHTML(p){return `<span class="pay">${p.cur==="USD"?"US$":"$"}${fmt(p.min)}–${fmt(p.max)}${p.est?' <span class="est" title="Estimated: no pay posted">est.</span>':''}</span>`}
-function srcHTML(list){return `<span class="srcs">${list.map(k=>`<span class="src" title="${esc(SRC[k][1])}">${SRC[k][0]}</span>`).join("")}</span>`}
+function srcHTML(list,j){return `<span class="srcs">${list.map(k=>j?`<a class="src" href="${jobLink(j,k)}" target="_blank" rel="noopener" title="Open on ${esc(srcName(j,k))}" aria-label="Open on ${esc(srcName(j,k))}">${SRC[k][0]}</a>`:`<span class="src" title="${esc(SRC[k][1])}">${SRC[k][0]}</span>`).join("")}</span>`}
+function srcName(j,k){return k==="vc"&&LINKS[j.id]&&LINKS[j.id].vcName?LINKS[j.id].vcName:SRC[k][1]}
 function sigChips(j){return j.sig.map(([k,s,src])=>{const cls=/no CEC/.test(src)?"s-none":"s-"+s.toLowerCase();return `<span class="chip ${cls}" title="${esc(s+': '+src)}">${esc(k)} · ${s}</span>`}).join("")}
 function setView(v){state.view=v;state.open=null;save();render()}
 function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.hidden=false;clearTimeout(t._h);t._h=setTimeout(()=>t.hidden=true,2200)}
@@ -293,7 +329,7 @@ function viewDigest(){
       <div style="min-width:0">
         <h3>${esc(j.title)}</h3>
         <div class="meta"><span><b>${esc(j.co)}</b></span><span>${esc(j.loc)} · ${j.mode}</span><span class="mono">${j.age}d ago</span></div>
-        <div class="row">${payHTML(j.pay)} ${srcHTML(j.src)} ${j.transfer?'<span class="chip transfer">Internal transfer</span>':''}</div>
+        <div class="row">${payHTML(j.pay)} ${srcHTML(j.src,j)} ${j.transfer?'<span class="chip transfer">Internal transfer</span>':''}</div>
         <div class="chips" style="margin-top:8px">${sigChips(j)}</div>
         ${tr.t==="n"?`<div class="reasons" aria-label="Why not?">${["Wrong level","Domain","Location","Pay","People mgmt","Company"].map(r=>`<button data-reason="${j.id}|${r}" aria-pressed="${(tr.reasons||[]).includes(r)}">${r}</button>`).join("")}</div>`:""}
       </div>
@@ -321,12 +357,18 @@ function viewDetail(j){
   return `<div class="scrim" data-close></div><aside class="drawer" role="dialog" aria-modal="true" aria-label="${esc(j.title)}">
     <div class="row" style="justify-content:space-between"><span class="sample">Sample data</span><button class="btn ghost" data-close>Close</button></div>
     <div class="row" style="flex-wrap:nowrap;gap:14px">${ring(sc)}<div style="min-width:0"><h2>${esc(j.title)}</h2><div class="meta"><b>${esc(j.co)}</b><span>${esc(j.loc)} · ${j.mode}</span><span class="mono">${j.age}d ago</span></div></div></div>
-    <div class="row">${payHTML(j.pay)} ${j.transfer?'<span class="chip transfer">Internal transfer</span>':''} <span class="chip">${j.tier} tier</span> ${j.people?'<span class="chip s-none">Manages people</span>':'<span class="chip">IC role</span>'}</div>
+    <div class="row">${payHTML(j.pay)} ${j.transfer?'<span class="chip transfer">Internal transfer</span>':''} <span class="chip" title="Role family tier from your preferences">${TIERLABEL[j.tier]}</span> ${j.people?'<span class="chip s-none">Manages people</span>':'<span class="chip">IC role</span>'}</div>
     <section class="panel"><h4>Summary</h4><p style="margin:0">${esc(j.summary)}</p><div class="chips">${j.must.map(m=>`<span class="chip">${esc(m)}</span>`).join("")}</div></section>
     <section class="panel"><h4>Fit breakdown · weighted</h4>${SUBS.map(k=>`<div class="bar"><span>${SUBLABEL[k]} <span class="note mono">${Math.round(W[k]/tot*100)}%</span></span><div class="track"><div class="fill" style="width:${j.s[k]}%"></div></div><span class="mono">${j.s[k]}</span><span class="why">${esc(j.why[k])}</span></div>`).join("")}<p class="note">Weights are editable in Settings › Advanced.</p></section>
     <section class="panel"><h4>Pay</h4><div>${payHTML(j.pay)}</div><p class="note" style="margin:0">${j.pay.est?`Estimate · confidence ${j.pay.conf} · source: ${esc(j.pay.tier)}. Ontario doesn't require posted pay for roles above $200K.`:"Posted by the employer."}</p></section>
-    <section class="panel"><h4>Immigration pathway signals</h4><div class="tblwrap"><table class="tbl"><thead><tr><th>Signal</th><th>Status</th><th>Source</th><th>As of</th></tr></thead><tbody>${j.sig.map(([k,s,src,d])=>`<tr><td>${esc(k)}</td><td><span class="chip ${/no CEC/.test(src)?"s-none":"s-"+s.toLowerCase()}">${s}</span></td><td>${esc(src)}</td><td class="mono">${esc(d)}</td></tr>`).join("")}</tbody></table></div><p class="note" style="margin:0">Signals, not immigration advice. Confirm with a licensed consultant.</p></section>
-    <section class="panel"><h4>Found on</h4>${j.src.map(k=>`<div class="row">${srcHTML([k])}<span>${esc(SRC[k][1])}</span><span class="note mono">first seen ${j.age}d ago</span></div>`).join("")}</section>
+    <section class="panel"><h4>Immigration pathway signals</h4><div class="tblwrap"><table class="tbl"><thead><tr><th>Signal</th><th>Status</th><th>Source</th><th>As of</th></tr></thead><tbody>${j.sig.map(([k,s,src,d])=>`<tr><td>${esc(k)}</td><td><span class="chip ${/no CEC/.test(src)?"s-none":"s-"+s.toLowerCase()}">${s}</span></td><td>${sigSource(j,src)}</td><td class="mono">${esc(d)}</td></tr>`).join("")}</tbody></table></div><p class="note" style="margin:0">Signals, not immigration advice. Confirm with a licensed consultant.</p></section>
+    <section class="panel"><h4>Found on</h4>${j.src.map(k=>`<div class="row">${srcHTML([k],j)}${ext(jobLink(j,k),esc(srcName(j,k)))}<span class="note mono">first seen ${j.age}d ago</span></div>`).join("")}<p class="note" style="margin:0">Sample links go to each source's page for this company. In the real app they open the exact posting.</p></section>
+    <details class="panel"><summary><b>What do these labels mean?</b></summary>
+      <p><b>Role tier.</b> How closely the role family matches you. <i>Core PM role</i>: a product manager role (PM, Senior/Staff/Group PM, Product Lead). <i>Adjacent · domain fit</i>: a PM or program role in a field where you have depth (trust &amp; safety, risk, compliance, AI governance, data). <i>Stretch</i>: partial overlap (e.g. product marketing); off by default. Change tiers in Settings.</p>
+      <p><b>ESDC positive-LMIA employers list.</b> Employment and Social Development Canada publishes, every quarter, the employers that got a positive Labour Market Impact Assessment: government approval to hire a foreign worker for a specific job. If an employer is on it, they have sponsored a work permit before, so they know the process. It shows positions approved, not permits issued. ${ext(REF.esdc.url,"Open the dataset")}.</p>
+      <p><b>Stated / Inferred / Unknown.</b> <i>Stated</i>: the posting or your profile says it. <i>Inferred</i>: Lodestone found evidence elsewhere (linked in the Source column). <i>Unknown</i>: no evidence either way; the job is still shown.</p>
+      <p><b>CEC credit.</b> Work done in Canada with a work permit counts toward the Canadian Experience Class after 12 months. Remote work from outside Canada does not. ${ext(REF.cec.url,"IRCC: CEC")}.</p>
+    </details>
     <div class="row"><button class="btn primary" data-toast="Opens the employer's posting in a new tab">Open posting</button><button class="btn" data-tri="${j.id}|i">Interested</button><button class="btn" data-tri="${j.id}|l">Later</button><button class="btn" data-tri="${j.id}|n">Not</button></div>
   </aside>`;
 }
@@ -347,7 +389,7 @@ function viewAdd(prefill){
 }
 function addResult(txt){
   const t=txt.trim(); if(!t) return `<p class="note">Paste a link or job description first.</p>`;
-  if(/greenhouse|cohere|ashby/i.test(t)) return `<section class="panel"><h4>Already in Lodestone</h4><p style="margin:0"><b>Staff Product Manager, Agent Platform</b> at Cohere is already here (found via Ashby and a VC board). Added the pasted source to it.</p><div class="row">${srcHTML(["as","vc","li"])}<button class="btn" data-open="2">Open listing</button></div></section>`;
+  if(/greenhouse|cohere|ashby/i.test(t)) return `<section class="panel"><h4>Already in Lodestone</h4><p style="margin:0"><b>Staff Product Manager, Agent Platform</b> at Cohere is already here (found via Ashby and a VC board). Added the pasted source to it.</p><div class="row">${srcHTML(["as","vc","li"],JOBS[1])}<button class="btn" data-open="2">Open listing</button></div></section>`;
   if(/linkedin/i.test(t)) return `<section class="panel"><h4>Couldn't read this page</h4><p style="margin:0">LinkedIn needs a sign-in to show the job, so Lodestone can't fetch it. Copy the job description from LinkedIn and paste it below; the link is kept as the source.</p><textarea aria-label="Job description text" placeholder="Paste the job description here…"></textarea><button class="btn primary" data-confirm>Parse text</button></section>`;
   return confirmCard();
 }
@@ -375,7 +417,7 @@ function viewSettings(){
     <section class="panel"><h4>What to show</h4>
       <div class="switch"><label for="excl">Exclude roles that manage people</label><input id="excl" type="checkbox" ${P.excludePeople?"checked":""}></div>
       <div class="switch"><label for="nopay">Include roles without posted pay (shown with an estimate)</label><input id="nopay" type="checkbox" ${P.noPay?"checked":""}></div>
-      ${["Core","Domain","Stretch"].map(t=>`<div class="switch"><label for="t-${t}">${t} role families</label><input id="t-${t}" data-tier="${t}" type="checkbox" ${P.tiers[t]?"checked":""}></div>`).join("")}
+      ${["Core","Domain","Stretch"].map(t=>`<div class="switch"><label for="t-${t}">${TIERLABEL[t]}s</label><input id="t-${t}" data-tier="${t}" type="checkbox" ${P.tiers[t]?"checked":""}></div>`).join("")}
     </section>
     <section class="panel"><h4>Digest and pay</h4>
       <div class="field"><label for="dsize">Digest size (1–100)</label><input id="dsize" type="number" min="1" max="100" value="${P.digest}"></div>
@@ -404,6 +446,8 @@ function render(){
   const ov=document.getElementById("overlay"); ov.innerHTML = state.open? viewDetail(JOBS.find(j=>j.id===state.open)) : "";
 }
 document.addEventListener("click",e=>{
+  if(e.target.closest("[data-goto-profile]")){e.preventDefault();state.open=null;state.view="settings";state.stab="profile";save();render();return}
+  if(e.target.closest("a[href]")) return;
   const t=e.target.closest("[data-view],[data-tri],[data-open],[data-close],[data-reason],[data-ctab],[data-stab],[data-toast],[data-confirm],#parse,#resetw");
   if(!t) return;
   if(t.matches("[data-tri]")){e.stopPropagation();const [id,k]=t.dataset.tri.split("|");triage(+id,k);return}
