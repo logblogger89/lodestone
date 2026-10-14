@@ -38,14 +38,66 @@ Searching for jobs across borders comes down to three translation problems that 
 
 | ID | Candidate requirement | Source | Notes |
 |---|---|---|---|
-| CR-1 | **Adjustable comp range.** The user sets a target comp range (normalized to CAD) in the app, and listings are filtered or scored against it | D-014 | DR-2 supplies the normalization and defaults. Uses the anchor from A-02 |
-| CR-2 | **Toggle: include postings without a pay range.** On or off. When on, the listing shows "pay not disclosed", or an estimate with a confidence level if DR-2 supports one | D-014 | Ontario pay-transparency rules may make posted ranges more common. Check in DR-2 |
+| CR-1 | **Adjustable comp range.** The user sets a target comp range in the app, and listings are filtered or scored against it. **Pay is shown as posted, not normalized** (brainstorm B8). The filter compares in CAD internally | D-014, B8 | DR-2 supplies the conversion and estimation method |
+| CR-2 | **Toggle: include postings without a pay range.** On or off. When on, the listing shows an **estimated** range, marked with an "est." icon (B8) | D-014 | Ontario pay-transparency rules may make posted ranges more common. Check in DR-2 |
 | CR-3 | **Immigration-pathway signal per Canadian listing.** For example: LMIA-exempt (ICT), likely Global Talent Stream, sponsorship mentioned, and how it would build toward CEC or PNP. Usable as a filter or sort | Ayush (answer to Q-14) | Signals only, not advice (R-03). *Interpretation to confirm with Ayush* |
 | CR-3a | **Fill in missing pathway signals with research.** If a posting doesn't say, look up employer-level evidence: whether they have sponsored before, for example ESDC's published lists of employers with positive LMIAs (to verify), Global Talent Stream use, intra-company transfer patterns, and whether the role builds Canadian work experience toward CEC or a provincial nomination. Show each signal as Yes / Likely / Unknown, with its source and date. **Never exclude a listing because signals are missing** (D-021) | Ayush (CR-3 confirmation) | Possible data sources go in DR-3 and DR-4. R-13 |
 | CR-4 | **Current-employer awareness and an "internal transfer" badge.** Know the user's current employer (via LinkedIn connect, import or manual entry). When a listing's employer matches it, label the listing "internal transfer" and show the ICT route | Ayush (answer to Q-16), D-012 | Feasibility risk R-10: LinkedIn API limits |
 | CR-5 | **Optional in-app Express Entry profile and CRS calculator.** The user enters their own and their spouse's details (age, education, language, work experience, ECA). Lodestone computes the CRS, shows which levers move it and by how much (a year of Canadian work experience, French, a provincial nomination, swapping the principal applicant), and weights or labels listings by how much they advance PR | Ayush (answer to Q-17) | Every field optional. CRS rules live in versioned config (R-12). Not advice (R-03) |
 | CR-6 | **People-management toggle.** Include or exclude roles that have direct reports. Defaults to exclude | Ayush (answer to Q-18) | Needs a "manages people" classifier on each listing |
 | NFR-1 | **Runs locally.** The MVP runs on the user's own machine | D-015 | Input to the Eng Design Doc |
+
+## 2c. Feature backlog (brainstorm 2026-10-14, cut line approved by Ayush)
+
+Tiers: **MVP** (v1 launch) · **V1** (fast follow) · **Later** · **Dropped**. Priorities (P0/P1/P2) get assigned in PRD v0.
+
+| ID | Feature | Tier | Notes from Ayush |
+|---|---|---|---|
+| A1 | Multi-source ingestion: ATS feeds, career pages, **niche boards** (e.g. a16z and other VC portfolio boards). **Dedup across boards.** Each listing shows **an icon for every source** it was found on | MVP | Full source inventory in DR-4 |
+| A2 | Company watchlist, managed in the UI and pre-seeded | MVP | |
+| A3 | Paste any job URL (including LinkedIn) to parse and score it | MVP | The legal way to use LinkedIn (R-01) |
+| A4 | Dedup, repost flag, posting age, "new since last visit" | MVP | |
+| A5 | Company hiring signals (funding, headcount, layoffs) | V1 | |
+| B6 | **Match engine:** fit score with explainable sub-scores. See §2d | MVP | **The core of the product** |
+| B7 | Level translator (e.g. "Staff PM at X ≈ Google L6") | V1 | |
+| B8 | Pay shown **as posted**. An estimate when none is posted, with an "est." icon | MVP | Ties to CR-1 and CR-2 |
+| B9 | Immigration-pathway signals, **marked as inferred** when they come from research | MVP | Ties to CR-3 and CR-3a |
+| B10 | Internal-transfer badge, using the current employer from LinkedIn or the profile | MVP | Ties to CR-4. R-10 |
+| B11 | People-management toggle and role-family tiers | MVP | Ties to CR-6 and §2b |
+| B12 | "Why this fits you," plus gaps and how to frame them | V1 | |
+| B13 | Red flags (vague role, reorg or layoff news, chronic reposts) | V1 | |
+| B14 | Compare 2–3 roles side by side | V1 | |
+| C15 | Express Entry profile and CRS calculator with what-if levers | V1 | Ties to CR-5 |
+| C16 | PR impact for each job | V1 | |
+| C17 | PR pathway timeline view | Later | |
+| D18 | Daily digest (in-app; email in V1) | MVP | |
+| D19 | Triage (interested / not / later, with reasons) that learns preferences | MVP | Feeds the match engine (§2d) |
+| D20 | Saved searches and alerts | V1 | |
+| E21 | **A version of the resume tailored to each posting** (plus tailored bullets and a cover letter draft) | V1 | |
+| E22 | Referral finder (LinkedIn connections export, alumni) | V1 | |
+| E23 | Internal-transfer helper | **Dropped** | Ayush doesn't need it |
+| E24 | Apply checklist and one-click open of the application page | V1 | |
+| F25 | Pipeline board. **Auto-flag postings that are no longer live** | MVP (basic) | Liveness check on each refresh |
+| F26 | Notes, contacts and reminders per application | V1 | |
+| F27 | Interview prep pack **for each role marked "interested"** | Later | |
+| F28 | Offer comparator (pay and PR impact) | Later | |
+| G29 | Market view and what-ifs (e.g. "expanding geography adds X roles") | Later | |
+| G30 | Funnel stats | Later | |
+| H31 | Profile import from **CV** (primary), LinkedIn export, or manual entry | MVP | The CV feeds the match engine |
+| H32 | Preferences: locations, work mode, families, pay, toggles (all config) | MVP | D-005 |
+
+## 2d. Core matching approach (B6): understand the JD, understand the user, rank
+
+The match engine is the core of the product. Its shape is below; the details belong in the Eng Design Doc.
+
+1. **Understand the user (profile model).** Parse the CV, plus the LinkedIn export if available, into a structured profile: role history, scope signals (team size led, cross-functional breadth, exec exposure, metrics moved), domains (enterprise AI and agents, data governance, trust and safety, fintech and financial-services policy, commerce, analytics), skills, seniority, and current employer. Ayush can review and edit it, and his preferences (H32) sit on top.
+2. **Understand each job (JD parsing).** Turn every posting into a structured record: role family and tier, level signals (title, years, scope language, "lead/own/define"), domain, must-haves vs nice-to-haves, people management (yes/no), location and work mode, pay (as posted or estimated), and immigration signals (stated or inferred).
+3. **Hard filters first, cheap and transparent.** Location, work mode, people management, role families, and the pay filter when it's on. Missing data never hides a job (D-021).
+4. **Then score fit.** An LLM compares the profile to the parsed JD and returns sub-scores (role, level, domain, skills, pay, pathway), each with a one-line reason. The overall score is a **user-weighted** blend, and the weights are config (D-005).
+5. **Learn from triage (D19).** Interested / not / later, plus reasons, become labeled data. They tune the weights, and they become the **eval set** that checks ranking quality before any change to the engine ships (R-05).
+6. **Show the top hits.** The daily digest (D18) shows the top N new roles, each with its score breakdown, its source icons (A1) and its badges (est. pay, inferred pathway, internal transfer).
+
+**Quality bar (draft, for the metrics section):** most of the top 10 in each digest are worth Ayush's time, and nothing he would have applied to is buried below the fold.
 
 ## 2b. Default role families (D-017, user-editable)
 
@@ -85,7 +137,9 @@ Test for every requirement: *"Would this still work for a nurse in Berlin?"*
 | DR-3 | **Immigration pathways.** Employer work permit with LMIA, Global Talent Stream, intra-company transfer (for example, Google US → Google Canada), Express Entry PR without a job offer, provincial programs (OINP), CEC after Canadian work experience, category-based draws, and comparing either spouse as principal applicant. What signals can be read from job listings | Eligibility scoring and a parallel PR track |
 | DR-4 | **Job-source inventory.** Public ATS feeds (Greenhouse, Lever, Ashby, Workday), career pages, aggregators. ToS and legal feasibility | Sourcing (also an input to the Eng Design Doc) |
 
-## 5. Deferred to the PRD session (Ayush: "let's chat MVP and post-MVP in detail")
+## 5. PRD session status
+
+The brainstorm is done (§2c). The MVP cut line was approved 2026-10-14 (D-022). Still to come in PRD v0: personas and CUJs, P0/P1/P2 requirements with acceptance criteria, and success metrics. The items below are kept for reference:
 
 - CUJs and personas
 - How far beyond "find" the product goes: tailored resume, referrals, interview prep
