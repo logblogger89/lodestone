@@ -1,0 +1,2649 @@
+{
+ "updated_at": "2026-10-14T19:53:39+00:00",
+ "count": 146,
+ "candidates": [
+  {
+   "id": "ashby:1password:8151254c-b7d1-4653-87b1-7afeba176898",
+   "company": "1Password",
+   "title": "Director of Product, AI Growth",
+   "location": "Remote (United States | Canada)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/1password/8151254c-b7d1-4653-87b1-7afeba176898"
+   ]
+  },
+  {
+   "id": "ashby:1password:ff516ff4-2726-4c18-ae6e-681640d9c81d",
+   "company": "1Password",
+   "title": "Principal Product Manager, Security",
+   "location": "Remote (United States | Canada)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/1password/ff516ff4-2726-4c18-ae6e-681640d9c81d"
+   ]
+  },
+  {
+   "id": "ashby:1password:618d6f38-988d-4e1f-af12-f5fdeebf05ed",
+   "company": "1Password",
+   "title": "Senior Director, Product Management – Developer & AI",
+   "location": "Remote (United States | Canada)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/1password/618d6f38-988d-4e1f-af12-f5fdeebf05ed"
+   ]
+  },
+  {
+   "id": "ashby:1password:0a11e3df-2212-419e-a1ff-dc501fa7a084",
+   "company": "1Password",
+   "title": "Senior Product Manager",
+   "location": "Remote (United States | Canada)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/1password/0a11e3df-2212-419e-a1ff-dc501fa7a084"
+   ]
+  },
+  {
+   "id": "ashby:1password:99eb8a4c-81e1-413b-822f-dd27598207e0",
+   "company": "1Password",
+   "title": "Senior Staff Product Manager, Device Security",
+   "location": "Remote (United States | Canada)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/1password/99eb8a4c-81e1-413b-822f-dd27598207e0"
+   ]
+  },
+  {
+   "id": "ashby:1password:0b37fa60-5cbc-4b9a-84c9-4afe50634db7",
+   "company": "1Password",
+   "title": "Staff Product Manager, SaaS Manager",
+   "location": "Remote (United States | Canada)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/1password/0b37fa60-5cbc-4b9a-84c9-4afe50634db7"
+   ]
+  },
+  {
+   "id": "lever:achievers:33b4e5e0-f9ca-4ff6-972a-eb6c4e879472",
+   "company": "Achievers",
+   "title": "Senior Product Manager ⭐",
+   "location": "Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/achievers/33b4e5e0-f9ca-4ff6-972a-eb6c4e879472"
+   ]
+  },
+  {
+   "id": "greenhouse:affirm:7818070003",
+   "company": "Affirm",
+   "title": "Senior Product Manager, 1: Many Merchant Growth",
+   "location": "Remote Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/affirm/jobs/7818070003"
+   ]
+  },
+  {
+   "id": "greenhouse:affirm:7929525003",
+   "company": "Affirm",
+   "title": "Senior Product Manager, Checkout",
+   "location": "Remote Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/affirm/jobs/7929525003"
+   ]
+  },
+  {
+   "id": "greenhouse:affirm:8009665003",
+   "company": "Affirm",
+   "title": "Senior Product Manager, Consumer Payments",
+   "location": "Remote Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/affirm/jobs/8009665003"
+   ]
+  },
+  {
+   "id": "greenhouse:affirm:7773693003",
+   "company": "Affirm",
+   "title": "Senior Product Manager, Credit & Pricing",
+   "location": "Remote Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/affirm/jobs/7773693003"
+   ]
+  },
+  {
+   "id": "greenhouse:affirm:7694940003",
+   "company": "Affirm",
+   "title": "Staff Product Manager, Affirm Bank",
+   "location": "Remote Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/affirm/jobs/7694940003"
+   ]
+  },
+  {
+   "id": "greenhouse:affirm:8011040003",
+   "company": "Affirm",
+   "title": "Staff Product Manager, Consumer Growth Loyalty",
+   "location": "Remote Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/affirm/jobs/8011040003"
+   ]
+  },
+  {
+   "id": "greenhouse:affirm:8006359003",
+   "company": "Affirm",
+   "title": "Staff Product Manager, Credit & Pricing",
+   "location": "Remote Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/affirm/jobs/8006359003"
+   ]
+  },
+  {
+   "id": "ashby:beaconsoftware:71965ed6-44a9-4d11-aa10-aa9466019371",
+   "company": "Beacon Software",
+   "title": "Product Lead",
+   "location": "Toronto, Ontario",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/beaconsoftware/71965ed6-44a9-4d11-aa10-aa9466019371"
+   ]
+  },
+  {
+   "id": "ashby:cohere:fe2e2971-e2c0-43fd-9ab1-187571776a5d",
+   "company": "Cohere",
+   "title": "Product Manager,  Managed North",
+   "location": "Toronto; Canada; United States",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 160000,
+    "max": 285000,
+    "currency": "USD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "$160K – $285K • Multiple Ranges"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/cohere/fe2e2971-e2c0-43fd-9ab1-187571776a5d"
+   ]
+  },
+  {
+   "id": "ashby:cohere:1d1b300d-254b-48c4-958f-99c6b907f295",
+   "company": "Cohere",
+   "title": "Product Manager, Agent Harness & Modelling",
+   "location": "Toronto; London; New York; Montreal",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 160000,
+    "max": 320000,
+    "currency": "USD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "$160K – $320K • Offers Equity • Multiple Ranges"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/cohere/1d1b300d-254b-48c4-958f-99c6b907f295"
+   ]
+  },
+  {
+   "id": "ashby:cohere:87e9fd4e-49ac-4242-97be-7da6f718020d",
+   "company": "Cohere",
+   "title": "Product Manager, Integrations",
+   "location": "Toronto; London; New York; Montreal",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 160000,
+    "max": 285000,
+    "currency": "USD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "$160K – $285K • Offers Equity • Multiple Ranges"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/cohere/87e9fd4e-49ac-4242-97be-7da6f718020d"
+   ]
+  },
+  {
+   "id": "greenhouse:faire:8864857002",
+   "company": "Faire",
+   "title": "Product Manager - Multiple Levels",
+   "location": "New York City, NY; San Francisco, CA; Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://boards.greenhouse.io/faire/jobs/8864857002?gh_jid=8864857002"
+   ]
+  },
+  {
+   "id": "ashby:float:66203868-beba-4833-8831-aa6271b7a7d7",
+   "company": "Float",
+   "title": "Head of Product Marketing",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/float/66203868-beba-4833-8831-aa6271b7a7d7"
+   ]
+  },
+  {
+   "id": "ashby:float:8ce1894e-38b1-4283-9f26-e40614401f2d",
+   "company": "Float",
+   "title": "Senior Product Manager, Credit & Risk Engineering",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/float/8ce1894e-38b1-4283-9f26-e40614401f2d"
+   ]
+  },
+  {
+   "id": "ashby:float:3760e99f-fd78-4f46-9187-e444badfd11c",
+   "company": "Float",
+   "title": "Senior Product Manager, Financial Infrastructure",
+   "location": "Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/float/3760e99f-fd78-4f46-9187-e444badfd11c"
+   ]
+  },
+  {
+   "id": "greenhouse:gitlab:8658878002",
+   "company": "GitLab",
+   "title": "Principal Product Manager, AI Software Factory",
+   "location": "Remote, Canada; Remote, United States",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/gitlab/jobs/8658878002"
+   ]
+  },
+  {
+   "id": "greenhouse:gitlab:8871798002",
+   "company": "GitLab",
+   "title": "Principal Product Manager, Orbit",
+   "location": "Remote, Canada; Remote, United States",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/gitlab/jobs/8871798002"
+   ]
+  },
+  {
+   "id": "greenhouse:gitlab:8597805002",
+   "company": "GitLab",
+   "title": "Senior Product Manager, Agentic Source Code",
+   "location": "Remote, Canada; Remote, US",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/gitlab/jobs/8597805002"
+   ]
+  },
+  {
+   "id": "greenhouse:gitlab:8875518002",
+   "company": "GitLab",
+   "title": "Staff Product Manager, AI Software Factory PLG",
+   "location": "Remote, Canada; Remote, United States",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/gitlab/jobs/8875518002"
+   ]
+  },
+  {
+   "id": "greenhouse:gitlab:8871820002",
+   "company": "GitLab",
+   "title": "Staff Product Manager, Agentic Test Intelligence",
+   "location": "Remote, Canada; Remote, United States",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/gitlab/jobs/8871820002"
+   ]
+  },
+  {
+   "id": "ashby:hopper:718f0398-6489-44e5-b590-830e57d56a19",
+   "company": "Hopper",
+   "title": "Directeur ou directrice principal(e) de produit, IA conversationnelle// Principal Product Manager- Conversational AI",
+   "location": "Montréal - Remote",
+   "region": "Montreal",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/hopper/718f0398-6489-44e5-b590-830e57d56a19"
+   ]
+  },
+  {
+   "id": "ashby:hopper:5ba86110-025f-407a-8460-39bb5a0ecaf6",
+   "company": "Hopper",
+   "title": "Principal Product Manager, HTS API Marketplace",
+   "location": "Ontario - Remote; Toronto - Remote; Vancouver - Remote",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 250000,
+    "max": 350000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$250K – CA$350K • Offers Equity • Compensation will be determined by candidates' relevant qualifications, knowledge, skills and work experience. Total compensation will include a solid base salary and will also include equity (options / RSUs), sign-on bonus and other potential incentives."
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/hopper/5ba86110-025f-407a-8460-39bb5a0ecaf6"
+   ]
+  },
+  {
+   "id": "ashby:hopper:646bcfcf-3b8a-47b3-a3d7-3baf97f126d0",
+   "company": "Hopper",
+   "title": "Principal Product Manager- Conversational AI",
+   "location": "Canada - Remote; Toronto - Remote; Alberta - Remote",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 200000,
+    "max": 250000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$200K – CA$250K • Offers Equity"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/hopper/646bcfcf-3b8a-47b3-a3d7-3baf97f126d0"
+   ]
+  },
+  {
+   "id": "greenhouse:instacart:8198284",
+   "company": "Instacart",
+   "title": "Director of Product, Logistics",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8198284"
+   ]
+  },
+  {
+   "id": "greenhouse:instacart:8198161",
+   "company": "Instacart",
+   "title": "Senior Product Manager, AI Control Studio",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8198161"
+   ]
+  },
+  {
+   "id": "greenhouse:instacart:8077512",
+   "company": "Instacart",
+   "title": "Senior Product Manager, Ads Quality",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8077512"
+   ]
+  },
+  {
+   "id": "greenhouse:instacart:8120471",
+   "company": "Instacart",
+   "title": "Senior Product Manager, Advertiser Experience",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8120471"
+   ]
+  },
+  {
+   "id": "greenhouse:instacart:8143272",
+   "company": "Instacart",
+   "title": "Senior Product Manager, Catalog",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8143272"
+   ]
+  },
+  {
+   "id": "greenhouse:instacart:8203109",
+   "company": "Instacart",
+   "title": "Senior Product Manager, Order Quality",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8203109"
+   ]
+  },
+  {
+   "id": "greenhouse:instacart:8266403",
+   "company": "Instacart",
+   "title": "Senior Product Manager, Retailer App Platform & Insights",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8266403"
+   ]
+  },
+  {
+   "id": "ashby:jane:2d2a4d4b-25d1-4eb8-8c3b-6cd654180015",
+   "company": "Jane App",
+   "title": "Senior PM - Communications",
+   "location": "Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/jane/2d2a4d4b-25d1-4eb8-8c3b-6cd654180015"
+   ]
+  },
+  {
+   "id": "ashby:koho:3e565168-cacd-40c6-a912-04e623d76f9f",
+   "company": "KOHO",
+   "title": "Senior Product Manager, Growth",
+   "location": "KOHO (CAN)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 160000,
+    "max": 200000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$160K – CA$200K"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/koho/3e565168-cacd-40c6-a912-04e623d76f9f"
+   ]
+  },
+  {
+   "id": "ashby:klue:b8520907-ec93-4731-ab08-91453fbd19ad",
+   "company": "Klue",
+   "title": "Staff Product Manager",
+   "location": "Vancouver, British Columbia; Toronto, Ontario",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 185000,
+    "max": 235000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$185K – CA$235K • Offers Equity"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/klue/b8520907-ec93-4731-ab08-91453fbd19ad"
+   ]
+  },
+  {
+   "id": "ashby:loopio:906f8e02-053b-424d-a163-2616f3495bdb",
+   "company": "Loopio",
+   "title": "Staff Product Manager",
+   "location": "Toronto, ON Hub; Vancouver, BC Hub",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 145400,
+    "max": 193800,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$145.4K – CA$193.8K • Offers Equity • Offers Bonus"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/loopio/906f8e02-053b-424d-a163-2616f3495bdb"
+   ]
+  },
+  {
+   "id": "greenhouse:lyft:8621699002",
+   "company": "Lyft",
+   "title": "Senior Product Manager, Hardware (Bikeshare Stations) - Lyft Urban Solutions (Micromobility)",
+   "location": "Montreal, Canada",
+   "region": "Montreal",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://app.careerpuck.com/job-board/lyft/job/8621699002?gh_jid=8621699002"
+   ]
+  },
+  {
+   "id": "greenhouse:lyft:8648144002",
+   "company": "Lyft",
+   "title": "Staff Product Manager, Customer Care Platform & Data",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://app.careerpuck.com/job-board/lyft/job/8648144002?gh_jid=8648144002"
+   ]
+  },
+  {
+   "id": "lever:magnetforensics:465fb92b-a66f-4de8-9cd9-9f0f91da698e",
+   "company": "Magnet Forensics",
+   "title": "Product Management Lead",
+   "location": "Waterloo / Ottawa / Toronto/ Ontario; Vancouver; Georgia; Florida; Atlanta; New York; California",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/magnetforensics/465fb92b-a66f-4de8-9cd9-9f0f91da698e"
+   ]
+  },
+  {
+   "id": "lever:magnetforensics:ecb9ff55-5004-4df9-bb7e-8bdc160fbf7b",
+   "company": "Magnet Forensics",
+   "title": "Product Management Lead, Private Sector",
+   "location": "Waterloo / Ottawa / Toronto/ Ontario; California",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/magnetforensics/ecb9ff55-5004-4df9-bb7e-8bdc160fbf7b"
+   ]
+  },
+  {
+   "id": "lever:magnetforensics:a072c259-001a-4353-90f1-d8725d505318",
+   "company": "Magnet Forensics",
+   "title": "Senior Product Manager, Graykey",
+   "location": "Waterloo / Ottawa / Toronto/ Ontario; California; Florida; Georgia; Massachusetts; New York; Washington, DC; Calgary, Alberta",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/magnetforensics/a072c259-001a-4353-90f1-d8725d505318"
+   ]
+  },
+  {
+   "id": "lever:magnetforensics:419d3c80-089d-4642-b92e-c65b50fc3268",
+   "company": "Magnet Forensics",
+   "title": "Senior Product Manager, Platform - Magnet One",
+   "location": "Waterloo / Ottawa / Toronto/ Ontario; Atlanta, Georgia; California; Florida; Illinois; New York; Virginia; Maryland; Colorado; Connecticut; Delaware; Idaho; Iowa; Maine; Michigan",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/magnetforensics/419d3c80-089d-4642-b92e-c65b50fc3268"
+   ]
+  },
+  {
+   "id": "ashby:miovision:84e78306-eb61-4397-b1d8-d54dfe4ee764",
+   "company": "Miovision",
+   "title": "Staff Product Manager",
+   "location": "Canada Remote",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 180000,
+    "max": 190000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$180K – CA$190K • Offers Equity • Offers Bonus"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/miovision/84e78306-eb61-4397-b1d8-d54dfe4ee764"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8247721",
+   "company": "Okta",
+   "title": "Principal Product Manager - Developer Productivity",
+   "location": "Dublin, Ireland; Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8247721?gh_jid=8247721"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8157885",
+   "company": "Okta",
+   "title": "Principal Product Manager - Okta Identity Threat Detection and Response Products",
+   "location": "Bellevue, Washington; Chicago, Illinois; New York, New York; San Francisco, California; Toronto, Ontario, Canada; Washington, DC",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8157885?gh_jid=8157885"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8208322",
+   "company": "Okta",
+   "title": "Principal Product Manager, Platform Strategy & Infrastructure (Auth0)",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8208322?gh_jid=8208322"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8072548",
+   "company": "Okta",
+   "title": "Product Manager - Okta Device Access",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8072548?gh_jid=8072548"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8072515",
+   "company": "Okta",
+   "title": "Senior Product Manager - Auth0",
+   "location": "Bellevue, Washington; Chicago, Illinois; New York, New York; Toronto, Ontario, Canada; Washington, DC",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8072515?gh_jid=8072515"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8066241",
+   "company": "Okta",
+   "title": "Senior Product Manager - Okta Device Access",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8066241?gh_jid=8066241"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8137951",
+   "company": "Okta",
+   "title": "Senior Product Manager - Policies",
+   "location": "Bellevue, Washington; Chicago, Illinois; New York, New York; San Francisco, California; Toronto, Ontario, Canada; Washington, DC",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8137951?gh_jid=8137951"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8022482",
+   "company": "Okta",
+   "title": "Senior Product Manager - UI Platform",
+   "location": "New York, New York; Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8022482?gh_jid=8022482"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:7905576",
+   "company": "Okta",
+   "title": "Senior Product Manager, Auth0 AI and Identity Products (Auth0)",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/7905576?gh_jid=7905576"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8214073",
+   "company": "Okta",
+   "title": "Senior Product Manager, Okta Customer Identity",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8214073?gh_jid=8214073"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8041551",
+   "company": "Okta",
+   "title": "Sr. Product Manager - Agentic Security",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8041551?gh_jid=8041551"
+   ]
+  },
+  {
+   "id": "lever:policyme:5190b06d-00cf-4429-b65b-7548f3e08667",
+   "company": "PolicyMe",
+   "title": "Principal Product Manager, Accounts & Automation (Remote)",
+   "location": "Remote in Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/policyme/5190b06d-00cf-4429-b65b-7548f3e08667"
+   ]
+  },
+  {
+   "id": "ashby:procurify:bab0f6a4-be5c-4870-a991-22e9835dab37",
+   "company": "Procurify",
+   "title": "Senior Product Manager",
+   "location": "Canada Remote",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/procurify/bab0f6a4-be5c-4870-a991-22e9835dab37"
+   ]
+  },
+  {
+   "id": "greenhouse:stackadapt:4299186009",
+   "company": "StackAdapt",
+   "title": "Senior Product Manager (Creatives)",
+   "location": "Canada; United States",
+   "region": "Other Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/stackadapt/jobs/4299186009"
+   ]
+  },
+  {
+   "id": "greenhouse:stackadapt:4389168009",
+   "company": "StackAdapt",
+   "title": "Staff Product Manager (Attribution)",
+   "location": "Canada; United States",
+   "region": "Other Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/stackadapt/jobs/4389168009"
+   ]
+  },
+  {
+   "id": "greenhouse:stackadapt:4425405009",
+   "company": "StackAdapt",
+   "title": "Staff Product Manager (B2B Solutions)",
+   "location": "Canada; United States",
+   "region": "Other Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/stackadapt/jobs/4425405009"
+   ]
+  },
+  {
+   "id": "greenhouse:stackadapt:4422767009",
+   "company": "StackAdapt",
+   "title": "Staff Product Manager (Measurement)",
+   "location": "Canada; United States",
+   "region": "Other Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/stackadapt/jobs/4422767009"
+   ]
+  },
+  {
+   "id": "greenhouse:stripe:7984866",
+   "company": "Stripe",
+   "title": "Product Manager, Ecosystem Risk",
+   "location": "Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://stripe.com/jobs/search?gh_jid=7984866"
+   ]
+  },
+  {
+   "id": "greenhouse:stripe:8140438",
+   "company": "Stripe",
+   "title": "Staff Product Manager, Mobile",
+   "location": "New York City, Toronto, Chicago, or Remote",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://stripe.com/jobs/search?gh_jid=8140438"
+   ]
+  },
+  {
+   "id": "greenhouse:stripe:7913698",
+   "company": "Stripe",
+   "title": "Staff Product Manager, Sail Core",
+   "location": "New York, US - Remote, Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://stripe.com/jobs/search?gh_jid=7913698"
+   ]
+  },
+  {
+   "id": "ashby:trulioo:29ac1954-3d7e-406a-8d1b-54288ba065e7",
+   "company": "Trulioo",
+   "title": "Product Manager (KYB)",
+   "location": "Vancouver, BC; Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 100000,
+    "max": 130000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$100K – CA$130K"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/trulioo/29ac1954-3d7e-406a-8d1b-54288ba065e7"
+   ]
+  },
+  {
+   "id": "ashby:trulioo:a3749bc8-0fdb-46c6-9dd2-94a078b8b9ae",
+   "company": "Trulioo",
+   "title": "Senior Product Manager (KYC - Fraud & Risk)",
+   "location": "Vancouver, BC; San Diego, CA; Toronto, ON; San Francisco, CA",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 110000,
+    "max": 160000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$110K – CA$160K • Offers Bonus • Multiple Ranges"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/trulioo/a3749bc8-0fdb-46c6-9dd2-94a078b8b9ae"
+   ]
+  },
+  {
+   "id": "greenhouse:twilio:7904293",
+   "company": "Twilio",
+   "title": "Staff Product Manager",
+   "location": "Remote - Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/twilio/jobs/7904293"
+   ]
+  },
+  {
+   "id": "lever:waabi:74ff3e1c-821c-4c31-aada-54f4170b5b2e",
+   "company": "Waabi",
+   "title": "Lead Product Manager, Hardware Platform",
+   "location": "San Francisco, CA; Toronto, ON; Pittsburgh, PA; Remote US & Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/waabi/74ff3e1c-821c-4c31-aada-54f4170b5b2e"
+   ]
+  },
+  {
+   "id": "ashby:wealthsimple:87df1a4c-b9b9-4080-b1bd-9424c110a2b7",
+   "company": "Wealthsimple",
+   "title": "Senior/Staff Product Manager, Financial Risk",
+   "location": "Remote (Canada); Remote (US)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/wealthsimple/87df1a4c-b9b9-4080-b1bd-9424c110a2b7"
+   ]
+  },
+  {
+   "id": "ashby:wealthsimple:5b95f049-5920-4d66-b888-01c33bfd7330",
+   "company": "Wealthsimple",
+   "title": "Staff Product Manager, Connectivity Platform",
+   "location": "Remote (Canada)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/wealthsimple/5b95f049-5920-4d66-b888-01c33bfd7330"
+   ]
+  },
+  {
+   "id": "ashby:wealthsimple:fe45a22d-7f8d-4963-8db5-ee1639390455",
+   "company": "Wealthsimple",
+   "title": "Staff Product Manager, Consolidation",
+   "location": "Remote (Canada); Remote (US)",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/wealthsimple/fe45a22d-7f8d-4963-8db5-ee1639390455"
+   ]
+  },
+  {
+   "id": "ashby:zip:b9a66bf7-d4f0-4522-9ad2-67c00060090e",
+   "company": "Zip",
+   "title": "Principal Product Manager, Global Payments Platform and Controls",
+   "location": "Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/zip/b9a66bf7-d4f0-4522-9ad2-67c00060090e"
+   ]
+  },
+  {
+   "id": "ashby:zip:c163d70c-89cc-406a-8f39-76b922eb7da2",
+   "company": "Zip",
+   "title": "Product Manager, Self-Serve",
+   "location": "Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/zip/c163d70c-89cc-406a-8f39-76b922eb7da2"
+   ]
+  },
+  {
+   "id": "greenhouse:affirm:7832312003",
+   "company": "Affirm",
+   "title": "Senior Technical Program Manager",
+   "location": "Remote Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/affirm/jobs/7832312003"
+   ]
+  },
+  {
+   "id": "smartrecruiters:assent:744000148272355",
+   "company": "Assent",
+   "title": "Learning Program Manager - 1 year term",
+   "location": "Ottawa, ON, CA",
+   "region": "Ottawa",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "smartrecruiters"
+   ],
+   "urls": [
+    "https://jobs.smartrecruiters.com/Assent/744000148272355"
+   ]
+  },
+  {
+   "id": "smartrecruiters:assent:744000147059369",
+   "company": "Assent",
+   "title": "Learning Program Manager - Sales Enablement",
+   "location": "Ottawa, ON, CA",
+   "region": "Ottawa",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "smartrecruiters"
+   ],
+   "urls": [
+    "https://jobs.smartrecruiters.com/Assent/744000147059369"
+   ]
+  },
+  {
+   "id": "greenhouse:block:5371509008",
+   "company": "Block (Square / Cash App)",
+   "title": "Regulatory Program Lead, Canada",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "http://block.xyz/careers/jobs/5371509008?gh_jid=5371509008"
+   ]
+  },
+  {
+   "id": "ashby:cohere:81450c5f-8495-439b-a1b3-ce7ef9739437",
+   "company": "Cohere",
+   "title": "Chief of Staff",
+   "location": "Toronto; Montreal",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 335000,
+    "max": 410000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$335K – CA$410K • Offers Equity"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/cohere/81450c5f-8495-439b-a1b3-ce7ef9739437"
+   ]
+  },
+  {
+   "id": "ashby:cohere:f6100cdd-94fc-4f4b-bac5-7efa5069cdd5",
+   "company": "Cohere",
+   "title": "Revenue Enablement Program Manager",
+   "location": "United States; Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 135000,
+    "max": 215000,
+    "currency": "USD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "$135K – $215K • Offers Equity • Multiple Ranges"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/cohere/f6100cdd-94fc-4f4b-bac5-7efa5069cdd5"
+   ]
+  },
+  {
+   "id": "ashby:cohere:41cb2a12-e33a-4368-a9f8-0ae0d19c023e",
+   "company": "Cohere",
+   "title": "Technical Program Manager, AI Delivery",
+   "location": "United States; Canada",
+   "region": "Other Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 140000,
+    "max": 220000,
+    "currency": "USD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "$140K – $220K • Offers Equity • Multiple Ranges"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/cohere/41cb2a12-e33a-4368-a9f8-0ae0d19c023e"
+   ]
+  },
+  {
+   "id": "ashby:cohere:01a34bc3-6421-4af2-bf5b-f42e98155dda",
+   "company": "Cohere",
+   "title": "Technical Program Manager, AI Delivery for Public Sector & Defence, Canada",
+   "location": "Ottawa; Toronto; Montreal",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 200000,
+    "max": 245000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$200K – CA$245K • Offers Equity"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/cohere/01a34bc3-6421-4af2-bf5b-f42e98155dda"
+   ]
+  },
+  {
+   "id": "lever:eqbank:ed06b95a-a20e-4a10-a8a5-fd7a1197712a",
+   "company": "EQ Bank",
+   "title": "Director, Strategy, Risk and Business Operations",
+   "location": "Toronto",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/eqbank/ed06b95a-a20e-4a10-a8a5-fd7a1197712a"
+   ]
+  },
+  {
+   "id": "lever:eqbank:c40c0c17-1c33-4a69-8a82-0b849beff98d",
+   "company": "EQ Bank",
+   "title": "Lead, Program Governance & Enablement",
+   "location": "Toronto",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/eqbank/c40c0c17-1c33-4a69-8a82-0b849beff98d"
+   ]
+  },
+  {
+   "id": "ashby:float:a0438a03-2952-4e38-9c72-ee132d344437",
+   "company": "Float",
+   "title": "Product Operations Manager, Cards & Spend Management",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 140000,
+    "max": 150000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$140K – CA$150K • Offers Equity"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/float/a0438a03-2952-4e38-9c72-ee132d344437"
+   ]
+  },
+  {
+   "id": "greenhouse:gitlab:8693068002",
+   "company": "GitLab",
+   "title": "Principal Technical Program Manager",
+   "location": "Remote, Canada; Remote, United States",
+   "region": "Remote-Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/gitlab/jobs/8693068002"
+   ]
+  },
+  {
+   "id": "greenhouse:gitlab:8822279002",
+   "company": "GitLab",
+   "title": "Staff Program Manager, CCO Programs",
+   "location": "Remote, Canada; Remote, United States",
+   "region": "Remote-Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/gitlab/jobs/8822279002"
+   ]
+  },
+  {
+   "id": "greenhouse:instacart:8275378",
+   "company": "Instacart",
+   "title": "Associate Product Operations Manager",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8275378"
+   ]
+  },
+  {
+   "id": "greenhouse:instacart:8112138",
+   "company": "Instacart",
+   "title": "Chief of Staff, Online Grocery",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8112138"
+   ]
+  },
+  {
+   "id": "greenhouse:instacart:8249753",
+   "company": "Instacart",
+   "title": "Senior Design Program Manager II",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8249753"
+   ]
+  },
+  {
+   "id": "greenhouse:lyft:8827588002",
+   "company": "Lyft",
+   "title": "Program Manager, AV Operational Excellence",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://app.careerpuck.com/job-board/lyft/job/8827588002?gh_jid=8827588002"
+   ]
+  },
+  {
+   "id": "ashby:miovision:1518d523-ad86-4a65-80c0-a13e590ec1ff",
+   "company": "Miovision",
+   "title": "Senior Technical Program Manager - Product Development",
+   "location": "Kitchener",
+   "region": "Waterloo Region",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 130000,
+    "max": 160000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$130K – CA$160K"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/miovision/1518d523-ad86-4a65-80c0-a13e590ec1ff"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8194325",
+   "company": "Okta",
+   "title": "Senior Design Operations Program Manager - Agentic Design",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8194325?gh_jid=8194325"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8205101",
+   "company": "Okta",
+   "title": "Senior Engineering Technical Program Manager - Jira Administration",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8205101?gh_jid=8205101"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8157043",
+   "company": "Okta",
+   "title": "Senior Technical Program Manager (Auth0)",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8157043?gh_jid=8157043"
+   ]
+  },
+  {
+   "id": "greenhouse:stackadapt:4407074009",
+   "company": "StackAdapt",
+   "title": "Lead, Technical Program Manager",
+   "location": "Canada",
+   "region": "Other Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/stackadapt/jobs/4407074009"
+   ]
+  },
+  {
+   "id": "greenhouse:stackadapt:4407072009",
+   "company": "StackAdapt",
+   "title": "Senior Analyst, Technical Program Manager",
+   "location": "Canada",
+   "region": "Other Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/stackadapt/jobs/4407072009"
+   ]
+  },
+  {
+   "id": "greenhouse:tenstorrent:5249598007",
+   "company": "Tenstorrent",
+   "title": "Staff Technical Program Manager, Data Center Deployment",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/tenstorrent/jobs/5249598007"
+   ]
+  },
+  {
+   "id": "greenhouse:tenstorrent:5265014007",
+   "company": "Tenstorrent",
+   "title": "Technical Program Manager, Platform & Runtime Engineering",
+   "location": "Austin, Texas, United States; Santa Clara, California, United States; Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/tenstorrent/jobs/5265014007"
+   ]
+  },
+  {
+   "id": "ashby:trulioo:15efe1b0-74fb-48f7-b602-6fb00ad6529f",
+   "company": "Trulioo",
+   "title": "Chief of Staff",
+   "location": "Vancouver, BC; San Diego, CA; San Francisco, CA",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 140000,
+    "max": 180000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$140K – CA$180K • Offers Bonus • Multiple Ranges"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/trulioo/15efe1b0-74fb-48f7-b602-6fb00ad6529f"
+   ]
+  },
+  {
+   "id": "greenhouse:twilio:8263280",
+   "company": "Twilio",
+   "title": "Program Manager, Carrier Operations & Governance",
+   "location": "Remote - Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/twilio/jobs/8263280"
+   ]
+  },
+  {
+   "id": "greenhouse:varicent:5435569008",
+   "company": "Varicent",
+   "title": "Director, Pricing Strategy and Operations",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/varicent/jobs/5435569008"
+   ]
+  },
+  {
+   "id": "ashby:visier:d4cbef2a-5935-4ac4-9ae9-44944fa8adcb",
+   "company": "Visier",
+   "title": "Privacy and AI Program Manager",
+   "location": "CAN - Vancouver",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/visier/d4cbef2a-5935-4ac4-9ae9-44944fa8adcb"
+   ]
+  },
+  {
+   "id": "lever:waabi:3acdfa36-848c-4720-b7a0-f80a6c30cbe6",
+   "company": "Waabi",
+   "title": "Lead Technical Program Manager, Robotaxi",
+   "location": "San Francisco, CA; Remote US & Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/waabi/3acdfa36-848c-4720-b7a0-f80a6c30cbe6"
+   ]
+  },
+  {
+   "id": "lever:waabi:01ee26ae-76e5-41df-a5d1-d03dbb88ac36",
+   "company": "Waabi",
+   "title": "Senior Program Manager, Trucking",
+   "location": "San Francisco, CA; Remote US & Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/waabi/01ee26ae-76e5-41df-a5d1-d03dbb88ac36"
+   ]
+  },
+  {
+   "id": "lever:waabi:ebe37947-7f32-47f1-bbf8-0ae27d6bb9e3",
+   "company": "Waabi",
+   "title": "Staff Vehicle Program Manager",
+   "location": "San Francisco, CA; Pittsburgh, PA; Toronto, ON; Remote US & Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/waabi/ebe37947-7f32-47f1-bbf8-0ae27d6bb9e3"
+   ]
+  },
+  {
+   "id": "ashby:1password:b141ee0c-30aa-42f8-8ff7-b353f7f9d060",
+   "company": "1Password",
+   "title": "Principal Solutions Engineer, Emerging Technologies",
+   "location": "Remote (United States | Canada)",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/1password/b141ee0c-30aa-42f8-8ff7-b353f7f9d060"
+   ]
+  },
+  {
+   "id": "ashby:1password:88aa605e-60a9-4a41-8879-23cb2f634d73",
+   "company": "1Password",
+   "title": "Senior Staff Product Marketing Manager - Enterprise Password Manager",
+   "location": "Remote (United States | Canada)",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/1password/88aa605e-60a9-4a41-8879-23cb2f634d73"
+   ]
+  },
+  {
+   "id": "greenhouse:alayacare:8821939002",
+   "company": "AlayaCare",
+   "title": "Product Marketing Manager",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://alayacare.com/open-positions?gh_jid=8821939002"
+   ]
+  },
+  {
+   "id": "greenhouse:alayacare:8752363002",
+   "company": "AlayaCare",
+   "title": "Senior Product Marketing Manager",
+   "location": "Montréal, Quebec, Canada",
+   "region": "Montreal",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://alayacare.com/open-positions?gh_jid=8752363002"
+   ]
+  },
+  {
+   "id": "greenhouse:alayacare:8816271002",
+   "company": "AlayaCare",
+   "title": "Solution Architect",
+   "location": "Montréal, Quebec, Canada",
+   "region": "Montreal",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://alayacare.com/open-positions?gh_jid=8816271002"
+   ]
+  },
+  {
+   "id": "greenhouse:d2l:8068064",
+   "company": "D2L",
+   "title": "Solutions Architect",
+   "location": "Canada",
+   "region": "Other Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.d2l.com/careers/jobs/?job_id=8068064&gh_jid=8068064"
+   ]
+  },
+  {
+   "id": "greenhouse:databricks:8877962002",
+   "company": "Databricks",
+   "title": "Solutions Architect",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://databricks.com/company/careers/open-positions/job?gh_jid=8877962002"
+   ]
+  },
+  {
+   "id": "greenhouse:databricks:5898477002",
+   "company": "Databricks",
+   "title": "Solutions Architect",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://databricks.com/company/careers/open-positions/job?gh_jid=5898477002"
+   ]
+  },
+  {
+   "id": "greenhouse:databricks:8876388002",
+   "company": "Databricks",
+   "title": "Solutions Architect - FSI",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://databricks.com/company/careers/open-positions/job?gh_jid=8876388002"
+   ]
+  },
+  {
+   "id": "greenhouse:databricks:8771056002",
+   "company": "Databricks",
+   "title": "Solutions Architect - Financial Services & Insurance",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://databricks.com/company/careers/open-positions/job?gh_jid=8771056002"
+   ]
+  },
+  {
+   "id": "greenhouse:databricks:8876599002",
+   "company": "Databricks",
+   "title": "Solutions Architect - MFG - West",
+   "location": "Calgary, Canada; Vancouver, Canada",
+   "region": "Vancouver",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://databricks.com/company/careers/open-positions/job?gh_jid=8876599002"
+   ]
+  },
+  {
+   "id": "greenhouse:gitlab:8859224002",
+   "company": "GitLab",
+   "title": "Principal Product Marketing Manager, Competitive",
+   "location": "Remote, Canada; Remote, United States",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/gitlab/jobs/8859224002"
+   ]
+  },
+  {
+   "id": "greenhouse:gitlab:8770661002",
+   "company": "GitLab",
+   "title": "Senior Solutions Architect Operations Manager",
+   "location": "Remote, Canada; Remote, United States",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/gitlab/jobs/8770661002"
+   ]
+  },
+  {
+   "id": "greenhouse:instacart:7991599",
+   "company": "Instacart",
+   "title": "Director, Enterprise Product Marketing",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=7991599"
+   ]
+  },
+  {
+   "id": "greenhouse:instacart:8214859",
+   "company": "Instacart",
+   "title": "Senior Product Marketing Manager, Instacart+",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8214859"
+   ]
+  },
+  {
+   "id": "ashby:loopio:7163c4b7-5dfc-4d01-9c50-9454789047d6",
+   "company": "Loopio",
+   "title": "Product Marketing Manager",
+   "location": "Toronto, ON Hub; Vancouver, BC Hub",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 88100,
+    "max": 130000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$88.1K – CA$130K • Offers Equity"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/loopio/7163c4b7-5dfc-4d01-9c50-9454789047d6"
+   ]
+  },
+  {
+   "id": "greenhouse:lyft:8648043002",
+   "company": "Lyft",
+   "title": "AI Business Solutions Architect, People Technology",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://app.careerpuck.com/job-board/lyft/job/8648043002?gh_jid=8648043002"
+   ]
+  },
+  {
+   "id": "ashby:miovision:3d8b322b-a46d-41e6-972e-8764c332b51f",
+   "company": "Miovision",
+   "title": "Senior Product Marketing Manager",
+   "location": "Canada Remote",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 115000,
+    "max": 140000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$115K – CA$140K • Offers Equity • Offers Bonus"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/miovision/3d8b322b-a46d-41e6-972e-8764c332b51f"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8220791",
+   "company": "Okta",
+   "title": "Senior Director of Partner Product Marketing",
+   "location": "Bellevue, Washington; Chicago, Illinois; Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8220791?gh_jid=8220791"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8131237",
+   "company": "Okta",
+   "title": "Staff Product Marketing Launch Operations Manager",
+   "location": "Bellevue, Washington; Chicago, Illinois; San Francisco, California; Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8131237?gh_jid=8131237"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:8162877",
+   "company": "Okta",
+   "title": "Staff Product Marketing Manager, Okta Device Access",
+   "location": "Bellevue, Washington; Chicago, Illinois; San Francisco, California; Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/8162877?gh_jid=8162877"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:7559020",
+   "company": "Okta",
+   "title": "Staff Product Marketing Manager, Security",
+   "location": "Bellevue, Washington; Chicago, Illinois; San Francisco, California; Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/7559020?gh_jid=7559020"
+   ]
+  },
+  {
+   "id": "ashby:procurify:8474a8c8-2f96-4b31-a368-a78ec040d3d9",
+   "company": "Procurify",
+   "title": "Director, Product Marketing",
+   "location": "US/Canada - Remote",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/procurify/8474a8c8-2f96-4b31-a368-a78ec040d3d9"
+   ]
+  },
+  {
+   "id": "ashby:procurify:e6871697-5416-40dd-94ef-9bcb7957e484",
+   "company": "Procurify",
+   "title": "Solutions Consultant",
+   "location": "US/Canada - Remote",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/procurify/e6871697-5416-40dd-94ef-9bcb7957e484"
+   ]
+  },
+  {
+   "id": "ashby:rewind:182ea3c9-5a23-44b4-a82d-14a53fe36e77",
+   "company": "Rewind",
+   "title": "Product Marketing Manager",
+   "location": "Canada - remote",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 116000,
+    "max": 140000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$116K – CA$140K"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/rewind/182ea3c9-5a23-44b4-a82d-14a53fe36e77"
+   ]
+  },
+  {
+   "id": "smartrecruiters:servicenow:744000149073920",
+   "company": "ServiceNow",
+   "title": "Forward Deployed Solution Engineer – Applied AI FDE",
+   "location": "Montreal, QUEBEC, CA",
+   "region": "Montreal",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "smartrecruiters"
+   ],
+   "urls": [
+    "https://jobs.smartrecruiters.com/ServiceNow/744000149073920"
+   ]
+  },
+  {
+   "id": "ashby:snowflake:59b0a754-fecd-4156-9f28-1caa9cd99509",
+   "company": "Snowflake",
+   "title": "Senior Solution Engineer",
+   "location": "CA-British Columbia-Remote; CA-Alberta-Remote",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 162000,
+    "max": 212625,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$162,000 – CA$212,625"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/snowflake/59b0a754-fecd-4156-9f28-1caa9cd99509"
+   ]
+  },
+  {
+   "id": "greenhouse:stackadapt:4391710009",
+   "company": "StackAdapt",
+   "title": "Director, Product Marketing",
+   "location": "Canada; United States",
+   "region": "Other Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/stackadapt/jobs/4391710009"
+   ]
+  },
+  {
+   "id": "greenhouse:stripe:8090203",
+   "company": "Stripe",
+   "title": "Product Marketing Lead, Billing",
+   "location": "US / Canada",
+   "region": "Other Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://stripe.com/jobs/search?gh_jid=8090203"
+   ]
+  },
+  {
+   "id": "greenhouse:stripe:6348471",
+   "company": "Stripe",
+   "title": "Product Marketing Manager",
+   "location": "San Francisco, New York, Seattle, Chicago, Remote, Toronto",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://stripe.com/jobs/search?gh_jid=6348471"
+   ]
+  },
+  {
+   "id": "greenhouse:stripe:8014761",
+   "company": "Stripe",
+   "title": "Product Marketing Manager, Market Intelligence",
+   "location": "SF, Seattle, NYC, Chicago, Toronto, Remote in the US",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://stripe.com/jobs/search?gh_jid=8014761"
+   ]
+  },
+  {
+   "id": "greenhouse:stripe:8142770",
+   "company": "Stripe",
+   "title": "Product Marketing Manager, Payments",
+   "location": "Remote in the US, Chicago, Toronto",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://stripe.com/jobs/search?gh_jid=8142770"
+   ]
+  },
+  {
+   "id": "greenhouse:stripe:8097731",
+   "company": "Stripe",
+   "title": "Product Marketing Manager, Startup Segment",
+   "location": "San Francisco, Seattle, NYC, Chicago, Remote in the US, Toronto",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://stripe.com/jobs/search?gh_jid=8097731"
+   ]
+  },
+  {
+   "id": "greenhouse:stripe:7773461",
+   "company": "Stripe",
+   "title": "Product Marketing, Data Products",
+   "location": "US / Canada",
+   "region": "Other Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://stripe.com/jobs/search?gh_jid=7773461"
+   ]
+  },
+  {
+   "id": "greenhouse:varicent:5433609008",
+   "company": "Varicent",
+   "title": "Sr. Director, Product Marketing",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/varicent/jobs/5433609008"
+   ]
+  },
+  {
+   "id": "ashby:wealthsimple:dc2ee546-5f93-48b9-b0aa-61b583aa5361",
+   "company": "Wealthsimple",
+   "title": "Lead, Motion & Product Marketing Design",
+   "location": "Remote (Canada)",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "min": 152000,
+    "max": 190000,
+    "currency": "CAD",
+    "interval": "1 YEAR",
+    "posted": true,
+    "summary": "CA$152K – CA$190K • Offers Equity"
+   },
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/wealthsimple/dc2ee546-5f93-48b9-b0aa-61b583aa5361"
+   ]
+  },
+  {
+   "id": "ashby:zip:2fe12a5b-aa60-4258-ac0e-f8c1c9bfbdf4",
+   "company": "Zip",
+   "title": "Senior ERP Solutions Consultant",
+   "location": "Toronto",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-14T19:53:39+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/zip/2fe12a5b-aa60-4258-ac0e-f8c1c9bfbdf4"
+   ]
+  }
+ ]
+}

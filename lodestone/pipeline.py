@@ -26,17 +26,23 @@ def _detect_one(name: str) -> tuple[str | None, str | None, str]:
     Returns (ats, slug, confidence). A match on just the first word of a multi-word name
     ("royal" for "Royal Bank of Canada") is marked low confidence for review.
     """
-    cands = slug_candidates(name)
-    for i, slug in enumerate(cands):
+    for slug in slug_candidates(name):
         for ats in DETECT_ORDER:
             try:
                 n = ADAPTERS[ats].exists(slug)
             except Exception:
                 n = None
             if n:
-                first_word_only = len(cands) > 1 and i == len(cands) - 1 and " " in name.strip()
-                return ats, slug, "low" if first_word_only else "high"
+                return ats, slug, _confidence(name, slug)
     return None, None, "none"
+
+
+def _confidence(name: str, slug: str | None) -> str:
+    """High only when the board name is the full company name ("canadalife"), not a shortened
+    form ("life" for "Canada Life", "air" for "Air Canada"), which may be a different company."""
+    if not slug:
+        return "none"
+    return "high" if slug in slug_candidates(name)[:2] else "low"
 
 
 def detect(redo: bool = False, log=print) -> dict:
@@ -45,7 +51,7 @@ def detect(redo: bool = False, log=print) -> dict:
     known = {c["name"]: c for c in store.load("companies", {"companies": []})["companies"]}
     todo, companies = [], []
     for row in seed:
-        if row.get("segment", "").lower().startswith("discovery"):
+        if "not employers" in row.get("segment", "").lower() or row.get("discovery_source") == "discovery":
             continue          # discovery orgs (VCs, accelerators) are sources of companies, not employers
         c = Company(name=row["company"].strip(), segment=row.get("segment", ""),
                     canada_locations=row.get("canada_locations", ""), fit_tier=row.get("fit_tier", ""),
@@ -57,7 +63,8 @@ def detect(redo: bool = False, log=print) -> dict:
             d.update(ats=None if o["ats"] == "none" else o["ats"], slug=o["slug"],
                      ats_checked_at=store.now(), confidence="override")
         elif prev and not redo and prev.get("ats_checked_at"):
-            d.update({k: prev.get(k) for k in ("ats", "slug", "ats_checked_at", "confidence", "status")})
+            d.update({k: prev.get(k) for k in ("ats", "slug", "ats_checked_at", "status")})
+            d["confidence"] = _confidence(c.name, d["slug"])
         else:
             todo.append(d)
         companies.append(d)

@@ -1,0 +1,68 @@
+{
+ "components": {
+  "ats_detection": {
+   "at": "2026-10-14T19:53:39+00:00",
+   "companies": 210,
+   "matched": 71
+  },
+  "jobs:smartrecruiters": {
+   "at": "2026-10-14T19:53:49+00:00",
+   "postings": 705
+  },
+  "jobs:greenhouse": {
+   "at": "2026-10-14T19:53:49+00:00",
+   "postings": 4496
+  },
+  "jobs:ashby": {
+   "at": "2026-10-14T19:53:49+00:00",
+   "postings": 1382
+  },
+  "jobs:lever": {
+   "at": "2026-10-14T19:53:49+00:00",
+   "postings": 363
+  },
+  "jobs": {
+   "at": "2026-10-14T19:53:49+00:00",
+   "feeds_ok": 71,
+   "feeds_failed": 0,
+   "canada_jobs_tracked": 1307,
+   "candidates": 146
+  }
+ },
+ "history": [
+  {
+   "component": "ats_detection",
+   "at": "2026-10-14T19:53:39+00:00",
+   "companies": 210,
+   "matched": 71
+  },
+  {
+   "component": "jobs:smartrecruiters",
+   "at": "2026-10-14T19:53:49+00:00",
+   "postings": 705
+  },
+  {
+   "component": "jobs:greenhouse",
+   "at": "2026-10-14T19:53:49+00:00",
+   "postings": 4496
+  },
+  {
+   "component": "jobs:ashby",
+   "at": "2026-10-14T19:53:49+00:00",
+   "postings": 1382
+  },
+  {
+   "component": "jobs:lever",
+   "at": "2026-10-14T19:53:49+00:00",
+   "postings": 363
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-14T19:53:49+00:00",
+   "feeds_ok": 71,
+   "feeds_failed": 0,
+   "canada_jobs_tracked": 1307,
+   "candidates": 146
+  }
+ ]
+}

@@ -35,6 +35,7 @@ class TestGeo(unittest.TestCase):
         self.assertTrue(classify(P("Vancouver, BC")).in_canada)
 
     def test_not_canada(self):
+        self.assertFalse(classify(P("Amsterdam, NL", country="nl")).in_canada)
         for loc in ("Waterloo, Iowa", "London, UK", "San Francisco, CA", "Remote - US", "New York, NY"):
             self.assertFalse(classify(P(loc)).in_canada, loc)
 

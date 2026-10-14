@@ -36,6 +36,9 @@ def classify(p: Posting) -> GeoResult:
     remote = bool(p.remote_hint) or "remote" in loc or p.workplace == "remote"
     country = (p.country_hint or "").strip().lower()
     canada_named = any(_has(loc, n) for n in cfg["country_names"]) or country in cfg["country_codes"] + cfg["country_names"]
+    # A structured, non-Canadian country from the source wins ("Amsterdam, NL" is not Newfoundland).
+    if country and not canada_named:
+        return GeoResult(False, None, remote, False, f"not Canada: country '{p.country_hint}'")
     province_hit = None
     for code, names in cfg["provinces"].items():
         if any(_has(loc, n) for n in names) or re.search(r",\s*" + code.lower() + r"\b", loc):
