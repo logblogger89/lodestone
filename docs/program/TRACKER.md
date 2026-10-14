@@ -129,6 +129,6 @@ Folder: [Lodestone](https://drive.google.com/drive/folders/1Lg2FCikLlqf2YzYX--Dr
 
 | Artifact | Type | Source in repo | Drive link | Last synced |
 |---|---|---|---|---|
-| Program Plan v2 | Google Doc | docs/program/PROGRAM_PLAN.md | [Open](https://docs.google.com/document/d/1uN4yjH74UHUzIk1aHfKpV8YDsLtMhYH6hfHaOsS5aq8/edit) | 2026-10-13 |
-| Program Tracker | Google Sheet (one tab per section) | docs/program/TRACKER.md | [Open](https://docs.google.com/spreadsheets/d/1gnJmUCWiPqOAelZ44zO_wDcLAYOKlTFBCzn2hJwEJwU/edit) | 2026-10-13 |
+| Program Plan v2 | Google Doc | docs/program/PROGRAM_PLAN.md | [Open](https://docs.google.com/document/d/1uN4yjH74UHUzIk1aHfKpV8YDsLtMhYH6hfHaOsS5aq8/edit) | 2026-10-14 (edited in place, so the link is stable) |
+| Program Tracker | Google Sheet (one tab per section) | docs/program/TRACKER.md | [Open](https://docs.google.com/spreadsheets/d/1YjGxImyoUVQimHPlJV_Ch9J8bkolRsDu-KaWdqM7KmI/edit) | 2026-10-14 (M0 gate) |
 | PRD (stub) | Google Doc | docs/product/PRD.md | [Open](https://docs.google.com/document/d/1DAm9z6qX6K8gUXFmxLJ-EeHHLu0B_UII5FT4_1iDvgk/edit) | 2026-10-13 |
