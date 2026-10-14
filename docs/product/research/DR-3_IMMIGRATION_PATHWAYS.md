@@ -27,10 +27,19 @@
 | **Category-based draws** | Draws can have lower cutoffs (e.g. Senior managers at 389, but it needs Canadian experience) | The role's NOC and its mapping to a category | Derived (NOC classifier) |
 | **Express Entry with no job offer** | Ayush's CRS is limited by age, and it drops at each birthday (R-09) | Not listing-specific. Comes from C15 | Calculator |
 
+## 2a. Sequence for the CEC route (clarified 2026-10-14)
+
+Canadian work experience counts toward CEC **only when the work is done in Canada under a valid work permit**. Remote work for a Canadian employer done from the US doesn't count. Self-employment and work done as a full-time student don't count either.
+
+**Offer → work permit (ICT / LMIA / GTS) → move to Canada → 12 months of skilled full-time work (about 1,560 hours) → Express Entry (CEC) → PR (about 6 months of processing)**
+
+- **Spouse:** an open work permit for the spouse may be available. Eligibility was tightened in 2024 and depends on the principal applicant's occupation (TEER level) and how long the permit has left (*verify*). Her Canadian experience can add CRS points too.
+- **Permit length:** an ICT permit usually runs up to 3 years at first, which covers the 12 months plus processing.
+
 ## 3. Requirements this implies
 
 1. **Pathway badges per listing** (B9): *ICT-eligible*, *Sponsorship mentioned*, *Sponsored before (ESDC list, quarter)*, *GTS-likely*. Each one is labelled **Stated** or **Inferred** with its source and date. Missing signals show as **Unknown**, and a listing is never hidden for that (D-021).
-2. **PR impact** (C16): for a role in Canada with a valid permit, estimate "CEC-eligible after 12 months." Show what changes in the CRS what-if (Canadian experience points, possible category eligibility).
+2. **PR impact** (C16): estimate "CEC-eligible about 12 months after starting" **only when the work location is in Canada** (on-site, hybrid, or remote-in-Canada). Remote roles based outside Canada get **"no CEC credit"**, even with a Canadian employer. Show what changes in the CRS what-if (Canadian experience points, possible category eligibility).
 3. **Rules as config** (R-12): CRS grid, arranged-employment flag, category list and cutoffs, PNP stream status. Each carries a version and an "as of" date, plus a link to the official IRCC tools.
 4. **ESDC LMIA list ingestion:** quarterly XLSX. Match employer names to companies with fuzzy matching and manual overrides.
 

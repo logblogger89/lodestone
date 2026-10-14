@@ -76,8 +76,8 @@ Tiers: **MVP** (v1 launch) · **V1** (fast follow) · **Later** · **Dropped**. 
 | B13 | Red flags (vague role, reorg or layoff news, chronic reposts) | V1 | |
 | B14 | Compare 2–3 roles side by side | V1 | |
 | C15 | Express Entry profile and CRS calculator with what-if levers | V1 | Ties to CR-5 |
-| C16 | PR impact for each job | V1 | |
-| C17 | PR pathway timeline view | Later | |
+| C16 | PR impact for each job. **CEC credit only when the work is done in Canada** (remote-from-US roles get none) | V1 | DR-3 §2a |
+| C17 | PR pathway timeline view: offer → permit → move → 12 months → CEC → PR | Later | DR-3 §2a |
 | D18 | Daily digest (in-app; email in V1) | MVP | |
 | D19 | Triage (interested / not / later, with reasons) that learns preferences | MVP | Feeds the match engine (§2d) |
 | D20 | Saved searches and alerts | V1 | |
