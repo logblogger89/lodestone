@@ -166,6 +166,8 @@ class SourceAdapter(Protocol):
 - Postgres: **Cloud SQL smallest instance ≈ $10–15**, *or* a free external Postgres (e.g. a Neon free tier), *or* Firestore's free tier (no Postgres; rework needed)
 - Artifact Registry, Secret Manager, Storage, Logging: well under $2
 
+**Note:** a Claude.ai subscription (Pro, Max) covers Ayush's own use of Claude and Claude Code (i.e. building Lodestone). It does **not** cover the app's Claude API calls, which are billed separately, pay-as-you-go, through an Anthropic Console account (or Vertex AI).
+
 **Claude usage.** Assumptions: about 150 new relevant jobs a day after the rules stage (≈4,500 a month), about 5K input and 2K output tokens per job for parse plus score. Prompt caching cuts the repeated profile and instructions. The Batch API (50% off) suits the daily run. Prices are Anthropic's first-party list (as of 2026-10-06).
 
 | Option | Models | Est. / month (cached + batch → uncached) |
