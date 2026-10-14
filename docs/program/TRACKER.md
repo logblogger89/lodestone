@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-14 · **Current milestone:** M0 → M1 · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14, later).** M1 (PRD) is in progress. Q-17 and Q-18 are resolved as product features and defaults: an optional in-app Express Entry profile with a CRS calculator (CR-5), a people-management toggle (CR-6), and Claude-proposed default role families (D-017). The Drive Sheet now syncs only at gates (D-018). **Open:** Q-13 (review time), Q-19 (offer-by date), and confirming the CR-3 interpretation. **Next:** the PRD session.
+**Status summary (2026-10-14, end of day).** All PgM questions are closed. CR-3 is confirmed and extended: listings with no pathway info are kept, and missing signals get filled from employer-level research (CR-3a). No offer-by date (D-019). Milestones are gate-sequenced with rolling dates because the sponsor's time is unpredictable (D-020). M1 to M3 dates are now rolling. **Next:** PRD v0, drafted async by Claude for Ayush to review when he has a slot.
 
 ---
 
@@ -14,9 +14,9 @@
 | # | Milestone | RAG | Status | Target | Gate approved | Notes |
 |---|---|---|---|---|---|---|
 | M0 | Program kickoff | 🟢 | ✅ Done | 10-13 | ✅ 10-14 (D-013) | |
-| M1 | PRD approved | 🟢 | 🟦 In progress | 10-14 | — | Product session next. Depends on DR-1 to DR-4 |
-| M2 | UX review passed | 🟢 | ⬜ | 10-15 | — | |
-| M3 | Eng Design Doc approved | 🟢 | ⬜ | 10-16 | — | M4 and M5 dates get committed here |
+| M1 | PRD approved | 🟢 | 🟦 In progress | Rolling (D-020) | — | Claude drafts PRD v0 async. Depends on DR-1 to DR-4 |
+| M2 | UX review passed | 🟢 | ⬜ | Rolling | — | |
+| M3 | Eng Design Doc approved | 🟢 | ⬜ | Rolling | — | M4 and M5 estimates get committed here |
 | M4 | MVP dogfood | 🟢 | ⬜ | TBD at M3 | — | Placeholder: about 2 weeks after M3 |
 | M5 | Launch (v1) | 🟢 | ⬜ | TBD at M3 | — | |
 | M6 | Post-launch review | 🟢 | ⬜ | Launch + 2 weeks | — | |
@@ -67,6 +67,9 @@
 | D-016 | 10-14 | Program deadline: the H-1B expires in Sep 2027, so the search aims to land an offer and work permit comfortably before then. The exact offer-by date is still open (Q-19) | Ayush's direction | Ayush |
 | D-017 | 10-14 | Claude defines the default PM-adjacent role families (PRD §2b). They are user-editable config, not hard-coded | Ayush delegated Q-18 | Ayush (delegated) |
 | D-018 | 10-14 | Batch syncing: the repo tracker updates every session, and the Drive Sheet and Docs refresh only at gates (or on request) | Less link churn and noise | Ayush |
+| D-019 | 10-14 | No offer-by date or deadline. The goal is to see what's available and apply to relevant postings. The Sep 2027 H-1B expiry stays as context only | Ayush's direction (Q-19) | Ayush |
+| D-020 | 10-14 | Milestones follow gate sequence, not the calendar. Dates are rolling and re-baselined as needed, and a slip from sponsor availability doesn't count against RAG | The sponsor's capacity is unpredictable (Q-13) | Ayush |
+| D-021 | 10-14 | Listings with no immigration-pathway info are never excluded. Missing signals get filled from employer-level research and shown with a source and a confidence level, or as "unknown" | Relevant roles often don't mention sponsorship (CR-3a) | Ayush |
 
 ## 4. Open questions
 
@@ -84,10 +87,10 @@
 | Q-10 | Monthly budget for hosting and LLM/API costs | M3 | Partly answered | Hosting is local (D-015). LLM/API spend is deferred to M3 |
 | Q-11 | Should the repo be public or private? | — | ✅ Answered | Private for now (D-006). Scrub personal details before any public release (A-03) |
 | Q-12 | Is there a target date to start applying, have an offer, or move? | — | ✅ Answered | As soon as possible, and comfortably before the H-1B expires in Sep 2027 (D-016) |
-| Q-13 | **Capacity.** How many hours a week can Ayush spend on reviews and gates? (A "review" means reading a draft Claude produces, such as the PRD, mocks or the Eng Design Doc, then giving feedback or saying "approved". Most should take 15–45 minutes) | Schedule for M1–M5 | Open (clarified) | |
+| Q-13 | Capacity: how much review time per week? | — | ✅ Answered | Unpredictable (newborn). Dates will move as needed (D-020) |
 | Q-14 | **Immigration profile.** Do you or your spouse have an Express Entry profile, a CRS estimate, language test results or an ECA? | — | ✅ Answered | There is an Express Entry profile with strong IELTS scores, but the CRS is low because of age (Ayush turns 37 on 11-15, his spouse turns 33 on 01-03). A PR route without a job offer isn't realistic on its own right now, so a job is the main path |
 | Q-15 | **Hard dates.** H-1B extension or expiry, vesting or refresh cliffs, parental leave: anything that constrains timing | — | ✅ Answered | The H-1B expires in Sep 2027 (D-016) |
-| Q-19 | **Offer-by date.** Proposal: a signed offer by **2027-03-31**. That leaves about 6 months for the work permit, the move, and a fallback if the first route stalls. Accept, or pick another date? | M1 | Open | |
+| Q-19 | Offer-by date? | — | ✅ Answered | None. Explore and apply to relevant roles (D-019) |
 | Q-16 | Is a Google-internal transfer to Google Toronto or Waterloo on the table? If so, it's an LMIA-exempt channel to track | — | ✅ Answered | Yes. PM roles that fit at Google Canada are scarce, so Ayush is open to PM-adjacent roles inside or outside Google (D-011, D-012) |
 | Q-17 | Express Entry details for DR-3 | — | ✅ Resolved | They become optional in-app inputs: an Express Entry profile and CRS calculator that adjust listings (CR-5). Ayush has the details and will enter them in the app |
 | Q-18 | Which PM-adjacent families count? | — | ✅ Resolved | Delegated to Claude (D-017), with defaults in PRD §2b. No people-management roles by default, via a toggle (CR-6) |
@@ -103,13 +106,14 @@
 | R-05 | Risk | LLM fit scores may be noisy | Med | Labeled eval set, explainable sub-scores | Claude | Open |
 | R-06 | Risk | Over-engineering for extensibility slows the MVP | Med | Build the seams now, but only one implementation of each | Claude | Open |
 | R-07 | Risk | Few roles fit, because Canadian employers are reluctant to sponsor (LMIA) | High | Widen geography and level (D-007, D-008). Weight LMIA-exempt routes. Consider a parallel PR track (Q-14, Q-16) | Ayush + Claude | Open |
-| R-08 | Risk | Ayush's limited time slows the gates | Med | Claude pre-drafts, reviews stay short and async | Claude | Open |
+| R-08 | Risk | Ayush's review time is unpredictable (newborn), which slows the gates | Med | Claude pre-drafts, reviews stay short and async. Rolling, gate-sequenced dates (D-020) | Claude | Open |
 | A-01 | Assumption | Google L5 maps roughly to Amazon L6/L7 and to "Senior/Principal PM" elsewhere | — | Validate in DR-1 | Claude | Open |
 | A-02 | Assumption | Comp anchor of about US$450K TC (US$229K base, 15% bonus, about US$187K equity per year) | — | Confirm in DR-2 | Ayush | Open |
 | R-09 | Risk | The CRS score drops at each birthday after 35 (Ayush on 11-15, spouse on 01-03), so a PR route without a job offer gets harder over time | High | Treat getting a work permit sooner as the priority (ICT and LMIA-exempt routes). DR-3 to check levers: CEC after Canadian work experience, PNP, category-based draws, spouse as principal applicant. Validate with a licensed consultant (RCIC) | Ayush + Claude | Open |
 | R-10 | Risk | LinkedIn's API probably won't expose the user's current employer to a personal app (OAuth sign-in returns only basic identity) | Med | DR-4 checks this. Fallbacks: import the LinkedIn data export or profile PDF, parse the resume, or enter it manually | Claude | Open |
-| R-11 | Risk | The deadline is fixed (Sep 2027), and a search, offer and work permit can take months | High | Ship the MVP fast. Set an offer-by date with buffer (Q-19). Run the Google transfer channel in parallel | Ayush + Claude | Open |
+| R-11 | Risk | Starting the search late leaves less buffer before the H-1B expires (Sep 2027) | Med | Ship the MVP fast. Run the Google transfer channel in parallel. No fixed offer-by date (D-019) | Ayush + Claude | Open |
 | R-12 | Risk | The CRS rules (points grid, how job offers count, category draws) change over time, so a hard-coded calculator would go stale | Med | Put CRS rules in versioned config (D-005), show the rules version and date, and link to the official IRCC calculator for verification | Claude | Open |
+| R-13 | Risk | Employer-level sponsorship signals from web research may be stale, wrong or unverifiable | Med | Prefer official data, e.g. ESDC's published positive-LMIA employer lists (to verify in DR-3/DR-4). Show the source, date and a confidence level, and never hide a listing because of it (D-021) | Claude | Open |
 | A-03 | Assumption | The repo stays private. The PRD holds personal immigration and family context | — | Scrub it before any public release (M6) | Claude | Open |
 | DEP-1 | Dependency | Ayush's review time at each gate | — | See Q-13 | Ayush | Open |
 | DEP-2 | Dependency | Job sources that are legal to use | — | DR-4 | Claude | Open |
@@ -126,6 +130,7 @@
 | 2026-10-14 | Recorded the Q-14 and Q-16 answers. Added D-011, D-012, Q-17, Q-18 and R-09. Raised DR-3 priority | Claude |
 | 2026-10-14 | M0 approved. Recorded the answers to Q-02, Q-10, Q-12, Q-15 and Q-16 as D-013 to D-016, and moved the feature asks to the PRD. Added Q-19, R-10 and R-11. Clarified Q-13 | Claude |
 | 2026-10-14 | Resolved Q-17 and Q-18 as product features (CR-5, CR-6) and role-family defaults (D-017). Batch Drive sync (D-018). Added R-12 | Claude |
+| 2026-10-14 | CR-3 confirmed and extended (CR-3a, D-021). Q-19: no deadline (D-019). Q-13: rolling, gate-sequenced dates (D-020). Added R-13 and revised R-08 and R-11. All PgM questions closed | Claude |
 
 ## 7. Published artifacts (Google Drive)
 
