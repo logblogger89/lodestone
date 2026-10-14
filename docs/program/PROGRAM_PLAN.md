@@ -96,7 +96,7 @@ The program is a two-person team. Claude takes on each functional hat. Ayush is 
 - **Status.** At the end of each session the tracker header carries a one-line RAG status (Green, Yellow or Red), plus a short summary of what happened and what's next.
 - **Decisions.** Every material decision is recorded in the Decision Log with its rationale. Engineering decisions also get ADRs.
 - **Change control.** Once M1 is approved, new scope goes to the backlog as V1.x unless Ayush reopens the gate.
-- **Artifacts.** The repo is the source of truth. Readable copies (Docs, Sheets, Slides) are published to the [Lodestone Drive folder](https://drive.google.com/drive/folders/1Lg2FCikLlqf2YzYX--DrWZ4w2fUCQ4GV) at each gate (D-004).
+- **Artifacts.** The repo (GitHub) is the only source of truth. Google Drive copies were discontinued on 2026-10-14 (D-024). The ones already there are frozen snapshots.
 
 ## 8. Dependencies
 

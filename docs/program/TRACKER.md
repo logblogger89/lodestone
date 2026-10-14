@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-14 · **Current milestone:** M0 → M1 · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14).** All four domain-research docs (DR-1 to DR-4) are at v1 and in review. The big finding: a job helps toward PR mainly through Canadian work experience (CEC), because job-offer CRS points are gone and Ontario's tech stream is closed. **Next:** PRD v0 (personas and CUJs, P0/P1/P2 requirements with acceptance criteria, metrics).
+**Status summary (2026-10-14).** **PRD v0 is in review** (gate M1). P0 has 15 requirements with acceptance criteria, plus metrics and 4 open questions. Research DR-1 to DR-4 is at v1. Drive sync has stopped; GitHub only (D-024). **Next:** Ayush reviews PRD v0, then M1 approval, then UX (M2).
 
 ---
 
@@ -32,7 +32,7 @@
 | D1.2 | DR-2 Pay display and estimation | Domain research | M1 | 🟨 | Claude → Ayush | [DR-2_PAY.md](../product/research/DR-2_PAY.md) |
 | D1.3 | DR-3 Immigration pathways | Domain research | M1 | 🟨 | Claude → Ayush | [DR-3_IMMIGRATION_PATHWAYS.md](../product/research/DR-3_IMMIGRATION_PATHWAYS.md). Signals only, not advice |
 | D1.4 | DR-4 Job-source inventory and ToS | Data and sourcing | M1 | 🟨 | Claude → Ayush | [DR-4_JOB_SOURCES.md](../product/research/DR-4_JOB_SOURCES.md). v1 done. ToS checks deferred to Eng Design |
-| D1.5 | PRD v1 | Product | M1 | 🟦 | Ayush + Claude | [PRD.md](../product/PRD.md). Brainstorm done (§2c, §2d). v0 next |
+| D1.5 | PRD v0 | Product | M1 | 🟨 | Ayush + Claude | [PRD.md](../product/PRD.md). v0 in review: P0 R1–R15 with acceptance criteria, metrics, 4 open questions |
 | D2.1 | CUJ flows and IA | Product (UX) | M2 | ⬜ | Claude | |
 | D2.2 | Mocks and visual direction | Product (UX) | M2 | ⬜ | Claude → Ayush | |
 | D2.3 | Clickable prototype | Product (UX) | M2 | ⬜ | Claude | |
@@ -52,7 +52,7 @@
 | D-001 | 10-13 | The program runs as gated stages: PgM, then Product (requirements, UX), then Engineering design, then Build | Ayush's direction | Ayush |
 | D-002 | 10-13 | All program docs live in the repo under `docs/`. Status lives only in `TRACKER.md` | One source of truth, versioned | Ayush |
 | D-003 | 10-13 | No resume or personal contact details are committed to the repo | Privacy | Ayush |
-| D-004 | 10-13 | Readable copies are published to the Lodestone Google Drive folder. The repo stays canonical | Easy to read and share | Ayush |
+| D-004 | 10-13 | Readable copies are published to the Lodestone Google Drive folder. The repo stays canonical | Easy to read and share | Ayush. **Superseded by D-024** |
 | D-005 | 10-13 | Built for one, ready for many: user-specific dimensions are config or plugins | Extensible after the MVP | Ayush |
 | D-006 | 10-13 | Single-user and private for now. Revisit going public at M6 | Ayush's direction | Ayush |
 | D-007 | 10-13 | Geography: GTA plus Waterloo first, then the rest of Canada if results are thin. Any work mode | Ayush's direction | Ayush |
@@ -72,6 +72,7 @@
 | D-021 | 10-14 | Listings with no immigration-pathway info are never excluded. Missing signals get filled from employer-level research and shown with a source and a confidence level, or as "unknown" | Relevant roles often don't mention sponsorship (CR-3a) | Ayush |
 | D-022 | 10-14 | Feature backlog and MVP cut line approved after the brainstorm (PRD §2c). E23 dropped. The match engine (JD parsing plus profile understanding, then ranking) is the core of the MVP (PRD §2d) | Brainstorm with Ayush | Ayush |
 | D-023 | 10-14 | Capture-feature tiers approved: A3a, A3b, A3c and A3h in the MVP; A3d, A3e and A3f in V1; A3g later. A3e stays in V1 | Ayush's review | Ayush |
+| D-024 | 10-14 | Stop syncing to Google Drive. GitHub is the only home for artifacts. The existing Drive files stay as frozen snapshots | Ayush's direction | Ayush |
 
 ## 4. Open questions
 
@@ -138,8 +139,11 @@
 | 2026-10-14 | DR-4 v1 done: source inventory, ingest strategy, dedup design, and pay-transparency and LMIA findings | Claude |
 | 2026-10-14 | Added the paste-link capture features A3a to A3h (tiers proposed) and R-14 | Claude |
 | 2026-10-14 | DR-1, DR-2 and DR-3 v1 done. Key findings: job-offer CRS points removed (Mar 2025), Ontario HCP and Employer Job Offer streams closed in 2026, ICT is the strongest route, and CEC is the main PR lever | Claude |
+| 2026-10-14 | PRD v0 written (Google-style, P0/P1/P2, acceptance criteria, metrics). Drive sync discontinued (D-024) | Claude |
 
 ## 7. Published artifacts (Google Drive)
+
+> **Discontinued 2026-10-14 (D-024).** The links below are frozen snapshots, no longer updated.
 
 Folder: [Lodestone](https://drive.google.com/drive/folders/1Lg2FCikLlqf2YzYX--DrWZ4w2fUCQ4GV)
 

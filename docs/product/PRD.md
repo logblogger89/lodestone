@@ -3,23 +3,165 @@
 | | |
 |---|---|
 | **PM** | Ayush Gupta (lead), Claude (PM partner) |
-| **Status** | **Stub.** Inputs captured. Active work starts in the Product phase (gate M1) |
+| **Status** | **v0, in review.** Gate M1 (PRD approved) |
 | **Last updated** | 2026-10-14 |
 | **Program** | [Program Plan](../program/PROGRAM_PLAN.md) · [Tracker](../program/TRACKER.md) |
-
-> This stub collects product inputs that came up during program setup so nothing is lost. The PRD will be written in full during the Product phase. Its planned outline is in §6.
+| **Research** | [DR-1 Leveling](research/DR-1_LEVELING.md) · [DR-2 Pay](research/DR-2_PAY.md) · [DR-3 Immigration](research/DR-3_IMMIGRATION_PATHWAYS.md) · [DR-4 Job sources](research/DR-4_JOB_SOURCES.md) |
 
 ---
 
-## 1. Problem framing (draft)
+## 1. Overview
 
-Searching for jobs across borders comes down to three translation problems that generic job boards don't solve:
+**Lodestone** is a personal, locally hosted job-search portal. It finds roles in Canada that fit a senior PM on a path to Canadian PR, explains *why* each one fits, and tracks the pipeline from discovery to offer.
 
-1. **Title and level.** "Product Manager", "Product Lead", "Group PM", "Product Owner" and "Technical PM" mean different things at different companies. A Google L5 maps to roughly L6/L7 at Amazon and to "Senior" or "Principal" elsewhere. At a startup the title tells you very little about the level.
-2. **Comp.** Google total comp of about US$450K (US$229K base, 15% bonus target, about US$187K a year in equity) has to be converted into CAD. It also has to be adjusted for the cost of living and for Canadian comp bands, which are structurally lower, and public RSUs have to be compared fairly with private-company equity.
-3. **Eligibility.** A role only counts if it can lead to a valid work authorization and, from there, to PR. Many Canadian employers avoid hiring from abroad because of the LMIA process. LMIA-exempt routes, such as intra-company transfers, matter a lot.
+What makes it different from a generic job board:
+- **It understands both sides.** It reads the job description *and* the user's CV, then ranks by real fit (role, level, domain, pay, immigration pathway) with explainable sub-scores.
+- **It handles the cross-border details:** levels across companies, pay disclosure (and its gaps), and immigration-pathway signals. A listing is never hidden just because information is missing.
+- **It goes to the source.** Jobs come from public ATS feeds, discovery boards help find companies, and LinkedIn and similar sites work through low-friction paste-a-link capture.
+- **It's built for one user and ready for many.** Everything user-specific is config (D-005).
 
-## 2. User inputs captured (2026-10-13)
+## 2. Problem statement
+
+Ayush is a Google L5 PM (operating near L6) on an H-1B in the NYC area. He wants a role in Canada that starts a PR path: a work permit, then 12 months of Canadian work experience, then CEC (DR-3 §2a). Today the search is:
+- **Fragmented.** Roles are spread across company ATSs, VC portfolio boards, Canadian aggregators and LinkedIn, with lots of duplicates.
+- **Hard to evaluate.** Titles don't map cleanly to levels, senior roles often have no posted pay (Ontario exempts roles above $200K), and immigration feasibility is rarely stated.
+- **Time-starved.** Ayush is a new parent with unpredictable free time, so every minute spent searching needs to land on a relevant role.
+
+## 3. Goals and non-goals
+
+**Goals (MVP)**
+1. Surface the relevant Canadian PM and PM-adjacent roles from a broad set of sources, deduplicated, with each source visible.
+2. Rank roles by explainable fit to Ayush's profile, so the top of the digest is worth his time.
+3. Show pay (posted or estimated) and immigration-pathway signals (stated or inferred), clearly labelled.
+4. Make triage and pipeline tracking fast enough to do in a few spare minutes.
+5. Run locally, keep personal data on the user's machine, and use only sources whose ToS allow it.
+
+**Non-goals (MVP)**
+- Multi-user accounts or public hosting (D-006)
+- Applying on the user's behalf, or automating any application
+- Immigration or legal advice. Lodestone shows signals only (R-03)
+- Scraping LinkedIn, Indeed, Glassdoor or Wellfound (DR-4)
+- Roles outside Canada (a later geography pack)
+
+## 4. Users and personas
+
+| Persona | Description | MVP? |
+|---|---|---|
+| **P1: Ayush, cross-border senior PM** | Google L5 PM, enterprise AI, data governance, trust and safety, FS policy, commerce. H-1B holder targeting Canada, open to PM-adjacent IC roles, no people management. Has 5–30 minute windows, often on an iPad | **Primary** |
+| P2: Future cross-border job seeker | Any role, any origin and destination country. Served through role, geo and eligibility packs | Post-MVP (D-005) |
+
+## 5. Critical user journeys (CUJs)
+
+| # | CUJ | Tier |
+|---|---|---|
+| **CUJ-1** | **Set up my profile.** Upload my CV, review the extracted profile (roles, scope, domains, current employer), and set preferences (locations, work mode, role families, pay, toggles) | MVP |
+| **CUJ-2** | **Morning check.** Open Lodestone, see "N new since yesterday," scan the ranked digest with fit scores, source icons and badges | MVP |
+| **CUJ-3** | **Evaluate a role.** Open a listing: parsed summary, fit breakdown with reasons, pay (posted or est.), pathway badges (stated, inferred or unknown), internal-transfer badge, all sources, link to apply | MVP |
+| **CUJ-4** | **Triage fast.** Mark Interested / Not / Later with a quick reason. The ranking learns from it | MVP |
+| **CUJ-5** | **Capture a role I found elsewhere.** Paste a LinkedIn (or any) link, or the JD text. Lodestone parses it, dedups it, scores it and adds the source icon | MVP |
+| **CUJ-6** | **Track my pipeline.** Move roles through stages. Lodestone flags postings that have closed | MVP |
+| **CUJ-7** | **Manage my watchlist and sources.** Add or remove companies and see source health | MVP |
+| CUJ-8 | Tailor and apply: get a resume version tailored to the role, find referrals, follow an apply checklist | V1 |
+| CUJ-9 | Plan my PR path: optional Express Entry profile, CRS what-ifs, PR impact per job | V1 |
+| CUJ-10 | Compare roles and offers side by side | V1 / Later |
+
+## 6. Requirements
+
+**Priority:** **P0** = MVP launch blocker · **P1** = V1 fast follow · **P2** = later. IDs refer to the backlog in Appendix D.
+
+### 6.1 P0: MVP
+
+| ID | Requirement | Acceptance criteria |
+|---|---|---|
+| **R1. Ingestion** (A1, A2) | Pull jobs from public ATS feeds (Greenhouse, Lever, Ashby, SmartRecruiters, plus Workday and Workable once verified) for every company on the watchlist. Use discovery boards (VC portfolio boards, Communitech, YC, Built In Toronto, etc.) to add companies and their ATS slugs. The watchlist is managed in the UI and pre-seeded | Daily refresh. New postings show up within 24h of appearing in an ATS feed. Seed watchlist of ≥75 companies (Ayush reviews). Per-source health shown (last success, item count, errors) |
+| **R2. Dedup and source attribution** (A1, A4) | Merge the same job across sources, using the canonical ATS ID or URL first and a fuzzy match second. Keep every sighting | One listing per job. **One icon per source**, each one linking out. Posting age, "new since last visit" and a repost flag are visible. Dedup precision ≥95% on a 100-pair spot check |
+| **R3. Capture** (A3, A3a, A3b, A3c, A3h) | Paste one or more URLs anywhere (Cmd/Ctrl+V or "+ Add job"). Fall back to pasted JD text. Resolve to the ATS source and dedup. Show coaching tips | A pasted LinkedIn URL produces a scored listing within 30s, or prompts for the JD text if the page can't be fetched. A known job reports "already in Lodestone via X" and adds the icon. A confirmation card lets the user fix the parsed fields |
+| **R4. Profile** (H31, CR-4) | Import the CV (PDF or DOCX) into a structured profile: roles, scope signals, domains, skills, seniority, current employer. LinkedIn data export is optional. Every field can be edited | Ayush reviews his profile in ≤10 minutes. Current employer is set (from the CV or manually). No CV is stored in the repo (D-003) |
+| **R5. Preferences** (H32, CR-1, CR-2, CR-6, B11) | Locations (GTA + Waterloo by default, expandable), work mode, role families and tiers (Appendix B), a **pay range filter** (CAD), a **"include roles without posted pay"** toggle, a **people-management** toggle (exclude by default) | Every preference is config, not code (D-005). Changes re-rank the digest immediately |
+| **R6. JD understanding** (B6) | Parse each posting into a structured record: role family and tier, level signals, domain, must-haves and nice-to-haves, people management, location and work mode, pay, immigration signals | ≥90% field accuracy on a 50-JD labelled sample. People-management classification ≥90% |
+| **R7. Match engine** (B6) | Hard filters first (location, work mode, families, people management, pay when on), and missing data **never** excludes a job. Then LLM sub-scores (role, level, domain, skills, pay, pathway), each with a one-line reason. A user-weighted overall score | Every listing shows its score breakdown and reasons. **Quality bar:** ≥50% of the digest top 10 marked Interested or Later during dogfood. Ranking changes are checked against the triage-labelled eval set before they ship (R-05) |
+| **R8. Pay display** (B8, DR-2) | Show pay as posted (currency as posted). When it's missing, show an estimate with an **"est." icon** and a confidence level | No estimate ever appears without the est. icon. The estimate's source tier is visible on hover or tap |
+| **R9. Pathway signals** (B9, CR-3, CR-3a, DR-3) | Per listing: ICT-eligible, sponsorship mentioned, sponsored before (ESDC positive-LMIA list), GTS-likely, and whether the work location is in Canada (CEC credit). Each one is labelled **Stated / Inferred / Unknown** with its source and date | No listing is hidden for missing signals (D-021). Inferred signals always show their source. The ESDC list is loaded and matched to companies |
+| **R10. Internal-transfer badge** (B10, CR-4) | When the listing's employer equals the user's current employer, show an "Internal transfer" badge and the ICT route | All Google Canada roles carry the badge when the current employer is Google |
+| **R11. Daily digest** (D18) | An in-app home view: top N new matches since the last visit (N=10 by default, configurable), then the full ranked list | Loads in <2s locally. Readable and usable on an iPad browser (responsive) |
+| **R12. Triage and learning** (D19) | Interested / Not / Later, with optional quick reasons (e.g. "wrong level," "people management," "domain," "location"). It feeds the weights and the eval set | Triage takes ≤2 taps or keys. Keyboard shortcuts on desktop. Reasons are stored and visible in the eval set |
+| **R13. Pipeline** (F25) | Stages: Discovered → Shortlisted → Applied → Screen → Interviewing → Offer → Closed. Liveness check on each refresh | A closed or removed posting is flagged "no longer live" within 24h and kept in the history |
+| **R14. Local and private** (NFR-1) | Runs on the user's Windows laptop, and the iPad can reach it on the LAN (or via Tailscale). All personal data stays local. API keys live in local config | No personal data leaves the machine except LLM API calls, which carry only the JD and profile text needed for scoring. Works offline for browsing already-fetched data |
+| **R15. Compliant sourcing** (DR-4) | Automated pulls only from sources whose access is permitted. LinkedIn, Indeed, Glassdoor and Wellfound are capture-only (R3) | A source registry records the access method and ToS status for every source |
+
+### 6.2 P1: V1 (fast follow)
+
+| ID | Requirement |
+|---|---|
+| R16 | Level translator, e.g. "Staff PM at X ≈ Google L6" (B7, DR-1), with confidence |
+| R17 | "Why this fits you," plus gaps and how to frame them (B12) |
+| R18 | Red flags: vague role, layoff or reorg news, chronic reposts (B13). Company hiring signals (A5) |
+| R19 | Compare 2–3 roles side by side (B14) |
+| R20 | Optional Express Entry profile and CRS calculator with what-ifs, and PR impact per job (C15, C16, CR-5). Rules in versioned config (R-12) |
+| R21 | A version of the resume tailored to each posting, plus bullets and a cover letter draft (E21) |
+| R22 | Referral finder from the LinkedIn connections export (E22). Apply checklist and one-click open (E24) |
+| R23 | Saved searches and alerts (D20). Email digest |
+| R24 | Browser "Send to Lodestone" (A3d, after the ToS check, R-14). Job-alert email ingestion (A3e). Search launcher (A3f) |
+| R25 | Notes, contacts and reminders per application (F26) |
+
+### 6.3 P2: Later
+
+PR timeline view (C17) · interview prep pack for roles marked Interested (F27) · offer comparator (F28) · market view and what-ifs (G29) · funnel stats (G30) · mobile share target (A3g) · multi-user and admin console.
+
+## 7. UX principles and key screens (mocks at M2)
+
+- **Glanceable in 5 minutes on an iPad.** Digest first, big tap targets, keyboard-first on desktop.
+- **Never hide, always label.** Estimates, inferences and unknowns are visible and marked, not silently filtered out.
+- **Explain every score.** Every number has a "why."
+- **Key screens:** Digest (home) · Listing detail · Pipeline board · Add job (paste) · Profile review · Preferences · Watchlist and Sources.
+
+## 8. Success metrics
+
+| Type | Metric | Target (MVP dogfood) |
+|---|---|---|
+| **North star** | Relevant roles surfaced per week (marked Interested) | Baseline in week 1, then trending up or holding |
+| Quality | Precision@10 of the digest (Interested + Later out of the top 10) | ≥50% |
+| Coverage | **Already-known rate:** of the roles Ayush pastes from elsewhere, the share Lodestone had already found | ≥70% by week 2 |
+| Freshness | Time from a posting appearing in an ATS to appearing in Lodestone | ≤24h |
+| Efficiency | Median time to triage a listing | ≤20s |
+| Accuracy | JD parsing field accuracy · people-management classification | ≥90% · ≥90% |
+| Guardrails | Jobs hidden for missing data · non-permitted automated access · estimates shown without a label | 0 · 0 · 0 |
+| Program link | Applications made from Lodestone-sourced roles (O2) | Tracked, no target |
+
+## 9. Privacy, security and legal
+
+- Personal data (CV, profile, immigration details) is stored only locally, is never committed to the repo (D-003), and gets scrubbed before any public release (A-03).
+- LLM calls send only the minimum text needed. The provider and key are set in local config. The spend budget gets decided at M3 (Q-10).
+- Source ToS are tracked in the source registry (R15). Polite crawling: rate limits, caching, a clear user agent.
+- Immigration content is always labelled "signals, not advice," with links to official IRCC tools.
+
+## 10. Launch plan
+
+| Phase | Scope | Exit |
+|---|---|---|
+| **MVP dogfood (M4)** | P0 (R1–R15) | Ayush uses it daily for a week, and the metrics are measurable |
+| **Launch v1 (M5)** | P0 hardened, bug bash done | Launch checklist (privacy, ToS, quality bar) passed |
+| **V1.x** | P1 (R16–R25), prioritized at M6 | Post-launch review |
+
+## 11. Open questions (for Ayush's review)
+
+1. **Digest size:** is N=10 right for the top-of-digest?
+2. **Default score weights:** proposed role 25%, level 20%, domain 20%, pathway 15%, pay 10%, skills 10%. Should pathway weigh more?
+3. **Seed watchlist:** I'll draft about 75 companies (big tech Canada, Canadian scale-ups, banks and fintechs, AI companies, Waterloo). Any must-includes or excludes?
+4. **Pipeline stages** (R13): do they match how you'd track?
+
+## 12. Alternatives considered
+
+- **Scraping LinkedIn or Indeed directly.** Rejected: ToS (DR-4). Replaced by capture (R3) and, in V1, email-alert ingestion.
+- **Pure keyword matching.** Rejected: it can't handle title and level ambiguity. The LLM scoring with explainable sub-scores and an eval set is kept.
+- **Normalizing pay.** Rejected by Ayush (B8). Pay shows as posted, and the filter compares in CAD internally.
+- **Hosted web app.** Deferred: local-first for privacy and cost (D-015). LAN or Tailscale gives iPad access.
+
+---
+
+# Appendices
+
+## Appendix A. User inputs captured
 
 | Topic | Input from Ayush |
 |---|---|
@@ -34,7 +176,19 @@ Searching for jobs across borders comes down to three translation problems that 
 | **Audience** | Just for Ayush for now. It might go public later |
 | **Market hypothesis** | Canadian employers may be reluctant to hire people outside Canada or without Canadian work experience (because of LMIA), which could limit options. *To be validated in domain research* |
 
-## 2a. Candidate requirements from the sponsor (2026-10-14, not yet prioritized)
+## Appendix B. Default role families (D-017, user-editable)
+
+Proposed by Claude. The defaults are based on Ayush's background: enterprise AI and data platforms, trust and safety, risk and compliance, commerce, and analytics.
+
+| Tier | Role families | Rationale |
+|---|---|---|
+| **Core** | Product Manager / Senior PM / Group PM (IC), Product Lead, Product Owner (at senior scope) | Direct match |
+| **Adjacent: strong** | Technical Program Manager, Product-facing Program Manager, Product Operations, Product Strategy / Strategy & Operations / BizOps, Chief of Staff (IC) | Same skills (roadmaps, cross-functional leadership, strategy). Common in Canadian tech, banks and scale-ups |
+| **Adjacent: domain** | Trust & Safety / Risk / Fraud / Compliance product or program roles, AI governance and responsible-AI roles, data platform or analytics product roles | Uses Ayush's domain depth. Banks and fintechs in Toronto hire these |
+| **Adjacent: stretch (off by default)** | Product Marketing Manager, Solutions or Customer Engineer, Product Analytics Lead | Partial overlap. Can be turned on if results are thin |
+| **Excluded by default** | Any role with direct reports (CR-6), project coordinator or junior PM titles | Ayush's preference and level fit |
+
+## Appendix C. Sponsor requirements (CR) and NFRs
 
 | ID | Candidate requirement | Source | Notes |
 |---|---|---|---|
@@ -47,7 +201,7 @@ Searching for jobs across borders comes down to three translation problems that 
 | CR-6 | **People-management toggle.** Include or exclude roles that have direct reports. Defaults to exclude | Ayush (answer to Q-18) | Needs a "manages people" classifier on each listing |
 | NFR-1 | **Runs locally.** The MVP runs on the user's own machine | D-015 | Input to the Eng Design Doc |
 
-## 2c. Feature backlog (brainstorm 2026-10-14, cut line approved by Ayush)
+## Appendix D. Feature backlog (brainstorm 2026-10-14)
 
 Tiers: **MVP** (v1 launch) · **V1** (fast follow) · **Later** · **Dropped**. Priorities (P0/P1/P2) get assigned in PRD v0.
 
@@ -94,7 +248,7 @@ Tiers: **MVP** (v1 launch) · **V1** (fast follow) · **Later** · **Dropped**. 
 | H31 | Profile import from **CV** (primary), LinkedIn export, or manual entry | MVP | The CV feeds the match engine |
 | H32 | Preferences: locations, work mode, families, pay, toggles (all config) | MVP | D-005 |
 
-## 2d. Core matching approach (B6): understand the JD, understand the user, rank
+## Appendix E. Match engine approach (B6)
 
 The match engine is the core of the product. Its shape is below; the details belong in the Eng Design Doc.
 
@@ -107,19 +261,7 @@ The match engine is the core of the product. Its shape is below; the details bel
 
 **Quality bar (draft, for the metrics section):** most of the top 10 in each digest are worth Ayush's time, and nothing he would have applied to is buried below the fold.
 
-## 2b. Default role families (D-017, user-editable)
-
-Proposed by Claude. The defaults are based on Ayush's background: enterprise AI and data platforms, trust and safety, risk and compliance, commerce, and analytics.
-
-| Tier | Role families | Rationale |
-|---|---|---|
-| **Core** | Product Manager / Senior PM / Group PM (IC), Product Lead, Product Owner (at senior scope) | Direct match |
-| **Adjacent: strong** | Technical Program Manager, Product-facing Program Manager, Product Operations, Product Strategy / Strategy & Operations / BizOps, Chief of Staff (IC) | Same skills (roadmaps, cross-functional leadership, strategy). Common in Canadian tech, banks and scale-ups |
-| **Adjacent: domain** | Trust & Safety / Risk / Fraud / Compliance product or program roles, AI governance and responsible-AI roles, data platform or analytics product roles | Uses Ayush's domain depth. Banks and fintechs in Toronto hire these |
-| **Adjacent: stretch (off by default)** | Product Marketing Manager, Solutions or Customer Engineer, Product Analytics Lead | Partial overlap. Can be turned on if results are thin |
-| **Excluded by default** | Any role with direct reports (CR-6), project coordinator or junior PM titles | Ayush's preference and level fit |
-
-## 3. Product principle: built for one, ready for many (D-005)
+## Appendix F. Product principle: built for one, ready for many (D-005)
 
 The MVP serves one user. Everything specific to that user is modeled as **data or configuration, never hard-coded logic**:
 
@@ -136,35 +278,10 @@ The MVP serves one user. Everything specific to that user is modeled as **data o
 
 Test for every requirement: *"Would this still work for a nurse in Berlin?"*
 
-## 4. Domain research needed (inputs to the PRD)
+## Appendix G. Original problem framing
 
-| ID | Research spec | Feeds |
-|---|---|---|
-| DR-1 | **Leveling equivalency.** Google L5/L6 compared with Amazon, Meta, Microsoft, Shopify, Canadian banks and scale-ups, plus heuristics for startups **v1 done: [research/DR-1_LEVELING.md](research/DR-1_LEVELING.md).** | Level fit scoring |
-| DR-2 | **Comp normalization.** USD→CAD, cost of living, base/bonus/equity weighting, a liquidity discount for private equity, and the target and floor (Q-02) **v1 done: [research/DR-2_PAY.md](research/DR-2_PAY.md).** | Comp fit scoring |
-| DR-3 | **Immigration pathways.** Employer work permit with LMIA, Global Talent Stream, intra-company transfer (for example, Google US → Google Canada), Express Entry PR without a job offer, provincial programs (OINP), CEC after Canadian work experience, category-based draws, and comparing either spouse as principal applicant. What signals can be read from job listings **v1 done: [research/DR-3_IMMIGRATION_PATHWAYS.md](research/DR-3_IMMIGRATION_PATHWAYS.md).** | Eligibility scoring and a parallel PR track |
-| DR-4 | **Job-source inventory.** **v1 done: [research/DR-4_JOB_SOURCES.md](research/DR-4_JOB_SOURCES.md).** Summary: discover companies broadly, ingest from public ATS feeds, and use A3 (paste URL) for LinkedIn, Indeed and Wellfound | Sourcing (also an input to the Eng Design Doc) |
+Searching for jobs across borders comes down to three translation problems that generic job boards don't solve:
 
-## 5. PRD session status
-
-The brainstorm is done (§2c). The MVP cut line was approved 2026-10-14 (D-022). Still to come in PRD v0: personas and CUJs, P0/P1/P2 requirements with acceptance criteria, and success metrics. The items below are kept for reference:
-
-- CUJs and personas
-- How far beyond "find" the product goes: tailored resume, referrals, interview prep
-- Delivery surface: web only, or also an email digest
-- Domain and company-type preferences (Q-06, Q-07)
-- MVP vs V1.x vs Later cut lines, P0/P1/P2 requirements
-- Product success metrics (feeds KR2.2)
-
-## 6. Planned PRD outline (Google style)
-
-1. Overview and background
-2. Problem statement and opportunity
-3. Goals and non-goals
-4. Users, personas and CUJs
-5. Requirements (P0 / P1 / P2) with acceptance criteria
-6. UX: flows, mocks, prototype (links to the UX spec)
-7. Success metrics and instrumentation
-8. Privacy, security and legal considerations
-9. Launch plan (phasing and the MVP cut line)
-10. Open questions, alternatives considered, appendix (domain research)
+1. **Title and level.** "Product Manager", "Product Lead", "Group PM", "Product Owner" and "Technical PM" mean different things at different companies. A Google L5 maps to roughly L6/L7 at Amazon and to "Senior" or "Principal" elsewhere. At a startup the title tells you very little about the level.
+2. **Comp.** Google total comp of about US$450K (US$229K base, 15% bonus target, about US$187K a year in equity) has to be converted into CAD. It also has to be adjusted for the cost of living and for Canadian comp bands, which are structurally lower, and public RSUs have to be compared fairly with private-company equity.
+3. **Eligibility.** A role only counts if it can lead to a valid work authorization and, from there, to PR. Many Canadian employers avoid hiring from abroad because of the LMIA process. LMIA-exempt routes, such as intra-company transfers, matter a lot.
