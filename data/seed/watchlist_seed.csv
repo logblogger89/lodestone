@@ -1,0 +1,228 @@
+company,segment,canada_locations,fit_tier,why_relevant,discovery_source
+Google,Big tech / US tech with Canadian offices,Toronto; Waterloo; Montreal,A,Internal transfer channel (ICT),claude-knowledge
+Microsoft,Big tech / US tech with Canadian offices,Toronto; Vancouver,A,Large PM org; AI platform,claude-knowledge
+Amazon,Big tech / US tech with Canadian offices,Toronto; Vancouver,A,Large PM org; AWS,claude-knowledge
+Meta,Big tech / US tech with Canadian offices,Toronto,A,PM roles; integrity/T&S,claude-knowledge
+Apple,Big tech / US tech with Canadian offices,Toronto; Vancouver,A,Selective PM roles,claude-knowledge
+Nvidia,Big tech / US tech with Canadian offices,Toronto,A,AI platform,claude-knowledge
+AMD,Big tech / US tech with Canadian offices,Markham,A,Platform/AI,claude-knowledge
+Uber,Big tech / US tech with Canadian offices,Toronto,A,Large Toronto eng hub,claude-knowledge
+Lyft,Big tech / US tech with Canadian offices,Toronto,A,Toronto hub,claude-knowledge
+Instacart,Big tech / US tech with Canadian offices,Toronto,A,Toronto hub,claude-knowledge
+DoorDash,Big tech / US tech with Canadian offices,Toronto,A,Toronto hub,claude-knowledge
+Pinterest,Big tech / US tech with Canadian offices,Toronto,A,Toronto office,claude-knowledge
+Block (Square / Cash App),Big tech / US tech with Canadian offices,Toronto,A,Toronto eng hub; fintech,claude-knowledge
+Stripe,Big tech / US tech with Canadian offices,Toronto,A,Payments; risk,claude-knowledge
+Snowflake,Big tech / US tech with Canadian offices,Toronto,A,Data platform,claude-knowledge
+Databricks,Big tech / US tech with Canadian offices,Toronto,A,Data + AI platform (verify office),claude-knowledge
+Salesforce,Big tech / US tech with Canadian offices,Toronto; Vancouver,A,Enterprise AI (Agentforce),claude-knowledge
+ServiceNow,Big tech / US tech with Canadian offices,Montreal; Toronto,A,Enterprise AI (ex Element AI),claude-knowledge
+Workday,Big tech / US tech with Canadian offices,Toronto; Vancouver,A,Enterprise SaaS,claude-knowledge
+Oracle,Big tech / US tech with Canadian offices,Toronto,A,Enterprise,claude-knowledge
+IBM,Big tech / US tech with Canadian offices,Markham; Toronto,A,Enterprise AI/data,claude-knowledge
+Intuit,Big tech / US tech with Canadian offices,Toronto; Edmonton,A,Fintech,claude-knowledge
+Autodesk,Big tech / US tech with Canadian offices,Toronto; Montreal,A,Design SaaS,claude-knowledge
+Adobe,Big tech / US tech with Canadian offices,Ottawa; Toronto,A,Enterprise SaaS,claude-knowledge
+Cisco,Big tech / US tech with Canadian offices,Toronto; Ottawa,A,Security/networking,claude-knowledge
+Intel,Big tech / US tech with Canadian offices,Toronto,A,Platform,claude-knowledge
+Qualcomm,Big tech / US tech with Canadian offices,Markham,A,Platform,claude-knowledge
+Spotify,Big tech / US tech with Canadian offices,Toronto,A,Consumer,claude-knowledge
+Reddit,Big tech / US tech with Canadian offices,Toronto,A,Safety/ads/integrity,claude-knowledge
+Snap,Big tech / US tech with Canadian offices,Toronto,A,Consumer; T&S,claude-knowledge
+Indeed,Big tech / US tech with Canadian offices,Toronto,A,Job marketplace; trust,claude-knowledge
+Cloudflare,Big tech / US tech with Canadian offices,Toronto,A,Security,claude-knowledge
+Okta,Big tech / US tech with Canadian offices,Toronto,A,Identity/security,claude-knowledge
+Zip,Big tech / US tech with Canadian offices,Toronto,A,Procurement SaaS; Toronto 2nd-largest office,claude-knowledge
+Legora,Big tech / US tech with Canadian offices,Toronto,A,Legal AI; opened Toronto 2026,claude-knowledge
+Coinbase,Big tech / US tech with Canadian offices,Remote-Canada,A,Crypto; remote-first,claude-knowledge
+Atlassian,Big tech / US tech with Canadian offices,Remote-Canada,A,Collaboration SaaS,claude-knowledge
+Twilio,Big tech / US tech with Canadian offices,Remote-Canada,A,Comms platform,claude-knowledge
+GitLab,Big tech / US tech with Canadian offices,Remote-Canada,A,DevOps; all-remote,claude-knowledge
+Zapier,Big tech / US tech with Canadian offices,Remote-Canada,A,Automation; all-remote,claude-knowledge
+Thomson Reuters,Big tech / US tech with Canadian offices,Toronto,A,Legal/tax AI (CoCounsel),claude-knowledge
+PayPal,Big tech / US tech with Canadian offices,Toronto,A,Payments; risk,claude-knowledge
+Visa,Big tech / US tech with Canadian offices,Toronto,A,Payments; risk/compliance,claude-knowledge
+Mastercard,Big tech / US tech with Canadian offices,Toronto; Vancouver,A,Payments; Ethoca fraud (Toronto),claude-knowledge
+American Express,Big tech / US tech with Canadian offices,Toronto,A,Fintech; risk,claude-knowledge
+Capital One,Big tech / US tech with Canadian offices,Toronto,A,Fintech; data,claude-knowledge
+Samsung AI Center,Big tech / US tech with Canadian offices,Toronto,A,AI research/product,claude-knowledge
+LG AI Research,Big tech / US tech with Canadian offices,Toronto,A,AI,claude-knowledge
+Unity,Big tech / US tech with Canadian offices,Montreal; Toronto; Vancouver,A,Platform,claude-knowledge
+Electronic Arts,Big tech / US tech with Canadian offices,Vancouver; Montreal,A,Gaming,claude-knowledge
+Ubisoft,Big tech / US tech with Canadian offices,Toronto; Montreal,A,Gaming,claude-knowledge
+General Motors (Canadian Technical Centre),Big tech / US tech with Canadian offices,Markham; Oshawa,A,Software-defined vehicle,claude-knowledge
+Ford (Canada R&I),Big tech / US tech with Canadian offices,Ottawa; Waterloo,A,Connected vehicle software,claude-knowledge
+Expedia Group,Big tech / US tech with Canadian offices,Remote-Canada,A,Travel marketplace (verify),claude-knowledge
+Affirm,Big tech / US tech with Canadian offices,Remote-Canada,A,Fintech; remote (verify),claude-knowledge
+Rippling,Big tech / US tech with Canadian offices,Toronto,A,HR/IT platform (verify),claude-knowledge
+Cohere,Canadian AI and deep tech,Toronto; Montreal,A,Enterprise LLMs; agents,web-search-2026-10-14
+Ada,Canadian AI and deep tech,Toronto,A,AI customer service agents,web-search-2026-10-14
+Waabi,Canadian AI and deep tech,Toronto,A,Autonomous driving; record Series C,web-search-2026-10-14
+Tenstorrent,Canadian AI and deep tech,Toronto,A,AI chips,web-search-2026-10-14
+Taalas,Canadian AI and deep tech,Toronto,A,AI chips,web-search-2026-10-14
+Untether AI,Canadian AI and deep tech,Toronto,A,AI inference chips,web-search-2026-10-14
+BenchSci,Canadian AI and deep tech,Toronto,A,AI for biomedical research,web-search-2026-10-14
+Blue J,Canadian AI and deep tech,Toronto,A,Legal/tax AI,web-search-2026-10-14
+StackAdapt,Canadian AI and deep tech,Toronto,A,Programmatic ads; AI,web-search-2026-10-14
+Varicent,Canadian AI and deep tech,Toronto,A,Revenue performance SaaS,web-search-2026-10-14
+Armilla AI,Canadian AI and deep tech,Toronto,A,AI assurance/governance (strong domain fit),web-search-2026-10-14
+Private AI,Canadian AI and deep tech,Toronto,A,PII/privacy AI (governance fit),web-search-2026-10-14
+Fairly AI,Canadian AI and deep tech,Kitchener,A,AI governance/risk (domain fit; verify),web-search-2026-10-14
+Xanadu,Canadian AI and deep tech,Toronto,A,Quantum computing,web-search-2026-10-14
+Deep Genomics,Canadian AI and deep tech,Toronto,A,AI drug discovery,web-search-2026-10-14
+Layer 6 (TD),Canadian AI and deep tech,Toronto,A,Bank AI lab,web-search-2026-10-14
+Borealis AI (RBC),Canadian AI and deep tech,Toronto; Montreal,A,Bank AI lab,web-search-2026-10-14
+Vector Institute,Canadian AI and deep tech,Toronto,A,AI institute,web-search-2026-10-14
+Mila,Canadian AI and deep tech,Montreal,A,AI institute,web-search-2026-10-14
+Signal 1,Canadian AI and deep tech,Toronto,A,Clinical AI (Inovia portfolio),web-search-2026-10-14
+Beacon Software,Canadian AI and deep tech,Toronto,A,AI rollup; Series C 2026,web-search-2026-10-14
+Mecka AI,Canadian AI and deep tech,Toronto (verify),A,Series B 2026 (verify HQ),web-search-2026-10-14
+Talking Computers,Canadian AI and deep tech,Toronto,A,YC W26,web-search-2026-10-14
+Karoo,Canadian AI and deep tech,Toronto,A,YC W25,web-search-2026-10-14
+Rootly,Canadian AI and deep tech,Toronto,A,Incident management; Deloitte Fast 50 top 10,web-search-2026-10-14
+Dominion Dynamics,Canadian AI and deep tech,Ottawa,A,Defence tech,web-search-2026-10-14
+Coveo,Canadian AI and deep tech,Quebec City; Montreal,A,AI search/relevance,web-search-2026-10-14
+Hopper,Canadian AI and deep tech,Montreal,A,Travel fintech; AI,web-search-2026-10-14
+Element (Workleap),Canadian AI and deep tech,Montreal,A,Workplace SaaS (verify name),web-search-2026-10-14
+Glean,Canadian AI and deep tech,Toronto (verify),A,Enterprise AI search (verify office),web-search-2026-10-14
+Wealthsimple,Canadian fintech and payments,Toronto,A,Leading Canadian fintech,web-search-2026-10-14
+KOHO,Canadian fintech and payments,Toronto,A,Neobank,web-search-2026-10-14
+Neo Financial,Canadian fintech and payments,Calgary; Toronto; Winnipeg,A,Neobank,web-search-2026-10-14
+Float,Canadian fintech and payments,Toronto,A,Spend management,web-search-2026-10-14
+Nesto,Canadian fintech and payments,Montreal; Toronto,A,Mortgage tech,web-search-2026-10-14
+Questrade,Canadian fintech and payments,Toronto,A,Brokerage,web-search-2026-10-14
+Borrowell,Canadian fintech and payments,Toronto,A,Credit,web-search-2026-10-14
+Wave (H&R Block),Canadian fintech and payments,Toronto,A,SMB finance,web-search-2026-10-14
+PolicyMe,Canadian fintech and payments,Toronto,A,Insurtech,web-search-2026-10-14
+Clearco,Canadian fintech and payments,Toronto,A,Revenue-based financing,web-search-2026-10-14
+Propel Holdings,Canadian fintech and payments,Toronto,A,Lending,web-search-2026-10-14
+Zafin,Canadian fintech and payments,Toronto; Vancouver,A,Banking SaaS,web-search-2026-10-14
+Interac,Canadian fintech and payments,Toronto,A,Payments network,web-search-2026-10-14
+Moneris,Canadian fintech and payments,Toronto,A,Payments,web-search-2026-10-14
+Payments Canada,Canadian fintech and payments,Ottawa; Toronto,A,Payments infrastructure,web-search-2026-10-14
+Shakepay,Canadian fintech and payments,Montreal,A,Crypto,web-search-2026-10-14
+Nuvei,Canadian fintech and payments,Montreal,A,Payments,web-search-2026-10-14
+Lightspeed Commerce,Canadian fintech and payments,Montreal; Toronto,A,Commerce/payments,web-search-2026-10-14
+Mogo,Canadian fintech and payments,Vancouver,A,Fintech,web-search-2026-10-14
+Plooto,Canadian fintech and payments,Toronto,A,B2B payments,web-search-2026-10-14
+Ratehub,Canadian fintech and payments,Toronto,A,Fin comparison,web-search-2026-10-14
+Trulioo,Canadian fintech and payments,Vancouver,A,Identity verification (ads/FS verification fit),web-search-2026-10-14
+Verafin (Nasdaq),Canadian fintech and payments,St. John's; Toronto,A,Fraud/AML (T&S fit),web-search-2026-10-14
+Paystone,Canadian fintech and payments,London ON,A,Payments; Globe Top Growing,web-search-2026-10-14
+EQ Bank,Canadian fintech and payments,Toronto,A,Digital bank,web-search-2026-10-14
+Chimoney,Canadian fintech and payments,Toronto,A,Agent payments,web-search-2026-10-14
+FriedmannAI,Canadian fintech and payments,Toronto,A,AI financial planning,web-search-2026-10-14
+Fintel Connect,Canadian fintech and payments,Vancouver,A,Fintech affiliate,web-search-2026-10-14
+Dye & Durham,Canadian fintech and payments,Toronto,A,Legal/fin software,web-search-2026-10-14
+Ownr (RBC),Canadian fintech and payments,Toronto,A,SMB platform,web-search-2026-10-14
+Shopify,Canadian SaaS and scale-ups,Toronto; Ottawa; Waterloo; remote,A,Commerce platform; domain fit,claude-knowledge
+Clio,Canadian SaaS and scale-ups,Vancouver; Toronto,A,Legal SaaS,claude-knowledge
+Faire,Canadian SaaS and scale-ups,Waterloo; Toronto,A,Wholesale marketplace,claude-knowledge
+1Password,Canadian SaaS and scale-ups,Toronto; remote,A,Security,claude-knowledge
+League,Canadian SaaS and scale-ups,Toronto,A,Health platform,claude-knowledge
+Maple,Canadian SaaS and scale-ups,Toronto,A,Virtual care,claude-knowledge
+Dialogue,Canadian SaaS and scale-ups,Montreal,A,Virtual care,claude-knowledge
+Loopio,Canadian SaaS and scale-ups,Toronto,A,RFP software,claude-knowledge
+Top Hat,Canadian SaaS and scale-ups,Toronto,A,Edtech,claude-knowledge
+D2L,Canadian SaaS and scale-ups,Kitchener,A,Edtech,claude-knowledge
+ApplyBoard,Canadian SaaS and scale-ups,Kitchener,A,Edtech marketplace,claude-knowledge
+Vidyard,Canadian SaaS and scale-ups,Kitchener,A,Video SaaS,claude-knowledge
+Miovision,Canadian SaaS and scale-ups,Kitchener,A,Traffic AI,claude-knowledge
+Arctic Wolf,Canadian SaaS and scale-ups,Waterloo,A,Security operations,claude-knowledge
+eSentire,Canadian SaaS and scale-ups,Waterloo,A,MDR security,claude-knowledge
+Magnet Forensics,Canadian SaaS and scale-ups,Waterloo,A,Digital forensics (T&S fit),claude-knowledge
+Axonify,Canadian SaaS and scale-ups,Waterloo,A,Workforce SaaS,claude-knowledge
+Encircle,Canadian SaaS and scale-ups,Waterloo,A,Restoration SaaS; Globe Top Growing,claude-knowledge
+BlackBerry,Canadian SaaS and scale-ups,Waterloo,A,Security/IoT,claude-knowledge
+OpenText,Canadian SaaS and scale-ups,Waterloo; Toronto,A,Enterprise information mgmt,claude-knowledge
+Kinaxis,Canadian SaaS and scale-ups,Ottawa,A,Supply chain SaaS,claude-knowledge
+Solace,Canadian SaaS and scale-ups,Ottawa,A,Event streaming,claude-knowledge
+Fullscript,Canadian SaaS and scale-ups,Ottawa,A,Health commerce,claude-knowledge
+Assent,Canadian SaaS and scale-ups,Ottawa,A,Supply chain compliance (compliance fit),claude-knowledge
+Field Effect,Canadian SaaS and scale-ups,Ottawa,A,Security,claude-knowledge
+Rewind,Canadian SaaS and scale-ups,Ottawa,A,SaaS backup,claude-knowledge
+Ross Video,Canadian SaaS and scale-ups,Ottawa,A,Broadcast tech,claude-knowledge
+Hootsuite,Canadian SaaS and scale-ups,Vancouver,A,Social media SaaS,claude-knowledge
+Jane App,Canadian SaaS and scale-ups,Vancouver,A,Health practice SaaS,claude-knowledge
+Visier,Canadian SaaS and scale-ups,Vancouver,A,People analytics,claude-knowledge
+Thinkific,Canadian SaaS and scale-ups,Vancouver,A,Creator edtech,claude-knowledge
+Klue,Canadian SaaS and scale-ups,Vancouver,A,Competitive intel AI,claude-knowledge
+Later,Canadian SaaS and scale-ups,Vancouver,A,Social SaaS,claude-knowledge
+Unbounce,Canadian SaaS and scale-ups,Vancouver,A,Marketing SaaS,claude-knowledge
+Procurify,Canadian SaaS and scale-ups,Vancouver,A,Procurement SaaS,claude-knowledge
+Dapper Labs,Canadian SaaS and scale-ups,Vancouver,A,Web3,claude-knowledge
+AlayaCare,Canadian SaaS and scale-ups,Montreal,A,Home care SaaS,claude-knowledge
+Workleap,Canadian SaaS and scale-ups,Montreal,A,Employee experience SaaS,claude-knowledge
+Flare,Canadian SaaS and scale-ups,Montreal,A,Threat intelligence,claude-knowledge
+FreshBooks,Canadian SaaS and scale-ups,Toronto,A,SMB accounting,claude-knowledge
+Wattpad (Naver),Canadian SaaS and scale-ups,Toronto,A,Content platform; T&S,claude-knowledge
+Achievers,Canadian SaaS and scale-ups,Toronto,A,Employee recognition,claude-knowledge
+Dayforce (Ceridian),Canadian SaaS and scale-ups,Toronto,A,HCM SaaS,claude-knowledge
+Flipp,Canadian SaaS and scale-ups,Toronto,A,Retail tech,claude-knowledge
+Rose Rocket,Canadian SaaS and scale-ups,Toronto,A,Logistics SaaS,claude-knowledge
+PartnerStack,Canadian SaaS and scale-ups,Toronto,A,Partner SaaS,claude-knowledge
+Uberflip,Canadian SaaS and scale-ups,Toronto,A,Marketing SaaS,claude-knowledge
+ChargeLab,Canadian SaaS and scale-ups,Toronto,A,EV charging software,claude-knowledge
+Digitail,Canadian SaaS and scale-ups,Toronto,A,Vet SaaS; Series B,claude-knowledge
+Validere,Canadian SaaS and scale-ups,Toronto; Calgary,A,Energy data,claude-knowledge
+Fable,Canadian SaaS and scale-ups,Toronto,A,Accessibility testing,claude-knowledge
+Ecobee (Generac),Canadian SaaS and scale-ups,Toronto,A,Smart home,claude-knowledge
+Resolver (Kroll),Canadian SaaS and scale-ups,Toronto,A,Risk/compliance software (compliance fit),claude-knowledge
+Kira (Litera),Canadian SaaS and scale-ups,Toronto,A,Legal AI,claude-knowledge
+Constellation Software,Canadian SaaS and scale-ups,Toronto,A,Vertical SaaS holding (many subsidiaries),claude-knowledge
+CGI,Canadian SaaS and scale-ups,Montreal; Toronto,A,IT services,claude-knowledge
+Celestica,Canadian SaaS and scale-ups,Toronto,A,Electronics mfg; digital,claude-knowledge
+HostPapa,Canadian SaaS and scale-ups,Burlington,A,Hosting; Globe Top Growing,claude-knowledge
+Info-Tech Research Group,Canadian SaaS and scale-ups,London ON,A,Research/advisory,claude-knowledge
+Autoverify,Canadian SaaS and scale-ups,London ON,A,Auto retail SaaS,claude-knowledge
+CyberQP,Canadian SaaS and scale-ups,Vancouver,A,Zero-trust access; Fast 50,claude-knowledge
+Ava Industries,Canadian SaaS and scale-ups,Calgary,A,Fast 50 Companies-to-Watch,claude-knowledge
+Loblaw Digital,Canadian SaaS and scale-ups,Toronto,A,Retail tech/ecom,claude-knowledge
+Canadian Tire (Digital),Canadian SaaS and scale-ups,Toronto,A,Retail tech,claude-knowledge
+Kijiji (Adevinta),Canadian SaaS and scale-ups,Toronto,A,Marketplace; T&S fit,claude-knowledge
+Sonder (verify),Canadian SaaS and scale-ups,Montreal,A,Hospitality tech (verify status),claude-knowledge
+RBC,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Large product org; check people-mgmt,claude-knowledge
+TD,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Large product org,claude-knowledge
+BMO,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Large product org,claude-knowledge
+Scotiabank,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Large product org,claude-knowledge
+CIBC,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Large product org,claude-knowledge
+National Bank,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Montreal; Toronto,B,Bank,claude-knowledge
+Desjardins,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Montreal; Toronto,B,Co-op bank,claude-knowledge
+Manulife,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto; Waterloo,B,Insurer; digital,claude-knowledge
+Sun Life,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto; Waterloo,B,Insurer; digital,claude-knowledge
+Canada Life,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto; Winnipeg,B,Insurer,claude-knowledge
+Intact,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto; Montreal,B,Insurer; data/AI lab,claude-knowledge
+Definity,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Waterloo; Toronto,B,Insurer; digital,claude-knowledge
+Tangerine (Scotiabank),"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Digital bank,claude-knowledge
+Simplii (CIBC),"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Digital bank,claude-knowledge
+TELUS (Digital / Health),"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto; Vancouver,B,Telco + digital,claude-knowledge
+Rogers,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Telco,claude-knowledge
+Bell,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto; Montreal,B,Telco,claude-knowledge
+Air Canada,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Montreal; Toronto,B,Digital product,claude-knowledge
+WestJet,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Calgary,B,Digital product,claude-knowledge
+Porter Airlines,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Digital product,claude-knowledge
+CN,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Montreal,B,Rail tech,claude-knowledge
+Hydro One,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Utility digital,claude-knowledge
+OMERS,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Pension; tech/ventures,claude-knowledge
+CPP Investments,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Pension; data/tech,claude-knowledge
+Ontario Teachers' Pension Plan,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Pension; tech,claude-knowledge
+Aritzia,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Vancouver,B,Retail ecom,claude-knowledge
+Lululemon,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Vancouver; Toronto,B,Retail digital,claude-knowledge
+Indigo,"Banks, insurers, telcos and large enterprises (Workday-heavy)",Toronto,B,Retail ecom,claude-knowledge
+Communitech,"Ecosystem orgs (discovery seeds, not employers)",Waterloo,C,Getro job board + member directory,discovery
+MaRS Discovery District,"Ecosystem orgs (discovery seeds, not employers)",Toronto,C,Venture directory,discovery
+DMZ (TMU),"Ecosystem orgs (discovery seeds, not employers)",Toronto,C,Incubator alumni,discovery
+Creative Destruction Lab,"Ecosystem orgs (discovery seeds, not employers)",Toronto,C,Alumni companies,discovery
+TECHNATION,"Ecosystem orgs (discovery seeds, not employers)",Toronto,C,Member directory,discovery
+Inovia Capital,"Ecosystem orgs (discovery seeds, not employers)",Montreal; Toronto,C,Portfolio board (Getro),discovery
+Georgian,"Ecosystem orgs (discovery seeds, not employers)",Toronto,C,Portfolio (verify board),discovery
+OMERS Ventures,"Ecosystem orgs (discovery seeds, not employers)",Toronto,C,Portfolio,discovery
+Radical Ventures,"Ecosystem orgs (discovery seeds, not employers)",Toronto,C,AI portfolio,discovery
+Golden Ventures,"Ecosystem orgs (discovery seeds, not employers)",Toronto,C,Portfolio,discovery
+Portage,"Ecosystem orgs (discovery seeds, not employers)",Toronto,C,Fintech portfolio,discovery
+BDC Capital,"Ecosystem orgs (discovery seeds, not employers)",Montreal,C,Portfolio board (Getro),discovery
+Diagram Ventures,"Ecosystem orgs (discovery seeds, not employers)",Montreal,C,Portfolio board (Getro),discovery
+Real Ventures,"Ecosystem orgs (discovery seeds, not employers)",Montreal,C,Portfolio (Getro),discovery
+Brightspark,"Ecosystem orgs (discovery seeds, not employers)",Toronto,C,Portfolio,discovery
+a16z,"Ecosystem orgs (discovery seeds, not employers)",US,C,Portfolio board (Consider); remote-Canada roles,discovery
+Y Combinator,"Ecosystem orgs (discovery seeds, not employers)",US,C,Work at a Startup; ~54 Toronto YC companies,discovery

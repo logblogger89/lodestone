@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-14 · **Current milestone:** M0 → M1 · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14).** **PRD v0 is in review** (gate M1). P0 has 15 requirements with acceptance criteria, plus metrics and 4 open questions. Research DR-1 to DR-4 is at v1. Drive sync has stopped; GitHub only (D-024). **Next:** Ayush reviews PRD v0, then M1 approval, then UX (M2).
+**Status summary (2026-10-14).** PRD v0's open questions are resolved (D-025 to D-028), and the R1a discovery engine plus a 210-company seed (DR-5) have been added. **Awaiting:** Ayush's M1 approval of the PRD. **Next:** M2 UX (flows, mocks, clickable prototype).
 
 ---
 
@@ -32,6 +32,7 @@
 | D1.2 | DR-2 Pay display and estimation | Domain research | M1 | 🟨 | Claude → Ayush | [DR-2_PAY.md](../product/research/DR-2_PAY.md) |
 | D1.3 | DR-3 Immigration pathways | Domain research | M1 | 🟨 | Claude → Ayush | [DR-3_IMMIGRATION_PATHWAYS.md](../product/research/DR-3_IMMIGRATION_PATHWAYS.md). Signals only, not advice |
 | D1.4 | DR-4 Job-source inventory and ToS | Data and sourcing | M1 | 🟨 | Claude → Ayush | [DR-4_JOB_SOURCES.md](../product/research/DR-4_JOB_SOURCES.md). v1 done. ToS checks deferred to Eng Design |
+| D1.4a | DR-5 Company discovery and seed watchlist | Data and sourcing | M1 | 🟨 | Claude → Ayush | [DR-5_COMPANY_DISCOVERY.md](../product/research/DR-5_COMPANY_DISCOVERY.md) · [watchlist_seed.csv](../../data/seed/watchlist_seed.csv) |
 | D1.5 | PRD v0 | Product | M1 | 🟨 | Ayush + Claude | [PRD.md](../product/PRD.md). v0 in review: P0 R1–R15 with acceptance criteria, metrics, 4 open questions |
 | D2.1 | CUJ flows and IA | Product (UX) | M2 | ⬜ | Claude | |
 | D2.2 | Mocks and visual direction | Product (UX) | M2 | ⬜ | Claude → Ayush | |
@@ -73,6 +74,10 @@
 | D-022 | 10-14 | Feature backlog and MVP cut line approved after the brainstorm (PRD §2c). E23 dropped. The match engine (JD parsing plus profile understanding, then ranking) is the core of the MVP (PRD §2d) | Brainstorm with Ayush | Ayush |
 | D-023 | 10-14 | Capture-feature tiers approved: A3a, A3b, A3c and A3h in the MVP; A3d, A3e and A3f in V1; A3g later. A3e stays in V1 | Ayush's review | Ayush |
 | D-024 | 10-14 | Stop syncing to Google Drive. GitHub is the only home for artifacts. The existing Drive files stay as frozen snapshots | Ayush's direction | Ayush |
+| D-025 | 10-14 | Digest shows the top 20 by default, adjustable from 1 to 100 | PRD v0 review | Ayush |
+| D-026 | 10-14 | Default score weights accepted, and editable in Advanced settings | PRD v0 review | Ayush |
+| D-027 | 10-14 | Watchlist = a continuous discovery engine (R1a) plus a 210-company seed, not a fixed list of 75 | PRD v0 review: "as many as possible" | Ayush |
+| D-028 | 10-14 | Pipeline stages confirmed: Discovered → Shortlisted → Applied → Screen → Interviewing → Offer → Closed | PRD v0 review | Ayush |
 
 ## 4. Open questions
 
@@ -118,6 +123,7 @@
 | R-12 | Risk | The CRS rules (points grid, how job offers count, category draws) change over time, so a hard-coded calculator would go stale | Med | Put CRS rules in versioned config (D-005), show the rules version and date, and link to the official IRCC calculator for verification | Claude | Open |
 | R-13 | Risk | Employer-level sponsorship signals from web research may be stale, wrong or unverifiable | Med | Prefer official data, e.g. ESDC's published positive-LMIA employer lists (to verify in DR-3/DR-4). Show the source, date and a confidence level, and never hide a listing because of it (D-021) | Claude | Open |
 | R-14 | Risk | A browser extension that reads LinkedIn or Wellfound pages could breach their terms, even when the user is looking at the page themselves | Med | Review ToS before building A3d. Fall back to paste URL or paste text (A3a, A3b), which are always available | Claude | Open |
+| I-01 | Issue | This cloud environment's network policy blocks the ATS APIs (Greenhouse, Lever, Ashby, SmartRecruiters) and web-page fetches, so ATS detection can't be verified from here | Low | Detection runs in the app on Ayush's laptop (R1a). Or allow the hosts in the environment settings | Ayush | Open |
 | A-03 | Assumption | The repo stays private. The PRD holds personal immigration and family context | — | Scrub it before any public release (M6) | Claude | Open |
 | DEP-1 | Dependency | Ayush's review time at each gate | — | See Q-13 | Ayush | Open |
 | DEP-2 | Dependency | Job sources that are legal to use | — | DR-4 | Claude | Open |
@@ -140,6 +146,7 @@
 | 2026-10-14 | Added the paste-link capture features A3a to A3h (tiers proposed) and R-14 | Claude |
 | 2026-10-14 | DR-1, DR-2 and DR-3 v1 done. Key findings: job-offer CRS points removed (Mar 2025), Ontario HCP and Employer Job Offer streams closed in 2026, ICT is the strongest route, and CEC is the main PR lever | Claude |
 | 2026-10-14 | PRD v0 written (Google-style, P0/P1/P2, acceptance criteria, metrics). Drive sync discontinued (D-024) | Claude |
+| 2026-10-14 | PRD v0 questions resolved (D-025 to D-028). DR-5 and the 210-company seed watchlist done. R1a discovery engine added | Claude |
 
 ## 7. Published artifacts (Google Drive)
 
