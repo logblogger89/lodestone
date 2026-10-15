@@ -248,7 +248,7 @@ const DEFAULT_PREFS = {
   regions:["GTA","Waterloo Region","Remote-Canada"], other_regions:true, tiers:["Core","Adjacent","Stretch"],
   exclude_people_mgmt:true, include_no_pay:true, digest_size:20, later_days:7, max_age_days:0,
   report_days:14,
-  checks:{green_regions:["GTA","Waterloo Region","Remote-Canada"],pay_green:190000,pay_yellow:160000,level_green:6,level_yellow:5,fresh_green:21,fresh_yellow:45},
+  checks:{green_regions:["GTA","Waterloo Region","Remote-Canada"],pay_green:190000,pay_yellow:160000,level_green:6,level_yellow:5,fresh_green:14,fresh_yellow:30},
   weights:{role:22,level:18,domain:18,pathway:14,pay:9,skills:9,freshness:10}
 };
 const DEFAULT_PREFS_W = DEFAULT_PREFS.weights;
@@ -940,7 +940,7 @@ async function savePrefs(){
   const body={regions,tiers:tiers.length?tiers:TIERS,other_regions:val("other").checked,exclude_people_mgmt:val("xpm").checked,
     include_no_pay:val("nopay").checked,digest_size:clamp(val("dsize").value,1,100,20),later_days:clamp(val("ldays").value,1,60,7),report_days:clamp(val("rdays").value,1,90,14),
     checks:{green_regions:regions,pay_green:clamp(val("ck-payg").value,50000,600000,190000),pay_yellow:clamp(val("ck-payy").value,30000,600000,160000),
-      level_green:clamp(val("ck-lg").value,3,9,6),level_yellow:clamp(val("ck-ly").value,3,9,5),fresh_green:clamp(val("ck-fg").value,1,120,21),fresh_yellow:clamp(val("ck-fy").value,1,365,45)},max_age_days:clamp(val("maxage").value,0,365,0),weights,updated_at:new Date().toISOString()};
+      level_green:clamp(val("ck-lg").value,3,9,6),level_yellow:clamp(val("ck-ly").value,3,9,5),fresh_green:clamp(val("ck-fg").value,1,120,14),fresh_yellow:clamp(val("ck-fy").value,1,365,30)},max_age_days:clamp(val("maxage").value,0,365,0),weights,updated_at:new Date().toISOString()};
   try{await S.db.doc("settings/prefs").set(body);S._editingPrefs=false;S.prefs={...DEFAULT_PREFS,...body};render();toast("Settings saved.")}
   catch(e){toast("Couldn't save settings. Try again.");console.warn(e)}
 }
