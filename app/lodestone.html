@@ -1,0 +1,583 @@
+<title>Lodestone</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: app shell. Left rail on wide screens, bottom tab bar on iPad/phone; content column max 1100px.
+   Tokens follow the M2 prototype ("magnetite and survey map"). */
+:root{
+  --bg:#f3f5f6; --surface:#ffffff; --surface-2:#e9edef; --line:#d5dce0;
+  --fg:#16202a; --muted:#5b6873; --accent:#24507a; --accent-fg:#ffffff; --accent-soft:#dbe6f0;
+  --good:#1f7a4d; --good-soft:#dcefe4; --warn:#9a6200; --warn-soft:#f5e8cf; --unk:#6b6f78; --unk-soft:#e6e7ea; --bad:#a3342c; --bad-soft:#f4dedc;
+  --scrim:rgba(10,16,22,.45);
+  --font-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono:"IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f151b; --surface:#16202a; --surface-2:#1d2935; --line:#2b3a47;
+  --fg:#e6ecf0; --muted:#9aa8b3; --accent:#7fb0e0; --accent-fg:#0b1620; --accent-soft:#1d3247;
+  --good:#6fcf9b; --good-soft:#173528; --warn:#e6b45c; --warn-soft:#3a2d12; --unk:#a7acb5; --unk-soft:#262b33; --bad:#ec8a80; --bad-soft:#3b1d1a;
+  --scrim:rgba(0,0,0,.6); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f151b; --surface:#16202a; --surface-2:#1d2935; --line:#2b3a47;
+  --fg:#e6ecf0; --muted:#9aa8b3; --accent:#7fb0e0; --accent-fg:#0b1620; --accent-soft:#1d3247;
+  --good:#6fcf9b; --good-soft:#173528; --warn:#e6b45c; --warn-soft:#3a2d12; --unk:#a7acb5; --unk-soft:#262b33; --bad:#ec8a80; --bad-soft:#3b1d1a;
+  --scrim:rgba(0,0,0,.6); color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.45}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:100%}
+.rail{border-right:1px solid var(--line);padding:20px 14px;display:flex;flex-direction:column;gap:6px;position:sticky;top:env(safe-area-inset-top,0px);height:100vh}
+.brand{font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-.01em;display:flex;align-items:center;gap:8px;margin:0 6px 14px}
+.brand small{display:block;font-family:var(--font-body);font-weight:400;font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;border:0;background:none;text-align:left;cursor:pointer;color:var(--muted);min-height:44px}
+.nav[aria-current="page"]{background:var(--accent-soft);color:var(--fg);font-weight:600}
+.nav .count{margin-left:auto;font-family:var(--font-mono);font-size:12px}
+.main{min-width:0;padding-block:18px 96px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.topbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.topbar h1{font-family:var(--font-display);font-size:26px;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.topbar .sp{flex:1}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:9px 14px;cursor:pointer;min-height:40px}
+.btn.primary{background:var(--accent);color:var(--accent-fg);border-color:var(--accent);font-weight:600}
+.btn:disabled{opacity:.5;cursor:default}
+.fresh{font-size:12px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;cursor:pointer;display:inline-flex;gap:6px;align-items:center;min-height:32px}
+.fresh .dot{width:8px;height:8px;border-radius:50%;background:var(--good)}
+.fresh.stale .dot{background:var(--warn)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--surface-2);color:var(--fg);border:1px solid transparent;white-space:nowrap}
+.chip.t-core{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.chip.t-adjacent{background:var(--good-soft);color:var(--good)}
+.chip.t-stretch{background:var(--unk-soft);color:var(--unk)}
+.chip.warn{background:var(--warn-soft);color:var(--warn)}
+.chip.bad{background:var(--bad-soft);color:var(--bad);font-weight:600}
+.toggle{cursor:pointer;border-color:var(--line);background:var(--surface);min-height:30px}
+.toggle[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters input[type=search]{flex:1 1 220px;min-width:0;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:8px 12px;min-height:40px}
+.filters select{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:8px;min-height:40px}
+.summary{display:flex;gap:6px 14px;flex-wrap:wrap;align-items:baseline;color:var(--muted);font-size:14px}
+.summary strong{color:var(--fg);font-family:var(--font-display);font-size:18px}
+.list{display:flex;flex-direction:column;gap:10px}
+.section-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:8px 2px 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:start;cursor:pointer}
+.card.sel{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.card.done{opacity:.6}
+.card h3{margin:0;font-size:16px;font-weight:600;line-height:1.3}
+.co{color:var(--fg);font-weight:500}
+.meta{color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 12px;margin:2px 0 8px}
+.row{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.pay{font-family:var(--font-mono);font-size:13px}
+.nopay{font-size:12px;color:var(--muted)}
+.srcs{display:inline-flex;gap:4px;flex-wrap:wrap}
+a.src{font-size:11px;font-weight:600;font-family:var(--font-mono);text-decoration:none;color:var(--fg);background:var(--surface-2);border:1px solid var(--line);border-radius:5px;padding:2px 6px;white-space:nowrap}
+a.src:hover{border-color:var(--accent);color:var(--accent)}
+.compass{width:56px;height:56px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;text-align:center;font-size:10px;line-height:1.1;color:var(--muted);position:relative}
+.compass b{display:block;font-family:var(--font-display);font-size:15px;color:var(--fg)}
+.compass.core{border-color:var(--accent)} .compass.core b{color:var(--accent)}
+.compass.adjacent{border-color:var(--good)} .compass.adjacent b{color:var(--good)}
+.triage{display:flex;flex-direction:column;gap:6px}
+.tbtn{border:1px solid var(--line);background:var(--surface);border-radius:8px;min-width:100px;min-height:36px;cursor:pointer;font-size:13px}
+.tbtn.on-interested{background:var(--good-soft);border-color:var(--good);color:var(--good);font-weight:600}
+.tbtn.on-later{background:var(--warn-soft);border-color:var(--warn);color:var(--warn);font-weight:600}
+.tbtn.on-not{background:var(--bad-soft);border-color:var(--bad);color:var(--bad);font-weight:600}
+.reasons{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.reasons button{font-size:12px;border:1px dashed var(--line);background:none;border-radius:999px;padding:4px 10px;cursor:pointer;min-height:30px}
+.reasons button[aria-pressed="true"]{border-style:solid;border-color:var(--bad);color:var(--bad)}
+.more{align-self:center}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:28px 20px;text-align:center;color:var(--muted);display:flex;flex-direction:column;gap:8px;align-items:center}
+.empty h2{font-family:var(--font-display);font-size:20px;margin:0;color:var(--fg)}
+/* drawer */
+.scrim{position:fixed;inset:0;background:var(--scrim);z-index:20}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(580px,100%);background:var(--bg);border-left:1px solid var(--line);z-index:21;overflow-y:auto;padding:calc(18px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) 20px;display:flex;flex-direction:column;gap:14px}
+.drawer h2{font-family:var(--font-display);font-size:22px;margin:0;text-wrap:balance}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.panel h4{margin:0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.facts{display:grid;grid-template-columns:120px minmax(0,1fr);gap:6px 12px;font-size:14px;margin:0}
+.facts dt{color:var(--muted)} .facts dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th,.tbl td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-weight:500;color:var(--muted);font-size:12px;white-space:nowrap}
+.tblwrap{overflow-x:auto}
+.note{font-size:12px;color:var(--muted)}
+.soon{font-size:13px;color:var(--muted);background:var(--surface-2);border-radius:8px;padding:10px 12px}
+/* pipeline */
+.board{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:10px;overflow-x:auto;padding-bottom:6px}
+.col{background:var(--surface-2);border-radius:var(--r);padding:10px;display:flex;flex-direction:column;gap:8px;min-height:160px}
+.col h4{margin:0 2px 2px;font-size:13px;display:flex;justify-content:space-between}
+.pcard{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:6px;font-size:13px}
+.pcard button.link{border:0;background:none;padding:0;text-align:left;cursor:pointer;font-weight:600;color:var(--fg)}
+.pcard select,.field select{font-size:13px;padding:6px;border-radius:6px;border:1px solid var(--line);background:var(--surface)}
+.flag{font-size:11px;font-weight:600;color:var(--bad)}
+/* forms */
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:13px;font-weight:500}
+textarea,input[type=text],input[type=number]{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:10px;width:100%}
+textarea{min-height:110px;resize:vertical;font-family:var(--font-mono);font-size:13px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.switch{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.switch:last-child{border-bottom:0}
+.switch input{width:20px;height:20px;flex:none}
+.slider{display:grid;grid-template-columns:80px minmax(0,1fr) 48px;gap:10px;align-items:center}
+.tip{background:var(--accent-soft);border-radius:var(--r);padding:12px 14px;font-size:14px}
+kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 5px;background:var(--surface)}
+.toast{max-width:calc(100% - 32px);word-break:break-word;position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:8px;font-size:14px;z-index:30}
+.tabbar{display:none}
+@media (max-width: 900px){
+  .app{grid-template-columns:1fr}
+  .rail{display:none}
+  .main{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:6px max(6px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(6px,env(safe-area-inset-left,0px));z-index:15}
+  .tabbar button{border:0;background:none;min-height:48px;font-size:12px;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer}
+  .tabbar button[aria-current="page"]{color:var(--accent);font-weight:600}
+}
+@media (max-width: 560px){
+  .card{grid-template-columns:48px minmax(0,1fr);gap:10px}
+  .compass{width:46px;height:46px} .compass b{font-size:13px}
+  .triage{grid-column:1 / -1;flex-direction:row}
+  .tbtn{flex:1;min-width:0}
+  .topbar h1{font-size:22px}
+  .facts{grid-template-columns:100px minmax(0,1fr)}
+}
+@media (prefers-reduced-motion: no-preference){.card{transition:border-color .15s}}
+</style>
+
+<div class="app">
+  <nav class="rail" aria-label="Main">
+    <div class="brand"><span aria-hidden="true">◈</span><div>Lodestone<small>Canada job search</small></div></div>
+    <button class="nav" data-view="digest">Digest <span class="count" id="nc-digest"></span></button>
+    <button class="nav" data-view="pipeline">Pipeline <span class="count" id="nc-pipe"></span></button>
+    <button class="nav" data-view="add">Add job</button>
+    <button class="nav" data-view="companies">Companies</button>
+    <button class="nav" data-view="settings">Settings</button>
+  </nav>
+  <main class="main"><div class="wrap" id="view"></div></main>
+  <nav class="tabbar" aria-label="Main">
+    <button data-view="digest">Digest</button>
+    <button data-view="pipeline">Pipeline</button>
+    <button data-view="add">Add</button>
+    <button data-view="companies">Companies</button>
+    <button data-view="settings">Settings</button>
+  </nav>
+</div>
+<div id="overlay"></div>
+<div id="toast" class="toast" role="status" hidden></div>
+
+<script>
+"use strict";
+/* ---------- constants (defaults mirror PRD/UX decisions; real values live in settings/prefs) ---------- */
+const STAGES = ["Shortlisted","Applied","Screen","Interviewing","Offer","Closed"];
+const TIERS = ["Core","Adjacent","Stretch"];
+const TIER_HELP = {Core:"Core PM role", Adjacent:"Adjacent role (TPM, program, strategy & ops, chief of staff, trust & safety)", Stretch:"Stretch role (product marketing, solutions, analytics)"};
+const REGIONS = ["GTA","Waterloo Region","Remote-Canada","Ottawa","Montreal","Vancouver","Calgary","Edmonton","Other Canada"];
+const SUBS = ["role","level","domain","pathway","pay","skills"];
+const SUBLABEL = {role:"Role",level:"Level",domain:"Domain",pathway:"Pathway",pay:"Pay",skills:"Skills"};
+const NOT_REASONS = ["Level too junior","Not my domain","Location","People management","Pay too low","Company"];
+const DEFAULT_PREFS = {
+  regions:["GTA","Waterloo Region","Remote-Canada"], other_regions:true, tiers:["Core","Adjacent","Stretch"],
+  exclude_people_mgmt:true, include_no_pay:true, digest_size:20, later_days:7,
+  weights:{role:25,level:20,domain:20,pathway:15,pay:10,skills:10}
+};
+const FRESH_LABEL = {jobs:"Job pulls (all sources)", source_index:"Source index", ats_detection:"Job-board detection",
+  scoring:"Fit scoring", signals:"Pathway signals (ESDC)", discovery:"Company discovery", profile:"Your profile"};
+
+/* ---------- state ---------- */
+const S = {
+  db:null, ready:false, offline:false, canWrite:true,
+  jobs:{}, triage:{}, prefs:{...DEFAULT_PREFS}, companies:[], freshness:{}, inbox:[],
+  view:"digest", open:null, sel:0, show:"todo", region:"preferred", q:"", tierOn:new Set(TIERS), sort:"best",
+  coQ:"", coStatus:"all", expanded:false, lastVisit:null, pendingReasons:null
+};
+const $ = (s,el=document)=>el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl = u => /^https?:\/\//i.test(u||"") ? u : "#";
+function lsGet(k,d){try{const v=localStorage.getItem("lodestone:"+k);return v==null?d:JSON.parse(v)}catch{return d}}
+function lsSet(k,v){try{localStorage.setItem("lodestone:"+k,JSON.stringify(v))}catch{}}
+function toast(msg){const t=$("#toast");t.textContent=msg;t.hidden=false;clearTimeout(t._h);t._h=setTimeout(()=>t.hidden=true,4200)}
+
+/* ---------- dates ---------- */
+const DAY=864e5;
+function parseWhen(v){
+  if(v==null||v==="") return null;
+  if(typeof v==="number") return v>1e12?v:v*1000;
+  const s=String(v).trim();
+  if(/^\d{9,13}$/.test(s)){const n=+s;return n>1e12?n:n*1000}
+  let m=s.match(/posted\s+(today|yesterday|(\d+)\+?\s+days?\s+ago)/i);
+  if(m){const d=/today/i.test(m[1])?0:/yesterday/i.test(m[1])?1:+m[2];return Date.now()-d*DAY}
+  const t=Date.parse(s.replace(/\s+/g," "));return isNaN(t)?null:t;
+}
+function ago(ms){
+  if(ms==null) return "";
+  const d=(Date.now()-ms)/DAY;
+  if(d<1/24) return "just now"; if(d<1) return Math.round(d*24)+"h ago";
+  if(d<2) return "1 day ago"; if(d<60) return Math.round(d)+" days ago";
+  return Math.round(d/30)+" months ago";
+}
+const postedMs = j => parseWhen(j.posted_at) ?? parseWhen(j.first_seen);
+
+/* ---------- formatting ---------- */
+function fmtK(n){n=+n;if(!isFinite(n)) return "";return n>=1000?(Math.round(n/1000))+"K":String(Math.round(n))}
+function payText(p){
+  if(!p||(!p.min&&!p.max)) return "";
+  const cur=(p.currency||"").toUpperCase(), sym=cur==="USD"?"US$":cur==="CAD"||!cur?"$":cur+" ";
+  const iv=String(p.interval||"").toLowerCase(), per=/hour/.test(iv)?"/hr":/month/.test(iv)?"/mo":"";
+  const lo=p.min?sym+fmtK(p.min):"", hi=p.max?sym+fmtK(p.max):"";
+  return (lo&&hi&&lo!==hi?lo+"–"+hi:(lo||hi))+per;
+}
+function where(j){return j.location||j.region||"Canada"}
+
+/* ---------- derived ---------- */
+function tri(id){return S.triage[id]||null}
+function laterDue(t){return t&&t.status==="later"&&(Date.now()-(parseWhen(t.updated_at)||0))>(S.prefs.later_days||7)*DAY}
+function inPreferred(j){
+  const r=S.prefs.regions||[];
+  return r.includes(j.region)||(S.prefs.other_regions&&!["GTA","Waterloo Region","Remote-Canada"].includes(j.region));
+}
+function matchesBase(j){
+  if(!j.live) return false;
+  if(!S.tierOn.has(j.tier)) return false;
+  if(!(S.prefs.tiers||TIERS).includes(j.tier)) return false;
+  if(S.prefs.exclude_people_mgmt&&j.people_mgmt) return false;
+  if(!S.prefs.include_no_pay&&!payText(j.pay)) return false;
+  if(S.region==="preferred"){if(!inPreferred(j)) return false}
+  else if(S.region!=="all"&&j.region!==S.region) return false;
+  if(S.q){const q=S.q.toLowerCase();if(!(j.title+" "+j.company+" "+j.location+" "+(j.department||"")).toLowerCase().includes(q)) return false}
+  return true;
+}
+const isTodo=j=>{const t=tri(j.id);return !t||!t.status||laterDue(t)};
+function matches(j){
+  if(!matchesBase(j)) return false;
+  const t=tri(j.id);
+  if(S.show==="todo") return isTodo(j);
+  if(S.show==="all") return true;
+  return t&&t.status===S.show;
+}
+const TIER_RANK={Core:0,Adjacent:1,Stretch:2};
+const PREF_RANK=r=>{const i=(S.prefs.regions||[]).indexOf(r);return i<0?9:i};
+function sorted(list){
+  const by={
+    best:(a,b)=>TIER_RANK[a.tier]-TIER_RANK[b.tier]||PREF_RANK(a.region)-PREF_RANK(b.region)||(postedMs(b)||0)-(postedMs(a)||0),
+    newest:(a,b)=>(postedMs(b)||0)-(postedMs(a)||0),
+    company:(a,b)=>a.company.localeCompare(b.company)||a.title.localeCompare(b.title)
+  };
+  return list.sort(by[S.sort]||by.best);
+}
+function visible(){return sorted(Object.values(S.jobs).filter(matches))}
+const isNew=j=>S.lastVisit&&parseWhen(j.first_seen)>S.lastVisit;
+
+/* ---------- db ---------- */
+async function boot(){
+  S.lastVisit=lsGet("lastVisit",null);
+  try{ const v=lsGet("ui",{}); if(v.view) S.view=v.view; if(v.sort) S.sort=v.sort; if(v.region) S.region=v.region }catch{}
+  render();
+  const use=n=>{try{return Promise.resolve(window.claude?.use?.(n)??null).catch(()=>null)}catch{return Promise.resolve(null)}};
+  const db=await use("db");
+  if(!db){S.offline=true;render();return}
+  S.db=db;
+  const user=await use("user");
+  if(user){const c=await Promise.resolve(user.can?.("data.write")).catch(()=>null);if(c===false) S.canWrite=false}
+  const fail=e=>{console.warn(e);if(e&&e.code==="revoked"){S.offline=true;render()}};
+  db.collection("jobs").onSnapshot(snap=>{
+    const all={};snap.docs.forEach(d=>Object.assign(all,(d.data()||{}).jobs||{}));
+    S.jobs=all;S.ready=true;render();
+  },fail);
+  db.collection("meta").onSnapshot(snap=>{
+    snap.docs.forEach(d=>{const x=d.data()||{};if(d.id==="companies")S.companies=x.companies||[];if(d.id==="freshness")S.freshness=x.components||{}});
+    render();
+  },fail);
+  db.collection("triage").onSnapshot(snap=>{const t={};snap.docs.forEach(d=>t[d.id]=d.data());S.triage=t;render()},fail);
+  db.doc("settings/prefs").onSnapshot(d=>{S.prefs={...DEFAULT_PREFS,...(d.exists?d.data():{})};render()},fail);
+  db.collection("inbox").onSnapshot(snap=>{S.inbox=snap.docs.map(d=>({id:d.id,...d.data()}));render()},fail);
+  window.addEventListener("pagehide",()=>lsSet("lastVisit",Date.now()));
+}
+async function writeTriage(j,patch){
+  if(!S.db||!S.canWrite){toast("Open Lodestone signed in as its owner to save triage.");return}
+  const prev=tri(j.id)||{};
+  const body={...prev,...patch,title:j.title,company:j.company,updated_at:new Date().toISOString()};
+  S.triage={...S.triage,[j.id]:body};render();
+  try{await S.db.doc("triage/"+j.id).set(body)}catch(e){toast("Couldn't save. Check your connection and try again.");console.warn(e)}
+}
+function triage(j,status){
+  const cur=tri(j.id)||{};
+  if(cur.status===status){writeTriage(j,{status:null,stage:cur.stage==="Shortlisted"?null:cur.stage});return}
+  const patch={status};
+  if(status==="interested"&&!cur.stage) patch.stage="Shortlisted";
+  if(status==="not"){patch.reasons=cur.reasons||[];S.pendingReasons=j.id}
+  else S.pendingReasons=null;
+  writeTriage(j,patch);
+  toast(status==="interested"?"Added to your pipeline (Shortlisted).":status==="later"?`Back in your digest in ${S.prefs.later_days||7} days.`:"Hidden. Tap a reason below if you like.");
+}
+
+/* ---------- views ---------- */
+function freshChip(){
+  const j=S.freshness.jobs; const ms=parseWhen(j&&j.at);
+  const stale=!ms||(Date.now()-ms)>7*DAY;
+  return `<button class="fresh${stale?" stale":""}" data-act="fresh" aria-label="When data was last updated"><span class="dot" aria-hidden="true"></span>${ms?"Jobs updated "+ago(ms):"Not refreshed yet"}</button>`;
+}
+function tierCompass(j){
+  const cls=(j.tier||"").toLowerCase();
+  return `<div class="compass ${cls}" title="${esc(TIER_HELP[j.tier]||"")}. Fit score arrives in Sprint 3."><span><b>${esc((j.tier||"?")[0])}</b>${esc(j.tier||"")}</span></div>`;
+}
+function srcLinks(j){return `<span class="srcs">${(j.sources||[]).map(s=>`<a class="src" href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener" title="Open on ${esc(s.label)}">${esc(s.label)} ↗</a>`).join("")}</span>`}
+function triageBtns(j){
+  const t=tri(j.id)||{};
+  return ["interested","later","not"].map(s=>`<button class="tbtn${t.status===s?" on-"+s:""}" data-tri="${s}" data-id="${esc(j.id)}" aria-pressed="${t.status===s}">${{interested:"Interested",later:"Later",not:"Not for me"}[s]}</button>`).join("");
+}
+function reasonsRow(j){
+  const t=tri(j.id)||{};const on=new Set(t.reasons||[]);
+  return `<div class="reasons" aria-label="Why not?">${NOT_REASONS.map(r=>`<button data-reason="${esc(r)}" data-id="${esc(j.id)}" aria-pressed="${on.has(r)}">${esc(r)}</button>`).join("")}</div>`;
+}
+function card(j,i){
+  const t=tri(j.id)||{}, pay=payText(j.pay);
+  return `<article class="card${i===S.sel?" sel":""}${t.status&&S.show==="todo"?" done":""}" data-open="${esc(j.id)}" data-idx="${i}">
+    ${tierCompass(j)}
+    <div style="min-width:0">
+      <h3>${esc(j.title)}</h3>
+      <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span>${j.workplace?`<span>${esc(j.workplace)}</span>`:""}<span>${esc(ago(postedMs(j))||"")}</span></div>
+      <div class="row">${pay?`<span class="pay" title="Posted pay range">${esc(pay)}</span>`:`<span class="nopay">No pay posted</span>`}${srcLinks(j)}
+        ${isNew(j)?'<span class="chip warn">New</span>':""}${j.people_mgmt?'<span class="chip" title="Title suggests managing people">Manages people?</span>':""}</div>
+      ${S.pendingReasons===j.id&&t.status==="not"?reasonsRow(j):""}
+    </div>
+    <div class="triage">${triageBtns(j)}</div>
+  </article>`;
+}
+function viewDigest(){
+  const all=visible(), n=S.prefs.digest_size||20;
+  const fresh=all.filter(isNew), rest=all.filter(j=>!isNew(j));
+  const first=(fresh.length?fresh:all).slice(0,n);
+  const firstIds=new Set(first.map(j=>j.id));
+  const more=all.filter(j=>!firstIds.has(j.id));
+  S._order=first.concat(S.expanded?more:[]);
+  const live=Object.values(S.jobs).filter(j=>j.live);
+  const counts={todo:0,interested:0,later:0,not:0};
+  live.forEach(j=>{const t=tri(j.id);if(!t||!t.status||laterDue(t))counts.todo++;else counts[t.status]=(counts[t.status]||0)+1});
+  const showTabs=[["todo","To triage"],["interested","Interested"],["later","Later"],["not","Not for me"],["all","All"]];
+  let body;
+  if(S.offline) body=offlineState();
+  else if(!S.ready) body=`<div class="empty"><h2>Loading your jobs…</h2><p>Reading Lodestone's database.</p></div>`;
+  else if(!live.length) body=`<div class="empty"><h2>No jobs yet</h2><p>Run <kbd>/refresh-jobs</kbd> in a Claude Code session on the Lodestone repo. New roles appear here as soon as it finishes.</p></div>`;
+  else if(!all.length) body=`<div class="empty"><h2>Nothing matches these filters</h2><p>Try "All regions", turn on more role tiers, or clear the search.</p></div>`;
+  else body=`<div class="list">
+      ${fresh.length?`<div class="section-label">New since your last visit</div>`:""}
+      ${first.map((j,i)=>card(j,i)).join("")}
+      ${more.length?(S.expanded?`<div class="section-label">Earlier</div>${more.map((j,i)=>card(j,first.length+i)).join("")}`
+        :`<button class="btn more" data-act="expand">Show ${more.length} more</button>`):""}
+    </div>`;
+  return `<div class="topbar"><h1>Digest</h1><span class="sp"></span>${freshChip()}</div>
+  <div class="summary"><span><strong class="mono">${counts.todo}</strong> to triage</span><span>${counts.interested||0} interested</span><span>${counts.later||0} later</span><span>${live.length} open roles tracked</span></div>
+  <div class="chips" role="group" aria-label="Show">${showTabs.map(([k,l])=>`<button class="chip toggle" data-show="${k}" aria-pressed="${S.show===k}">${l}</button>`).join("")}</div>
+  <div class="filters">
+    <input type="search" id="q" placeholder="Search title, company, team" value="${esc(S.q)}" aria-label="Search">
+    <select id="region" aria-label="Region"><option value="preferred"${S.region==="preferred"?" selected":""}>My regions</option><option value="all"${S.region==="all"?" selected":""}>All of Canada</option>${REGIONS.map(r=>`<option${S.region===r?" selected":""}>${r}</option>`).join("")}</select>
+    <select id="sort" aria-label="Sort"><option value="best"${S.sort==="best"?" selected":""}>Best match</option><option value="newest"${S.sort==="newest"?" selected":""}>Newest</option><option value="company"${S.sort==="company"?" selected":""}>Company</option></select>
+    ${TIERS.map(t=>`<button class="chip toggle" data-tier="${t}" aria-pressed="${S.tierOn.has(t)}" title="${esc(TIER_HELP[t])}">${t}</button>`).join("")}
+  </div>
+  ${body}
+  <p class="note">"Best match" ranks by role tier, then your preferred regions, then newest. The fit score (Sprint 3) will replace it. Keyboard: <kbd>J</kbd>/<kbd>K</kbd> move, <kbd>I</kbd>/<kbd>L</kbd>/<kbd>N</kbd> triage, <kbd>Enter</kbd> opens.</p>`;
+}
+function offlineState(){return `<div class="empty"><h2>Open Lodestone on claude.ai to see your jobs</h2><p>Your jobs and triage live in this page's private database, which only loads inside claude.ai while you're signed in.</p></div>`}
+function viewDetail(j){
+  const t=tri(j.id)||{}, pay=payText(j.pay);
+  return `<div class="row" style="justify-content:space-between"><span class="chip t-${(j.tier||"").toLowerCase()}">${esc(j.tier)} · ${esc(TIER_HELP[j.tier]||"")}</span><button class="btn" data-act="close">Close</button></div>
+  <h2>${esc(j.title)}</h2>
+  <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span></div>
+  <div class="row">${triageBtns(j)}</div>
+  ${t.status==="not"?reasonsRow(j):""}
+  ${!j.live?`<div class="chip bad">No longer live${j.closed_at?" since "+esc(new Date(parseWhen(j.closed_at)).toLocaleDateString()):""}</div>`:""}
+  <section class="panel"><h4>Posting</h4><dl class="facts">
+    <dt>Location</dt><dd>${esc(where(j))}${j.region?` <span class="note">(${esc(j.region)})</span>`:""}</dd>
+    <dt>Work mode</dt><dd>${esc(j.workplace||(j.remote?"Remote":"Not stated"))}</dd>
+    ${j.department?`<dt>Team</dt><dd>${esc(j.department)}</dd>`:""}
+    <dt>Pay</dt><dd>${pay?`<span class="pay">${esc(pay)}</span> <span class="note">posted</span>`:`<span class="nopay">Not posted. Estimates arrive in Sprint 4.</span>`}</dd>
+    <dt>Posted</dt><dd>${esc(ago(postedMs(j))||"Unknown")}</dd>
+    <dt>First seen</dt><dd>${esc(ago(parseWhen(j.first_seen)))}</dd>
+    <dt>Manages people</dt><dd>${j.people_mgmt?"Title suggests it":"Not from the title"}</dd>
+  </dl></section>
+  <section class="panel"><h4>Where it's posted</h4>
+    <table class="tbl"><thead><tr><th>Source</th><th>Status</th><th></th></tr></thead><tbody>
+    ${(j.sources||[]).map(s=>`<tr><td>${esc(s.label)}</td><td>${s.live===false?'<span class="flag">Gone</span>':"Live"}</td><td><a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">Open posting ↗</a></td></tr>`).join("")}
+    </tbody></table></section>
+  <section class="panel"><h4>Pipeline</h4>
+    <div class="field"><label for="stage">Stage</label><select id="stage" data-id="${esc(j.id)}"><option value="">Not in pipeline</option>${STAGES.map(s=>`<option${t.stage===s?" selected":""}>${s}</option>`).join("")}</select></div>
+    <div class="field"><label for="notes">Notes</label><textarea id="notes" data-id="${esc(j.id)}" placeholder="Recruiter, referral, follow-up dates">${esc(t.notes||"")}</textarea></div>
+  </section>
+  <p class="soon">Coming next: the fit breakdown with reasons (Sprint 3), pay estimates and immigration-pathway signals (Sprint 4).</p>`;
+}
+function viewPipeline(){
+  const items=Object.entries(S.triage).filter(([,t])=>t&&t.stage);
+  const cols=STAGES.map(st=>{
+    const cards=items.filter(([,t])=>t.stage===st).map(([id,t])=>{
+      const j=S.jobs[id];const gone=j&&!j.live;
+      return `<div class="pcard"><button class="link" data-open="${esc(id)}">${esc(t.title||(j&&j.title)||"Role")}</button>
+        <span class="note">${esc(t.company||(j&&j.company)||"")}${j?" · "+esc(where(j)):""}</span>
+        ${gone?'<span class="flag">No longer live</span>':""}${!j?'<span class="flag">Not in current results</span>':""}
+        <select aria-label="Move ${esc(t.title||"role")}" data-move="${esc(id)}">${STAGES.map(s=>`<option${s===st?" selected":""}>${s}</option>`).join("")}<option value="">Remove from pipeline</option></select></div>`;
+    }).join("");
+    return `<div class="col"><h4>${st}<span class="mono">${items.filter(([,t])=>t.stage===st).length}</span></h4>${cards||'<span class="note">Empty</span>'}</div>`;
+  }).join("");
+  return `<div class="topbar"><h1>Pipeline</h1><span class="sp"></span>${freshChip()}</div>
+  ${S.offline?offlineState():items.length?`<div class="board">${cols}</div>`:`<div class="empty"><h2>Your pipeline is empty</h2><p>Mark a role <b>Interested</b> in the digest and it lands here as Shortlisted.</p></div>`}`;
+}
+function viewAdd(){
+  const items=[...S.inbox].sort((a,b)=>(parseWhen(b.created_at)||0)-(parseWhen(a.created_at)||0));
+  return `<div class="topbar"><h1>Add a job</h1><span class="sp"></span>${freshChip()}</div>
+  <div class="tip">Found a role on LinkedIn or anywhere else? Copy the link and paste it here. You can paste several links at once, or the job description text if the page needs a login.</div>
+  <section class="panel">
+    <div class="field"><label for="paste">Links or job description</label><textarea id="paste" placeholder="https://www.linkedin.com/jobs/view/..."></textarea></div>
+    <div class="row"><button class="btn primary" data-act="addjob"${S.offline?" disabled":""}>Add to inbox</button><span class="note">Lodestone reads these at your next <kbd>/refresh-jobs</kbd>, matches them to known roles, and adds new ones to the digest.</span></div>
+  </section>
+  ${items.length?`<section class="panel"><h4>Inbox</h4><table class="tbl"><thead><tr><th>Added</th><th>What you pasted</th><th>Status</th></tr></thead><tbody>
+    ${items.map(x=>`<tr><td class="mono">${esc(ago(parseWhen(x.created_at)))}</td><td style="overflow-wrap:anywhere">${esc(String(x.text||"").slice(0,160))}</td><td>${esc(x.status==="new"?"Waiting for refresh":x.status||"")}${x.result?`<div class="note">${esc(x.result)}</div>`:""}</td></tr>`).join("")}
+  </tbody></table></section>`:""}`;
+}
+function viewCompanies(){
+  const q=S.coQ.toLowerCase();
+  const rows=S.companies.filter(c=>(S.coStatus==="all"||c.status===S.coStatus)&&(!q||(c.name+" "+c.segment+" "+c.system).toLowerCase().includes(q)));
+  const n=s=>S.companies.filter(c=>c.status===s).length;
+  const label={active:"Pulled",paused:"Paused",no_feed:"Paste only"};
+  return `<div class="topbar"><h1>Companies</h1><span class="sp"></span>${freshChip()}</div>
+  <div class="summary"><span><strong class="mono">${S.companies.length}</strong> on your watchlist</span><span>${n("active")} pulled automatically</span><span>${n("no_feed")} paste only</span></div>
+  <div class="filters"><input type="search" id="coq" placeholder="Search companies" value="${esc(S.coQ)}" aria-label="Search companies">
+    ${["all","active","no_feed","paused"].map(s=>`<button class="chip toggle" data-costatus="${s}" aria-pressed="${S.coStatus===s}">${s==="all"?"All":label[s]}</button>`).join("")}</div>
+  ${S.offline?offlineState():`<div class="tblwrap"><table class="tbl"><thead><tr><th>Company</th><th>Segment</th><th>Job system</th><th>Status</th><th>Canada roles</th><th></th></tr></thead><tbody>
+  ${rows.map(c=>`<tr><td><b>${esc(c.name)}</b>${c.status!=="active"&&c.note?`<div class="note">${esc(c.note)}</div>`:""}</td><td>${esc(c.segment)}</td><td>${esc(c.system)}</td><td>${esc(label[c.status]||c.status)}</td><td class="mono">${c.canada_jobs??""}</td><td>${c.careers_url?`<a href="${esc(safeUrl(c.careers_url))}" target="_blank" rel="noopener">Careers ↗</a>`:""}</td></tr>`).join("")}
+  </tbody></table></div>`}
+  <p class="note">Add or remove companies by asking Claude in a Lodestone session. Discovery of new companies arrives in Sprint 5.</p>`;
+}
+function viewSettings(){
+  const p=S.prefs, W=p.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+(+W[k]||0),0);
+  return `<div class="topbar"><h1>Settings</h1><span class="sp"></span>${freshChip()}</div>
+  <section class="panel"><h4>Where</h4>
+    <div class="chips">${REGIONS.filter(r=>r!=="Other Canada").map(r=>`<label class="chip"><input type="checkbox" data-region="${r}"${(p.regions||[]).includes(r)?" checked":""}> ${r}</label>`).join("")}</div>
+    <div class="switch"><label for="other">Also show the rest of Canada under "My regions"</label><input type="checkbox" id="other"${p.other_regions?" checked":""}></div>
+  </section>
+  <section class="panel"><h4>What</h4>
+    <div class="chips">${TIERS.map(t=>`<label class="chip"><input type="checkbox" data-ptier="${t}"${(p.tiers||[]).includes(t)?" checked":""}> ${t}</label>`).join("")}</div>
+    <div class="switch"><label for="xpm">Hide roles that manage people</label><input type="checkbox" id="xpm"${p.exclude_people_mgmt?" checked":""}></div>
+    <div class="switch"><label for="nopay">Include roles with no posted pay</label><input type="checkbox" id="nopay"${p.include_no_pay?" checked":""}></div>
+  </section>
+  <section class="panel"><h4>Digest</h4>
+    <div class="grid2"><div class="field"><label for="dsize">Roles in the digest (1–100)</label><input type="number" id="dsize" min="1" max="100" value="${+p.digest_size||20}"></div>
+    <div class="field"><label for="ldays">"Later" roles come back after (days)</label><input type="number" id="ldays" min="1" max="60" value="${+p.later_days||7}"></div></div>
+  </section>
+  <section class="panel"><h4>Advanced: fit-score weights</h4>
+    <p class="note">Used once fit scoring arrives in Sprint 3. They always add up to 100%.</p>
+    ${SUBS.map(k=>`<div class="slider"><label for="w-${k}">${SUBLABEL[k]}</label><input type="range" id="w-${k}" min="0" max="60" step="5" value="${+W[k]||0}" data-w="${k}"><span class="mono" id="wv-${k}">${tot?Math.round((+W[k]||0)*100/tot):0}%</span></div>`).join("")}
+    <div class="row"><button class="btn" data-act="resetw">Reset to defaults</button></div>
+  </section>
+  <div class="row"><button class="btn primary" data-act="saveprefs"${S.offline?" disabled":""}>Save settings</button><span class="note" id="savenote"></span></div>`;
+}
+function freshPanel(){
+  const comps=S.freshness;
+  const keys=Object.keys(comps).sort((a,b)=>(a.startsWith("jobs:")-b.startsWith("jobs:"))||a.localeCompare(b));
+  const row=k=>{const c=comps[k],ms=parseWhen(c.at),old=!ms||(Date.now()-ms)>7*DAY;
+    const name=FRESH_LABEL[k]||(k.startsWith("jobs:")?"Jobs from "+k.slice(5):k);
+    const extra=Object.entries(c).filter(([x])=>x!=="at").map(([x,v])=>`${x.replace(/_/g," ")}: ${typeof v==="object"?"…":v}`).join(" · ");
+    return `<tr><td>${esc(name)}${extra?`<div class="note">${esc(extra)}</div>`:""}</td><td class="mono">${esc(ago(ms))}</td><td>${old?'<span class="chip warn">Over 7 days</span>':""}</td></tr>`};
+  return `<div class="row" style="justify-content:space-between"><h2>Last updated</h2><button class="btn" data-act="close">Close</button></div>
+  <p class="note">Lodestone updates when you run <kbd>/refresh-jobs</kbd> in a Claude Code session. Anything older than 7 days is flagged.</p>
+  <section class="panel"><table class="tbl"><thead><tr><th>Component</th><th>Updated</th><th></th></tr></thead><tbody>${keys.map(row).join("")||'<tr><td colspan="3">No refresh recorded yet.</td></tr>'}
+  <tr><td>Fit scoring<div class="note">Arrives in Sprint 3</div></td><td>Not yet</td><td></td></tr>
+  <tr><td>Pathway signals (ESDC list)<div class="note">Arrives in Sprint 4</div></td><td>Not yet</td><td></td></tr></tbody></table></section>`;
+}
+
+/* ---------- render ---------- */
+function render(){
+  document.querySelectorAll("[data-view]").forEach(b=>b.setAttribute("aria-current",b.dataset.view===S.view?"page":"false"));
+  const todo=Object.values(S.jobs).filter(j=>matchesBase(j)&&isTodo(j)).length;
+  $("#nc-digest").textContent=S.ready&&todo?String(todo):"";
+  $("#nc-pipe").textContent=String(Object.values(S.triage).filter(t=>t&&t.stage).length||"");
+  const active=document.activeElement, keepId=active&&active.id, caret=active&&active.selectionStart;
+  const v={digest:viewDigest,pipeline:viewPipeline,add:viewAdd,companies:viewCompanies,settings:viewSettings}[S.view]||viewDigest;
+  // keep unsaved settings edits and the paste box while live data re-renders
+  if(S.view==="settings"&&document.getElementById("dsize")&&S._editingPrefs) {} else $("#view").innerHTML=v();
+  if(keepId){const el=document.getElementById(keepId);if(el&&el!==active){el.focus();try{el.setSelectionRange(caret,caret)}catch{}}}
+  const ov=$("#overlay");
+  if(S.open==="__fresh") ov.innerHTML=`<div class="scrim" data-act="close"></div><aside class="drawer" role="dialog" aria-label="Last updated">${freshPanel()}</aside>`;
+  else if(S.open&&S.jobs[S.open]) ov.innerHTML=`<div class="scrim" data-act="close"></div><aside class="drawer" role="dialog" aria-label="${esc(S.jobs[S.open].title)}">${viewDetail(S.jobs[S.open])}</aside>`;
+  else ov.innerHTML="";
+}
+function setView(v){S.view=v;S.open=null;S.sel=0;S._editingPrefs=false;lsSet("ui",{view:v,sort:S.sort,region:S.region});render();window.scrollTo(0,0)}
+function jobById(id){return S.jobs[id]}
+
+/* ---------- events ---------- */
+document.addEventListener("click",e=>{
+  const el=e.target.closest("button,[data-open],a,[data-act]");if(!el) return;
+  if(el.tagName==="A") return;
+  const d=el.dataset;
+  if(d.view){setView(d.view);return}
+  if(d.tri){e.stopPropagation();const j=jobById(d.id);if(j)triage(j,d.tri);return}
+  if(d.reason){e.stopPropagation();const j=jobById(d.id),t=tri(d.id)||{};const r=new Set(t.reasons||[]);r.has(d.reason)?r.delete(d.reason):r.add(d.reason);if(j)writeTriage(j,{reasons:[...r]});return}
+  if(d.show){S.show=d.show;S.sel=0;S.expanded=false;render();return}
+  if(d.tier){S.tierOn.has(d.tier)?S.tierOn.delete(d.tier):S.tierOn.add(d.tier);render();return}
+  if(d.costatus){S.coStatus=d.costatus;render();return}
+  if(d.act==="expand"){S.expanded=true;render();return}
+  if(d.act==="fresh"){S.open="__fresh";render();return}
+  if(d.act==="close"){S.open=null;render();return}
+  if(d.act==="addjob"){addJob();return}
+  if(d.act==="saveprefs"){savePrefs();return}
+  if(d.act==="resetw"){SUBS.forEach(k=>{const i=document.getElementById("w-"+k);if(i)i.value=DEFAULT_PREFS.weights[k]});updateWeightLabels();S._editingPrefs=true;return}
+  if(d.open!==undefined&&!e.target.closest(".triage,.reasons,a,select")){S.open=d.open;if(d.idx)S.sel=+d.idx;render()}
+});
+document.addEventListener("input",e=>{
+  const t=e.target;
+  if(t.id==="q"){S.q=t.value;S.sel=0;render()}
+  else if(t.id==="coq"){S.coQ=t.value;render()}
+  else if(t.dataset.w){updateWeightLabels();S._editingPrefs=true}
+  else if(S.view==="settings") S._editingPrefs=true;
+});
+document.addEventListener("change",e=>{
+  const t=e.target;
+  if(t.id==="region"){S.region=t.value;S.sel=0;lsSet("ui",{view:S.view,sort:S.sort,region:S.region});render()}
+  else if(t.id==="sort"){S.sort=t.value;lsSet("ui",{view:S.view,sort:S.sort,region:S.region});render()}
+  else if(t.id==="stage"){const j=jobById(t.dataset.id);if(j)writeTriage(j,{stage:t.value||null,...(t.value&&!tri(j.id)?.status?{status:"interested"}:{})})}
+  else if(t.dataset.move!==undefined){const id=t.dataset.move,j=jobById(id),cur=tri(id)||{};
+    const body={...cur,stage:t.value||null,updated_at:new Date().toISOString()};S.triage={...S.triage,[id]:body};render();
+    if(S.db) S.db.doc("triage/"+id).set(body).catch(()=>toast("Couldn't save. Try again."));}
+  else if(t.id==="notes"){const j=jobById(t.dataset.id);if(j&&(tri(j.id)||{}).notes!==t.value)writeTriage(j,{notes:t.value})}
+});
+function updateWeightLabels(){const v={};SUBS.forEach(k=>v[k]=+(document.getElementById("w-"+k)||{}).value||0);const tot=SUBS.reduce((a,k)=>a+v[k],0);SUBS.forEach(k=>{const s=document.getElementById("wv-"+k);if(s)s.textContent=(tot?Math.round(v[k]*100/tot):0)+"%"})}
+async function savePrefs(){
+  if(!S.db){toast("Settings save inside claude.ai only.");return}
+  const val=id=>document.getElementById(id);
+  const regions=[...document.querySelectorAll("[data-region]")].filter(i=>i.checked).map(i=>i.dataset.region);
+  const tiers=[...document.querySelectorAll("[data-ptier]")].filter(i=>i.checked).map(i=>i.dataset.ptier);
+  const raw={};SUBS.forEach(k=>raw[k]=+val("w-"+k).value||0);const tot=SUBS.reduce((a,k)=>a+raw[k],0)||1;
+  const weights={};SUBS.forEach(k=>weights[k]=Math.round(raw[k]*100/tot));
+  const clamp=(x,a,b,d)=>{x=Math.round(+x);return isFinite(x)?Math.min(b,Math.max(a,x)):d};
+  const body={regions,tiers:tiers.length?tiers:TIERS,other_regions:val("other").checked,exclude_people_mgmt:val("xpm").checked,
+    include_no_pay:val("nopay").checked,digest_size:clamp(val("dsize").value,1,100,20),later_days:clamp(val("ldays").value,1,60,7),weights,updated_at:new Date().toISOString()};
+  try{await S.db.doc("settings/prefs").set(body);S._editingPrefs=false;S.prefs={...DEFAULT_PREFS,...body};render();toast("Settings saved.")}
+  catch(e){toast("Couldn't save settings. Try again.");console.warn(e)}
+}
+async function addJob(){
+  const box=document.getElementById("paste");const text=(box&&box.value||"").trim();
+  if(!text){toast("Paste a link or a job description first.");return}
+  if(!S.db){toast("Adding jobs works inside claude.ai only.");return}
+  try{await S.db.collection("inbox").add({text:text.slice(0,20000),created_at:new Date().toISOString(),status:"new"});box.value="";toast("Added. It's processed at your next refresh.")}
+  catch(e){toast(e&&e.code==="quota_exceeded"?"The inbox is full. Run a refresh to clear it.":"Couldn't add it. Try again.");console.warn(e)}
+}
+document.addEventListener("keydown",e=>{
+  if(e.target.closest("input,textarea,select")) return;
+  if(e.key==="Escape"&&S.open){S.open=null;render();return}
+  if(S.view!=="digest"||S.open&&e.key!=="Escape") return;
+  const list=S._order||[];if(!list.length) return;
+  const k=e.key.toLowerCase();
+  if(k==="j"||k==="k"){S.sel=Math.max(0,Math.min(list.length-1,S.sel+(k==="j"?1:-1)));render();document.querySelector(".card.sel")?.scrollIntoView({block:"nearest"});e.preventDefault()}
+  else if(k==="enter"){S.open=list[S.sel].id;render()}
+  else if(k==="i"||k==="l"||k==="n"){triage(list[S.sel],{i:"interested",l:"later",n:"not"}[k])}
+});
+document.addEventListener("paste",e=>{
+  if(e.target.closest("input,textarea")) return;
+  const txt=(e.clipboardData||window.clipboardData)?.getData("text");if(!txt) return;
+  setView("add");setTimeout(()=>{const b=document.getElementById("paste");if(b){b.value=txt;b.focus()}},0);
+});
+boot();
+</script>

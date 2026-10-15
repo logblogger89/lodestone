@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-15 · **Current milestone:** M4 (build) · **Overall RAG:** 🟢
 
-**Status summary (2026-10-15).** **All watchlist companies are now indexed (Q-21, D-042).** A refresh reads 186 sources across 30 job systems (Google, Amazon, Microsoft, Meta, Apple, Workday banks, Shopify, etc.) in about 5 minutes: ~22,000 postings, ~10,600 in Canada, **546 role-family candidates** (265 Core, 136 Adjacent, 145 Stretch). 27 small or blocked companies are paste-only, each with the reason in the [source index](../../data/sources/README.md). **Next:** P1-S2, the Artifact app.
+**Status summary (2026-10-15).** **P1-S2 (the app) is live for review:** [Lodestone app](https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7) (private) with the 546 real candidates from 188 pulled companies, triage, pipeline, paste inbox, companies and settings, all saved in the app's own database. Fit scores arrive in P1-S3. **Next:** Ayush triages on the iPad (S2 exit), then P1-S3 (profile + scoring).
 
 ---
 
@@ -41,7 +41,7 @@
 | D3.1 | Eng Design Doc | Engineering | M3 | ✅ | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v1: Phase 1 = Claude Code engine + Artifact app |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ✅ | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
 | D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ✅ | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
-| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅ (ingest core, `/refresh-jobs`). P1-S1b ✅ (source index, 30 job-system adapters, 15 tests). P1-S2 next |
+| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅ (source index, ~30 adapters, careers-page reader). P1-S2 🟨 in review: [app](https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7) |
 | D4.2 | Dogfood and bug bash | Launch | M4 | ⬜ | Ayush | |
 | D5.1 | Launch checklist (privacy, security, ToS, quality) | Launch | M5 | ⬜ | Claude | |
 | D6.1 | Post-launch review and V1.x roadmap | PgM / Product | M6 | ⬜ | Ayush + Claude | |
@@ -93,6 +93,7 @@
 | D-041 | 10-14 | Engine code uses only Python's standard library (no installs in fresh cloud sessions). Refresh state (`data/state/`) is committed so each new session knows what was seen before (needed for "no longer live"). Job-board auto-matches on a shortened name are flagged and fixed in `config/ats_overrides.csv` | Fresh containers, liveness history, avoid wrong-company matches | Claude |
 | D-042 | 10-15 | **Every watchlist company gets a source.** Where no hosted board exists, Claude researches the careers site and the job system behind it, and records it in the source index (`data/sources/source_index.csv`, readable copy `data/sources/README.md`). One adapter per job system, reused across companies. Sites that block automated reading are paste-only. Sub-brands that hire through a parent (Tangerine, Simplii, Layer 6, Borealis, Ownr) are picked up via the parent | Q-21 | Ayush |
 | D-043 | 10-15 | **Careers-page reader** is the fallback for companies with no feed: Lodestone saves the page as text and Claude reads the jobs from it during `/refresh-jobs` (covered by the subscription). Applies to Vidyard, Autoverify, Digitail, Taalas. Sites that block automated visitors (Indeed, WestJet, Definity, Resolver, Ross Video, Dayforce) stay paste-only; bot checks are never bypassed | Ayush asked whether careers pages can be read directly | Ayush |
+| D-044 | 10-15 | App data layout: refresh writes jobs as 8 bucket documents plus company and freshness documents in one database write; the app owns triage, settings and the paste inbox. Only the owner can write. Until scoring (S3), "Best match" = role tier, then preferred regions, then newest | One write per refresh; Claude reads triage to learn | Claude |
 
 ## 4. Open questions
 
@@ -176,6 +177,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | P1-S2 started: app built on real data and published privately; refresh now exports to it (D-044) | Claude |
 | 2026-10-15 | Careers-page reader added (D-043): 4 more companies pulled; 6 bot-protected sites confirmed paste-only | Claude |
 | 2026-10-15 | Q-21 answered (D-042). Source index built for all 210 companies (research by 4 parallel agents); 26 new adapters; 546 candidates from 183 companies. R-15 mitigated. Eng Design updated | Claude |
 

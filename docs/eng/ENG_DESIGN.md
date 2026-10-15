@@ -58,7 +58,7 @@ Etiquette: requests are slow and sequential per site (one refresh a few times a 
 |---|---|---|
 | P1-S1 ✅ | Core library: Greenhouse, Lever, Ashby and SmartRecruiters adapters, normalization, Canada filter, dedup, rules, plus the `/refresh-jobs` command (D-039) | A refresh produces deduplicated Canadian candidates from the seed list |
 | P1-S1b ✅ | Source index and careers-site adapters for every watchlist company without a hosted board (Q-21, D-042) | Every watchlist company is either pulled or marked paste-only, with the reason |
-| P1-S2 | The Artifact app wired to the `db` capability: digest, detail, triage, pipeline, settings, companies | Ayush triages real jobs on the iPad |
+| P1-S2 🟦 | The Artifact app wired to the `db` capability: digest, detail, triage, pipeline, settings, companies. App: `app/lodestone.html`, published privately at https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7. Database layout: `jobs/b0–b7` (jobs packed 8 ways), `meta/companies`, `meta/freshness` (written by refresh); `triage/<job id>`, `settings/prefs`, `inbox/<id>` (written by the app). Only the owner can write | Ayush triages real jobs on the iPad |
 | P1-S3 | Profile (from the CV, stored in the Artifact's database, never in the repo), Claude scoring with explanations, weights | Ranked, explained digest |
 | P1-S4 | Capture inbox, pay estimates, pathway signals (ESDC list), liveness | All P0 journeys work |
 | P1-S5 | Discovery (ATS reverse search through the session's web search, VC boards, ESDC, capture spill-over), eval set | M4 dogfood |

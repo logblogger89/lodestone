@@ -20,6 +20,7 @@ def main(argv=None) -> int:
     pg.add_argument("action", choices=["fetch", "save"])
     pg.add_argument("company", nargs="?")
     pg.add_argument("file", nargs="?", help="JSON list of {title, url, location}")
+    sub.add_parser("export", help="package jobs, companies and freshness for the app's database")
     sub.add_parser("index", help="rewrite data/sources/README.md, the readable source index")
     a = ap.parse_args(argv)
     log = lambda m: print(m, file=sys.stderr)
@@ -35,6 +36,9 @@ def main(argv=None) -> int:
             if not (a.company and a.file):
                 ap.error("pages save needs a company and a JSON file")
             out = pagereader.save(a.company, json.load(open(a.file)))
+    elif a.cmd == "export":
+        from . import appexport
+        out = appexport.write()
     elif a.cmd == "index":
         from . import sources, store
         path = sources.INDEX.parent / "README.md"
