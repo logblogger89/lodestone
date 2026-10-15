@@ -36,6 +36,7 @@ BROWSER_UA = "Mozilla/5.0 (compatible; Lodestone/0.1; personal job search)"
 
 def fetch(url: str, *, timeout: float = 25, retries: int = 1, method: str = "GET",
           body: Optional[dict] = None, form: Optional[dict] = None, headers: Optional[dict] = None) -> str:
+    url = url.replace(" ", "%20")            # board names can contain spaces ("Dominion Dynamics")
     hdrs = {"User-Agent": USER_AGENT, **(headers or {})}
     data = None
     if body is not None:

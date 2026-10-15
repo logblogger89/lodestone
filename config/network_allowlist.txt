@@ -1,5 +1,6 @@
 # Domains the Claude Code environment must be allowed to reach for a Lodestone refresh.
-# Add new sources here. scripts/check_network.py reports any that are blocked.
+# scripts/check_network.py probes these plus every careers-site host in data/sources/source_index.csv,
+# so a new source row needs no edit here. List only hosts the index can't name (e.g. script CDNs).
 # Format: domain  probe-url  purpose
 boards-api.greenhouse.io     https://boards-api.greenhouse.io/v1/boards/stripe/jobs              Greenhouse job feeds
 api.lever.co                 https://api.lever.co/v0/postings/plaid?mode=json&limit=1             Lever job feeds
@@ -8,6 +9,7 @@ api.ashbyhq.com              https://api.ashbyhq.com/posting-api/job-board/ramp 
 api.smartrecruiters.com      https://api.smartrecruiters.com/v1/companies/Visa/postings?limit=1   SmartRecruiters job feeds
 apply.workable.com           https://apply.workable.com/api/v1/widget/accounts/x                  Workable job feeds
 myworkdayjobs.com            https://td.wd3.myworkdayjobs.com/wday/cxs/td/TD_Bank_Careers/jobs     Workday job feeds (banks, enterprises)
+static.xx.fbcdn.net          https://static.xx.fbcdn.net/                                         Meta careers page scripts (job-search query id)
 open.canada.ca               https://open.canada.ca/data/en/dataset/90fed587-1364-4f33-a9ee-208181dc0b97   ESDC positive-LMIA employers list
 hacker-news.firebaseio.com   https://hacker-news.firebaseio.com/v0/maxitem.json                   HN "Who is hiring" (official API)
 hn.algolia.com               https://hn.algolia.com/api/v1/search?query=hiring&tags=story         HN search (official API)

@@ -2,6 +2,7 @@
 feed params come from the source index. Descriptions are included when the feed carries them."""
 from __future__ import annotations
 
+import threading
 import time
 import urllib.parse
 import xml.etree.ElementTree as ET
@@ -11,6 +12,8 @@ from ..models import Posting
 from ..text import html_to_text
 
 UA = {"User-Agent": "Mozilla/5.0"}
+# Workable's bot filter rate-limits short user agents from cloud IPs.
+CHROME_UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"}
 
 
 def _p(adapter, company, key, jid, title, url, loc, **kw) -> Posting:
@@ -82,9 +85,13 @@ class HiBobAdapter:
     """HiBob careers sites ({sub}.careers.hibob.com)."""
     type, label, host = "hibob", "HiBob", "careers.hibob.com"
 
+    _lock = threading.Lock()                 # one Workable request at a time, spaced out
+
     def list_feed(self, company, feed):
         sub = feed["subdomain"]
-        d = get_json(f"https://{sub}.{self.host}/api/job-ad", retries=2, headers={"companyidentifier": sub})
+        with self._lock:
+            time.sleep(8)
+            d = get_json(f"https://{sub}.{self.host}/api/job-ad", retries=2, headers={"companyidentifier": sub})
         out = []
         for j in d.get("jobAdDetails") or []:
             pay = None
@@ -187,9 +194,13 @@ class WorkableAdapter:
     """Workable accounts (apply.workable.com/{sub}). Workable rate-limits cloud IPs, so go slowly."""
     type, label, host = "workable", "Workable", "apply.workable.com"
 
+    _lock = threading.Lock()                 # one Workable request at a time, spaced out
+
     def list_feed(self, company, feed):
         sub = feed["subdomain"]
-        d = get_json(f"https://{self.host}/api/v1/widget/accounts/{sub}", retries=3, headers=UA)
+        with self._lock:
+            time.sleep(8)
+            d = get_json(f"https://{self.host}/api/v1/widget/accounts/{sub}", retries=3, headers=CHROME_UA)
         return [_p(self, company, sub, j.get("shortcode"), j.get("title"), j.get("url") or j.get("application_url"),
                    ", ".join(x for x in (j.get("city"), j.get("state"), j.get("country")) if x),
                    remote_hint=j.get("telecommuting") or None, department=j.get("department") or "",

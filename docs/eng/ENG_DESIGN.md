@@ -24,11 +24,25 @@ No cloud servers and no paid API yet. **Phase 2** (Cloud Run + the Claude API, Â
 4. **Capture:** Ayush pastes a link or job description in the app. It lands in an "inbox" in the database and is processed at the next refresh. Pasted text can also be parsed right away inside the app via the `sample` capability (to verify during the build).
 5. **Learning:** Claude reads Ayush's triage from the database at each refresh, adjusts the rankings, and grows the eval set.
 
+**Where jobs come from: the source index (D-042).** `data/sources/source_index.csv` lists every watched company's job source: the job system, its feed parameters (as data, D-005), status and last Canada count. A readable copy is at `data/sources/README.md`. Sources are found two ways:
+- **Auto-detection** (`lodestone detect`) tries the company name on the hosted boards (Greenhouse, Ashby, Lever, SmartRecruiters).
+- **Research** finds the careers site for everyone else, identifies the job system behind it and verifies the feed.
+
+Each job system is one adapter file in `lodestone/adapters/`, reused by every company on it:
+| Kind | Systems | Notes |
+|---|---|---|
+| Public job-board APIs | Greenhouse, Lever, Ashby, SmartRecruiters, Workable, Gem, Rippling, BambooHR, JazzHR, HiBob, ADP, Dover, UKG Pro | Documented or widely used public endpoints |
+| Enterprise careers sites | Workday, Oracle Recruiting, SuccessFactors, Phenom, Dayforce, Eightfold, Jibe | The JSON the careers page itself calls. Workday and Oracle are asked for Canada only; full postings are fetched only for role matches |
+| Company-specific sites | Google, Amazon, Microsoft (Eightfold), Apple, Meta, Shopify, IBM, Atlassian, Coveo | Embedded page data or the site's own search API |
+| HTML pages | Avature, iCIMS, TalentBrew, Njoyn | Read from the public search-results pages; a parse that finds nothing is reported as an error |
+
+Etiquette: requests are slow and sequential per site (one refresh a few times a week), only public job listings are read, and nothing behind a login, captcha or bot challenge is bypassed. Sites that block automated reading (e.g. Indeed, WestJet's portal) are marked "paste only" and covered by capture (A3). A few sites refuse requests that name a tool in the user agent; for those Lodestone sends a plain browser user agent, at the same low volume.
+
 **What stays the same for Phase 2:** the job-system adapters, dedup, rules, prompts, scoring schema and data model are shared code. Phase 2 only changes *who calls the model* (the API instead of the session) and *where data lives* (Postgres instead of the Artifact database).
 
 **Trade-offs:** data is only as fresh as the last refresh (fine for a personal search; a scheduled Claude Code routine can automate it later without the API). A large refresh uses a meaningful share of a Pro plan's usage, so score only what passes the rules filter, and upgrade to Max only if limits bite.
 
-**Prerequisite (one-time, Ayush):** let this Claude Code environment reach the public job feeds. Add these allowed domains in the environment's network settings: `boards-api.greenhouse.io`, `api.lever.co`, `api.eu.lever.co`, `api.ashbyhq.com`, `api.smartrecruiters.com`, `apply.workable.com`, `myworkdayjobs.com`, `open.canada.ca`, `www.canada.ca`, `hacker-news.firebaseio.com`, `hn.algolia.com`.
+**Prerequisite (one-time, Ayush, done 10-14):** network access for this Claude Code environment is set to Full. `scripts/check_network.py` checks `config/network_allowlist.txt` plus every careers-site host in the source index at the start of each refresh, and names any that are blocked.
 
 **Commands (project skills, D-039).** Each command updates its own timestamp in the freshness panel (R11a):
 | Command | Does | Typical cadence |
@@ -41,7 +55,8 @@ No cloud servers and no paid API yet. **Phase 2** (Cloud Run + the Claude API, Â
 **Phase 1 build plan**
 | Sprint | Scope | Exit |
 |---|---|---|
-| P1-S1 | Core library: Greenhouse, Lever, Ashby and SmartRecruiters adapters, normalization, Canada filter, dedup, rules, plus the `/refresh-jobs` command (D-039) | A refresh produces deduplicated Canadian candidates from the seed list |
+| P1-S1 âœ… | Core library: Greenhouse, Lever, Ashby and SmartRecruiters adapters, normalization, Canada filter, dedup, rules, plus the `/refresh-jobs` command (D-039) | A refresh produces deduplicated Canadian candidates from the seed list |
+| P1-S1b âœ… | Source index and careers-site adapters for every watchlist company without a hosted board (Q-21, D-042) | Every watchlist company is either pulled or marked paste-only, with the reason |
 | P1-S2 | The Artifact app wired to the `db` capability: digest, detail, triage, pipeline, settings, companies | Ayush triages real jobs on the iPad |
 | P1-S3 | Profile (from the CV, stored in the Artifact's database, never in the repo), Claude scoring with explanations, weights | Ranked, explained digest |
 | P1-S4 | Capture inbox, pay estimates, pathway signals (ESDC list), liveness | All P0 journeys work |

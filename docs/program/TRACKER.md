@@ -3,9 +3,9 @@
 > The live status of the work in [`PROGRAM_PLAN.md`](./PROGRAM_PLAN.md). Claude updates it at the end of every working session.
 > Legend: `⬜ Not started` · `🟦 In progress` · `🟨 In review` · `✅ Done` · `⛔ Blocked` · `➖ Dropped` | RAG: `🟢` `🟡` `🔴`
 
-**Last updated:** 2026-10-14 · **Current milestone:** M4 (build) · **Overall RAG:** 🟢
+**Last updated:** 2026-10-15 · **Current milestone:** M4 (build) · **Overall RAG:** 🟢
 
-**Status summary (2026-10-14).** M3 approved (D-040). **P1-S1 done:** first real refresh pulled 71 company job feeds (6,946 postings), kept 1,307 Canadian jobs and 146 role-family candidates (77 Core, 32 Adjacent, 37 Stretch). **Gap:** 139 of 210 watchlist companies (incl. Google, Microsoft, Amazon, Shopify and the banks) have no feed we can read yet (R-15, Q-21). **Next:** P1-S2, the Artifact app.
+**Status summary (2026-10-15).** **All watchlist companies are now indexed (Q-21, D-042).** A refresh reads 186 sources across 30 job systems (Google, Amazon, Microsoft, Meta, Apple, Workday banks, Shopify, etc.) in about 5 minutes: ~22,000 postings, ~10,600 in Canada, **546 role-family candidates** (265 Core, 136 Adjacent, 145 Stretch). 27 small or blocked companies are paste-only, each with the reason in the [source index](../../data/sources/README.md). **Next:** P1-S2, the Artifact app.
 
 ---
 
@@ -41,7 +41,7 @@
 | D3.1 | Eng Design Doc | Engineering | M3 | ✅ | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v1: Phase 1 = Claude Code engine + Artifact app |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ✅ | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
 | D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ✅ | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
-| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅ (ingest: 4 ATS adapters, Canada filter, role rules, dedup, liveness, `/refresh-jobs`, 11 tests). P1-S2 next |
+| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅ (ingest core, `/refresh-jobs`). P1-S1b ✅ (source index, 30 job-system adapters, 15 tests). P1-S2 next |
 | D4.2 | Dogfood and bug bash | Launch | M4 | ⬜ | Ayush | |
 | D5.1 | Launch checklist (privacy, security, ToS, quality) | Launch | M5 | ⬜ | Claude | |
 | D6.1 | Post-launch review and V1.x roadmap | PgM / Product | M6 | ⬜ | Ayush + Claude | |
@@ -91,6 +91,7 @@
 | D-039 | 10-14 | Command names: `/refresh-jobs` (main), `/discover-companies`, `/refresh-signals`, `/rescore`. Each updates its freshness timestamp | Specific names, room for more refresh types | Ayush |
 | D-040 | 10-14 | **M3 approved:** Phase 1 design. Build starts with P1-S1 | Gate review | Ayush |
 | D-041 | 10-14 | Engine code uses only Python's standard library (no installs in fresh cloud sessions). Refresh state (`data/state/`) is committed so each new session knows what was seen before (needed for "no longer live"). Job-board auto-matches on a shortened name are flagged and fixed in `config/ats_overrides.csv` | Fresh containers, liveness history, avoid wrong-company matches | Claude |
+| D-042 | 10-15 | **Every watchlist company gets a source.** Where no hosted board exists, Claude researches the careers site and the job system behind it, and records it in the source index (`data/sources/source_index.csv`, readable copy `data/sources/README.md`). One adapter per job system, reused across companies. Sites that block automated reading are paste-only. Sub-brands that hire through a parent (Tangerine, Simplii, Layer 6, Borealis, Ownr) are picked up via the parent | Q-21 | Ayush |
 
 ## 4. Open questions
 
@@ -116,7 +117,7 @@
 | Q-16 | Is a Google-internal transfer to Google Toronto or Waterloo on the table? If so, it's an LMIA-exempt channel to track | — | ✅ Answered | Yes. PM roles that fit at Google Canada are scarce, so Ayush is open to PM-adjacent roles inside or outside Google (D-011, D-012) |
 | Q-17 | Express Entry details for DR-3 | — | ✅ Resolved | They become optional in-app inputs: an Express Entry profile and CRS calculator that adjust listings (CR-5). Ayush has the details and will enter them in the app |
 | Q-18 | Which PM-adjacent families count? | — | ✅ Resolved | Delegated to Claude (D-017), with defaults in PRD §2b. No people-management roles by default, via a toggle (CR-6) |
-| Q-21 | Coverage gap (R-15): pull a **Workday** adapter (banks, Salesforce, Nvidia, Adobe, Intel and more) plus custom adapters for **Google, Amazon, Microsoft and Shopify** forward, ahead of the app (P1-S2)? Claude recommends yes, Workday and Google first | Ayush | ⬜ Open | |
+| Q-21 | Coverage gap (R-15): build careers-site connections for companies without a hosted board, including Google? | Ayush | ✅ Answered | Yes, for every company, with an index of all sources (D-042) |
 
 ## 5. RAID log (risks, assumptions, issues, dependencies)
 
@@ -139,7 +140,7 @@
 | R-13 | Risk | Employer-level sponsorship signals from web research may be stale, wrong or unverifiable | Med | Prefer official data, e.g. ESDC's published positive-LMIA employer lists (to verify in DR-3/DR-4). Show the source, date and a confidence level, and never hide a listing because of it (D-021) | Claude | Open |
 | R-14 | Risk | A browser extension that reads LinkedIn or Wellfound pages could breach their terms, even when the user is looking at the page themselves | Med | Review ToS before building A3d. Fall back to paste URL or paste text (A3a, A3b), which are always available | Claude | Open |
 | I-01 | Issue | The environment's network blocked the required domains | — | **Resolved 10-14:** Ayush set Network access to Full. All 10 refresh sources are reachable. www.canada.ca doesn't respond to cloud servers, but it isn't needed by refresh (only browser links) | Ayush | Closed |
-| R-15 | Risk | Coverage: only 71 of 210 watchlist companies (34%) publish a feed Lodestone reads today (Greenhouse 27, Ashby 28, Lever 10, SmartRecruiters 6). Most big tech and all the banks use Workday or their own careers sites | High | Workday adapter, custom adapters for the largest employers (Q-21), paste capture (A3) for the rest | Claude | Open |
+| R-15 | Risk | Coverage: careers sites change layouts or block automated reading | Med | **Mitigated 10-15:** 183 of 210 companies pulled (was 71). Each refresh reports failing sources; a parse that finds nothing is an error, not silence. Workable is rate-limiting this environment (Borrowell, Mila, Nuvei); retry next refresh, else paste. Paste capture (A3) covers the rest | Claude | Open |
 | A-03 | Assumption | The repo stays private. The PRD holds personal immigration and family context | — | Scrub it before any public release (M6) | Claude | Open |
 | DEP-1 | Dependency | Ayush's review time at each gate | — | See Q-13 | Ayush | Open |
 | DEP-2 | Dependency | Job sources that are legal to use | — | DR-4 | Claude | Open |
@@ -174,6 +175,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | Q-21 answered (D-042). Source index built for all 210 companies (research by 4 parallel agents); 26 new adapters; 546 candidates from 183 companies. R-15 mitigated. Eng Design updated | Claude |
 
 ## 7. Published artifacts (Google Drive)
 

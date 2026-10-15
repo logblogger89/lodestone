@@ -6,169 +6,397 @@
    "matched": 71
   },
   "jobs:smartrecruiters": {
-   "at": "2026-10-14T19:53:49+00:00",
-   "postings": 705
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 1028
   },
   "jobs:greenhouse": {
-   "at": "2026-10-14T19:53:49+00:00",
-   "postings": 4496
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 4591
   },
   "jobs:ashby": {
-   "at": "2026-10-14T19:53:49+00:00",
-   "postings": 1382
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 1560
   },
   "jobs:lever": {
-   "at": "2026-10-14T19:53:49+00:00",
-   "postings": 363
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 365
   },
   "jobs": {
-   "at": "2026-10-15T01:40:13+00:00",
-   "sources_ok": 1,
-   "sources_failed": 0,
-   "canada_jobs_tracked": 1907,
-   "candidates": 200
+   "at": "2026-10-15T02:12:50+00:00",
+   "sources_ok": 183,
+   "sources_failed": 3,
+   "canada_jobs_tracked": 10509,
+   "candidates": 546
   },
   "jobs:google": {
-   "at": "2026-10-15T01:36:41+00:00",
+   "at": "2026-10-15T02:12:50+00:00",
    "postings": 70
   },
   "jobs:amazon": {
-   "at": "2026-10-15T01:36:49+00:00",
-   "postings": 437
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 438
   },
   "jobs:apple": {
-   "at": "2026-10-15T01:36:51+00:00",
+   "at": "2026-10-15T02:12:49+00:00",
    "postings": 32
   },
   "jobs:meta": {
-   "at": "2026-10-15T01:36:56+00:00",
+   "at": "2026-10-15T02:12:50+00:00",
    "postings": 8
   },
   "jobs:eightfold": {
-   "at": "2026-10-15T01:40:13+00:00",
-   "postings": 58
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 143
+  },
+  "jobs:workday": {
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 6436
+  },
+  "jobs:phenom": {
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 815
+  },
+  "jobs:jibe": {
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 181
+  },
+  "jobs:oracle_hcm": {
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 51
+  },
+  "jobs:rippling": {
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 711
+  },
+  "jobs:atlassian": {
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 362
+  },
+  "jobs:bamboohr": {
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 26
+  },
+  "jobs:gem": {
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 44
+  },
+  "jobs:workable": {
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 16
+  },
+  "jobs:successfactors": {
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 3203
+  },
+  "jobs:coveo": {
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 52
+  },
+  "jobs:dayforce": {
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 112
+  },
+  "jobs:ibm": {
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 79
+  },
+  "jobs:ultipro": {
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 73
+  },
+  "jobs:talentbrew": {
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 24
+  },
+  "jobs:icims": {
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 116
+  },
+  "jobs:avature": {
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 1022
+  },
+  "jobs:jazzhr": {
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 24
+  },
+  "jobs:shopify": {
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 115
+  },
+  "jobs:dover": {
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 2
+  },
+  "jobs:adp": {
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 6
+  },
+  "jobs:hibob": {
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 74
+  },
+  "jobs:njoyn": {
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 480
   }
  },
  "history": [
   {
-   "component": "ats_detection",
-   "at": "2026-10-14T19:53:39+00:00",
-   "companies": 210,
-   "matched": 71
+   "component": "jobs:successfactors",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 3202
   },
   {
-   "component": "jobs:smartrecruiters",
-   "at": "2026-10-14T19:53:49+00:00",
-   "postings": 705
+   "component": "jobs:njoyn",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 480
   },
   {
-   "component": "jobs:greenhouse",
-   "at": "2026-10-14T19:53:49+00:00",
-   "postings": 4496
+   "component": "jobs:coveo",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 52
   },
   {
-   "component": "jobs:ashby",
-   "at": "2026-10-14T19:53:49+00:00",
-   "postings": 1382
+   "component": "jobs:dayforce",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 112
   },
   {
-   "component": "jobs:lever",
-   "at": "2026-10-14T19:53:49+00:00",
-   "postings": 363
-  },
-  {
-   "component": "jobs",
-   "at": "2026-10-14T19:53:49+00:00",
-   "feeds_ok": 71,
-   "feeds_failed": 0,
-   "canada_jobs_tracked": 1307,
-   "candidates": 146
+   "component": "jobs:avature",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 1022
   },
   {
    "component": "jobs:google",
-   "at": "2026-10-15T01:36:32+00:00",
-   "postings": 20
-  },
-  {
-   "component": "jobs",
-   "at": "2026-10-15T01:36:32+00:00",
-   "sources_ok": 1,
-   "sources_failed": 0,
-   "canada_jobs_tracked": 1327,
-   "candidates": 147
-  },
-  {
-   "component": "jobs:google",
-   "at": "2026-10-15T01:36:41+00:00",
+   "at": "2026-10-15T02:07:16+00:00",
    "postings": 70
   },
   {
-   "component": "jobs",
-   "at": "2026-10-15T01:36:41+00:00",
-   "sources_ok": 1,
-   "sources_failed": 0,
-   "canada_jobs_tracked": 1377,
-   "candidates": 147
+   "component": "jobs:jazzhr",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 24
   },
   {
-   "component": "jobs:amazon",
-   "at": "2026-10-15T01:36:49+00:00",
-   "postings": 437
+   "component": "jobs:ibm",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 79
   },
   {
-   "component": "jobs",
-   "at": "2026-10-15T01:36:49+00:00",
-   "sources_ok": 1,
-   "sources_failed": 0,
-   "canada_jobs_tracked": 1814,
-   "candidates": 183
+   "component": "jobs:ultipro",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 73
   },
   {
-   "component": "jobs:apple",
-   "at": "2026-10-15T01:36:51+00:00",
-   "postings": 32
+   "component": "jobs:talentbrew",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 24
   },
   {
-   "component": "jobs",
-   "at": "2026-10-15T01:36:51+00:00",
-   "sources_ok": 1,
-   "sources_failed": 0,
-   "canada_jobs_tracked": 1841,
-   "candidates": 184
+   "component": "jobs:icims",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 116
   },
   {
    "component": "jobs:meta",
-   "at": "2026-10-15T01:36:56+00:00",
+   "at": "2026-10-15T02:07:16+00:00",
    "postings": 8
   },
   {
-   "component": "jobs",
-   "at": "2026-10-15T01:36:56+00:00",
-   "sources_ok": 1,
-   "sources_failed": 0,
-   "canada_jobs_tracked": 1849,
-   "candidates": 185
+   "component": "jobs:eightfold",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 143
+  },
+  {
+   "component": "jobs:shopify",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 115
+  },
+  {
+   "component": "jobs:dover",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 2
+  },
+  {
+   "component": "jobs:adp",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 6
+  },
+  {
+   "component": "jobs:hibob",
+   "at": "2026-10-15T02:07:16+00:00",
+   "postings": 74
   },
   {
    "component": "jobs",
-   "at": "2026-10-15T01:37:58+00:00",
-   "sources_ok": 0,
+   "at": "2026-10-15T02:07:16+00:00",
+   "sources_ok": 185,
    "sources_failed": 1,
-   "canada_jobs_tracked": 1849,
-   "candidates": 185
+   "canada_jobs_tracked": 10440,
+   "candidates": 569
+  },
+  {
+   "component": "jobs:ashby",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 1560
+  },
+  {
+   "component": "jobs:lever",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 365
+  },
+  {
+   "component": "jobs:greenhouse",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 4591
+  },
+  {
+   "component": "jobs:workday",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 6436
+  },
+  {
+   "component": "jobs:phenom",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 815
+  },
+  {
+   "component": "jobs:amazon",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 438
+  },
+  {
+   "component": "jobs:jibe",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 181
+  },
+  {
+   "component": "jobs:oracle_hcm",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 51
+  },
+  {
+   "component": "jobs:apple",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 32
+  },
+  {
+   "component": "jobs:rippling",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 711
+  },
+  {
+   "component": "jobs:smartrecruiters",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 1028
+  },
+  {
+   "component": "jobs:atlassian",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 362
+  },
+  {
+   "component": "jobs:bamboohr",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 26
+  },
+  {
+   "component": "jobs:gem",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 44
+  },
+  {
+   "component": "jobs:successfactors",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 3203
+  },
+  {
+   "component": "jobs:njoyn",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 480
+  },
+  {
+   "component": "jobs:coveo",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 52
+  },
+  {
+   "component": "jobs:dayforce",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 112
+  },
+  {
+   "component": "jobs:avature",
+   "at": "2026-10-15T02:12:49+00:00",
+   "postings": 1022
+  },
+  {
+   "component": "jobs:google",
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 70
+  },
+  {
+   "component": "jobs:jazzhr",
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 24
+  },
+  {
+   "component": "jobs:ibm",
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 79
+  },
+  {
+   "component": "jobs:ultipro",
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 73
+  },
+  {
+   "component": "jobs:talentbrew",
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 24
+  },
+  {
+   "component": "jobs:icims",
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 116
+  },
+  {
+   "component": "jobs:meta",
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 8
   },
   {
    "component": "jobs:eightfold",
-   "at": "2026-10-15T01:40:13+00:00",
-   "postings": 58
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 143
+  },
+  {
+   "component": "jobs:shopify",
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 115
+  },
+  {
+   "component": "jobs:dover",
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 2
+  },
+  {
+   "component": "jobs:adp",
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 6
+  },
+  {
+   "component": "jobs:hibob",
+   "at": "2026-10-15T02:12:50+00:00",
+   "postings": 74
   },
   {
    "component": "jobs",
-   "at": "2026-10-15T01:40:13+00:00",
-   "sources_ok": 1,
-   "sources_failed": 0,
-   "canada_jobs_tracked": 1907,
-   "candidates": 200
+   "at": "2026-10-15T02:12:50+00:00",
+   "sources_ok": 183,
+   "sources_failed": 3,
+   "canada_jobs_tracked": 10509,
+   "candidates": 546
   }
  ]
 }

@@ -7,6 +7,7 @@ from .eightfold import EightfoldAdapter
 from .enterprise import ALL as ENTERPRISE
 from .google import GoogleAdapter
 from .greenhouse import GreenhouseAdapter
+from .html_sites import ALL as HTML_SITES
 from .lever import LeverAdapter
 from .meta import MetaAdapter
 from .oracle_hcm import OracleHcmAdapter
@@ -16,7 +17,7 @@ from .workday import WorkdayAdapter
 
 ADAPTERS = {a.type: a for a in (
     GreenhouseAdapter(), LeverAdapter(), AshbyAdapter(), SmartRecruitersAdapter(), WorkdayAdapter(),
-    EightfoldAdapter(), GoogleAdapter(), AmazonAdapter(), AppleAdapter(), MetaAdapter(), OracleHcmAdapter(), *SMALL_ATS, *ENTERPRISE)}
+    EightfoldAdapter(), GoogleAdapter(), AmazonAdapter(), AppleAdapter(), MetaAdapter(), OracleHcmAdapter(), *SMALL_ATS, *ENTERPRISE, *HTML_SITES)}
 # Board-style systems we can auto-detect from a company name, most common first.
 DETECT_ORDER = ["greenhouse", "ashby", "lever", "smartrecruiters"]
 
