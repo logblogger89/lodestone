@@ -246,7 +246,7 @@ const FRESH_LABEL = {jobs:"Job pulls (all sources)", source_index:"Source index"
 /* ---------- state ---------- */
 const S = {
   db:null, ready:false, offline:false, canWrite:true,
-  jobs:{}, triage:{}, prefs:{...DEFAULT_PREFS}, companies:[], freshness:{}, inbox:[],
+  jobs:{}, triage:{}, prefs:{...DEFAULT_PREFS}, companies:[], freshness:{}, inbox:[], mreq:{},
   view:"digest", open:null, sel:0, show:"todo", region:"preferred", q:"", tierOn:new Set(TIERS), sort:"best",
   coQ:"", coStatus:"all", expanded:false, lastVisit:null, pendingReasons:null
 };
@@ -348,8 +348,26 @@ function payPanel(j){
   const mk=(j.pay||{}).market, k$=v=>"CA$"+Math.round(v/1000)+"K";
   const market=mk?`<div class="payrow mkt-row"><span class="lbl">Market check<span class="sub">levels.fyi · ${esc(j.company)} ${esc(mk.level)} · ${esc(mk.location)} · median total pay (base + stock + bonus)</span></span><span class="amt">${esc(k$(mk.median_total))}</span></div>
     <p class="note">${(mk.neighbours||[]).map(n=>`${esc(n.level)} ${esc(k$(n.median_total))}`).join(" · ")}${mk.note?" · "+esc(mk.note):""} · Data updated ${esc(mk.updated||"")}. <a href="${esc(safeUrl(mk.page_url))}" target="_blank" rel="noopener">Data source: Levels.fyi ↗</a></p>`
-    :`<p class="note">Want a market check? Ask Claude: “check levels.fyi for ${esc(j.company)} ${esc(j.title)}”.</p>`;
+    :marketAsk(j);
   return `<section class="panel"><h4>Pay</h4>${body}${est}${eq}${market}${evidence}</section>`;
+}
+/* Market check requests (D-055): one levels.fyi read per role you ask for, answered by Claude's next session. */
+const MREQ_DAILY=20;   // mirrors config/market.json daily_cap
+const MREQ_MSG={requested:"Requested. Claude checks levels.fyi at its next session.",no_data:"levels.fyi has no Canadian figures for this company and role type.",failed:"The check failed. Tap to try again."};
+function marketAsk(j){
+  const r=S.mreq[j.id];
+  if(r&&r.status==="requested") return `<p class="note mreq"><span class="est">Requested</span> ${MREQ_MSG.requested}</p>`;
+  const msg=r&&MREQ_MSG[r.status]?`<span class="note">${esc(r.result||MREQ_MSG[r.status])}</span> `:"";
+  if(r&&r.status==="no_data") return `<p class="note mreq">${msg}</p>`;
+  return `<p class="note mreq">${msg}<button class="tbtn" data-act="mreq" data-id="${esc(j.id)}">Request market check</button> Median pay at this level from levels.fyi.</p>`;
+}
+async function requestMarket(j){
+  if(!S.db||!S.canWrite){toast("Open Lodestone signed in as its owner to request a check.");return}
+  const day=Date.now()-DAY, recent=Object.values(S.mreq).filter(r=>(parseWhen(r.requested_at)||0)>day).length;
+  if(recent>=MREQ_DAILY){toast(`That's ${MREQ_DAILY} requests today. levels.fyi allows reads you ask for, not bulk pulls, so try again tomorrow.`);return}
+  const body={status:"requested",requested_at:new Date().toISOString(),company:j.company,title:j.title};
+  S.mreq={...S.mreq,[j.id]:body};render();
+  try{await S.db.doc("market_req/"+j.id).set(body);toast("Requested. It's answered at Claude's next session.")}catch(e){toast("Couldn't save. Check your connection and try again.");console.warn(e)}
 }
 /* Pay sort: base (or unlabelled) ranges compete with each other; bonus-inclusive, OTE and total-comp ranges rank after them. */
 const payMax=j=>{const pi=payInfo(j),m=pi.main;if(!m) return pi.est?(pi.est.max||0)-1:-1;const v=(m.interval==="hour"?m.max*2000:m.max)||0;return (["base","unspecified",undefined].includes(m.kind)?1e9:0)+v};
@@ -420,6 +438,7 @@ async function boot(){
   db.doc("settings/prefs").onSnapshot(d=>{S.prefs={...DEFAULT_PREFS,...(d.exists?d.data():{})};render()},fail);
   db.doc("profile/main").onSnapshot(d=>{S.profile=d.exists?d.data():null;render()},fail);
   db.collection("inbox").onSnapshot(snap=>{S.inbox=snap.docs.map(d=>({id:d.id,...d.data()}));render()},fail);
+  db.collection("market_req").onSnapshot(snap=>{const m={};snap.docs.forEach(d=>m[d.id]=d.data());S.mreq=m;render()},fail);
   window.addEventListener("pagehide",()=>lsSet("lastVisit",Date.now()));
 }
 async function writeTriage(j,patch){
@@ -737,6 +756,7 @@ document.addEventListener("click",e=>{
   if(d.act==="fresh"){S.open="__fresh";render();return}
   if(d.act==="close"){S.open=null;render();return}
   if(d.act==="addjob"){addJob();return}
+  if(d.act==="mreq"){e.stopPropagation();const j=jobById(d.id);if(j)requestMarket(j);return}
   if(d.act==="saveprefs"){savePrefs();return}
   if(d.act==="saveprofile"){saveProfile();return}
   if(d.act==="resetw"){SUBS.forEach(k=>{const i=document.getElementById("w-"+k);if(i)i.value=DEFAULT_PREFS.weights[k]});updateWeightLabels();S._editingPrefs=true;return}

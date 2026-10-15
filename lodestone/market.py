@@ -8,6 +8,7 @@ attribution rule).
 
   python3 -m lodestone market fetch "<job id, or words from company + title>"   -> reads the page, prints levels
   python3 -m lodestone market add <job id> <level> ["why this level"]          -> attaches the check to the role
+  python3 -m lodestone market pending <folder>                                  -> app requests to answer (max daily_cap)
 """
 from __future__ import annotations
 
@@ -118,6 +119,20 @@ def add(jid: str, level: str, note: str = "") -> dict:
                    "neighbours": page["levels"][max(0, i - 1):i] + page["levels"][i + 1:i + 2], "note": note}
     store.save("market_checks", checks)
     return {"status": "added", "id": jid, **checks[jid]}
+
+
+def pending(folder: str) -> dict:
+    """Requests saved from the app (`ArtifactData list market_req` with out_dir), oldest first, capped per day."""
+    from pathlib import Path
+    reqs = []
+    for f in sorted(Path(folder).rglob("*.json")):
+        d = json.loads(f.read_text())
+        d = d.get("data", d) if isinstance(d, dict) else {}
+        if d.get("status") == "requested":
+            reqs.append({"id": f.stem, **{k: d.get(k) for k in ("company", "title", "requested_at")}})
+    reqs.sort(key=lambda r: r.get("requested_at") or "")
+    cap = config().get("daily_cap", 20)
+    return {"process": reqs[:cap], "deferred": [r["id"] for r in reqs[cap:]]}
 
 
 def _now() -> str:

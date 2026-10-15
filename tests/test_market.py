@@ -63,6 +63,16 @@ class TestMarket(unittest.TestCase):
         self.assertEqual((out["median_total"], [n["level"] for n in out["neighbours"]]), (234562, ["L5", "L7"]))
         self.assertIn(jid, self.state["market_checks"])
 
+    def test_pending_is_oldest_first_and_capped(self):
+        d = Path(self.tmp.name) / "req" / "market_req"
+        d.mkdir(parents=True)
+        for i in range(25):
+            (d / f"{i:012x}.json").write_text(json.dumps({"status": "requested", "requested_at": f"2026-10-15T{i:02d}:00:00Z"}))
+        (d / "done.json").write_text(json.dumps({"status": "done"}))
+        out = market.pending(str(d.parent))
+        self.assertEqual((len(out["process"]), len(out["deferred"])), (20, 5))
+        self.assertEqual(out["process"][0]["id"], f"{0:012x}")
+
 
 if __name__ == "__main__":
     unittest.main()

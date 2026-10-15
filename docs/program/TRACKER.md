@@ -104,6 +104,7 @@
 | D-052 | 10-15 | **Paste inbox:** at each refresh, pasted items are processed: known links are matched to existing roles; readable pages are fetched and read by Claude; LinkedIn/Indeed/Glassdoor/Wellfound are never fetched, so the pasted description is used or the app asks for it; non-Canadian roles are declined with a note. Added roles dedup against everything known, get pay read from the text, are scored like any other, and are never marked closed by a refresh. Status and a one-line result show in the app's Add job page | R3, A3a–c | Claude |
 | D-053 | 10-15 | **Pay estimates:** roles with no posted Canadian range get an "est." base range from Lodestone's own posted Canadian ranges, in order: same company and level (high confidence), same company one level away ±15% per level (medium), 3+ similar-segment companies at the level (medium-low), 5+ watched companies at the level (low). Median of comparables, rounded to $5K. Shown muted with basis, confidence and example postings; the pay sub-score from an estimate is capped at 75 so a guess never outranks a posted range. Caveat shown: Ontario doesn't require ranges above $200K, so senior estimates may run low | R5, B8 | Claude |
 | D-054 | 10-15 | **Market pay checks on request (Q-22):** levels.fyi is read only when Ayush asks about a named role (its terms forbid automated reading and compiled datasets; robots.txt allows user-requested fetches). One page per role, Canadian figures only (Toronto, Waterloo, else Canada; US fallbacks rejected); Claude picks the matching company level and the app shows that level's median total pay with its neighbours, date and a "Data source: Levels.fyi" link. Never used in a refresh, and display-only (not in the fit score) because it is total pay, not base. Runbook: `/market-check` | R5 | Ayush |
+| D-055 | 10-15 | **Request market check from the app:** a button in each role's Pay panel saves a request (`market_req/<role>`); Claude answers requests at the start of its next session or refresh, one levels.fyi read per requested role. Cap: 20 requests a day (Ayush), enforced in the app and in processing (`config/market.json` daily_cap); extras wait a day. Statuses: Requested, done (figure shows), no Canadian data, failed (retry) | R5 | Ayush |
 
 ## 4. Open questions
 
@@ -190,6 +191,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | "Request market check" button in the app (D-055), 20 a day; `market pending`; runbooks updated; tests | Claude |
 | 2026-10-15 | On-request levels.fyi market checks built (D-054): `market fetch/add`, app Pay panel row, `/market-check` runbook, tests | Claude |
 | 2026-10-15 | Q-22: levels.fyi terms checked; automated/scheduled reading not allowed; build paused pending Ayush | Claude |
 | 2026-10-15 | Q-22: Ayush chose levels.fyi direct reads (option B); www.levels.fyi added to the network allowlist; waiting on the environment setting | Claude |

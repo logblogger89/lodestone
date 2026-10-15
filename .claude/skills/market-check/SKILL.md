@@ -22,4 +22,17 @@ the paste inbox instead (he pastes the pages himself).
    `data/state/market_checks.json`, and tell Ayush the figure in plain words: it is median **total** pay
    (base + stock + bonus), so it runs higher than posted base ranges.
 
+## Requests from the app (D-055)
+
+Ayush can tap **Request market check** on a role in the app. At the start of every session (and in `/refresh-jobs`
+step 3c), answer them:
+
+1. `ArtifactData list market_req` with `out_dir` set to a scratchpad folder, then
+   `python3 -m lodestone market pending <that folder>`. It returns up to `daily_cap` (20, `config/market.json`)
+   requests, oldest first; the rest wait for the next day.
+2. Run steps 1–3 above for each. Each request is Ayush asking about that one role, which is why this is allowed;
+   never add roles he didn't request.
+3. Write each back with `ArtifactData update market_req/<id>` (if_version from the list): `status` `done`, `no_data`
+   or `failed`, and a one-line `result` (fields `status` and `result` only). Then export and push as in step 4.
+
 Always credit "Data source: Levels.fyi" with the link (their attribution rule); the app does this automatically.
