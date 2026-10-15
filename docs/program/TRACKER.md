@@ -41,7 +41,7 @@
 | D3.1 | Eng Design Doc | Engineering | M3 | ✅ | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v1: Phase 1 = Claude Code engine + Artifact app |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ✅ | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
 | D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ✅ | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
-| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 ✅ (calibrated on 11 triaged roles, D-049), P1-S4 🟦 (pathway signals first) |
+| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 ✅ (calibrated on 11 triaged roles, D-049), P1-S4 🟦 (pathway signals ✅; paste inbox, pay estimates next) |
 | D4.2 | Dogfood and bug bash | Launch | M4 | ⬜ | Ayush | |
 | D5.1 | Launch checklist (privacy, security, ToS, quality) | Launch | M5 | ⬜ | Claude | |
 | D6.1 | Post-launch review and V1.x roadmap | PgM / Product | M6 | ⬜ | Ayush + Claude | |
@@ -99,6 +99,7 @@
 | D-047 | 10-15 | Fit scoring runs in-session with Claude (Sonnet sub-agents, 2 batches at a time, results saved per batch) against rubric v1.0; only new or changed roles are re-scored on later refreshes. Inferred pathway scores are normalized per company | Usage-limit interruption (R-16) and cross-batch consistency | Claude |
 | D-048 | 10-15 | **Freshness** joins the fit score as a 7th factor (default 10%), computed by the app daily from the posting date (≤14 days 100 … >90 days 5; undated roles use first-seen, capped at 70). Optional Settings cut-off hides roles older than N days (off by default). Postings over 45 days show their age in amber | Ayush: a 50-day-old posting is likely filled | Ayush |
 | D-049 | 10-15 | Freshness stays as designed (no exception for evergreen postings that are still live). **P1-S3 closed:** of Ayush's 9 Interested picks, 5 rank in the top 7 and all in the top 20%; the one "Not for me" (50-day-old posting) dropped from #8 to #29 with freshness | Calibration on 11 triaged roles | Ayush |
+| D-050 | 10-15 | **Pathway signals from ESDC:** the last 9 quarters of positive-LMIA employer lists (2024Q1–2026Q1) are matched to the watchlist (58 companies, 54 with tech roles). Each role's pathway score now comes from evidence: Google ICT 95; posting offers sponsorship 85; frequent LMIA employer (≥10 tech positions or ≥5 Global Talent Stream) 80; any tech LMIA 70; non-tech only 55; no evidence 45; posting says must already be eligible 15. Shown as chips with status (Stated / Inferred / Unknown) and a source link; `/refresh-signals` reloads quarterly | R10, DR-3, CR-3 | Claude |
 
 ## 4. Open questions
 
@@ -184,6 +185,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | ESDC LMIA pathway signals live (D-050); `/refresh-signals` skill added | Claude |
 | 2026-10-15 | P1-S3 closed after calibration (D-049); P1-S4 started | Claude |
 | 2026-10-15 | Freshness factor and old-posting cut-off added (D-048); iCIMS posting dates captured | Claude |
 | 2026-10-15 | All 543 roles scored (D-047); top matches include Workday, Microsoft, Amazon, StackAdapt, Zip, Okta Principal/Staff PM roles. Scores live in the app | Claude |

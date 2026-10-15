@@ -107,6 +107,10 @@ a.src:hover{border-color:var(--accent);color:var(--accent)}
 .ring .val{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--font-mono);font-weight:500;font-size:16px;color:var(--fg)}
 .ring .trk{stroke:var(--surface-2)} .ring .arc{stroke:var(--accent)} .ring .ndl{fill:var(--accent)}
 .stale{color:var(--warn);font-weight:600}
+.chip.s-stated{background:var(--good-soft);color:var(--good)}
+.chip.s-inferred{background:var(--warn-soft);color:var(--warn)}
+.chip.s-unknown{background:var(--unk-soft);color:var(--unk)}
+.chip.s-none{background:var(--bad-soft);color:var(--bad)}
 .fitsum{font-size:13px;color:var(--muted);margin:-4px 0 8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .bar{display:grid;grid-template-columns:76px minmax(0,1fr) 34px;gap:4px 10px;align-items:center;font-size:13px}
 .bar .track{height:8px;background:var(--surface-2);border-radius:4px;overflow:hidden}
@@ -435,8 +439,24 @@ function freshChip(){
 function fitScore(j){
   if(!j.fit||!j.fit.subs) return null;
   const W=S.prefs.weights||DEFAULT_PREFS.weights; let t=0,sum=0;
-  SUBS.forEach(k=>{const w=wv(W,k);t+=w;sum+=w*(k==="freshness"?freshness(j).score:(+j.fit.subs[k]||0))});
+  SUBS.forEach(k=>{const w=wv(W,k);t+=w;sum+=w*subVal(j,k)});
   return t?Math.round(sum/t):null;
+}
+/* Sub-score for one factor: freshness and pathway come from data the app holds (daily date math; ESDC and
+   posting evidence), the rest from Claude's scoring. */
+function subVal(j,k){
+  if(k==="freshness") return freshness(j).score;
+  if(k==="pathway"&&j.pathway) return +j.pathway.score||0;
+  return +((j.fit&&j.fit.subs)||{})[k]||0;
+}
+function pathwayWhy(j){const g=(j.pathway&&j.pathway.signals)||[];return g.length?g.map(x=>`${x.label} (${x.status.toLowerCase()})`).join("; "):""}
+const SIG_CLASS={"Strong route":"s-stated","Stated":"s-stated","Inferred":"s-inferred","Unknown":"s-unknown"};
+function pathwayChips(j){
+  const g=(j.pathway&&j.pathway.signals)||[];
+  return g.filter(x=>x.status!=="Unknown").slice(0,2).map(x=>{
+    const bad=x.label.startsWith("Posting limits");
+    const short=x.label==="Intra-company transfer"?"Internal transfer":x.label.startsWith("Hires from abroad")?"Hires from abroad":bad?"No sponsorship":"Sponsorship offered";
+    return `<span class="chip ${bad?"s-none":SIG_CLASS[x.status]||""}" title="${esc(x.detail||"")}">${esc(short)} · ${esc(x.status)}</span>`;}).join("");
 }
 const managesPeople=j=>j.fit?!!j.fit.people_mgmt:!!j.people_mgmt;
 /* Compass ring: the arc fills with the score and the needle points to true north at 100. */
@@ -472,7 +492,7 @@ function card(j,i){
       <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span>${(j.fit&&j.fit.work_mode&&j.fit.work_mode!=="unclear")?`<span>${esc(j.fit.work_mode)}</span>`:j.workplace?`<span>${esc(j.workplace)}</span>`:""}${staleTag(j)}</div>
       ${j.fit&&j.fit.summary?`<p class="fitsum">${esc(j.fit.summary)}</p>`:""}
       <div class="row">${payCard(j)}${srcLinks(j)}
-        ${isNew(j)?'<span class="chip warn">New</span>':""}${managesPeople(j)?'<span class="chip" title="The posting says this role manages people">Manages people</span>':""}${((j.fit&&j.fit.flags)||[]).slice(0,2).map(f=>`<span class="chip warn">${esc(f)}</span>`).join("")}</div>
+        ${pathwayChips(j)}${isNew(j)?'<span class="chip warn">New</span>':""}${managesPeople(j)?'<span class="chip" title="The posting says this role manages people">Manages people</span>':""}${((j.fit&&j.fit.flags)||[]).slice(0,2).map(f=>`<span class="chip warn">${esc(f)}</span>`).join("")}</div>
       ${S.pendingReasons===j.id&&t.status==="not"?reasonsRow(j):""}
     </div>
     <div class="triage">${triageBtns(j)}</div>
@@ -513,10 +533,21 @@ function viewDigest(){
   <p class="note">"Best match" ranks by fit score (your weights in Settings), then role tier and region for anything not scored yet. Keyboard: <kbd>J</kbd>/<kbd>K</kbd> move, <kbd>I</kbd>/<kbd>L</kbd>/<kbd>N</kbd> triage, <kbd>Enter</kbd> opens.</p>`;
 }
 function offlineState(){return `<div class="empty"><h2>Open Lodestone on claude.ai to see your jobs</h2><p>Your jobs and triage live in this page's private database, which only loads inside claude.ai while you're signed in.</p></div>`}
+/* Pathway signals (R10): each with its status and a link to the evidence. Signals, not immigration advice. */
+function pathwayPanel(j){
+  const g=(j.pathway&&j.pathway.signals)||[];
+  if(!g.length) return "";
+  return `<section class="panel"><h4>Work-permit pathway</h4>
+    <table class="tbl"><thead><tr><th>Signal</th><th>Status</th><th>Evidence</th></tr></thead><tbody>
+    ${g.map(x=>`<tr><td>${esc(x.label)}</td><td><span class="chip ${x.label.startsWith("Posting limits")?"s-none":SIG_CLASS[x.status]||""}">${esc(x.status)}</span></td><td>${esc(x.detail||"")}${x.url?` <a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener">Source ↗</a>`:""}</td></tr>`).join("")}
+    </tbody></table>
+    <p class="note">Any job you do while physically in Canada counts toward Canadian Experience Class (CEC) once you're there. Remote work from the US doesn't count. Signals, not immigration advice: check with a licensed consultant (RCIC) before acting.</p>
+  </section>`;
+}
 function fitPanel(j){
   const f=j.fit; if(!f||!f.subs) return `<section class="panel"><h4>Fit</h4><p class="nopay">Not scored yet. It's scored at the next refresh.</p></section>`;
   const W=S.prefs.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+wv(W,k),0)||1, v=fitScore(j), fr=freshness(j);
-  const sub=k=>k==="freshness"?fr.score:(+f.subs[k]||0), why=k=>k==="freshness"?fr.why:((f.reasons||{})[k]||"");
+  const sub=k=>subVal(j,k), why=k=>k==="freshness"?fr.why:(k==="pathway"&&j.pathway)?pathwayWhy(j):((f.reasons||{})[k]||"");
   return `<section class="panel"><h4>Fit for you</h4>
     <div class="overall">${ring(v)}<p>${esc(f.summary||"")}${f.level_guess?`<br><span class="note">Level: ${esc(f.level_guess)}</span>`:""}</p></div>
     ${SUBS.map(k=>`<div class="bar"><span>${SUBLABEL[k]} <span class="w">${Math.round(wv(W,k)*100/tot)}%</span></span><div class="track"><div class="fill" style="width:${sub(k)}%"></div></div><span class="mono">${sub(k)}</span><span class="why">${esc(why(k))}</span></div>`).join("")}
@@ -543,6 +574,7 @@ function viewDetail(j){
     <dt>Manages people</dt><dd>${j.people_mgmt?"Title suggests it":"Not from the title"}</dd>
   </dl></section>
   ${payPanel(j)}
+  ${pathwayPanel(j)}
   <section class="panel"><h4>Where it's posted</h4>
     <table class="tbl"><thead><tr><th>Source</th><th>Status</th><th></th></tr></thead><tbody>
     ${(j.sources||[]).map(s=>`<tr><td>${esc(s.label)}</td><td>${s.live===false?'<span class="flag">Gone</span>':"Live"}</td><td><a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">Open posting ↗</a></td></tr>`).join("")}
@@ -551,7 +583,7 @@ function viewDetail(j){
     <div class="field"><label for="stage">Stage</label><select id="stage" data-id="${esc(j.id)}"><option value="">Not in pipeline</option>${STAGES.map(s=>`<option${t.stage===s?" selected":""}>${s}</option>`).join("")}</select></div>
     <div class="field"><label for="notes">Notes</label><textarea id="notes" data-id="${esc(j.id)}" placeholder="Recruiter, referral, follow-up dates">${esc(t.notes||"")}</textarea></div>
   </section>
-  <p class="soon">Coming next: pay estimates for roles without a posted range, and immigration-pathway signals from the government's LMIA employer list (Sprint 4).</p>`;
+  <p class="soon">Coming next: pay estimates for roles without a posted range (Sprint 4).</p>`;
 }
 function viewPipeline(){
   const items=Object.entries(S.triage).filter(([,t])=>t&&t.stage);
@@ -652,8 +684,8 @@ function freshPanel(){
   return `<div class="row" style="justify-content:space-between"><h2>Last updated</h2><button class="btn" data-act="close">Close</button></div>
   <p class="note">Lodestone updates when you run <kbd>/refresh-jobs</kbd> in a Claude Code session. Anything older than 7 days is flagged.</p>
   <section class="panel"><table class="tbl"><thead><tr><th>Component</th><th>Updated</th><th></th></tr></thead><tbody>${keys.map(row).join("")||'<tr><td colspan="3">No refresh recorded yet.</td></tr>'}
-  <tr><td>Fit scoring<div class="note">Arrives in Sprint 3</div></td><td>Not yet</td><td></td></tr>
-  <tr><td>Pathway signals (ESDC list)<div class="note">Arrives in Sprint 4</div></td><td>Not yet</td><td></td></tr></tbody></table></section>`;
+
+</tbody></table></section>`;
 }
 
 /* ---------- render ---------- */

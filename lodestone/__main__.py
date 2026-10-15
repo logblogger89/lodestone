@@ -24,6 +24,8 @@ def main(argv=None) -> int:
     sc.add_argument("action", choices=["prepare", "ingest"])
     sc.add_argument("file", nargs="?", help="results JSON (a list) for ingest")
     sc.add_argument("--batch", type=int, default=70)
+    sg = sub.add_parser("signals", help="load ESDC positive-LMIA lists into per-company pathway signals")
+    sg.add_argument("action", choices=["load"])
     sub.add_parser("export", help="package jobs, companies and freshness for the app's database")
     sub.add_parser("index", help="rewrite data/sources/README.md, the readable source index")
     a = ap.parse_args(argv)
@@ -48,6 +50,9 @@ def main(argv=None) -> int:
             if not a.file:
                 ap.error("score ingest needs a results file")
             out = scoring.ingest(json.load(open(a.file)))
+    elif a.cmd == "signals":
+        from . import signals
+        out = signals.load(log=log)
     elif a.cmd == "export":
         from . import appexport
         out = appexport.write()

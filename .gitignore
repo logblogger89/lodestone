@@ -3,3 +3,4 @@ __pycache__/
 data/state/page_inbox/
 data/state/app_export/
 data/state/score_inbox/
+data/external/

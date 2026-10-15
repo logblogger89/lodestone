@@ -148,14 +148,14 @@
    "at": "2026-10-15T05:50:45+00:00",
    "rubric": "1.0",
    "scored": 543
+  },
+  "signals": {
+   "at": "2026-10-15T06:07:14+00:00",
+   "window": "2024Q1–2026Q1",
+   "companies_with_lmias": 58
   }
  },
  "history": [
-  {
-   "component": "jobs:workable",
-   "at": "2026-10-15T03:45:25+00:00",
-   "postings": 77
-  },
   {
    "component": "jobs:shopify",
    "at": "2026-10-15T03:45:25+00:00",
@@ -417,6 +417,12 @@
    "sources_failed": 0,
    "canada_postings": 51,
    "candidates": 543
+  },
+  {
+   "component": "signals",
+   "at": "2026-10-15T06:07:14+00:00",
+   "window": "2024Q1–2026Q1",
+   "companies_with_lmias": 58
   }
  ]
 }

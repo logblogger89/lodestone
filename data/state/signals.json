@@ -1,0 +1,1349 @@
+{
+ "source": "https://open.canada.ca/data/en/dataset/90fed587-1364-4f33-a9ee-208181dc0b97",
+ "files": [
+  "tfwp_2024q1_pos_en.xlsx",
+  "tfwp_2024q2_pos_en.xlsx",
+  "tfwp_2024q3_pos_en.xlsx",
+  "tfwp_2024q4_pos_en.xlsx",
+  "tfwp_2025q1_pos_en.xlsx",
+  "tfwp_2025q2_pos_en.xlsx",
+  "tfwp_2025q3_pos_en.xlsx",
+  "tfwp_2025q4_pos_en.xlsx",
+  "tfwp_2026q1_pos_en.xlsx"
+ ],
+ "window": "2024Q1–2026Q1",
+ "loaded_at": "2026-10-15T06:07:14+00:00",
+ "companies": {
+  "AlayaCare": {
+   "positions": 2,
+   "tech_positions": 1,
+   "streams": {
+    "Global Talent Stream": 2
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2"
+   ],
+   "top_occupations": [
+    "21232-Software developers and programmers"
+   ],
+   "legal_names": [
+    "AlayaCare"
+   ],
+   "provinces": [
+    "Quebec"
+   ]
+  },
+  "CGI": {
+   "positions": 83,
+   "tech_positions": 72,
+   "streams": {
+    "Global Talent Stream": 54,
+    "High Wage": 29
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21222-Information systems specialists",
+    "21232-Software developers and programmers",
+    "21231-Software engineers and designers",
+    "21221-Business system specialists"
+   ],
+   "legal_names": [
+    "CGI Information Systems & Management Consultants Inc."
+   ],
+   "provinces": [
+    "Ontario",
+    "Quebec"
+   ]
+  },
+  "ServiceNow": {
+   "positions": 3,
+   "tech_positions": 1,
+   "streams": {
+    "Global Talent Stream": 3
+   },
+   "quarters": [
+    "2024Q1",
+    "2025Q2"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers"
+   ],
+   "legal_names": [
+    "SERVICENOW CANADA INC."
+   ],
+   "provinces": [
+    "Quebec"
+   ]
+  },
+  "Air Canada": {
+   "positions": 4,
+   "tech_positions": 2,
+   "streams": {
+    "High Wage": 3,
+    "Global Talent Stream": 1
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q3",
+    "2025Q1"
+   ],
+   "top_occupations": [
+    "21211-Data scientists",
+    "22214-Technical occupations in geomatics and meteorology"
+   ],
+   "legal_names": [
+    "Air Canada"
+   ],
+   "provinces": [
+    "Quebec"
+   ]
+  },
+  "Autodesk": {
+   "positions": 154,
+   "tech_positions": 145,
+   "streams": {
+    "Global Talent Stream": 132,
+    "High Wage": 22
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "20012-Computer and information systems managers",
+    "21232-Software developers and programmers",
+    "21211-Data scientists"
+   ],
+   "legal_names": [
+    "Autodesk Canada Co."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "BlackBerry": {
+   "positions": 4,
+   "tech_positions": 3,
+   "streams": {
+    "Global Talent Stream": 3,
+    "High Wage": 1
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21232-Software developers and programmers",
+    "21222-Information systems specialists",
+    "20012-Computer and information systems managers"
+   ],
+   "legal_names": [
+    "BlackBerry Limited"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Fullscript": {
+   "positions": 4,
+   "tech_positions": 3,
+   "streams": {
+    "Global Talent Stream": 3,
+    "High Wage": 1
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2025Q3",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21232-Software developers and programmers",
+    "21234-Web developers and programmers",
+    "11202-Professional occupations in advertising, marketing and public relations"
+   ],
+   "legal_names": [
+    "Fullscript"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "General Motors (Canadian Technical Centre)": {
+   "positions": 17,
+   "tech_positions": 15,
+   "streams": {
+    "Global Talent Stream": 12,
+    "High Wage": 5
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "21232-Software developers and programmers",
+    "21310-Electrical and electronics engineers",
+    "21230-Computer systems developers and programmers"
+   ],
+   "legal_names": [
+    "General Motors of Canada Company"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Intact": {
+   "positions": 21,
+   "tech_positions": 11,
+   "streams": {
+    "Global Talent Stream": 15,
+    "Low Wage": 3,
+    "High Wage": 3
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21232-Software developers and programmers",
+    "21221-Business system specialists",
+    "21223-Database analysts and data administrators",
+    "21211-Data scientists"
+   ],
+   "legal_names": [
+    "INTACT FINANCIAL CORPORATION"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Kinaxis": {
+   "positions": 5,
+   "tech_positions": 4,
+   "streams": {
+    "Global Talent Stream": 4,
+    "High Wage": 1
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q4",
+    "2025Q3",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21232-Software developers and programmers",
+    "20012-Computer and information systems managers",
+    "21221-Business system specialists"
+   ],
+   "legal_names": [
+    "Kinaxis"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "League": {
+   "positions": 9,
+   "tech_positions": 8,
+   "streams": {
+    "Global Talent Stream": 2,
+    "High Wage": 7
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q3",
+    "2024Q4",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "00012-Senior managers - financial, communications and other business services",
+    "11200-Human resources professionals",
+    "21232-Software developers and programmers"
+   ],
+   "legal_names": [
+    "League",
+    "League, Inc."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Reddit": {
+   "positions": 4,
+   "tech_positions": 2,
+   "streams": {
+    "Global Talent Stream": 4
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2025Q3"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers"
+   ],
+   "legal_names": [
+    "Reddit Canada"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Resolver (Kroll)": {
+   "positions": 1,
+   "tech_positions": 0,
+   "streams": {
+    "Global Talent Stream": 1
+   },
+   "quarters": [
+    "2024Q1"
+   ],
+   "top_occupations": [],
+   "legal_names": [
+    "Resolver Inc."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Shopify": {
+   "positions": 22,
+   "tech_positions": 19,
+   "streams": {
+    "Global Talent Stream": 17,
+    "High Wage": 5
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "20012-Computer and information systems managers",
+    "21231-Software engineers and designers",
+    "21211-Data scientists",
+    "21234-Web developers and programmers"
+   ],
+   "legal_names": [
+    "Shopify Inc."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Tenstorrent": {
+   "positions": 1,
+   "tech_positions": 0,
+   "streams": {
+    "Global Talent Stream": 1
+   },
+   "quarters": [
+    "2024Q1"
+   ],
+   "top_occupations": [],
+   "legal_names": [
+    "Tenstorrent Inc"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Amazon": {
+   "positions": 474,
+   "tech_positions": 456,
+   "streams": {
+    "High Wage": 43,
+    "Global Talent Stream": 431
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "20012-Computer and information systems managers",
+    "21223-Database analysts and data administrators",
+    "21211-Data scientists"
+   ],
+   "legal_names": [
+    "Amazon Canada Fulfillment Services, ULC",
+    "Amazon Development Centre Canada ULC",
+    "Amazon Web Services Canada, Inc."
+   ],
+   "provinces": [
+    "British Columbia",
+    "Ontario"
+   ]
+  },
+  "ApplyBoard": {
+   "positions": 2,
+   "tech_positions": 1,
+   "streams": {
+    "High Wage": 1,
+    "Global Talent Stream": 1
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q3"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers"
+   ],
+   "legal_names": [
+    "ApplyBoard.Inc"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Neo Financial": {
+   "positions": 38,
+   "tech_positions": 34,
+   "streams": {
+    "Global Talent Stream": 34,
+    "High Wage": 4
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21232-Software developers and programmers",
+    "20012-Computer and information systems managers",
+    "21222-Information systems specialists",
+    "00012-Senior managers - financial, communications and other business services"
+   ],
+   "legal_names": [
+    "Neo Financial"
+   ],
+   "provinces": [
+    "Manitoba"
+   ]
+  },
+  "Coinbase": {
+   "positions": 17,
+   "tech_positions": 15,
+   "streams": {
+    "Global Talent Stream": 16,
+    "High Wage": 1
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "21220-Cybersecurity specialists"
+   ],
+   "legal_names": [
+    "Coinbase"
+   ],
+   "provinces": [
+    "British Columbia"
+   ]
+  },
+  "Electronic Arts": {
+   "positions": 75,
+   "tech_positions": 20,
+   "streams": {
+    "Global Talent Stream": 42,
+    "High Wage": 33
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "21232-Software developers and programmers",
+    "21223-Database analysts and data administrators",
+    "20012-Computer and information systems managers"
+   ],
+   "legal_names": [
+    "Electronic Arts (Canada), Inc."
+   ],
+   "provinces": [
+    "British Columbia"
+   ]
+  },
+  "Aritzia": {
+   "positions": 21,
+   "tech_positions": 0,
+   "streams": {
+    "High Wage": 21
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [],
+   "legal_names": [
+    "Aritzia LP"
+   ],
+   "provinces": [
+    "British Columbia"
+   ]
+  },
+  "Bell": {
+   "positions": 5,
+   "tech_positions": 5,
+   "streams": {
+    "Global Talent Stream": 3,
+    "High Wage": 2
+   },
+   "quarters": [
+    "2024Q2",
+    "2024Q3",
+    "2025Q1",
+    "2025Q3",
+    "2025Q4"
+   ],
+   "top_occupations": [
+    "21223-Database analysts and data administrators",
+    "21311-Computer engineers (except software engineers and designers)",
+    "21232-Software developers and programmers",
+    "21211-Data scientists"
+   ],
+   "legal_names": [
+    "Bell Canada",
+    "Bell Mobility Inc."
+   ],
+   "provinces": [
+    "Ontario",
+    "Quebec"
+   ]
+  },
+  "Hopper": {
+   "positions": 2,
+   "tech_positions": 2,
+   "streams": {
+    "Global Talent Stream": 2
+   },
+   "quarters": [
+    "2024Q2",
+    "2024Q4"
+   ],
+   "top_occupations": [
+    "21232-Software developers and programmers",
+    "21231-Software engineers and designers"
+   ],
+   "legal_names": [
+    "Hopper Inc."
+   ],
+   "provinces": [
+    "Quebec"
+   ]
+  },
+  "Canadian Tire (Digital)": {
+   "positions": 13,
+   "tech_positions": 1,
+   "streams": {
+    "Low Wage": 10,
+    "Global Talent Stream": 1,
+    "High Wage": 2
+   },
+   "quarters": [
+    "2024Q2",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21230-Computer systems developers and programmers"
+   ],
+   "legal_names": [
+    "Canadian Tire"
+   ],
+   "provinces": [
+    "Ontario",
+    "Quebec"
+   ]
+  },
+  "Lightspeed Commerce": {
+   "positions": 1,
+   "tech_positions": 0,
+   "streams": {
+    "Low Wage": 1
+   },
+   "quarters": [
+    "2024Q2"
+   ],
+   "top_occupations": [],
+   "legal_names": [
+    "Lightspeed Commerce Inc."
+   ],
+   "provinces": [
+    "Quebec"
+   ]
+  },
+  "Axonify": {
+   "positions": 1,
+   "tech_positions": 1,
+   "streams": {
+    "Global Talent Stream": 1
+   },
+   "quarters": [
+    "2024Q2"
+   ],
+   "top_occupations": [
+    "22222-Information systems testing technicians"
+   ],
+   "legal_names": [
+    "Axonify Inc"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Clearco": {
+   "positions": 3,
+   "tech_positions": 3,
+   "streams": {
+    "Global Talent Stream": 3
+   },
+   "quarters": [
+    "2024Q2",
+    "2024Q4"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "21221-Business system specialists"
+   ],
+   "legal_names": [
+    "Clearco"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "CPP Investments": {
+   "positions": 2,
+   "tech_positions": 2,
+   "streams": {
+    "Global Talent Stream": 2
+   },
+   "quarters": [
+    "2024Q2",
+    "2024Q3"
+   ],
+   "top_occupations": [
+    "21222-Information systems specialists",
+    "21231-Software engineers and designers"
+   ],
+   "legal_names": [
+    "CPP Investments"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Encircle": {
+   "positions": 2,
+   "tech_positions": 2,
+   "streams": {
+    "Global Talent Stream": 2
+   },
+   "quarters": [
+    "2024Q2",
+    "2025Q1"
+   ],
+   "top_occupations": [
+    "21232-Software developers and programmers"
+   ],
+   "legal_names": [
+    "Encircle, Inc."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Fable": {
+   "positions": 1,
+   "tech_positions": 1,
+   "streams": {
+    "Global Talent Stream": 1
+   },
+   "quarters": [
+    "2024Q2"
+   ],
+   "top_occupations": [
+    "21221-Business system specialists"
+   ],
+   "legal_names": [
+    "Fable Tech Labs Inc."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Porter Airlines": {
+   "positions": 3,
+   "tech_positions": 3,
+   "streams": {
+    "Global Talent Stream": 3
+   },
+   "quarters": [
+    "2024Q2",
+    "2024Q3",
+    "2025Q1"
+   ],
+   "top_occupations": [
+    "21222-Information systems specialists",
+    "22222-Information systems testing technicians"
+   ],
+   "legal_names": [
+    "Porter Airlines Inc."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Qualcomm": {
+   "positions": 4,
+   "tech_positions": 4,
+   "streams": {
+    "Global Talent Stream": 4
+   },
+   "quarters": [
+    "2024Q2",
+    "2025Q2",
+    "2025Q3"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "21311-Computer engineers (except software engineers and designers)"
+   ],
+   "legal_names": [
+    "Qualcomm Canada ULC"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Block (Square / Cash App)": {
+   "positions": 3,
+   "tech_positions": 3,
+   "streams": {
+    "Global Talent Stream": 2,
+    "High Wage": 1
+   },
+   "quarters": [
+    "2024Q2",
+    "2025Q4"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "21211-Data scientists"
+   ],
+   "legal_names": [
+    "Square"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "PayPal": {
+   "positions": 2,
+   "tech_positions": 2,
+   "streams": {
+    "High Wage": 2
+   },
+   "quarters": [
+    "2024Q2",
+    "2025Q3"
+   ],
+   "top_occupations": [
+    "11101-Financial and investment analysts",
+    "21220-Cybersecurity specialists"
+   ],
+   "legal_names": [
+    "PayPal Canada Co."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Plooto": {
+   "positions": 3,
+   "tech_positions": 3,
+   "streams": {
+    "Global Talent Stream": 3
+   },
+   "quarters": [
+    "2024Q3",
+    "2024Q4",
+    "2025Q2"
+   ],
+   "top_occupations": [
+    "20012-Computer and information systems managers",
+    "21232-Software developers and programmers"
+   ],
+   "legal_names": [
+    "Plooto"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "RBC": {
+   "positions": 31,
+   "tech_positions": 31,
+   "streams": {
+    "Global Talent Stream": 21,
+    "High Wage": 10
+   },
+   "quarters": [
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "20012-Computer and information systems managers",
+    "21222-Information systems specialists",
+    "21211-Data scientists",
+    "21221-Business system specialists"
+   ],
+   "legal_names": [
+    "Royal Bank of Canada"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Scotiabank": {
+   "positions": 9,
+   "tech_positions": 9,
+   "streams": {
+    "Global Talent Stream": 7,
+    "High Wage": 2
+   },
+   "quarters": [
+    "2024Q3",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "20012-Computer and information systems managers",
+    "21232-Software developers and programmers",
+    "21222-Information systems specialists",
+    "21223-Database analysts and data administrators"
+   ],
+   "legal_names": [
+    "Scotiabank"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Samsung AI Center": {
+   "positions": 5,
+   "tech_positions": 5,
+   "streams": {
+    "Global Talent Stream": 5
+   },
+   "quarters": [
+    "2024Q3",
+    "2025Q2",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21211-Data scientists",
+    "21231-Software engineers and designers"
+   ],
+   "legal_names": [
+    "Samsung Electronics Canada Inc."
+   ],
+   "provinces": [
+    "British Columbia"
+   ]
+  },
+  "Stripe": {
+   "positions": 16,
+   "tech_positions": 16,
+   "streams": {
+    "High Wage": 9,
+    "Global Talent Stream": 7
+   },
+   "quarters": [
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "21221-Business system specialists",
+    "21211-Data scientists",
+    "21223-Database analysts and data administrators"
+   ],
+   "legal_names": [
+    "Stripe"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Untether AI": {
+   "positions": 1,
+   "tech_positions": 1,
+   "streams": {
+    "High Wage": 1
+   },
+   "quarters": [
+    "2024Q4"
+   ],
+   "top_occupations": [
+    "21311-Computer engineers (except software engineers and designers)"
+   ],
+   "legal_names": [
+    "Untether AI"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "BenchSci": {
+   "positions": 1,
+   "tech_positions": 1,
+   "streams": {
+    "Global Talent Stream": 1
+   },
+   "quarters": [
+    "2024Q4"
+   ],
+   "top_occupations": [
+    "20012-Computer and information systems managers"
+   ],
+   "legal_names": [
+    "BenchSci"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Solace": {
+   "positions": 2,
+   "tech_positions": 2,
+   "streams": {
+    "Global Talent Stream": 2
+   },
+   "quarters": [
+    "2024Q4"
+   ],
+   "top_occupations": [
+    "21232-Software developers and programmers"
+   ],
+   "legal_names": [
+    "Solace Corporation"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Thomson Reuters": {
+   "positions": 4,
+   "tech_positions": 4,
+   "streams": {
+    "Global Talent Stream": 1,
+    "High Wage": 3
+   },
+   "quarters": [
+    "2024Q4",
+    "2025Q3",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers"
+   ],
+   "legal_names": [
+    "Thomson Reuters"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Workleap": {
+   "positions": 1,
+   "tech_positions": 1,
+   "streams": {
+    "Global Talent Stream": 1
+   },
+   "quarters": [
+    "2025Q1"
+   ],
+   "top_occupations": [
+    "21234-Web developers and programmers"
+   ],
+   "legal_names": [
+    "Workleap"
+   ],
+   "provinces": [
+    "Quebec"
+   ]
+  },
+  "Cohere": {
+   "positions": 9,
+   "tech_positions": 9,
+   "streams": {
+    "Global Talent Stream": 4,
+    "High Wage": 5
+   },
+   "quarters": [
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "20012-Computer and information systems managers",
+    "21222-Information systems specialists",
+    "21211-Data scientists"
+   ],
+   "legal_names": [
+    "Cohere Inc."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Dayforce (Ceridian)": {
+   "positions": 4,
+   "tech_positions": 4,
+   "streams": {
+    "Global Talent Stream": 4
+   },
+   "quarters": [
+    "2025Q1"
+   ],
+   "top_occupations": [
+    "00012-Senior managers - financial, communications and other business services",
+    "21221-Business system specialists"
+   ],
+   "legal_names": [
+    "Dayforce Canada LTD"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "PolicyMe": {
+   "positions": 2,
+   "tech_positions": 2,
+   "streams": {
+    "Global Talent Stream": 2
+   },
+   "quarters": [
+    "2025Q1",
+    "2025Q2"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "21232-Software developers and programmers"
+   ],
+   "legal_names": [
+    "PolicyMe"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Hootsuite": {
+   "positions": 2,
+   "tech_positions": 2,
+   "streams": {
+    "Global Talent Stream": 2
+   },
+   "quarters": [
+    "2025Q1",
+    "2025Q3"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "20012-Computer and information systems managers"
+   ],
+   "legal_names": [
+    "Hootsuite Inc"
+   ],
+   "provinces": [
+    "British Columbia"
+   ]
+  },
+  "Unbounce": {
+   "positions": 1,
+   "tech_positions": 1,
+   "streams": {
+    "Global Talent Stream": 1
+   },
+   "quarters": [
+    "2025Q1"
+   ],
+   "top_occupations": [
+    "21223-Database analysts and data administrators"
+   ],
+   "legal_names": [
+    "Unbounce"
+   ],
+   "provinces": [
+    "British Columbia"
+   ]
+  },
+  "Borrowell": {
+   "positions": 1,
+   "tech_positions": 1,
+   "streams": {
+    "High Wage": 1
+   },
+   "quarters": [
+    "2025Q2"
+   ],
+   "top_occupations": [
+    "11101-Financial and investment analysts"
+   ],
+   "legal_names": [
+    "Borrowell Inc."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Dye & Durham": {
+   "positions": 1,
+   "tech_positions": 1,
+   "streams": {
+    "Global Talent Stream": 1
+   },
+   "quarters": [
+    "2025Q2"
+   ],
+   "top_occupations": [
+    "21221-Business system specialists"
+   ],
+   "legal_names": [
+    "Dye & Durham Corporation"
+   ],
+   "provinces": [
+    "British Columbia"
+   ]
+  },
+  "Wattpad (Naver)": {
+   "positions": 1,
+   "tech_positions": 1,
+   "streams": {
+    "High Wage": 1
+   },
+   "quarters": [
+    "2025Q4"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers"
+   ],
+   "legal_names": [
+    "Wattpad Corp."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "HostPapa": {
+   "positions": 1,
+   "tech_positions": 1,
+   "streams": {
+    "Global Talent Stream": 1
+   },
+   "quarters": [
+    "2025Q4"
+   ],
+   "top_occupations": [
+    "20012-Computer and information systems managers"
+   ],
+   "legal_names": [
+    "HostPapa, Inc."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Atlassian": {
+   "positions": 2,
+   "tech_positions": 2,
+   "streams": {
+    "Global Talent Stream": 2
+   },
+   "quarters": [
+    "2025Q4"
+   ],
+   "top_occupations": [
+    "21211-Data scientists"
+   ],
+   "legal_names": [
+    "Atlassian Canada Inc."
+   ],
+   "provinces": [
+    "British Columbia"
+   ]
+  },
+  "Visier": {
+   "positions": 2,
+   "tech_positions": 2,
+   "streams": {
+    "Global Talent Stream": 2
+   },
+   "quarters": [
+    "2025Q4"
+   ],
+   "top_occupations": [
+    "21221-Business system specialists",
+    "21231-Software engineers and designers"
+   ],
+   "legal_names": [
+    "Visier"
+   ],
+   "provinces": [
+    "British Columbia"
+   ]
+  },
+  "Pinterest": {
+   "positions": 1,
+   "tech_positions": 1,
+   "streams": {
+    "High Wage": 1
+   },
+   "quarters": [
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers"
+   ],
+   "legal_names": [
+    "Pinterest Canada Limited"
+   ],
+   "provinces": [
+    "New Brunswick"
+   ]
+  },
+  "Ontario Teachers' Pension Plan": {
+   "positions": 1,
+   "tech_positions": 1,
+   "streams": {
+    "High Wage": 1
+   },
+   "quarters": [
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "10021-Banking, credit and other investment managers"
+   ],
+   "legal_names": [
+    "Ontario Teachers' Pension Plan"
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "TELUS (Digital / Health)": {
+   "positions": 2,
+   "tech_positions": 2,
+   "streams": {
+    "Global Talent Stream": 1,
+    "High Wage": 1
+   },
+   "quarters": [
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21223-Database analysts and data administrators",
+    "20012-Computer and information systems managers"
+   ],
+   "legal_names": [
+    "TELUS"
+   ],
+   "provinces": [
+    "British Columbia"
+   ]
+  }
+ }
+}
