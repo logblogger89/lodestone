@@ -236,6 +236,7 @@ Tiers: **MVP** (v1 launch) · **V1** (fast follow) · **Later** · **Dropped**. 
 | C17 | PR pathway timeline view: offer → permit → move → 12 months → CEC → PR | Later | DR-3 §2a |
 | D18 | Daily digest (in-app; email in V1) | MVP | |
 | D19 | Triage (interested / not / later, with reasons) that learns preferences | MVP | Feeds the match engine (§2d) |
+| D19a | **Adaptive recommendations ("like Spotify").** Learn from behaviour as well as explicit triage: which postings Ayush opens and how long he spends on them, what he shortlists, moves through the pipeline, marks Later or rejects (and the reasons), market checks he requests. Use these signals to refine ranking over time. Open points to explore together: which signals to trust (implicit vs explicit), how fast it adapts and how to keep it explainable ("ranked higher because you shortlisted 3 similar AI-governance roles"), avoiding a filter bubble (keep some exploration), cold start, and privacy when there are many users (D-005) | Idea (to scope with Ayush, then roadmap) | Seed idea from Ayush, 2026-10-15. Builds on D19, the fit score (B6) and the calibration in D-049 |
 | D20 | Saved searches and alerts | V1 | |
 | E21 | **A version of the resume tailored to each posting** (plus tailored bullets and a cover letter draft) | V1 | |
 | E22 | Referral finder (LinkedIn connections export, alumni) | V1 | |

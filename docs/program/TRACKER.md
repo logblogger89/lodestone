@@ -134,6 +134,7 @@
 | Q-18 | Which PM-adjacent families count? | — | ✅ Resolved | Delegated to Claude (D-017), with defaults in PRD §2b. No people-management roles by default, via a toggle (CR-6) |
 | Q-21 | Coverage gap (R-15): build careers-site connections for companies without a hosted board, including Google? | Ayush | ✅ Answered | Yes, for every company, with an index of all sources (D-042) |
 | Q-22 | Triangulate pay estimates with outside data (levels.fyi etc.)? | Ayush | ✅ Answered | levels.fyi's terms rule out scheduled reads; Ayush chose on-request checks per role (D-054) |
+| Q-23 | Adaptive, Spotify-style recommendations that learn from viewing, shortlisting and other behaviour (PRD backlog D19a): what's the scope, which signals and when on the roadmap? | Ayush + Claude | 🟨 Parked | Seed idea logged 10-15. Flesh out together after M4 dogfood, when there is enough triage and viewing history to learn from |
 
 ## 5. RAID log (risks, assumptions, issues, dependencies)
 
@@ -193,6 +194,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | Ayush's idea logged: adaptive Spotify-style recommendations (PRD D19a, Q-23), parked until after M4 dogfood | Claude |
 | 2026-10-15 | Reports page, Digest banner and Archive added (D-057); daily run now posts its report to the app | Claude |
 | 2026-10-15 | Daily 6:53am ET run with emailed report scheduled (D-056); first run today | Claude |
 | 2026-10-15 | "Request market check" button in the app (D-055), 20 a day; `market pending`; runbooks updated; tests | Claude |
