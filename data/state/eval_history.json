@@ -1,0 +1,135 @@
+{
+ "runs": [
+  {
+   "at": "2026-10-15T20:20:23+00:00",
+   "kind": "ranking",
+   "rubric": "1.0",
+   "labels": {
+    "interested": 9,
+    "later": 8,
+    "not": 0
+   },
+   "pairwise": 0.611,
+   "interested_in_top25": 9,
+   "precision_at_10": 0.6,
+   "labelled_in_top10": 10,
+   "mean_fit": {
+    "interested": 85.0,
+    "later": 84.6,
+    "not": null
+   },
+   "roles_ranked": 546,
+   "misses": [],
+   "enough_labels": false
+  },
+  {
+   "at": "2026-10-15T20:21:26+00:00",
+   "kind": "reading",
+   "rubric": "1.0",
+   "postings": 22,
+   "accuracy": {
+    "pay": 0.88,
+    "pay_kind": 0.6,
+    "region": 1.0,
+    "people_mgmt": 1.0,
+    "level": 1.0,
+    "excluded": 0.0
+   },
+   "errors": [
+    {
+     "id": "cc2b58ab9393",
+     "field": "pay_kind",
+     "expected": "base",
+     "got": "unspecified",
+     "title": "Customer Engineer, Platform, Google Cloud (English, French)",
+     "company": "Google"
+    },
+    {
+     "id": "1d4cc40518a3",
+     "field": "pay_kind",
+     "expected": "base",
+     "got": "ote",
+     "title": "Sr. Client Success Services Program Manager",
+     "company": "OpenText"
+    },
+    {
+     "id": "7403341a2a65",
+     "field": "pay",
+     "expected": [
+      24.25,
+      28.0,
+      null
+     ],
+     "got": [
+      24,
+      28,
+      null
+     ],
+     "title": "Product Operations Lead | Pacific Centre",
+     "company": "Lululemon"
+    },
+    {
+     "id": "7403341a2a65",
+     "field": "excluded",
+     "expected": true,
+     "got": false,
+     "title": "Product Operations Lead | Pacific Centre",
+     "company": "Lululemon"
+    },
+    {
+     "id": "599ccbc6c198",
+     "field": "pay",
+     "expected": [
+      79900,
+      131300,
+      "CAD"
+     ],
+     "got": [
+      79900,
+      131300,
+      null
+     ],
+     "title": "Oracle NetSuite Solution Consultant",
+     "company": "Oracle"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-15T20:26:19+00:00",
+   "kind": "reading",
+   "rubric": "1.0",
+   "postings": 22,
+   "accuracy": {
+    "pay": 1.0,
+    "pay_kind": 1.0,
+    "region": 1.0,
+    "people_mgmt": 1.0,
+    "level": 1.0,
+    "excluded": 1.0
+   },
+   "errors": []
+  },
+  {
+   "at": "2026-10-15T20:27:06+00:00",
+   "kind": "ranking",
+   "rubric": "1.0",
+   "labels": {
+    "interested": 9,
+    "later": 7,
+    "not": 0
+   },
+   "pairwise": 0.587,
+   "interested_in_top25": 9,
+   "precision_at_10": 0.6,
+   "labelled_in_top10": 10,
+   "mean_fit": {
+    "interested": 85.0,
+    "later": 84.7,
+    "not": null
+   },
+   "roles_ranked": 536,
+   "misses": [],
+   "enough_labels": false
+  }
+ ]
+}

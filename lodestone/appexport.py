@@ -77,6 +77,11 @@ def build() -> dict[str, dict[str, dict]]:
                      "status": best["status"], "canada_jobs": best.get("canada_jobs") or None,
                      "careers_url": best.get("careers_url") or "", "note": (best.get("notes") or "")[:160]})
     docs["meta"]["companies"] = {"companies": rows}
+    hist = store.load("eval_history", {"runs": []})["runs"]
+    last = lambda k: next((r for r in reversed(hist) if r.get("kind") == k), None)
+    docs["meta"]["eval"] = {"reading": last("reading"), "ranking": last("ranking"),
+                            "history": [{k: r.get(k) for k in ("at", "kind", "pairwise", "interested_in_top25", "accuracy")}
+                                        for r in hist[-30:]]}
     return docs
 
 

@@ -58,10 +58,16 @@ standard library only, so no installs are needed.
    people_mgmt, work_mode, must_haves, flags}` (copy `fingerprint` and `profile_key` from the batch), then
    `python3 -m lodestone score ingest <results.json>`. Before trusting a new rubric, compare scores with the user's triage
    (`triage` collection): roles marked Interested should rank high, "Not for me" low.
+5b. **Score quality check (P1-S5).** `ArtifactData list triage` and `get settings/prefs` with `out_dir` (scratchpad), then
+   `python3 -m lodestone eval ranking <triage folder> --prefs <prefs file> --profile <profile file>` and
+   `python3 -m lodestone eval reading`. Put the one-line results in the report ("9 of 9 Interested in the top 25; Interested
+   beat Later/Not 59% of the time; reading 100% on 22 postings"). **Gate:** before changing the rubric, scoring rules or
+   the pay reader, run both checks before and after; don't ship a change that lowers either (say so in the report if a
+   fix needs that). Add a posting to `data/eval/reading_gold.json` whenever a reading mistake is found (target 50).
 6. **Push to the app (P1-S2).** The app is the private Artifact https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7
    (source: `app/lodestone.html`). Run `python3 -m lodestone export`; it writes one JSON file per database
-   document under `data/state/app_export/` (jobs packed into buckets `jobs/b0`–`b7`, plus `meta/companies`
-   and `meta/freshness`). Then `ArtifactData list` the `jobs` and `meta` collections to get each document's
+   document under `data/state/app_export/` (jobs packed into buckets `jobs/b0`–`b7`, plus `meta/companies`,
+   `meta/freshness` and `meta/eval`). Then `ArtifactData list` the `jobs` and `meta` collections to get each document's
    `version`, and write them with `ArtifactData batch` `set` entries using `file_path` and that `if_version`
    (omit it only for a document that doesn't exist yet). One batch is capped at 1 MiB, so send `jobs/b0–b3` in
    one batch and `jobs/b4–b7` plus `meta/*` in a second. Never write `triage` or `settings`, and `profile` only as step 5 describes

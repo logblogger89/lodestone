@@ -1,0 +1,27 @@
+{
+  "_doc": "Hand-checked answers for a sample of postings (P1-S5 reading check). Each value was read off the posting by Claude on 2026-10-15. pay = [min, max, currency as written (null if the posting doesn't say)], pay_kind = what the range covers, region = Lodestone's region, people_mgmt = posting says the role manages people, level = Google-scale level when the posting makes it clear, excluded = the role should be filtered out (e.g. a retail store job). Grow this set over time (target 50).",
+  "postings": [
+    {"id": "cc2b58ab9393", "pay": [162000, 166000, "CAD"], "pay_kind": "base", "region": "Montreal", "people_mgmt": false, "note": "Google CE: 'Canada: $162000 - $166000 (CAD) + 42.86% bonus target'"},
+    {"id": "f865c7dfe31d", "region": "Remote-Canada"},
+    {"id": "1d4cc40518a3", "pay": [92300, 138500, null], "pay_kind": "base", "region": "Waterloo Region", "people_mgmt": false, "note": "OpenText: 'Salary Range: $92,300 - $138,500 plus commissions' (base, commission on top)"},
+    {"id": "a28d20b09cd7", "pay": null, "region": "GTA", "people_mgmt": false, "level": 5},
+    {"id": "7c18d1136fe9", "pay": null, "region": "Other Canada", "people_mgmt": false},
+    {"id": "c8c4093418e0", "pay": null, "region": "Other Canada", "people_mgmt": false},
+    {"id": "63a2e6e8cb79", "pay": null, "region": "Other Canada", "note": "'$73B+ CAD in mortgages' is not pay"},
+    {"id": "eeb35137acff", "pay": null, "region": "Remote-Canada", "people_mgmt": false, "level": 6, "note": "GitLab range is US-only"},
+    {"id": "7403341a2a65", "pay": [24.25, 28.0, null], "pay_kind": "base", "region": "Vancouver", "people_mgmt": false, "excluded": true, "note": "Lululemon store role: 'Base Pay Range : $24.25 - $28.00/hour'"},
+    {"id": "72f74a9cd5af", "pay": null, "region": "Montreal", "level": 5},
+    {"id": "a0cb137a8be3", "pay": null, "region": "Montreal"},
+    {"id": "81dbaee4dd88", "pay": null, "region": "Remote-Canada", "people_mgmt": false},
+    {"id": "5be893edabeb", "pay": null, "region": "Montreal", "level": 6, "note": "'$750 million USD of private capital' is not pay"},
+    {"id": "90ea1f5ace35", "region": "Montreal"},
+    {"id": "04f213bc9c1a", "pay": null, "region": "GTA", "note": "'$500 stipend' is not pay"},
+    {"id": "54f2198a917a", "pay": null, "region": "Montreal"},
+    {"id": "4dc90b4e253d", "region": "Remote-Canada"},
+    {"id": "f28a888cee84", "region": "GTA"},
+    {"id": "64219401fae2", "region": "Remote-Canada"},
+    {"id": "599ccbc6c198", "pay": [79900, 131300, "CAD"], "pay_kind": "base", "region": "Montreal", "note": "Oracle: 'CA: Hiring Range in CAD from: $79,900 to $131,300 per annum'"},
+    {"id": "9b66305e814a", "region": "Remote-Canada"},
+    {"id": "baed91bb68b1", "pay": [100000, 140000, "CAD"], "pay_kind": "base", "region": "GTA", "people_mgmt": false}
+  ]
+}

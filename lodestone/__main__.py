@@ -41,6 +41,11 @@ def main(argv=None) -> int:
     dc.add_argument("file", nargs="?", help="JSON list (add, review) or decisions folder (apply)")
     dc.add_argument("--limit", type=int)
     dc.add_argument("--all", action="store_true", help="probe: re-probe candidates already probed")
+    ev = sub.add_parser("eval", help="score quality check: ranking against triage, reading against the hand-checked set")
+    ev.add_argument("action", choices=["ranking", "reading"])
+    ev.add_argument("folder", nargs="?", help="ranking: triage documents saved with ArtifactData list out_dir")
+    ev.add_argument("--prefs", help="ranking: settings/prefs JSON")
+    ev.add_argument("--profile", help="ranking: profile/main JSON")
     rp = sub.add_parser("report", help="save the daily run report for the app and the repo")
     rp.add_argument("action", choices=["save"])
     rp.add_argument("file", help="report JSON written by Claude")
@@ -79,6 +84,16 @@ def main(argv=None) -> int:
                "export": lambda: discover.export(), "apply": lambda: discover.apply(a.file),
                "add": lambda: discover.add(json.load(open(a.file))),
                "review": lambda: discover.review(json.load(open(a.file)))}[a.action]()
+    elif a.cmd == "eval":
+        from . import evalset
+        if a.action == "ranking":
+            if not a.folder:
+                ap.error("eval ranking needs the triage folder")
+            ld = lambda f: (lambda d: d.get("data", d))(json.load(open(f))) if f else None
+            res = evalset.ranking(evalset._load_dir(a.folder), evalset._app_jobs(), ld(a.prefs), ld(a.profile))
+        else:
+            res = evalset.reading()
+        out = evalset.record(a.action, res)
     elif a.cmd == "report":
         from . import report
         out = report.save(json.load(open(a.file)))

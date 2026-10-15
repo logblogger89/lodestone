@@ -60,5 +60,7 @@
     "\\bvice president\\b",
     "\\bmanager,? product management\\b",
     "\\bmanager of product\\b"
-  ]
+  ],
+  "exclude_hourly_below_cad": 45,
+  "_doc_hourly": "Roles whose posted Canadian pay is an hourly rate below this (e.g. retail store jobs with product-sounding titles) are filtered out. Contract rates above it stay."
 }

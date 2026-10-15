@@ -86,3 +86,23 @@ class TestPayKindAndEquity(unittest.TestCase):
                           "not inclusive of potential equity offering, bonus or benefits.", "Toronto", "GTA")
         self.assertEqual(r["ranges"][0]["max"], 203750)
         self.assertEqual(r["equity"]["amounts"], [])
+
+
+from lodestone import pay  # noqa: E402
+
+
+class TestReadingCheckFixes(unittest.TestCase):
+    """Mistakes found by the hand-checked reading set (P1-S5)."""
+
+    def test_hourly_cents_kept(self):
+        r = pay.from_text("Base Pay Range : $24.25 - $28.00/hour, subject to minimum wage")[0]
+        self.assertEqual((r["min"], r["max"], r["interval"]), (24.25, 28.0, "hour"))
+
+    def test_currency_named_earlier_in_sentence(self):
+        r = pay.from_text("CA: Hiring Range in CAD from: $79,900 to $131,300 per annum.")[0]
+        self.assertEqual(r["currency"], "CAD")
+
+    def test_commission_or_bonus_on_top_is_base(self):
+        self.assertEqual(pay.pay_kind("Salary Range: $92,300 - $138,500 plus commissions"), "base")
+        self.assertEqual(pay.pay_kind("Canada: $162000 - $166000 (CAD) + 42.86% bonus target + equity"), "base")
+        self.assertEqual(pay.pay_kind("On-target earnings: $150,000 - $200,000"), "ote")

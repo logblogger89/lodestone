@@ -102,6 +102,7 @@ details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
 .archive details{border-top:1px solid var(--line);padding:10px 0}
 .archive summary{cursor:pointer}
 .card.sug{display:grid;gap:6px;cursor:default}
+.panel button.link{border:0;background:none;padding:0;cursor:pointer;color:var(--accent);font-weight:600}
 .checks{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
 .ck{display:inline-flex;align-items:center;gap:5px;font-size:12px;padding:2px 9px 2px 7px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
 .ck b{font-size:11px}
@@ -458,7 +459,7 @@ async function boot(){
     S.jobs=all;S.ready=true;render();
   },fail);
   db.collection("meta").onSnapshot(snap=>{
-    snap.docs.forEach(d=>{const x=d.data()||{};if(d.id==="companies")S.companies=x.companies||[];if(d.id==="suggestions")S.suggestions=x.suggestions||[];if(d.id==="freshness")S.freshness=x.components||{}});
+    snap.docs.forEach(d=>{const x=d.data()||{};if(d.id==="companies")S.companies=x.companies||[];if(d.id==="suggestions")S.suggestions=x.suggestions||[];if(d.id==="eval")S.evalm=x;if(d.id==="freshness")S.freshness=x.components||{}});
     render();
   },fail);
   db.collection("triage").onSnapshot(snap=>{const t={};snap.docs.forEach(d=>t[d.id]=d.data());S.triage=t;render()},fail);
@@ -844,6 +845,33 @@ async function uploadResume(file){
     toast("Resume uploaded. Claude reads it at the next daily run and fills in your profile.");
   }catch(e){toast(e&&e.code==="unsupported_type"?"That file type isn't supported. Upload a PDF or paste the text.":"Couldn't upload the resume. Try again.");console.warn(e)}
 }
+/* Score quality (P1-S5): does the ranking agree with your own triage, and does Lodestone read postings correctly?
+   The ranking check is computed live from your triage and current settings, so it changes as you triage. */
+function rankingCheck(){
+  const live=Object.values(S.jobs).filter(j=>j.live), sc={};live.forEach(j=>{const f=fitScore(j);if(f!=null)sc[j.id]=f});
+  const order=Object.keys(sc).sort((a,b)=>sc[b]-sc[a]), rank={};order.forEach((id,i)=>rank[id]=i+1);
+  const lab=Object.entries(S.triage).filter(([id,t])=>t&&["interested","later","not"].includes(t.status)&&sc[id]!=null);
+  const pos=lab.filter(([,t])=>t.status==="interested").map(([id])=>id), neg=lab.filter(([,t])=>t.status!=="interested").map(([id])=>id);
+  let w=0,n=0;pos.forEach(p=>neg.forEach(q=>{n++;w+=sc[p]>sc[q]?1:sc[p]===sc[q]?0.5:0}));
+  return {pos:pos.length,neg:neg.length,pairwise:n?w/n:null,top25:pos.filter(id=>rank[id]<=25).length,ranked:order.length,
+    misses:pos.filter(id=>rank[id]>25).map(id=>({id,rank:rank[id]})).sort((a,b)=>a.rank-b.rank).slice(0,3)};
+}
+function qualityPanel(){
+  if(!S.ready) return "";
+  const r=rankingCheck(), rd=S.evalm&&S.evalm.reading, enough=r.pos>=10&&r.neg>=10;
+  const pct=x=>x==null?"–":Math.round(x*100)+"%";
+  const acc=rd&&rd.accuracy?Object.entries(rd.accuracy).filter(([,v])=>v!=null):[];
+  const NAMES={pay:"pay amounts",pay_kind:"pay type",region:"location",people_mgmt:"people management",level:"level",excluded:"filtering out non-roles"};
+  return `<section class="panel"><h4>Score quality</h4>
+    <dl class="facts">
+      <dt>Your picks</dt><dd>${r.pos?`<b>${r.top25} of ${r.pos}</b> roles you marked Interested are in Lodestone's top 25 (of ${r.ranked}).`:"Mark roles Interested to see how they rank."}</dd>
+      <dt>Order</dt><dd>${r.pairwise!=null?`Interested roles score above your Later / Not for me roles <b>${pct(r.pairwise)}</b> of the time (50% would be a coin flip).`:"Needs at least one Interested and one Later or Not for me role."}</dd>
+      <dt>Reading</dt><dd>${acc.length?`Checked against ${rd.postings} hand-checked postings: ${acc.map(([k,v])=>`${NAMES[k]||k} ${pct(v)}`).join(" · ")}.`:"No reading check yet."}</dd>
+    </dl>
+    ${r.misses.length?`<p class="note">Interested but ranked low: ${r.misses.map(m=>`<button class="link" data-open="${esc(m.id)}">${esc((S.jobs[m.id]||{}).company||"")} #${m.rank}</button>`).join(", ")}</p>`:""}
+    <p class="note">${enough?"Enough triage for a reliable read.":`Early read: it gets reliable at 10+ Interested and 10+ Later or Not for me (you have ${r.pos} and ${r.neg}). "Not for me" with a reason helps most.`}</p>
+  </section>`;
+}
 function viewSettings(){
   const p=S.prefs, pr=S.profile||{}, cur=pr.current||{}, pref=pr.preferences||{}, W=p.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+wv(W,k),0), ck={...DEFAULT_PREFS.checks,...(p.checks||{})};
   const val=k=>Array.isArray(pr[k])?pr[k].join("\n"):(pr[k]||"");
@@ -878,6 +906,7 @@ function viewSettings(){
     <div class="switch"><label for="xpm">Hide roles that manage people</label><input type="checkbox" id="xpm"${p.exclude_people_mgmt?" checked":""}></div>
     <div class="switch"><label for="nopay">Include roles with no Canadian pay range</label><input type="checkbox" id="nopay"${p.include_no_pay?" checked":""}></div>
   </section>
+  ${qualityPanel()}
   <section class="panel"><h4>How roles are ranked</h4>
     <p class="note">How much each factor counts in the fit score. They always add up to 100%.</p>
     ${SUBS.map(k=>`<div class="slider"><label for="w-${k}">${SUBLABEL[k]}</label><input type="range" id="w-${k}" min="0" max="60" step="5" value="${wv(W,k)}" data-w="${k}"><span class="mono" id="wv-${k}">${tot?Math.round(wv(W,k)*100/tot):0}%</span></div>`).join("")}

@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-15T12:59:41+00:00",
- "count": 547,
+ "updated_at": "2026-10-15T20:22:19+00:00",
+ "count": 545,
  "candidates": [
   {
    "id": "ashby:1password:8151254c-b7d1-4653-87b1-7afeba176898",
@@ -846,45 +846,6 @@
    ],
    "urls": [
     "https://www.amazon.jobs/en/jobs/10419019/senior-product-manager-serverless-compute"
-   ]
-  },
-  {
-   "id": "amazon:amazon:10544050",
-   "company": "Amazon",
-   "title": "Sr Product Mgr, Compliance, Canada Product & Tech",
-   "location": "Toronto, Ontario, CAN",
-   "region": "GTA",
-   "role_tier": "Core",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 115800,
-      "max": 193400,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Toronto, Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "CAN, ON, Toronto - 115,800.00 - 193,400.00 CAD annually"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "As a total compensation company, Amazon's package may include other elements such as sign-on payments and restricted stock units (RSUs)."
-    }
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "amazon"
-   ],
-   "urls": [
-    "https://www.amazon.jobs/en/jobs/10544050/sr-product-mgr-compliance-canada-product-tech"
    ]
   },
   {
@@ -6402,6 +6363,23 @@
    ]
   },
   {
+   "id": "phenom:RBCAA0088:R-0000186402",
+   "company": "RBC",
+   "title": "Principal Technical Product Manager, Evaluations & Governance",
+   "location": "TORONTO, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T20:22:19+00:00",
+   "sources": [
+    "phenom"
+   ],
+   "urls": [
+    "https://jobs.rbc.com/ca/en/job/R-0000186402/Principal-Technical-Product-Manager-Evaluations-Governance"
+   ]
+  },
+  {
    "id": "phenom:RBCAA0088:R-0000188620",
    "company": "RBC",
    "title": "Product Management Analyst",
@@ -6738,6 +6716,23 @@
    ],
    "urls": [
     "https://jobs.scotiabank.com/job/Toronto-Assistant-Manager%2C-Product-Management-Design-&-Solutions-ON-L4W0B4/606741917/"
+   ]
+  },
+  {
+   "id": "successfactors:jobs.scotiabank.com:607036517",
+   "company": "Scotiabank",
+   "title": "Director, Digital Product Owner",
+   "location": "Toronto, ON, Canada, M5C2W1",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-15T20:22:19+00:00",
+   "sources": [
+    "successfactors"
+   ],
+   "urls": [
+    "https://jobs.scotiabank.com/job/Toronto-Director%2C-Digital-Product-Owner-ON-M5C2W1/607036517/"
    ]
   },
   {
@@ -7803,7 +7798,7 @@
   {
    "id": "ashby:wealthsimple:87df1a4c-b9b9-4080-b1bd-9424c110a2b7",
    "company": "Wealthsimple",
-   "title": "Senior/Staff Product Manager, Financial Risk",
+   "title": "Principal/Staff Product Manager, Financial Risk",
    "location": "Remote (Canada); Remote (US)",
    "region": "Remote-Canada",
    "role_tier": "Core",
@@ -10133,6 +10128,23 @@
    ]
   },
   {
+   "id": "lever:eqbank:a2fbe9be-696b-41a5-b699-bc82699e47c1",
+   "company": "EQ Bank",
+   "title": "Director (Program Manager), Cyber Program & Transformation",
+   "location": "Toronto",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-15T20:22:19+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/eqbank/a2fbe9be-696b-41a5-b699-bc82699e47c1"
+   ]
+  },
+  {
    "id": "lever:eqbank:ed06b95a-a20e-4a10-a8a5-fd7a1197712a",
    "company": "EQ Bank",
    "title": "Director, Strategy, Risk and Business Operations",
@@ -10395,72 +10407,6 @@
    ],
    "urls": [
     "https://jobs.ea.com/en_US/careers/JobDetail/Senior-Program-Manager-Respawn-Studios/216084"
-   ]
-  },
-  {
-   "id": "workday:expedia/search:R-109904",
-   "company": "Expedia Group",
-   "title": "Program Manager II, AI & Productivity",
-   "location": "Canada - British Columbia - Vancouver",
-   "region": "Vancouver",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 95000,
-      "max": 133000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Vancouver",
-      "canada": true,
-      "kind": "base_bonus",
-      "estimated": false,
-      "quote": "The total cash range for this position in Vancouver is $95,000.00 to $133,000.00."
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://expedia.wd108.myworkdayjobs.com/en-US/search/job/Canada---British-Columbia---Vancouver/Program-Manager-II--AI---Productivity_R-109904-1"
-   ]
-  },
-  {
-   "id": "workday:expedia/search:R-109196",
-   "company": "Expedia Group",
-   "title": "Program Manager, B2B Cruise",
-   "location": "Canada - British Columbia - Vancouver",
-   "region": "Vancouver",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 73000,
-      "max": 102500,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Vancouver",
-      "canada": true,
-      "kind": "base_bonus",
-      "estimated": false,
-      "quote": "The total cash range for this position in Vancouver is $73,000.00 to $102,500.00."
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://expedia.wd108.myworkdayjobs.com/en-US/search/job/Canada---British-Columbia---Vancouver/Program-Manager--B2B-Cruise_R-109196"
    ]
   },
   {
@@ -10874,256 +10820,6 @@
    ],
    "urls": [
     "https://jobs.ashbyhq.com/lightspeedhq/32a2538d-180c-4e85-a26b-adaf6a2d3030"
-   ]
-  },
-  {
-   "id": "avature:careers.lululemon.com:62957",
-   "company": "Lululemon",
-   "title": "Product Operations Lead | Carrefour Laval",
-   "location": "Laval, Quebec, Canada",
-   "region": "Montreal",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 22,
-      "max": 26,
-      "currency": null,
-      "interval": "hour",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Base Pay Range : $22.25 - $25.50/hour, subject to minimum wage in the location"
-     },
-     {
-      "min": 24,
-      "max": 28,
-      "currency": null,
-      "interval": "hour",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Total Target Base Pay Range : $24.25 - $27.50/hour"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "As part of our offerings, employees in this position may be eligible for our competitive bonus program and equity offerings, subject to program eligibility requirements."
-    }
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "avature"
-   ],
-   "urls": [
-    "https://careers.lululemon.com/en_US/careers/JobDetail/Product-Operations-Lead-Carrefour-Laval/62957"
-   ]
-  },
-  {
-   "id": "avature:careers.lululemon.com:64546",
-   "company": "Lululemon",
-   "title": "Product Operations Lead | Pacific Centre",
-   "location": "Vancouver, British Columbia, Canada",
-   "region": "Vancouver",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 24,
-      "max": 28,
-      "currency": null,
-      "interval": "hour",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Base Pay Range : $24.25 - $28.00/hour, subject to minimum wage in the location"
-     },
-     {
-      "min": 26,
-      "max": 30,
-      "currency": null,
-      "interval": "hour",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Total Target Base Pay Range : $26.25 - $30.00/hour"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "As part of our offerings, employees in this position may be eligible for our competitive bonus program and equity offerings, subject to program eligibility requirements."
-    }
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "avature"
-   ],
-   "urls": [
-    "https://careers.lululemon.com/en_US/careers/JobDetail/Product-Operations-Lead-Pacific-Centre/64546"
-   ]
-  },
-  {
-   "id": "avature:careers.lululemon.com:62168",
-   "company": "Lululemon",
-   "title": "Product Operations Lead | Promenade St-Bruno",
-   "location": "St-Bruno, Quebec, Canada",
-   "region": "Other Canada",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 22,
-      "max": 25,
-      "currency": null,
-      "interval": "hour",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Base Pay Range : $21.75 - $25.02/hour, subject to minimum wage in the location"
-     },
-     {
-      "min": 24,
-      "max": 27,
-      "currency": null,
-      "interval": "hour",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Total Target Base Pay Range : $23.75 - $27.02/hour"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "As part of our offerings, employees in this position may be eligible for our competitive bonus program and equity offerings, subject to program eligibility requirements."
-    }
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "avature"
-   ],
-   "urls": [
-    "https://careers.lululemon.com/en_US/careers/JobDetail/Product-Operations-Lead-Promenade-St-Bruno/62168"
-   ]
-  },
-  {
-   "id": "avature:careers.lululemon.com:63893",
-   "company": "Lululemon",
-   "title": "Product Operations Lead | Rideau Centre",
-   "location": "Ottawa, Ontario, Canada",
-   "region": "Ottawa",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 23,
-      "max": 26,
-      "currency": null,
-      "interval": "hour",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Base Pay Range : $22.75 - $26.17/hour, subject to minimum wage in the location"
-     },
-     {
-      "min": 25,
-      "max": 28,
-      "currency": null,
-      "interval": "hour",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Total Target Base Pay Range : $24.75 - $28.17/hour"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "As part of our offerings, employees in this position may be eligible for our competitive bonus program and equity offerings, subject to program eligibility requirements."
-    }
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "avature"
-   ],
-   "urls": [
-    "https://careers.lululemon.com/en_US/careers/JobDetail/Product-Operations-Lead-Rideau-Centre/63893"
-   ]
-  },
-  {
-   "id": "avature:careers.lululemon.com:62759",
-   "company": "Lululemon",
-   "title": "Product Operations Lead | SASKATOON",
-   "location": "Saskatoon, Saskatchewan, Canada",
-   "region": "Other Canada",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 23,
-      "max": 27,
-      "currency": null,
-      "interval": "hour",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Base Pay Range : $23.25 - $26.75/hour, subject to minimum wage in the location"
-     },
-     {
-      "min": 25,
-      "max": 29,
-      "currency": null,
-      "interval": "hour",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Total Target Base Pay Range : $25.25 - $28.75/hour"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "As part of our offerings, employees in this position may be eligible for our competitive bonus program and equity offerings, subject to program eligibility requirements."
-    }
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "avature"
-   ],
-   "urls": [
-    "https://careers.lululemon.com/en_US/careers/JobDetail/Product-Operations-Lead-SASKATOON/62759"
    ]
   },
   {
@@ -11817,7 +11513,7 @@
       "interval": "year",
       "label": null,
       "canada": null,
-      "kind": "base_bonus",
+      "kind": "base",
       "estimated": false,
       "quote": "Salary Range: $72,160- $108,240 annual base salary plus bonus; Depending on the candidate’s education, experience, skills, geographical location, and alignment with internal equity and external market, actual salary may vary and be higher or lower than the range posted."
      }
@@ -11850,7 +11546,7 @@
       "interval": "year",
       "label": null,
       "canada": null,
-      "kind": "ote",
+      "kind": "base",
       "estimated": false,
       "quote": "Salary Range: $92,300 - $138,500 plus commissions; Depending on the candidate’s education, experience, skills, geographical location, and alignment with internal equity and external market, actual salary may vary and be higher or lower than the range posted."
      }
@@ -11883,7 +11579,7 @@
       "interval": "year",
       "label": null,
       "canada": null,
-      "kind": "ote",
+      "kind": "base",
       "estimated": false,
       "quote": "Salary Range: $92,300 - $138,500 plus commissions ; Depending on the candidate’s education, experience, skills, geographical location, and alignment with internal equity and external market, actual salary may vary and be higher or lower than the range posted."
      }
@@ -11897,6 +11593,106 @@
    ],
    "urls": [
     "https://careers.opentext.com/us/en/job/53590/Sr-Client-Success-Services-Program-Manager"
+   ]
+  },
+  {
+   "id": "oracle_hcm:eeho/CX_45001:347680",
+   "company": "Oracle",
+   "title": "Exam Development Program Manager, NetSuite Certification",
+   "location": "United States; Canada; Austin, TX, United States; Nashville, TN, United States",
+   "region": "Other Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 71100,
+      "max": 116800,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "CA: Hiring Range in CAD from: $71,100 to $116,800 per annum."
+     },
+     {
+      "min": 67900,
+      "max": 166100,
+      "currency": "USD",
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "US: Hiring Range in USD from: $67,900 to $166,100 per annum."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Candidates are typically placed into the range based on the preceding factors as well as internal peer equity."
+    }
+   },
+   "first_seen": "2026-10-15T20:22:19+00:00",
+   "sources": [
+    "oracle_hcm"
+   ],
+   "urls": [
+    "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_45001/job/347680"
+   ]
+  },
+  {
+   "id": "oracle_hcm:eeho/CX_45001:347677",
+   "company": "Oracle",
+   "title": "Senior Exam Development Program Manager, NetSuite Certification",
+   "location": "United States; Canada; Nashville, TN, United States; Austin, TX, United States",
+   "region": "Other Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 81700,
+      "max": 131700,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "CA: Hiring Range in CAD from: $81,700 to $131,700 per annum."
+     },
+     {
+      "min": 90100,
+      "max": 209500,
+      "currency": "USD",
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "US: Hiring Range in USD from: $90,100 to $209,500 per annum."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Candidates are typically placed into the range based on the preceding factors as well as internal peer equity."
+    }
+   },
+   "first_seen": "2026-10-15T20:22:19+00:00",
+   "sources": [
+    "oracle_hcm"
+   ],
+   "urls": [
+    "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_45001/job/347677"
    ]
   },
   {
@@ -11970,23 +11766,6 @@
    ],
    "urls": [
     "https://careers.qualcomm.com/careers/job/446720845971"
-   ]
-  },
-  {
-   "id": "phenom:RBCAA0088:R-0000187511",
-   "company": "RBC",
-   "title": "Manager, FSS Business Operations Support",
-   "location": "HALIFAX, Nova Scotia, Canada; TORONTO, Ontario, Canada",
-   "region": "GTA",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "phenom"
-   ],
-   "urls": [
-    "https://jobs.rbc.com/ca/en/job/R-0000187511/Manager-FSS-Business-Operations-Support"
    ]
   },
   {
@@ -12122,6 +11901,23 @@
    ],
    "urls": [
     "https://jobs.scotiabank.com/job/Toronto-Senior-Manager%2C-Fraud-&-Risk-Strategy-ON-M5H1B6/607019017/"
+   ]
+  },
+  {
+   "id": "successfactors:jobs.scotiabank.com:607051217",
+   "company": "Scotiabank",
+   "title": "Senior Program Manager",
+   "location": "Toronto, ON, Canada, M5H 4A9",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T20:22:19+00:00",
+   "sources": [
+    "successfactors"
+   ],
+   "urls": [
+    "https://jobs.scotiabank.com/job/Toronto-Senior-Program-Manager-ON-M5H-4A9/607051217/"
    ]
   },
   {
@@ -13824,39 +13620,6 @@
    ]
   },
   {
-   "id": "successfactors:jobs.canadalife.com:1442550433",
-   "company": "Canada Life",
-   "title": "Solutions Architect - Wealth Management",
-   "location": "Toronto, ON, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 113500,
-      "max": 163500,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "The base salary for this position is between $113,500.00 - $163,500.00 annually."
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "successfactors"
-   ],
-   "urls": [
-    "https://jobs.canadalife.com/job/Toronto-Solutions-Architect-Wealth-Management-ON/1442550433/"
-   ]
-  },
-  {
    "id": "workday:canadiantirecorporation/Enterprise_External_Careers_Site:JR165174",
    "company": "Canadian Tire (Digital)",
    "title": "Solutions Architect",
@@ -13941,10 +13704,10 @@
      {
       "min": 109000,
       "max": 173000,
-      "currency": null,
+      "currency": "CAD",
       "interval": "year",
-      "label": null,
-      "canada": null,
+      "label": "Canada",
+      "canada": true,
       "kind": "unspecified",
       "estimated": false,
       "quote": "Salary + Short-Term Incentive = 109,000 - 173,000 (CAD)"
@@ -14375,6 +14138,45 @@
    ]
   },
   {
+   "id": "greenhouse:gitlab:8863314002",
+   "company": "GitLab",
+   "title": "Senior Partner Solutions Architect, Strategic Partnerships",
+   "location": "Remote, Canada; Remote, United States",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 115200,
+      "max": 194400,
+      "currency": "USD",
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "$115,200 — $194,400 USD"
+     }
+    ],
+    "primary": null,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Equity Compensation & Employee Stock Purchase Plan"
+    }
+   },
+   "first_seen": "2026-10-15T20:22:19+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/gitlab/jobs/8863314002"
+   ]
+  },
+  {
    "id": "greenhouse:gitlab:8770661002",
    "company": "GitLab",
    "title": "Senior Solutions Architect Operations Manager",
@@ -14430,7 +14232,7 @@
       "interval": "year",
       "label": "Canada",
       "canada": true,
-      "kind": "unspecified",
+      "kind": "base",
       "estimated": false,
       "quote": "Canada: $162000 - $166000 (CAD) + 42.86% bonus target + equity + benefits"
      }
@@ -14600,6 +14402,23 @@
    ],
    "urls": [
     "https://instacart.careers/job/?gh_jid=8214859"
+   ]
+  },
+  {
+   "id": "workday:intactfc/intactfc:R156159",
+   "company": "Intact",
+   "title": "Senior Solution Architect - Data & AI",
+   "location": "Mississauga, Ontario, CAN; Toronto, Ontario, CAN; Montréal, Quebec, CAN",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T20:22:19+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://intactfc.wd3.myworkdayjobs.com/en-US/intactfc/job/Mississauga-Ontario-CAN/Senior-Solution-Architect---Data---AI_R156159-1"
    ]
   },
   {
@@ -15776,10 +15595,10 @@
      {
       "min": 79900,
       "max": 131300,
-      "currency": null,
+      "currency": "CAD",
       "interval": "year",
-      "label": null,
-      "canada": null,
+      "label": "Canada",
+      "canada": true,
       "kind": "base",
       "estimated": false,
       "quote": "CA: Hiring Range in CAD from: $79,900 to $131,300 per annum."
@@ -15815,10 +15634,10 @@
      {
       "min": 163600,
       "max": 268800,
-      "currency": null,
+      "currency": "CAD",
       "interval": "year",
-      "label": null,
-      "canada": null,
+      "label": "Canada",
+      "canada": true,
       "kind": "base",
       "estimated": false,
       "quote": "CA: Hiring Range in CAD from: $163,600 to $268,800 per annum."
@@ -15826,7 +15645,7 @@
      {
       "min": 169800,
       "max": 355400,
-      "currency": null,
+      "currency": "USD",
       "interval": "year",
       "label": null,
       "canada": null,
@@ -16880,8 +16699,8 @@
    "pay": {
     "ranges": [
      {
-      "min": 72,
-      "max": 90,
+      "min": 72.12,
+      "max": 90.14,
       "currency": "USD",
       "interval": "hour",
       "label": null,
@@ -16891,8 +16710,8 @@
       "quote": "Zone A: $72.12 – $90.14 USD/hour"
      },
      {
-      "min": 81,
-      "max": 103,
+      "min": 81.25,
+      "max": 103.37,
       "currency": "USD",
       "interval": "hour",
       "label": null,
@@ -16902,8 +16721,8 @@
       "quote": "Zone B: $81.25 – $103.37 USD/hour"
      },
      {
-      "min": 92,
-      "max": 114,
+      "min": 91.59,
+      "max": 114.47,
       "currency": "USD",
       "interval": "hour",
       "label": null,

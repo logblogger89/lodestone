@@ -5,6 +5,7 @@ refresh = pull every feed -> keep Canada -> role rules -> dedup -> liveness -> c
 from __future__ import annotations
 
 import concurrent.futures as cf
+import json
 import re
 from collections import Counter
 
@@ -82,6 +83,15 @@ def _pull(row: dict):
         return row, adapters.pull(row["platform"], row["company"], row["feed"]), None
     except Exception as e:  # one broken feed never stops the run
         return row, [], f"{type(e).__name__}: {e}"[:300]
+
+
+def _low_hourly(p: dict | None) -> bool:
+    """A Canadian hourly rate below the config threshold (retail and support jobs with product-sounding titles)."""
+    limit = json.loads((store.ROOT / "config" / "role_taxonomy.json").read_text()).get("exclude_hourly_below_cad")
+    if not (p and limit and p.get("primary") is not None):
+        return False
+    r = p["ranges"][p["primary"]]
+    return r.get("interval") == "hour" and r.get("currency") != "USD" and (r.get("max") or 0) < limit
 
 
 def _is_candidate(role) -> bool:
@@ -172,6 +182,8 @@ def refresh(only: str | None = None, log=print) -> dict:
             "description": p.description if _is_candidate(role) else "",
             "detail_api": p.extra.get("detail_api"),
         }
+        if not rec["role_excluded"] and _low_hourly(rec["pay"]):
+            rec["role_excluded"], rec["role_reason"] = True, "Hourly pay below the professional range (store or support job)"
         before = len(jobs)
         jid = dedup.merge(jobs, rec)
         seen_keys.add(p.canonical_key)

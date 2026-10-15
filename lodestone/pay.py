@@ -49,6 +49,10 @@ def _currency(*tags: str | None, sentence: str = "") -> str | None:
     if any(x in t for x in ("CAD", "C$", "CA$", "CDN")):
         return "CAD"
     low = f" {sentence.lower()} "
+    if re.search(r"\b(cad|cdn)\b", low) and not re.search(r"\busd\b", low):
+        return "CAD"                                   # "Hiring Range in CAD from: $79,900 to $131,300"
+    if re.search(r"\busd\b", low) and not re.search(r"\b(cad|cdn)\b", low):
+        return "USD"
     if any(w in low for w in CANADA):
         return "CAD"
     if any(w in low for w in US):
@@ -84,8 +88,10 @@ US_CITIES = ["New York", "San Francisco", "Seattle", "Los Angeles", "Irvine", "M
 def pay_kind(sentence: str) -> str:
     """What a range covers, from the posting's own words: base | base_bonus | ote | total | unspecified."""
     low = sentence.lower()
-    if re.search(r"on[- ]target|\bote\b|including commission|incl\.? commission|plus commission", low):
+    if re.search(r"on[- ]target|\bote\b|including commission|incl\.? commission", low):
         return "ote"
+    if re.search(r"plus commissions?|\+\s*[\d.]+%\s*(target )?bonus|\+\s*bonus|plus (an? )?(annual |target )?bonus", low):
+        return "base"                                  # "$92,300 - $138,500 plus commissions", "$162,000 - $166,000 + 42% bonus"
     if re.search(r"total (target )?(cash|compensation)|inclusive of (an? )?(annual )?(performance )?bonus|"
                  r"includ(es|ing) (an? )?(annual )?(performance )?bonus|base (salary )?(plus|\+|and) (target )?bonus|"
                  r"salary and bonus|incl\.? bonus", low):
@@ -218,7 +224,8 @@ def from_text(text: str) -> list[dict]:
             is_ca = canada if canada is not None else (True if cur == "CAD" else None)
             if is_ca and not label:
                 label = "Canada"
-            out.append({"min": round(lo), "max": round(hi), "currency": cur, "interval": iv,
+            rd = (lambda v: round(v, 2)) if iv == "hour" else round      # keep cents on hourly rates ($24.25)
+            out.append({"min": rd(lo), "max": rd(hi), "currency": cur, "interval": iv,
                         "label": label, "canada": is_ca, "kind": _kind_in_context(s, context),
                         "estimated": _estimated(s) or _estimated(context),
                         "quote": s[:400]})
