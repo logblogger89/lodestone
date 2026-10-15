@@ -11296,5 +11296,2200 @@
   "flags": [
    "Salesforce experience required"
   ]
+ },
+ "9f787fc399ea": {
+  "fingerprint": "568bf892d593f370",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core PM role owning a servicing substream",
+   "level": "Senior PM, 5-7+ yrs, shapes own substream",
+   "domain": "Mortgage lender: fintech, matches your financial-services work",
+   "pathway": "No sponsorship info in posting",
+   "pay": "No Canadian pay range posted",
+   "skills": "Regulated fintech wanted; you have fin-services policy work"
+  },
+  "summary": "Own a substream of mortgage servicing (self-serve, payments, renewals) at a digital lender.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5-7+ yrs product management",
+   "Mortgage or regulated fintech exposure",
+   "Work with servicing ops and compliance"
+  ],
+  "flags": []
+ },
+ "63a2e6e8cb79": {
+  "fingerprint": "d411c18a2a33e56a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Pre-sales/architecture role, not product management",
+   "level": "Senior architect, 8+ yrs; not a PM ladder",
+   "domain": "Mortgage tech and AI platform",
+   "pathway": "No sponsorship info in posting",
+   "pay": "No Canadian pay range posted",
+   "skills": "Needs 8+ yrs software engineering and architecture"
+  },
+  "summary": "Design technical solutions for mortgage platform clients as a solutions architect.",
+  "level_guess": "Senior architect",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "8+ yrs software engineering",
+   "3+ yrs architecture",
+   "French and English"
+  ],
+  "flags": [
+   "French required",
+   "Not a PM role"
+  ]
+ },
+ "735e56da20dd": {
+  "fingerprint": "6e66aaf4ad4a081a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 75,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Principal PM IC for identity threat detection",
+   "level": "Principal IC role, strategic scope",
+   "domain": "Identity security and threat detection, adjacent to your risk work",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 286K clears 230K target",
+   "skills": "Security PM skills; your platform and ML work fit"
+  },
+  "summary": "Drive product strategy for Okta's identity threat detection and response offerings.",
+  "level_guess": "Principal PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Strong PM background in security",
+   "Cybersecurity knowledge",
+   "Strategic roadmap ownership"
+  ],
+  "flags": []
+ },
+ "6f9ed284e673": {
+  "fingerprint": "5673565d4835e9b1",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 72,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Principal PM IC owning Auth0 platform strategy",
+   "level": "Principal; 8-10+ yrs, owns multi-year strategy",
+   "domain": "Developer/cloud platform and identity, adjacent to yours",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 237K clears 230K target",
+   "skills": "Platform-as-a-product and roadmap work match yours"
+  },
+  "summary": "Own multi-year strategy for Auth0 core infrastructure, consumption models and platform capabilities.",
+  "level_guess": "Principal PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "8-10+ yrs PM",
+   "3+ yrs at Principal/Lead level",
+   "Platform and infrastructure product sense"
+  ],
+  "flags": []
+ },
+ "6c0bc5968ce4": {
+  "fingerprint": "7d8ebf68eba29d89",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 30,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core PM owning Device Access product areas",
+   "level": "Mid-level PM, 2+ yrs PM, below your level",
+   "domain": "Identity and device security, adjacent",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 170K meets ok band (160K)",
+   "skills": "Skills fit, role is well below your depth"
+  },
+  "summary": "Own key product areas of Okta Device Access, the device-login identity product.",
+  "level_guess": "PM II (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "3+ yrs industry experience",
+   "2+ yrs product management"
+  ],
+  "flags": [
+   "Below your level"
+  ]
+ },
+ "007df56443f2": {
+  "fingerprint": "d33be62d1a819014",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 35,
+   "level": 55,
+   "domain": 45,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Design-ops program management, not product ownership",
+   "level": "Senior program manager, 4+ yrs",
+   "domain": "Internal AI agents for design teams, no overlap",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 162K meets ok band (160K)",
+   "skills": "Design ops background expected; you lack it"
+  },
+  "summary": "Operationalize internal AI agents and workflows across Okta's Design team.",
+  "level_guess": "Senior program manager",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "4+ yrs design or creative ops",
+   "Program management in SaaS"
+  ],
+  "flags": [
+   "Not a PM role"
+  ]
+ },
+ "558739fad521": {
+  "fingerprint": "4d585bb88fd3ebdd",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 10,
+   "level": 30,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Product marketing leadership, not product",
+   "level": "Senior Director leading a team, large org",
+   "domain": "Partner marketing in SaaS, no domain overlap",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 297K clears 230K target",
+   "skills": "10+ yrs product marketing; not your background"
+  },
+  "summary": "Lead global partner product marketing and alliances strategy and its team.",
+  "level_guess": "Senior Director",
+  "people_mgmt": true,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "10+ yrs SaaS product marketing",
+   "Team leadership",
+   "Technology partnerships"
+  ],
+  "flags": [
+   "Manages people",
+   "Not a PM role"
+  ]
+ },
+ "33c441411098": {
+  "fingerprint": "0352e51f93cf28f9",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 35,
+   "level": 60,
+   "domain": 25,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Jira admin and engineering TPM, little product work",
+   "level": "Senior TPM, internal tooling scope",
+   "domain": "Internal Jira tooling, unrelated to your domains",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 149K is in the low band",
+   "skills": "Jira/Atlassian toolchain expertise needed"
+  },
+  "summary": "Own Jira, Advanced Roadmaps and Confluence strategy and administration for Okta engineering.",
+  "level_guess": "Senior TPM",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Jira administration depth",
+   "Program management",
+   "Atlassian toolchain"
+  ],
+  "flags": [
+   "Internal tooling role"
+  ]
+ },
+ "f712ff0ad783": {
+  "fingerprint": "57dac8d3c1fd908c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core Senior PM role on Auth0",
+   "level": "Senior PM, 5+ yrs, scope narrower than yours",
+   "domain": "Authentication platform for developers, adjacent",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 200K meets good band (190K)",
+   "skills": "Platform PM fit; identity depth is the gap"
+  },
+  "summary": "Senior PM owning part of the Auth0 developer identity platform.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs product management",
+   "B2B/developer products"
+  ],
+  "flags": []
+ },
+ "b0946ee4357e": {
+  "fingerprint": "914dcfb7c482cedd",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 85,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Core Senior PM on agent identity products",
+   "level": "Senior PM, 5-7+ yrs",
+   "domain": "Agentic AI identity matches your enterprise AI governance",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 200K meets good band (190K)",
+   "skills": "Matches your agents/tools governance and B2B SaaS work"
+  },
+  "summary": "Build Auth0 identity and security products for agentic AI.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5-7+ yrs PM in B2B SaaS",
+   "Developer-facing products",
+   "Agentic AI interest"
+  ],
+  "flags": []
+ },
+ "f005eb0e9a95": {
+  "fingerprint": "99de91c3382acd60",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core Senior PM on the customer identity platform",
+   "level": "Senior PM, 5+ yrs, zero-to-one launch",
+   "domain": "Login, MFA and account layer, adjacent to your work",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 200K meets good band (190K)",
+   "skills": "Platform PM skills fit; IAM depth is a gap"
+  },
+  "summary": "Senior PM for Okta Customer Identity: login, MFA and account management for customer apps.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs PM in enterprise SaaS or IAM",
+   "One zero-to-one launch"
+  ],
+  "flags": []
+ },
+ "3ba79b2dc582": {
+  "fingerprint": "12bf8a83d5b26a92",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core Senior PM owning Device Access areas",
+   "level": "Senior PM, 5+ yrs",
+   "domain": "Device-login security, adjacent",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 200K meets good band (190K)",
+   "skills": "Enterprise SaaS PM skills fit"
+  },
+  "summary": "Senior PM for Okta Device Access, the device sign-in identity product.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs PM in enterprise SaaS or IaaS"
+  ],
+  "flags": []
+ },
+ "9f14647cf574": {
+  "fingerprint": "c6e0a932b4c09a1f",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 78,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core Senior PM owning authentication policy roadmap",
+   "level": "Senior PM, 6+ yrs, owns roadmap and strategy",
+   "domain": "Risk-based authentication decisions, close to your risk work",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 200K meets good band (190K)",
+   "skills": "Policy/risk platform work matches your governance roadmap"
+  },
+  "summary": "Own Okta's authentication policy roadmap and the policy framework behind it.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "6+ yrs PM",
+   "Platform and API products"
+  ],
+  "flags": []
+ },
+ "52f69c6cd7da": {
+  "fingerprint": "67304f917d5aa555",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 85,
+   "level": 75,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "IC platform PM, but internal UI framework focus",
+   "level": "Senior PM, 5-8+ yrs, cornerstone IC role",
+   "domain": "UI framework and design systems, general platform",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 200K meets good band (190K)",
+   "skills": "Technical platform PM; front-end depth is a gap"
+  },
+  "summary": "Own Okta's UI framework, design systems, localization and accessibility platform.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5-8+ yrs enterprise platform PM",
+   "Technical fluency in UI frameworks"
+  ],
+  "flags": []
+ },
+ "a16766ca4edb": {
+  "fingerprint": "742c6e6fb82a71b4",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 45,
+   "level": 70,
+   "domain": 60,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "TPM on Auth0 infrastructure, little product ownership",
+   "level": "Senior TPM, 5+ yrs",
+   "domain": "Cyber security platform delivery, adjacent",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 148.5K is in the low band",
+   "skills": "Cross-team delivery fits; TPM craft is secondary"
+  },
+  "summary": "Drive cross-functional delivery of Auth0 platform infrastructure programs.",
+  "level_guess": "Senior TPM",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs TPM",
+   "Cyber security focus"
+  ],
+  "flags": []
+ },
+ "a658be876bb5": {
+  "fingerprint": "69716db0c7469cd4",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 88,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Core Senior PM for Auth0 agentic security",
+   "level": "Senior PM, 5-8 yrs, owns vision and strategy",
+   "domain": "Attack protection, bot detection, AI agents: close to yours",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 218K meets good band (190K)",
+   "skills": "Anti-abuse ML plus agent governance matches your work"
+  },
+  "summary": "Own vision and roadmap for Auth0 attack protection, bot detection and AI agent security.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5-8 yrs PM",
+   "Security product sense",
+   "Startup or high-growth experience"
+  ],
+  "flags": []
+ },
+ "d2424d8544c0": {
+  "fingerprint": "20013a350d3eafcc",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 85,
+   "level": 90,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "IC PM for internal developer productivity and AI",
+   "level": "Staff PM, embedded with a platform org",
+   "domain": "Developer tools and AI enablement, adjacent",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 237.6K clears 230K target",
+   "skills": "Platform PM with AI; developer-tools depth is a gap"
+  },
+  "summary": "Staff PM making Okta engineering faster through developer tools and AI enablement.",
+  "level_guess": "Staff PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs PM in developer platforms or AI",
+   "Cross-team influence"
+  ],
+  "flags": [
+   "Internal-facing product"
+  ]
+ },
+ "33be3636b228": {
+  "fingerprint": "4258773cb47f82df",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 20,
+   "level": 70,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Product marketing launch ops, not product management",
+   "level": "Staff-level, launch lead across teams",
+   "domain": "Go-to-market for SaaS, general",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 176K meets ok band (160K)",
+   "skills": "Launch program skills; GTM background expected"
+  },
+  "summary": "Run strategic product releases through the go-to-market lifecycle.",
+  "level_guess": "Staff program/PMM",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs launch or product marketing",
+   "Cross-functional program leadership"
+  ],
+  "flags": [
+   "Not a PM role"
+  ]
+ },
+ "ff45e0284d6c": {
+  "fingerprint": "919b96be79654282",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 20,
+   "level": 70,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Product marketing, not product management",
+   "level": "Staff PMM, 8+ yrs",
+   "domain": "Identity and endpoint security, adjacent",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 176K meets ok band (160K)",
+   "skills": "8+ yrs B2B product marketing; not your background"
+  },
+  "summary": "Lead go-to-market positioning and launches for Okta Device Access.",
+  "level_guess": "Staff PMM",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "8+ yrs B2B product marketing",
+   "Cybersecurity or identity"
+  ],
+  "flags": [
+   "Not a PM role"
+  ]
+ },
+ "66fd10e81f32": {
+  "fingerprint": "afe5f45085bd7631",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 20,
+   "level": 70,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing, though PM background accepted",
+   "level": "Staff PMM, 8+ yrs",
+   "domain": "Zero Trust and access security, adjacent",
+   "pathway": "Okta is a large multinational; work permit route inferred",
+   "pay": "Top CAD 176K meets ok band (160K)",
+   "skills": "Needs deep IAM protocols; not your background"
+  },
+  "summary": "Own go-to-market for Okta's access management and hybrid security offerings.",
+  "level_guess": "Staff PMM",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "8+ yrs PMM or PM in security",
+   "Identity protocols knowledge"
+  ],
+  "flags": [
+   "Not a PM role"
+  ]
+ },
+ "1a3ae2cc13a3": {
+  "fingerprint": "00752f1450367028",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 45,
+   "level": 55,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Program manager for capital markets delivery, no product ownership",
+   "level": "Program manager, 5-8+ yrs, delivery scope",
+   "domain": "Pension investor tech, financial services but delivery-focused",
+   "pathway": "No sponsorship info in posting",
+   "pay": "Top CAD 157K is in the low band",
+   "skills": "Agile delivery and tooling; unclear fit with your PM work"
+  },
+  "summary": "Run Agile program delivery and portfolio coordination for capital and private markets tech.",
+  "level_guess": "Program manager",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5-8+ yrs program management",
+   "Agile/Scrum/Kanban",
+   "Azure DevOps"
+  ],
+  "flags": []
+ },
+ "54df032d0943": {
+  "fingerprint": "53b195aa46c5746c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 40,
+   "level": 55,
+   "domain": 45,
+   "pathway": 65,
+   "pay": 20,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Client success program management, not product",
+   "level": "Senior PM-of-programs, 8+ yrs",
+   "domain": "Customer success operations, general B2B",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "OTE top 138.5K at 90% = 125K, below the low band",
+   "skills": "Program and customer-success skills; not your focus"
+  },
+  "summary": "Run strategic client success programs for OpenText customers.",
+  "level_guess": "Senior program manager",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs program or customer success",
+   "5+ yrs strategic initiatives"
+  ],
+  "flags": [
+   "OTE pay"
+  ]
+ },
+ "38ccfa6d522a": {
+  "fingerprint": "25115c058a433f31",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 70,
+   "level": 35,
+   "domain": 65,
+   "pathway": 65,
+   "pay": 20,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Product owner for corporate data products, internal",
+   "level": "Mid-level, 3-5 yrs supporting delivery",
+   "domain": "Enterprise data and analytics, adjacent",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "Top CAD 115K is below the low band",
+   "skills": "Data and Agile fit; role is junior for you"
+  },
+  "summary": "Own the roadmap and requirements for OpenText's corporate data and analytics products.",
+  "level_guess": "Product Owner (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3-5 yrs data and analytics delivery",
+   "Agile product ownership",
+   "French and English"
+  ],
+  "flags": [
+   "French required",
+   "Below your level"
+  ]
+ },
+ "1d4cc40518a3": {
+  "fingerprint": "82fcf00f7b77c6d3",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 40,
+   "level": 55,
+   "domain": 45,
+   "pathway": 65,
+   "pay": 20,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Client success program management, not product",
+   "level": "Senior PM-of-programs, 8+ yrs",
+   "domain": "Customer success operations, general B2B",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "OTE top 138.5K at 90% = 125K, below the low band",
+   "skills": "Program and customer-success skills; not your focus"
+  },
+  "summary": "Run strategic client success programs for OpenText customers.",
+  "level_guess": "Senior program manager",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs program or customer success",
+   "5+ yrs strategic initiatives"
+  ],
+  "flags": [
+   "OTE pay"
+  ]
+ },
+ "3fc7722a0e64": {
+  "fingerprint": "d389db8502253801",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 60,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Core Lead PM owning Microsoft ecosystem integration roadmap",
+   "level": "Lead PM, owns strategy and roadmap",
+   "domain": "Enterprise content management, general B2B",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "Top CAD 168K meets ok band (160K)",
+   "skills": "Needs ECM and Microsoft 365 extensibility depth"
+  },
+  "summary": "Own strategy and roadmap for content management integrations with Microsoft Teams, SharePoint and M365.",
+  "level_guess": "Lead PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "ECM or content services experience",
+   "Microsoft Graph, SPFx, Teams"
+  ],
+  "flags": []
+ },
+ "cb9a9e8a777a": {
+  "fingerprint": "a88696864e6b07f8",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 40,
+   "level": 45,
+   "domain": 40,
+   "pathway": 65,
+   "pay": 20,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Client operations program management, not product",
+   "level": "Program manager, scope unclear",
+   "domain": "Customer services ops, general",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "Top CAD 108K is below the low band",
+   "skills": "Operations program skills; not your focus"
+  },
+  "summary": "Run program management for OpenText's client operations team.",
+  "level_guess": "Program manager",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [],
+  "flags": []
+ },
+ "48c25f22bd1c": {
+  "fingerprint": "4e876b083e296d5e",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 40,
+   "level": 60,
+   "domain": 40,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Body is a GTM market-readiness program role despite PM title",
+   "level": "Senior program role, 10+ yrs, regional scope",
+   "domain": "Sales/GTM programs for services, unrelated",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "Top CAD 168K meets ok band (160K)",
+   "skills": "Needs GTM, sales enablement background"
+  },
+  "summary": "Run commercial growth and market-readiness programs linking Professional Services to sales and product marketing.",
+  "level_guess": "Senior program manager",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs enterprise software GTM or program mgmt"
+  ],
+  "flags": [
+   "Title does not match description"
+  ]
+ },
+ "b1b4cea14fa4": {
+  "fingerprint": "c059fb7e31f33305",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 85,
+   "level": 30,
+   "domain": 55,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Director-level PM for communications portfolio",
+   "level": "Director leading a product org, 10+ yrs",
+   "domain": "Customer communications with regulatory compliance angle",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "No Canadian pay range posted",
+   "skills": "Enterprise PM skills fit; leadership scope is above need"
+  },
+  "summary": "Lead product strategy for OpenText's enterprise customer communications portfolio.",
+  "level_guess": "Director PM",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs enterprise PM",
+   "Significant leadership responsibility"
+  ],
+  "flags": [
+   "Manages people"
+  ]
+ },
+ "2c11fc647979": {
+  "fingerprint": "36140b11651aa1ff",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core Senior PM for content management solutions",
+   "level": "Senior PM, 5+ yrs, owns a portfolio",
+   "domain": "Content intelligence, records and governance, adjacent",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "Top CAD 147K is in the low band (130K)",
+   "skills": "SaaS/cloud PM fit; ECM depth is a gap"
+  },
+  "summary": "Define and evolve a portfolio of content management products including Content Intelligence and Process Automation.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs enterprise software PM",
+   "SaaS and hybrid delivery",
+   "Agile"
+  ],
+  "flags": []
+ },
+ "4e817ffdccf6": {
+  "fingerprint": "872bd5b6219472cc",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 60,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core Principal PM for a healthcare B2B platform",
+   "level": "Principal, 8+ yrs, multi-solution portfolio",
+   "domain": "Regulated B2B exchange, healthcare IT",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "No Canadian pay range posted",
+   "skills": "Platform PM fit; healthcare IT domain is a gap"
+  },
+  "summary": "Lead strategy for OpenText Business Network healthcare solutions across a multi-solution portfolio.",
+  "level_guess": "Principal PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "8+ yrs enterprise or healthcare IT PM",
+   "Portfolio ownership"
+  ],
+  "flags": [
+   "Office based"
+  ]
+ },
+ "eb1e8ea6eeaf": {
+  "fingerprint": "b496489638f395bd",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 20,
+   "level": 70,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing, not product management",
+   "level": "Product marketing, 5-8 yrs",
+   "domain": "B2B payments and treasury, adjacent fintech",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "Top CAD 147K is in the low band (130K)",
+   "skills": "PMM background wanted; fintech helps only a little"
+  },
+  "summary": "Lead go-to-market strategy for OpenText's B2B payment solutions portfolio.",
+  "level_guess": "Senior PMM",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5-8 yrs product marketing",
+   "Fintech vendor experience"
+  ],
+  "flags": [
+   "Not a PM role"
+  ]
+ },
+ "f7c22908afb5": {
+  "fingerprint": "f6b51ee6dde2da62",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 80,
+   "level": 45,
+   "domain": 55,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Product leader for a multi-tenant SaaS offering",
+   "level": "Senior Manager leading a product team",
+   "domain": "Customer communications SaaS platform",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "No Canadian pay range posted",
+   "skills": "Strategy skills fit; people lead role is not your target"
+  },
+  "summary": "Lead the product team and strategy for OpenText's multi-tenant Core Communications SaaS.",
+  "level_guess": "Senior Manager PM",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs enterprise SaaS PM",
+   "Product team leadership"
+  ],
+  "flags": [
+   "Manages people"
+  ]
+ },
+ "d19f796fcf1e": {
+  "fingerprint": "e383fd498e555fc2",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 65
+  },
+  "reasons": {
+   "role": "Core Principal PM for Documentum ECM",
+   "level": "Principal, 12-15 yrs experience asked",
+   "domain": "Records management and governance, adjacent",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "No Canadian pay range posted",
+   "skills": "Enterprise PM fit; 12-15 yrs asked, ECM depth gap"
+  },
+  "summary": "Set product direction for the Documentum enterprise content management platform.",
+  "level_guess": "Principal PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "12-15 yrs professional experience",
+   "Enterprise software PM"
+  ],
+  "flags": []
+ },
+ "b8e547ef5eae": {
+  "fingerprint": "703bb5119cede27b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 90,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 85
+  },
+  "reasons": {
+   "role": "Core Lead PM for enterprise AI platform",
+   "level": "Lead PM, 8+ yrs, multi-team platform scope",
+   "domain": "Enterprise AI and AI governance, direct overlap",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "Top CAD 168K meets ok band (160K)",
+   "skills": "AI governance and platform PM match your work"
+  },
+  "summary": "Drive the roadmap for OpenText's Enterprise AI platform capabilities, including AI governance.",
+  "level_guess": "Lead PM (≈ L5/L6)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "8+ yrs PM",
+   "Enterprise AI deployments",
+   "AI governance"
+  ],
+  "flags": [
+   "Full-time in office"
+  ]
+ },
+ "36b8aa235ec4": {
+  "fingerprint": "69c4781bb77f2758",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 65,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core Lead PM for AI-first information management",
+   "level": "Lead PM, 8-12 yrs",
+   "domain": "Secure B2B data exchange platform, adjacent",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "Top CAD 168K meets ok band (160K)",
+   "skills": "Cloud/B2B platform PM fit"
+  },
+  "summary": "Lead product for OpenText Business Network's AI-first secure information exchange platform.",
+  "level_guess": "Lead PM (≈ L5/L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8-12 yrs PM",
+   "Enterprise cloud or B2B platforms"
+  ],
+  "flags": []
+ },
+ "b7a5fad012b8": {
+  "fingerprint": "20b2523c5a0055c8",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 35,
+   "level": 55,
+   "domain": 40,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Body is a PS market-readiness program role despite PM title",
+   "level": "Senior program role, 5+ yrs regional scope",
+   "domain": "Sales enablement and offer launches, unrelated",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "Top CAD 168K meets ok band (160K)",
+   "skills": "Needs GTM and enablement background"
+  },
+  "summary": "Own regional Professional Services market readiness: offer launches and seller enablement.",
+  "level_guess": "Senior program manager",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs program mgmt or enablement",
+   "3+ yrs regional GTM programs"
+  ],
+  "flags": [
+   "Title does not match description"
+  ]
+ },
+ "b7c5cdc98993": {
+  "fingerprint": "cfea691aa579ca5c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 35,
+   "level": 50,
+   "domain": 40,
+   "pathway": 65,
+   "pay": 20,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Client success program management, not product",
+   "level": "Program manager, 8+ yrs asked",
+   "domain": "Customer success operations, general B2B",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "Bonus-inclusive 108K at 90% = 97K, below the low band",
+   "skills": "Program and CS ops skills; not your focus"
+  },
+  "summary": "Design client success programs driving adoption, renewals and retention for OpenText cloud.",
+  "level_guess": "Senior program manager",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs program mgmt or customer success",
+   "5+ yrs strategic initiatives"
+  ],
+  "flags": [
+   "Bonus-inclusive pay"
+  ]
+ },
+ "d0e74f5130b7": {
+  "fingerprint": "c3c5624f71172b98",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 55,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 65
+  },
+  "reasons": {
+   "role": "Core Lead PM for Experience Cloud capabilities",
+   "level": "Lead PM, 8+ yrs, cross-product scope",
+   "domain": "Communications, digital experience and analytics, general",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "Top CAD 168K meets ok band (160K)",
+   "skills": "Enterprise SaaS PM fit; analytics and AI experience help"
+  },
+  "summary": "Shape strategy and roadmap for integrated capabilities across OpenText Experience Cloud.",
+  "level_guess": "Lead PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs enterprise PM",
+   "Cross-product initiatives"
+  ],
+  "flags": []
+ },
+ "91f54550d269": {
+  "fingerprint": "43781618d40f5a08",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 55,
+   "level": 80,
+   "domain": 35,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "PM of packaged services offerings, less product depth",
+   "level": "Principal, 10+ yrs, portfolio ownership",
+   "domain": "Professional services catalogue, unrelated",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "No Canadian pay range posted",
+   "skills": "Services commercialization background expected"
+  },
+  "summary": "Own the packaged Professional Services offer catalogue: value proposition, delivery model and commercialization.",
+  "level_guess": "Principal PM (services)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs services, PM or consulting",
+   "Offer commercialization"
+  ],
+  "flags": []
+ },
+ "f3a3fc2513e3": {
+  "fingerprint": "47d86798c8d02ab3",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 65,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core Principal PM for ECM portfolio",
+   "level": "Principal, 12-15 yrs experience asked",
+   "domain": "Information governance/content services, adjacent",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "No Canadian pay range posted",
+   "skills": "Enterprise PM fit; 12-15 yrs asked, ECM depth gap"
+  },
+  "summary": "Set product direction for part of OpenText's enterprise content services portfolio.",
+  "level_guess": "Principal PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "12-15 yrs professional experience",
+   "Enterprise software PM"
+  ],
+  "flags": []
+ },
+ "aa5f95f50757": {
+  "fingerprint": "47d86798c8d02ab3",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 65,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core Principal PM for ECM portfolio",
+   "level": "Principal, 12-15 yrs experience asked",
+   "domain": "Information governance/content services, adjacent",
+   "pathway": "OpenText is a large multinational; work permit route inferred",
+   "pay": "No Canadian pay range posted",
+   "skills": "Enterprise PM fit; 12-15 yrs asked, ECM depth gap"
+  },
+  "summary": "Set product direction for part of OpenText's enterprise content services portfolio.",
+  "level_guess": "Principal PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "12-15 yrs professional experience",
+   "Enterprise software PM"
+  ],
+  "flags": []
+ },
+ "4c958be5a45f": {
+  "fingerprint": "73ef3cd56ea5259f",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 10,
+   "level": 30,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Product marketing leadership, not product",
+   "level": "Senior Director building a PMM organization",
+   "domain": "ERP portfolio marketing, general B2B",
+   "pathway": "Oracle is a large multinational; work permit route inferred",
+   "pay": "Top CAD 268.8K clears 230K target",
+   "skills": "10+ yrs PMM leadership; not your background"
+  },
+  "summary": "Lead product marketing strategy and team for the NetSuite portfolio.",
+  "level_guess": "Senior Director PMM",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Product marketing leadership",
+   "People management"
+  ],
+  "flags": [
+   "Manages people",
+   "Not a PM role"
+  ]
+ },
+ "599ccbc6c198": {
+  "fingerprint": "a42f7f2464c72eb1",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 45,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Pre-sales consulting, not product management",
+   "level": "Senior solution consultant, 7+ yrs",
+   "domain": "ERP for product companies, unrelated to yours",
+   "pathway": "Oracle is a large multinational; work permit route inferred",
+   "pay": "Top CAD 131.3K is in the low band (130K)",
+   "skills": "Requires ERP consulting and French fluency"
+  },
+  "summary": "Advise prospects as a bilingual pre-sales solution consultant for NetSuite ERP.",
+  "level_guess": "Senior consultant",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Fluent French and English",
+   "7+ yrs solution or ERP consulting"
+  ],
+  "flags": [
+   "French required",
+   "Montreal based",
+   "Not a PM role"
+  ]
+ },
+ "bd7281d58c69": {
+  "fingerprint": "a1ff35e659cabb4c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 90,
+   "level": 45,
+   "domain": 85,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "PM role owning workstreams on a payments platform",
+   "level": "Mid-level PM, 5+ yrs; below your level",
+   "domain": "Payments and commerce, matches your fintech work",
+   "pathway": "PayPal is a large multinational; work permit route inferred",
+   "pay": "Top CAD 157.5K is in the low band (130K)",
+   "skills": "Analytics and platform PM skills fit"
+  },
+  "summary": "Own product workstreams for PayPal's payments and commerce platform.",
+  "level_guess": "PM (≈ L4/L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs product experience",
+   "Metrics and market analysis"
+  ],
+  "flags": [
+   "Below your level"
+  ]
+ },
+ "175a916f50b8": {
+  "fingerprint": "d3f304c04b15ac82",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core Principal PM owning strategy and roadmap",
+   "level": "Principal, 8+ yrs, multi-area scope",
+   "domain": "Digital insurance: trust and fintech-adjacent",
+   "pathway": "No sponsorship info in posting",
+   "pay": "No Canadian pay range posted",
+   "skills": "Roadmap ownership and trust-building fit your work"
+  },
+  "summary": "Own accounts, automation and multi-product adoption strategy at a digital insurance startup.",
+  "level_guess": "Principal PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "8+ yrs PM, scaling consumer digital products",
+   "High-growth experience"
+  ],
+  "flags": []
+ },
+ "1589438593a0": {
+  "fingerprint": "1f7ff91f14f8329b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 10,
+   "level": 30,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Product marketing leadership, not product",
+   "level": "Director with direct people management",
+   "domain": "Procurement and spend platform, adjacent fintech",
+   "pathway": "No sponsorship info in posting",
+   "pay": "Top CAD 210K meets good band (190K)",
+   "skills": "10+ yrs B2B SaaS marketing leadership; not yours"
+  },
+  "summary": "Lead product marketing, narrative and analyst relations for an agentic procurement platform.",
+  "level_guess": "Director PMM",
+  "people_mgmt": true,
+  "work_mode": "remote",
+  "must_haves": [
+   "10+ yrs B2B SaaS marketing",
+   "Direct people management"
+  ],
+  "flags": [
+   "Manages people",
+   "Not a PM role"
+  ]
+ },
+ "f47e78f76f55": {
+  "fingerprint": "7ee074c3ce07413f",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 78,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Core Senior PM for an agentic procurement platform",
+   "level": "Senior PM, 5+ yrs",
+   "domain": "Spend management, fintech and agentic AI",
+   "pathway": "No sponsorship info in posting",
+   "pay": "Top CAD 160K meets ok band (160K)",
+   "skills": "SaaS/fintech PM and AI product skills match"
+  },
+  "summary": "Define and deliver customer-centric features for Procurify's agentic spend-management platform.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs PM in SaaS or fintech"
+  ],
+  "flags": []
+ },
+ "37869283b7b7": {
+  "fingerprint": "686cc41f6c5d2053",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 25,
+   "level": 40,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Pre-sales solutions consulting, not product",
+   "level": "Individual contributor, 4+ yrs",
+   "domain": "Spend management and AP automation, adjacent fintech",
+   "pathway": "No sponsorship info in posting",
+   "pay": "OTE top CAD 110K at 90% = 99K, below the low band",
+   "skills": "Needs pre-sales and procure-to-pay background"
+  },
+  "summary": "Be the technical and domain authority on the sales team for procurement software.",
+  "level_guess": "Solutions consultant",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "4+ yrs solutions consulting or sales engineering"
+  ],
+  "flags": [
+   "OTE pay",
+   "Not a PM role"
+  ]
+ },
+ "f2f604fd5458": {
+  "fingerprint": "bb43f0f950014f8a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 30,
+   "level": 65,
+   "domain": 20,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Hardware and firmware program management",
+   "level": "Senior TPM, 5+ yrs",
+   "domain": "Silicon/datacenter networking, unrelated",
+   "pathway": "Qualcomm is a large multinational; work permit route inferred",
+   "pay": "No Canadian pay range posted",
+   "skills": "Needs 5+ yrs firmware development"
+  },
+  "summary": "Run software, firmware, emulation and silicon validation programs for datacenter networking.",
+  "level_guess": "Senior TPM",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs program management",
+   "5+ yrs firmware development"
+  ],
+  "flags": [
+   "Hardware domain"
+  ]
+ },
+ "ca49399ac879": {
+  "fingerprint": "87ff0388e55d224f",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 30,
+   "level": 40,
+   "domain": 20,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Customer-facing program manager for semiconductors",
+   "level": "Mid-level, 2+ yrs program management",
+   "domain": "Semiconductor engineering programs, unrelated",
+   "pathway": "Qualcomm is a large multinational; work permit route inferred",
+   "pay": "Top CAD 162K meets ok band (160K)",
+   "skills": "Customer program skills; domain is a gap"
+  },
+  "summary": "Coordinate customer-facing SoC engineering programs and track their KPIs.",
+  "level_guess": "Program manager",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "2+ yrs program management"
+  ],
+  "flags": [
+   "Hardware domain"
+  ]
+ },
+ "13ded43c03de": {
+  "fingerprint": "b450609bcf277c28",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 30,
+   "level": 65,
+   "domain": 20,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Hardware and firmware program management",
+   "level": "Senior TPM, 5+ yrs",
+   "domain": "Silicon/datacenter networking, unrelated",
+   "pathway": "Qualcomm is a large multinational; work permit route inferred",
+   "pay": "No Canadian pay range posted",
+   "skills": "Needs 5+ yrs firmware development"
+  },
+  "summary": "Run software, firmware, emulation and silicon validation programs for datacenter networking.",
+  "level_guess": "Senior TPM",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs program management",
+   "5+ yrs firmware development"
+  ],
+  "flags": [
+   "Hardware domain"
+  ]
+ },
+ "955edf4764a3": {
+  "fingerprint": "3e5044231bf1ecb1",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core Senior PM at a point-of-sale lender",
+   "level": "Senior PM, 6+ yrs, 2 yrs lead level, no reports",
+   "domain": "Consumer credit and fintech, matches your fin-services work",
+   "pathway": "No sponsorship info in posting",
+   "pay": "Top CAD 150K is in the low band (130K)",
+   "skills": "Lead-level fintech PM; your regulated work fits"
+  },
+  "summary": "Own product areas for Flexiti's point-of-sale financing and credit card products.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "6+ yrs product management",
+   "2 yrs lead/principal role",
+   "Fintech or lending"
+  ],
+  "flags": []
+ },
+ "116a38f21e12": {
+  "fingerprint": "213bc2daada537db",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 70,
+   "level": 25,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Head of Product leading a team, more management",
+   "level": "Head of Product leading Group PMs, 15+ yrs",
+   "domain": "Fintech and investing platform, matches your domain",
+   "pathway": "No sponsorship info in posting",
+   "pay": "No Canadian pay range posted",
+   "skills": "Needs 15+ yrs Canadian fintech and team leadership"
+  },
+  "summary": "Lead product vision and a team of Group PMs for Questrade's unified customer experience.",
+  "level_guess": "Head of Product",
+  "people_mgmt": true,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "15+ yrs Canadian fintech PM",
+   "Lead Group Product Managers"
+  ],
+  "flags": [
+   "Manages people"
+  ]
+ },
+ "2409396791e9": {
+  "fingerprint": "01193db8024909ba",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 20,
+   "level": 50,
+   "domain": 80,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing, not product management",
+   "level": "PMM, 5+ yrs, level unclear",
+   "domain": "Trading and investing products, fintech",
+   "pathway": "No sponsorship info in posting",
+   "pay": "Top CAD 140K is in the low band (130K)",
+   "skills": "PMM experience expected; not your background"
+  },
+  "summary": "Lead go-to-market for Questrade's active trader platforms and investment tools.",
+  "level_guess": "Senior PMM",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs product marketing",
+   "Fintech preferred"
+  ],
+  "flags": [
+   "Not a PM role"
+  ]
+ },
+ "edd8bf461bba": {
+  "fingerprint": "74fb850e1a689450",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 85,
+   "level": 50,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Talent-community entry for future PM roles, no live opening",
+   "level": "Level unclear; covers range of PM roles",
+   "domain": "Fintech and investing platforms",
+   "pathway": "No sponsorship info in posting",
+   "pay": "No pay posted",
+   "skills": "General PM skills; no specific must-haves"
+  },
+  "summary": "Join Questrade's talent community for future product management openings.",
+  "level_guess": "Unclear",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [],
+  "flags": [
+   "Talent community, no live opening"
+  ]
+ },
+ "a1e07de7f554": {
+  "fingerprint": "e4b9019d5dd0fc41",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 55,
+   "level": 20,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Executive product and tech leader, more management than PM",
+   "level": "Head of function, 10+ yrs incl. 5 at director level",
+   "domain": "Digital bank: matches your financial-services work",
+   "pathway": "No sponsorship info in posting",
+   "pay": "No pay posted",
+   "skills": "Needs executive leadership of product and engineering"
+  },
+  "summary": "Lead product and technology teams building Questbank's digital banking products.",
+  "level_guess": "Head of Product & Tech",
+  "people_mgmt": true,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "10+ yrs leadership in product or software",
+   "5+ yrs director/executive"
+  ],
+  "flags": [
+   "Manages people",
+   "Executive role"
+  ]
+ },
+ "a41f078bf227": {
+  "fingerprint": "cdf51e1ac383fdff",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 45,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core PM owning credit card discovery and delivery",
+   "level": "PM, 5+ yrs; below your scope",
+   "domain": "Consumer credit cards in banking, close to your fin-services work",
+   "pathway": "No sponsorship info in posting",
+   "pay": "Top CAD 150K is in the low band (130K)",
+   "skills": "Consumer fintech PM skills fit"
+  },
+  "summary": "Own discovery and delivery of Questbank credit card products and features.",
+  "level_guess": "PM (≈ L4/L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs PM, consumer digital products at scale",
+   "Banking preferred"
+  ],
+  "flags": [
+   "Below your level"
+  ]
+ },
+ "4723b158d358": {
+  "fingerprint": "9eaa9691087db25d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Core Senior PM owning a product line end-to-end",
+   "level": "Senior PM, 5+ yrs",
+   "domain": "Personal finance marketplace, matches your commerce and fintech work",
+   "pathway": "No sponsorship info in posting",
+   "pay": "Bonus-inclusive 175K at 90% = 157.5K, low band",
+   "skills": "Marketplace/fintech PM skills fit"
+  },
+  "summary": "Own a financial-services marketplace product line at a Canadian personal finance company.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs PM, product line end-to-end",
+   "Fintech or B2C marketplace"
+  ],
+  "flags": [
+   "Bonus-inclusive pay"
+  ]
+ },
+ "c6fccb933e6a": {
+  "fingerprint": "9e0fc33a1edb02ec",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 10,
+   "level": 40,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 15
+  },
+  "reasons": {
+   "role": "Financial planning tools consultant, not a PM role",
+   "level": "Individual contributor, 3-5 yrs industry",
+   "domain": "Wealth planning software, not product ownership",
+   "pathway": "RBC is a large multinational bank; work permit route inferred",
+   "pay": "No pay posted",
+   "skills": "Needs wealth planning experience and French fluency"
+  },
+  "summary": "Support financial planners as the technical expert on RBC's planning software.",
+  "level_guess": "Consultant",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "French and English",
+   "3-5 yrs financial planning industry"
+  ],
+  "flags": [
+   "French required",
+   "Montreal based",
+   "Not a PM role"
+  ]
+ },
+ "10159b3a7826": {
+  "fingerprint": "875a7616d47a654e",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 10,
+   "level": 40,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Financial planning tools consultant, not a PM role",
+   "level": "Individual contributor, 3-5 yrs industry",
+   "domain": "Wealth planning software, not product ownership",
+   "pathway": "RBC is a large multinational bank; work permit route inferred",
+   "pay": "No pay posted",
+   "skills": "Needs wealth/financial planning industry experience"
+  },
+  "summary": "Support financial planners as the technical expert on RBC's planning software.",
+  "level_guess": "Consultant",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3-5 yrs financial planning industry"
+  ],
+  "flags": [
+   "Not a PM role"
+  ]
+ },
+ "70a9dc6172b3": {
+  "fingerprint": "b77c5b82df6c8c26",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 80,
+   "level": 45,
+   "domain": 85,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "AI strategy and product leadership for wealth AI",
+   "level": "Director; team size unclear, 8+ yrs",
+   "domain": "Applied AI in wealth management, financial services",
+   "pathway": "RBC is a large multinational bank; work permit route inferred",
+   "pay": "No pay posted",
+   "skills": "AI product strategy and ROI cases fit your work"
+  },
+  "summary": "Set strategy and product direction for AI solutions across RBC Wealth Management.",
+  "level_guess": "Director (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs in tech, fintech or consulting",
+   "AI/ML product exposure"
+  ],
+  "flags": [
+   "Director title, team size unclear"
+  ]
+ },
+ "630a9526e348": {
+  "fingerprint": "8b8279d47feb4d58",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 88,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core Senior PM owning an AI governance roadmap",
+   "level": "Senior PM, 5-7+ yrs, owns vision and roadmap",
+   "domain": "AI governance, compliance and risk: direct overlap",
+   "pathway": "RBC is a large multinational bank; work permit route inferred",
+   "pay": "No pay posted",
+   "skills": "Matches your AI governance and compliance platform work"
+  },
+  "summary": "Own the roadmap for AI-powered software delivery with built-in governance across RBC.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5-7+ yrs PM, strategy to launch",
+   "Technical fluency",
+   "Risk and compliance partnering"
+  ],
+  "flags": []
+ },
+ "2f6468ee3811": {
+  "fingerprint": "913a9ad6d407af27",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 70,
+   "level": 20,
+   "domain": 90,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Product leader running an agentic AI platform org",
+   "level": "Senior Director, manager of managers, 10+ yrs",
+   "domain": "Enterprise agentic AI platform: direct overlap",
+   "pathway": "RBC is a large multinational bank; work permit route inferred",
+   "pay": "No pay posted",
+   "skills": "Needs 3+ yrs managing managers; AI product fit"
+  },
+  "summary": "Lead a team of PM Directors owning RBC's internal agentic AI platform.",
+  "level_guess": "Senior Director",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs PM",
+   "3+ yrs manager of managers",
+   "Production AI products"
+  ],
+  "flags": [
+   "Manages people",
+   "Org-leader role"
+  ]
+ },
+ "9c3914a4bdb9": {
+  "fingerprint": "969f97f753afd5d5",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 5,
+   "level": 40,
+   "domain": 35,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Finance systems operations manager, not product",
+   "level": "Manager of a shared service team",
+   "domain": "Finance rules systems, unrelated",
+   "pathway": "RBC is a large multinational bank; work permit route inferred",
+   "pay": "No pay posted",
+   "skills": "Finance shared-services experience needed"
+  },
+  "summary": "Manage the team processing business rules transactions in RBC's finance system.",
+  "level_guess": "Manager",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [],
+  "flags": [
+   "Manages people",
+   "Not a PM role"
+  ]
+ },
+ "3619c14dee57": {
+  "fingerprint": "5228e92ca0806c53",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 65,
+   "domain": 80,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 65
+  },
+  "reasons": {
+   "role": "Core Senior PM in wealth technology",
+   "level": "Senior PM, 3-7 yrs with 3+ in wealth",
+   "domain": "Wealth management, financial services",
+   "pathway": "RBC is a large multinational bank; work permit route inferred",
+   "pay": "No pay posted",
+   "skills": "Needs 3+ yrs wealth product experience"
+  },
+  "summary": "Define strategy and lead agile delivery for wealth management platforms at RBC Rochdale.",
+  "level_guess": "Senior PM (≈ L4/L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3-7 yrs PM",
+   "3+ yrs wealth product management"
+  ],
+  "flags": []
+ },
+ "5b7ed52f0439": {
+  "fingerprint": "4fea9bbb1a7a3303",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 70,
+   "level": 55,
+   "domain": 75,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Product owner for trading platforms, with QA team",
+   "level": "Associate Director, 7+ yrs, has direct reports",
+   "domain": "Rates trading platforms, capital markets",
+   "pathway": "RBC is a large multinational bank; work permit route inferred",
+   "pay": "No pay posted",
+   "skills": "Needs capital markets and trading expertise"
+  },
+  "summary": "Own the product roadmap for Global Rates e-trading platforms and lead the QA team.",
+  "level_guess": "Associate Director",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs, 4+ yrs product ownership",
+   "Capital markets expertise"
+  ],
+  "flags": [
+   "Manages people"
+  ]
+ },
+ "cdabfda35899": {
+  "fingerprint": "24bfcfa62697a4ce",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 90,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 85
+  },
+  "reasons": {
+   "role": "Core Principal PM shaping applied AI banking products",
+   "level": "Principal, 8+ yrs, influences enterprise strategy",
+   "domain": "Responsible AI in regulated banking: direct overlap",
+   "pathway": "RBC is a large multinational bank; work permit route inferred",
+   "pay": "No pay posted",
+   "skills": "AI/ML PM in a regulated setting matches your work"
+  },
+  "summary": "Lead AI product strategy for Personal Banking at RBC's Borealis AI lab.",
+  "level_guess": "Principal PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs PM, AI/ML products",
+   "Matrixed enterprise lifecycle"
+  ],
+  "flags": []
+ },
+ "c9ea854c9e02": {
+  "fingerprint": "6d458d6dd4a06d08",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 20,
+   "level": 50,
+   "domain": 55,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing, not product management",
+   "level": "PMM, 4+ yrs",
+   "domain": "Cloud data backup SaaS, adjacent",
+   "pathway": "No sponsorship info in posting",
+   "pay": "Top CAD 140K is in the low band (130K)",
+   "skills": "B2B PMM experience expected"
+  },
+  "summary": "Run product launches, positioning and messaging for a SaaS data backup company.",
+  "level_guess": "PMM",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "4+ yrs B2B product marketing"
+  ],
+  "flags": [
+   "Not a PM role"
+  ]
+ },
+ "cf3132b31f2b": {
+  "fingerprint": "490285f6bb1b5577",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 30,
+   "level": 50,
+   "domain": 35,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "HR/EOR program management, not product",
+   "level": "Program manager, 5+ yrs",
+   "domain": "Global HR and employer-of-record operations",
+   "pathway": "No sponsorship info in posting",
+   "pay": "Top CAD 130K is in the low band (130K)",
+   "skills": "Needs HR ops and EOR experience"
+  },
+  "summary": "Run employer-of-record programs for Rippling's HR platform.",
+  "level_guess": "Program manager",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs HR ops or EOR programs"
+  ],
+  "flags": []
+ },
+ "f28a888cee84": {
+  "fingerprint": "120a29660e406a7c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:47:03+00:00",
+  "subs": {
+   "role": 5,
+   "level": 45,
+   "domain": 15,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 15
+  },
+  "reasons": {
+   "role": "Corporate safety program lead, not product",
+   "level": "Program lead, 5+ yrs",
+   "domain": "Occupational safety, unrelated",
+   "pathway": "No sponsorship info in posting",
+   "pay": "No pay posted",
+   "skills": "Needs safety management systems experience"
+  },
+  "summary": "Lead corporate standards and programs for Rogers' safety management system.",
+  "level_guess": "Program lead",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "5+ yrs in safety or related field"
+  ],
+  "flags": [
+   "Onsite required",
+   "Not a PM role"
+  ]
  }
 }

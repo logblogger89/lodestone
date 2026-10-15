@@ -145,17 +145,12 @@
    "postings": 26
   },
   "scoring": {
-   "at": "2026-10-15T05:46:48+00:00",
+   "at": "2026-10-15T05:47:03+00:00",
    "rubric": "1.0",
-   "scored": 350
+   "scored": 420
   }
  },
  "history": [
-  {
-   "component": "jobs:ultipro",
-   "at": "2026-10-15T03:45:25+00:00",
-   "postings": 73
-  },
   {
    "component": "jobs:talentbrew",
    "at": "2026-10-15T03:45:25+00:00",
@@ -411,6 +406,12 @@
    "at": "2026-10-15T05:46:48+00:00",
    "rubric": "1.0",
    "scored": 350
+  },
+  {
+   "component": "scoring",
+   "at": "2026-10-15T05:47:03+00:00",
+   "rubric": "1.0",
+   "scored": 420
   }
  ]
 }
