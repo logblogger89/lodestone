@@ -30,3 +30,13 @@ class TestSignals(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestMatching(unittest.TestCase):
+    def test_legal_name_variants(self):
+        from lodestone.signals import _match
+        keys = {"salesforce": "Salesforce", "okta": "Okta"}
+        prefixes = {"salesforce": "Salesforce", "okta": "Okta"}
+        self.assertEqual(_match(norm("Salesforce.com Canada Corp."), keys, prefixes), "Salesforce")
+        self.assertEqual(_match(norm("Okta"), keys, prefixes), "Okta")
+        self.assertIsNone(_match(norm("Salesforce Plumbing Supply Inc."), keys, prefixes))

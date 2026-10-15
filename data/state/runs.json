@@ -150,22 +150,12 @@
    "scored": 543
   },
   "signals": {
-   "at": "2026-10-15T06:07:14+00:00",
+   "at": "2026-10-15T06:16:13+00:00",
    "window": "2024Q1–2026Q1",
-   "companies_with_lmias": 58
+   "companies_with_lmias": 79
   }
  },
  "history": [
-  {
-   "component": "jobs:shopify",
-   "at": "2026-10-15T03:45:25+00:00",
-   "postings": 115
-  },
-  {
-   "component": "jobs:dover",
-   "at": "2026-10-15T03:45:25+00:00",
-   "postings": 2
-  },
   {
    "component": "jobs:adp",
    "at": "2026-10-15T03:45:25+00:00",
@@ -423,6 +413,18 @@
    "at": "2026-10-15T06:07:14+00:00",
    "window": "2024Q1–2026Q1",
    "companies_with_lmias": 58
+  },
+  {
+   "component": "signals",
+   "at": "2026-10-15T06:15:59+00:00",
+   "window": "2024Q1–2026Q1",
+   "companies_with_lmias": 80
+  },
+  {
+   "component": "signals",
+   "at": "2026-10-15T06:16:13+00:00",
+   "window": "2024Q1–2026Q1",
+   "companies_with_lmias": 79
   }
  ]
 }

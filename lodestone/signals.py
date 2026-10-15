@@ -48,14 +48,38 @@ def _rows(path: str):
         yield out
 
 
+# Brand names that are also ordinary words or other businesses' names: these match only through an alias.
+GENERIC = {"apple", "block", "square", "later", "float", "zip", "maple", "league", "flare", "hopper", "jane app",
+           "fable", "ada", "bell", "porter", "rogers", "solace", "mila", "karoo", "signal 1", "element", "wave",
+           "propel holdings", "constellation software", "national bank", "visa", "intact", "indeed", "unity", "snap"}
+# Words a legal name may add after the brand ("Snowflake Computing Canada ULC", "Salesforce.com Canada Corp.").
+SUFFIXES = {"technologies", "technology", "tech", "computing", "com", "software", "systems", "labs", "payments",
+            "platforms", "financial", "services", "solutions", "digital", "global", "international", "group", "hq",
+            "operations", "development", "centre", "center", "research"}
+
+
+def _match(emp_core: str, keys: dict[str, str], prefixes: dict[str, str]) -> str | None:
+    if emp_core in keys:
+        return keys[emp_core]
+    words = emp_core.split()
+    for n in range(len(words) - 1, 0, -1):               # longest brand prefix followed only by suffix words
+        head, tail = " ".join(words[:n]), words[n:]
+        if head in prefixes and all(w in SUFFIXES for w in tail):
+            return prefixes[head]
+    return None
+
+
 def load(log=print) -> dict:
     aliases = json.loads((store.ROOT / "config" / "employer_aliases.json").read_text())
     names = [r["company"].strip() for r in pipeline.employers()]
     keys: dict[str, str] = {}
+    prefixes: dict[str, str] = {}
     for n in names:
         core = norm(n)
-        if len(core) >= 6 or len(core.split()) >= 2:          # short names only match via an alias
+        if core and core not in GENERIC and norm(n.split(" (")[0]) not in GENERIC:
             keys[core] = n
+            if len(core) >= 4:
+                prefixes[core] = n
         for a in aliases.get(n, []):
             keys[norm(a)] = n
     agg: dict[str, dict] = {}
@@ -71,7 +95,7 @@ def load(log=print) -> dict:
             if len(row) < len(header):
                 continue
             emp = row[header["Employer"]]
-            company = keys.get(norm(emp))
+            company = _match(norm(emp), keys, prefixes)
             if not company:
                 continue
             occ = row[header["Occupation"]]

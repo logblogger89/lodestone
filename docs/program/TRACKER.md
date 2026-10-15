@@ -185,6 +185,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | LMIA name-matching fix after Ayush's question: legal-name variants ("Salesforce.com Canada Corp.", "Okta", "Snowflake Computing") now match; 79 companies (was 58). Microsoft, Workday, Nvidia, Adobe, Meta, Google, Lyft, Databricks confirmed absent from the 2024Q1–2026Q1 lists | Claude |
 | 2026-10-15 | ESDC LMIA pathway signals live (D-050); `/refresh-signals` skill added | Claude |
 | 2026-10-15 | P1-S3 closed after calibration (D-049); P1-S4 started | Claude |
 | 2026-10-15 | Freshness factor and old-posting cut-off added (D-048); iCIMS posting dates captured | Claude |
