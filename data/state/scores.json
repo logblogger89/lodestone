@@ -9065,5 +9065,2236 @@
   "flags": [
    "In-office 3 days a week"
   ]
+ },
+ "1e765d5eabb6": {
+  "fingerprint": "931f934c21776ec2",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 60,
+   "level": 75,
+   "domain": 35,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Product-owner role, but for physical bikeshare station hardware",
+   "level": "Senior PM, 5-6+ yrs; narrower hardware scope",
+   "domain": "Micromobility hardware is far from your domains",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top CA$140K is just above the low band",
+   "skills": "Core PM craft fits; hardware product experience is thin"
+  },
+  "summary": "Own the roadmap for bikeshare station hardware at Lyft Urban Solutions.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5-6+ yrs product management",
+   "Hardware product experience"
+  ],
+  "flags": [
+   "Hardware product"
+  ]
+ },
+ "1982c0d2a406": {
+  "fingerprint": "2bd9340ad97187a6",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Staff PM owning the Customer Care Platform & Data vision",
+   "level": "8+ yrs owning platform strategy; matches your L5-6 scope",
+   "domain": "Support platform and data tooling; adjacent to your platforms",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top CA$215K is in the good band",
+   "skills": "Platform vision, data and exec alignment match your work"
+  },
+  "summary": "Own vision and strategy for Lyft's customer care platform and data layer.",
+  "level_guess": "Staff PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "8+ yrs product management",
+   "Platform or cross-functional product strategy"
+  ],
+  "flags": [
+   "Hybrid 3 days in office"
+  ]
+ },
+ "6fc9b1173723": {
+  "fingerprint": "da6b69575cd328ed",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 90,
+   "level": 85,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Lead IC PM owning DFIR product vision, roadmap and agentic AI",
+   "level": "Lead PM, individual contributor, owns outcomes like a GM",
+   "domain": "Digital forensics software with AI; regulated, trust-flavoured",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "AI product, regulated spaces and 0-to-1 match; no forensics"
+  },
+  "summary": "Lead product for Magnet's examination and analysis software, including agentic AI features.",
+  "level_guess": "Lead PM (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Product lifecycle 0 to 1",
+   "Regulated space experience",
+   "AI product delivery"
+  ],
+  "flags": [
+   "Pay not posted"
+  ]
+ },
+ "ae8a077c64e1": {
+  "fingerprint": "ffba13d89591bc2d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 90,
+   "level": 85,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Own strategy for a new enterprise DFIR and cybersecurity offering",
+   "level": "Lead PM, high-impact IC with exec-facing alignment",
+   "domain": "Enterprise cybersecurity/DFIR; adjacent to risk and trust work",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Strategy, customer discovery and exec comms match; cyber depth unclear"
+  },
+  "summary": "Define and drive a new enterprise DFIR and cybersecurity product line at Magnet.",
+  "level_guess": "Lead PM (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Product strategy and roadmap",
+   "Enterprise B2B discovery"
+  ],
+  "flags": [
+   "Pay not posted"
+  ]
+ },
+ "9616e13ef9e4": {
+  "fingerprint": "090cc289d925ec98",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 85,
+   "level": 75,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Senior PM for the Graykey mobile forensics product",
+   "level": "Senior PM, 5+ yrs, complex products",
+   "domain": "Mobile device forensics, software and hardware; niche",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "PM craft fits; software-hardware systems experience is thin"
+  },
+  "summary": "Own product for Graykey, Magnet's mobile device forensics access tool.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs PM, complex products",
+   "Software and hardware systems"
+  ],
+  "flags": [
+   "Pay not posted"
+  ]
+ },
+ "57ae41dd6ff4": {
+  "fingerprint": "e20599a84ca6550f",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 95,
+   "level": 80,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Own the Magnet One platform: org admin, identity, fulfilment",
+   "level": "Senior PM, platform owner of five connected areas",
+   "domain": "Enterprise identity, permissions, audit: adjacent to governance",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Platform-as-product, permissions and governance fit well"
+  },
+  "summary": "Own Magnet One's account administration, identity, and order fulfilment platform.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Platform product ownership",
+   "Enterprise identity and access (SSO/SCIM)"
+  ],
+  "flags": [
+   "Pay not posted"
+  ]
+ },
+ "4690cfc61b6b": {
+  "fingerprint": "b8801e4ceec2cbce",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 50,
+   "level": 40,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "TPM coordinating delivery on a communications platform; little product ownership",
+   "level": "Minimum 3+ yrs; delivery-focused, below your scope",
+   "domain": "Document management and communications; insurer tech",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top CA$136K is in the low band",
+   "skills": "Delivery experience partial; Agile program methods required"
+  },
+  "summary": "Coordinate cross-functional delivery on Manulife's omni-channel communications platform.",
+  "level_guess": "Mid-level TPM (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "3+ yrs technical program management",
+   "Agile and hybrid delivery"
+  ],
+  "flags": [
+   "Delivery-focused TPM"
+  ]
+ },
+ "5a278c92beb2": {
+  "fingerprint": "a4655f07f8d7e125",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 70,
+   "level": 65,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Owns strategy and roadmap for a corporate website and AEM components",
+   "level": "6-8 yrs; mid-senior scope, website focus",
+   "domain": "Web and content management; general digital product",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top CA$142.9K is in the low band",
+   "skills": "PM craft fits; Adobe Experience Manager depth missing"
+  },
+  "summary": "Run the roadmap for Manulife Investment Management's global website and AEM platform.",
+  "level_guess": "Senior PM (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "6-8 yrs experience",
+   "4+ yrs web content management"
+  ],
+  "flags": [
+   "10+ yrs also mentioned"
+  ]
+ },
+ "14cdc542172a": {
+  "fingerprint": "7c7f0c4415c36bce",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 35,
+   "level": 25,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Chief-of-staff and strategy support for an audit function",
+   "level": "Associate Manager, 4+ yrs; support role",
+   "domain": "Internal audit performance reporting; unrelated to product",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top CA$122.9K is below the low band",
+   "skills": "Audit or governance background asked; limited fit"
+  },
+  "summary": "Support strategy, KPI reporting and leadership routines for Manulife's audit function.",
+  "level_guess": "Associate Manager (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "4+ yrs audit, risk, strategy or consulting"
+  ],
+  "flags": [
+   "Not a product role"
+  ]
+ },
+ "d6941b26bf99": {
+  "fingerprint": "63fd8f2b97e26783",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 45,
+   "level": 40,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "TPM for insurance new-business and underwriting delivery",
+   "level": "3-5 yrs TPM; below your scope",
+   "domain": "Insurance underwriting systems; fintech-adjacent",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "US range only; no Canadian range posted",
+   "skills": "Needs 3+ yrs life insurance delivery, which you lack"
+  },
+  "summary": "Lead delivery of life insurance new-business and underwriting technology programs.",
+  "level_guess": "Mid-level TPM (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3-5 yrs TPM",
+   "3+ yrs life insurance delivery"
+  ],
+  "flags": [
+   "Insurance experience required"
+  ]
+ },
+ "6b77ad4aa4ef": {
+  "fingerprint": "ec653f202ec886f7",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 45,
+   "level": 40,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "TPM for insurance strategic initiatives across policy admin",
+   "level": "3-5 yrs TPM; below your scope",
+   "domain": "Life and annuity insurance systems; fintech-adjacent",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "US range only; no Canadian range posted",
+   "skills": "Requires 3+ yrs L&A insurance delivery, which you lack"
+  },
+  "summary": "Lead strategic technology programs across John Hancock insurance operations.",
+  "level_guess": "Mid-level TPM (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3-5 yrs TPM",
+   "3+ yrs L&A insurance delivery"
+  ],
+  "flags": [
+   "Insurance experience required"
+  ]
+ },
+ "124fa9bd8c56": {
+  "fingerprint": "6e1fcdf5ddb82238",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 75,
+   "level": 50,
+   "domain": 55,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Manages an Optional Life and Critical Illness product portfolio",
+   "level": "5+ yrs, reports to a Director; supporting scope",
+   "domain": "Group benefits insurance; financial-services adjacent",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top CA$142.9K is in the low band",
+   "skills": "Cross-functional product leadership fits; insurance domain is new"
+  },
+  "summary": "Support management and launches for Manulife's Group Benefits optional products.",
+  "level_guess": "PM (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs project or product management"
+  ],
+  "flags": [
+   "Supporting-scope role"
+  ]
+ },
+ "f95bf3fdf641": {
+  "fingerprint": "008f21862da8e2f9",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 45,
+   "level": 55,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Senior TPM running an AI/Salesforce/sales enablement portfolio",
+   "level": "Senior TPM leading a portfolio; delivery, not product",
+   "domain": "AI sales tech in life insurance; general B2B",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "US range only; no Canadian range posted",
+   "skills": "Requires 3+ yrs life insurance delivery, which you lack"
+  },
+  "summary": "Lead a portfolio of AI, Salesforce and sales-enablement programs for John Hancock distribution.",
+  "level_guess": "Senior TPM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3-5 yrs TPM",
+   "3+ yrs life insurance delivery"
+  ],
+  "flags": [
+   "Insurance experience required"
+  ]
+ },
+ "de580f8d83f5": {
+  "fingerprint": "29eea2d3df8b00a3",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 55,
+   "level": 30,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Growth and commercialisation lead for a high-net-worth insurance unit",
+   "level": "Director title, 10+ yrs; larger-org scope than IC target",
+   "domain": "Insurance and financial services; adjacent to fintech",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top CA$175K is in the ok band",
+   "skills": "Strategy and growth fit; insurance and distribution depth unclear"
+  },
+  "summary": "Drive growth strategy and commercialization for Manulife's global high-net-worth life insurance business.",
+  "level_guess": "Director (≈ L7)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs insurance, product or consulting"
+  ],
+  "flags": [
+   "Director level"
+  ]
+ },
+ "9e31db31f98b": {
+  "fingerprint": "cfe5cac6159c6489",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 45,
+   "level": 40,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "TPM for life insurance health and wellness engagement programs",
+   "level": "3-5 yrs TPM; below your scope",
+   "domain": "Health and wellness insurance marketing; consumer/adjacent",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "US range only; no Canadian range posted",
+   "skills": "Requires 3+ yrs life insurance and 3+ yrs wellness markets"
+  },
+  "summary": "Lead technology programs for John Hancock's health and wellness insurance experiences.",
+  "level_guess": "Mid-level TPM (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3-5 yrs TPM",
+   "3+ yrs life insurance delivery"
+  ],
+  "flags": [
+   "Insurance experience required"
+  ]
+ },
+ "fd80c1237b35": {
+  "fingerprint": "da8534624e7246f3",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 5,
+   "level": 50,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Enterprise architecture leadership; not a product job",
+   "level": "15+ yrs; leads architecture teams, level unclear for you",
+   "domain": "Group Benefits insurance technology",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top CA$210K is in the good band",
+   "skills": "Needs 15+ yrs architecture; you are a PM, not an architect"
+  },
+  "summary": "Set technology architecture strategy and standards for Manulife's Group Benefits segment.",
+  "level_guess": "Lead Architect (≈ L6)",
+  "people_mgmt": true,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "15+ yrs technology experience",
+   "3+ yrs enterprise architecture leadership"
+  ],
+  "flags": [
+   "Not a product role",
+   "Architecture"
+  ]
+ },
+ "dd458d85c6e3": {
+  "fingerprint": "1163660fee0a117b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 35,
+   "level": 10,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Analyst supporting a digital product team; backlog and requirements",
+   "level": "Analyst, 3-5 yrs; well below your level",
+   "domain": "Digital web experiences; general",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "US range only; no Canadian range posted",
+   "skills": "Skills overlap, but this is a junior analyst scope"
+  },
+  "summary": "Support backlog, requirements and optimization for Manulife's digital experiences.",
+  "level_guess": "Analyst (≈ L3)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3-5 yrs digital product support"
+  ],
+  "flags": [
+   "Junior scope"
+  ]
+ },
+ "f01de139c955": {
+  "fingerprint": "603207f99c2dc35b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 85,
+   "level": 75,
+   "domain": 95,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Product lead for network-token fraud prevention and identity",
+   "level": "Manager = senior IC PM at Mastercard; strong ownership",
+   "domain": "Direct overlap: fraud, identity, trust in payments",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$169K is in the ok band",
+   "skills": "Fraud, ML signals and trust products match your work"
+  },
+  "summary": "Lead product for fraud and identity intelligence across emerging network-token ecosystems.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Customer-focused product delivery",
+   "Fraud or identity product sense"
+  ],
+  "flags": []
+ },
+ "35748e3630a3": {
+  "fingerprint": "4cb056f1395582c1",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 55,
+   "level": 50,
+   "domain": 85,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Threat-intel product role that manages an analyst team",
+   "level": "Manages analysts; people management is not your goal",
+   "domain": "Cyber-enabled fraud and payment security; strong overlap",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$169K is in the ok band",
+   "skills": "Fraud domain fits; team management and threat-intel craft asked"
+  },
+  "summary": "Run the threat-intelligence process and analyst team behind Mastercard's payment security products.",
+  "level_guess": "Manager (≈ L5)",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Team management",
+   "Threat intelligence knowledge"
+  ],
+  "flags": [
+   "Manages a team"
+  ]
+ },
+ "e421ee6907c3": {
+  "fingerprint": "563cb0fd4821ad97",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 55,
+   "level": 15,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 20,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Specialist supporting the Business Intelligence product",
+   "level": "Specialist title; well below your level",
+   "domain": "Data and analytics products in payments",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$120K is below the low band",
+   "skills": "Data-product skills fit; scope is junior"
+  },
+  "summary": "Support product management for Mastercard Business Intelligence.",
+  "level_guess": "Specialist (≈ L3)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Data platform or analytics product experience"
+  ],
+  "flags": [
+   "Junior scope"
+  ]
+ },
+ "c8368948ce55": {
+  "fingerprint": "e51a8e7482f991ae",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 85,
+   "level": 75,
+   "domain": 75,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Own acceptance strategy and innovation for physical commerce",
+   "level": "Manager = senior IC PM; strategy-level scope",
+   "domain": "Payments acceptance, merchants and acquirers; payments-adjacent",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$169K is in the ok band",
+   "skills": "PM and strategy fit; card acceptance experience is asked"
+  },
+  "summary": "Shape Mastercard's card acceptance strategy and emerging payment innovations in physical commerce.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Card acceptance PM experience",
+   "Ecosystem partnerships"
+  ],
+  "flags": []
+ },
+ "3970f017c31c": {
+  "fingerprint": "f8c787b160b1bdfd",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 90,
+   "level": 75,
+   "domain": 90,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Own vision and roadmap for Identity data and insights products",
+   "level": "Manager = senior IC PM; owns vision and roadmap",
+   "domain": "Identity, fraud and risk data products; direct overlap",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$169K is in the ok band",
+   "skills": "Roadmap, data and fraud work match; some team leadership asked"
+  },
+  "summary": "Own the vision and roadmap for Mastercard's Identity data and insights products.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Product vision and roadmap",
+   "Fintech or large tech experience"
+  ],
+  "flags": [
+   "Leads remote project teams"
+  ]
+ },
+ "f05e5677e1a4": {
+  "fingerprint": "b98b9b0419b018a3",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 90,
+   "level": 90,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Principal technical PM for real-time payments platforms",
+   "level": "Principal PM on a foundational platform",
+   "domain": "Payments and developer platforms; event-driven tech",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$234K at 90% = 211K is in the good band",
+   "skills": "Platform PM fits; deep streaming/architecture knowledge asked"
+  },
+  "summary": "Lead product for Mastercard's reactive systems platform behind real-time payments.",
+  "level_guess": "Principal PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Technical platform product management",
+   "Agile and lean delivery"
+  ],
+  "flags": [
+   "Technical depth"
+  ]
+ },
+ "1da6681a70c5": {
+  "fingerprint": "cb2c99a28e31e5b6",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 90,
+   "level": 75,
+   "domain": 95,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Lead the Ethoca Consumer Clarity fraud and disputes product",
+   "level": "Manager = senior IC PM; owns roadmap and GTM",
+   "domain": "Card fraud, chargebacks and agentic commerce; direct overlap",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$169K is in the ok band",
+   "skills": "Fraud, commerce and tech PM must-have all match your work"
+  },
+  "summary": "Lead Ethoca's Consumer Clarity product for fraud and dispute resolution, including agentic commerce.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Technology product management",
+   "Payments or fraud domain"
+  ],
+  "flags": []
+ },
+ "f3008990c84f": {
+  "fingerprint": "9011218d60444c9e",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 90,
+   "level": 75,
+   "domain": 95,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Lead Ethoca Consumer Clarity products: roadmap, P&L, commercialization",
+   "level": "Manager = senior IC PM; owns roadmap and P&L",
+   "domain": "Card fraud, chargebacks and e-commerce; direct overlap",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$169K is in the ok band",
+   "skills": "Tech PM must-have and payments/fraud domain match your work"
+  },
+  "summary": "Own roadmap, pricing and commercialization for Ethoca's Consumer Clarity fraud and dispute product.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Technology product management",
+   "Payments, fraud or e-commerce domain"
+  ],
+  "flags": []
+ },
+ "5400f412694b": {
+  "fingerprint": "3d448c475bc1ab44",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 60,
+   "level": 25,
+   "domain": 75,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Data-driven PM support for the Account Status Inquiry product",
+   "level": "Senior Specialist; support scope below your level",
+   "domain": "Payments data and adoption analytics; payments-adjacent",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$138K is in the low band",
+   "skills": "Analytics and product insight fit; scope is narrow"
+  },
+  "summary": "Analyze adoption and performance of Mastercard's Account Status Inquiry product to guide improvements.",
+  "level_guess": "Senior Specialist (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Product analytics and reporting"
+  ],
+  "flags": [
+   "Support-level scope"
+  ]
+ },
+ "895db85569c9": {
+  "fingerprint": "7f86cf8c2383b8f0",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 70,
+   "level": 50,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Director driving SME growth through product innovation in Canada",
+   "level": "Director; growth and commercialization, partly business-led",
+   "domain": "SME payments solutions; payments-adjacent",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$234K is at the excellent band",
+   "skills": "PM and cross-functional fit; SME commercial focus is new"
+  },
+  "summary": "Drive Mastercard's Canadian SME segment growth through new solutions and commercialization.",
+  "level_guess": "Director (≈ L6-L7)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Product management in payments",
+   "Commercial and GTM partnership"
+  ],
+  "flags": [
+   "Director level"
+  ]
+ },
+ "d164686c122e": {
+  "fingerprint": "d88d3cb38ad53ae2",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 65,
+   "level": 25,
+   "domain": 90,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Specialist PM role on the Attribute Verification product",
+   "level": "Senior Specialist; below your level",
+   "domain": "Identity and attribute verification; direct overlap",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$138K is in the low band",
+   "skills": "Identity/fraud domain fits; role scope is junior"
+  },
+  "summary": "Support product management for Mastercard's attribute verification identity product.",
+  "level_guess": "Senior Specialist (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Identity or payments product knowledge"
+  ],
+  "flags": [
+   "Support-level scope"
+  ]
+ },
+ "c37cc93bf03b": {
+  "fingerprint": "b4c03d0c349908ac",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 75,
+   "level": 30,
+   "domain": 60,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "VP owning enterprise loyalty consulting vision and roadmap",
+   "level": "VP with large org scope; above IC target",
+   "domain": "Loyalty and consumer engagement consulting; commerce-adjacent",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$320K is at the excellent band",
+   "skills": "Vision work fits; consulting and loyalty leadership is new"
+  },
+  "summary": "Lead the vision and roadmap for Mastercard's enterprise loyalty consulting practice.",
+  "level_guess": "VP (≈ L7+)",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Senior product leadership",
+   "Loyalty or consulting experience"
+  ],
+  "flags": [
+   "VP level",
+   "Likely manages people"
+  ]
+ },
+ "8e405ac56d2e": {
+  "fingerprint": "cc945afda60fdf69",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 50,
+   "level": 65,
+   "domain": 60,
+   "pathway": 65,
+   "pay": 20,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Senior TPM for a cloud platform team; delivery not product",
+   "level": "Senior TPM with cross-team scope",
+   "domain": "Cloud platform and infrastructure for Ethoca; developer-platform adjacent",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$138K is in the low band",
+   "skills": "Azure/cloud depth and Jira governance asked; thin match"
+  },
+  "summary": "Run delivery and Jira governance for Ethoca's cloud platform engineering programs.",
+  "level_guess": "Senior TPM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Technical program management",
+   "Azure and cloud technologies"
+  ],
+  "flags": [
+   "Delivery-focused"
+  ]
+ },
+ "8f6635349cdd": {
+  "fingerprint": "34f65d3edeb10011",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 75,
+   "level": 50,
+   "domain": 60,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Director owning enterprise loyalty consulting product direction",
+   "level": "Director; larger scope than IC target",
+   "domain": "Loyalty consulting for financial institutions; commerce-adjacent",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$234K is at the excellent band",
+   "skills": "Strategy fits; loyalty and consulting depth are new"
+  },
+  "summary": "Direct product strategy for Mastercard's enterprise loyalty consulting for financial institutions.",
+  "level_guess": "Director (≈ L6-L7)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Product management leadership",
+   "Loyalty or consulting experience"
+  ],
+  "flags": [
+   "Director level"
+  ]
+ },
+ "281fe7729aac": {
+  "fingerprint": "74f238e7406833b2",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 55,
+   "level": 50,
+   "domain": 80,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Product operations lead for disputes migration and adoption",
+   "level": "Director; operations and customer migration focus",
+   "domain": "Disputes, issuers, acquirers; strong fraud/payments overlap",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$221K is in the good band",
+   "skills": "Programs and cross-functional work fit; ops consulting heavy"
+  },
+  "summary": "Lead customer migration or migration operations for Mastercard's disputes modernization.",
+  "level_guess": "Director (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Product ops or program management",
+   "Customer migration experience"
+  ],
+  "flags": [
+   "Multiple openings"
+  ]
+ },
+ "c30dc3808474": {
+  "fingerprint": "681b7907eecb0da6",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 80,
+   "level": 70,
+   "domain": 95,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Build and scale Agentic Trust products across identity, fraud, cyber",
+   "level": "Director executing defined strategy; senior scope",
+   "domain": "Trust and safety for agentic commerce; direct overlap",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$234K is at the excellent band",
+   "skills": "Agentic trust, fraud and exec alignment match your work"
+  },
+  "summary": "Incubate and scale Agentic Trust solutions across Mastercard's security verticals.",
+  "level_guess": "Director (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Cross-functional product execution",
+   "Identity, fraud or cyber domain"
+  ],
+  "flags": [
+   "Director level"
+  ]
+ },
+ "c27c95e11d17": {
+  "fingerprint": "3eac53a6f21ac15d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 85,
+   "level": 65,
+   "domain": 95,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Support the Account Protection portfolio: ATO, synthetic fraud",
+   "level": "Manager supporting key areas; somewhat narrower scope",
+   "domain": "Account takeover and fraud lifecycle; direct overlap",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$169K is in the ok band",
+   "skills": "Fraud, ML and regulator-adjacent work align with your Ads Safety"
+  },
+  "summary": "Develop Mastercard Identity's Account Protection products against account takeover and synthetic fraud.",
+  "level_guess": "PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Fraud or identity product experience",
+   "Cross-functional partnership"
+  ],
+  "flags": []
+ },
+ "fa09a70d7680": {
+  "fingerprint": "71800b317423b7e1",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 50,
+   "level": 60,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "TPM running data-capture programs across devices and locations",
+   "level": "TPM leading execution; some ownership",
+   "domain": "Robotics and embodied-AI data infrastructure; niche",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top CA$200K is in the good band",
+   "skills": "Program leadership fits; hardware-enabled ops focus unclear"
+  },
+  "summary": "Run real-world data-capture programs for robotics and embodied-AI training at Mecka AI.",
+  "level_guess": "Senior TPM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Technical program management",
+   "Operations at scale"
+  ],
+  "flags": [
+   "Early-stage startup"
+  ]
+ },
+ "45daa9f0723b": {
+  "fingerprint": "8ca04a2216ca8c38",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Data Scientist, not product management; analytics-heavy",
+   "level": "Level unclear; no description provided",
+   "domain": "Description missing; general product analytics",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "No pay range found; not posted",
+   "skills": "Description missing; cannot confirm must-haves"
+  },
+  "summary": "Product analytics data scientist role at Meta, remote in Canada (no description available).",
+  "level_guess": "Unclear",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Description unavailable"
+  ],
+  "flags": [
+   "No description",
+   "Data science role"
+  ]
+ },
+ "5dc4e4fd4116": {
+  "fingerprint": "74e7a6ae5d2a747b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing pre-sales/technical role, not product ownership",
+   "level": "Technical sales or architect IC; level tied to customer scope",
+   "domain": "Dynamics CRM business apps; general B2B SaaS",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$177.6K is in the ok band",
+   "skills": "Needs hands-on cloud/pre-sales experience you lack"
+  },
+  "summary": "Pre-sales engineer showing Dynamics 365 CRM solutions to customers.",
+  "level_guess": "Solution Engineer (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Dynamics 365 CRM expertise",
+   "Technical pre-sales"
+  ],
+  "flags": [
+   "Customer-facing pre-sales"
+  ]
+ },
+ "5ea2709ef1e6": {
+  "fingerprint": "f319361ffee2b204",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 60,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing pre-sales/technical role, not product ownership",
+   "level": "Technical sales or architect IC; level tied to customer scope",
+   "domain": "Power Platform and AI business apps; developer/cloud platform",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$177.6K is in the ok band",
+   "skills": "Needs hands-on cloud/pre-sales experience you lack"
+  },
+  "summary": "Advise customers on Power Platform, SharePoint and AI business solutions.",
+  "level_guess": "Cloud Solution Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Power Platform and SharePoint",
+   "4+ yrs customer-facing role"
+  ],
+  "flags": [
+   "Customer-facing pre-sales"
+  ]
+ },
+ "60c079d4a2ac": {
+  "fingerprint": "75c74c91a549f7b4",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 55,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing pre-sales/technical role, not product ownership",
+   "level": "Technical sales or architect IC; level tied to customer scope",
+   "domain": "Agentic AI apps and cloud; adjacent to your enterprise AI",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$222.4K is in the good band",
+   "skills": "Needs hands-on cloud/pre-sales experience you lack"
+  },
+  "summary": "Technical sales role advising commercial customers on agentic AI apps and cloud.",
+  "level_guess": "Solution Engineer (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "4+ yrs technical pre-sales",
+   "Cloud architecture experience"
+  ],
+  "flags": [
+   "Customer-facing pre-sales"
+  ]
+ },
+ "ba5496e6b324": {
+  "fingerprint": "45d68aac3f9f366b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 55,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing pre-sales/technical role, not product ownership",
+   "level": "Technical sales or architect IC; level tied to customer scope",
+   "domain": "Databases and analytics platforms; adjacent to data platforms",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$222.4K is in the good band",
+   "skills": "Needs hands-on cloud/pre-sales experience you lack"
+  },
+  "summary": "Technical sales role on Microsoft's data and analytics platform for commercial customers.",
+  "level_guess": "Solution Engineer (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "4+ yrs technical pre-sales",
+   "Database and analytics expertise"
+  ],
+  "flags": [
+   "Customer-facing pre-sales"
+  ]
+ },
+ "32bffd52c9a8": {
+  "fingerprint": "9cd49ab58cbb039f",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing pre-sales/technical role, not product ownership",
+   "level": "Technical sales or architect IC; level tied to customer scope",
+   "domain": "Cloud security transformation on Azure and M365; security-adjacent",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$177.6K is in the ok band",
+   "skills": "Needs hands-on cloud/pre-sales experience you lack"
+  },
+  "summary": "Advise customers on security transformation across Azure and Microsoft 365.",
+  "level_guess": "Cloud Solution Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Azure and M365 security",
+   "Customer-facing technical delivery"
+  ],
+  "flags": [
+   "Customer-facing pre-sales"
+  ]
+ },
+ "5fc42e1cf644": {
+  "fingerprint": "1629d2615ee69862",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 60,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing pre-sales/technical role, not product ownership",
+   "level": "Technical sales or architect IC; level tied to customer scope",
+   "domain": "Azure cloud and AI architecture; developer/cloud platform",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$222.4K is in the good band",
+   "skills": "Needs hands-on cloud/pre-sales experience you lack"
+  },
+  "summary": "Lead customer technical engagements on Azure and AI as a cloud solution architect.",
+  "level_guess": "Cloud Solution Architect (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "6+ yrs leading technical projects",
+   "Azure expertise"
+  ],
+  "flags": [
+   "Customer-facing pre-sales"
+  ]
+ },
+ "0766e018143e": {
+  "fingerprint": "eae7de9dc8a3eaaf",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 85,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 85
+  },
+  "reasons": {
+   "role": "Principal PM for the Azure Data Integration team",
+   "level": "Principal PM, 8+ yrs; multi-product platform scope",
+   "domain": "Fabric, Data Factory, data platform for AI; strong overlap",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$257.5K is above the excellent band",
+   "skills": "Platform PM, data and AI work match; go-to-market metrics asked"
+  },
+  "summary": "Own strategy and roadmap for Azure data integration across Microsoft Fabric and related services.",
+  "level_guess": "Principal PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs product or program management",
+   "Taking products to market",
+   "Improving product metrics"
+  ],
+  "flags": []
+ },
+ "8cb1ccd5bb4d": {
+  "fingerprint": "3c39fc93c7d66416",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 55,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing pre-sales/technical role, not product ownership",
+   "level": "Technical sales or architect IC; level tied to customer scope",
+   "domain": "Application development innovation engagements; general",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$222.4K is in the good band",
+   "skills": "Needs hands-on cloud/pre-sales experience you lack"
+  },
+  "summary": "Run immersive app-development engagements that guide customers from vision to implementation.",
+  "level_guess": "Solution Engineer (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs solution architect",
+   "Hands-on software development"
+  ],
+  "flags": [
+   "Customer-facing pre-sales",
+   "Hands-on engineering"
+  ]
+ },
+ "668a3186464c": {
+  "fingerprint": "9c52d057a8b3cd9e",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing pre-sales/technical role, not product ownership",
+   "level": "Technical sales or architect IC; level tied to customer scope",
+   "domain": "Cloud security on Azure and M365; security-adjacent",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$222.4K is in the good band",
+   "skills": "Needs hands-on cloud/pre-sales experience you lack"
+  },
+  "summary": "Advise customers on security transformation across Azure and Microsoft 365.",
+  "level_guess": "Cloud Solution Architect (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Azure and M365 security",
+   "6+ yrs leading technical projects"
+  ],
+  "flags": [
+   "Customer-facing pre-sales"
+  ]
+ },
+ "0851afc44ae0": {
+  "fingerprint": "32558a4caf217ef3",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 65,
+   "domain": 75,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Senior solution architect for financial-services customers",
+   "level": "Senior architect with hands-on engineering mandate",
+   "domain": "Financial-services clients plus cloud and AI platforms",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$334K is above the excellent band",
+   "skills": "Needs hands-on engineering and architecture you lack"
+  },
+  "summary": "Architect AI and cloud solutions hands-on for Microsoft's financial-services customers.",
+  "level_guess": "Senior Architect (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Hands-on engineering",
+   "Solution architecture for FSI"
+  ],
+  "flags": [
+   "Customer-facing pre-sales",
+   "Hands-on engineering"
+  ]
+ },
+ "8739e01a77d1": {
+  "fingerprint": "c6099a8401e29f0f",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing pre-sales/technical role, not product ownership",
+   "level": "Technical sales or architect IC; level tied to customer scope",
+   "domain": "Data and AI customer engagements; adjacent to data platforms",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$177.6K is in the ok band",
+   "skills": "Needs hands-on cloud/pre-sales experience you lack"
+  },
+  "summary": "Advise customers on Azure data and AI solutions as a cloud solution architect.",
+  "level_guess": "Cloud Solution Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "4+ yrs customer-facing role",
+   "4+ yrs technical projects"
+  ],
+  "flags": [
+   "Customer-facing pre-sales"
+  ]
+ },
+ "67b2e2ec04d4": {
+  "fingerprint": "80619b1b51111981",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 80,
+   "domain": 75,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Principal pre-sales engineer for AI apps; technical sales",
+   "level": "Principal IC with broad leadership mandate",
+   "domain": "Agentic AI apps and cloud-native; adjacent to enterprise AI",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$313.3K is above the excellent band",
+   "skills": "Needs 6+ yrs pre-sales and deep cloud architecture"
+  },
+  "summary": "Lead strategic technical engagements selling agentic AI and cloud-native apps to customers.",
+  "level_guess": "Principal Solution Engineer (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "6+ yrs technical pre-sales",
+   "8+ yrs cloud architecture"
+  ],
+  "flags": [
+   "Customer-facing pre-sales",
+   "Technical sales"
+  ]
+ },
+ "015e5319c4a1": {
+  "fingerprint": "1fa01603207207a8",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing pre-sales/technical role, not product ownership",
+   "level": "Technical sales or architect IC; level tied to customer scope",
+   "domain": "Cloud and AI data customer engagements; data-platform adjacent",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$177.6K is in the ok band",
+   "skills": "Needs hands-on cloud/pre-sales experience you lack"
+  },
+  "summary": "Advise customers on Azure data and AI as a cloud solution architect in Ottawa.",
+  "level_guess": "Cloud Solution Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Cloud and data architecture",
+   "Customer-facing technical delivery"
+  ],
+  "flags": [
+   "Customer-facing pre-sales"
+  ]
+ },
+ "8e4d0cec601a": {
+  "fingerprint": "82de6cc6ca167075",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 60,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing pre-sales/technical role, not product ownership",
+   "level": "Technical sales or architect IC; level tied to customer scope",
+   "domain": "Cloud app innovation and AI; developer/cloud platform",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$177.6K is in the ok band",
+   "skills": "Needs hands-on cloud/pre-sales experience you lack"
+  },
+  "summary": "Advise Quebec customers on cloud, AI and application innovation as a solution architect.",
+  "level_guess": "Cloud Solution Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Cloud architecture",
+   "French-language customer work"
+  ],
+  "flags": [
+   "Customer-facing pre-sales",
+   "French likely required"
+  ]
+ },
+ "540efea55fef": {
+  "fingerprint": "e8db140bdd663467",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing pre-sales/technical role, not product ownership",
+   "level": "Technical architect IC; level tied to customer scope",
+   "domain": "Data and analytics customer engagements; data-platform adjacent",
+   "pathway": "Large multinational; Global Talent Stream use inferred",
+   "pay": "Top CA$177.6K is in the ok band",
+   "skills": "Needs hands-on data cloud and bilingual customer work"
+  },
+  "summary": "Advise Quebec customers on Azure data and analytics solutions as a cloud solution architect.",
+  "level_guess": "Cloud Solution Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Cloud data architecture",
+   "French and English"
+  ],
+  "flags": [
+   "Customer-facing pre-sales",
+   "French likely required"
+  ]
+ },
+ "90ea1f5ace35": {
+  "fingerprint": "d84ea4b1bd5cbca7",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 40,
+   "level": 50,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Program manager for a founders-in-residence program at Mila",
+   "level": "Level unclear; no description provided",
+   "domain": "Description missing; AI research institute program",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Description missing; cannot confirm must-haves"
+  },
+  "summary": "Run the Founders in Residence program at Mila in Montreal (no description available).",
+  "level_guess": "Unclear",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Description unavailable"
+  ],
+  "flags": [
+   "No description",
+   "Possibly French required"
+  ]
+ },
+ "7040fed278d0": {
+  "fingerprint": "c68c51925f803b89",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 50,
+   "level": 75,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Senior TPM driving hardware and software new product introduction",
+   "level": "Senior TPM leading cross-functional product delivery",
+   "domain": "Traffic hardware and signals; unrelated specialist domain",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top CA$160K is at the ok band",
+   "skills": "Program leadership fits; hardware NPI experience unclear"
+  },
+  "summary": "Lead cross-functional delivery of new product introductions for Miovision's traffic hardware and software.",
+  "level_guess": "Senior TPM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Product delivery program management",
+   "Hardware and software NPI"
+  ],
+  "flags": [
+   "Hybrid in Kitchener"
+  ]
+ },
+ "8b125c1c61b2": {
+  "fingerprint": "03a634ddf0758370",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Staff PM with a 3-5 year roadmap for Signal Priority portfolio",
+   "level": "Staff PM, reports to Product Director; strategic scope",
+   "domain": "Traffic and emergency-response tech; cloud analytics platform",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top CA$190K is in the good band",
+   "skills": "Roadmap and platform modernisation fit; domain is new"
+  },
+  "summary": "Own the 3-5 year roadmap for Miovision's Signal Priority and Preemption portfolio.",
+  "level_guess": "Staff PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Product vision and roadmap",
+   "Platform modernisation"
+  ],
+  "flags": []
+ },
+ "727b61633c79": {
+  "fingerprint": "e85a63b56deefcea",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 70,
+   "domain": 35,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Product marketing, not product management",
+   "level": "Senior marketing IC; narrower scope",
+   "domain": "Hardware and software traffic tech; niche",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top CA$140K is in the low band",
+   "skills": "Marketing experience asked; you are a PM"
+  },
+  "summary": "Market Miovision's hardware and software traffic products as a senior product marketer.",
+  "level_guess": "Senior PMM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Hardware and software marketing"
+  ],
+  "flags": [
+   "Product marketing"
+  ]
+ },
+ "6b9a6ad010ca": {
+  "fingerprint": "210207ad72531517",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 90,
+   "level": 75,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Senior PM for partner platforms and APIs across payments",
+   "level": "Senior PM, 5+ yrs; owns partner product strategy",
+   "domain": "Payments, ISVs and PayFacs; direct fintech overlap",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top $155K is in the low band; no CA label",
+   "skills": "Platform, API and commercialization work match your skills"
+  },
+  "summary": "Own the partner-experience platforms and APIs for Moneris' distribution partnerships.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs product management",
+   "Platform or API products"
+  ],
+  "flags": [
+   "Toronto office, hybrid"
+  ]
+ },
+ "81c646de3217": {
+  "fingerprint": "4eb76b4adbb75668",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing, not product management",
+   "level": "5+ yrs marketing; mid-level scope",
+   "domain": "Payments and commerce marketing",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "Top $124K is below the low band",
+   "skills": "Marketing track record asked; you are a PM"
+  },
+  "summary": "Drive positioning and launch marketing for Moneris payments through channel partners.",
+  "level_guess": "PMM (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs marketing",
+   "3+ yrs product marketing"
+  ],
+  "flags": [
+   "Product marketing"
+  ]
+ },
+ "9e8232af59c3": {
+  "fingerprint": "269d44c2ffb8035c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 80,
+   "level": 60,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 65
+  },
+  "reasons": {
+   "role": "Product Owner for digital support platforms and conversational AI",
+   "level": "5+ yrs; owner of roadmap but narrower internal scope",
+   "domain": "Support chatbots, knowledge and AI in payments company",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Roadmap and AI work fit; vendor management emphasised"
+  },
+  "summary": "Own the roadmap for Moneris' chatbots, self-service and knowledge management platforms.",
+  "level_guess": "PM / Product Owner (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs product ownership",
+   "Vendor management"
+  ],
+  "flags": [
+   "Pay not posted"
+  ]
+ },
+ "5568fe61cb9c": {
+  "fingerprint": "96309751622f1cd2",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 5,
+   "level": 60,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Solutions architect for document-processing platform; not product",
+   "level": "Senior professional architect; hands-on scope",
+   "domain": "Intelligent document processing at a bank",
+   "pathway": "Bank; no work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "AWS architecture and integration skills asked; you lack them"
+  },
+  "summary": "Design and onboard teams to National Bank's intelligent document processing platform.",
+  "level_guess": "Senior Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5-10 yrs solution architecture",
+   "AWS integration experience"
+  ],
+  "flags": [
+   "Not a product role",
+   "Bilingual English/French"
+  ]
+ },
+ "7425dd8c7ba8": {
+  "fingerprint": "6a6e30368484103e",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 5,
+   "level": 60,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Data architect for wealth management; not product",
+   "level": "8 yrs; senior hands-on architect",
+   "domain": "Data management in wealth and investments; adjacent",
+   "pathway": "Bank; no work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Needs 8 yrs data architecture; you are a PM"
+  },
+  "summary": "Architect data flows and integration for National Bank's wealth management solutions.",
+  "level_guess": "Senior Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "8 yrs data architecture",
+   "Data management certification"
+  ],
+  "flags": [
+   "Not a product role",
+   "Bilingual English/French"
+  ]
+ },
+ "0432e79d4f8c": {
+  "fingerprint": "81a8fe25570aab23",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 5,
+   "level": 60,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Data architect for wealth management; not product",
+   "level": "8 yrs; senior hands-on architect",
+   "domain": "Data management in wealth and investments; adjacent",
+   "pathway": "Bank; no work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Needs 8 yrs data architecture; you are a PM"
+  },
+  "summary": "Architect data flows and integration for National Bank's wealth management solutions.",
+  "level_guess": "Senior Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "8 yrs data architecture",
+   "Data management certification"
+  ],
+  "flags": [
+   "Not a product role",
+   "Bilingual English/French"
+  ]
+ },
+ "29fb2b4750b8": {
+  "fingerprint": "a2ecd47b52c43155",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 35,
+   "level": 40,
+   "domain": 55,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Portfolio governance and reporting for a transformation program",
+   "level": "Senior Advisor supporting a program manager",
+   "domain": "Commercial banking transformation portfolio",
+   "pathway": "Bank; no work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Governance and exec reporting partly fit; PMO focus"
+  },
+  "summary": "Support portfolio governance, planning and risk reporting for National Bank's commercial financing transformation.",
+  "level_guess": "Senior Advisor (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "3-10 yrs relevant experience",
+   "Portfolio governance"
+  ],
+  "flags": [
+   "PMO role"
+  ]
+ },
+ "9a0bcb3f2b79": {
+  "fingerprint": "f28da707ec93a8f7",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 55,
+   "level": 50,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Product Owner for internal CI/CD and testing tooling",
+   "level": "Product Owner, 6 yrs; internal delivery scope",
+   "domain": "Internal developer tooling; adjacent to dev platforms",
+   "pathway": "Bank; no work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Product ownership fits; French-only role and agile PO skills"
+  },
+  "summary": "Own the backlog and roadmap for National Bank's CI/CD and continuous testing tooling.",
+  "level_guess": "Product Owner (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "6 yrs relevant experience",
+   "French language"
+  ],
+  "flags": [
+   "French required"
+  ]
+ },
+ "329c75a89c7f": {
+  "fingerprint": "809c61aa9b5d6433",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 70,
+   "level": 55,
+   "domain": 80,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Product Owner defining vision for regulatory capital transformation",
+   "level": "Product Owner, 6 yrs; matrix influence in Finance",
+   "domain": "Regulatory capital, risk and compliance; strong overlap",
+   "pathway": "Bank; no work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Vision and stakeholder skills fit; banking finance depth asked"
+  },
+  "summary": "Define the product vision and priorities for National Bank's regulatory capital transformation in Finance.",
+  "level_guess": "Product Owner (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "6 yrs relevant experience",
+   "Matrix influence"
+  ],
+  "flags": [
+   "24-month temporary contract"
+  ]
+ },
+ "a82ce74b4cf8": {
+  "fingerprint": "f67698faf741c704",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 5,
+   "level": 70,
+   "domain": 55,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Chief solution architect; not a product job",
+   "level": "7-10 yrs; senior architect leading peers",
+   "domain": "Wealth management and brokerage technology",
+   "pathway": "Bank; no work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Needs 5 yrs integration tech (APIs, Kafka); you lack this"
+  },
+  "summary": "Lead solution architecture for National Bank's wealth management brokerage technology.",
+  "level_guess": "Chief Architect (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "7-10 yrs experience",
+   "5 yrs systems integration"
+  ],
+  "flags": [
+   "Not a product role",
+   "Bilingual English/French"
+  ]
+ },
+ "5d599f5b5516": {
+  "fingerprint": "964fbf0e628c9492",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 5,
+   "level": 60,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Generative AI architect; not a product job",
+   "level": "Architect; several years' experience, mid-senior",
+   "domain": "GenAI and LLM solutions at a bank; AI overlap",
+   "pathway": "Bank; no work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Hands-on architecture and cloud design asked"
+  },
+  "summary": "Design secure, scalable generative AI architectures for National Bank's business lines.",
+  "level_guess": "Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Solution architecture experience",
+   "LLM and cloud knowledge"
+  ],
+  "flags": [
+   "Not a product role",
+   "Bilingual English/French"
+  ]
+ },
+ "31d49d22e76d": {
+  "fingerprint": "20ea679b85a57f98",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 70,
+   "level": 45,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Owns an insurance product portfolio, vision and P&L",
+   "level": "Product Director title, 7+ yrs insurance; scope unclear",
+   "domain": "Insurance and wealth; financial-services adjacent",
+   "pathway": "Bank; no work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Needs 7+ yrs insurance experience, which you lack"
+  },
+  "summary": "Own the vision, offering and financial performance of National Bank's insurance product portfolio.",
+  "level_guess": "Product Director (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "7+ yrs insurance",
+   "Pricing and product development"
+  ],
+  "flags": [
+   "Insurance experience required",
+   "Bilingual English/French"
+  ]
+ },
+ "84651b43e0ca": {
+  "fingerprint": "191b1a9c1cdec55c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 70,
+   "level": 50,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Product Owner on digital treasury for commercial clients",
+   "level": "Product Owner, 6 yrs; project-delivery scope",
+   "domain": "Treasury and commercial banking digital; financial services",
+   "pathway": "Bank; no work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Roadmap and client journey fit; SAFe PO and treasury knowledge"
+  },
+  "summary": "Translate vision into features on the roadmap for National Bank's commercial digital treasury products.",
+  "level_guess": "Product Owner (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "6 yrs relevant experience",
+   "SAFe product ownership"
+  ],
+  "flags": [
+   "Bilingual English/French"
+  ]
+ },
+ "72f74a9cd5af": {
+  "fingerprint": "3f29c02efcbb1ffa",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 95,
+   "level": 85,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Senior PM for new products at a digital mortgage lender",
+   "level": "8+ yrs, 3+ yrs at Senior PM level; strategic scope",
+   "domain": "Fintech lending and AI-enabled financial services",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "Product strategy, AI and fintech fit; mortgage domain is new"
+  },
+  "summary": "Lead new product development at nesto, Canada's digital mortgage lender.",
+  "level_guess": "Senior PM (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs product management",
+   "3+ yrs Senior PM at high-growth tech"
+  ],
+  "flags": []
+ },
+ "b02f80a01242": {
+  "fingerprint": "c3462f083ec5f300",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:46:48+00:00",
+  "subs": {
+   "role": 80,
+   "level": 70,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Senior PM for Salesforce and digital platforms",
+   "level": "5-7+ yrs PM; platform ownership",
+   "domain": "Fintech lending platforms and CRM; B2B adjacent",
+   "pathway": "No work permit info in posting (neutral)",
+   "pay": "No pay range found; not posted",
+   "skills": "PM fit; needs 2+ yrs owning a Salesforce environment"
+  },
+  "summary": "Own nesto's Salesforce and digital platforms roadmap across lending teams.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5-7+ yrs product management",
+   "2+ yrs owning Salesforce"
+  ],
+  "flags": [
+   "Salesforce experience required"
+  ]
  }
 }
