@@ -102,6 +102,7 @@
 | D-050 | 10-15 | **Pathway signals from ESDC:** the last 9 quarters of positive-LMIA employer lists (2024Q1–2026Q1) are matched to the watchlist (58 companies, 54 with tech roles). Each role's pathway score now comes from evidence: Google ICT 95; posting offers sponsorship 85; frequent LMIA employer (≥10 tech positions or ≥5 Global Talent Stream) 80; any tech LMIA 70; non-tech only 55; no evidence 45; posting says must already be eligible 15. Shown as chips with status (Stated / Inferred / Unknown) and a source link; `/refresh-signals` reloads quarterly | R10, DR-3, CR-3 | Claude |
 | D-051 | 10-15 | Large multinationals absent from the LMIA lists (e.g. Microsoft, Workday) get no special treatment: neutral pathway score (45, "No public signal"). Revisit only if triage shows Ayush consistently wants them | Ayush's question on missing big-tech employers | Ayush |
 | D-052 | 10-15 | **Paste inbox:** at each refresh, pasted items are processed: known links are matched to existing roles; readable pages are fetched and read by Claude; LinkedIn/Indeed/Glassdoor/Wellfound are never fetched, so the pasted description is used or the app asks for it; non-Canadian roles are declined with a note. Added roles dedup against everything known, get pay read from the text, are scored like any other, and are never marked closed by a refresh. Status and a one-line result show in the app's Add job page | R3, A3a–c | Claude |
+| D-053 | 10-15 | **Pay estimates:** roles with no posted Canadian range get an "est." base range from Lodestone's own posted Canadian ranges, in order: same company and level (high confidence), same company one level away ±15% per level (medium), 3+ similar-segment companies at the level (medium-low), 5+ watched companies at the level (low). Median of comparables, rounded to $5K. Shown muted with basis, confidence and example postings; the pay sub-score from an estimate is capped at 75 so a guess never outranks a posted range. Caveat shown: Ontario doesn't require ranges above $200K, so senior estimates may run low | R5, B8 | Claude |
 
 ## 4. Open questions
 
@@ -187,6 +188,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | Pay estimates live (D-053): 181 of 214 roles without a Canadian range now show an estimate (28 high, 9 medium, 117 medium-low, 27 low confidence); tests added | Claude |
 | 2026-10-15 | Paste inbox processing (D-052): prepare/add commands, app statuses, tests | Claude |
 | 2026-10-15 | LMIA name-matching fix after Ayush's question: legal-name variants ("Salesforce.com Canada Corp.", "Okta", "Snowflake Computing") now match; 79 companies (was 58). Microsoft, Workday, Nvidia, Adobe, Meta, Google, Lyft, Databricks confirmed absent from the 2024Q1–2026Q1 lists | Claude |
 | 2026-10-15 | ESDC LMIA pathway signals live (D-050); `/refresh-signals` skill added | Claude |

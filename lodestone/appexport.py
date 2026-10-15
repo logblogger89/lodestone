@@ -41,7 +41,9 @@ def _job(key: str, j: dict) -> dict:
 def build() -> dict[str, dict[str, dict]]:
     jobs = store.load("jobs", {"jobs": {}})["jobs"]
     scores = store.load("scores", {})
+    from . import payest
     from . import signals as sigmod
+    estimates = payest.build()
     sigs = store.load("signals", {"companies": {}, "window": ""})
     docs: dict[str, dict[str, dict]] = {"jobs": {}, "meta": {}}
     buckets = {f"b{i}": {} for i in range(BUCKETS)}
@@ -50,6 +52,8 @@ def build() -> dict[str, dict[str, dict]]:
             continue
         rec = _job(key, j)
         sc = scores.get(rec["id"])
+        if rec["id"] in estimates:
+            rec["pay"] = {**(rec["pay"] or {"ranges": [], "primary": None, "source": None}), "estimate": estimates[rec["id"]]}
         rec["pathway"] = sigmod.pathway_for(j["company"], sc, sigs["companies"].get(j["company"]), sigs.get("window", ""))
         if sc:
             rec["fit"] = {k: sc[k] for k in ("subs", "reasons", "summary", "level_guess", "people_mgmt", "work_mode",

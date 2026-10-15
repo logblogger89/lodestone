@@ -88,6 +88,8 @@ a{color:var(--accent)}
 .payrow.main .amt{font-size:16px;font-weight:600;color:var(--fg)}
 .payhead{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:8px 10px 0}
 details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
+.est-pay{color:var(--muted);font-weight:400}
+.payrow.est-row{border:1px dashed var(--warn);border-radius:8px}
 .kind{font-family:var(--font-body);font-size:11px;font-weight:600;color:var(--warn);background:var(--warn-soft);border-radius:4px;padding:1px 5px;margin-left:6px}
 .payrow .sub{display:block;font-size:11px;color:var(--muted);font-weight:400}
 .payrow.eq{border-top:1px dashed var(--line);border-radius:0;margin-top:4px}
@@ -288,7 +290,7 @@ function rangeText(r){
 function payInfo(j){
   let p=j.pay; if(p&&!p.ranges&&(p.min||p.max)) p={ranges:[p],primary:0,source:"field"};
   const ranges=(p&&p.ranges)||[]; const main=p&&p.primary!=null?ranges[p.primary]:null;
-  return {ranges,main,others:ranges.filter(r=>r!==main),source:p&&p.source,equity:p&&p.equity,
+  return {ranges,main,others:ranges.filter(r=>r!==main),source:p&&p.source,equity:p&&p.equity,est:p&&p.estimate,
           checked:j.pay_checked!==false||ranges.length>0};
 }
 const payText=j=>{const pi=payInfo(j);return pi.main?rangeText(pi.main):""};
@@ -312,7 +314,9 @@ function payCard(j){
     const tip=[KIND[pi.main.kind||"unspecified"],pi.main.estimated?"employer's estimate":"",pi.main.currency?"":"currency not stated"].filter(Boolean).join(" · ");
     return `<span class="pay" title="${esc(tip)}">${esc(rangeText(pi.main))}${tag?`<span class="kind">${esc(tag)}</span>`:""}${lbl&&lbl.toLowerCase()!=="canada"?`<small>${esc(lbl)}</small>`:""}</span>${more?`<span class="paymore" title="This posting lists ${more} more range${more>1?"s":""}. Open the role to see them.">+${more} ${usN===more?"US":"more"}</span>`:""}${eqTag}`;
   }
-  if(pi.ranges.length) return `<span class="pay us" title="The posting lists pay for other countries only">${esc(rangeText(pi.ranges[0]))}<small>US range only</small></span>${eqTag}`;
+  const estTag=pi.est?`<span class="pay est-pay" title="${esc(`Estimate (${pi.est.confidence} confidence): ${pi.est.basis}. Not posted by the employer.`)}">${esc(rangeText(pi.est))} <span class="est">est.</span></span>`:"";
+  if(pi.ranges.length) return `${estTag}<span class="pay us" title="The posting lists pay for other countries only">${esc(rangeText(pi.ranges[0]))}<small>US range only</small></span>${eqTag}`;
+  if(estTag) return estTag+eqTag;
   return (pi.checked?`<span class="nopay">No pay in posting</span>`:`<span class="nopay">Pay not checked yet</span>`)+eqTag;
 }
 /* Highlight the numbers and the words that say what they cover, inside the quoted sentence. */
@@ -332,16 +336,18 @@ function payPanel(j){
   const pi=payInfo(j);
   const row=(r,main)=>`<div class="payrow${main?" main":""}"><span class="lbl">${esc(r.label||(r.currency==="USD"?"United States":"Location not stated"))}<span class="sub">${esc(KIND[r.kind||"unspecified"])}${r.estimated?" · employer's estimate":""}${!r.currency?" · currency not stated":""}</span></span><span class="amt">${esc(rangeText(r))}</span></div>`;
   let body;
-  if(!pi.ranges.length) body=pi.checked?`<p class="nopay">The posting doesn't state a pay range. Estimates arrive in Sprint 4.</p>`:`<p class="nopay">Lodestone hasn't read the full posting yet. Open it to check pay.</p>`;
+  if(!pi.ranges.length) body=pi.checked?`<p class="nopay">The posting doesn't state a pay range.</p>`:`<p class="nopay">Lodestone hasn't read the full posting yet. Open it to check pay.</p>`;
   else body=`<div class="payrows">${pi.main?row(pi.main,true):`<p class="nopay">No Canadian range in this posting.</p>`}
       ${pi.others.length?`<div class="payhead">Other ranges in this posting</div>${pi.others.map(r=>row(r,false)).join("")}`:""}</div>`;
+  const est=pi.est&&!pi.main?`<div class="payrow est-row"><span class="lbl">Estimate <span class="est">est.</span><span class="sub">${esc(pi.est.basis)} · ${esc(pi.est.confidence)} confidence · ${pi.est.n} posting${pi.est.n===1?"":"s"}</span></span><span class="amt">${esc(rangeText(pi.est))}</span></div>
+    <details class="quotes"><summary>How this was estimated</summary><p class="note">Median of these posted Canadian base ranges${pi.est.basis.includes("adjusted")?", adjusted 15% per level":""}:</p>${(pi.est.examples||[]).map(x=>`<blockquote>${esc(x)}</blockquote>`).join("")}<p class="note">Ontario lets employers skip posting a range for roles over $200K, so posted ranges under-represent senior pay. Treat senior-level estimates as a floor.</p></details>`:"";
   const eq=pi.equity&&pi.equity.offered?`<div class="payrow eq"><span class="lbl">Equity<span class="sub">${pi.equity.certainty==="possible"?"Posting says the role may be eligible":"Posting says equity is part of the offer"}</span></span><span class="amt">${esc(equityText(pi.equity))}</span></div>`:"";
   const quotes=[...new Set([...pi.ranges.map(r=>r.quote),pi.equity&&pi.equity.quote].filter(Boolean))];
   const evidence=(pi.ranges.length||eq)?`${sourceLine(j,pi)}${quotes.length?`<details class="quotes"><summary>Show the exact wording</summary>${quotes.map(q=>`<blockquote>“${markQuote(q)}”</blockquote>`).join("")}</details>`:""}`:"";
-  return `<section class="panel"><h4>Pay (as posted)</h4>${body}${eq}${evidence}</section>`;
+  return `<section class="panel"><h4>Pay</h4>${body}${est}${eq}${evidence}</section>`;
 }
 /* Pay sort: base (or unlabelled) ranges compete with each other; bonus-inclusive, OTE and total-comp ranges rank after them. */
-const payMax=j=>{const m=payInfo(j).main;if(!m) return -1;const v=(m.interval==="hour"?m.max*2000:m.max)||0;return (["base","unspecified",undefined].includes(m.kind)?1e9:0)+v};
+const payMax=j=>{const pi=payInfo(j),m=pi.main;if(!m) return pi.est?(pi.est.max||0)-1:-1;const v=(m.interval==="hour"?m.max*2000:m.max)||0;return (["base","unspecified",undefined].includes(m.kind)?1e9:0)+v};
 function where(j){return j.location||j.region||"Canada"}
 
 /* ---------- derived ---------- */
@@ -447,6 +453,7 @@ function fitScore(j){
 function subVal(j,k){
   if(k==="freshness") return freshness(j).score;
   if(k==="pathway"&&j.pathway) return +j.pathway.score||0;
+  if(k==="pay"){const pi=payInfo(j);if(!pi.main&&pi.est&&pi.est.score!=null) return Math.min(+pi.est.score,75);}  // estimates count, capped: they're uncertain
   return +((j.fit&&j.fit.subs)||{})[k]||0;
 }
 function pathwayWhy(j){const g=(j.pathway&&j.pathway.signals)||[];return g.length?g.map(x=>`${x.label} (${x.status.toLowerCase()})`).join("; "):""}
