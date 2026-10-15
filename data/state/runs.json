@@ -150,17 +150,12 @@
    "scored": 543
   },
   "signals": {
-   "at": "2026-10-15T06:16:13+00:00",
+   "at": "2026-10-15T08:41:34+00:00",
    "window": "2024Q1–2026Q1",
-   "companies_with_lmias": 79
+   "companies_with_lmias": 86
   }
  },
  "history": [
-  {
-   "component": "jobs:adp",
-   "at": "2026-10-15T03:45:25+00:00",
-   "postings": 6
-  },
   {
    "component": "jobs:hibob",
    "at": "2026-10-15T03:45:25+00:00",
@@ -425,6 +420,12 @@
    "at": "2026-10-15T06:16:13+00:00",
    "window": "2024Q1–2026Q1",
    "companies_with_lmias": 79
+  },
+  {
+   "component": "signals",
+   "at": "2026-10-15T08:41:34+00:00",
+   "window": "2024Q1–2026Q1",
+   "companies_with_lmias": 86
   }
  ]
 }
