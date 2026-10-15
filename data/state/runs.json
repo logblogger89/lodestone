@@ -22,11 +22,31 @@
    "postings": 363
   },
   "jobs": {
-   "at": "2026-10-14T19:53:49+00:00",
-   "feeds_ok": 71,
-   "feeds_failed": 0,
-   "canada_jobs_tracked": 1307,
-   "candidates": 146
+   "at": "2026-10-15T01:40:13+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_jobs_tracked": 1907,
+   "candidates": 200
+  },
+  "jobs:google": {
+   "at": "2026-10-15T01:36:41+00:00",
+   "postings": 70
+  },
+  "jobs:amazon": {
+   "at": "2026-10-15T01:36:49+00:00",
+   "postings": 437
+  },
+  "jobs:apple": {
+   "at": "2026-10-15T01:36:51+00:00",
+   "postings": 32
+  },
+  "jobs:meta": {
+   "at": "2026-10-15T01:36:56+00:00",
+   "postings": 8
+  },
+  "jobs:eightfold": {
+   "at": "2026-10-15T01:40:13+00:00",
+   "postings": 58
   }
  },
  "history": [
@@ -63,6 +83,92 @@
    "feeds_failed": 0,
    "canada_jobs_tracked": 1307,
    "candidates": 146
+  },
+  {
+   "component": "jobs:google",
+   "at": "2026-10-15T01:36:32+00:00",
+   "postings": 20
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-15T01:36:32+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_jobs_tracked": 1327,
+   "candidates": 147
+  },
+  {
+   "component": "jobs:google",
+   "at": "2026-10-15T01:36:41+00:00",
+   "postings": 70
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-15T01:36:41+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_jobs_tracked": 1377,
+   "candidates": 147
+  },
+  {
+   "component": "jobs:amazon",
+   "at": "2026-10-15T01:36:49+00:00",
+   "postings": 437
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-15T01:36:49+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_jobs_tracked": 1814,
+   "candidates": 183
+  },
+  {
+   "component": "jobs:apple",
+   "at": "2026-10-15T01:36:51+00:00",
+   "postings": 32
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-15T01:36:51+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_jobs_tracked": 1841,
+   "candidates": 184
+  },
+  {
+   "component": "jobs:meta",
+   "at": "2026-10-15T01:36:56+00:00",
+   "postings": 8
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-15T01:36:56+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_jobs_tracked": 1849,
+   "candidates": 185
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-15T01:37:58+00:00",
+   "sources_ok": 0,
+   "sources_failed": 1,
+   "canada_jobs_tracked": 1849,
+   "candidates": 185
+  },
+  {
+   "component": "jobs:eightfold",
+   "at": "2026-10-15T01:40:13+00:00",
+   "postings": 58
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-15T01:40:13+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_jobs_tracked": 1907,
+   "candidates": 200
   }
  ]
 }

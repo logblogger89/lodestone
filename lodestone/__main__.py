@@ -11,16 +11,17 @@ from . import pipeline
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="lodestone")
     sub = ap.add_subparsers(dest="cmd", required=True)
-    d = sub.add_parser("detect", help="find each company's job system (ATS) and board name")
+    d = sub.add_parser("detect", help="auto-detect hosted job boards for companies not yet in the source index")
     d.add_argument("--redo", action="store_true", help="re-probe companies already detected")
-    sub.add_parser("refresh", help="pull all feeds, keep Canadian roles, dedup, update liveness")
+    r = sub.add_parser("refresh", help="pull all sources, keep Canadian roles, dedup, update liveness")
+    r.add_argument("--only", help="limit to one company name or one platform (for testing a source)")
     sub.add_parser("stats", help="print current counts and freshness")
     a = ap.parse_args(argv)
     log = lambda m: print(m, file=sys.stderr)
     if a.cmd == "detect":
         out = pipeline.detect(redo=a.redo, log=log)
     elif a.cmd == "refresh":
-        out = pipeline.refresh(log=log)
+        out = pipeline.refresh(only=a.only, log=log)
     else:
         out = pipeline.stats()
     print(json.dumps(out, indent=2))

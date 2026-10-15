@@ -4,7 +4,7 @@ import pathlib
 import unittest
 from unittest import mock
 
-from lodestone import pipeline, store
+from lodestone import pipeline, sources, store
 from lodestone.models import Posting
 
 
@@ -14,7 +14,8 @@ class FakeAdapter:
     def __init__(self):
         self.ids = ["1", "2"]
 
-    def list_jobs(self, company, slug):
+    def list_feed(self, company, feed):
+        slug = feed["slug"]
         locs = {"1": "Toronto, ON", "2": "Austin, TX", "3": "Waterloo, ON"}
         return [Posting(source="fake", company=company, slug=slug, source_job_id=i,
                         title="Senior Product Manager", url=f"https://x/{i}", location_raw=locs[i])
@@ -26,8 +27,9 @@ class TestRefresh(unittest.TestCase):
         fake = FakeAdapter()
         with tempfile.TemporaryDirectory() as tmp, \
                 mock.patch.object(store, "STATE", pathlib.Path(tmp)), \
+                mock.patch.object(sources, "INDEX", pathlib.Path(tmp) / "index.csv"), \
                 mock.patch.dict(pipeline.ADAPTERS, {"fake": fake}):
-            store.save("companies", {"companies": [{"name": "Acme", "ats": "fake", "slug": "acme"}]})
+            sources.save([{"company": "Acme", "platform": "fake", "feed": {"slug": "acme"}, "status": "active"}])
             s = pipeline.refresh(log=lambda m: None)
             self.assertEqual((s["canada_postings"], s["candidates"]), (1, 1))
             fake.ids = ["3"]                              # job 1 disappears, job 3 appears

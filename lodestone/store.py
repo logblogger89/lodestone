@@ -10,7 +10,6 @@ import pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 STATE = ROOT / "data" / "state"
 SEED = ROOT / "data" / "seed" / "watchlist_seed.csv"
-OVERRIDES = ROOT / "config" / "ats_overrides.csv"
 
 
 def now() -> str:
@@ -34,19 +33,6 @@ def save(name: str, data) -> pathlib.Path:
 def read_seed(path: pathlib.Path = SEED) -> list[dict]:
     with path.open(newline="", encoding="utf-8") as f:
         return list(csv.DictReader(f))
-
-
-def read_overrides(path: pathlib.Path = OVERRIDES) -> dict[str, dict]:
-    """company -> {"ats": ..., "slug": ...}. ats 'none' means: don't probe, no public feed."""
-    if not path.exists():
-        return {}
-    out = {}
-    with path.open(newline="", encoding="utf-8") as f:
-        for row in csv.DictReader(line for line in f if not line.startswith("#")):
-            if row.get("company"):
-                out[row["company"].strip()] = {"ats": (row.get("ats") or "").strip() or None,
-                                               "slug": (row.get("slug") or "").strip() or None}
-    return out
 
 
 def mark_fresh(component: str, **info) -> None:

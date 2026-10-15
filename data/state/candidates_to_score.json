@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-14T19:53:39+00:00",
- "count": 146,
+ "updated_at": "2026-10-15T01:38:31+00:00",
+ "count": 200,
  "candidates": [
   {
    "id": "ashby:1password:8151254c-b7d1-4653-87b1-7afeba176898",
@@ -238,6 +238,142 @@
    ],
    "urls": [
     "https://job-boards.greenhouse.io/affirm/jobs/8006359003"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10553796",
+   "company": "Amazon",
+   "title": "AI Principal Product Manager - Technical, Amazon Customer Service",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10553796/ai-principal-product-manager-technical-amazon-customer-service"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10577301",
+   "company": "Amazon",
+   "title": "Product Manager Business Bulk Fulfilment, Amazon Business Operations - Analytics and Tech",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10577301/product-manager-business-bulk-fulfilment-amazon-business-operations-analytics-and-tech"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10559423",
+   "company": "Amazon",
+   "title": "Product Manager Business Bulk Fulfilment, Amazon Business Operations - Analytics and Tech",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10559423/product-manager-business-bulk-fulfilment-amazon-business-operations-analytics-and-tech"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10565897",
+   "company": "Amazon",
+   "title": "Senior Product Manager Technical, Amazon Customer Service",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10565897/senior-product-manager-technical-amazon-customer-service"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10419019",
+   "company": "Amazon",
+   "title": "Senior Product Manager, Serverless Compute",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10419019/senior-product-manager-serverless-compute"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10482296",
+   "company": "Amazon",
+   "title": "Sr. Product Manager (Bilingual- French/ English), Alexa Canada",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10482296/sr-product-manager-bilingual-french-english-alexa-canada"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10551580",
+   "company": "Amazon",
+   "title": "Sr. Product Manager, AICE - AI Center of Excellence",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10551580/sr-product-manager-aice-ai-center-of-excellence"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10449448",
+   "company": "Amazon",
+   "title": "Sr. Product Manager, Alexa Canada",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10449448/sr-product-manager-alexa-canada"
    ]
   },
   {
@@ -858,6 +994,23 @@
    ]
   },
   {
+   "id": "eightfold:microsoft.com:1970393556950363",
+   "company": "Microsoft",
+   "title": "Principal Product Manager",
+   "location": "Canada, British Columbia, Vancouver; Canada, Ontario, Greater Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393556950363"
+   ]
+  },
+  {
    "id": "ashby:miovision:84e78306-eb61-4397-b1d8-d54dfe4ee764",
    "company": "Miovision",
    "title": "Staff Product Manager",
@@ -1403,6 +1556,329 @@
    ],
    "urls": [
     "https://job-boards.greenhouse.io/affirm/jobs/7832312003"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10470125",
+   "company": "Amazon",
+   "title": "Go-to-Market Program Manager, AWS Canada Commercial Business",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10470125/go-to-market-program-manager-aws-canada-commercial-business"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10523676",
+   "company": "Amazon",
+   "title": "Network Engineering TPM, Corporate Network Engineering",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10523676/network-engineering-tpm-corporate-network-engineering"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10469428",
+   "company": "Amazon",
+   "title": "Principal Technical Program Manager - Journal , AWS Transactional Services",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10469428/principal-technical-program-manager-journal-aws-transactional-services"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10537815",
+   "company": "Amazon",
+   "title": "Principal Technical Program Manager, AFT Quality",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10537815/principal-technical-program-manager-aft-quality"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10480235",
+   "company": "Amazon",
+   "title": "Principal Technical Program Manager, Campaign Management",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10480235/principal-technical-program-manager-campaign-management"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10528520",
+   "company": "Amazon",
+   "title": "Principal Technical Program Manager, MADS",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10528520/principal-technical-program-manager-mads"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10552723",
+   "company": "Amazon",
+   "title": "Program Manager, Canada Hub Delivery",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10552723/program-manager-canada-hub-delivery"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10434405",
+   "company": "Amazon",
+   "title": "Senior Program Manager, Intellectual Property Protection",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10434405/senior-program-manager-intellectual-property-protection"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10485373",
+   "company": "Amazon",
+   "title": "Senior Technical Program Manager, Fulfillment Execution",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10485373/senior-technical-program-manager-fulfillment-execution"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10544050",
+   "company": "Amazon",
+   "title": "Sr Product Mgr, Compliance, Canada Product & Tech",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10544050/sr-product-mgr-compliance-canada-product-tech"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10467841",
+   "company": "Amazon",
+   "title": "Sr Sales Strategy and Operations Manager, Central StratOps, GTM and Analytics",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10467841/sr-sales-strategy-and-operations-manager-central-stratops-gtm-and-analytics"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10547907",
+   "company": "Amazon",
+   "title": "Sr. Program Manager, Network Planning, GTS",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10547907/sr-program-manager-network-planning-gts"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10539360",
+   "company": "Amazon",
+   "title": "Sr. Technical Program Manager, Alexa Connections",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10539360/sr-technical-program-manager-alexa-connections"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10535901",
+   "company": "Amazon",
+   "title": "Sr. Technical Program Manager, Alexa Food and News",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10535901/sr-technical-program-manager-alexa-food-and-news"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10411372",
+   "company": "Amazon",
+   "title": "Sr. Technical Program Manager, Offers Platform, Catalog Systems, ASCS",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10411372/sr-technical-program-manager-offers-platform-catalog-systems-ascs"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10559795",
+   "company": "Amazon",
+   "title": "Technical Infra Program Manager, Corporate Network Engineering",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10559795/technical-infra-program-manager-corporate-network-engineering"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10567327",
+   "company": "Amazon",
+   "title": "Technical Program Manager III, Mobile App Foundations - Quality and Release",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10567327/technical-program-manager-iii-mobile-app-foundations-quality-and-release"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10553158",
+   "company": "Amazon",
+   "title": "Technical Program Manager, Alexa Daily Essentials",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10553158/technical-program-manager-alexa-daily-essentials"
+   ]
+  },
+  {
+   "id": "apple:apple:200683083",
+   "company": "Apple",
+   "title": "Engineering Program Manager, App Store, Apple Services Engineering",
+   "location": "Canada",
+   "region": "Other Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:49+00:00",
+   "sources": [
+    "apple"
+   ],
+   "urls": [
+    "https://jobs.apple.com/en-ca/details/200683083/engineering-program-manager-app-store-apple-services-engineering"
    ]
   },
   {
@@ -2067,6 +2543,176 @@
    ]
   },
   {
+   "id": "amazon:amazon:10529523",
+   "company": "Amazon",
+   "title": "Architecte de solutions sénior | Sr. Solution Architect, Enterprise Industries",
+   "location": "Montreal, Quebec, CAN",
+   "region": "Montreal",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10529523/architecte-de-solutions-senior-sr-solution-architect-enterprise-industries"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10562384",
+   "company": "Amazon",
+   "title": "Assurance Solutions Architect, AWS Security Assurance Services",
+   "location": "Ottawa, Ontario, CAN",
+   "region": "Ottawa",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10562384/assurance-solutions-architect-aws-security-assurance-services"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10543992",
+   "company": "Amazon",
+   "title": "Programmatic Solutions Consultant, Amazon Ads Canada",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10543992/programmatic-solutions-consultant-amazon-ads-canada"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10574217",
+   "company": "Amazon",
+   "title": "Senior Assurance Solutions Architect, AWS Security Assurance Services",
+   "location": "Ottawa, Ontario, CAN",
+   "region": "Ottawa",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10574217/senior-assurance-solutions-architect-aws-security-assurance-services"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10433730",
+   "company": "Amazon",
+   "title": "Senior Assurance Solutions Architect, AWS Security Assurance Services",
+   "location": "Ottawa, Ontario, CAN",
+   "region": "Ottawa",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10433730/senior-assurance-solutions-architect-aws-security-assurance-services"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10572585",
+   "company": "Amazon",
+   "title": "Senior Solutions Architect, Financial Services",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10572585/senior-solutions-architect-financial-services"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10552007",
+   "company": "Amazon",
+   "title": "Senior Startup Solutions Architect, Startups Canada",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10552007/senior-startup-solutions-architect-startups-canada"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10553654",
+   "company": "Amazon",
+   "title": "Solutions Architect | Architecte de solutions, Frontier AI Startups",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10553654/solutions-architect-architecte-de-solutions-frontier-ai-startups"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10559146",
+   "company": "Amazon",
+   "title": "Sr. Solutions Architect | Architecte de solutions senior, Agentic WorkSpaces Canada",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10559146/sr-solutions-architect-architecte-de-solutions-senior-agentic-workspaces-canada"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10504150",
+   "company": "Amazon",
+   "title": "Sr. Solutions Architect- Bilingual, Alexa International",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:41+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10504150/sr-solutions-architect-bilingual-alexa-international"
+   ]
+  },
+  {
    "id": "greenhouse:d2l:8068064",
    "company": "D2L",
    "title": "Solutions Architect",
@@ -2203,6 +2849,23 @@
    ]
   },
   {
+   "id": "google:google:83138342891201222",
+   "company": "Google",
+   "title": "Customer Engineer, Platform, Google Cloud (English, French)",
+   "location": "Montreal, QC, Canada",
+   "region": "Montreal",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:31+00:00",
+   "sources": [
+    "google"
+   ],
+   "urls": [
+    "https://www.google.com/about/careers/applications/jobs/results/83138342891201222-customer-engineer-platform-google-cloud-english-french"
+   ]
+  },
+  {
    "id": "greenhouse:instacart:7991599",
    "company": "Instacart",
    "title": "Director, Enterprise Product Marketing",
@@ -2275,6 +2938,261 @@
    ],
    "urls": [
     "https://app.careerpuck.com/job-board/lyft/job/8648043002?gh_jid=8648043002"
+   ]
+  },
+  {
+   "id": "meta:meta:1748424582835326",
+   "company": "Meta",
+   "title": "Data Scientist, Product Analytics",
+   "location": "Remote, Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:36:52+00:00",
+   "sources": [
+    "meta"
+   ],
+   "urls": [
+    "https://www.metacareers.com/jobs/1748424582835326/"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393557026516",
+   "company": "Microsoft",
+   "title": "Architecte de solutions cloud - Cloud et IA | Applications et innovation / Cloud Solution Architect",
+   "location": "Canada, Québec, Quebec City; Canada, Québec, Montreal",
+   "region": "Montreal",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393557026516"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393557007359",
+   "company": "Microsoft",
+   "title": "Architecte de solutions cloud - Données et analytique / Cloud Solution Architect - Data & Analytics",
+   "location": "Canada, Québec, Montreal; Canada, Québec, Quebec City",
+   "region": "Montreal",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393557007359"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393556999409",
+   "company": "Microsoft",
+   "title": "Cloud & AI Apps Solution Engineer",
+   "location": "Canada, Alberta, Calgary",
+   "region": "Calgary",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393556999409"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393557004887",
+   "company": "Microsoft",
+   "title": "Cloud Solution Architect",
+   "location": "Canada, Ontario, Toronto; Canada, Ontario, Ottawa; Canada, British Columbia, Vancouver; Canada, Alberta, Calgary",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393557004887"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393557026420",
+   "company": "Microsoft",
+   "title": "Cloud Solution Architect",
+   "location": "Canada, Ontario, Toronto",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393557026420"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393556989619",
+   "company": "Microsoft",
+   "title": "Cloud Solution Architect (CSA) - Cloud & AI Data",
+   "location": "Canada, Ontario, Ottawa",
+   "region": "Ottawa",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393556989619"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393557004764",
+   "company": "Microsoft",
+   "title": "Cloud Solution Architect - AI Business Solutions",
+   "location": "Canada, Ontario, Toronto; Canada, British Columbia, Vancouver; Canada, Alberta, Calgary; Canada, Ontario, Ottawa",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393557004764"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393557004761",
+   "company": "Microsoft",
+   "title": "Cloud Solution Architect - Cloud & AI",
+   "location": "Canada, Ontario, Toronto; Canada, Alberta, Calgary; Canada, British Columbia, Vancouver; Canada, Ontario, Ottawa; Canada, Ontario, Ottawa",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393557004761"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393557007830",
+   "company": "Microsoft",
+   "title": "Cloud Solution Architect - Data & AI",
+   "location": "Canada, Ontario, Toronto",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393557007830"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393556999402",
+   "company": "Microsoft",
+   "title": "Dynamics 365 CRM Solution Engineer",
+   "location": "Canada, Ontario, Toronto; Canada, British Columbia, Vancouver; Canada, Alberta, Calgary; Canada, Alberta, Edmonton; Canada, Ontario, Ottawa",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393556999402"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393556984597",
+   "company": "Microsoft",
+   "title": "Innovation Hub Solution Engineer - Application Development",
+   "location": "Canada, Ontario, Greater Toronto",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393556984597"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393557008790",
+   "company": "Microsoft",
+   "title": "Innovative Data Platform Solution Engineer",
+   "location": "Canada, Ontario, Toronto; Canada, Alberta, Calgary; Canada, British Columbia, Vancouver; Canada, Ontario, Ottawa",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393557008790"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393556999961",
+   "company": "Microsoft",
+   "title": "Principal Cloud & AI Apps Solution Engineer",
+   "location": "Canada, Ontario, Toronto",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393556999961"
+   ]
+  },
+  {
+   "id": "eightfold:microsoft.com:1970393557038899",
+   "company": "Microsoft",
+   "title": "Senior Solution Architect - Financial Services",
+   "location": "Canada, Ontario, Toronto",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T01:38:31+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://apply.careers.microsoft.com/careers/job/1970393557038899"
    ]
   },
   {
