@@ -1,6 +1,6 @@
 ---
 name: discover-companies
-description: Lodestone company discovery. Find employers not on the watchlist (government hiring lists, job-board web search, VC portfolio boards, pasted links), prove each with evidence, review them, and suggest them in the app for Ayush to approve. Use weekly, when Ayush says /discover-companies, or when he asks to find new companies.
+description: Lodestone company discovery. Find employers not on the watchlist (government hiring lists, job-board web search, VC portfolio boards, pasted links), prove each with evidence, review them, and suggest them in the app for Ayush to approve. Use twice a week (Mondays and Thursdays in the daily run), when Ayush says /discover-companies, or when he asks to find new companies.
 ---
 
 # /discover-companies (P1-S5, D-058)
