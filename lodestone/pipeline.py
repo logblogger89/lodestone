@@ -152,6 +152,8 @@ def refresh(only: str | None = None, log=print) -> dict:
             continue
         stats["canada"] += 1
         role = classify_title(p.title)
+        if not _is_candidate(role) and p.canonical_key not in jobs:
+            continue          # only role-family matches are stored; the rest are counted, not kept
         rec = {
             "key": p.canonical_key, "source": p.source, "url": p.url, "seen_at": seen_at,
             "group": dedup.group_key(p.company, p.title, geo.region),
@@ -215,13 +217,13 @@ def refresh(only: str | None = None, log=print) -> dict:
     summary = {
         "sources_ok": len(active) - len(errors), "sources_failed": len(errors),
         "companies_ok": len(ok_companies), "postings_pulled": stats["pulled"],
-        "canada_postings": stats["canada"], "canada_jobs_tracked": sum(1 for j in jobs.values() if j["live"]),
+        "canada_postings": stats["canada"], "jobs_tracked": sum(1 for j in jobs.values() if j["live"]),
         "new_jobs": stats["new"], "went_dead": stats["went_dead"], "detail_errors": stats["detail_errors"],
         "multi_source_jobs": sum(1 for j in jobs.values() if len(j["sightings"]) > 1),
         "candidates": len(candidates), "by_tier": dict(Counter(c["role_tier"] for c in candidates)),
         "by_region": dict(Counter(c["region"] for c in candidates)), "errors": errors,
     }
-    store.mark_fresh("jobs", **{k: summary[k] for k in ("sources_ok", "sources_failed", "canada_jobs_tracked", "candidates")})
+    store.mark_fresh("jobs", **{k: summary[k] for k in ("sources_ok", "sources_failed", "canada_postings", "candidates")})
     return summary
 
 
