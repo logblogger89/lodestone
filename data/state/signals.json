@@ -12,7 +12,7 @@
   "tfwp_2026q1_pos_en.xlsx"
  ],
  "window": "2024Q1–2026Q1",
- "loaded_at": "2026-10-15T06:16:13+00:00",
+ "loaded_at": "2026-10-15T08:41:34+00:00",
  "companies": {
   "AlayaCare": {
    "positions": 2,
@@ -35,11 +35,11 @@
    ]
   },
   "CGI": {
-   "positions": 83,
-   "tech_positions": 72,
+   "positions": 276,
+   "tech_positions": 204,
    "streams": {
-    "Global Talent Stream": 54,
-    "High Wage": 29
+    "Global Talent Stream": 246,
+    "High Wage": 30
    },
    "quarters": [
     "2024Q1",
@@ -53,16 +53,48 @@
     "2026Q1"
    ],
    "top_occupations": [
-    "21222-Information systems specialists",
     "21232-Software developers and programmers",
-    "21231-Software engineers and designers",
-    "21221-Business system specialists"
+    "21222-Information systems specialists",
+    "21221-Business system specialists",
+    "21223-Database analysts and data administrators"
    ],
    "legal_names": [
-    "CGI Information Systems & Management Consultants Inc."
+    "CGI Information Systems & Management Consultants Inc.",
+    "Conseillers en gestion et informatique CGI Inc."
    ],
    "provinces": [
     "Ontario",
+    "Quebec"
+   ]
+  },
+  "Desjardins": {
+   "positions": 115,
+   "tech_positions": 94,
+   "streams": {
+    "Global Talent Stream": 100,
+    "High Wage": 15
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21230-Computer systems developers and programmers",
+    "21222-Information systems specialists",
+    "11201-Professional occupations in business management consulting",
+    "20012-Computer and information systems managers"
+   ],
+   "legal_names": [
+    "Groupe Technologies Desjardins inc."
+   ],
+   "provinces": [
     "Quebec"
    ]
   },
@@ -86,6 +118,37 @@
     "Quebec"
    ]
   },
+  "Ubisoft": {
+   "positions": 136,
+   "tech_positions": 64,
+   "streams": {
+    "Global Talent Stream": 121,
+    "High Wage": 15
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21232-Software developers and programmers",
+    "21220-Cybersecurity specialists",
+    "21223-Database analysts and data administrators",
+    "21231-Software engineers and designers"
+   ],
+   "legal_names": [
+    "Ubisoft Divertissements Inc."
+   ],
+   "provinces": [
+    "Quebec"
+   ]
+  },
   "Air Canada": {
    "positions": 4,
    "tech_positions": 2,
@@ -104,6 +167,35 @@
    ],
    "legal_names": [
     "Air Canada"
+   ],
+   "provinces": [
+    "Quebec"
+   ]
+  },
+  "National Bank": {
+   "positions": 111,
+   "tech_positions": 46,
+   "streams": {
+    "High Wage": 73,
+    "Low Wage": 38
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3"
+   ],
+   "top_occupations": [
+    "21222-Information systems specialists",
+    "21232-Software developers and programmers",
+    "11102-Financial advisors",
+    "21234-Web developers and programmers"
+   ],
+   "legal_names": [
+    "Banque Nationale - National Bank"
    ],
    "provinces": [
     "Quebec"
@@ -134,6 +226,37 @@
    ],
    "provinces": [
     "Quebec"
+   ]
+  },
+  "AMD": {
+   "positions": 72,
+   "tech_positions": 62,
+   "streams": {
+    "Global Talent Stream": 47,
+    "High Wage": 25
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21311-Computer engineers (except software engineers and designers)",
+    "21231-Software engineers and designers",
+    "21232-Software developers and programmers",
+    "20012-Computer and information systems managers"
+   ],
+   "legal_names": [
+    "ATI Technologies ULC"
+   ],
+   "provinces": [
+    "Ontario"
    ]
   },
   "Autodesk": {
@@ -332,6 +455,39 @@
     "Ontario"
    ]
   },
+  "Loblaw Digital": {
+   "positions": 188,
+   "tech_positions": 37,
+   "streams": {
+    "Global Talent Stream": 19,
+    "High Wage": 33,
+    "Low Wage": 136
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "21232-Software developers and programmers",
+    "20012-Computer and information systems managers",
+    "21222-Information systems specialists"
+   ],
+   "legal_names": [
+    "Loblaw Inc",
+    "Loblaw Inc.",
+    "Loblaws Inc."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
   "Reddit": {
    "positions": 4,
    "tech_positions": 2,
@@ -515,6 +671,37 @@
    ],
    "legal_names": [
     "Validere Technologies Inc."
+   ],
+   "provinces": [
+    "Ontario"
+   ]
+  },
+  "Xanadu": {
+   "positions": 32,
+   "tech_positions": 27,
+   "streams": {
+    "Global Talent Stream": 17,
+    "High Wage": 15
+   },
+   "quarters": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21311-Computer engineers (except software engineers and designers)",
+    "21231-Software engineers and designers",
+    "21232-Software developers and programmers",
+    "21100-Physicists and astronomers"
+   ],
+   "legal_names": [
+    "Xanadu Quantum Technologies Inc"
    ],
    "provinces": [
     "Ontario"
@@ -1422,6 +1609,34 @@
    ],
    "legal_names": [
     "Klue"
+   ],
+   "provinces": [
+    "British Columbia"
+   ]
+  },
+  "Zafin": {
+   "positions": 11,
+   "tech_positions": 11,
+   "streams": {
+    "Global Talent Stream": 7,
+    "High Wage": 4
+   },
+   "quarters": [
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1"
+   ],
+   "top_occupations": [
+    "21231-Software engineers and designers",
+    "21221-Business system specialists",
+    "20012-Computer and information systems managers",
+    "21233-Web designers"
+   ],
+   "legal_names": [
+    "ZAFIN LABS AMERICAS INC"
    ],
    "provinces": [
     "British Columbia"

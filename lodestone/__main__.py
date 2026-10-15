@@ -34,6 +34,11 @@ def main(argv=None) -> int:
     mk.add_argument("target", help="job id, or words from company + title (fetch); folder of saved requests (pending)")
     mk.add_argument("level", nargs="?", help="company level that matches the role (add)")
     mk.add_argument("note", nargs="?", default="", help="why this level (add)")
+    dc = sub.add_parser("discover", help="company discovery: harvest, add, probe, review, export, apply")
+    dc.add_argument("action", choices=["harvest", "vc", "add", "probe", "review", "export", "apply"])
+    dc.add_argument("file", nargs="?", help="JSON list (add, review) or decisions folder (apply)")
+    dc.add_argument("--limit", type=int)
+    dc.add_argument("--all", action="store_true", help="probe: re-probe candidates already probed")
     rp = sub.add_parser("report", help="save the daily run report for the app and the repo")
     rp.add_argument("action", choices=["save"])
     rp.add_argument("file", help="report JSON written by Claude")
@@ -64,6 +69,14 @@ def main(argv=None) -> int:
     elif a.cmd == "signals":
         from . import signals
         out = signals.load(log=log)
+    elif a.cmd == "discover":
+        from . import discover
+        if a.action in ("add", "review", "apply") and not a.file:
+            ap.error(f"discover {a.action} needs a file")
+        out = {"harvest": lambda: discover.harvest(), "vc": lambda: discover.harvest_vc(log), "probe": lambda: discover.probe(a.limit, not a.all),
+               "export": lambda: discover.export(), "apply": lambda: discover.apply(a.file),
+               "add": lambda: discover.add(json.load(open(a.file))),
+               "review": lambda: discover.review(json.load(open(a.file)))}[a.action]()
     elif a.cmd == "report":
         from . import report
         out = report.save(json.load(open(a.file)))

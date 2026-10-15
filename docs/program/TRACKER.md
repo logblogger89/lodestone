@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-15 · **Current milestone:** M4 (build) · **Overall RAG:** 🟢
 
-**Status summary (2026-10-15).** **P1-S3 done (D-049):** 543 roles scored with explanations, freshness factor added; Ayush's Interested picks rank at the top (5 of 9 in the top 7). **P1-S4 built:** pathway signals (D-050), paste inbox (D-052), pay estimates (D-053), Later/closed checks passed. Market pay checks from levels.fyi on request (D-054). **Next: P1-S5** (discovery and eval set) toward M4 dogfood.
+**Status summary (2026-10-15).** **P1-S3 done (D-049):** 543 roles scored with explanations, freshness factor added; Ayush's Interested picks rank at the top (5 of 9 in the top 7). **P1-S4 built:** pathway signals (D-050), paste inbox (D-052), pay estimates (D-053), Later/closed checks passed. Market pay checks from levels.fyi on request (D-054). **Now: P1-S5.** Discovery built (D-058): 54 suggested companies await Ayush's review. Next: eval set, then the M4 gate.
 
 ---
 
@@ -107,6 +107,7 @@
 | D-055 | 10-15 | **Request market check from the app:** a button in each role's Pay panel saves a request (`market_req/<role>`); Claude answers requests at the start of its next session or refresh, one levels.fyi read per requested role. Cap: 20 requests a day (Ayush), enforced in the app and in processing (`config/market.json` daily_cap); extras wait a day. Statuses: Requested, done (figure shows), no Canadian data, failed (retry) | R5 | Ayush |
 | D-056 | 10-15 | **Daily run and report:** a scheduled task runs every day at 6:53am New York time in a fresh cloud session: market-check requests, full `/refresh-jobs` (refresh, paste inbox, scoring, push to the app), tracker entry, then a plain-language report (new roles and top 3 matches, closures, inbox and market-check results, problems and what Ayush must do) sent by email and phone notification. Uses the Claude plan's usage; if a limit hits mid-scoring, the rest is scored next day | Ops | Ayush |
 | D-057 | 10-15 | **Daily report in the app:** each run saves its report as `reports/<date>` (and in `data/state/reports/` for history). The Digest shows a banner with the latest report for 2 days; a new Reports page shows the latest in full plus an Archive of the last N days (Settings, default 14, max 90). Top matches open the role. The db keeps 90 days | R11 | Ayush |
+| D-058 | 10-15 | **Company discovery (P1-S5):** four routes find employers not on the watchlist: government hiring lists (≥5 tech/product hires or ≥2 Global Talent Stream), job-board web search, VC portfolio boards (Inovia, Communitech, Diagram, Real Ventures via Getro's public company list), pasted links. Each candidate is probed for a job board and open Canadian roles, then reviewed by Claude (IT consultancies, staffing, government, universities and hardware/biotech skipped). Suggestions show in Companies with evidence; nothing joins the watchlist without Ayush's approval. Approvals apply at the next daily run; discovery runs Mondays. First pass: 54 suggestions from ~540 candidates. Side fix: 8 watchlist companies now matched under their legal names (pathway signals 79 → 86 companies) | R1a, DR-5 | Claude |
 
 ## 4. Open questions
 
@@ -194,6 +195,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | P1-S5 started: discovery engine built and run (D-058): 54 suggested companies in the app (Companies tab) with evidence; `/discover-companies` runbook; daily run applies approvals and discovers on Mondays; tests | Claude |
 | 2026-10-15 | Ayush's idea logged: adaptive Spotify-style recommendations (PRD D19a, Q-23), parked until after M4 dogfood | Claude |
 | 2026-10-15 | Reports page, Digest banner and Archive added (D-057); daily run now posts its report to the app | Claude |
 | 2026-10-15 | Daily 6:53am ET run with emailed report scheduled (D-056); first run today | Claude |

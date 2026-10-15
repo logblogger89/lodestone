@@ -101,6 +101,8 @@ details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
 .report .actions{border:1px solid var(--warn);border-radius:8px;padding:8px 12px;margin-top:12px}
 .archive details{border-top:1px solid var(--line);padding:10px 0}
 .archive summary{cursor:pointer}
+.card.sug{display:grid;gap:6px;cursor:default}
+.card.sug ul{margin:0;padding-left:18px}
 .archive h2{font-family:var(--font-display);font-size:18px;margin:22px 0 4px}
 .report button.link{border:0;background:none;padding:0;text-align:left;cursor:pointer;font-weight:600;color:var(--accent)}
 .kind{font-family:var(--font-body);font-size:11px;font-weight:600;color:var(--warn);background:var(--warn-soft);border-radius:4px;padding:1px 5px;margin-left:6px}
@@ -261,7 +263,7 @@ const FRESH_LABEL = {jobs:"Job pulls (all sources)", source_index:"Source index"
 /* ---------- state ---------- */
 const S = {
   db:null, ready:false, offline:false, canWrite:true,
-  jobs:{}, triage:{}, prefs:{...DEFAULT_PREFS}, companies:[], freshness:{}, inbox:[], mreq:{}, reports:[],
+  jobs:{}, triage:{}, prefs:{...DEFAULT_PREFS}, companies:[], freshness:{}, inbox:[], mreq:{}, reports:[], suggestions:[], codec:{}, sugAll:false,
   view:"digest", open:null, sel:0, show:"todo", region:"preferred", q:"", tierOn:new Set(TIERS), sort:"best",
   coQ:"", coStatus:"all", expanded:false, lastVisit:null, pendingReasons:null
 };
@@ -446,13 +448,14 @@ async function boot(){
     S.jobs=all;S.ready=true;render();
   },fail);
   db.collection("meta").onSnapshot(snap=>{
-    snap.docs.forEach(d=>{const x=d.data()||{};if(d.id==="companies")S.companies=x.companies||[];if(d.id==="freshness")S.freshness=x.components||{}});
+    snap.docs.forEach(d=>{const x=d.data()||{};if(d.id==="companies")S.companies=x.companies||[];if(d.id==="suggestions")S.suggestions=x.suggestions||[];if(d.id==="freshness")S.freshness=x.components||{}});
     render();
   },fail);
   db.collection("triage").onSnapshot(snap=>{const t={};snap.docs.forEach(d=>t[d.id]=d.data());S.triage=t;render()},fail);
   db.doc("settings/prefs").onSnapshot(d=>{S.prefs={...DEFAULT_PREFS,...(d.exists?d.data():{})};render()},fail);
   db.doc("profile/main").onSnapshot(d=>{S.profile=d.exists?d.data():null;render()},fail);
   db.collection("inbox").onSnapshot(snap=>{S.inbox=snap.docs.map(d=>({id:d.id,...d.data()}));render()},fail);
+  db.collection("company_decisions").onSnapshot(snap=>{const m={};snap.docs.forEach(d=>m[d.id]=d.data());S.codec=m;render()},fail);
   db.collection("reports").onSnapshot(snap=>{S.reports=snap.docs.map(d=>d.data()).filter(r=>r&&r.date).sort((a,b)=>b.date.localeCompare(a.date));render()},fail);
   db.collection("market_req").onSnapshot(snap=>{const m={};snap.docs.forEach(d=>m[d.id]=d.data());S.mreq=m;render()},fail);
   window.addEventListener("pagehide",()=>lsSet("lastVisit",Date.now()));
@@ -687,6 +690,40 @@ function viewAdd(){
     ${items.map(x=>`<tr><td class="mono">${esc(ago(parseWhen(x.created_at)))}</td><td style="overflow-wrap:anywhere">${esc(String(x.text||"").slice(0,160))}</td><td><span class="chip ${INBOX_CLASS[x.status]||""}">${esc(INBOX_LABEL[x.status]||x.status||"")}</span>${x.result?`<div class="note">${esc(x.result)}</div>`:""}${x.job_id&&S.jobs[x.job_id]?` <button class="btn" data-open="${esc(x.job_id)}">Open role</button>`:""}</td></tr>`).join("")}
   </tbody></table></section>`:""}`;
 }
+/* ---------- discovery suggestions (P1-S5, D-058) ---------- */
+const ROUTE_LABEL={lmia:"Government hiring list",capture:"You pasted a role",search:"Found on a job board",vc:"VC portfolio board"};
+function suggestionCard(g){
+  const dec=S.codec[g.key];
+  const roles=g.roles_canada?`<div class="note"><strong>${g.roles_canada} open Canadian role${g.roles_canada>1?"s":""} in your families</strong>${(g.sample_roles||[]).length?": "+g.sample_roles.map(esc).join(" · "):""}</div>`
+    :g.board?`<div class="note">Job board found; no matching Canadian roles open right now.</div>`:`<div class="note">No hosted job board found; Claude would add its careers site.</div>`;
+  const ev=Object.entries(g.routes||{}).map(([r,t])=>`<li><b>${esc(ROUTE_LABEL[r]||r)}:</b> ${esc(t)}</li>`).join("");
+  const act=dec?`<div class="row"><span class="chip ${dec.decision==="approve"?"s-stated":"s-unknown"}">${dec.decision==="approve"?"Approved: joins your watchlist at the next run":"Dismissed"}</span><button class="tbtn" data-sug="undo" data-key="${esc(g.key)}">Undo</button></div>`
+    :`<div class="row"><button class="tbtn on-interested" data-sug="approve" data-key="${esc(g.key)}">Add to watchlist</button><button class="tbtn" data-sug="dismiss" data-key="${esc(g.key)}">Dismiss</button></div>`;
+  return `<div class="card sug"><div><b>${esc(g.name)}</b>${g.segment?` <span class="note">· ${esc(g.segment)}</span>`:""}</div>
+    ${g.why?`<div>${esc(g.why)}</div>`:""}${roles}<ul class="note">${ev}</ul>
+    ${g.careers_url?`<a href="${esc(safeUrl(g.careers_url))}" target="_blank" rel="noopener">Careers ↗</a>`:""}${act}</div>`;
+}
+function suggestionsPanel(){
+  if(!S.suggestions.length) return "";
+  const open=S.suggestions.filter(g=>!S.codec[g.key]), done=S.suggestions.filter(g=>S.codec[g.key]);
+  const list=S.sugAll?open:open.slice(0,8);
+  return `<section class="panel"><h4>Suggested companies <span class="mono">${open.length}</span></h4>
+    <p class="note">Found by discovery and checked by Claude. Nothing joins your watchlist unless you add it.</p>
+    ${list.map(suggestionCard).join("")||`<p class="note">All caught up.</p>`}
+    ${open.length>list.length?`<button class="btn more" data-act="suguall">Show ${open.length-list.length} more</button>`:""}
+    ${done.length?`<details class="quotes"><summary>Decided (${done.length})</summary>${done.map(suggestionCard).join("")}</details>`:""}</section>`;
+}
+async function decideCompany(k,decision){
+  if(!S.db||!S.canWrite){toast("Open Lodestone signed in as its owner to decide.");return}
+  try{
+    if(decision==="undo"){const c={...S.codec};delete c[k];S.codec=c;render();await S.db.doc("company_decisions/"+k).delete();return}
+    const g=S.suggestions.find(x=>x.key===k)||{};
+    const body={decision,name:g.name||k,at:new Date().toISOString()};
+    S.codec={...S.codec,[k]:body};render();
+    await S.db.doc("company_decisions/"+k).set(body);
+    toast(decision==="approve"?"Added. Claude starts pulling its jobs at the next run.":"Dismissed. It won't be suggested again.");
+  }catch(e){toast("Couldn't save. Check your connection and try again.");console.warn(e)}
+}
 function viewCompanies(){
   const q=S.coQ.toLowerCase();
   const rows=S.companies.filter(c=>(S.coStatus==="all"||c.status===S.coStatus)&&(!q||(c.name+" "+c.segment+" "+c.system).toLowerCase().includes(q)));
@@ -696,10 +733,11 @@ function viewCompanies(){
   <div class="summary"><span><strong class="mono">${S.companies.length}</strong> on your watchlist</span><span>${n("active")} pulled automatically</span><span>${n("no_feed")} paste only</span></div>
   <div class="filters"><input type="search" id="coq" placeholder="Search companies" value="${esc(S.coQ)}" aria-label="Search companies">
     ${["all","active","no_feed","paused"].map(s=>`<button class="chip toggle" data-costatus="${s}" aria-pressed="${S.coStatus===s}">${s==="all"?"All":label[s]}</button>`).join("")}</div>
+  ${S.offline?"":suggestionsPanel()}
   ${S.offline?offlineState():`<div class="tblwrap"><table class="tbl"><thead><tr><th>Company</th><th>Segment</th><th>Job system</th><th>Status</th><th>Canada roles</th><th></th></tr></thead><tbody>
   ${rows.map(c=>`<tr><td><b>${esc(c.name)}</b>${c.status!=="active"&&c.note?`<div class="note">${esc(c.note)}</div>`:""}</td><td>${esc(c.segment)}</td><td>${esc(c.system)}</td><td>${esc(label[c.status]||c.status)}</td><td class="mono">${c.canada_jobs??""}</td><td>${c.careers_url?`<a href="${esc(safeUrl(c.careers_url))}" target="_blank" rel="noopener">Careers ↗</a>`:""}</td></tr>`).join("")}
   </tbody></table></div>`}
-  <p class="note">Add or remove companies by asking Claude in a Lodestone session. Discovery of new companies arrives in Sprint 5.</p>`;
+  <p class="note">New companies are suggested above each week. You can also ask Claude in a Lodestone session to add or remove one.</p>`;
 }
 /* Profile: built from the CV, stored only in this app's private database. Edits are used at the next scoring run. */
 const PROFILE_FIELDS=[["headline","Headline",1],["summary","Summary",4],["domains","Domains (one per line)",5],["skills","Skills (one per line)",5],["scope_signals","Scope highlights (one per line)",5]];
@@ -798,6 +836,8 @@ document.addEventListener("click",e=>{
   if(d.act==="fresh"){S.open="__fresh";render();return}
   if(d.act==="close"){S.open=null;render();return}
   if(d.act==="addjob"){addJob();return}
+  if(d.sug){e.stopPropagation();decideCompany(d.key,d.sug);return}
+  if(d.act==="suguall"){S.sugAll=true;render();return}
   if(d.act==="mreq"){e.stopPropagation();const j=jobById(d.id);if(j)requestMarket(j);return}
   if(d.act==="saveprefs"){savePrefs();return}
   if(d.act==="saveprofile"){saveProfile();return}

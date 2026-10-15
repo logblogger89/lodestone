@@ -13,6 +13,11 @@ static.xx.fbcdn.net          https://static.xx.fbcdn.net/                       
 open.canada.ca               https://open.canada.ca/data/en/dataset/90fed587-1364-4f33-a9ee-208181dc0b97   ESDC positive-LMIA employers list
 hacker-news.firebaseio.com   https://hacker-news.firebaseio.com/v0/maxitem.json                   HN "Who is hiring" (official API)
 hn.algolia.com               https://hn.algolia.com/api/v1/search?query=hiring&tags=story         HN search (official API)
+api.getro.com                https://api.getro.com/                                               VC portfolio boards: company lists (discovery, weekly)
+careers.inovia.vc            https://careers.inovia.vc/companies                                  Inovia portfolio board (discovery)
+communitech.getro.com        https://communitech.getro.com/companies                              Communitech board (discovery)
+careers.diagram.ca           https://careers.diagram.ca/companies                                 Diagram portfolio board (discovery)
+jobs.realventures.com        https://jobs.realventures.com/companies                              Real Ventures portfolio board (discovery)
 www.levels.fyi               https://www.levels.fyi/companies/shopify/salaries/product-manager    Market pay pages, read only when Ayush asks about a role (Q-22; terms forbid scheduled/automated reading)
 # Not needed by refresh: www.canada.ca (IRCC/ESDC reference pages). It doesn't respond to cloud servers,
 # but these links open fine in Ayush's browser. ESDC data comes from open.canada.ca.
