@@ -4,17 +4,19 @@ from .amazon import AmazonAdapter
 from .apple import AppleAdapter
 from .ashby import AshbyAdapter
 from .eightfold import EightfoldAdapter
+from .enterprise import ALL as ENTERPRISE
 from .google import GoogleAdapter
 from .greenhouse import GreenhouseAdapter
 from .lever import LeverAdapter
 from .meta import MetaAdapter
 from .oracle_hcm import OracleHcmAdapter
+from .small_ats import ALL as SMALL_ATS
 from .smartrecruiters import SmartRecruitersAdapter
 from .workday import WorkdayAdapter
 
 ADAPTERS = {a.type: a for a in (
     GreenhouseAdapter(), LeverAdapter(), AshbyAdapter(), SmartRecruitersAdapter(), WorkdayAdapter(),
-    EightfoldAdapter(), GoogleAdapter(), AmazonAdapter(), AppleAdapter(), MetaAdapter(), OracleHcmAdapter())}
+    EightfoldAdapter(), GoogleAdapter(), AmazonAdapter(), AppleAdapter(), MetaAdapter(), OracleHcmAdapter(), *SMALL_ATS, *ENTERPRISE)}
 # Board-style systems we can auto-detect from a company name, most common first.
 DETECT_ORDER = ["greenhouse", "ashby", "lever", "smartrecruiters"]
 
