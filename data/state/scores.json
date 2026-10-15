@@ -6790,5 +6790,2280 @@
   "flags": [
    "Not a product role"
   ]
+ },
+ "eb2078430bac": {
+  "fingerprint": "7db5567646a20710",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 50,
+   "level": 30,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Program management for AI and productivity, little product ownership",
+   "level": "Program Manager II, 5+ yrs: below your L5-L6 scope",
+   "domain": "General B2B travel tech; AI productivity angle is a modest fit",
+   "pathway": "No information on a work permit; relocation support not available",
+   "pay": "Top CAD 133K bonus-inclusive (about 120K at 90%) is under your 130K floor",
+   "skills": "Program/process-improvement background fits partly; no product ownership asked"
+  },
+  "summary": "Run AI and productivity programs and process automation for Expedia's B2B travel business.",
+  "level_guess": "Program Manager II (about L4)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "5+ yrs program management",
+   "Process improvement and automation",
+   "Vancouver-based"
+  ],
+  "flags": [
+   "Must be based in Vancouver",
+   "No relocation support"
+  ]
+ },
+ "a01e31fbee96": {
+  "fingerprint": "23f601962c5d4e62",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 50,
+   "level": 30,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Program management for B2B cruise partners, not product ownership",
+   "level": "5-7 yrs program role, mid-level scope: below your target",
+   "domain": "Travel B2B marketplace; limited overlap with your domains",
+   "pathway": "No information on a work permit; relocation support not available",
+   "pay": "Top CAD 102.5K bonus-inclusive (about 92K at 90%) is well under target",
+   "skills": "Program and product experience fits partly; travel domain is new"
+  },
+  "summary": "Drive program delivery for Expedia's B2B cruise partnerships and supply.",
+  "level_guess": "Program Manager (about L4)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "5-7 yrs program/product mgmt",
+   "Partner program delivery"
+  ],
+  "flags": [
+   "Must be based in Vancouver",
+   "No relocation support"
+  ]
+ },
+ "d484050cf820": {
+  "fingerprint": "83d6e3b6d8b012f1",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 85,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Core PM role on Faire's wholesale marketplace",
+   "level": "Multiple levels Senior to Principal; scope scales with level",
+   "domain": "Marketplace/commerce platform with ML and payments overlaps your Shopping work",
+   "pathway": "No work permit information in the posting",
+   "pay": "Featured Toronto range tops at CAD 203.5K, above your good band",
+   "skills": "Product, data and ML experience matches; 4-10+ yrs asked by level"
+  },
+  "summary": "Own complex cross-functional products on Faire's wholesale marketplace at Senior, Staff or Principal level.",
+  "level_guess": "Senior to Principal PM (L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "4+ yrs PM (7+ Staff, 10+ Principal)",
+   "Own complex products end to end",
+   "Data and ML fluency"
+  ],
+  "flags": [
+   "Multiple levels; level set at offer"
+  ]
+ },
+ "9b7c6576da56": {
+  "fingerprint": "f9dca6ca2c82cbe4",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 25,
+   "level": 30,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Product marketing leadership, not product management",
+   "level": "Director with 10+ yrs; leadership scope above your IC target",
+   "domain": "Cybersecurity is adjacent to your security and risk work",
+   "pathway": "No work permit information",
+   "pay": "No pay range found; not posted",
+   "skills": "Needs 10+ yrs product marketing in cybersecurity; you lack that"
+  },
+  "summary": "Lead positioning, go-to-market and competitive intelligence for Field Effect's cybersecurity products.",
+  "level_guess": "Director, Product Marketing",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs product marketing",
+   "Cybersecurity market experience",
+   "GTM leadership"
+  ],
+  "flags": [
+   "Product marketing role",
+   "Director-level"
+  ]
+ },
+ "37e8e470bbc1": {
+  "fingerprint": "bee64de83f5ddb12",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 75,
+   "level": 50,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Head of Product for a fintech platform; likely hands-on product leadership",
+   "level": "Head-of title with no scope detail; level unclear",
+   "domain": "Fintech/affiliate marketing platform overlaps your ads and fintech work",
+   "pathway": "No work permit information",
+   "pay": "No pay range found; not posted",
+   "skills": "No description posted, so must-haves are unclear"
+  },
+  "summary": "Lead product at Fintel Connect, a fintech affiliate and partnership marketing platform (no description posted).",
+  "level_guess": "Head of Product (about L6+)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Description not posted"
+  ],
+  "flags": [
+   "No description posted",
+   "Likely a people-leadership role"
+  ]
+ },
+ "c3d600df08ba": {
+  "fingerprint": "6eee22cfa90e64fd",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 25,
+   "level": 30,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing leadership at Float, not product management",
+   "level": "Head-level role needing 8+ yrs and leadership scope",
+   "domain": "Fintech/B2B payments matches your financial-services interest",
+   "pathway": "No work permit information",
+   "pay": "No pay range found; not posted",
+   "skills": "8+ yrs product marketing in fintech; not your background"
+  },
+  "summary": "Lead product marketing, lifecycle and monetization for Float's spend-management platform.",
+  "level_guess": "Head of Product Marketing",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs product marketing",
+   "B2B SaaS/fintech",
+   "Leadership scope"
+  ],
+  "flags": [
+   "Product marketing role"
+  ]
+ },
+ "4d2e6f8ac8b3": {
+  "fingerprint": "276e10bd03e371fe",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Core PM on credit and risk decisioning",
+   "level": "Senior PM, 5+ yrs; likely single-team scope",
+   "domain": "Credit and risk engineering matches your risk and financial-services work",
+   "pathway": "No work permit information in the posting",
+   "pay": "No pay range found; not posted",
+   "skills": "Needs personally owned credit underwriting outcomes; you lack that"
+  },
+  "summary": "Own product for Float's credit underwriting and risk-decisioning engineering.",
+  "level_guess": "Senior PM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs PM",
+   "Owned a credit underwriting/risk outcome",
+   "Risk decisioning"
+  ],
+  "flags": [
+   "Credit underwriting experience required"
+  ]
+ },
+ "1177b9f8f852": {
+  "fingerprint": "eb5edaea4846c984",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 75,
+   "level": 30,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Product operations for cards and spend, product-heavy adjacent",
+   "level": "3-6 yrs product ops; below your L5-L6 scope",
+   "domain": "Cards, spend and fintech match your financial-services interest",
+   "pathway": "No work permit information",
+   "pay": "CAD 140-150K base is in the low-to-ok band, under your 160K ok line",
+   "skills": "Analytics, cross-functional and SQL work fit well"
+  },
+  "summary": "Run product operations, analytics and launch processes for Float's cards and spend management products.",
+  "level_guess": "Product Ops Manager (about L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3-6 yrs product ops/strategy",
+   "Analytical, cross-functional work",
+   "Fintech"
+  ],
+  "flags": [
+   "Below target level"
+  ]
+ },
+ "21e24c43e931": {
+  "fingerprint": "c6ee2c964cca16f0",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Core PM on financial infrastructure",
+   "level": "Senior PM, 5+ yrs, likely narrower scope",
+   "domain": "Financial infrastructure fits your fintech and compliance work",
+   "pathway": "No work permit information",
+   "pay": "No pay range found; not posted",
+   "skills": "Wants hands-on building of financial infra at a startup; partial match"
+  },
+  "summary": "Own product for the financial infrastructure behind Float's payments and spend platform.",
+  "level_guess": "Senior PM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs PM",
+   "Hands-on financial services infrastructure"
+  ],
+  "flags": [
+   "Startup/scale-up experience wanted"
+  ]
+ },
+ "52fbddaeafb2": {
+  "fingerprint": "d204e3fea44afc38",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Principal PM defining vision for GitLab's software factory",
+   "level": "Principal scope across multiple teams, exec presentations",
+   "domain": "Developer platform with AI agents (Duo Agent Platform) is adjacent",
+   "pathway": "No work permit info; remote in Canada, GitLab hires there",
+   "pay": "No pay range found; not posted",
+   "skills": "Principal-scope platform PM and agent experience fit; dev-workflow depth less so"
+  },
+  "summary": "Set the vision for GitLab's end-to-end AI software creation experience across Duo Agent Platform.",
+  "level_guess": "Principal PM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Principal-scope PM across teams",
+   "Software development workflow knowledge",
+   "Exec communication"
+  ],
+  "flags": []
+ },
+ "eeb35137acff": {
+  "fingerprint": "eec62e5ac63cf894",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Principal PM owning Orbit's multi-year vision and roadmap",
+   "level": "Principal, multi-year strategy and exec partners",
+   "domain": "Data platform, governance and AI agents (MCP) overlap your work",
+   "pathway": "No work permit info; remote in Canada, GitLab hires there",
+   "pay": "US range only (USD 203-346K); no Canadian range posted",
+   "skills": "Platform, governance and agent roadmap match; graph tech is new"
+  },
+  "summary": "Define vision, roadmap and business for Orbit, GitLab's software lifecycle context graph for engineers and AI agents.",
+  "level_guess": "Principal PM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Principal PM, platform",
+   "Technical product leadership",
+   "Pricing and packaging"
+  ],
+  "flags": [
+   "US range only"
+  ]
+ },
+ "3cdb1a7a9402": {
+  "fingerprint": "069f72f02a038ffd",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 25,
+   "level": 80,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Competitive product marketing, not product management",
+   "level": "Principal scope, but in marketing",
+   "domain": "DevSecOps and AI platform market is adjacent",
+   "pathway": "No work permit info; remote in Canada, GitLab hires there",
+   "pay": "US range only (USD 168-286K); no Canadian range posted",
+   "skills": "Competitive intelligence and positioning: not your core background"
+  },
+  "summary": "Lead competitive positioning and intelligence for GitLab's DevSecOps and AI platform.",
+  "level_guess": "Principal PMM",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Competitive/market intelligence",
+   "Product marketing at principal scope"
+  ],
+  "flags": [
+   "Product marketing role",
+   "US range only"
+  ]
+ },
+ "1c74f749fffb": {
+  "fingerprint": "3dd97677bcb78888",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 50,
+   "level": 90,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Principal TPM running programs on AI DevSecOps strategy, little product ownership",
+   "level": "Principal scope with exec stakeholders",
+   "domain": "Developer platform and AI agents are adjacent",
+   "pathway": "No work permit info; remote in Canada, GitLab hires there",
+   "pay": "US range only (USD 203-346K); no Canadian range posted",
+   "skills": "Program execution fits partly; R&D PMO delivery is not your core"
+  },
+  "summary": "Own end-to-end programs for GitLab's AI-powered DevSecOps strategy, including Duo Agent Platform.",
+  "level_guess": "Principal TPM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Complex end-to-end program delivery",
+   "Exec communication",
+   "Risk management"
+  ],
+  "flags": [
+   "US range only",
+   "Program role, not product"
+  ]
+ },
+ "18ef7f221975": {
+  "fingerprint": "05f312d532f1ddf8",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Senior PM on agentic source code features",
+   "level": "Senior PM; narrower scope than Principal",
+   "domain": "AI agents in developer tools are adjacent to your enterprise agent work",
+   "pathway": "No work permit info; remote in Canada, GitLab hires there",
+   "pay": "US range only (USD 139-235K); no Canadian range posted",
+   "skills": "Agent/platform PM experience fits; source-code domain depth less so"
+  },
+  "summary": "Own the product for agentic capabilities in GitLab's source code management.",
+  "level_guess": "Senior PM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Senior PM experience",
+   "Remote async collaboration",
+   "Developer tool knowledge"
+  ],
+  "flags": [
+   "US range only"
+  ]
+ },
+ "6b6ecc1e36ac": {
+  "fingerprint": "25f05ff49f3bdafb",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 5,
+   "level": 50,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Sales-ops tooling for Solutions Architects, not a product job",
+   "level": "Senior IC; scope is ops, so level unclear",
+   "domain": "Revenue operations; unrelated to your domains",
+   "pathway": "No work permit info; remote in Canada, GitLab hires there",
+   "pay": "US range only (USD 115-194K); no Canadian range posted",
+   "skills": "Needs sales-ops and revenue-tooling skills you lack"
+  },
+  "summary": "Own tooling, workflows and reporting that support GitLab's Solutions Architects team.",
+  "level_guess": "Senior IC, Operations",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Revenue/CX operations",
+   "Tooling and reporting ownership"
+  ],
+  "flags": [
+   "Not a product role",
+   "US range only"
+  ]
+ },
+ "da81d4af4f4a": {
+  "fingerprint": "e608c9d4bc492166",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Staff PM owning agentic test intelligence",
+   "level": "Staff PM, multi-team platform scope",
+   "domain": "AI agents in developer tooling are adjacent to your work",
+   "pathway": "No work permit info; remote in Canada, GitLab hires there",
+   "pay": "US range only (USD 168-286K); no Canadian range posted",
+   "skills": "Agent platform PM skills fit; testing domain depth is new"
+  },
+  "summary": "Own the product direction for agentic test intelligence within GitLab's DevSecOps platform.",
+  "level_guess": "Staff PM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Staff PM experience",
+   "AI/agent product knowledge",
+   "Developer workflows"
+  ],
+  "flags": [
+   "US range only"
+  ]
+ },
+ "662d49b34371": {
+  "fingerprint": "5fc209d213d4058d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Staff PM for AI Software Factory product-led growth",
+   "level": "Staff PM across growth and product surfaces",
+   "domain": "Developer platform with PLG focus is adjacent; growth less so",
+   "pathway": "No work permit info; remote in Canada, GitLab hires there",
+   "pay": "US range only (USD 168-286K); no Canadian range posted",
+   "skills": "PM and experimentation skills fit; PLG depth is new"
+  },
+  "summary": "Drive product-led growth for GitLab's AI software factory experience.",
+  "level_guess": "Staff PM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Staff PM experience",
+   "Product-led growth",
+   "Experimentation"
+  ],
+  "flags": [
+   "US range only"
+  ]
+ },
+ "c3cee788425d": {
+  "fingerprint": "7b3cd77d2c9df42a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 50,
+   "level": 80,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Staff program manager for chief customer officer programs, not product",
+   "level": "Staff-level program ownership with exec sponsors",
+   "domain": "Customer success, renewals and GTM operations are outside your domains",
+   "pathway": "No work permit info; remote in Canada, GitLab hires there",
+   "pay": "US range only (USD 139-235K); no Canadian range posted",
+   "skills": "Cross-org program leadership fits; customer-org context is new"
+  },
+  "summary": "Run chief-customer-officer programs on go-to-market transformation, renewals and retention.",
+  "level_guess": "Staff Program Manager",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Cross-functional program leadership",
+   "Exec sponsorship of accounts"
+  ],
+  "flags": [
+   "Program role, not product",
+   "US range only"
+  ]
+ },
+ "cc2b58ab9393": {
+  "fingerprint": "dfb73ec2c4407c33",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 60,
+   "pathway": 95,
+   "pay": 95,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Customer-facing cloud engineer role, not product management",
+   "level": "Experienced customer-facing role; scope unclear",
+   "domain": "Cloud platform is adjacent to your enterprise platform work",
+   "pathway": "Google role: intra-company transfer",
+   "pay": "Top CAD 166K for a base-only range; ok band",
+   "skills": "Needs fluent French and 6 yrs cloud architecture in customer-facing role"
+  },
+  "summary": "Help Google Cloud customers design and build on the platform as a technical customer engineer in Montreal.",
+  "level_guess": "Customer Engineer (about L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Fluent English and French",
+   "6 yrs cloud-native architecture",
+   "Customer-facing experience"
+  ],
+  "flags": [
+   "French required",
+   "Customer-facing technical role"
+  ]
+ },
+ "b22b74e7ac11": {
+  "fingerprint": "e5b030f549d1ee30",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Principal PM building Hopper's HTS API Marketplace 0-to-1",
+   "level": "Principal (L6), owns pricing, packaging and platform",
+   "domain": "API marketplace and developer platform, travel and commerce, is adjacent",
+   "pathway": "No work permit information; fully remote in Canada",
+   "pay": "Top CAD 350K base, above your 230K excellent line",
+   "skills": "Needs 7+ yrs PM and a 0-to-1 launch; platform experience fits"
+  },
+  "summary": "Build and price a 0-to-1 API marketplace through which enterprise partners access Hopper's lodging and cars capabilities.",
+  "level_guess": "Principal PM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "7+ yrs PM",
+   "0-to-1 product to commercial launch",
+   "Platform/API pricing"
+  ],
+  "flags": []
+ },
+ "f7bd59f07a1a": {
+  "fingerprint": "e05f1f71c24444ff",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 80,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Principal PM owning Hopper's conversational AI agent",
+   "level": "Principal (L6) owning an agent product end to end",
+   "domain": "Agentic AI for customer issues overlaps your enterprise AI/agents work",
+   "pathway": "No work permit info; remote in Canada",
+   "pay": "Top CAD 250K base, above your 230K excellent line",
+   "skills": "Wants 8+ yrs and voice/IVR products; agents fit, voice is a gap"
+  },
+  "summary": "Own Hopper's agentic AI assistant across chat and voice for large travel partners.",
+  "level_guess": "Principal PM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "8+ yrs PM",
+   "Shipped voice/conversational products",
+   "Customer-facing product ownership"
+  ],
+  "flags": [
+   "Voice product experience wanted"
+  ]
+ },
+ "5be893edabeb": {
+  "fingerprint": "2fb67e1fc2674ec9",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 80,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Principal PM owning Hopper's conversational AI agent (French posting)",
+   "level": "Principal-level scope owning chat and voice",
+   "domain": "Agentic AI for customer issues overlaps your enterprise AI work",
+   "pathway": "No work permit information; remote in Montreal",
+   "pay": "No pay range found; not posted",
+   "skills": "Same voice product ask; French likely needed for Montreal"
+  },
+  "summary": "Montreal-based version of the Principal PM role owning Hopper's chat and voice AI agent.",
+  "level_guess": "Principal PM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Principal PM experience",
+   "Voice/conversational products",
+   "French likely"
+  ],
+  "flags": [
+   "French posting",
+   "Voice product experience wanted"
+  ]
+ },
+ "ed655b1eb9ed": {
+  "fingerprint": "f03b79aeec514ff6",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Pre-sales/technical liaison for hosting partners, not product management",
+   "level": "Mid-level technical role; scope unclear",
+   "domain": "Web hosting and reseller platforms; general B2B",
+   "pathway": "No work permit information",
+   "pay": "Top CAD 129K is just under your 130K floor",
+   "skills": "Needs hands-on implementation and integrations; you lack that"
+  },
+  "summary": "Act as technical liaison guiding partners through integrations and migrations on HostPapa platforms.",
+  "level_guess": "Solutions Engineer (about L4)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Technical partner integrations",
+   "Migrations and implementation"
+  ],
+  "flags": [
+   "Solutions engineering role"
+  ]
+ },
+ "72b62349ccc2": {
+  "fingerprint": "1ae1125675512a6a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 80,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "PM for Confluent Cluster Linking, a data streaming platform",
+   "level": "Senior PM; scope not detailed in the posting",
+   "domain": "Data streaming platform fits your data-platform domain",
+   "pathway": "IBM is a large multinational; inferred, not stated",
+   "pay": "No pay range found; not posted",
+   "skills": "Posting text is minimal; platform PM skills fit, streaming depth is new"
+  },
+  "summary": "Own product for Cluster Linking, Confluent's cross-cluster data replication feature, now part of IBM.",
+  "level_guess": "Senior PM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Senior PM",
+   "Data streaming/Kafka knowledge"
+  ],
+  "flags": [
+   "Posting text is minimal"
+  ]
+ },
+ "109635d0c622": {
+  "fingerprint": "8b05d8ce3b41eabf",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 75,
+   "level": 10,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Associate product ops role, product-adjacent",
+   "level": "Associate title with 4+ yrs: well below your L5-L6",
+   "domain": "Grocery delivery marketplace; general consumer product",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 103.5K is far under your 130K floor",
+   "skills": "Analytics and product ops background fits; level is the issue"
+  },
+  "summary": "Support product teams with operations, analytics and launch processes at Instacart.",
+  "level_guess": "Associate Product Ops (about L3-L4)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "4+ yrs product ops/analytics"
+  ],
+  "flags": [
+   "Remote only in ON, AB, BC or NS",
+   "Below target level"
+  ]
+ },
+ "d30479847859": {
+  "fingerprint": "e399927e9b1a5f25",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 50,
+   "level": 85,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Chief of Staff for Online Grocery, strategic IC, little product ownership",
+   "level": "10+ yrs strategic IC with exec visibility, no reports",
+   "domain": "Commerce and marketplace overlaps your Shopping work",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 214K is in your good band",
+   "skills": "Strategy and exec partnering fit; needs 10+ yrs"
+  },
+  "summary": "Act as strategic chief of staff to the Online Grocery leader, driving priorities and operations.",
+  "level_guess": "Chief of Staff (about L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "10+ yrs experience",
+   "Strategic and operational IC work",
+   "Product/design/eng fluency"
+  ],
+  "flags": [
+   "Remote only in ON, AB, BC or NS"
+  ]
+ },
+ "de28a2f130db": {
+  "fingerprint": "e3122664f5c06e7f",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 25,
+   "level": 30,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing leadership for Ads, not product management",
+   "level": "Director with 12+ yrs: large org scope, not IC",
+   "domain": "Ads and advertising tech match your ads background",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 214K is in your good band",
+   "skills": "Needs 12+ yrs product marketing; not your background"
+  },
+  "summary": "Lead product marketing for Instacart's advertising business.",
+  "level_guess": "Director, Product Marketing",
+  "people_mgmt": true,
+  "work_mode": "remote",
+  "must_haves": [
+   "12+ yrs product marketing",
+   "6+ yrs digital advertising",
+   "Team leadership"
+  ],
+  "flags": [
+   "Remote only in ON, AB, BC or NS",
+   "Product marketing role",
+   "Director, manages a team"
+  ]
+ },
+ "b4147775cc05": {
+  "fingerprint": "fcfc1b662d16127f",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 25,
+   "level": 30,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Product marketing leadership for B2B enterprise, not product management",
+   "level": "Director leading four direct reports: not IC",
+   "domain": "Enterprise B2B SaaS product marketing; general",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 214K is in your good band",
+   "skills": "Needs 10+ yrs B2B product marketing; not your background"
+  },
+  "summary": "Lead the enterprise product marketing team and positioning for Instacart's B2B products.",
+  "level_guess": "Director, Product Marketing",
+  "people_mgmt": true,
+  "work_mode": "remote",
+  "must_haves": [
+   "10+ yrs B2B product marketing",
+   "Multi-product-line ownership",
+   "Team leadership"
+  ],
+  "flags": [
+   "Remote only in ON, AB, BC or NS",
+   "Product marketing role",
+   "Manages 4 reports"
+  ]
+ },
+ "2a196de03169": {
+  "fingerprint": "b5dd0b058de6f7f8",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 30,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Product leadership of the Logistics pillar",
+   "level": "Director of Product, 4+ yrs managing PMs: large org scope",
+   "domain": "Logistics and marketplace operations are adjacent to your commerce work",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 273.5K is above your 230K excellent line",
+   "skills": "Product leadership fits; people-management track record asked"
+  },
+  "summary": "Lead the Logistics product pillar and its PM team with company-wide impact on growth and profitability.",
+  "level_guess": "Director of Product (about L7)",
+  "people_mgmt": true,
+  "work_mode": "remote",
+  "must_haves": [
+   "10+ yrs PM",
+   "4+ yrs managing PMs",
+   "Executive stakeholder leadership"
+  ],
+  "flags": [
+   "Remote only in ON, AB, BC or NS",
+   "Manages product managers"
+  ]
+ },
+ "45e3194ca9bd": {
+  "fingerprint": "3626c67f43b1155e",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core PM on Instacart Ads ad formats",
+   "level": "Senior PM; single product area scope",
+   "domain": "Ads product matches your ads background",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 174K is in your ok band",
+   "skills": "Ads and experimentation experience fit"
+  },
+  "summary": "Own ad formats that advertisers use on Instacart's retail media platform.",
+  "level_guess": "Senior PM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Senior PM experience",
+   "Ads product knowledge"
+  ],
+  "flags": [
+   "Remote only in ON, AB, BC or NS"
+  ]
+ },
+ "398f6b3085b8": {
+  "fingerprint": "78ac46d414d3e8f0",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 95,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 85
+  },
+  "reasons": {
+   "role": "Core PM on ads quality and safety-style quality signals",
+   "level": "Senior PM; single area scope, 2+ yrs ads and ML asked",
+   "domain": "Ads quality and ML models match your ads-safety work",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 174K is in your ok band",
+   "skills": "Ads PM plus ML enforcement tradeoffs match your background"
+  },
+  "summary": "Own ad quality signals, auction mechanics and ML models for Instacart Ads.",
+  "level_guess": "Senior PM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "2+ yrs ads/ad tech PM",
+   "2+ yrs ML product work",
+   "Auction/bidding understanding"
+  ],
+  "flags": [
+   "Remote only in ON, AB, BC or NS"
+  ]
+ },
+ "708790a0520d": {
+  "fingerprint": "13493b6d920f6a3f",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core PM on the advertiser experience",
+   "level": "Senior PM, 5+ yrs, owns a complex product area",
+   "domain": "Ads self-serve tools match your ads and analytics work",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 174K is in your ok band",
+   "skills": "Ads and self-serve analytics experience fit"
+  },
+  "summary": "Own the advertiser-facing experience for Instacart Ads, from onboarding to reporting.",
+  "level_guess": "Senior PM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs PM",
+   "Independently own complex areas"
+  ],
+  "flags": [
+   "Remote only in ON, AB, BC or NS"
+  ]
+ },
+ "eced91d76c51": {
+  "fingerprint": "bdf8a1b3914a582c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core PM on an enterprise AI customization bet",
+   "level": "Senior PM, 8+ yrs, wide latitude and exec visibility",
+   "domain": "Enterprise AI customization and integrations overlap your AI work",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 204.5K is in your good band",
+   "skills": "B2B enterprise AI PM fits; 2+ yrs customer discovery asked"
+  },
+  "summary": "Define how retailers customize and extend their digital experiences with AI-assisted tools.",
+  "level_guess": "Senior PM (about L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "8+ yrs B2B PM",
+   "Exec customer discovery",
+   "Technical acumen"
+  ],
+  "flags": [
+   "Remote only in ON, AB, BC or NS"
+  ]
+ },
+ "10f5ba905cd6": {
+  "fingerprint": "a579710462d21218",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 80,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core PM on the product catalog",
+   "level": "Senior PM, 5+ yrs; single product area",
+   "domain": "Catalog data and ML systems fit your data-platform and commerce work",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 174K is in your ok band",
+   "skills": "Data platform and ML-adjacent PM experience fits"
+  },
+  "summary": "Own Instacart's product catalog and the data and ML systems behind it.",
+  "level_guess": "Senior PM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs PM",
+   "Catalog/data platform/ML experience"
+  ],
+  "flags": [
+   "Remote only in ON, AB, BC or NS"
+  ]
+ },
+ "6d8a3e9b30c1": {
+  "fingerprint": "0c3809d006da3cae",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core PM on order quality",
+   "level": "Senior PM, 4+ yrs; single quality area",
+   "domain": "Commerce fulfilment quality fits your Shopping work",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 204.5K is in your good band",
+   "skills": "Wants experience in operationally complex physical settings"
+  },
+  "summary": "Own product work that improves order quality for Instacart customers and shoppers.",
+  "level_guess": "Senior PM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "4+ yrs PM",
+   "Physical-operations experience"
+  ],
+  "flags": [
+   "Remote only in ON, AB, BC or NS"
+  ]
+ },
+ "e3bea8bcd8e9": {
+  "fingerprint": "e9135c7c84cefe5d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 85
+  },
+  "reasons": {
+   "role": "Core PM owning Retailer App as a platform plus insights",
+   "level": "Senior PM, 8+ yrs, platform-level scope",
+   "domain": "Platform plus analytics for retailers fits commerce and data work",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 204.5K is in your good band",
+   "skills": "8+ yrs B2B PM and 2+ yrs platform match your profile"
+  },
+  "summary": "Own the Retailer App platform and its analytics and insights product for large retailers.",
+  "level_guess": "Senior PM (about L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "8+ yrs B2B PM",
+   "2+ yrs platform products"
+  ],
+  "flags": [
+   "Remote only in ON, AB, BC or NS"
+  ]
+ },
+ "da7301f2b65f": {
+  "fingerprint": "5d046204f176326c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Consumer product marketing, not product management",
+   "level": "Senior PMM with 8+ yrs marketing; mid-senior scope",
+   "domain": "Consumer grocery membership; general consumer",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 161.5K is in your ok band",
+   "skills": "Needs 4+ yrs product marketing; not your background"
+  },
+  "summary": "Market and position Instacart+, the grocery membership program, for consumers.",
+  "level_guess": "Senior PMM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "8+ yrs marketing",
+   "4+ yrs product marketing",
+   "Consumer tech"
+  ],
+  "flags": [
+   "Product marketing role",
+   "Remote only in ON, AB, BC or NS"
+  ]
+ },
+ "e78f415e2c9a": {
+  "fingerprint": "672a971969ff5866",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 75,
+   "level": 85,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 65
+  },
+  "reasons": {
+   "role": "Portfolio product management of internal IT services and platforms",
+   "level": "7+ yrs, owns portfolio strategy and chairs a council",
+   "domain": "Internal IT and enterprise tech at an insurer; AI-enabled capabilities",
+   "pathway": "No work permit information in the posting",
+   "pay": "No pay range found; not posted",
+   "skills": "Vision, roadmap and governance match; IT service management is new"
+  },
+  "summary": "Own vision, roadmap and governance for Intact's IT Services product portfolio.",
+  "level_guess": "Senior/Principal PM (about L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "7+ yrs PM",
+   "Enterprise transformation or portfolio accountability"
+  ],
+  "flags": [
+   "Internal IT product",
+   "Offices in QC, ON, AB"
+  ]
+ },
+ "19bcc9c4bab6": {
+  "fingerprint": "a6eca3e786ac17b0",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 75,
+   "level": 75,
+   "domain": 70,
+   "pathway": 15,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Product owner for security tooling; product-heavy",
+   "level": "Senior role, 5-7 yrs domain depth asked",
+   "domain": "Cybersecurity monitoring is adjacent to your risk work",
+   "pathway": "Posting says must be eligible to work in Canada (stated)",
+   "pay": "No pay range found; not posted",
+   "skills": "Needs 5-7 yrs cybersecurity and 3+ yrs SIEM/SOAR/XDR; you lack that"
+  },
+  "summary": "Own the roadmap for Intact's IT security monitoring tools (SIEM, SOAR, XDR, threat intel).",
+  "level_guess": "Senior Product Owner (about L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5-7 yrs cybersecurity",
+   "3+ yrs SIEM/SOAR/XDR",
+   "Bilingual French and English"
+  ],
+  "flags": [
+   "French and English required",
+   "Cybersecurity depth required"
+  ]
+ },
+ "86a59a550ef0": {
+  "fingerprint": "0e2a1fa736a7d91c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 75,
+   "level": 30,
+   "domain": 80,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Product owner for an identity governance platform",
+   "level": "2-3 yrs asked: below your L5-L6",
+   "domain": "Identity governance matches your governance and compliance work",
+   "pathway": "No work permit information in the posting",
+   "pay": "No pay range found; not posted",
+   "skills": "Governance PM fits; bilingual needed if based in Quebec"
+  },
+  "summary": "Own the backlog and roadmap for Intact's identity governance and administration platform.",
+  "level_guess": "Product Owner (about L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "2-3 yrs similar role",
+   "Bilingual if in Quebec"
+  ],
+  "flags": [
+   "Below target level",
+   "Bilingual if in Quebec"
+  ]
+ },
+ "a66c7c52683e": {
+  "fingerprint": "122d195d2946d8a5",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 80,
+   "pathway": 15,
+   "pay": 50,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core PM leading AI products for insurance claims teams",
+   "level": "7+ yrs building digital products; senior scope",
+   "domain": "Enterprise AI in an insurer overlaps your AI and fintech work",
+   "pathway": "Posting says must be eligible to work in Canada (stated)",
+   "pay": "No pay range found; not posted",
+   "skills": "AI product leadership fits; claims domain is new"
+  },
+  "summary": "Lead AI-powered products that help Intact's claims teams decide better and work faster.",
+  "level_guess": "Senior PM (about L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "7+ yrs digital products",
+   "Define AI product strategy",
+   "Bilingual if in Quebec"
+  ],
+  "flags": [
+   "Bilingual if in Quebec"
+  ]
+ },
+ "e1d62687ac8e": {
+  "fingerprint": "23f3c107bf1c600b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 25,
+   "level": 30,
+   "domain": 70,
+   "pathway": 15,
+   "pay": 20,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing for Interac, not product management",
+   "level": "Senior specialist, 5-7 yrs marketing: below target",
+   "domain": "Payments, identity and fraud protection brand",
+   "pathway": "Posting says must be eligible to work in Canada (stated)",
+   "pay": "Top $110K is under your 130K floor",
+   "skills": "Needs 5-7 yrs marketing in payments; not your background"
+  },
+  "summary": "Market Interac's payments and fraud-protection products to Canadian businesses and consumers.",
+  "level_guess": "Senior Specialist PMM (about L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5-7 yrs marketing/PMM",
+   "Payments or financial services"
+  ],
+  "flags": [
+   "Product marketing role",
+   "Below target level"
+  ]
+ },
+ "98c9190c19ac": {
+  "fingerprint": "9c5626d33f8410d6",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 25,
+   "level": 75,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Second-line product risk oversight, not product ownership",
+   "level": "Lead role with independent oversight scope",
+   "domain": "Payments product risk matches your risk and compliance work",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top $145K base is in your low band (under 160K)",
+   "skills": "Risk framework knowledge fits; ERM credentials likely wanted"
+  },
+  "summary": "Provide second-line risk oversight and challenge over Interac's payment-system products.",
+  "level_guess": "Lead (about L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "ERM standards and risk taxonomy",
+   "Product lifecycle oversight"
+  ],
+  "flags": [
+   "Risk function, not product"
+  ]
+ },
+ "0077c4917e03": {
+  "fingerprint": "04e588a1e84b131d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 15,
+   "level": 60,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Technical architecture role, not product management",
+   "level": "7+ yrs tech, 5 as architect or lead: senior technical",
+   "domain": "Payments platform architecture is adjacent",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top $155K is in your low band (under 160K)",
+   "skills": "Needs 5 yrs as solution architect or lead developer; you lack that"
+  },
+  "summary": "Design technical solutions and architecture for Interac's payment platforms.",
+  "level_guess": "Solution Architect (about L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "7+ yrs technology",
+   "5 yrs solution architect/tech lead"
+  ],
+  "flags": [
+   "Hands-on architecture role"
+  ]
+ },
+ "780fae635dbd": {
+  "fingerprint": "cfc3fdb197e14356",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 30,
+   "domain": 90,
+   "pathway": 15,
+   "pay": 40,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core PM at Interac on payments and fraud-protection products",
+   "level": "2-5 yrs PM asked: below your L5-L6 scope",
+   "domain": "Payments, identity and fraud match your fraud and fintech work",
+   "pathway": "Posting requires eligibility to work in Canada (stated)",
+   "pay": "Top $150K is in your low band (under 160K)",
+   "skills": "Payments and risk PM background fits; junior bar"
+  },
+  "summary": "Own a payments or fraud-protection product area at Interac with senior stakeholders.",
+  "level_guess": "Product Manager (about L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "2-5 yrs PM or payments",
+   "Senior stakeholder communication"
+  ],
+  "flags": [
+   "Below target level"
+  ]
+ },
+ "e95e77b6be63": {
+  "fingerprint": "0bd407c692c2362b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 25,
+   "level": 70,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Release readiness and change-risk governance, not product ownership",
+   "level": "Lead role embedding delivery governance",
+   "domain": "Risk-based governance for payments technology",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top $145K base is in your low band (under 160K)",
+   "skills": "Needs 7+ yrs SDLC governance and release management"
+  },
+  "summary": "Own readiness gating and change-risk governance for product and technology releases at Interac.",
+  "level_guess": "Lead (about L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "7+ yrs SDLC governance/release mgmt",
+   "Operational readiness"
+  ],
+  "flags": [
+   "Delivery governance, not product"
+  ]
+ },
+ "3cbf900372bb": {
+  "fingerprint": "c21b92f4f0b65531",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 50,
+   "level": 60,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Strategy and operations leader for a team, chief-of-staff style",
+   "level": "Leader role running planning and operations",
+   "domain": "LCR team domain is unclear from the posting",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top $160K base is at your ok line",
+   "skills": "Strategic planning and stakeholder skills fit; domain unclear"
+  },
+  "summary": "Lead strategy, planning and operations for Interac's LCR team, including budget, vendors and technology.",
+  "level_guess": "Leader (about L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Strategic and operational planning",
+   "Budget and vendor management"
+  ],
+  "flags": [
+   "Team domain unclear"
+  ]
+ },
+ "a56f5168df7c": {
+  "fingerprint": "258b3f1c702c7a02",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core PM on Jane's communications products",
+   "level": "Senior PM, 5+ yrs, 0-to-1 experience",
+   "domain": "Healthcare practice-management SaaS; general B2B",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 182.9K is in your ok band",
+   "skills": "SaaS PM with 0-to-1 fits; communications domain is new"
+  },
+  "summary": "Own communications products (messaging and reminders) for clinics on Jane's practice-management platform.",
+  "level_guess": "Senior PM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs SaaS PM",
+   "0-to-1 product launch"
+  ],
+  "flags": []
+ },
+ "f15508f13e0f": {
+  "fingerprint": "6426b3e6c9f77d89",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Core Principal PM on Kinaxis's platform",
+   "level": "Principal title implies multi-team scope",
+   "domain": "Supply-chain planning SaaS platform; adjacent B2B data platform",
+   "pathway": "No work permit information in the posting",
+   "pay": "No pay range found; not posted",
+   "skills": "No description posted, so must-haves are unclear"
+  },
+  "summary": "Principal PM for the Kinaxis supply-chain planning platform (no description posted).",
+  "level_guess": "Principal PM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Description not posted"
+  ],
+  "flags": [
+   "No description posted"
+  ]
+ },
+ "34f7f2e751ba": {
+  "fingerprint": "4b79aa41373ebea6",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Core PM on demand planning",
+   "level": "Senior PM; scope unclear without a description",
+   "domain": "Supply-chain demand planning; general B2B SaaS",
+   "pathway": "No work permit information in the posting",
+   "pay": "No pay range found; not posted",
+   "skills": "No description posted, so must-haves are unclear"
+  },
+  "summary": "Senior PM for Kinaxis's demand-planning product (no description posted).",
+  "level_guess": "Senior PM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Description not posted"
+  ],
+  "flags": [
+   "No description posted"
+  ]
+ },
+ "f865c7dfe31d": {
+  "fingerprint": "c1ba83cd2ec3917b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 15,
+   "level": 60,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Solution architecture for supply-chain innovation, not product management",
+   "level": "Level unclear without a description",
+   "domain": "Supply-chain specialist domain",
+   "pathway": "No work permit information in the posting",
+   "pay": "No pay range found; not posted",
+   "skills": "No description posted, so must-haves are unclear"
+  },
+  "summary": "Solution architect for supply-chain product and innovation at Kinaxis (no description posted).",
+  "level_guess": "Solution Architect",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Description not posted"
+  ],
+  "flags": [
+   "No description posted",
+   "Solutions role"
+  ]
+ },
+ "4dc90b4e253d": {
+  "fingerprint": "887975192b837779",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 15,
+   "level": 60,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Enterprise applications solution architecture, not product management",
+   "level": "Level unclear without a description",
+   "domain": "Enterprise applications integration; general B2B",
+   "pathway": "No work permit information in the posting",
+   "pay": "No pay range found; not posted",
+   "skills": "No description posted, so must-haves are unclear"
+  },
+  "summary": "Solution architect for enterprise applications at Kinaxis (no description posted).",
+  "level_guess": "Solution Architect",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Description not posted"
+  ],
+  "flags": [
+   "No description posted",
+   "Solutions role"
+  ]
+ },
+ "7a51cdb5bb24": {
+  "fingerprint": "70ee4757cd63e870",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Core Staff PM owning strategy, roadmap, pricing and launch",
+   "level": "Staff PM reporting to VP Product; end-to-end ownership",
+   "domain": "Competitive intelligence SaaS; general B2B",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 235K base is above your 230K excellent line",
+   "skills": "End-to-end PM ownership and AI-tool use fit your profile"
+  },
+  "summary": "Own strategy, roadmap, pricing and launch of a new product at Klue's competitive intelligence platform.",
+  "level_guess": "Staff PM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Staff PM experience",
+   "Own pricing and launch",
+   "Daily AI tool use"
+  ],
+  "flags": []
+ },
+ "6e22a6bbb68f": {
+  "fingerprint": "4fc30e48c826779d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 90,
+   "level": 60,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Growth PM at a fintech; core PM role with growth focus",
+   "level": "3-5+ yrs asked; Senior PM with narrower scope",
+   "domain": "Consumer fintech matches your financial-services interest",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 200K is in your good band",
+   "skills": "Needs 2+ yrs growth/PLG; your experience is more platform and safety"
+  },
+  "summary": "Own activation, acquisition and growth for KOHO's consumer fintech products.",
+  "level_guess": "Senior PM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "3-5+ yrs PM",
+   "2+ yrs growth/PLG",
+   "Consumer or fintech"
+  ],
+  "flags": []
+ },
+ "4d5aa8437828": {
+  "fingerprint": "45fab4856115bc6d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 50,
+   "level": 85,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Staff TPM building the product-development lifecycle model, product-adjacent ops",
+   "level": "Staff, founding role defining an org-wide model",
+   "domain": "Internal product and tech operations; general",
+   "pathway": "No work permit information in the posting",
+   "pay": "No pay range found; not posted",
+   "skills": "Cross-org alignment and metrics fit; TPM operating model is new"
+  },
+  "summary": "Define how Lightspeed moves work from idea to impact across Product, Engineering and Design.",
+  "level_guess": "Staff TPM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Founding function owner",
+   "Cross-org alignment",
+   "Metrics design"
+  ],
+  "flags": [
+   "Montreal; French may be needed"
+  ]
+ },
+ "b15bc6e6998a": {
+  "fingerprint": "cd9b66f23957844c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 50,
+   "level": 85,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Staff TPM building the product-development lifecycle model, product-adjacent ops",
+   "level": "Staff, founding role defining an org-wide model",
+   "domain": "Internal product and tech operations; general",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 180K bonus-inclusive (about 162K at 90%) is in your ok band",
+   "skills": "Cross-org alignment and metrics fit; TPM operating model is new"
+  },
+  "summary": "Define how Lightspeed moves work from idea to impact across Product, Engineering and Design.",
+  "level_guess": "Staff TPM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Founding function owner",
+   "Cross-org alignment",
+   "Metrics design"
+  ],
+  "flags": []
+ },
+ "969c0498dc5e": {
+  "fingerprint": "0c47c5f5e35809c4",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 40,
+   "level": 90,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Principal TPM defining FinOps strategy for cloud and AI spend, little product ownership",
+   "level": "Principal, sets strategy for a function",
+   "domain": "Cloud cost management; adjacent to cloud platforms",
+   "pathway": "No work permit information in the posting",
+   "pay": "No pay range found; not posted",
+   "skills": "Strategy and automation fit partly; FinOps is a new specialty"
+  },
+  "summary": "Define Lightspeed's FinOps strategy for cloud, vendor and AI spend, including FinOps for AI.",
+  "level_guess": "Principal TPM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "FinOps strategy",
+   "Cloud and AI cost management"
+  ],
+  "flags": [
+   "Montreal; French may be needed"
+  ]
+ },
+ "f3e66f269eb9": {
+  "fingerprint": "d61c7bac182da437",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 40,
+   "level": 90,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Principal TPM defining FinOps strategy for cloud and AI spend, little product ownership",
+   "level": "Principal, sets strategy for a function",
+   "domain": "Cloud cost management; adjacent to cloud platforms",
+   "pathway": "No work permit information in the posting",
+   "pay": "No pay range found; not posted",
+   "skills": "Strategy and automation fit partly; FinOps is a new specialty"
+  },
+  "summary": "Define Lightspeed's FinOps strategy for cloud, vendor and AI spend, including FinOps for AI.",
+  "level_guess": "Principal TPM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "FinOps strategy",
+   "Cloud and AI cost management"
+  ],
+  "flags": []
+ },
+ "467a8db8ddc4": {
+  "fingerprint": "3e3370418b2e9521",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Core Staff PM building a headless, agent-accessible platform",
+   "level": "Staff PM with end-to-end ownership of a strategic initiative",
+   "domain": "Enterprise AI agents and interoperability match your agent work",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 193.8K is in your good band",
+   "skills": "Agentic enterprise platform PM fits closely"
+  },
+  "summary": "Build a headless version of Loopio's platform that other AI assistants and agent frameworks can use.",
+  "level_guess": "Staff PM (about L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Staff PM",
+   "Agentic workflow knowledge",
+   "Autonomy on strategic initiatives"
+  ],
+  "flags": []
+ },
+ "05e3a669d8e3": {
+  "fingerprint": "f7d5e12c2dbfc8ca",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 25,
+   "level": 10,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Product marketing: release collateral and enablement, not product management",
+   "level": "Asks 2-4 yrs marketing: well below your level",
+   "domain": "B2B proposal software; general B2B SaaS",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 130K is at your low floor",
+   "skills": "Needs release marketing and writing experience; not your background"
+  },
+  "summary": "Run release marketing, enablement and general product marketing for Loopio's product areas.",
+  "level_guess": "Product Marketing Manager (about L4)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "2-4 yrs product marketing",
+   "Strong writing and editing"
+  ],
+  "flags": [
+   "Product marketing role",
+   "Posting text mixes a Staff PM intro"
+  ]
+ },
+ "7403341a2a65": {
+  "fingerprint": "5b71b79dbf73c164",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 5,
+   "level": 10,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Store inventory and operations role, not a product job",
+   "level": "Store-level lead role, below your target",
+   "domain": "Retail store operations; unrelated to your domains",
+   "pathway": "No work permit information in the posting",
+   "pay": "Hourly store pay (about CAD 22-30/hr); far below your bands",
+   "skills": "Store inventory skills; not your background"
+  },
+  "summary": "Lead store inventory and product-flow activities at a lululemon store in Vancouver.",
+  "level_guess": "Store Lead",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "Store inventory processing",
+   "Team leadership on shift"
+  ],
+  "flags": [
+   "Retail store role",
+   "Hourly pay"
+  ]
+ },
+ "7ec40158e896": {
+  "fingerprint": "216aab81aed44ae4",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 5,
+   "level": 10,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Store inventory and operations role, not a product job",
+   "level": "Store-level lead role, below your target",
+   "domain": "Retail store operations; unrelated to your domains",
+   "pathway": "No work permit information in the posting",
+   "pay": "Hourly store pay (about CAD 22-30/hr); far below your bands",
+   "skills": "Store inventory skills; not your background"
+  },
+  "summary": "Lead store inventory and product-flow activities at a lululemon store in Ottawa.",
+  "level_guess": "Store Lead",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "Store inventory processing",
+   "Team leadership on shift"
+  ],
+  "flags": [
+   "Retail store role",
+   "Hourly pay"
+  ]
+ },
+ "685bbf318298": {
+  "fingerprint": "b9a576843cb37c62",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 5,
+   "level": 10,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Store inventory and operations role, not a product job",
+   "level": "Store-level lead role, below your target",
+   "domain": "Retail store operations; unrelated to your domains",
+   "pathway": "No work permit information in the posting",
+   "pay": "Hourly store pay (about CAD 22-30/hr); far below your bands",
+   "skills": "Store inventory skills; not your background"
+  },
+  "summary": "Lead store inventory and product-flow activities at a lululemon store in Laval.",
+  "level_guess": "Store Lead",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "Store inventory processing",
+   "Team leadership on shift"
+  ],
+  "flags": [
+   "Retail store role",
+   "Hourly pay"
+  ]
+ },
+ "8fd8fa75838e": {
+  "fingerprint": "e4d2f9b3cd3fc1c9",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 5,
+   "level": 10,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Store inventory and operations role, not a product job",
+   "level": "Store-level lead role, below your target",
+   "domain": "Retail store operations; unrelated to your domains",
+   "pathway": "No work permit information in the posting",
+   "pay": "Hourly store pay (about CAD 22-30/hr); far below your bands",
+   "skills": "Store inventory skills; not your background"
+  },
+  "summary": "Lead store inventory and product-flow activities at a lululemon store in Saskatoon.",
+  "level_guess": "Store Lead",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "Store inventory processing",
+   "Team leadership on shift"
+  ],
+  "flags": [
+   "Retail store role",
+   "Hourly pay"
+  ]
+ },
+ "c77b16802e22": {
+  "fingerprint": "3e27291b69242e09",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 5,
+   "level": 10,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Store inventory and operations role, not a product job",
+   "level": "Store-level lead role, below your target",
+   "domain": "Retail store operations; unrelated to your domains",
+   "pathway": "No work permit information in the posting",
+   "pay": "Hourly store pay (about CAD 22-30/hr); far below your bands",
+   "skills": "Store inventory skills; not your background"
+  },
+  "summary": "Lead store inventory and product-flow activities at a lululemon store in St-Bruno.",
+  "level_guess": "Store Lead",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "Store inventory processing",
+   "Team leadership on shift"
+  ],
+  "flags": [
+   "Retail store role",
+   "Hourly pay"
+  ]
+ },
+ "0a9b3d18b636": {
+  "fingerprint": "e8da76f730e6f24d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 75,
+   "level": 60,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Product manager for internal merchandising and planning systems",
+   "level": "Manager-level, 5+ yrs PM plus retail/supply chain",
+   "domain": "Merchandising and allocation systems; retail specialist",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 186.1K is in your ok band, just under good",
+   "skills": "Needs 5+ yrs in retail or supply chain; partial match"
+  },
+  "summary": "Define and deliver systems that support lululemon's merchandising, planning and allocation teams.",
+  "level_guess": "Manager, Product Management (about L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs PM",
+   "5+ yrs retail/supply chain"
+  ],
+  "flags": [
+   "Internal business systems"
+  ]
+ },
+ "259b18898712": {
+  "fingerprint": "efad47d55ebd34f7",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 55,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Procurement program role on supplier risk, not product management",
+   "level": "Program Manager; scope unclear",
+   "domain": "Supplier risk management overlaps risk work in a procurement setting",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top $147K is in your low band (under 160K)",
+   "skills": "Risk and program skills fit; procurement experience is likely needed"
+  },
+  "summary": "Run supplier relationship and risk programs for lululemon's global procurement team.",
+  "level_guess": "Program Manager (about L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Procurement/supplier risk",
+   "Program management"
+  ],
+  "flags": [
+   "Procurement program, not product"
+  ]
+ },
+ "9fb1cb680c12": {
+  "fingerprint": "5627d6550fcc0288",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 55,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core PM owning the content management system product",
+   "level": "Senior PM; single product team scope",
+   "domain": "Ecommerce content systems; adjacent to your commerce work",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top $174K is in your ok band",
+   "skills": "PM ownership fits; CMS domain is new"
+  },
+  "summary": "Own the product vision and roadmap for lululemon's content management system on web and app.",
+  "level_guess": "Senior PM (about L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Senior PM experience",
+   "CMS/content systems"
+  ],
+  "flags": []
+ },
+ "0384eadc28d4": {
+  "fingerprint": "6cba98ea682407dc",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 15,
+   "level": 75,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Internal HR-systems solution architecture, not product management",
+   "level": "Senior, 8+ yrs; business architecture scope",
+   "domain": "HR and People technology; unrelated to your domains",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 203.75K is in your good band",
+   "skills": "Needs 8+ yrs in People systems and process design; you lack that"
+  },
+  "summary": "Bridge Lyft's People teams and engineering by designing AI-enabled business solutions for HR systems.",
+  "level_guess": "Senior Business Solution Architect",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs solution architecture/process design",
+   "People/HR systems expertise"
+  ],
+  "flags": [
+   "Internal HR systems role"
+  ]
+ },
+ "cb6001bcbfe1": {
+  "fingerprint": "58859b16029b797b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:43:51+00:00",
+  "subs": {
+   "role": 50,
+   "level": 55,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Program management for autonomous-vehicle operations, little product ownership",
+   "level": "Program Manager, 5+ yrs; mid scope",
+   "domain": "Safety and compliance in autonomous vehicles overlaps your risk work",
+   "pathway": "No work permit information in the posting",
+   "pay": "Top CAD 135K is in your low band (under 160K)",
+   "skills": "Compliance and program experience fit; AV operations is new"
+  },
+  "summary": "Build the operational, compliance and quality programs that support Lyft's autonomous-vehicle partners.",
+  "level_guess": "Program Manager (about L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs program/compliance/QA",
+   "Regulated environment experience"
+  ],
+  "flags": [
+   "In-office 3 days a week"
+  ]
  }
 }
