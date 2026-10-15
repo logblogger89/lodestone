@@ -145,17 +145,12 @@
    "postings": 26
   },
   "scoring": {
-   "at": "2026-10-15T05:40:18+00:00",
+   "at": "2026-10-15T05:43:42+00:00",
    "rubric": "1.0",
-   "scored": 140
+   "scored": 210
   }
  },
  "history": [
-  {
-   "component": "jobs:google",
-   "at": "2026-10-15T03:45:25+00:00",
-   "postings": 70
-  },
   {
    "component": "jobs:jazzhr",
    "at": "2026-10-15T03:45:25+00:00",
@@ -408,6 +403,12 @@
    "at": "2026-10-15T05:40:18+00:00",
    "rubric": "1.0",
    "scored": 140
+  },
+  {
+   "component": "scoring",
+   "at": "2026-10-15T05:43:42+00:00",
+   "rubric": "1.0",
+   "scored": 210
   }
  ]
 }
