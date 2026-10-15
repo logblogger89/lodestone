@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-15 · **Current milestone:** M4 (build) · **Overall RAG:** 🟢
 
-**Status summary (2026-10-15).** **P1-S3 done (D-049):** 543 roles scored with explanations, freshness factor added; Ayush's Interested picks rank at the top (5 of 9 in the top 7). **Now: P1-S4**, starting with immigration-pathway signals from ESDC's positive-LMIA employer lists, then paste inbox, pay estimates and the Later/closed checks.
+**Status summary (2026-10-15).** **P1-S3 done (D-049):** 543 roles scored with explanations, freshness factor added; Ayush's Interested picks rank at the top (5 of 9 in the top 7). **P1-S4 built:** pathway signals (D-050), paste inbox (D-052), pay estimates (D-053), Later/closed checks passed. **Open:** Q-22, whether to add outside pay data (levels.fyi etc.) to the estimates. **Next: P1-S5** (discovery and eval set) toward M4 dogfood.
 
 ---
 
@@ -41,7 +41,7 @@
 | D3.1 | Eng Design Doc | Engineering | M3 | ✅ | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v1: Phase 1 = Claude Code engine + Artifact app |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ✅ | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
 | D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ✅ | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
-| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 ✅ (calibrated on 11 triaged roles, D-049), P1-S4 🟦 (pathway signals ✅, paste inbox ✅; pay estimates next) |
+| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 ✅ (calibrated on 11 triaged roles, D-049), P1-S4 ✅ (pathway signals, paste inbox, pay estimates, Later/closed checks; Q-22 open) |
 | D4.2 | Dogfood and bug bash | Launch | M4 | ⬜ | Ayush | |
 | D5.1 | Launch checklist (privacy, security, ToS, quality) | Launch | M5 | ⬜ | Claude | |
 | D6.1 | Post-launch review and V1.x roadmap | PgM / Product | M6 | ⬜ | Ayush + Claude | |
@@ -129,6 +129,7 @@
 | Q-17 | Express Entry details for DR-3 | — | ✅ Resolved | They become optional in-app inputs: an Express Entry profile and CRS calculator that adjust listings (CR-5). Ayush has the details and will enter them in the app |
 | Q-18 | Which PM-adjacent families count? | — | ✅ Resolved | Delegated to Claude (D-017), with defaults in PRD §2b. No people-management roles by default, via a toggle (CR-6) |
 | Q-21 | Coverage gap (R-15): build careers-site connections for companies without a hosted board, including Google? | Ayush | ✅ Answered | Yes, for every company, with an index of all sources (D-042) |
+| Q-22 | Triangulate pay estimates with outside data (levels.fyi, Reddit, Job Bank)? levels.fyi, reddit.com and jobbank.gc.ca are blocked from the cloud environment; options: (a) Ayush pastes levels.fyi pages into the paste inbox, (b) open network access and Claude reads levels.fyi per company, subject to its terms, (c) Job Bank government wages as a floor only. Reddit not recommended (anecdotal, tiny samples) | Ayush | 🟨 Open | Claude recommends (a) for top companies plus (c) |
 
 ## 5. RAID log (risks, assumptions, issues, dependencies)
 
@@ -188,6 +189,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | Sprint 4 checks: Later roles return after 7 days (verified); closed postings show "Posting closed <date>" in the pipeline. Fixed: moving a role from Interested to Later or Not now takes it off the auto-Shortlist. Q-22 raised (outside pay data) | Claude |
 | 2026-10-15 | Pay estimates live (D-053): 181 of 214 roles without a Canadian range now show an estimate (28 high, 9 medium, 117 medium-low, 27 low confidence); tests added | Claude |
 | 2026-10-15 | Paste inbox processing (D-052): prepare/add commands, app statuses, tests | Claude |
 | 2026-10-15 | LMIA name-matching fix after Ayush's question: legal-name variants ("Salesforce.com Canada Corp.", "Okta", "Snowflake Computing") now match; 79 companies (was 58). Microsoft, Workday, Nvidia, Adobe, Meta, Google, Lyft, Databricks confirmed absent from the 2024Q1–2026Q1 lists | Claude |

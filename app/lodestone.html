@@ -429,6 +429,7 @@ function triage(j,status){
   if(cur.status===status){writeTriage(j,{status:null,stage:cur.stage==="Shortlisted"?null:cur.stage});return}
   const patch={status};
   if(status==="interested"&&!cur.stage) patch.stage="Shortlisted";
+  if(status!=="interested"&&cur.stage==="Shortlisted") patch.stage=null;   // auto-shortlisted, so un-shortlist; later stages (Applied…) were set by hand and stay
   if(status==="not"){patch.reasons=cur.reasons||[];S.pendingReasons=j.id}
   else S.pendingReasons=null;
   writeTriage(j,patch);
@@ -590,7 +591,7 @@ function viewDetail(j){
     <div class="field"><label for="stage">Stage</label><select id="stage" data-id="${esc(j.id)}"><option value="">Not in pipeline</option>${STAGES.map(s=>`<option${t.stage===s?" selected":""}>${s}</option>`).join("")}</select></div>
     <div class="field"><label for="notes">Notes</label><textarea id="notes" data-id="${esc(j.id)}" placeholder="Recruiter, referral, follow-up dates">${esc(t.notes||"")}</textarea></div>
   </section>
-  <p class="soon">Coming next: pay estimates for roles without a posted range (Sprint 4).</p>`;
+`;
 }
 function viewPipeline(){
   const items=Object.entries(S.triage).filter(([,t])=>t&&t.stage);
@@ -599,7 +600,7 @@ function viewPipeline(){
       const j=S.jobs[id];const gone=j&&!j.live;
       return `<div class="pcard"><button class="link" data-open="${esc(id)}">${esc(t.title||(j&&j.title)||"Role")}</button>
         <span class="note">${esc(t.company||(j&&j.company)||"")}${j?" · "+esc(where(j)):""}</span>
-        ${gone?'<span class="flag">No longer live</span>':""}${!j?'<span class="flag">Not in current results</span>':""}
+        ${gone?`<span class="flag">Posting closed${j.closed_at?" "+esc(new Date(parseWhen(j.closed_at)).toLocaleDateString()):""}</span>`:""}${!j?'<span class="flag">Not in current results</span>':""}
         <select aria-label="Move ${esc(t.title||"role")}" data-move="${esc(id)}">${STAGES.map(s=>`<option${s===st?" selected":""}>${s}</option>`).join("")}<option value="">Remove from pipeline</option></select></div>`;
     }).join("");
     return `<div class="col"><h4>${st}<span class="mono">${items.filter(([,t])=>t.stage===st).length}</span></h4>${cards||'<span class="note">Empty</span>'}</div>`;
