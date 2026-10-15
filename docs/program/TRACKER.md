@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-15 · **Current milestone:** M4 (build) · **Overall RAG:** 🟢
 
-**Status summary (2026-10-15).** **P1-S3 done (D-049):** 543 roles scored with explanations, freshness factor added; Ayush's Interested picks rank at the top (5 of 9 in the top 7). **P1-S4 built:** pathway signals (D-050), paste inbox (D-052), pay estimates (D-053), Later/closed checks passed. **Open:** Q-22, whether to add outside pay data (levels.fyi etc.) to the estimates. **Next: P1-S5** (discovery and eval set) toward M4 dogfood.
+**Status summary (2026-10-15).** **P1-S3 done (D-049):** 543 roles scored with explanations, freshness factor added; Ayush's Interested picks rank at the top (5 of 9 in the top 7). **P1-S4 built:** pathway signals (D-050), paste inbox (D-052), pay estimates (D-053), Later/closed checks passed. Market pay checks from levels.fyi on request (D-054). **Next: P1-S5** (discovery and eval set) toward M4 dogfood.
 
 ---
 
@@ -41,7 +41,7 @@
 | D3.1 | Eng Design Doc | Engineering | M3 | ✅ | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v1: Phase 1 = Claude Code engine + Artifact app |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ✅ | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
 | D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ✅ | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
-| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 ✅ (calibrated on 11 triaged roles, D-049), P1-S4 ✅ (pathway signals, paste inbox, pay estimates, Later/closed checks; Q-22 open) |
+| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 ✅ (calibrated on 11 triaged roles, D-049), P1-S4 ✅ (pathway signals, paste inbox, pay estimates, Later/closed checks; market checks) |
 | D4.2 | Dogfood and bug bash | Launch | M4 | ⬜ | Ayush | |
 | D5.1 | Launch checklist (privacy, security, ToS, quality) | Launch | M5 | ⬜ | Claude | |
 | D6.1 | Post-launch review and V1.x roadmap | PgM / Product | M6 | ⬜ | Ayush + Claude | |
@@ -103,6 +103,7 @@
 | D-051 | 10-15 | Large multinationals absent from the LMIA lists (e.g. Microsoft, Workday) get no special treatment: neutral pathway score (45, "No public signal"). Revisit only if triage shows Ayush consistently wants them | Ayush's question on missing big-tech employers | Ayush |
 | D-052 | 10-15 | **Paste inbox:** at each refresh, pasted items are processed: known links are matched to existing roles; readable pages are fetched and read by Claude; LinkedIn/Indeed/Glassdoor/Wellfound are never fetched, so the pasted description is used or the app asks for it; non-Canadian roles are declined with a note. Added roles dedup against everything known, get pay read from the text, are scored like any other, and are never marked closed by a refresh. Status and a one-line result show in the app's Add job page | R3, A3a–c | Claude |
 | D-053 | 10-15 | **Pay estimates:** roles with no posted Canadian range get an "est." base range from Lodestone's own posted Canadian ranges, in order: same company and level (high confidence), same company one level away ±15% per level (medium), 3+ similar-segment companies at the level (medium-low), 5+ watched companies at the level (low). Median of comparables, rounded to $5K. Shown muted with basis, confidence and example postings; the pay sub-score from an estimate is capped at 75 so a guess never outranks a posted range. Caveat shown: Ontario doesn't require ranges above $200K, so senior estimates may run low | R5, B8 | Claude |
+| D-054 | 10-15 | **Market pay checks on request (Q-22):** levels.fyi is read only when Ayush asks about a named role (its terms forbid automated reading and compiled datasets; robots.txt allows user-requested fetches). One page per role, Canadian figures only (Toronto, Waterloo, else Canada; US fallbacks rejected); Claude picks the matching company level and the app shows that level's median total pay with its neighbours, date and a "Data source: Levels.fyi" link. Never used in a refresh, and display-only (not in the fit score) because it is total pay, not base. Runbook: `/market-check` | R5 | Ayush |
 
 ## 4. Open questions
 
@@ -129,7 +130,7 @@
 | Q-17 | Express Entry details for DR-3 | — | ✅ Resolved | They become optional in-app inputs: an Express Entry profile and CRS calculator that adjust listings (CR-5). Ayush has the details and will enter them in the app |
 | Q-18 | Which PM-adjacent families count? | — | ✅ Resolved | Delegated to Claude (D-017), with defaults in PRD §2b. No people-management roles by default, via a toggle (CR-6) |
 | Q-21 | Coverage gap (R-15): build careers-site connections for companies without a hosted board, including Google? | Ayush | ✅ Answered | Yes, for every company, with an index of all sources (D-042) |
-| Q-22 | Triangulate pay estimates with outside data (levels.fyi etc.)? | Ayush | 🟨 Open | Ayush chose (b) direct reads. Claude checked levels.fyi's terms (10-15): they forbid reading the site "by any automated means … including artificial intelligence agents" or using it "to compile any dataset" without a written agreement; their robots.txt allows only fetches a person asks for at that moment (Claude-User). So scheduled reads at refresh are out. Remaining choices: on-demand reads per role when Ayush asks, his pastes (a), or their paid API. Awaiting Ayush |
+| Q-22 | Triangulate pay estimates with outside data (levels.fyi etc.)? | Ayush | ✅ Answered | levels.fyi's terms rule out scheduled reads; Ayush chose on-request checks per role (D-054) |
 
 ## 5. RAID log (risks, assumptions, issues, dependencies)
 
@@ -189,6 +190,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | On-request levels.fyi market checks built (D-054): `market fetch/add`, app Pay panel row, `/market-check` runbook, tests | Claude |
 | 2026-10-15 | Q-22: levels.fyi terms checked; automated/scheduled reading not allowed; build paused pending Ayush | Claude |
 | 2026-10-15 | Q-22: Ayush chose levels.fyi direct reads (option B); www.levels.fyi added to the network allowlist; waiting on the environment setting | Claude |
 | 2026-10-15 | Sprint 4 checks: Later roles return after 7 days (verified); closed postings show "Posting closed <date>" in the pipeline. Fixed: moving a role from Interested to Later or Not now takes it off the auto-Shortlist. Q-22 raised (outside pay data) | Claude |

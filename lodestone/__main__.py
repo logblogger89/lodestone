@@ -29,6 +29,11 @@ def main(argv=None) -> int:
     ib = sub.add_parser("inbox", help="paste inbox: prepare pasted items for Claude, or add the jobs Claude read")
     ib.add_argument("action", choices=["prepare", "add"])
     ib.add_argument("file", help="inbox items (prepare) or job records (add), JSON list")
+    mk = sub.add_parser("market", help="on-request levels.fyi pay check for one role (never during refresh)")
+    mk.add_argument("action", choices=["fetch", "add"])
+    mk.add_argument("target", help="job id, or words from company + title (fetch)")
+    mk.add_argument("level", nargs="?", help="company level that matches the role (add)")
+    mk.add_argument("note", nargs="?", default="", help="why this level (add)")
     sub.add_parser("export", help="package jobs, companies and freshness for the app's database")
     sub.add_parser("index", help="rewrite data/sources/README.md, the readable source index")
     a = ap.parse_args(argv)
@@ -56,6 +61,14 @@ def main(argv=None) -> int:
     elif a.cmd == "signals":
         from . import signals
         out = signals.load(log=log)
+    elif a.cmd == "market":
+        from . import market
+        if a.action == "fetch":
+            out = market.fetch(a.target)
+        else:
+            if not a.level:
+                ap.error("market add needs a job id and a level")
+            out = market.add(a.target, a.level, a.note)
     elif a.cmd == "inbox":
         from . import capture
         data = json.load(open(a.file))

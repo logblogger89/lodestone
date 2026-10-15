@@ -1,0 +1,15 @@
+{
+  "_doc": "On-request market pay checks (D-054). levels.fyi's terms allow only reads a person asks for at that moment, so Lodestone never reads it during a refresh. Edit these maps to cover new regions or role families.",
+  "source": "levels.fyi",
+  "user_agent": "Claude-User (Lodestone personal job search; fetched at the user's request)",
+  "url": "https://www.levels.fyi/companies/{company}/salaries/{family}/locations/{location}.md",
+  "locations": {"GTA": "greater-toronto-area", "Waterloo Region": "waterloo-region", "default": "canada"},
+  "families": [
+    ["\\btechnical program manager\\b|\\btpm\\b", "technical-program-manager"],
+    ["\\bprogram manager\\b", "program-manager"],
+    ["\\bsolutions? (engineer|architect|consultant)\\b", "solution-architect"],
+    ["\\bproduct (designer|design)\\b", "product-designer"],
+    [".", "product-manager"]
+  ],
+  "company_slugs": {}
+}
