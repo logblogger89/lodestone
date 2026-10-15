@@ -145,17 +145,12 @@
    "postings": 26
   },
   "scoring": {
-   "at": "2026-10-15T05:39:59+00:00",
+   "at": "2026-10-15T05:40:18+00:00",
    "rubric": "1.0",
-   "scored": 70
+   "scored": 140
   }
  },
  "history": [
-  {
-   "component": "jobs:avature",
-   "at": "2026-10-15T03:45:25+00:00",
-   "postings": 1022
-  },
   {
    "component": "jobs:google",
    "at": "2026-10-15T03:45:25+00:00",
@@ -407,6 +402,12 @@
    "at": "2026-10-15T05:39:59+00:00",
    "rubric": "1.0",
    "scored": 70
+  },
+  {
+   "component": "scoring",
+   "at": "2026-10-15T05:40:18+00:00",
+   "rubric": "1.0",
+   "scored": 140
   }
  ]
 }

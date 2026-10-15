@@ -2254,5 +2254,2257 @@
    "Montreal; French likely",
    "Engineering role"
   ]
+ },
+ "3725891d12f0": {
+  "fingerprint": "168a493fdfc62fa4",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 25,
+   "level": 85,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing pre-sales solutions engineering, not product management",
+   "level": "Principal-level, leads initiatives beyond a single territory",
+   "domain": "Identity/enterprise security software, adjacent to your platform work",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$247K top of range clears your excellent band",
+   "skills": "Needs 8+ yrs customer-facing technical B2B SaaS, which you lack"
+  },
+  "summary": "Principal pre-sales engineer for emerging technologies at 1Password, partnering with sales on strategic accounts.",
+  "level_guess": "Principal (pre-sales)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "8+ yrs customer-facing technical B2B SaaS",
+   "Pre-sales / demo skills",
+   "Up to 30% travel"
+  ],
+  "flags": [
+   "Pre-sales role",
+   "Not product management"
+  ]
+ },
+ "4b4f677fad96": {
+  "fingerprint": "15494d9a5fb79165",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 25,
+   "level": 90,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Product marketing, not product ownership",
+   "level": "Senior Staff scope, 7+ yrs",
+   "domain": "Identity security SaaS, adjacent domain",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$220K top is in your good band",
+   "skills": "Requires 7+ yrs password/identity security product marketing"
+  },
+  "summary": "Lead go-to-market positioning and messaging for 1Password's Enterprise Password Manager.",
+  "level_guess": "Senior Staff PMM",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "7+ yrs B2B SaaS product marketing",
+   "Identity security experience"
+  ],
+  "flags": [
+   "Product marketing role"
+  ]
+ },
+ "6cccd7f94efd": {
+  "fingerprint": "9fc22102c68dec5b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 72,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core IC product role owning Device Security roadmap",
+   "level": "Senior Staff, 8+ yrs PM, multi-team scope",
+   "domain": "Endpoint/IAM security is adjacent to your risk and governance work",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$258K top of range clears your excellent band",
+   "skills": "Wants 8+ yrs PM plus security/IAM/endpoint product ownership; you have PM and governance, not endpoint"
+  },
+  "summary": "Own strategy and roadmap for 1Password's device security products, reporting to a Director.",
+  "level_guess": "Senior Staff PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "8+ yrs PM",
+   "Security/IAM/endpoint product ownership",
+   "Roadmap ownership"
+  ],
+  "flags": []
+ },
+ "4fbd432d599f": {
+  "fingerprint": "b74d9b410675d70d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core IC PM owning SaaS Manager strategy and roadmap",
+   "level": "Staff-level, 8+ yrs end-to-end strategy ownership",
+   "domain": "B2B SaaS security/management product, adjacent domain",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$225K top is in your good band, just under excellent",
+   "skills": "Matches your B2B platform ownership and roadmap strategy"
+  },
+  "summary": "Own strategy and roadmap for 1Password's SaaS Manager product, reporting to the Director of Product.",
+  "level_guess": "Staff PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "8+ yrs PM",
+   "B2B SaaS strategy and roadmap ownership"
+  ],
+  "flags": []
+ },
+ "b95ef0c90334": {
+  "fingerprint": "01768f7b1cfce8d2",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 70,
+   "level": 30,
+   "domain": 80,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 65
+  },
+  "reasons": {
+   "role": "Product leadership role, but people-leader rather than IC",
+   "level": "Senior Director leading senior PMs; you want IC",
+   "domain": "Developer and AI/agent platforms fit your enterprise AI work",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$372K top of range clears your excellent band",
+   "skills": "10+ yrs PM with 5+ leading senior PMs; you lack the people-leadership years"
+  },
+  "summary": "Lead the product management org for 1Password's developer and AI products.",
+  "level_guess": "Senior Director",
+  "people_mgmt": true,
+  "work_mode": "remote",
+  "must_haves": [
+   "10+ yrs PM",
+   "5+ yrs leading senior PMs or portfolios"
+  ],
+  "flags": [
+   "People management",
+   "Director-level"
+  ]
+ },
+ "11908cfe583d": {
+  "fingerprint": "04b77d842ebf1c14",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 72,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Core IC PM role on security products",
+   "level": "Principal, 10+ yrs PM; at the top of your level range",
+   "domain": "Security-critical SaaS platform, adjacent domain",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$312K top of range clears your excellent band",
+   "skills": "10+ yrs PM with significant security-product time; you have 6 PM yrs"
+  },
+  "summary": "Principal PM setting security product direction at 1Password.",
+  "level_guess": "Principal PM (≈ L6/L7)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "10+ yrs PM",
+   "Security-critical SaaS product experience"
+  ],
+  "flags": [
+   "Experience stretch"
+  ]
+ },
+ "36b6697e848e": {
+  "fingerprint": "0077d7cba271c357",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 65,
+   "level": 35,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Product leader on growth and design-customer program, not roadmap-owning IC",
+   "level": "Director with growth targets and cross-team leadership",
+   "domain": "Agentic access and security products align with your enterprise AI work",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$312K top of range clears your excellent band",
+   "skills": "8+ yrs PM with a revenue/adoption target; you lack direct growth-target ownership"
+  },
+  "summary": "Own the growth thesis and design-customer program for 1Password's AI and agentic opportunities.",
+  "level_guess": "Director of Product",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "8+ yrs PM",
+   "Carried a revenue or adoption target",
+   "Security/agentic product preference"
+  ],
+  "flags": [
+   "Director-level",
+   "Growth and GTM-heavy"
+  ]
+ },
+ "ea985c6552c2": {
+  "fingerprint": "2c8457aa27545ac4",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core IC PM owning Admin Workflows in the Enterprise Password Manager",
+   "level": "Senior PM, 5+ yrs, one product area; narrower than your scope",
+   "domain": "Enterprise SaaS admin and agentic (MCP) features; adjacent",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$186K top sits in your ok band",
+   "skills": "You have 5+ yrs PM in B2B/enterprise software and API/platform work"
+  },
+  "summary": "Own the Admin Workflows area of 1Password's Enterprise Password Manager, including API and agentic capabilities.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs PM in B2B/enterprise",
+   "API-first product experience"
+  ],
+  "flags": []
+ },
+ "2a434371bfaa": {
+  "fingerprint": "78f3285021e54981",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core IC PM owning Milestone and Celebration experiences",
+   "level": "Senior PM owning a single product area in a triad",
+   "domain": "Employee recognition SaaS, general B2B/consumer product",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "No pay range posted",
+   "skills": "Owns roadmap with design and engineering; you match most of it"
+  },
+  "summary": "Own product strategy for Achievers' Milestone and Celebration experiences within the Member Experience portfolio.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Senior PM experience",
+   "Roadmap and strategy ownership"
+  ],
+  "flags": []
+ },
+ "9a98f7abbdda": {
+  "fingerprint": "6f48f2c6ce8b2368",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 5,
+   "level": 10,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer success consulting, not a product job",
+   "level": "Early-career, asks 2+ yrs CS experience",
+   "domain": "AI customer service platform, but a support role",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "No pay range posted",
+   "skills": "Needs customer success/consulting background you do not have"
+  },
+  "summary": "Handle escalated tickets and customer syncs for Ada's Accelerate AI transformation service.",
+  "level_guess": "Junior/Mid CS",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "2+ yrs customer success or consulting"
+  ],
+  "flags": [
+   "Not product management",
+   "Customer success role"
+  ]
+ },
+ "db570443584f": {
+  "fingerprint": "edb5187b28292038",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core IC PM owning merchant growth distribution partnerships",
+   "level": "Senior PM, 5+ yrs, one program area",
+   "domain": "Fintech payments and merchant commerce match your background",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$213K top is in your good band",
+   "skills": "5+ yrs PM shipping technical products; you match"
+  },
+  "summary": "Own Affirm's 1:Many distribution partnerships that drive merchant growth.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs PM",
+   "Shipping technical products"
+  ],
+  "flags": []
+ },
+ "0241e5d0935e": {
+  "fingerprint": "5265f18d40db31c8",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core IC PM owning Affirm's checkout experience",
+   "level": "Senior PM, 5+ yrs, UX-taste emphasis",
+   "domain": "Payments checkout in fintech, strong commerce fit",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$213K top is in your good band",
+   "skills": "Wants 5+ yrs PM and strong UX instincts; you match most"
+  },
+  "summary": "Own the product experience for Affirm's checkout.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs PM",
+   "UX taste",
+   "Cross-functional delivery"
+  ],
+  "flags": []
+ },
+ "7242cad7cd1c": {
+  "fingerprint": "10a8a34b5f733e21",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core IC PM improving how customers pay with Affirm",
+   "level": "Senior PM, one consumer payments area",
+   "domain": "Consumer payments and fintech fit your domain",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$213K top is in your good band",
+   "skills": "Research- and data-led PM work; you match most must-haves"
+  },
+  "summary": "Improve how consumers pay with Affirm using research and data.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Senior PM experience",
+   "Research and data insight"
+  ],
+  "flags": []
+ },
+ "c54ad6ee15f6": {
+  "fingerprint": "f303f1cfa587e8f0",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core IC PM owning merchant pricing products and platform",
+   "level": "Senior PM, 5+ yrs, owns strategy for pricing area",
+   "domain": "B2B merchant payments and commerce; direct overlap",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$213K top is in your good band",
+   "skills": "5+ yrs PM in B2B merchant/commerce platforms; you match"
+  },
+  "summary": "Own strategy for Affirm's merchant pricing products and platform capabilities.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs PM",
+   "B2B merchant/payments/marketplaces"
+  ],
+  "flags": []
+ },
+ "d92c4f524f38": {
+  "fingerprint": "3944a6a6c321757f",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 50,
+   "level": 70,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Technical program management on planning and operating frameworks",
+   "level": "Senior TPM, strategic partner scope",
+   "domain": "Fintech company, but ops/planning program focus",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$188K top sits in your ok band",
+   "skills": "Program planning, not your product background"
+  },
+  "summary": "Run planning engines and operating frameworks for Affirm's product and engineering teams.",
+  "level_guess": "Senior TPM",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Program management experience",
+   "Planning process design"
+  ],
+  "flags": [
+   "Program mgmt, not product"
+  ]
+ },
+ "9ebee2dc2dcb": {
+  "fingerprint": "c1852faf97867e08",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 92,
+   "domain": 92,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core IC Staff PM owning Affirm Bank deposit product",
+   "level": "Staff, 6+ yrs, strategic independent leader on ambiguous initiatives",
+   "domain": "Regulated consumer fintech and bank launch; direct overlap",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$241K top of range clears your excellent band",
+   "skills": "Needs a shipped consumer deposit/fintech product; you have regulated fintech, not deposits"
+  },
+  "summary": "Own the end-to-end bank product at Affirm, launching deposits and operationalizing a new bank charter.",
+  "level_guess": "Staff PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "6+ yrs PM",
+   "Shipped consumer deposit/fintech product",
+   "Regulated product experience"
+  ],
+  "flags": []
+ },
+ "1ce5e0322c79": {
+  "fingerprint": "b6ab59c1fa594f60",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 92,
+   "domain": 80,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core IC Staff PM owning the loyalty program vision and roadmap",
+   "level": "Staff scope, multi-quarter vision and roadmap",
+   "domain": "Consumer fintech and loyalty; commerce overlap",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$241K top of range clears your excellent band",
+   "skills": "Roadmap and metrics ownership; no loyalty program experience"
+  },
+  "summary": "Own the vision and roadmap for Affirm's consumer loyalty program, including rewards and tiers.",
+  "level_guess": "Staff PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Staff-level PM",
+   "Loyalty/growth product experience"
+  ],
+  "flags": []
+ },
+ "84a90ee8ed8f": {
+  "fingerprint": "c7445fcf4ca448e8",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 92,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core IC Staff PM on credit and pricing products",
+   "level": "Staff, 7+ yrs, discovery through scale",
+   "domain": "Credit, pricing and fintech; strong overlap",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$241K top of range clears your excellent band",
+   "skills": "7+ yrs PM in fintech/marketplaces; you have 6 PM yrs plus ads/commerce"
+  },
+  "summary": "Own credit and pricing product strategy at Affirm.",
+  "level_guess": "Staff PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "7+ yrs PM",
+   "Fintech or marketplace products"
+  ],
+  "flags": [
+   "Province restriction (not Quebec)"
+  ]
+ },
+ "9e9be1c79e4b": {
+  "fingerprint": "5837cf7cdfeaaf88",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 25,
+   "level": 30,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing, not product ownership",
+   "level": "Mid-level, 4-5 yrs",
+   "domain": "Home healthcare SaaS, unrelated to your domains",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$120K top is below your low band",
+   "skills": "Asks healthcare and product marketing background"
+  },
+  "summary": "Drive product marketing for AlayaCare's home-care software.",
+  "level_guess": "Mid-level PMM",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "4-5 yrs incl. 2 in product marketing",
+   "Healthcare/home care asset"
+  ],
+  "flags": [
+   "Product marketing role",
+   "Below your level"
+  ]
+ },
+ "ac790ce5b1e9": {
+  "fingerprint": "497d1aba9ad43f07",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 25,
+   "level": 70,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing and sales enablement, not product ownership",
+   "level": "Senior, 6+ yrs",
+   "domain": "Home healthcare SaaS, unrelated domain",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "No pay range posted",
+   "skills": "Needs 6+ yrs B2B SaaS and PMM background"
+  },
+  "summary": "Own sales enablement and positioning that lifts win rates for AlayaCare.",
+  "level_guess": "Senior PMM",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "6+ yrs B2B SaaS",
+   "3+ yrs product marketing"
+  ],
+  "flags": [
+   "Product marketing role",
+   "Montreal; French may help"
+  ]
+ },
+ "e9ca12362c5e": {
+  "fingerprint": "af7234ee54b27abc",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 15,
+   "level": 40,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Solution architect/engineering support role",
+   "level": "2-3 yrs engineering, mid-level",
+   "domain": "Home healthcare SaaS, unrelated domain",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "No pay range posted",
+   "skills": "Bilingual French plus engineering background required"
+  },
+  "summary": "Design solutions for AlayaCare customers as a bilingual solution architect.",
+  "level_guess": "Mid-level SA",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Bilingual French/English",
+   "2-3 yrs software engineering"
+  ],
+  "flags": [
+   "French required",
+   "Not product management"
+  ]
+ },
+ "98c7f1509429": {
+  "fingerprint": "d0b8a5847b7842dd",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 90,
+   "level": 35,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core IC PM owning the bulk-order fulfilment roadmap",
+   "level": "Asks 3+ yrs PM: mid-level, below your scope",
+   "domain": "Amazon Business commerce and fulfilment; general product",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$138.8K top sits in your low band",
+   "skills": "3+ yrs PM and cross-functional launches; you exceed it"
+  },
+  "summary": "Own the product roadmap for bulk and large-order fulfilment at Amazon Business.",
+  "level_guess": "PM (≈ L5 Amazon PM II)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3+ yrs PM",
+   "Technical products/online services"
+  ],
+  "flags": [
+   "Below your level"
+  ]
+ },
+ "0440cb45c332": {
+  "fingerprint": "bea7a0f4949345c6",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 90,
+   "level": 35,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core IC PM owning the bulk-order fulfilment roadmap",
+   "level": "Asks 3+ yrs PM: mid-level, below your scope",
+   "domain": "Amazon Business commerce and fulfilment; general product",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$138.8K top sits in your low band",
+   "skills": "3+ yrs PM and cross-functional launches; you exceed it"
+  },
+  "summary": "Own the product roadmap for bulk and large-order fulfilment at Amazon Business (duplicate listing).",
+  "level_guess": "PM (≈ L5 Amazon PM II)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3+ yrs PM",
+   "Technical products/online services"
+  ],
+  "flags": [
+   "Below your level",
+   "Duplicate of another listing"
+  ]
+ },
+ "2e5112428830": {
+  "fingerprint": "6877700afd13ac9a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 25,
+   "level": 70,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Customer-facing AWS pre-sales architect, not product",
+   "level": "Senior SA, 10+ yrs IT; scope is account-level",
+   "domain": "Cloud for financial services; fintech overlap",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$211.6K top is in your good band",
+   "skills": "Needs 10+ yrs IT/consulting and bilingual French; mismatch"
+  },
+  "summary": "Advise financial-services customers on AWS adoption as a bilingual senior solutions architect.",
+  "level_guess": "Senior SA",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs IT/consulting",
+   "Bilingual French/English",
+   "FSI customer advising"
+  ],
+  "flags": [
+   "French required",
+   "Pre-sales role"
+  ]
+ },
+ "9dedcfee8abd": {
+  "fingerprint": "aa8eefd60d9a781c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 25,
+   "level": 80,
+   "domain": 80,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Security assurance consulting for AWS customers, not product",
+   "level": "Senior, leads teams, 8-10+ yrs",
+   "domain": "Compliance and risk programs overlap your domain",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$211.6K top is in your good band",
+   "skills": "Needs deep cloud/infrastructure architecture and SAP knowledge"
+  },
+  "summary": "Lead security assurance and compliance engagements for large AWS enterprise customers.",
+  "level_guess": "Senior SA (consulting)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs technology domain",
+   "5+ yrs infrastructure/database architecture",
+   "Security assurance"
+  ],
+  "flags": [
+   "Consulting role",
+   "Not product management"
+  ]
+ },
+ "154c2ae9c6a5": {
+  "fingerprint": "45fd287fddda4655",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 90,
+   "level": 85,
+   "domain": 65,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core IC PM, technical, for Customer Service tooling",
+   "level": "Sr PM at Amazon (≈ L6); asks 3+ yrs technical PM",
+   "domain": "Customer service tech; general B2B/internal platform",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$214K top is in your good band",
+   "skills": "Technical PM experience; you match most, some hands-on tech asked"
+  },
+  "summary": "Own product for Amazon Customer Service's technical tooling and metrics-driven programs.",
+  "level_guess": "Senior PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3+ yrs technical product/program mgmt",
+   "Cross-functional stakeholder mgmt"
+  ],
+  "flags": []
+ },
+ "3d627e60043d": {
+  "fingerprint": "b412bab92756959c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 60,
+   "level": 75,
+   "domain": 40,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Mobile release TPM; engineering delivery, little product ownership",
+   "level": "Senior TPM (L6) owning a large portfolio",
+   "domain": "Mobile app release quality; unrelated to your domains",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$214K top is in your good band",
+   "skills": "Needs 7+ yrs with engineering and 3+ yrs software dev"
+  },
+  "summary": "Own quality and release programs for Amazon's mobile shopping app across hundreds of engineers.",
+  "level_guess": "Senior TPM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs TPM",
+   "7+ yrs working with engineering",
+   "3+ yrs software dev"
+  ],
+  "flags": [
+   "Engineering-heavy TPM"
+  ]
+ },
+ "2f15dc2499ea": {
+  "fingerprint": "218e287e4b7802ad",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 20,
+   "level": 40,
+   "domain": 80,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Security assurance consulting, not product",
+   "level": "Mid-level, 2-4 yrs",
+   "domain": "Compliance and risk advising fits your domain",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$166.9K top is in your ok band",
+   "skills": "Needs 4+ yrs advising on AWS architectures"
+  },
+  "summary": "Deliver security assurance and compliance work for AWS enterprise customers.",
+  "level_guess": "SA (mid-level)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "4+ yrs technical domain",
+   "AWS knowledge",
+   "Customer advising"
+  ],
+  "flags": [
+   "Consulting role",
+   "Below your level"
+  ]
+ },
+ "8c57bba9da13": {
+  "fingerprint": "b28fee0c43dd1c8d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 20,
+   "level": 70,
+   "domain": 65,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Customer-facing AWS specialist solutions architect",
+   "level": "Senior SA, customer-account scope",
+   "domain": "Agentic AI workspaces for regulated clients",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$211.6K top is in your good band",
+   "skills": "Native-level French and cloud architecture required"
+  },
+  "summary": "Advise Canadian public-sector and enterprise clients on AWS agentic workspaces in English and French.",
+  "level_guess": "Senior SA",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Native French and English",
+   "Cloud architecture",
+   "Travel 25-50%"
+  ],
+  "flags": [
+   "French required",
+   "Pre-sales role",
+   "Travel 25-50%"
+  ]
+ },
+ "becd1f2b48a8": {
+  "fingerprint": "d9f97302cb401ff6",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core IC Principal PM owning AI products end to end",
+   "level": "Principal (≈ L7), 7+ yrs, owns vision and roadmap",
+   "domain": "Applied AI for customer service; enterprise AI adjacent",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$263.2K top clears your excellent band",
+   "skills": "Roadmap strategy and ML product delivery match your launches"
+  },
+  "summary": "Own end-to-end lifecycle of large-scale AI products for Amazon Customer Service.",
+  "level_guess": "Principal PM (≈ L7)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs end-to-end product delivery",
+   "Roadmap strategy",
+   "Technical depth with AI/ML"
+  ],
+  "flags": []
+ },
+ "bc2e8dbf07aa": {
+  "fingerprint": "1d4f209eac4dcf9e",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 40,
+   "level": 50,
+   "domain": 30,
+   "pathway": 65,
+   "pay": 20,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Operations planning program manager, not product",
+   "level": "Senior Program Manager (5+ yrs), ops scope",
+   "domain": "Transportation planning; unrelated",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$141K top sits in your low band",
+   "skills": "Planning modeling and ops; limited match"
+  },
+  "summary": "Lead short-term outbound transportation planning for Amazon.ca.",
+  "level_guess": "Senior Program Manager",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs program mgmt",
+   "Data-driven improvement",
+   "Senior leadership communication"
+  ],
+  "flags": [
+   "Operations program role"
+  ]
+ },
+ "564d44333148": {
+  "fingerprint": "714f3844a1b401df",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 20,
+   "level": 70,
+   "domain": 65,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Customer-facing startup solutions architect",
+   "level": "Senior SA, 10+ yrs IT",
+   "domain": "Cloud advice for startups; developer/cloud adjacent",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$211.6K top is in your good band",
+   "skills": "Needs 10+ yrs IT delivery and hands-on cloud architecture"
+  },
+  "summary": "Provide technical advocacy to startup customers building on AWS.",
+  "level_guess": "Senior SA",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs IT/consulting",
+   "Cloud architecture",
+   "Customer advocacy"
+  ],
+  "flags": [
+   "Pre-sales role"
+  ]
+ },
+ "54dedd8cd122": {
+  "fingerprint": "60242ba798491001",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 85,
+   "domain": 92,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Core IC PM owning Canadian product compliance vision",
+   "level": "Senior PM (≈ L6) with considerable scope",
+   "domain": "Regulatory risk and customer safety: direct overlap with your work",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$193.4K top is in your good band",
+   "skills": "Roadmap and regulatory work match your risk/compliance launches"
+  },
+  "summary": "Own the product compliance vision and roadmap for Amazon's Canadian consumer business.",
+  "level_guess": "Senior PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs product/program mgmt",
+   "Roadmap ownership",
+   "Regulatory risk"
+  ],
+  "flags": []
+ },
+ "143c9a6571f9": {
+  "fingerprint": "6d156f92dee5503b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 30,
+   "level": 15,
+   "domain": 30,
+   "pathway": 65,
+   "pay": 5,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Partner onboarding program coordination, not product",
+   "level": "Entry-mid, 3+ yrs",
+   "domain": "Delivery logistics; unrelated",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$116.4K top is below your low band",
+   "skills": "Onboarding and vetting ops; little overlap"
+  },
+  "summary": "Onboard and vet new Hub Delivery partners for Amazon Canada.",
+  "level_guess": "Program Manager (mid)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3+ yrs program mgmt",
+   "Process improvement"
+  ],
+  "flags": [
+   "Operations program role",
+   "Below your level"
+  ]
+ },
+ "fa9d16c90e29": {
+  "fingerprint": "93a25ffcc6d8cd7c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 20,
+   "level": 40,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Customer-facing architect for AI startups",
+   "level": "Mid-level SA scope",
+   "domain": "Frontier AI and cloud platforms; adjacent",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$166.9K top is in your ok band",
+   "skills": "Hands-on cloud architecture and French likely needed"
+  },
+  "summary": "Advise funded AI startups on cloud architecture at AWS.",
+  "level_guess": "SA (mid-level)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Cloud architecture",
+   "Customer advising",
+   "Bilingual preference"
+  ],
+  "flags": [
+   "Pre-sales role"
+  ]
+ },
+ "ecc86e53939a": {
+  "fingerprint": "0ec50dfa500697c7",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 55,
+   "level": 92,
+   "domain": 35,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Principal TPM on fulfilment quality; strategy but engineering delivery",
+   "level": "Principal (≈ L7), org-wide alignment",
+   "domain": "Fulfilment center operations; unrelated domain",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$263.2K top clears your excellent band",
+   "skills": "Needs 10+ yrs with engineering and 5+ yrs software development"
+  },
+  "summary": "Set strategy and roadmap for fulfilment-center quality problems across engineering and ops.",
+  "level_guess": "Principal TPM (≈ L7)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs technical program mgmt",
+   "10+ yrs with engineering",
+   "5+ yrs software dev"
+  ],
+  "flags": [
+   "Engineering-heavy TPM"
+  ]
+ },
+ "a86cd1523e18": {
+  "fingerprint": "b03273b51b9601b7",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 35,
+   "level": 35,
+   "domain": 30,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Network engineering project delivery, not product",
+   "level": "Mid-level infrastructure TPM, 3+ yrs",
+   "domain": "Corporate networking; unrelated",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$163K top is in your ok band",
+   "skills": "Needs networking background and CCNA-level knowledge"
+  },
+  "summary": "Drive network engineering projects for Amazon's corporate offices.",
+  "level_guess": "TPM (mid)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Networking background",
+   "3+ yrs infra mgmt",
+   "CCNA or equivalent"
+  ],
+  "flags": [
+   "Networking specialist"
+  ]
+ },
+ "28569434277c": {
+  "fingerprint": "177bc805cffc9204",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 35,
+   "level": 35,
+   "domain": 30,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Network engineering project delivery, not product",
+   "level": "Mid-level infrastructure TPM, 3+ yrs",
+   "domain": "Corporate networking; unrelated",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$163K top is in your ok band",
+   "skills": "Needs networking background and certification"
+  },
+  "summary": "Drive network engineering projects for Amazon's corporate offices.",
+  "level_guess": "TPM (mid)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Networking background",
+   "3+ yrs infra mgmt"
+  ],
+  "flags": [
+   "Networking specialist"
+  ]
+ },
+ "b2f1f2860bbf": {
+  "fingerprint": "ef379a1b8c40d0f4",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 60,
+   "level": 80,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Senior TPM on Alexa+ content programs; some product shaping",
+   "level": "Senior TPM (≈ L6), defines programs and influences tech",
+   "domain": "Consumer voice assistant, general product",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$214K top is in your good band",
+   "skills": "Program delivery over engineering teams; thin match to your skills"
+  },
+  "summary": "Define and deliver Alexa+ food and news programs across engineering teams.",
+  "level_guess": "Senior TPM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Technical program mgmt",
+   "Risk and escalation mgmt"
+  ],
+  "flags": []
+ },
+ "213a820dd485": {
+  "fingerprint": "44d543b42ca66f58",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 20,
+   "level": 75,
+   "domain": 65,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Customer-facing AWS architect (French-first posting)",
+   "level": "Senior SA, enterprise customers",
+   "domain": "Cloud and AI migration; developer/cloud adjacent",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$211.6K top is in your good band",
+   "skills": "Native French, cloud architecture required"
+  },
+  "summary": "Advise large Quebec enterprises on AWS cloud and AI migrations.",
+  "level_guess": "Senior SA",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Native French",
+   "Cloud architecture",
+   "Customer advising"
+  ],
+  "flags": [
+   "French required",
+   "Pre-sales role"
+  ]
+ },
+ "0c3259855252": {
+  "fingerprint": "fe57dfcf29125fc5",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 85,
+   "domain": 82,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core IC PM owning AI primitives from vision to launch",
+   "level": "Senior PM (≈ L6) with cross-team dependencies",
+   "domain": "Shared enterprise AI building blocks; direct AI-platform overlap",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$214K top is in your good band",
+   "skills": "Platform-as-product and AI roadmap match your governance work"
+  },
+  "summary": "Own the lifecycle of reusable AI primitives that teams across Amazon adopt.",
+  "level_guess": "Senior PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Senior PM experience",
+   "AI/ML product understanding",
+   "Cross-team execution"
+  ],
+  "flags": []
+ },
+ "1e9c55c66c55": {
+  "fingerprint": "f37ab13f7c80082d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 20,
+   "level": 30,
+   "domain": 85,
+   "pathway": 65,
+   "pay": 20,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Ads client-services consultant, not product",
+   "level": "Mid-level, 4+ yrs client-facing",
+   "domain": "Digital advertising; strong domain overlap",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$120K top is below your low band",
+   "skills": "Needs 4+ yrs client-facing programmatic ads"
+  },
+  "summary": "Support programmatic trading desks and agencies on Amazon Ads in Canada.",
+  "level_guess": "Consultant (mid)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "4+ yrs digital advertising",
+   "Client-facing experience"
+  ],
+  "flags": [
+   "Client-facing role",
+   "Below your level"
+  ]
+ },
+ "193b368aab2b": {
+  "fingerprint": "f908d983a0e6eedc",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 60,
+   "level": 80,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Senior TPM leading Alexa+ comms programs and roadmap prioritization",
+   "level": "Senior TPM (≈ L6), exec communications",
+   "domain": "Agentic AI communications, consumer",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$214K top is in your good band",
+   "skills": "Program leadership; engineering depth likely needed"
+  },
+  "summary": "Lead Alexa+ communications initiatives and roadmap prioritization as a senior TPM.",
+  "level_guess": "Senior TPM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Technical program mgmt",
+   "Stakeholder and exec comms"
+  ],
+  "flags": []
+ },
+ "f0a24d3ef557": {
+  "fingerprint": "713f285b09ca2769",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 65,
+   "level": 92,
+   "domain": 85,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Principal TPM owning data/reporting programs; heavy engineering delivery",
+   "level": "Principal (≈ L7), largest ambiguous programs",
+   "domain": "Ads measurement and data pipelines: strong overlap",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$263.2K top clears your excellent band",
+   "skills": "Needs 5+ yrs software development and 7+ yrs with engineers"
+  },
+  "summary": "Own cross-team delivery of Amazon Ads programmatic reporting pipelines and APIs.",
+  "level_guess": "Principal TPM (≈ L7)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs technical program mgmt",
+   "5+ yrs software dev",
+   "Architecture design"
+  ],
+  "flags": [
+   "Engineering-heavy TPM"
+  ]
+ },
+ "c1250bb88c0d": {
+  "fingerprint": "20556718a43980bf",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 20,
+   "level": 80,
+   "domain": 65,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Customer-facing partner solutions architect for Alexa+",
+   "level": "Senior SA, 8-10+ yrs",
+   "domain": "Agentic integrations (MCP, tool-calling); AI adjacent",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$211.6K top is in your good band",
+   "skills": "Needs 10+ yrs IT implementation and bilingual French"
+  },
+  "summary": "Design partner integrations for Alexa+ across Canada, Mexico and Brazil.",
+  "level_guess": "Senior SA",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8-10+ yrs technical",
+   "Bilingual",
+   "Partner integrations"
+  ],
+  "flags": [
+   "French required",
+   "Pre-sales role"
+  ]
+ },
+ "7efa2fdcbb1c": {
+  "fingerprint": "b527b92e4cde7393",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 85,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Core IC PM leading Alexa+ expansion in Canada",
+   "level": "Senior PM (≈ L6)",
+   "domain": "Consumer voice AI; general consumer product",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$193.4K top is in your good band",
+   "skills": "French and English product ownership; French fluency unclear"
+  },
+  "summary": "Lead Alexa+ product expansion in Canada across English and French locales.",
+  "level_guess": "Senior PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Bilingual French/English",
+   "Senior PM experience"
+  ],
+  "flags": [
+   "French required"
+  ]
+ },
+ "1d0023a8e3b4": {
+  "fingerprint": "d16292b971ddf367",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 65,
+   "level": 92,
+   "domain": 85,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Principal TPM for ads campaign management software; engineering-heavy",
+   "level": "Principal (≈ L7), 7+ yrs",
+   "domain": "Amazon Ads campaign tooling: strong ads overlap",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$263.2K top clears your excellent band",
+   "skills": "Needs 5+ yrs software dev and 7+ yrs with engineers"
+  },
+  "summary": "Own delivery of large programs for Amazon Ads campaign management software.",
+  "level_guess": "Principal TPM (≈ L7)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs technical program mgmt",
+   "5+ yrs software dev",
+   "Architecture design"
+  ],
+  "flags": [
+   "Engineering-heavy TPM"
+  ]
+ },
+ "c73b7c39ceef": {
+  "fingerprint": "faad513ea0627d4e",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 25,
+   "level": 45,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "GTM/marketing program role for AWS sales, not product",
+   "level": "Mid-level, 3+ yrs",
+   "domain": "Cloud sales and marketing; general",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$153K top sits in your low band",
+   "skills": "Demand-gen and pipeline background asked"
+  },
+  "summary": "Run segment and industry campaigns that generate AWS Canada commercial pipeline.",
+  "level_guess": "Program Manager (mid)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3+ yrs business development/marketing",
+   "Stakeholder liaison"
+  ],
+  "flags": [
+   "Sales/marketing program role"
+  ]
+ },
+ "3187654dbdbb": {
+  "fingerprint": "01b74e02af791288",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 65,
+   "level": 55,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "TPM driving Alexa device and cloud programs; some product shaping",
+   "level": "Mid TPM (5+ yrs), cross-functional scope",
+   "domain": "Consumer devices and AI features, general",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$163K top is in your ok band",
+   "skills": "3+ yrs software dev asked; limited match"
+  },
+  "summary": "Deliver Alexa home-productivity programs across cloud, device software and ML teams.",
+  "level_guess": "TPM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs technical program mgmt",
+   "3+ yrs software dev"
+  ],
+  "flags": [
+   "Below your level"
+  ]
+ },
+ "13054030cfa6": {
+  "fingerprint": "2d6c0c60b2ccc1ce",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 50,
+   "level": 80,
+   "domain": 35,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Senior TPM on fulfilment engineering delivery",
+   "level": "Senior TPM (≈ L6), cross-functional",
+   "domain": "Fulfilment automation; unrelated domain",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$214K top is in your good band",
+   "skills": "Engineering degree and delivery of technical specs"
+  },
+  "summary": "Drive delivery of outbound fulfilment systems across engineering, ops and finance.",
+  "level_guess": "Senior TPM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Technical program mgmt",
+   "Engineering degree",
+   "Spec authoring"
+  ],
+  "flags": [
+   "Engineering-heavy TPM"
+  ]
+ },
+ "3f14c40c17af": {
+  "fingerprint": "13d455f5c7af04c5",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 20,
+   "level": 60,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Sales strategy and operations, not product",
+   "level": "Senior ops manager",
+   "domain": "Ads sales ops; some ads context",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$156.5K top sits in your low band",
+   "skills": "Excel, CRM and comp-systems experience asked"
+  },
+  "summary": "Lead segmentation and planning projects for Amazon Ads sales operations.",
+  "level_guess": "Senior Ops Manager",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Advanced Excel",
+   "CRM/forecasting tooling",
+   "Bachelor's"
+  ],
+  "flags": [
+   "Sales ops role"
+  ]
+ },
+ "6ece77f65a78": {
+  "fingerprint": "d4ef619479e83324",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 85,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core IC PM leading Alexa+ expansion in Canada",
+   "level": "Senior PM (≈ L6), market-level scope",
+   "domain": "Consumer voice AI; general product",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$193.4K top is in your good band",
+   "skills": "User research, roadmap and market work; French locale awareness"
+  },
+  "summary": "Lead Alexa+ product expansion across Canadian English and French markets.",
+  "level_guess": "Senior PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Senior PM experience",
+   "Market and customer research"
+  ],
+  "flags": [
+   "French locale work"
+  ]
+ },
+ "39277d65308d": {
+  "fingerprint": "082f88608a6c13b1",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 50,
+   "level": 92,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Principal TPM on AWS capacity planning, supply chain and finance",
+   "level": "Principal (≈ L7)",
+   "domain": "AWS infrastructure capacity; cloud platform adjacent",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$263.2K top clears your excellent band",
+   "skills": "Hands-on capacity, supply chain and CapEx planning needed"
+  },
+  "summary": "Run demand planning, supply chain and CapEx for AWS's Journal streaming service.",
+  "level_guess": "Principal TPM (≈ L7)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Capacity/supply planning",
+   "Finance partnership",
+   "Hands-on AI tooling"
+  ],
+  "flags": [
+   "Operations-heavy"
+  ]
+ },
+ "1f58be7fc337": {
+  "fingerprint": "8742bad0236a2950",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 20,
+   "level": 80,
+   "domain": 80,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Security assurance consulting, not product",
+   "level": "Senior, leads a team",
+   "domain": "Compliance and risk advising; domain overlap",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$211.6K top is in your good band",
+   "skills": "Needs deep cloud and infrastructure architecture"
+  },
+  "summary": "Lead security assurance and compliance engagements for AWS enterprise customers.",
+  "level_guess": "Senior SA (consulting)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs technical domain",
+   "Infrastructure architecture",
+   "Security assurance"
+  ],
+  "flags": [
+   "Consulting role",
+   "Not product management"
+  ]
+ },
+ "9a1a719a03f5": {
+  "fingerprint": "513a225c63faee85",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 85,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Core IC technical PM owning messaging services roadmap",
+   "level": "Senior PM (≈ L6), owns vision and roadmap",
+   "domain": "Developer/cloud infrastructure platform; adjacent",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$226.5K top is in your good band",
+   "skills": "Technical PM over distributed messaging; deep infra knowledge expected"
+  },
+  "summary": "Own product vision and roadmap for AWS messaging services like Amazon MQ.",
+  "level_guess": "Senior PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Technical PM experience",
+   "Cloud/distributed systems depth"
+  ],
+  "flags": [
+   "Technical depth stretch"
+  ]
+ },
+ "d45bc05c6a13": {
+  "fingerprint": "4af7c028c399ce5f",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 60,
+   "level": 80,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Senior TPM on catalog platform; roadmaps and user stories",
+   "level": "Senior TPM (≈ L6), multi-team programs",
+   "domain": "E-commerce catalog and agentic shopping; commerce overlap",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$214K top is in your good band",
+   "skills": "7+ yrs with engineering and technical program experience"
+  },
+  "summary": "Drive multi-team programs for Amazon's Offers Platform in catalog systems.",
+  "level_guess": "Senior TPM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs working with engineers",
+   "5+ yrs technical program mgmt"
+  ],
+  "flags": [
+   "Engineering-heavy TPM"
+  ]
+ },
+ "283ef998b06d": {
+  "fingerprint": "6867c2740e3a6a28",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 85,
+   "domain": 65,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Core IC PM owning serverless compute products",
+   "level": "Senior PM (≈ L6), 5+ yrs technical PM",
+   "domain": "Cloud compute platform; developer/cloud adjacent",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$226.5K top is in your good band",
+   "skills": "Needs 5+ yrs technical PM and 3+ yrs technical background"
+  },
+  "summary": "Own roadmap and requirements for AWS Serverless Compute products.",
+  "level_guess": "Senior PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs technical PM",
+   "3+ yrs technical background"
+  ],
+  "flags": [
+   "Technical depth stretch"
+  ]
+ },
+ "a6c31646962b": {
+  "fingerprint": "bc2f0348aac053bd",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 55,
+   "level": 65,
+   "domain": 92,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Senior program manager running ML detection programs; not pure product",
+   "level": "Senior PM (6+ yrs), strategy and delivery",
+   "domain": "Brand protection ML detection: direct trust and safety overlap",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$141K top sits in your low band",
+   "skills": "ML detection decisions and metrics match your ads-safety work"
+  },
+  "summary": "Run ML-powered brand protection detection programs at Amazon.",
+  "level_guess": "Senior Program Manager",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "6+ yrs program mgmt",
+   "Data-driven improvement",
+   "ML evaluation partnership"
+  ],
+  "flags": [
+   "Program mgmt, not product"
+  ]
+ },
+ "64e8ab548c20": {
+  "fingerprint": "4a477f94555827be",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 90,
+   "pathway": 65,
+   "pay": 95,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core IC Principal PM owning reporting and measurement products",
+   "level": "Principal (≈ L7), multi-year roadmap and investment priorities",
+   "domain": "Ads measurement and data platform: strong overlap",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "CA$263.2K top clears your excellent band",
+   "skills": "8+ yrs technical PM; roadmap and ads/data work match"
+  },
+  "summary": "Define the multi-year roadmap for Amazon Ads programmatic reporting for advertisers and integrators.",
+  "level_guess": "Principal PM (≈ L7)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs technical PM",
+   "4+ yrs product delivery",
+   "Roadmap strategy"
+  ],
+  "flags": []
+ },
+ "36536dc3f284": {
+  "fingerprint": "4c75979a9055819e",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 45,
+   "level": 40,
+   "domain": 40,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Security TPM for a hardware/software firm, on a 1-year contract",
+   "level": "Mid-level TPM on a fixed term",
+   "domain": "Windows security for chips; adjacent",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "No pay range posted",
+   "skills": "Project mgmt artifacts; limited security engineering match"
+  },
+  "summary": "Drive Windows security initiatives across AMD's product portfolio on a 1-year contract.",
+  "level_guess": "TPM (mid)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "TPM experience",
+   "Security program knowledge"
+  ],
+  "flags": [
+   "Contract role",
+   "1-year term"
+  ]
+ },
+ "a54423079a8d": {
+  "fingerprint": "958d6af08476ef50",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 30,
+   "level": 70,
+   "domain": 25,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Vendor program management for hardware qualification",
+   "level": "Senior program manager",
+   "domain": "Silicon/hardware supply chain; unrelated",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "No pay range posted",
+   "skills": "Vendor audits and NPI ramp; no overlap"
+  },
+  "summary": "Qualify and audit vendors for AMD's hardware programs.",
+  "level_guess": "Senior Program Manager",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "Vendor audit experience",
+   "NPI/ramp readiness"
+  ],
+  "flags": [
+   "Hardware domain",
+   "Onsite audits"
+  ]
+ },
+ "1e818bc3ff43": {
+  "fingerprint": "83bbe0a4f791dd5b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 55,
+   "level": 60,
+   "domain": 45,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Engineering program management for App Store; limited product ownership",
+   "level": "Level unclear, posting is brief",
+   "domain": "App Store platform; commerce adjacent",
+   "pathway": "Large multinational; work permit support inferred, not stated",
+   "pay": "No pay range posted",
+   "skills": "Posting is minimal, requirements not shown"
+  },
+  "summary": "Program-manage engineering delivery for the Apple App Store.",
+  "level_guess": "EPM (level unclear)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Not listed in posting"
+  ],
+  "flags": [
+   "Posting has minimal detail"
+  ]
+ },
+ "c66b4c6ce760": {
+  "fingerprint": "eec737f7eec6e94b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 70,
+   "level": 25,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Product executive, owns portfolio P&L, not IC PM",
+   "level": "VP-level with large org",
+   "domain": "Endpoint security product line; adjacent",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "No pay range posted",
+   "skills": "VP experience and P&L ownership required"
+  },
+  "summary": "Lead Arctic Wolf's Endpoint Security product line strategy and revenue.",
+  "level_guess": "VP Product",
+  "people_mgmt": true,
+  "work_mode": "remote",
+  "must_haves": [
+   "VP-level product leadership",
+   "P&L ownership",
+   "Security market expertise"
+  ],
+  "flags": [
+   "Executive role",
+   "People management"
+  ]
+ },
+ "eaebb713b547": {
+  "fingerprint": "ff0baceff19bbb6b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 90,
+   "level": 75,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "PM bridging product and engineering on customer onboarding",
+   "level": "Senior PM, onboarding scope",
+   "domain": "Managed security services; security adjacent",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "US range only (USD 173-259K); no Canadian range posted",
+   "skills": "Onboarding journey and backlog ownership; you match most"
+  },
+  "summary": "Own the self-service customer onboarding experience across Arctic Wolf's managed security services.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Senior PM experience",
+   "Onboarding/process design",
+   "Cross-functional prioritization"
+  ],
+  "flags": []
+ },
+ "9a7780977c69": {
+  "fingerprint": "c646215d1e71e4fb",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 40,
+   "level": 45,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Technology enablement program role at a retailer",
+   "level": "Mid-senior program manager",
+   "domain": "Retail IT; unrelated",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$100-300K range too wide to trust",
+   "skills": "Enablement programs and change mgmt"
+  },
+  "summary": "Run technology enablement programs at Aritzia.",
+  "level_guess": "Program Manager",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Program management",
+   "Change enablement"
+  ],
+  "flags": [
+   "Very wide pay range"
+  ]
+ },
+ "500b02b40f92": {
+  "fingerprint": "4692d1fd8aba0b55",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 50,
+   "level": 60,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Cyber security TPM managing a roadmap, little product ownership",
+   "level": "Mid-senior TPM",
+   "domain": "Cybersecurity program; adjacent",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$100-300K range too wide to trust",
+   "skills": "Security roadmap coordination; partial match"
+  },
+  "summary": "Manage Aritzia's integrated cybersecurity roadmap across internal teams.",
+  "level_guess": "TPM",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "TPM experience",
+   "Cybersecurity roadmap knowledge"
+  ],
+  "flags": [
+   "Very wide pay range"
+  ]
+ },
+ "98336a3bf687": {
+  "fingerprint": "abb8259191ac496c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 50,
+   "level": 60,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Digital shipping/returns program leadership, some strategy",
+   "level": "Senior PM/Manager, leads a team",
+   "domain": "E-commerce fulfilment experience; commerce-adjacent",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "No pay range posted",
+   "skills": "Omni strategy and customer touchpoints"
+  },
+  "summary": "Lead Aritzia's shipping and returns strategy across digital touchpoints.",
+  "level_guess": "Senior Program Manager",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Program/ops leadership",
+   "E-commerce experience"
+  ],
+  "flags": [
+   "People management"
+  ]
+ },
+ "f22b55e33c1b": {
+  "fingerprint": "496786545b99eb4a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 20,
+   "level": 60,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Solution architecture, not product",
+   "level": "Senior/Solution Architect",
+   "domain": "Retail digital architecture; unrelated",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$100-300K range too wide to trust",
+   "skills": "Enterprise architecture skills required"
+  },
+  "summary": "Design Aritzia's digital architecture.",
+  "level_guess": "Senior SA",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Enterprise architecture"
+  ],
+  "flags": [
+   "Very wide pay range",
+   "Not product management"
+  ]
+ },
+ "98f0f8eda13f": {
+  "fingerprint": "2d53c096bb64a96d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 5,
+   "level": 15,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 15
+  },
+  "reasons": {
+   "role": "Internal learning and enablement program, not product",
+   "level": "Mid-level, 3+ yrs",
+   "domain": "Compliance SaaS company, but L&D work",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$90K top is below your low band",
+   "skills": "Learning program management experience required"
+  },
+  "summary": "Run internal learning programs on a 1-year term at Assent.",
+  "level_guess": "Mid-level",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "3+ yrs learning programs"
+  ],
+  "flags": [
+   "Not product management",
+   "1-year term"
+  ]
+ },
+ "b7c8459ce4ad": {
+  "fingerprint": "e8a0bf66377fea5f",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:40:18+00:00",
+  "subs": {
+   "role": 5,
+   "level": 20,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 15
+  },
+  "reasons": {
+   "role": "Sales enablement learning program, not product",
+   "level": "Mid-level",
+   "domain": "Compliance SaaS company, but enablement work",
+   "pathway": "No sponsorship info in posting; inferred neutral",
+   "pay": "CA$100K top is below your low band",
+   "skills": "Learning/enablement program experience required"
+  },
+  "summary": "Run sales enablement learning programs at Assent.",
+  "level_guess": "Mid-level",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Enablement program experience"
+  ],
+  "flags": [
+   "Not product management"
+  ]
  }
 }
