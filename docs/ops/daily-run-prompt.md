@@ -1,6 +1,6 @@
 # Lodestone daily run: scheduled-task prompt
 
-Paste everything below the line into the scheduled task's instructions (D-056, I-03).
+The daily scheduled task (D-056) follows these steps. It runs in the build session, which has GitHub access (I-03).
 
 ---
 
