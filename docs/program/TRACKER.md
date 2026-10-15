@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-15 · **Current milestone:** M4 (build) · **Overall RAG:** 🟢
 
-**Status summary (2026-10-15).** **P1-S2 (the app) is live for review:** [Lodestone app](https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7) (private) with the 546 real candidates from 188 pulled companies, triage, pipeline, paste inbox, companies and settings, all saved in the app's own database. Fit scores arrive in P1-S3. **Next:** Ayush triages on the iPad (S2 exit), then P1-S3 (profile + scoring).
+**Status summary (2026-10-15).** P1-S2 app live and pinned ([Lodestone](https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7)); pay capture fixed (D-045, D-046). **P1-S3 in progress:** profile built from the CV (app database only), rubric v1.0, scoring pipeline and app score display done; the first full scoring run hit the plan's usage limit and is scheduled to resume 7:00am ET 10-15 (Sonnet sub-agents, 2 at a time). **Next:** calibrate scores against Ayush's triage, close S3, then P1-S4 (paste inbox, pay estimates, LMIA pathway signals).
 
 ---
 
@@ -41,7 +41,7 @@
 | D3.1 | Eng Design Doc | Engineering | M3 | ✅ | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v1: Phase 1 = Claude Code engine + Artifact app |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ✅ | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
 | D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ✅ | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
-| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅ (source index, ~30 adapters, careers-page reader). P1-S2 🟨 in review: [app](https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7) |
+| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 🟦 (scoring run scheduled 10-15 7am ET) |
 | D4.2 | Dogfood and bug bash | Launch | M4 | ⬜ | Ayush | |
 | D5.1 | Launch checklist (privacy, security, ToS, quality) | Launch | M5 | ⬜ | Claude | |
 | D6.1 | Post-launch review and V1.x roadmap | PgM / Product | M6 | ⬜ | Ayush + Claude | |
@@ -145,6 +145,7 @@
 | R-14 | Risk | A browser extension that reads LinkedIn or Wellfound pages could breach their terms, even when the user is looking at the page themselves | Med | Review ToS before building A3d. Fall back to paste URL or paste text (A3a, A3b), which are always available | Claude | Open |
 | I-02 | Issue | Pay ranges written in posting text were not captured (26 of 546 roles had pay) | — | **Fixed 10-15 (D-045):** text parsing, full-posting fetch, honest wording, tests, coverage metric. See [postmortem](../eng/postmortems/2026-10-15-pay-not-captured.md) | Claude | Closed |
 | I-01 | Issue | The environment's network blocked the required domains | — | **Resolved 10-14:** Ayush set Network access to Full. All 10 refresh sources are reachable. www.canada.ca doesn't respond to cloud servers, but it isn't needed by refresh (only browser links) | Ayush | Closed |
+| R-16 | Risk | Claude plan usage limits interrupt large scoring runs (first full run of 543 roles hit the limit) | Med | Score with a lighter model in small, resumable batches; afterwards only new/changed roles are scored each refresh. Upgrade the plan only if limits keep biting | Claude | Open |
 | R-15 | Risk | Coverage: careers sites change layouts or block automated reading | Med | **Mitigated 10-15:** 183 of 210 companies pulled (was 71). Each refresh reports failing sources; a parse that finds nothing is an error, not silence. Workable is rate-limiting this environment (Borrowell, Mila, Nuvei); retry next refresh, else paste. Paste capture (A3) covers the rest | Claude | Open |
 | A-03 | Assumption | The repo stays private. The PRD holds personal immigration and family context | — | Scrub it before any public release (M6) | Claude | Open |
 | DEP-1 | Dependency | Ayush's review time at each gate | — | See Q-13 | Ayush | Open |
@@ -180,6 +181,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | P1-S3 started: profile from CV (app db only), rubric v1.0, scoring pipeline, app score ring and breakdown; scoring run deferred to 7am ET by usage limit (R-16). App pinned to sidebar | Claude |
 | 2026-10-15 | Pay type, equity and source attribution added (D-046) | Claude |
 | 2026-10-15 | Pay capture fixed after RCA (I-02, D-045, postmortem); app shows all ranges with the Canadian one featured | Claude |
 | 2026-10-15 | P1-S2 started: app built on real data and published privately; refresh now exports to it (D-044) | Claude |
