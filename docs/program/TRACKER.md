@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-15 · **Current milestone:** M4 (build) · **Overall RAG:** 🟢
 
-**Status summary (2026-10-15).** **P1-S3 scoring done:** all 543 open candidate roles scored against Ayush's profile (rubric v1.0, six sub-scores with reasons) and live in the [app](https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7); both roles Ayush marked Interested rank in the top fifth (29th and 99th). **Next:** Ayush triages 20–30 roles to calibrate (S2/S3 exit), then P1-S4 (paste inbox, pay estimates, LMIA pathway signals).
+**Status summary (2026-10-15).** **P1-S3 done (D-049):** 543 roles scored with explanations, freshness factor added; Ayush's Interested picks rank at the top (5 of 9 in the top 7). **Now: P1-S4**, starting with immigration-pathway signals from ESDC's positive-LMIA employer lists, then paste inbox, pay estimates and the Later/closed checks.
 
 ---
 
@@ -41,7 +41,7 @@
 | D3.1 | Eng Design Doc | Engineering | M3 | ✅ | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v1: Phase 1 = Claude Code engine + Artifact app |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ✅ | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
 | D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ✅ | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
-| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 🟨 (543 roles scored; calibration with Ayush's triage pending) |
+| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 ✅ (calibrated on 11 triaged roles, D-049), P1-S4 🟦 (pathway signals first) |
 | D4.2 | Dogfood and bug bash | Launch | M4 | ⬜ | Ayush | |
 | D5.1 | Launch checklist (privacy, security, ToS, quality) | Launch | M5 | ⬜ | Claude | |
 | D6.1 | Post-launch review and V1.x roadmap | PgM / Product | M6 | ⬜ | Ayush + Claude | |
@@ -98,6 +98,7 @@
 | D-046 | 10-15 | Each pay range carries its **type** from the posting's wording (base, base + bonus, OTE, total compensation, not stated) and whether the employer calls it an estimate. Non-base ranges get a small card tag ("incl. bonus") and rank after base ranges in the pay sort. **Equity** is shown when mentioned: the amount if given, else "Offered" or "May be offered (amount not stated)"; diversity-statement and finance uses of "equity" are ignored. Every pay section names its source (company, job system, date read, link) and shows the exact wording with numbers highlighted | Ayush review of the Ratehub role | Ayush |
 | D-047 | 10-15 | Fit scoring runs in-session with Claude (Sonnet sub-agents, 2 batches at a time, results saved per batch) against rubric v1.0; only new or changed roles are re-scored on later refreshes. Inferred pathway scores are normalized per company | Usage-limit interruption (R-16) and cross-batch consistency | Claude |
 | D-048 | 10-15 | **Freshness** joins the fit score as a 7th factor (default 10%), computed by the app daily from the posting date (≤14 days 100 … >90 days 5; undated roles use first-seen, capped at 70). Optional Settings cut-off hides roles older than N days (off by default). Postings over 45 days show their age in amber | Ayush: a 50-day-old posting is likely filled | Ayush |
+| D-049 | 10-15 | Freshness stays as designed (no exception for evergreen postings that are still live). **P1-S3 closed:** of Ayush's 9 Interested picks, 5 rank in the top 7 and all in the top 20%; the one "Not for me" (50-day-old posting) dropped from #8 to #29 with freshness | Calibration on 11 triaged roles | Ayush |
 
 ## 4. Open questions
 
@@ -183,6 +184,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | P1-S3 closed after calibration (D-049); P1-S4 started | Claude |
 | 2026-10-15 | Freshness factor and old-posting cut-off added (D-048); iCIMS posting dates captured | Claude |
 | 2026-10-15 | All 543 roles scored (D-047); top matches include Workday, Microsoft, Amazon, StackAdapt, Zip, Okta Principal/Staff PM roles. Scores live in the app | Claude |
 | 2026-10-15 | P1-S3 started: profile from CV (app db only), rubric v1.0, scoring pipeline, app score ring and breakdown; scoring run deferred to 7am ET by usage limit (R-16). App pinned to sidebar | Claude |
