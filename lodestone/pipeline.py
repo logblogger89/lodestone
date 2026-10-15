@@ -165,6 +165,7 @@ def refresh(only: str | None = None, log=print) -> dict:
             "region": geo.region, "remote": geo.remote, "cec_credit": geo.cec_credit,
             "workplace": p.workplace, "department": p.department, "posted_at": p.posted_at,
             "pay": pay.resolve(p.pay, p.description, p.location_raw, geo.region),
+            "pay_field": p.pay,               # raw salary data from the job system, kept so pay can be re-read
             "pay_checked": bool(p.description or p.pay),
             "role_tier": role.tier, "role_excluded": role.excluded,
             "people_mgmt_hint": role.people_mgmt_hint, "role_reason": role.reason,
@@ -178,7 +179,7 @@ def refresh(only: str | None = None, log=print) -> dict:
         if len(jobs) > before:
             job["first_seen"] = seen_at
             stats["new"] += 1
-        for k in ("title", "location", "region", "remote", "pay", "pay_checked", "role_tier", "role_excluded",
+        for k in ("title", "location", "region", "remote", "pay", "pay_field", "pay_checked", "role_tier", "role_excluded",
                   "people_mgmt_hint", "role_reason", "workplace", "posted_at"):
             job[k] = rec[k]
         if rec["description"]:
@@ -194,7 +195,7 @@ def refresh(only: str | None = None, log=print) -> dict:
             if pagereader.is_bot_check(job["description"]):
                 job["description"] = ""
                 continue
-            job["pay"] = pay.resolve(None, job["description"], job.get("location", ""), job.get("region"))
+            job["pay"] = pay.resolve(job.get("pay_field"), job["description"], job.get("location", ""), job.get("region"))
             job["pay_checked"] = True
 
     # Liveness: only count a miss when that company's sources were pulled successfully this run.
@@ -236,7 +237,10 @@ def refresh(only: str | None = None, log=print) -> dict:
         "new_jobs": stats["new"], "went_dead": stats["went_dead"], "detail_errors": stats["detail_errors"],
         "multi_source_jobs": sum(1 for j in jobs.values() if len(j["sightings"]) > 1),
         "candidates": len(candidates),
-        "pay_found": sum(1 for j in jobs.values() if j["live"] and j.get("role_tier") and not j.get("role_excluded") and j.get("pay")),
+        "pay_found": sum(1 for j in jobs.values() if j["live"] and j.get("role_tier") and not j.get("role_excluded")
+                         and (j.get("pay") or {}).get("ranges")),
+        "equity_mentioned": sum(1 for j in jobs.values() if j["live"] and j.get("role_tier") and not j.get("role_excluded")
+                                and (j.get("pay") or {}).get("equity")),
         "pay_canada": sum(1 for j in jobs.values() if j["live"] and j.get("role_tier") and not j.get("role_excluded")
                           and j.get("pay") and j["pay"].get("primary") is not None),
         "by_tier": dict(Counter(c["role_tier"] for c in candidates)),

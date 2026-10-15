@@ -33,3 +33,6 @@ Pay was read only from structured salary fields, which only a few job systems ha
 - [x] Report coverage for every field the UI shows (pay now; extend to work mode and level in S3).
 - [x] Never label missing data as a fact about the employer; distinguish "not stated" from "not checked".
 - [x] Runbook rule: when a field is unexpectedly empty for most roles, investigate before reporting.
+
+## Follow-up (same day, D-046)
+Ayush's review of the Ratehub role found two more gaps: the evidence panel didn't say *where* a number came from, and a bonus-inclusive range was shown under a "base salary" heading. Fixed by classifying each range's pay type from the posting's wording (base, base + bonus, OTE, total, not stated, plus "employer's estimate"), naming the source (company, job system, date read, link) above the exact quoted wording, ranking non-base ranges after base ones in the pay sort, and adding equity (amount when given, otherwise offered / may be offered).

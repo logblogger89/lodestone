@@ -49,3 +49,40 @@ class TestPay(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+from lodestone.pay import equity_from_text, pay_kind  # noqa: E402
+
+
+class TestPayKindAndEquity(unittest.TestCase):
+    def test_ratehub_bonus_inclusive(self):
+        r = resolve(None, "The estimated compensation range for this position, inclusive of a annual performance bonus "
+                          "is $125,000 - 175,000.", "Toronto", "GTA")["ranges"][0]
+        self.assertEqual((r["kind"], r["estimated"], r["max"]), ("base_bonus", True, 175000))
+
+    def test_kinds(self):
+        self.assertEqual(pay_kind("The base salary range for this role is $1 - $2"), "base")
+        self.assertEqual(pay_kind("On-target earnings (OTE) of $150,000 - $200,000"), "ote")
+        self.assertEqual(pay_kind("$96,900 - $136,800 CAD"), "unspecified")
+        r = resolve(None, "Base pay range\n$96,900 - $136,800 CAD", "Toronto", "GTA")["ranges"][0]
+        self.assertEqual(r["kind"], "base")                      # heading on the line above
+
+    def test_equity(self):
+        self.assertIsNone(equity_from_text("We are committed to diversity, equity and inclusion. Pay equity matters."))
+        self.assertIsNone(equity_from_text("Experience with equity research. Salary reflects internal equity."))
+        self.assertEqual(equity_from_text("Competitive salary, bonus and equity.")["certainty"], "offered")
+        self.assertEqual(equity_from_text("This role may be eligible for equity awards.")["certainty"], "possible")
+        a = equity_from_text("You'll receive an RSU grant valued at $80,000 - $120,000 over four years.")["amounts"][0]
+        self.assertEqual((a["min"], a["unit"]), (80000, "currency"))
+        self.assertEqual(equity_from_text("Equity: 0.05% - 0.15% in stock options.")["amounts"][0]["unit"], "percent")
+
+    def test_equity_grant_is_not_salary(self):
+        r = resolve(None, "You'll receive an RSU grant valued at $80,000 - $120,000 over four years.", "Toronto", "GTA")
+        self.assertEqual(r["ranges"], [])
+        self.assertTrue(r["equity"]["offered"])
+
+    def test_base_pay_sentence_mentioning_equity_is_not_an_equity_amount(self):
+        r = resolve(None, "The expected base pay range for this position in the Toronto area is CAD $163,000 - CAD $203,750, "
+                          "not inclusive of potential equity offering, bonus or benefits.", "Toronto", "GTA")
+        self.assertEqual(r["ranges"][0]["max"], 203750)
+        self.assertEqual(r["equity"]["amounts"], [])

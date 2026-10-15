@@ -81,6 +81,78 @@ US_CITIES = ["New York", "San Francisco", "Seattle", "Los Angeles", "Irvine", "M
              "Boston", "Chicago", "Austin", "Denver", "Atlanta", "Dallas", "Bellevue", "Sunnyvale", "Mountain View"]
 
 
+def pay_kind(sentence: str) -> str:
+    """What a range covers, from the posting's own words: base | base_bonus | ote | total | unspecified."""
+    low = sentence.lower()
+    if re.search(r"on[- ]target|\bote\b|including commission|incl\.? commission|plus commission", low):
+        return "ote"
+    if re.search(r"total (target )?(cash|compensation)|inclusive of (an? )?(annual )?(performance )?bonus|"
+                 r"includ(es|ing) (an? )?(annual )?(performance )?bonus|base (salary )?(plus|\+|and) (target )?bonus|"
+                 r"salary and bonus|incl\.? bonus", low):
+        return "total" if re.search(r"equity|stock|rsu", low) and "total" in low else "base_bonus"
+    if re.search(r"\bbase\b|salary range|annual salary|base pay|hiring range|starting salary", low):
+        return "base"
+    return "unspecified"
+
+
+def _kind_in_context(sentence: str, context: str) -> str:
+    k = pay_kind(sentence)
+    return k if k != "unspecified" or not context else pay_kind(context)
+
+
+def _estimated(sentence: str) -> bool:
+    return bool(re.search(r"\bestimated\b|\bexpected\b|approximate|anticipated", sentence, re.I))
+
+
+# ---------- equity ----------
+_DEI = re.compile(r"(diversity|inclusion|employment|pay|gender|racial|health|social|home|brand)[, ]+(and |& )?equity|"
+                  r"equity[, ]+(diversity|inclusion|and inclusion|& inclusion)|\bequity[- ]deserving|\bpay equity|"
+                  r"private equity|equity (research|markets?|capital markets|trading|derivatives|analyst|portfolio|investor|fund)|"
+                  r"fixed income and equit|home equity|internal equity|equity (and|&) fairness|equitabl\\w*", re.I)
+_EQ_WORD = re.compile(r"\b(equity|stock options?|share options?|rsus?|restricted stock|esop|employee stock|stock grants?|"
+                      r"ownership stake|options? grant)\b", re.I)
+_PCT = re.compile(r"(\d+(?:\.\d+)?)\s?%\s*(?:-|–|—|to)\s*(\d+(?:\.\d+)?)\s?%")
+_SHARES = re.compile(r"(\d{1,3}(?:,\d{3})+|\d{3,7})\s*(?:-|–|—|to)\s*(\d{1,3}(?:,\d{3})+|\d{3,7})\s+(?:stock options|options|shares|rsus)", re.I)
+
+
+def equity_from_text(text: str) -> dict | None:
+    """Equity on offer: amounts when the posting states them, else just that it is offered.
+    Diversity statements ("diversity, equity and inclusion", "pay equity") and finance jargon don't count."""
+    found, amounts = None, []
+    for s in _sentences(text or ""):
+        clean = _DEI.sub(" ", s)
+        if not _EQ_WORD.search(clean):
+            continue
+        if re.search(r"\b(no|not eligible for|does not include|excluding)\b[^.]{0,30}(equity|stock|options)", clean, re.I):
+            continue
+        if found is None or (not re.search(r"\bmay\b|eligible|applicable|potential", s, re.I)
+                             and re.search(r"\bmay\b|eligible|applicable|potential", found, re.I)):
+            found = s[:400]                                   # prefer a definite statement over a hedged one
+        for m in _PCT.finditer(clean):
+            a, b = float(m.group(1)), float(m.group(2))
+            if 0 < a <= b <= 10:
+                amounts.append({"min": a, "max": b, "unit": "percent", "quote": s[:400]})
+        for m in _SHARES.finditer(clean):
+            a, b = _amount(m.group(1)), _amount(m.group(2))
+            if a and b and a <= b:
+                amounts.append({"min": a, "max": b, "unit": "shares", "quote": s[:400]})
+        if re.search(r"equity|rsu|stock|grant", clean, re.I) and not re.search(r"salary|base pay|base compensation|pay range", clean, re.I):
+            for m in _RANGE.finditer(clean):
+                if not any(m.group(g) for g in ("c1", "c2", "c3", "c4")):
+                    continue
+                a, b = _amount(m.group("a")), _amount(m.group("b"))
+                if a and b and 1000 <= a <= b and re.search(r"(equity|rsu|stock|grant)[^.]{0,60}" + re.escape(m.group(0)[:6])
+                                                          + r"|" + re.escape(m.group(0)[-6:]) + r"[^.]{0,40}(equity|rsu|stock|grant)",
+                                                          clean, re.I):
+                    amounts.append({"min": round(a), "max": round(b), "unit": "currency",
+                                    "currency": _currency(m.group("c1"), m.group("c2"), m.group("c3"), m.group("c4"), sentence=s),
+                                    "quote": s[:400]})
+    if not found:
+        return None
+    maybe = bool(re.search(r"\bmay\b|eligible|where applicable|as applicable|potential", found, re.I)) and not amounts
+    return {"offered": True, "certainty": "possible" if maybe else "offered", "amounts": amounts, "quote": found}
+
+
 def _interval(sentence: str, lo: float) -> str:
     low = sentence.lower()
     if re.search(r"per hour|/\s?h(ou)?r|hourly|an hour", low) or lo < 300:
@@ -110,12 +182,19 @@ def _sentences(text: str):
 def from_text(text: str) -> list[dict]:
     out, seen = [], set()
     prev = (None, None)
+    recent: list[str] = []                                    # the lines just above: headings like "Base pay range"
     for s in _sentences(text or ""):
+        context = " ".join(recent[-2:])
+        recent.append(s)
         here = _label(s)
         if not re.search(r"\d", s) or not re.search(r"\$|USD|CAD|salary|compensation|pay|range|rate|wage", s, re.I):
             prev = here if here[0] else prev
             continue
         label, canada = here
+        if re.search(r"\b(rsus?|restricted stock|stock options?|equity grant|share grant|shares)\b", s, re.I) and \
+                not re.search(r"salary|base pay|base compensation", s, re.I):
+            prev = here if here[0] else prev
+            continue                                             # an equity grant, not cash pay
         if label is None and re.search(r"\b(those|these|above|listed)\b", s, re.I):
             label, canada = prev                                  # "...in any of those locations"
         prev = here if here[0] else prev
@@ -140,7 +219,9 @@ def from_text(text: str) -> list[dict]:
             if is_ca and not label:
                 label = "Canada"
             out.append({"min": round(lo), "max": round(hi), "currency": cur, "interval": iv,
-                        "label": label, "canada": is_ca, "quote": s[:300]})
+                        "label": label, "canada": is_ca, "kind": _kind_in_context(s, context),
+                        "estimated": _estimated(s) or _estimated(context),
+                        "quote": s[:400]})
     return out
 
 
@@ -178,18 +259,27 @@ def _norm_field(r: dict, location: str) -> dict:
     canada = True if (cur == "CAD" or any(w in low for w in CANADA)) else (False if cur == "USD" or any(w in low for w in US) else None)
     if canada and not label:
         label = "Canada"
+    q = r.get("quote") or r.get("summary") or ""
     return {"min": r.get("min"), "max": r.get("max"), "currency": cur, "interval": iv, "label": label,
-            "canada": canada, "quote": r.get("quote") or r.get("summary") or ""}
+            "canada": canada, "kind": r.get("kind") or ("base" if re.search(r"base", q, re.I) else "unspecified"),
+            "estimated": False, "quote": q}
 
 
 def resolve(structured: dict | None, description: str, location: str, region: str | None) -> dict | None:
-    """Structured salary fields win; otherwise ranges read from the description text."""
+    """Structured salary fields win; otherwise ranges read from the description text. Equity comes from
+    the job system's equity field when present, else from the text."""
+    out = None
     if structured:
         raw = structured.get("ranges") or ([structured] if (structured.get("min") or structured.get("max")) else [])
         ranges = [_norm_field(r, location) for r in raw if r.get("min") or r.get("max")]
         if ranges:
-            return {"ranges": ranges, "primary": choose_primary(ranges, region), "source": "field"}
-    ranges = from_text(description)
-    if not ranges:
-        return None
-    return {"ranges": ranges, "primary": choose_primary(ranges, region), "source": "text"}
+            out = {"ranges": ranges, "primary": choose_primary(ranges, region), "source": "field"}
+    if out is None:
+        ranges = from_text(description)
+        if ranges:
+            out = {"ranges": ranges, "primary": choose_primary(ranges, region), "source": "text"}
+    equity = (structured or {}).get("equity") or equity_from_text(description)
+    if equity:
+        out = out or {"ranges": [], "primary": None, "source": None}
+        out["equity"] = equity
+    return out

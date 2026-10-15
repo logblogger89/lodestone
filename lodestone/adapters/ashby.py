@@ -19,7 +19,7 @@ class AshbyAdapter:
         """Every salary tier the employer lists (often one per country), so the Canadian one can be featured."""
         if not comp:
             return None
-        ranges = []
+        ranges: list = []
         for t in comp.get("compensationTiers") or []:
             for c in t.get("components") or []:
                 if (c.get("compensationType") or "").lower() == "salary" and (c.get("minValue") or c.get("maxValue")):
@@ -32,7 +32,22 @@ class AshbyAdapter:
                     ranges.append({"min": c.get("minValue"), "max": c.get("maxValue"), "currency": c.get("currencyCode"),
                                    "interval": c.get("interval"), "label": None,
                                    "quote": comp.get("compensationTierSummary") or ""})
-        return {"ranges": ranges, "posted": True} if ranges else None
+        equity = None
+        for t in (comp.get("compensationTiers") or []) + [{"components": comp.get("summaryComponents") or []}]:
+            for c in t.get("components") or []:
+                kind = (c.get("compensationType") or "").lower()
+                if kind.startswith("equity"):
+                    equity = equity or {"offered": True, "amounts": [], "quote": c.get("summary") or "Offers Equity"}
+                    if c.get("minValue") or c.get("maxValue"):
+                        equity["amounts"].append({"min": c.get("minValue"), "max": c.get("maxValue"),
+                                                  "unit": "percent" if "percent" in kind else "currency",
+                                                  "currency": c.get("currencyCode"), "label": t.get("title"),
+                                                  "quote": c.get("summary") or ""})
+        for r in ranges:
+            r["kind"] = "base"                       # Ashby's Salary component is base pay
+        if not ranges and not equity:
+            return None
+        return {"ranges": ranges, "posted": True, "equity": equity}
 
     def parse(self, payload: dict, company: str, slug: str) -> list[Posting]:
         out = []

@@ -95,6 +95,7 @@
 | D-043 | 10-15 | **Careers-page reader** is the fallback for companies with no feed: Lodestone saves the page as text and Claude reads the jobs from it during `/refresh-jobs` (covered by the subscription). Applies to Vidyard, Autoverify, Digitail, Taalas. Sites that block automated visitors (Indeed, WestJet, Definity, Resolver, Ross Video, Dayforce) stay paste-only; bot checks are never bypassed | Ayush asked whether careers pages can be read directly | Ayush |
 | D-044 | 10-15 | App data layout: refresh writes jobs as 8 bucket documents plus company and freshness documents in one database write; the app owns triage, settings and the paste inbox. Only the owner can write. Until scoring (S3), "Best match" = role tier, then preferred regions, then newest | One write per refresh; Claude reads triage to learn | Claude |
 | D-045 | 10-15 | **Pay:** read every pay range from the posting (salary field or description text), keep all regions, feature the Canadian one (job's city/province first). Card shows the Canadian range plus "+N US"; detail lists all ranges with the source sentence. "No pay in posting" only when the full posting was read | Ayush's RCA request (postmortem 2026-10-15) | Ayush |
+| D-046 | 10-15 | Each pay range carries its **type** from the posting's wording (base, base + bonus, OTE, total compensation, not stated) and whether the employer calls it an estimate. Non-base ranges get a small card tag ("incl. bonus") and rank after base ranges in the pay sort. **Equity** is shown when mentioned: the amount if given, else "Offered" or "May be offered (amount not stated)"; diversity-statement and finance uses of "equity" are ignored. Every pay section names its source (company, job system, date read, link) and shows the exact wording with numbers highlighted | Ayush review of the Ratehub role | Ayush |
 
 ## 4. Open questions
 
@@ -179,6 +180,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | Pay type, equity and source attribution added (D-046) | Claude |
 | 2026-10-15 | Pay capture fixed after RCA (I-02, D-045, postmortem); app shows all ranges with the Canadian one featured | Claude |
 | 2026-10-15 | P1-S2 started: app built on real data and published privately; refresh now exports to it (D-044) | Claude |
 | 2026-10-15 | Careers-page reader added (D-043): 4 more companies pulled; 6 bot-protected sites confirmed paste-only | Claude |
