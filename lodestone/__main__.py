@@ -34,6 +34,9 @@ def main(argv=None) -> int:
     mk.add_argument("target", help="job id, or words from company + title (fetch); folder of saved requests (pending)")
     mk.add_argument("level", nargs="?", help="company level that matches the role (add)")
     mk.add_argument("note", nargs="?", default="", help="why this level (add)")
+    rp = sub.add_parser("report", help="save the daily run report for the app and the repo")
+    rp.add_argument("action", choices=["save"])
+    rp.add_argument("file", help="report JSON written by Claude")
     sub.add_parser("export", help="package jobs, companies and freshness for the app's database")
     sub.add_parser("index", help="rewrite data/sources/README.md, the readable source index")
     a = ap.parse_args(argv)
@@ -61,6 +64,9 @@ def main(argv=None) -> int:
     elif a.cmd == "signals":
         from . import signals
         out = signals.load(log=log)
+    elif a.cmd == "report":
+        from . import report
+        out = report.save(json.load(open(a.file)))
     elif a.cmd == "market":
         from . import market
         if a.action == "fetch":

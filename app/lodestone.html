@@ -91,6 +91,18 @@ details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
 .est-pay{color:var(--muted);font-weight:400}
 .payrow.est-row{border:1px dashed var(--warn);border-radius:8px}
 .payrow.mkt-row{border:1px solid var(--line);border-radius:8px}
+.rbanner{display:block;width:100%;text-align:left;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;background:var(--surface);padding:12px 14px;margin:0 0 14px;cursor:pointer;color:var(--fg)}
+.rbanner small{display:block;color:var(--muted);margin-top:4px}
+.report h3{margin:18px 0 6px;font-size:14px}
+.report ul{margin:0;padding-left:18px}
+.report li{margin:3px 0}
+.report .stats{display:flex;flex-wrap:wrap;gap:6px 16px;color:var(--muted);font-size:13px;margin:6px 0 4px}
+.report .stats strong{color:var(--fg);font-family:var(--font-mono)}
+.report .actions{border:1px solid var(--warn);border-radius:8px;padding:8px 12px;margin-top:12px}
+.archive details{border-top:1px solid var(--line);padding:10px 0}
+.archive summary{cursor:pointer}
+.archive h2{font-family:var(--font-display);font-size:18px;margin:22px 0 4px}
+.report button.link{border:0;background:none;padding:0;text-align:left;cursor:pointer;font-weight:600;color:var(--accent)}
 .kind{font-family:var(--font-body);font-size:11px;font-weight:600;color:var(--warn);background:var(--warn-soft);border-radius:4px;padding:1px 5px;margin-left:6px}
 .payrow .sub{display:block;font-size:11px;color:var(--muted);font-weight:400}
 .payrow.eq{border-top:1px dashed var(--line);border-radius:0;margin-top:4px}
@@ -173,8 +185,8 @@ kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);bor
   .app{grid-template-columns:1fr}
   .rail{display:none}
   .main{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-  .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:6px max(6px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(6px,env(safe-area-inset-left,0px));z-index:15}
-  .tabbar button{border:0;background:none;min-height:48px;font-size:12px;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer}
+  .tabbar{display:grid;grid-template-columns:repeat(6,1fr);position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:6px max(6px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(6px,env(safe-area-inset-left,0px));z-index:15}
+  .tabbar button{border:0;background:none;min-height:48px;font-size:11px;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer}
   .tabbar button[aria-current="page"]{color:var(--accent);font-weight:600}
 }
 @media (max-width: 560px){
@@ -194,6 +206,7 @@ kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);bor
     <button class="nav" data-view="digest">Digest <span class="count" id="nc-digest"></span></button>
     <button class="nav" data-view="pipeline">Pipeline <span class="count" id="nc-pipe"></span></button>
     <button class="nav" data-view="add">Add job</button>
+    <button class="nav" data-view="reports">Reports</button>
     <button class="nav" data-view="companies">Companies</button>
     <button class="nav" data-view="settings">Settings</button>
   </nav>
@@ -202,6 +215,7 @@ kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);bor
     <button data-view="digest">Digest</button>
     <button data-view="pipeline">Pipeline</button>
     <button data-view="add">Add</button>
+    <button data-view="reports">Reports</button>
     <button data-view="companies">Companies</button>
     <button data-view="settings">Settings</button>
   </nav>
@@ -224,6 +238,7 @@ const NOT_REASONS = ["Level too junior","Not my domain","Location","People manag
 const DEFAULT_PREFS = {
   regions:["GTA","Waterloo Region","Remote-Canada"], other_regions:true, tiers:["Core","Adjacent","Stretch"],
   exclude_people_mgmt:true, include_no_pay:true, digest_size:20, later_days:7, max_age_days:0,
+  report_days:14,
   weights:{role:22,level:18,domain:18,pathway:14,pay:9,skills:9,freshness:10}
 };
 const DEFAULT_PREFS_W = DEFAULT_PREFS.weights;
@@ -246,7 +261,7 @@ const FRESH_LABEL = {jobs:"Job pulls (all sources)", source_index:"Source index"
 /* ---------- state ---------- */
 const S = {
   db:null, ready:false, offline:false, canWrite:true,
-  jobs:{}, triage:{}, prefs:{...DEFAULT_PREFS}, companies:[], freshness:{}, inbox:[], mreq:{},
+  jobs:{}, triage:{}, prefs:{...DEFAULT_PREFS}, companies:[], freshness:{}, inbox:[], mreq:{}, reports:[],
   view:"digest", open:null, sel:0, show:"todo", region:"preferred", q:"", tierOn:new Set(TIERS), sort:"best",
   coQ:"", coStatus:"all", expanded:false, lastVisit:null, pendingReasons:null
 };
@@ -438,6 +453,7 @@ async function boot(){
   db.doc("settings/prefs").onSnapshot(d=>{S.prefs={...DEFAULT_PREFS,...(d.exists?d.data():{})};render()},fail);
   db.doc("profile/main").onSnapshot(d=>{S.profile=d.exists?d.data():null;render()},fail);
   db.collection("inbox").onSnapshot(snap=>{S.inbox=snap.docs.map(d=>({id:d.id,...d.data()}));render()},fail);
+  db.collection("reports").onSnapshot(snap=>{S.reports=snap.docs.map(d=>d.data()).filter(r=>r&&r.date).sort((a,b)=>b.date.localeCompare(a.date));render()},fail);
   db.collection("market_req").onSnapshot(snap=>{const m={};snap.docs.forEach(d=>m[d.id]=d.data());S.mreq=m;render()},fail);
   window.addEventListener("pagehide",()=>lsSet("lastVisit",Date.now()));
 }
@@ -530,6 +546,31 @@ function card(j,i){
     <div class="triage">${triageBtns(j)}</div>
   </article>`;
 }
+/* ---------- daily run reports (D-057) ---------- */
+const STAT_LABELS=[["new","new roles"],["closed","closed"],["scored","scored"],["unscored","still to score"],["open_roles","open roles tracked"],["failed_sources","sources failed"]];
+const reportDate=r=>new Date(r.date+"T12:00:00").toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});
+function reportStats(r){const st=r.stats||{};return STAT_LABELS.filter(([k])=>st[k]!=null&&(st[k]>0||k==="new")).map(([k,l])=>`<span><strong>${+st[k]}</strong> ${l}</span>`).join("")}
+function reportBody(r){
+  const top=(r.top||[]).map(t=>`<li>${t.id&&S.jobs[t.id]?`<button class="link" data-open="${esc(t.id)}">${esc(t.company)}: ${esc(t.title)}</button>`:`${esc(t.company)}: ${esc(t.title)}`}${t.fit!=null?` <span class="mono">${esc(String(t.fit))}</span>`:""}${t.pay?` · ${esc(t.pay)}`:""}${t.why?`<br><span class="note">${esc(t.why)}</span>`:""}</li>`).join("");
+  return `<div class="report"><div class="stats">${reportStats(r)}</div>
+    ${top?`<h3>Top new matches</h3><ul>${top}</ul>`:""}
+    ${(r.sections||[]).map(s=>`<h3>${esc(s.title)}</h3>${s.items.length?`<ul>${s.items.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>`:`<p class="note">Nothing today.</p>`}`).join("")}
+    ${(r.actions||[]).length?`<div class="actions"><h3>Needs you</h3><ul>${r.actions.map(a=>`<li>${esc(a)}</li>`).join("")}</ul></div>`:""}</div>`;
+}
+function reportBanner(){
+  const r=S.reports[0]; if(!r) return "";
+  const age=(Date.now()-new Date(r.date+"T12:00:00"))/DAY; if(age>2) return "";
+  return `<button class="rbanner" data-view="reports"><strong>Daily report · ${esc(reportDate(r))}</strong> ${esc(r.headline)}<small>${(r.actions||[]).length?`${r.actions.length} thing${r.actions.length>1?"s":""} need${r.actions.length>1?"":"s"} you · `:""}Read the report →</small></button>`;
+}
+function viewReports(){
+  const n=+S.prefs.report_days||14, cutoff=Date.now()-n*DAY;
+  const [latest,...rest]=S.reports, past=rest.filter(r=>new Date(r.date+"T12:00:00")>=cutoff);
+  const body=!latest?`<div class="empty"><h2>No reports yet</h2><p>The daily run posts a report here every morning around 7am New York time.</p></div>`
+    :`<section class="panel"><h4>${esc(reportDate(latest))}</h4><p><strong>${esc(latest.headline)}</strong></p>${reportBody(latest)}</section>
+      <section class="archive"><h2>Archive <span class="note">last ${n} days</span></h2>
+      ${past.length?past.map(r=>`<details><summary><strong>${esc(reportDate(r))}</strong> · ${esc(r.headline)}</summary>${reportBody(r)}</details>`).join(""):`<p class="note">Earlier reports appear here. Change how many days to keep in view in Settings.</p>`}</section>`;
+  return `<div class="topbar"><h1>Reports</h1></div>${body}`;
+}
 function viewDigest(){
   const all=visible(), n=S.prefs.digest_size||20;
   const fresh=all.filter(isNew), rest=all.filter(j=>!isNew(j));
@@ -552,7 +593,7 @@ function viewDigest(){
       ${more.length?(S.expanded?`<div class="section-label">Earlier</div>${more.map((j,i)=>card(j,first.length+i)).join("")}`
         :`<button class="btn more" data-act="expand">Show ${more.length} more</button>`):""}
     </div>`;
-  return `<div class="topbar"><h1>Digest</h1><span class="sp"></span>${freshChip()}</div>
+  return `<div class="topbar"><h1>Digest</h1><span class="sp"></span>${freshChip()}</div>${reportBanner()}
   <div class="summary"><span><strong class="mono">${counts.todo}</strong> to triage</span><span>${counts.interested||0} interested</span><span>${counts.later||0} later</span><span>${live.length} open roles tracked</span></div>
   <div class="chips" role="group" aria-label="Show">${showTabs.map(([k,l])=>`<button class="chip toggle" data-show="${k}" aria-pressed="${S.show===k}">${l}</button>`).join("")}</div>
   <div class="filters">
@@ -699,6 +740,7 @@ function viewSettings(){
   <section class="panel"><h4>Digest</h4>
     <div class="grid2"><div class="field"><label for="dsize">Roles in the digest (1–100)</label><input type="number" id="dsize" min="1" max="100" value="${+p.digest_size||20}"></div>
     <div class="field"><label for="ldays">"Later" roles come back after (days)</label><input type="number" id="ldays" min="1" max="60" value="${+p.later_days||7}"></div>
+    <div class="field"><label for="rdays">Reports archive shows the last (days)</label><input type="number" id="rdays" min="1" max="90" value="${+p.report_days||14}"></div>
     <div class="field"><label for="maxage">Hide roles posted more than this many days ago (0 shows all)</label><input type="number" id="maxage" min="0" max="365" value="${+p.max_age_days||0}"></div></div>
   </section>
   <section class="panel"><h4>Advanced: fit-score weights</h4>
@@ -729,7 +771,7 @@ function render(){
   $("#nc-digest").textContent=S.ready&&todo?String(todo):"";
   $("#nc-pipe").textContent=String(Object.values(S.triage).filter(t=>t&&t.stage).length||"");
   const active=document.activeElement, keepId=active&&active.id, caret=active&&active.selectionStart;
-  const v={digest:viewDigest,pipeline:viewPipeline,add:viewAdd,companies:viewCompanies,settings:viewSettings}[S.view]||viewDigest;
+  const v={digest:viewDigest,pipeline:viewPipeline,add:viewAdd,reports:viewReports,companies:viewCompanies,settings:viewSettings}[S.view]||viewDigest;
   // keep unsaved settings edits and the paste box while live data re-renders
   if(S.view==="settings"&&document.getElementById("dsize")&&S._editingPrefs) {} else $("#view").innerHTML=v();
   if(keepId){const el=document.getElementById(keepId);if(el&&el!==active){el.focus();try{el.setSelectionRange(caret,caret)}catch{}}}
@@ -789,7 +831,7 @@ async function savePrefs(){
   const weights={};SUBS.forEach(k=>weights[k]=Math.round(raw[k]*100/tot));
   const clamp=(x,a,b,d)=>{x=Math.round(+x);return isFinite(x)?Math.min(b,Math.max(a,x)):d};
   const body={regions,tiers:tiers.length?tiers:TIERS,other_regions:val("other").checked,exclude_people_mgmt:val("xpm").checked,
-    include_no_pay:val("nopay").checked,digest_size:clamp(val("dsize").value,1,100,20),later_days:clamp(val("ldays").value,1,60,7),max_age_days:clamp(val("maxage").value,0,365,0),weights,updated_at:new Date().toISOString()};
+    include_no_pay:val("nopay").checked,digest_size:clamp(val("dsize").value,1,100,20),later_days:clamp(val("ldays").value,1,60,7),report_days:clamp(val("rdays").value,1,90,14),max_age_days:clamp(val("maxage").value,0,365,0),weights,updated_at:new Date().toISOString()};
   try{await S.db.doc("settings/prefs").set(body);S._editingPrefs=false;S.prefs={...DEFAULT_PREFS,...body};render();toast("Settings saved.")}
   catch(e){toast("Couldn't save settings. Try again.");console.warn(e)}
 }
