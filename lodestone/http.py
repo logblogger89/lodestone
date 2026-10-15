@@ -27,7 +27,7 @@ def get_json(url: str, *, timeout: float = 25, retries: int = 1, method: str = "
 
 def get_text(url: str, *, timeout: float = 30, retries: int = 1, headers: Optional[dict] = None) -> str:
     """Fetch an HTML page (for careers sites that embed their job data in the page)."""
-    return fetch(url, timeout=timeout, retries=retries, headers={"User-Agent": BROWSER_UA, **(headers or {})})
+    return fetch(url, timeout=timeout, retries=retries, headers={"User-Agent": BROWSER_UA, **(headers or {})} if headers is not False else None)
 
 
 # Some careers sites serve their embedded data only to browser-like clients.

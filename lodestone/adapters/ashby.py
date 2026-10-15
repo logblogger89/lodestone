@@ -16,14 +16,23 @@ class AshbyAdapter:
 
     @staticmethod
     def _pay(comp: dict | None) -> dict | None:
+        """Every salary tier the employer lists (often one per country), so the Canadian one can be featured."""
         if not comp:
             return None
-        for c in comp.get("summaryComponents") or []:
-            if (c.get("compensationType") or "").lower() == "salary" and (c.get("minValue") or c.get("maxValue")):
-                return {"min": c.get("minValue"), "max": c.get("maxValue"), "currency": c.get("currencyCode"),
-                        "interval": c.get("interval"), "posted": True,
-                        "summary": comp.get("compensationTierSummary")}
-        return None
+        ranges = []
+        for t in comp.get("compensationTiers") or []:
+            for c in t.get("components") or []:
+                if (c.get("compensationType") or "").lower() == "salary" and (c.get("minValue") or c.get("maxValue")):
+                    ranges.append({"min": c.get("minValue"), "max": c.get("maxValue"), "currency": c.get("currencyCode"),
+                                   "interval": c.get("interval"), "label": t.get("title") or None,
+                                   "quote": t.get("tierSummary") or ""})
+        if not ranges:
+            for c in comp.get("summaryComponents") or []:
+                if (c.get("compensationType") or "").lower() == "salary" and (c.get("minValue") or c.get("maxValue")):
+                    ranges.append({"min": c.get("minValue"), "max": c.get("maxValue"), "currency": c.get("currencyCode"),
+                                   "interval": c.get("interval"), "label": None,
+                                   "quote": comp.get("compensationTierSummary") or ""})
+        return {"ranges": ranges, "posted": True} if ranges else None
 
     def parse(self, payload: dict, company: str, slug: str) -> list[Posting]:
         out = []

@@ -87,3 +87,41 @@ def save(company: str, jobs: list[dict]) -> dict:
     reads[company] = {"read_at": store.now(), "jobs": clean}
     store.save(READS, reads)
     return {"company": company, "jobs": len(clean)}
+
+
+_JSON_DESC = re.compile(r'"(?:description|jobDescription|content)"\s*:\s*"((?:[^"\\]|\\.){300,})"')
+NO_DETAIL = {"meta", "workable", "shopify", "bamboohr", "page"}     # pages that need a browser or a login
+
+
+def posting_text(url: str, platform: str) -> str:
+    """Full text of one job posting, for job systems whose list view has no description.
+    Prefers a description embedded as JSON in the page (Phenom, Coveo, Rippling), else the page text."""
+    if platform in NO_DETAIL:
+        return ""
+    if platform == "icims" and "in_iframe" not in url:
+        url += ("&" if "?" in url else "?") + "in_iframe=1"
+    # CGI's Njoyn site challenges browser-like clients but serves plain requests.
+    raw = get_text(url, retries=1, headers=False if platform == "njoyn" else BROWSER)
+    best = ""
+    for m in _JSON_DESC.finditer(raw):
+        try:
+            txt = json.loads('"' + m.group(1) + '"')
+        except ValueError:
+            continue
+        from .text import html_to_text
+        txt = html_to_text(txt)
+        if len(txt) > len(best):
+            best = txt
+    if len(best) < 500:
+        page = page_text(raw, url)
+        best = page if len(page) > len(best) else best
+    return "" if is_bot_check(best) else best[:30000]
+
+
+_BOT = re.compile(r"you are a bot|are you a robot|verify you are human|just a moment|enable javascript and cookies|"
+                  r"access denied|captcha", re.I)
+
+
+def is_bot_check(text: str) -> bool:
+    """A challenge or block page instead of the posting: never store it as a description."""
+    return len(text) < 3000 and bool(_BOT.search(text))

@@ -8,7 +8,7 @@ import concurrent.futures as cf
 import re
 from collections import Counter
 
-from . import adapters, dedup, sources, store
+from . import adapters, dedup, pagereader, pay, sources, store
 from .adapters import ADAPTERS, DETECT_ORDER
 from .geo import classify
 from .rules import classify_title
@@ -89,16 +89,20 @@ def _is_candidate(role) -> bool:
 
 
 def _enrich(p, jobs: dict):
-    """Fetch the full posting for thin list views (Workday, Eightfold), once per job."""
+    """Fetch the full posting when the list view has no description, once per job: the adapter's own
+    detail call (Workday, Eightfold, Oracle), else the posting page itself."""
     a = ADAPTERS[p.source]
-    if p.description or not hasattr(a, "detail"):
+    if p.description:
         return p, None
     known = jobs.get(p.canonical_key)
-    if known and known.get("description"):
+    if known and len(known.get("description") or "") > 600 and not pagereader.is_bot_check(known["description"]):
         p.description, p.location_raw = known["description"], known.get("location") or p.location_raw
         return p, None
     try:
-        d = a.detail(p)
+        if hasattr(a, "detail"):
+            d = a.detail(p)
+        else:
+            d = {"description": pagereader.posting_text(p.url, p.source)}
     except Exception as e:
         return p, f"{type(e).__name__}: {e}"[:200]
     p.description = d.get("description") or ""
@@ -160,7 +164,8 @@ def refresh(only: str | None = None, log=print) -> dict:
             "company": p.company, "title": p.title, "location": p.location_raw,
             "region": geo.region, "remote": geo.remote, "cec_credit": geo.cec_credit,
             "workplace": p.workplace, "department": p.department, "posted_at": p.posted_at,
-            "pay": p.pay, "pay_posted": bool(p.pay),
+            "pay": pay.resolve(p.pay, p.description, p.location_raw, geo.region),
+            "pay_checked": bool(p.description or p.pay),
             "role_tier": role.tier, "role_excluded": role.excluded,
             "people_mgmt_hint": role.people_mgmt_hint, "role_reason": role.reason,
             "description": p.description if _is_candidate(role) else "",
@@ -173,7 +178,7 @@ def refresh(only: str | None = None, log=print) -> dict:
         if len(jobs) > before:
             job["first_seen"] = seen_at
             stats["new"] += 1
-        for k in ("title", "location", "region", "remote", "pay", "pay_posted", "role_tier", "role_excluded",
+        for k in ("title", "location", "region", "remote", "pay", "pay_checked", "role_tier", "role_excluded",
                   "people_mgmt_hint", "role_reason", "workplace", "posted_at"):
             job[k] = rec[k]
         if rec["description"]:
@@ -181,6 +186,16 @@ def refresh(only: str | None = None, log=print) -> dict:
         for s in job["sightings"]:
             if s["key"] == p.canonical_key:
                 s.update(last_seen=seen_at, live=True, missed_runs=0, url=p.url)
+
+    # Sources that failed this run keep their stored descriptions; re-read pay from them so a parsing
+    # improvement reaches every job, not only the ones pulled this time.
+    for key, job in jobs.items():
+        if key not in seen_keys and job.get("role_tier") and job.get("description"):
+            if pagereader.is_bot_check(job["description"]):
+                job["description"] = ""
+                continue
+            job["pay"] = pay.resolve(None, job["description"], job.get("location", ""), job.get("region"))
+            job["pay_checked"] = True
 
     # Liveness: only count a miss when that company's sources were pulled successfully this run.
     pulled = {r["company"] for r in active}
@@ -220,7 +235,11 @@ def refresh(only: str | None = None, log=print) -> dict:
         "canada_postings": stats["canada"], "jobs_tracked": sum(1 for j in jobs.values() if j["live"]),
         "new_jobs": stats["new"], "went_dead": stats["went_dead"], "detail_errors": stats["detail_errors"],
         "multi_source_jobs": sum(1 for j in jobs.values() if len(j["sightings"]) > 1),
-        "candidates": len(candidates), "by_tier": dict(Counter(c["role_tier"] for c in candidates)),
+        "candidates": len(candidates),
+        "pay_found": sum(1 for j in jobs.values() if j["live"] and j.get("role_tier") and not j.get("role_excluded") and j.get("pay")),
+        "pay_canada": sum(1 for j in jobs.values() if j["live"] and j.get("role_tier") and not j.get("role_excluded")
+                          and j.get("pay") and j["pay"].get("primary") is not None),
+        "by_tier": dict(Counter(c["role_tier"] for c in candidates)),
         "by_region": dict(Counter(c["region"] for c in candidates)), "errors": errors,
     }
     store.mark_fresh("jobs", **{k: summary[k] for k in ("sources_ok", "sources_failed", "canada_postings", "candidates")})

@@ -74,8 +74,21 @@ a{color:var(--accent)}
 .co{color:var(--fg);font-weight:500}
 .meta{color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 12px;margin:2px 0 8px}
 .row{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
-.pay{font-family:var(--font-mono);font-size:13px}
+.pay{font-family:var(--font-mono);font-size:13px;font-weight:500}
+.pay small{font-family:var(--font-body);font-weight:400;color:var(--muted);font-size:12px;margin-left:4px}
+.pay.us{font-weight:400;color:var(--muted)}
+.paymore{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 7px}
 .nopay{font-size:12px;color:var(--muted)}
+.payrows{display:flex;flex-direction:column;gap:2px}
+.payrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:baseline;padding:8px 10px;border-radius:8px;font-size:13px}
+.payrow .lbl{color:var(--muted);min-width:0;overflow-wrap:anywhere}
+.payrow .amt{font-family:var(--font-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.payrow.main{background:var(--accent-soft)}
+.payrow.main .lbl{color:var(--fg);font-weight:600}
+.payrow.main .amt{font-size:16px;font-weight:600;color:var(--fg)}
+.payhead{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:8px 10px 0}
+details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
+details.quotes blockquote{margin:6px 0 0;padding:6px 10px;border-left:2px solid var(--line);font-size:12px;color:var(--muted)}
 .srcs{display:inline-flex;gap:4px;flex-wrap:wrap}
 a.src{font-size:11px;font-weight:600;font-family:var(--font-mono);text-decoration:none;color:var(--fg);background:var(--surface-2);border:1px solid var(--line);border-radius:5px;padding:2px 6px;white-space:nowrap}
 a.src:hover{border-color:var(--accent);color:var(--accent)}
@@ -223,14 +236,49 @@ function ago(ms){
 const postedMs = j => parseWhen(j.posted_at) ?? parseWhen(j.first_seen);
 
 /* ---------- formatting ---------- */
-function fmtK(n){n=+n;if(!isFinite(n)) return "";return n>=1000?(Math.round(n/1000))+"K":String(Math.round(n))}
-function payText(p){
-  if(!p||(!p.min&&!p.max)) return "";
-  const cur=(p.currency||"").toUpperCase(), sym=cur==="USD"?"US$":cur==="CAD"||!cur?"$":cur+" ";
-  const iv=String(p.interval||"").toLowerCase(), per=/hour/.test(iv)?"/hr":/month/.test(iv)?"/mo":"";
-  const lo=p.min?sym+fmtK(p.min):"", hi=p.max?sym+fmtK(p.max):"";
-  return (lo&&hi&&lo!==hi?lo+"–"+hi:(lo||hi))+per;
+function fmtK(n){n=+n;if(!isFinite(n)) return "";if(n<1000) return n%1?n.toFixed(2):String(n);const k=n/1000;return (k%1?k.toFixed(1).replace(/\.0$/,""):String(k))+"K"}
+/* One range as posted (never converted, B8): CA$126K–176K, US$137.9K–256.1K, $45–55/hr. */
+function rangeText(r){
+  if(!r||(!r.min&&!r.max)) return "";
+  const cur=(r.currency||"").toUpperCase(), sym=cur==="USD"?"US$":cur==="CAD"?"CA$":cur?cur+" ":"$";
+  const per=r.interval==="hour"?"/hr":r.interval==="month"?"/mo":"";
+  const lo=r.min?fmtK(r.min):"", hi=r.max?fmtK(r.max):"";
+  return sym+(lo&&hi&&lo!==hi?lo+"–"+hi:(lo||hi))+per;
 }
+/* Pay object from refresh: {ranges:[...], primary: index|null, source}. Older shape {min,max,...} is wrapped. */
+function payInfo(j){
+  let p=j.pay; if(p&&!p.ranges&&(p.min||p.max)) p={ranges:[p],primary:0,source:"field"};
+  const ranges=(p&&p.ranges)||[]; const main=p&&p.primary!=null?ranges[p.primary]:null;
+  return {ranges,main,others:ranges.filter(r=>r!==main),source:p&&p.source,checked:j.pay_checked!==false||ranges.length>0};
+}
+const payText=j=>{const pi=payInfo(j);return pi.main?rangeText(pi.main):""};
+function shortLabel(l){return String(l||"").replace(/,?\s*Canada$/i,"").replace(/^Canada\s*-\s*/i,"").trim()}
+/* Card: the Canadian range, its place, and a quiet count of the other regions. */
+function payCard(j){
+  const pi=payInfo(j);
+  if(pi.main){
+    const lbl=shortLabel(pi.main.label), more=pi.others.length;
+    const usN=pi.others.filter(r=>r.canada===false||r.currency==="USD").length;
+    const tip=pi.main.currency?"":"Currency not stated in the posting";
+    return `<span class="pay" title="${esc(tip||"Canadian range as posted")}">${esc(rangeText(pi.main))}${lbl&&lbl.toLowerCase()!=="canada"?`<small>${esc(lbl)}</small>`:""}</span>${more?`<span class="paymore" title="This posting lists ${more} more range${more>1?"s":""}. Open the role to see them.">+${more} ${usN===more?"US":"more"}</span>`:""}`;
+  }
+  if(pi.ranges.length) return `<span class="pay us" title="The posting lists pay for other countries only">${esc(rangeText(pi.ranges[0]))}<small>US range only</small></span>`;
+  return pi.checked?`<span class="nopay">No pay in posting</span>`:`<span class="nopay">Pay not checked yet</span>`;
+}
+/* Detail: Canadian range highlighted, every other range below, and the sentences they came from. */
+function payPanel(j){
+  const pi=payInfo(j);
+  const row=(r,main)=>`<div class="payrow${main?" main":""}"><span class="lbl">${esc(r.label||(r.currency==="USD"?"United States":"Location not stated"))}${!r.currency?' <span class="note">· currency not stated</span>':""}</span><span class="amt">${esc(rangeText(r))}</span></div>`;
+  let body;
+  if(!pi.ranges.length) body=pi.checked?`<p class="nopay">The posting doesn't state a pay range. Estimates arrive in Sprint 4.</p>`:`<p class="nopay">Lodestone hasn't read the full posting yet. Open it to check pay.</p>`;
+  else{
+    body=`<div class="payrows">${pi.main?row(pi.main,true):`<p class="nopay">No Canadian range in this posting.</p>`}
+      ${pi.others.length?`<div class="payhead">Other ranges in this posting</div>${pi.others.map(r=>row(r,false)).join("")}`:""}</div>
+      <details class="quotes"><summary>${pi.source==="field"?"From the job system's salary field":"Where these numbers come from"}</summary>${pi.ranges.filter(r=>r.quote).map(r=>`<blockquote>${esc(r.quote)}</blockquote>`).join("")||'<blockquote>Structured salary data from the job system.</blockquote>'}</details>`;
+  }
+  return `<section class="panel"><h4>Pay (as posted, base salary)</h4>${body}</section>`;
+}
+const payMax=j=>{const m=payInfo(j).main;return m?(m.interval==="hour"?m.max*2000:m.max)||0:-1};
 function where(j){return j.location||j.region||"Canada"}
 
 /* ---------- derived ---------- */
@@ -245,7 +293,7 @@ function matchesBase(j){
   if(!S.tierOn.has(j.tier)) return false;
   if(!(S.prefs.tiers||TIERS).includes(j.tier)) return false;
   if(S.prefs.exclude_people_mgmt&&j.people_mgmt) return false;
-  if(!S.prefs.include_no_pay&&!payText(j.pay)) return false;
+  if(!S.prefs.include_no_pay&&!payText(j)) return false;
   if(S.region==="preferred"){if(!inPreferred(j)) return false}
   else if(S.region!=="all"&&j.region!==S.region) return false;
   if(S.q){const q=S.q.toLowerCase();if(!(j.title+" "+j.company+" "+j.location+" "+(j.department||"")).toLowerCase().includes(q)) return false}
@@ -265,7 +313,8 @@ function sorted(list){
   const by={
     best:(a,b)=>TIER_RANK[a.tier]-TIER_RANK[b.tier]||PREF_RANK(a.region)-PREF_RANK(b.region)||(postedMs(b)||0)-(postedMs(a)||0),
     newest:(a,b)=>(postedMs(b)||0)-(postedMs(a)||0),
-    company:(a,b)=>a.company.localeCompare(b.company)||a.title.localeCompare(b.title)
+    company:(a,b)=>a.company.localeCompare(b.company)||a.title.localeCompare(b.title),
+    pay:(a,b)=>payMax(b)-payMax(a)
   };
   return list.sort(by[S.sort]||by.best);
 }
@@ -335,13 +384,13 @@ function reasonsRow(j){
   return `<div class="reasons" aria-label="Why not?">${NOT_REASONS.map(r=>`<button data-reason="${esc(r)}" data-id="${esc(j.id)}" aria-pressed="${on.has(r)}">${esc(r)}</button>`).join("")}</div>`;
 }
 function card(j,i){
-  const t=tri(j.id)||{}, pay=payText(j.pay);
+  const t=tri(j.id)||{};
   return `<article class="card${i===S.sel?" sel":""}${t.status&&S.show==="todo"?" done":""}" data-open="${esc(j.id)}" data-idx="${i}">
     ${tierCompass(j)}
     <div style="min-width:0">
       <h3>${esc(j.title)}</h3>
       <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span>${j.workplace?`<span>${esc(j.workplace)}</span>`:""}<span>${esc(ago(postedMs(j))||"")}</span></div>
-      <div class="row">${pay?`<span class="pay" title="Posted pay range">${esc(pay)}</span>`:`<span class="nopay">No pay posted</span>`}${srcLinks(j)}
+      <div class="row">${payCard(j)}${srcLinks(j)}
         ${isNew(j)?'<span class="chip warn">New</span>':""}${j.people_mgmt?'<span class="chip" title="Title suggests managing people">Manages people?</span>':""}</div>
       ${S.pendingReasons===j.id&&t.status==="not"?reasonsRow(j):""}
     </div>
@@ -376,7 +425,7 @@ function viewDigest(){
   <div class="filters">
     <input type="search" id="q" placeholder="Search title, company, team" value="${esc(S.q)}" aria-label="Search">
     <select id="region" aria-label="Region"><option value="preferred"${S.region==="preferred"?" selected":""}>My regions</option><option value="all"${S.region==="all"?" selected":""}>All of Canada</option>${REGIONS.map(r=>`<option${S.region===r?" selected":""}>${r}</option>`).join("")}</select>
-    <select id="sort" aria-label="Sort"><option value="best"${S.sort==="best"?" selected":""}>Best match</option><option value="newest"${S.sort==="newest"?" selected":""}>Newest</option><option value="company"${S.sort==="company"?" selected":""}>Company</option></select>
+    <select id="sort" aria-label="Sort"><option value="best"${S.sort==="best"?" selected":""}>Best match</option><option value="newest"${S.sort==="newest"?" selected":""}>Newest</option><option value="pay"${S.sort==="pay"?" selected":""}>Highest Canadian pay</option><option value="company"${S.sort==="company"?" selected":""}>Company</option></select>
     ${TIERS.map(t=>`<button class="chip toggle" data-tier="${t}" aria-pressed="${S.tierOn.has(t)}" title="${esc(TIER_HELP[t])}">${t}</button>`).join("")}
   </div>
   ${body}
@@ -384,7 +433,7 @@ function viewDigest(){
 }
 function offlineState(){return `<div class="empty"><h2>Open Lodestone on claude.ai to see your jobs</h2><p>Your jobs and triage live in this page's private database, which only loads inside claude.ai while you're signed in.</p></div>`}
 function viewDetail(j){
-  const t=tri(j.id)||{}, pay=payText(j.pay);
+  const t=tri(j.id)||{};
   return `<div class="row" style="justify-content:space-between"><span class="chip t-${(j.tier||"").toLowerCase()}">${esc(j.tier)} · ${esc(TIER_HELP[j.tier]||"")}</span><button class="btn" data-act="close">Close</button></div>
   <h2>${esc(j.title)}</h2>
   <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span></div>
@@ -395,11 +444,11 @@ function viewDetail(j){
     <dt>Location</dt><dd>${esc(where(j))}${j.region?` <span class="note">(${esc(j.region)})</span>`:""}</dd>
     <dt>Work mode</dt><dd>${esc(j.workplace||(j.remote?"Remote":"Not stated"))}</dd>
     ${j.department?`<dt>Team</dt><dd>${esc(j.department)}</dd>`:""}
-    <dt>Pay</dt><dd>${pay?`<span class="pay">${esc(pay)}</span> <span class="note">posted</span>`:`<span class="nopay">Not posted. Estimates arrive in Sprint 4.</span>`}</dd>
     <dt>Posted</dt><dd>${esc(ago(postedMs(j))||"Unknown")}</dd>
     <dt>First seen</dt><dd>${esc(ago(parseWhen(j.first_seen)))}</dd>
     <dt>Manages people</dt><dd>${j.people_mgmt?"Title suggests it":"Not from the title"}</dd>
   </dl></section>
+  ${payPanel(j)}
   <section class="panel"><h4>Where it's posted</h4>
     <table class="tbl"><thead><tr><th>Source</th><th>Status</th><th></th></tr></thead><tbody>
     ${(j.sources||[]).map(s=>`<tr><td>${esc(s.label)}</td><td>${s.live===false?'<span class="flag">Gone</span>':"Live"}</td><td><a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">Open posting ↗</a></td></tr>`).join("")}
@@ -461,7 +510,7 @@ function viewSettings(){
   <section class="panel"><h4>What</h4>
     <div class="chips">${TIERS.map(t=>`<label class="chip"><input type="checkbox" data-ptier="${t}"${(p.tiers||[]).includes(t)?" checked":""}> ${t}</label>`).join("")}</div>
     <div class="switch"><label for="xpm">Hide roles that manage people</label><input type="checkbox" id="xpm"${p.exclude_people_mgmt?" checked":""}></div>
-    <div class="switch"><label for="nopay">Include roles with no posted pay</label><input type="checkbox" id="nopay"${p.include_no_pay?" checked":""}></div>
+    <div class="switch"><label for="nopay">Include roles with no Canadian pay range</label><input type="checkbox" id="nopay"${p.include_no_pay?" checked":""}></div>
   </section>
   <section class="panel"><h4>Digest</h4>
     <div class="grid2"><div class="field"><label for="dsize">Roles in the digest (1–100)</label><input type="number" id="dsize" min="1" max="100" value="${+p.digest_size||20}"></div>

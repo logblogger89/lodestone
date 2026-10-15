@@ -29,7 +29,7 @@ def _job(key: str, j: dict) -> dict:
         "id": job_id(key), "company": j["company"], "title": j["title"], "location": j.get("location") or "",
         "region": j.get("region"), "remote": bool(j.get("remote")), "workplace": j.get("workplace"),
         "tier": j.get("role_tier"), "people_mgmt": bool(j.get("people_mgmt_hint")),
-        "department": (j.get("department") or "")[:80], "pay": j.get("pay"), "posted_at": j.get("posted_at"),
+        "department": (j.get("department") or "")[:80], "pay": j.get("pay"), "pay_checked": bool(j.get("pay_checked")), "posted_at": j.get("posted_at"),
         "first_seen": j.get("first_seen"), "last_seen": j.get("last_seen"), "live": bool(j.get("live", True)),
         "closed_at": j.get("closed_at"),
         "sources": [{"label": labels.get(s["source"], s["source"]), "url": s["url"], "live": s.get("live", True)}

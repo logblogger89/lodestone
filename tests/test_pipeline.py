@@ -18,7 +18,8 @@ class FakeAdapter:
         slug = feed["slug"]
         locs = {"1": "Toronto, ON", "2": "Austin, TX", "3": "Waterloo, ON"}
         return [Posting(source="fake", company=company, slug=slug, source_job_id=i,
-                        title="Senior Product Manager", url=f"https://x/{i}", location_raw=locs[i])
+                        title="Senior Product Manager", url=f"https://x/{i}", location_raw=locs[i],
+                        description="Own the roadmap.")
                 for i in self.ids]
 
 

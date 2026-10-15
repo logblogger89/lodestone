@@ -48,5 +48,7 @@ standard library only, so no installs are needed.
 ## Rules
 
 - Never scrape LinkedIn, Indeed, Glassdoor or Wellfound. Those are paste-only (A3).
+- Check the coverage numbers in the refresh summary (`pay_found`, `pay_canada`). If a field the app shows is
+  unexpectedly empty for most roles, investigate before reporting (postmortem 2026-10-15).
 - Missing data never excludes a job (D-021). Only the title rules and the Canada check filter at this stage.
 - Never commit resumes or contact details.

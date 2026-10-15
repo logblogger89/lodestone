@@ -47,7 +47,7 @@ class PhenomAdapter:
                               f"https://{host}/{sc}/{lang.split('_')[0]}/job/{j.get('jobId')}/{_slug(j.get('title'))}",
                               "; ".join(l for l in locs if l), country_hint="CA" if (j.get("country") or "").lower() == "canada" else None,
                               department=j.get("category") or "", posted_at=j.get("postedDate"),
-                              description=j.get("descriptionTeaser") or ""))
+                              extra={"teaser": j.get("descriptionTeaser") or ""}))   # full text fetched for role matches
             start += len(jobs)
             if not jobs or start >= (rs.get("totalHits") or 0):
                 break
