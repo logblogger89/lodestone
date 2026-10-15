@@ -41,7 +41,7 @@
 | D3.1 | Eng Design Doc | Engineering | M3 | ✅ | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v1: Phase 1 = Claude Code engine + Artifact app |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ✅ | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
 | D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ✅ | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
-| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 ✅ (calibrated on 11 triaged roles, D-049), P1-S4 🟦 (pathway signals ✅; paste inbox, pay estimates next) |
+| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 ✅ (calibrated on 11 triaged roles, D-049), P1-S4 🟦 (pathway signals ✅, paste inbox ✅; pay estimates next) |
 | D4.2 | Dogfood and bug bash | Launch | M4 | ⬜ | Ayush | |
 | D5.1 | Launch checklist (privacy, security, ToS, quality) | Launch | M5 | ⬜ | Claude | |
 | D6.1 | Post-launch review and V1.x roadmap | PgM / Product | M6 | ⬜ | Ayush + Claude | |
@@ -101,6 +101,7 @@
 | D-049 | 10-15 | Freshness stays as designed (no exception for evergreen postings that are still live). **P1-S3 closed:** of Ayush's 9 Interested picks, 5 rank in the top 7 and all in the top 20%; the one "Not for me" (50-day-old posting) dropped from #8 to #29 with freshness | Calibration on 11 triaged roles | Ayush |
 | D-050 | 10-15 | **Pathway signals from ESDC:** the last 9 quarters of positive-LMIA employer lists (2024Q1–2026Q1) are matched to the watchlist (58 companies, 54 with tech roles). Each role's pathway score now comes from evidence: Google ICT 95; posting offers sponsorship 85; frequent LMIA employer (≥10 tech positions or ≥5 Global Talent Stream) 80; any tech LMIA 70; non-tech only 55; no evidence 45; posting says must already be eligible 15. Shown as chips with status (Stated / Inferred / Unknown) and a source link; `/refresh-signals` reloads quarterly | R10, DR-3, CR-3 | Claude |
 | D-051 | 10-15 | Large multinationals absent from the LMIA lists (e.g. Microsoft, Workday) get no special treatment: neutral pathway score (45, "No public signal"). Revisit only if triage shows Ayush consistently wants them | Ayush's question on missing big-tech employers | Ayush |
+| D-052 | 10-15 | **Paste inbox:** at each refresh, pasted items are processed: known links are matched to existing roles; readable pages are fetched and read by Claude; LinkedIn/Indeed/Glassdoor/Wellfound are never fetched, so the pasted description is used or the app asks for it; non-Canadian roles are declined with a note. Added roles dedup against everything known, get pay read from the text, are scored like any other, and are never marked closed by a refresh. Status and a one-line result show in the app's Add job page | R3, A3a–c | Claude |
 
 ## 4. Open questions
 
@@ -186,6 +187,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | Paste inbox processing (D-052): prepare/add commands, app statuses, tests | Claude |
 | 2026-10-15 | LMIA name-matching fix after Ayush's question: legal-name variants ("Salesforce.com Canada Corp.", "Okta", "Snowflake Computing") now match; 79 companies (was 58). Microsoft, Workday, Nvidia, Adobe, Meta, Google, Lyft, Databricks confirmed absent from the 2024Q1–2026Q1 lists | Claude |
 | 2026-10-15 | ESDC LMIA pathway signals live (D-050); `/refresh-signals` skill added | Claude |
 | 2026-10-15 | P1-S3 closed after calibration (D-049); P1-S4 started | Claude |

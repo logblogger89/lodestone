@@ -26,6 +26,9 @@ def main(argv=None) -> int:
     sc.add_argument("--batch", type=int, default=70)
     sg = sub.add_parser("signals", help="load ESDC positive-LMIA lists into per-company pathway signals")
     sg.add_argument("action", choices=["load"])
+    ib = sub.add_parser("inbox", help="paste inbox: prepare pasted items for Claude, or add the jobs Claude read")
+    ib.add_argument("action", choices=["prepare", "add"])
+    ib.add_argument("file", help="inbox items (prepare) or job records (add), JSON list")
     sub.add_parser("export", help="package jobs, companies and freshness for the app's database")
     sub.add_parser("index", help="rewrite data/sources/README.md, the readable source index")
     a = ap.parse_args(argv)
@@ -53,6 +56,10 @@ def main(argv=None) -> int:
     elif a.cmd == "signals":
         from . import signals
         out = signals.load(log=log)
+    elif a.cmd == "inbox":
+        from . import capture
+        data = json.load(open(a.file))
+        out = capture.prepare(data) if a.action == "prepare" else capture.add(data)
     elif a.cmd == "export":
         from . import appexport
         out = appexport.write()

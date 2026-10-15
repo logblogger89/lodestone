@@ -32,7 +32,8 @@ def _job(key: str, j: dict) -> dict:
         "department": (j.get("department") or "")[:80], "pay": j.get("pay"), "pay_checked": bool(j.get("pay_checked")), "posted_at": j.get("posted_at"),
         "first_seen": j.get("first_seen"), "last_seen": j.get("last_seen"), "live": bool(j.get("live", True)),
         "closed_at": j.get("closed_at"),
-        "sources": [{"label": labels.get(s["source"], s["source"]), "url": s["url"], "live": s.get("live", True)}
+        "captured": bool(j.get("captured")),
+        "sources": [{"label": s.get("label") or labels.get(s["source"], s["source"]), "url": s["url"], "live": s.get("live", True)}
                     for s in j["sightings"]],
     }
 

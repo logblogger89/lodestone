@@ -202,7 +202,7 @@ def refresh(only: str | None = None, log=print) -> dict:
     pulled = {r["company"] for r in active}
     for job in jobs.values():
         for s in job["sightings"]:
-            if s["key"] in seen_keys or job["company"] not in pulled:
+            if s["key"] in seen_keys or job["company"] not in pulled or s.get("source") == "capture":
                 continue
             if job["company"] in ok_companies:
                 s["missed_runs"] = s.get("missed_runs", 0) + 1

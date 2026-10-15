@@ -600,6 +600,8 @@ function viewPipeline(){
   return `<div class="topbar"><h1>Pipeline</h1><span class="sp"></span>${freshChip()}</div>
   ${S.offline?offlineState():items.length?`<div class="board">${cols}</div>`:`<div class="empty"><h2>Your pipeline is empty</h2><p>Mark a role <b>Interested</b> in the digest and it lands here as Shortlisted.</p></div>`}`;
 }
+const INBOX_LABEL={new:"Waiting for refresh",added:"Added",already_known:"Already in Lodestone",needs_text:"Needs the job text",not_canada:"Not in Canada",not_a_role:"Not a job posting",failed:"Couldn't read it"};
+const INBOX_CLASS={added:"s-stated",already_known:"s-stated",needs_text:"s-inferred",not_canada:"s-unknown",not_a_role:"s-unknown",failed:"s-none"};
 function viewAdd(){
   const items=[...S.inbox].sort((a,b)=>(parseWhen(b.created_at)||0)-(parseWhen(a.created_at)||0));
   return `<div class="topbar"><h1>Add a job</h1><span class="sp"></span>${freshChip()}</div>
@@ -609,7 +611,7 @@ function viewAdd(){
     <div class="row"><button class="btn primary" data-act="addjob"${S.offline?" disabled":""}>Add to inbox</button><span class="note">Lodestone reads these at your next <kbd>/refresh-jobs</kbd>, matches them to known roles, and adds new ones to the digest.</span></div>
   </section>
   ${items.length?`<section class="panel"><h4>Inbox</h4><table class="tbl"><thead><tr><th>Added</th><th>What you pasted</th><th>Status</th></tr></thead><tbody>
-    ${items.map(x=>`<tr><td class="mono">${esc(ago(parseWhen(x.created_at)))}</td><td style="overflow-wrap:anywhere">${esc(String(x.text||"").slice(0,160))}</td><td>${esc(x.status==="new"?"Waiting for refresh":x.status||"")}${x.result?`<div class="note">${esc(x.result)}</div>`:""}</td></tr>`).join("")}
+    ${items.map(x=>`<tr><td class="mono">${esc(ago(parseWhen(x.created_at)))}</td><td style="overflow-wrap:anywhere">${esc(String(x.text||"").slice(0,160))}</td><td><span class="chip ${INBOX_CLASS[x.status]||""}">${esc(INBOX_LABEL[x.status]||x.status||"")}</span>${x.result?`<div class="note">${esc(x.result)}</div>`:""}${x.job_id&&S.jobs[x.job_id]?` <button class="btn" data-open="${esc(x.job_id)}">Open role</button>`:""}</td></tr>`).join("")}
   </tbody></table></section>`:""}`;
 }
 function viewCompanies(){
