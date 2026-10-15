@@ -5,7 +5,7 @@
 
 **Last updated:** 2026-10-15 · **Current milestone:** M4 (build) · **Overall RAG:** 🟢
 
-**Status summary (2026-10-15).** P1-S2 app live and pinned ([Lodestone](https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7)); pay capture fixed (D-045, D-046). **P1-S3 in progress:** profile built from the CV (app database only), rubric v1.0, scoring pipeline and app score display done; the first full scoring run hit the plan's usage limit and is scheduled to resume 7:00am ET 10-15 (Sonnet sub-agents, 2 at a time). **Next:** calibrate scores against Ayush's triage, close S3, then P1-S4 (paste inbox, pay estimates, LMIA pathway signals).
+**Status summary (2026-10-15).** **P1-S3 scoring done:** all 543 open candidate roles scored against Ayush's profile (rubric v1.0, six sub-scores with reasons) and live in the [app](https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7); both roles Ayush marked Interested rank in the top fifth (29th and 99th). **Next:** Ayush triages 20–30 roles to calibrate (S2/S3 exit), then P1-S4 (paste inbox, pay estimates, LMIA pathway signals).
 
 ---
 
@@ -41,7 +41,7 @@
 | D3.1 | Eng Design Doc | Engineering | M3 | ✅ | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v1: Phase 1 = Claude Code engine + Artifact app |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ✅ | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
 | D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ✅ | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
-| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 🟦 (scoring run scheduled 10-15 7am ET) |
+| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 🟨 (543 roles scored; calibration with Ayush's triage pending) |
 | D4.2 | Dogfood and bug bash | Launch | M4 | ⬜ | Ayush | |
 | D5.1 | Launch checklist (privacy, security, ToS, quality) | Launch | M5 | ⬜ | Claude | |
 | D6.1 | Post-launch review and V1.x roadmap | PgM / Product | M6 | ⬜ | Ayush + Claude | |
@@ -96,6 +96,7 @@
 | D-044 | 10-15 | App data layout: refresh writes jobs as 8 bucket documents plus company and freshness documents in one database write; the app owns triage, settings and the paste inbox. Only the owner can write. Until scoring (S3), "Best match" = role tier, then preferred regions, then newest | One write per refresh; Claude reads triage to learn | Claude |
 | D-045 | 10-15 | **Pay:** read every pay range from the posting (salary field or description text), keep all regions, feature the Canadian one (job's city/province first). Card shows the Canadian range plus "+N US"; detail lists all ranges with the source sentence. "No pay in posting" only when the full posting was read | Ayush's RCA request (postmortem 2026-10-15) | Ayush |
 | D-046 | 10-15 | Each pay range carries its **type** from the posting's wording (base, base + bonus, OTE, total compensation, not stated) and whether the employer calls it an estimate. Non-base ranges get a small card tag ("incl. bonus") and rank after base ranges in the pay sort. **Equity** is shown when mentioned: the amount if given, else "Offered" or "May be offered (amount not stated)"; diversity-statement and finance uses of "equity" are ignored. Every pay section names its source (company, job system, date read, link) and shows the exact wording with numbers highlighted | Ayush review of the Ratehub role | Ayush |
+| D-047 | 10-15 | Fit scoring runs in-session with Claude (Sonnet sub-agents, 2 batches at a time, results saved per batch) against rubric v1.0; only new or changed roles are re-scored on later refreshes. Inferred pathway scores are normalized per company | Usage-limit interruption (R-16) and cross-batch consistency | Claude |
 
 ## 4. Open questions
 
@@ -181,6 +182,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | All 543 roles scored (D-047); top matches include Workday, Microsoft, Amazon, StackAdapt, Zip, Okta Principal/Staff PM roles. Scores live in the app | Claude |
 | 2026-10-15 | P1-S3 started: profile from CV (app db only), rubric v1.0, scoring pipeline, app score ring and breakdown; scoring run deferred to 7am ET by usage limit (R-16). App pinned to sidebar | Claude |
 | 2026-10-15 | Pay type, equity and source attribution added (D-046) | Claude |
 | 2026-10-15 | Pay capture fixed after RCA (I-02, D-045, postmortem); app shows all ranges with the Canadian one featured | Claude |
