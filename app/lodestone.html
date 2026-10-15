@@ -102,6 +102,18 @@ a.src:hover{border-color:var(--accent);color:var(--accent)}
 .compass b{display:block;font-family:var(--font-display);font-size:15px;color:var(--fg)}
 .compass.core{border-color:var(--accent)} .compass.core b{color:var(--accent)}
 .compass.adjacent{border-color:var(--good)} .compass.adjacent b{color:var(--good)}
+.ring{position:relative;width:56px;height:56px}
+.ring svg{width:56px;height:56px;display:block}
+.ring .val{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--font-mono);font-weight:500;font-size:16px;color:var(--fg)}
+.ring .trk{stroke:var(--surface-2)} .ring .arc{stroke:var(--accent)} .ring .ndl{fill:var(--accent)}
+.fitsum{font-size:13px;color:var(--muted);margin:-4px 0 8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bar{display:grid;grid-template-columns:76px minmax(0,1fr) 34px;gap:4px 10px;align-items:center;font-size:13px}
+.bar .track{height:8px;background:var(--surface-2);border-radius:4px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent)}
+.bar .why{grid-column:2 / 4;color:var(--muted);font-size:12px;margin-bottom:4px}
+.bar .w{font-size:11px;color:var(--muted)}
+.overall{display:flex;align-items:center;gap:14px}
+.overall p{margin:0;font-size:14px}
 .triage{display:flex;flex-direction:column;gap:6px}
 .tbtn{border:1px solid var(--line);background:var(--surface);border-radius:8px;min-width:100px;min-height:36px;cursor:pointer;font-size:13px}
 .tbtn.on-interested{background:var(--good-soft);border-color:var(--good);color:var(--good);font-weight:600}
@@ -322,7 +334,7 @@ function matchesBase(j){
   if(!j.live) return false;
   if(!S.tierOn.has(j.tier)) return false;
   if(!(S.prefs.tiers||TIERS).includes(j.tier)) return false;
-  if(S.prefs.exclude_people_mgmt&&j.people_mgmt) return false;
+  if(S.prefs.exclude_people_mgmt&&managesPeople(j)) return false;
   if(!S.prefs.include_no_pay&&!payText(j)) return false;
   if(S.region==="preferred"){if(!inPreferred(j)) return false}
   else if(S.region!=="all"&&j.region!==S.region) return false;
@@ -341,7 +353,7 @@ const TIER_RANK={Core:0,Adjacent:1,Stretch:2};
 const PREF_RANK=r=>{const i=(S.prefs.regions||[]).indexOf(r);return i<0?9:i};
 function sorted(list){
   const by={
-    best:(a,b)=>TIER_RANK[a.tier]-TIER_RANK[b.tier]||PREF_RANK(a.region)-PREF_RANK(b.region)||(postedMs(b)||0)-(postedMs(a)||0),
+    best:(a,b)=>((fitScore(b)??-1)-(fitScore(a)??-1))||TIER_RANK[a.tier]-TIER_RANK[b.tier]||PREF_RANK(a.region)-PREF_RANK(b.region)||(postedMs(b)||0)-(postedMs(a)||0),
     newest:(a,b)=>(postedMs(b)||0)-(postedMs(a)||0),
     company:(a,b)=>a.company.localeCompare(b.company)||a.title.localeCompare(b.title),
     pay:(a,b)=>payMax(b)-payMax(a)
@@ -373,6 +385,7 @@ async function boot(){
   },fail);
   db.collection("triage").onSnapshot(snap=>{const t={};snap.docs.forEach(d=>t[d.id]=d.data());S.triage=t;render()},fail);
   db.doc("settings/prefs").onSnapshot(d=>{S.prefs={...DEFAULT_PREFS,...(d.exists?d.data():{})};render()},fail);
+  db.doc("profile/main").onSnapshot(d=>{S.profile=d.exists?d.data():null;render()},fail);
   db.collection("inbox").onSnapshot(snap=>{S.inbox=snap.docs.map(d=>({id:d.id,...d.data()}));render()},fail);
   window.addEventListener("pagehide",()=>lsSet("lastVisit",Date.now()));
 }
@@ -400,9 +413,23 @@ function freshChip(){
   const stale=!ms||(Date.now()-ms)>7*DAY;
   return `<button class="fresh${stale?" stale":""}" data-act="fresh" aria-label="When data was last updated"><span class="dot" aria-hidden="true"></span>${ms?"Jobs updated "+ago(ms):"Not refreshed yet"}</button>`;
 }
+/* Overall fit: the six sub-scores blended with the weights from Settings (computed here, so changing weights re-ranks instantly). */
+function fitScore(j){
+  if(!j.fit||!j.fit.subs) return null;
+  const W=S.prefs.weights||DEFAULT_PREFS.weights; let t=0,sum=0;
+  SUBS.forEach(k=>{const w=+W[k]||0;t+=w;sum+=w*(+j.fit.subs[k]||0)});
+  return t?Math.round(sum/t):null;
+}
+const managesPeople=j=>j.fit?!!j.fit.people_mgmt:!!j.people_mgmt;
+/* Compass ring: the arc fills with the score and the needle points to true north at 100. */
+function ring(v,size){
+  const r=24,c=2*Math.PI*r,off=c*(1-v/100),a=(v/100)*360-90,rad=a*Math.PI/180,nx=28+24*Math.cos(rad),ny=28+24*Math.sin(rad);
+  return `<div class="ring" title="Fit ${v} of 100"><svg viewBox="0 0 56 56" aria-hidden="true"><circle class="trk" cx="28" cy="28" r="${r}" fill="none" stroke-width="5"/><circle class="arc" cx="28" cy="28" r="${r}" fill="none" stroke-width="5" stroke-linecap="round" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" transform="rotate(-90 28 28)"/><circle class="ndl" cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="3.2"/></svg><span class="val">${v}</span></div>`;
+}
 function tierCompass(j){
+  const v=fitScore(j); if(v!=null) return ring(v);
   const cls=(j.tier||"").toLowerCase();
-  return `<div class="compass ${cls}" title="${esc(TIER_HELP[j.tier]||"")}. Fit score arrives in Sprint 3."><span><b>${esc((j.tier||"?")[0])}</b>${esc(j.tier||"")}</span></div>`;
+  return `<div class="compass ${cls}" title="${esc(TIER_HELP[j.tier]||"")}. Not scored yet."><span><b>${esc((j.tier||"?")[0])}</b>${esc(j.tier||"")}</span></div>`;
 }
 function srcLinks(j){return `<span class="srcs">${(j.sources||[]).map(s=>`<a class="src" href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener" title="Open on ${esc(s.label)}">${esc(s.label)} ↗</a>`).join("")}</span>`}
 function triageBtns(j){
@@ -419,9 +446,10 @@ function card(j,i){
     ${tierCompass(j)}
     <div style="min-width:0">
       <h3>${esc(j.title)}</h3>
-      <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span>${j.workplace?`<span>${esc(j.workplace)}</span>`:""}<span>${esc(ago(postedMs(j))||"")}</span></div>
+      <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span>${(j.fit&&j.fit.work_mode&&j.fit.work_mode!=="unclear")?`<span>${esc(j.fit.work_mode)}</span>`:j.workplace?`<span>${esc(j.workplace)}</span>`:""}<span>${esc(ago(postedMs(j))||"")}</span></div>
+      ${j.fit&&j.fit.summary?`<p class="fitsum">${esc(j.fit.summary)}</p>`:""}
       <div class="row">${payCard(j)}${srcLinks(j)}
-        ${isNew(j)?'<span class="chip warn">New</span>':""}${j.people_mgmt?'<span class="chip" title="Title suggests managing people">Manages people?</span>':""}</div>
+        ${isNew(j)?'<span class="chip warn">New</span>':""}${managesPeople(j)?'<span class="chip" title="The posting says this role manages people">Manages people</span>':""}${((j.fit&&j.fit.flags)||[]).slice(0,2).map(f=>`<span class="chip warn">${esc(f)}</span>`).join("")}</div>
       ${S.pendingReasons===j.id&&t.status==="not"?reasonsRow(j):""}
     </div>
     <div class="triage">${triageBtns(j)}</div>
@@ -459,9 +487,20 @@ function viewDigest(){
     ${TIERS.map(t=>`<button class="chip toggle" data-tier="${t}" aria-pressed="${S.tierOn.has(t)}" title="${esc(TIER_HELP[t])}">${t}</button>`).join("")}
   </div>
   ${body}
-  <p class="note">"Best match" ranks by role tier, then your preferred regions, then newest. The fit score (Sprint 3) will replace it. Keyboard: <kbd>J</kbd>/<kbd>K</kbd> move, <kbd>I</kbd>/<kbd>L</kbd>/<kbd>N</kbd> triage, <kbd>Enter</kbd> opens.</p>`;
+  <p class="note">"Best match" ranks by fit score (your weights in Settings), then role tier and region for anything not scored yet. Keyboard: <kbd>J</kbd>/<kbd>K</kbd> move, <kbd>I</kbd>/<kbd>L</kbd>/<kbd>N</kbd> triage, <kbd>Enter</kbd> opens.</p>`;
 }
 function offlineState(){return `<div class="empty"><h2>Open Lodestone on claude.ai to see your jobs</h2><p>Your jobs and triage live in this page's private database, which only loads inside claude.ai while you're signed in.</p></div>`}
+function fitPanel(j){
+  const f=j.fit; if(!f||!f.subs) return `<section class="panel"><h4>Fit</h4><p class="nopay">Not scored yet. It's scored at the next refresh.</p></section>`;
+  const W=S.prefs.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+(+W[k]||0),0)||1, v=fitScore(j);
+  return `<section class="panel"><h4>Fit for you</h4>
+    <div class="overall">${ring(v)}<p>${esc(f.summary||"")}${f.level_guess?`<br><span class="note">Level: ${esc(f.level_guess)}</span>`:""}</p></div>
+    ${SUBS.map(k=>`<div class="bar"><span>${SUBLABEL[k]} <span class="w">${Math.round((+W[k]||0)*100/tot)}%</span></span><div class="track"><div class="fill" style="width:${+f.subs[k]||0}%"></div></div><span class="mono">${+f.subs[k]||0}</span><span class="why">${esc((f.reasons||{})[k]||"")}</span></div>`).join("")}
+    ${(f.must_haves||[]).length?`<div><span class="note">Must-haves:</span> ${f.must_haves.map(m=>`<span class="chip">${esc(m)}</span>`).join(" ")}</div>`:""}
+    ${(f.flags||[]).length?`<div class="chips">${f.flags.map(m=>`<span class="chip warn">${esc(m)}</span>`).join("")}</div>`:""}
+    <p class="note">Scored by Claude ${esc(ago(parseWhen(f.scored_at)))} against your profile (rubric v${esc(f.rubric||"")}). The weights are yours to change in Settings.</p>
+  </section>`;
+}
 function viewDetail(j){
   const t=tri(j.id)||{};
   return `<div class="row" style="justify-content:space-between"><span class="chip t-${(j.tier||"").toLowerCase()}">${esc(j.tier)} · ${esc(TIER_HELP[j.tier]||"")}</span><button class="btn" data-act="close">Close</button></div>
@@ -470,6 +509,7 @@ function viewDetail(j){
   <div class="row">${triageBtns(j)}</div>
   ${t.status==="not"?reasonsRow(j):""}
   ${!j.live?`<div class="chip bad">No longer live${j.closed_at?" since "+esc(new Date(parseWhen(j.closed_at)).toLocaleDateString()):""}</div>`:""}
+  ${fitPanel(j)}
   <section class="panel"><h4>Posting</h4><dl class="facts">
     <dt>Location</dt><dd>${esc(where(j))}${j.region?` <span class="note">(${esc(j.region)})</span>`:""}</dd>
     <dt>Work mode</dt><dd>${esc(j.workplace||(j.remote?"Remote":"Not stated"))}</dd>
@@ -487,7 +527,7 @@ function viewDetail(j){
     <div class="field"><label for="stage">Stage</label><select id="stage" data-id="${esc(j.id)}"><option value="">Not in pipeline</option>${STAGES.map(s=>`<option${t.stage===s?" selected":""}>${s}</option>`).join("")}</select></div>
     <div class="field"><label for="notes">Notes</label><textarea id="notes" data-id="${esc(j.id)}" placeholder="Recruiter, referral, follow-up dates">${esc(t.notes||"")}</textarea></div>
   </section>
-  <p class="soon">Coming next: the fit breakdown with reasons (Sprint 3), pay estimates and immigration-pathway signals (Sprint 4).</p>`;
+  <p class="soon">Coming next: pay estimates for roles without a posted range, and immigration-pathway signals from the government's LMIA employer list (Sprint 4).</p>`;
 }
 function viewPipeline(){
   const items=Object.entries(S.triage).filter(([,t])=>t&&t.stage);
@@ -530,9 +570,33 @@ function viewCompanies(){
   </tbody></table></div>`}
   <p class="note">Add or remove companies by asking Claude in a Lodestone session. Discovery of new companies arrives in Sprint 5.</p>`;
 }
+/* Profile: built from the CV, stored only in this app's private database. Edits are used at the next scoring run. */
+const PROFILE_FIELDS=[["headline","Headline",1],["summary","Summary",4],["domains","Domains (one per line)",5],["skills","Skills (one per line)",5],["scope_signals","Scope highlights (one per line)",5]];
+function profilePanel(){
+  const p=S.profile;
+  if(!p) return `<section class="panel"><h4>Profile</h4><p class="nopay">No profile yet. Claude builds it from your CV in a Lodestone session.</p></section>`;
+  const val=k=>Array.isArray(p[k])?p[k].join("\n"):(p[k]||"");
+  return `<section class="panel"><h4>Profile</h4>
+    <p class="note">Built from your CV (${esc(p.source||"")}). Only you can see it. Changes are used the next time roles are scored.</p>
+    <dl class="facts"><dt>Current</dt><dd>${esc([p.current&&p.current.title,p.current&&p.current.employer,p.current&&p.current.level].filter(Boolean).join(" · "))}</dd>
+    <dt>Experience</dt><dd>${esc(p.experience_years?`${p.experience_years.total} years, ${p.experience_years.product_management} in product management`:"")}</dd></dl>
+    ${PROFILE_FIELDS.map(([k,l,rows])=>`<div class="field"><label for="pf-${k}">${l}</label><textarea id="pf-${k}" rows="${rows}" style="min-height:${rows>1?110:44}px">${esc(val(k))}</textarea></div>`).join("")}
+    <div class="row"><button class="btn" data-act="saveprofile"${S.offline?" disabled":""}>Save profile</button></div>
+  </section>`;
+}
+async function saveProfile(){
+  if(!S.db||!S.profile) return;
+  const body={...S.profile};
+  PROFILE_FIELDS.forEach(([k])=>{const el=document.getElementById("pf-"+k);if(!el) return;const v=el.value.trim();
+    body[k]=Array.isArray(S.profile[k])?v.split("\n").map(x=>x.trim()).filter(Boolean):v});
+  body.version=(+S.profile.version||1)+1;body.edited_at=new Date().toISOString();
+  try{await S.db.doc("profile/main").set(body);S._editingPrefs=false;toast("Profile saved. It's used at the next scoring run.")}
+  catch(e){toast("Couldn't save the profile. Try again.");console.warn(e)}
+}
 function viewSettings(){
   const p=S.prefs, W=p.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+(+W[k]||0),0);
   return `<div class="topbar"><h1>Settings</h1><span class="sp"></span>${freshChip()}</div>
+  ${profilePanel()}
   <section class="panel"><h4>Where</h4>
     <div class="chips">${REGIONS.filter(r=>r!=="Other Canada").map(r=>`<label class="chip"><input type="checkbox" data-region="${r}"${(p.regions||[]).includes(r)?" checked":""}> ${r}</label>`).join("")}</div>
     <div class="switch"><label for="other">Also show the rest of Canada under "My regions"</label><input type="checkbox" id="other"${p.other_regions?" checked":""}></div>
@@ -602,6 +666,7 @@ document.addEventListener("click",e=>{
   if(d.act==="close"){S.open=null;render();return}
   if(d.act==="addjob"){addJob();return}
   if(d.act==="saveprefs"){savePrefs();return}
+  if(d.act==="saveprofile"){saveProfile();return}
   if(d.act==="resetw"){SUBS.forEach(k=>{const i=document.getElementById("w-"+k);if(i)i.value=DEFAULT_PREFS.weights[k]});updateWeightLabels();S._editingPrefs=true;return}
   if(d.open!==undefined&&!e.target.closest(".triage,.reasons,a,select")){S.open=d.open;if(d.idx)S.sel=+d.idx;render()}
 });

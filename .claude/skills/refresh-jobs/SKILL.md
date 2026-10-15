@@ -31,8 +31,14 @@ standard library only, so no installs are needed.
    (freshness, R11a), and updates each source's Canada count in the index. One broken source never
    stops the run; failures are listed under `errors`. Fix or pause failing sources.
    Then `python3 -m lodestone index` to refresh the readable index (`data/sources/README.md`).
-5. **Score (from Sprint 3).** Score each new or changed candidate against the profile in the
-   Lodestone Artifact db. Not available yet.
+5. **Score (P1-S3).** `python3 -m lodestone score prepare` writes batches of roles that need a (re)score
+   (new, changed, or a new rubric version) to `data/state/score_inbox/`. Read the profile from the app
+   (`ArtifactData get profile/main`) into the scratchpad only, never the repo. Score each batch against
+   `docs/eng/SCORING_RUBRIC.md` and `config/scoring.json` (for large runs, one sub-agent per batch with the same
+   brief), producing a JSON list of `{id, fingerprint, subs, reasons, summary, level_guess, people_mgmt,
+   work_mode, must_haves, flags}`, then `python3 -m lodestone score ingest <results.json>`. Before trusting a
+   new rubric, compare scores with Ayush's triage (`triage` collection): roles he marked Interested should
+   rank high, "Not for me" low.
 6. **Push to the app (P1-S2).** The app is the private Artifact https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7
    (source: `app/lodestone.html`). Run `python3 -m lodestone export`; it writes one JSON file per database
    document under `data/state/app_export/` (jobs packed into buckets `jobs/b0`–`b7`, plus `meta/companies`

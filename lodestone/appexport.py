@@ -39,12 +39,17 @@ def _job(key: str, j: dict) -> dict:
 
 def build() -> dict[str, dict[str, dict]]:
     jobs = store.load("jobs", {"jobs": {}})["jobs"]
+    scores = store.load("scores", {})
     docs: dict[str, dict[str, dict]] = {"jobs": {}, "meta": {}}
     buckets = {f"b{i}": {} for i in range(BUCKETS)}
     for key, j in jobs.items():
         if not j.get("role_tier") or j.get("role_excluded"):
             continue
         rec = _job(key, j)
+        sc = scores.get(rec["id"])
+        if sc:
+            rec["fit"] = {k: sc[k] for k in ("subs", "reasons", "summary", "level_guess", "people_mgmt", "work_mode",
+                                             "must_haves", "flags", "scored_at", "rubric")}
         buckets[f"b{int(rec['id'], 16) % BUCKETS}"][rec["id"]] = rec
     for b, items in buckets.items():
         docs["jobs"][b] = {"jobs": items}

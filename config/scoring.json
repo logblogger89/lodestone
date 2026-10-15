@@ -1,0 +1,10 @@
+{
+  "_doc": "Fit-scoring config (D-005, PRD Appendix E). Weights are defaults; the app's Settings override them at read time. Pay bands compare the featured Canadian range (CAD, annual) to the user's target. Rubric text: docs/eng/SCORING_RUBRIC.md.",
+  "rubric_version": "1.0",
+  "default_weights": {"role": 25, "level": 20, "domain": 20, "pathway": 15, "pay": 10, "skills": 10},
+  "pay_target_cad": {
+    "_doc": "Default for a Google L5 operating near L6, based on Toronto Senior/Staff PM bands (DR-1, DR-2). Score uses the top of the posted Canadian range; base-only ranges compared directly, bonus-inclusive ranges discounted 10%.",
+    "excellent": 230000, "good": 190000, "ok": 160000, "low": 130000
+  },
+  "unknown_score": 50
+}

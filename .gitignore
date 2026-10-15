@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 data/state/page_inbox/
 data/state/app_export/
+data/state/score_inbox/
