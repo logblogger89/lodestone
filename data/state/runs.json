@@ -22,10 +22,10 @@
    "postings": 365
   },
   "jobs": {
-   "at": "2026-10-15T02:12:50+00:00",
-   "sources_ok": 183,
-   "sources_failed": 3,
-   "canada_jobs_tracked": 10509,
+   "at": "2026-10-15T03:10:19+00:00",
+   "sources_ok": 4,
+   "sources_failed": 0,
+   "canada_postings": 20,
    "candidates": 546
   },
   "jobs:google": {
@@ -139,19 +139,13 @@
   "jobs:njoyn": {
    "at": "2026-10-15T02:12:49+00:00",
    "postings": 480
+  },
+  "jobs:page": {
+   "at": "2026-10-15T03:10:19+00:00",
+   "postings": 26
   }
  },
  "history": [
-  {
-   "component": "jobs:successfactors",
-   "at": "2026-10-15T02:07:16+00:00",
-   "postings": 3202
-  },
-  {
-   "component": "jobs:njoyn",
-   "at": "2026-10-15T02:07:16+00:00",
-   "postings": 480
-  },
   {
    "component": "jobs:coveo",
    "at": "2026-10-15T02:07:16+00:00",
@@ -396,6 +390,19 @@
    "sources_ok": 183,
    "sources_failed": 3,
    "canada_jobs_tracked": 10509,
+   "candidates": 546
+  },
+  {
+   "component": "jobs:page",
+   "at": "2026-10-15T03:10:19+00:00",
+   "postings": 26
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-15T03:10:19+00:00",
+   "sources_ok": 4,
+   "sources_failed": 0,
+   "canada_postings": 20,
    "candidates": 546
   }
  ]

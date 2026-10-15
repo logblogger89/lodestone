@@ -35,6 +35,7 @@ Each job system is one adapter file in `lodestone/adapters/`, reused by every co
 | Enterprise careers sites | Workday, Oracle Recruiting, SuccessFactors, Phenom, Dayforce, Eightfold, Jibe | The JSON the careers page itself calls. Workday and Oracle are asked for Canada only; full postings are fetched only for role matches |
 | Company-specific sites | Google, Amazon, Microsoft (Eightfold), Apple, Meta, Shopify, IBM, Atlassian, Coveo | Embedded page data or the site's own search API |
 | HTML pages | Avature, iCIMS, TalentBrew, Njoyn | Read from the public search-results pages; a parse that finds nothing is reported as an error |
+| Careers page read by Claude (D-043) | Any plain careers page with no feed | `lodestone pages fetch` saves the page as text with its links; Claude reads it during `/refresh-jobs` and records the jobs (`pages save`). No API cost; one page read per company per refresh |
 
 Etiquette: requests are slow and sequential per site (one refresh a few times a week), only public job listings are read, and nothing behind a login, captcha or bot challenge is bypassed. Sites that block automated reading (e.g. Indeed, WestJet's portal) are marked "paste only" and covered by capture (A3). A few sites refuse requests that name a tool in the user agent; for those Lodestone sends a plain browser user agent, at the same low volume.
 

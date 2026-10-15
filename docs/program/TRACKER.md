@@ -92,6 +92,7 @@
 | D-040 | 10-14 | **M3 approved:** Phase 1 design. Build starts with P1-S1 | Gate review | Ayush |
 | D-041 | 10-14 | Engine code uses only Python's standard library (no installs in fresh cloud sessions). Refresh state (`data/state/`) is committed so each new session knows what was seen before (needed for "no longer live"). Job-board auto-matches on a shortened name are flagged and fixed in `config/ats_overrides.csv` | Fresh containers, liveness history, avoid wrong-company matches | Claude |
 | D-042 | 10-15 | **Every watchlist company gets a source.** Where no hosted board exists, Claude researches the careers site and the job system behind it, and records it in the source index (`data/sources/source_index.csv`, readable copy `data/sources/README.md`). One adapter per job system, reused across companies. Sites that block automated reading are paste-only. Sub-brands that hire through a parent (Tangerine, Simplii, Layer 6, Borealis, Ownr) are picked up via the parent | Q-21 | Ayush |
+| D-043 | 10-15 | **Careers-page reader** is the fallback for companies with no feed: Lodestone saves the page as text and Claude reads the jobs from it during `/refresh-jobs` (covered by the subscription). Applies to Vidyard, Autoverify, Digitail, Taalas. Sites that block automated visitors (Indeed, WestJet, Definity, Resolver, Ross Video, Dayforce) stay paste-only; bot checks are never bypassed | Ayush asked whether careers pages can be read directly | Ayush |
 
 ## 4. Open questions
 
@@ -175,6 +176,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | Careers-page reader added (D-043): 4 more companies pulled; 6 bot-protected sites confirmed paste-only | Claude |
 | 2026-10-15 | Q-21 answered (D-042). Source index built for all 210 companies (research by 4 parallel agents); 26 new adapters; 546 candidates from 183 companies. R-15 mitigated. Eng Design updated | Claude |
 
 ## 7. Published artifacts (Google Drive)

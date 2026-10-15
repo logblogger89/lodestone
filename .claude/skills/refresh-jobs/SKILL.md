@@ -20,16 +20,22 @@ standard library only, so no installs are needed.
    site, identify the job system, verify the feed, and add a row (an existing adapter in
    `lodestone/adapters/` covers most systems; a new system means a new adapter file).
    Shortened-name matches are added as `paused` until confirmed.
-3. **Refresh.** `python3 -m lodestone refresh` (or `--only <company or platform>` to test one source)
+3. **Careers pages with no feed (D-043).** `python3 -m lodestone pages fetch` saves a plain-text copy of
+   each `page` source to `data/state/page_inbox/`. Read each file and write the open jobs as a JSON list
+   of `{"title", "location", "url"}` (exact posting links from the text; location as shown, add the country
+   when the page makes it clear; skip "open application" / general-interest entries). Save each with
+   `python3 -m lodestone pages save "<Company>" <file.json>`. A page not read within a day is reported as
+   a failed source rather than closing its jobs.
+4. **Refresh.** `python3 -m lodestone refresh` (or `--only <company or platform>` to test one source)
    Writes `data/state/jobs.json`, `data/state/candidates_to_score.json` and `data/state/runs.json`
    (freshness, R11a), and updates each source's Canada count in the index. One broken source never
    stops the run; failures are listed under `errors`. Fix or pause failing sources.
    Then `python3 -m lodestone index` to refresh the readable index (`data/sources/README.md`).
-4. **Score (from Sprint 3).** Score each new or changed candidate against the profile in the
+5. **Score (from Sprint 3).** Score each new or changed candidate against the profile in the
    Lodestone Artifact db. Not available yet.
-5. **Push to the app (from Sprint 2).** Write jobs and freshness to the Lodestone Artifact db with
+6. **Push to the app (from Sprint 2).** Write jobs and freshness to the Lodestone Artifact db with
    ArtifactData `batch`. Not available yet.
-6. **Save and report.** Run the tests (`python3 -m unittest discover -s tests -t .`), commit
+7. **Save and report.** Run the tests (`python3 -m unittest discover -s tests -t .`), commit
    `data/state/` and `data/sources/` and push to the working branch. Then give Ayush a plain-language summary: feeds
    pulled, Canadian roles found, candidates by tier and region, new ones, ones that closed, and any errors.
 

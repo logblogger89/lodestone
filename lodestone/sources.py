@@ -54,7 +54,7 @@ PLATFORM_LABELS = {
     "atlassian": "Atlassian Careers", "workable": "Workable", "ultipro": "UKG Pro", "phenom": "Phenom",
     "dayforce": "Dayforce", "successfactors": "SuccessFactors", "shopify": "Shopify Careers", "avature": "Avature",
     "icims": "iCIMS", "talentbrew": "TalentBrew", "ibm": "IBM Careers", "coveo": "Coveo Careers",
-    "covered": "Via parent company",
+    "covered": "Via parent company", "page": "Careers page (read by Claude)",
 }
 
 
@@ -105,6 +105,8 @@ def row_host(r: dict) -> str | None:
             return urllib.parse.urlparse(f[k]).netloc
     if p == "bamboohr":
         return f"{f['subdomain']}.bamboohr.com"
+    if p == "page":
+        return urllib.parse.urlparse(f["url"]).netloc
     if p == "hibob":
         return f"{f['subdomain']}.careers.hibob.com"
     from .adapters import ADAPTERS
