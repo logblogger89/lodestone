@@ -13491,5 +13491,2252 @@
    "Onsite required",
    "Not a PM role"
   ]
+ },
+ "d7acf34a5965": {
+  "fingerprint": "01fbfaa9d3e0bb4e",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 75,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Solution architecture role, not product ownership",
+   "level": "Senior, hands-on technical lead across data and AI",
+   "domain": "Data and AI platform work overlaps your data platforms background",
+   "pathway": "No sponsorship information in posting (inferred none)",
+   "pay": "Pay not posted",
+   "skills": "Needs hands-on data architecture; you are PM-side"
+  },
+  "summary": "Lead design of scalable data and AI solutions as a senior architect on Rogers' Data & AI team.",
+  "level_guess": "Senior Architect (~L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Data/AI solution architecture",
+   "Cloud data platforms",
+   "Stakeholder leadership"
+  ],
+  "flags": [
+   "Calgary only"
+  ]
+ },
+ "3f4ff7edb4b1": {
+  "fingerprint": "7af7d5ae8e8a7c6a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Pre-sales solution architecture for B2B IoT, not product",
+   "level": "Scope unclear; asks 2+ yrs B2B solution sales",
+   "domain": "IoT and network services, not your domains",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Pay not posted",
+   "skills": "Wants B2B solution sales experience you lack"
+  },
+  "summary": "Design IoT solutions for Rogers Business customers alongside sales.",
+  "level_guess": "Mid-level architect",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "2+ yrs B2B solution sales",
+   "Solution architecture"
+  ],
+  "flags": [
+   "Pre-sales role",
+   "Onsite required"
+  ]
+ },
+ "2f9aa8820957": {
+  "fingerprint": "b6116ca01d1b0ad4",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 70,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 85
+  },
+  "reasons": {
+   "role": "Owns roadmap for media data platforms: core PM",
+   "level": "Senior Manager with people leadership, 8+ yrs",
+   "domain": "Data platforms plus advanced advertising match you",
+   "pathway": "No sponsorship info; Rogers is a large employer",
+   "pay": "Pay not posted",
+   "skills": "Fits 8+ yrs PM/data platforms and ads background"
+  },
+  "summary": "Lead strategy and roadmap for Rogers Sports & Media data platforms supporting advertising and subscriptions.",
+  "level_guess": "Senior Manager PM (~L5-L6)",
+  "people_mgmt": true,
+  "work_mode": "onsite",
+  "must_haves": [
+   "8+ yrs PM/data platforms",
+   "Roadmap strategy",
+   "Cross-functional leadership"
+  ],
+  "flags": [
+   "Includes people leadership",
+   "Onsite expected"
+  ]
+ },
+ "784caa97c0e9": {
+  "fingerprint": "71ea09fdf737bcf2",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 30,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Product analytics role, not product ownership",
+   "level": "Senior analyst, 4+ yrs: below your level",
+   "domain": "Adtech/martech data fits your ads and analytics work",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Pay not posted",
+   "skills": "Your SQL and analytics background fits"
+  },
+  "summary": "Analyze product and audience data for Rogers Sports & Media.",
+  "level_guess": "Senior Analyst (below L5)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "4+ yrs analytics/adtech/PM",
+   "SQL and analytics"
+  ],
+  "flags": [
+   "Analyst role",
+   "Onsite expected"
+  ]
+ },
+ "03a3a61f8a8f": {
+  "fingerprint": "48030a5aec6a32ae",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 30,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core PM owning eCommerce products",
+   "level": "Asks 3-5 yrs; below your L5-L6 scope",
+   "domain": "Digital commerce overlaps your Shopping work",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Pay not posted",
+   "skills": "Fits PM skills; scope is narrower"
+  },
+  "summary": "Own digital commerce and customer experience products on Rogers.com and the app.",
+  "level_guess": "PM II (~L4)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "3-5 yrs digital PM",
+   "eCommerce/customer experience"
+  ],
+  "flags": [
+   "Onsite expected",
+   "Brampton location"
+  ]
+ },
+ "655f992467e6": {
+  "fingerprint": "cf693de3c5906e97",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 40,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Owns vision and roadmap for Wireline eCommerce",
+   "level": "Plain Product Manager title, years not stated",
+   "domain": "Digital commerce overlaps your Shopping work",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Pay not posted",
+   "skills": "Strong PM match; consumer web fits"
+  },
+  "summary": "Own vision, roadmap and delivery for Rogers' Wireline eCommerce journeys.",
+  "level_guess": "PM (~L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "Product vision and roadmap",
+   "Cross-functional delivery",
+   "Analytics-driven prioritization"
+  ],
+  "flags": [
+   "Level unclear"
+  ]
+ },
+ "ac8c304f07e6": {
+  "fingerprint": "2fa9b0afda644197",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Data solution architecture, not product ownership",
+   "level": "Seniority not clear from posting",
+   "domain": "Data platforms overlap your background",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Pay not posted",
+   "skills": "Hands-on data architecture skills needed"
+  },
+  "summary": "Design data solutions and architecture for Rogers' Data & AI team.",
+  "level_guess": "Architect (unclear)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Data architecture",
+   "Cloud data platforms"
+  ],
+  "flags": [
+   "Calgary only"
+  ]
+ },
+ "04f213bc9c1a": {
+  "fingerprint": "d0082eede8c82877",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Sales engineering for an incident platform: stretch",
+   "level": "Asks 5+ yrs but is a pre-sales IC role",
+   "domain": "Developer reliability tooling is adjacent to your platforms",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Pay not posted",
+   "skills": "Wants hands-on customer engineering background"
+  },
+  "summary": "Support sales with technical demos and solutions for Rootly's incident platform.",
+  "level_guess": "Senior SE",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs Solutions/Sales Engineer",
+   "Customer engagement"
+  ],
+  "flags": [
+   "Pre-sales role"
+  ]
+ },
+ "615cb1925bcb": {
+  "fingerprint": "3da2046ed52e9f61",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 75,
+   "level": 30,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Technical PM working with customers: product-heavy",
+   "level": "Asks 3+ yrs; scope below your level",
+   "domain": "Developer/reliability platform is adjacent to yours",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Pay not posted",
+   "skills": "Partly fits; wants engineering/customer-facing depth"
+  },
+  "summary": "Turn customer technical needs into execution-ready plans as a forward-deployed technical PM at Rootly.",
+  "level_guess": "Technical PM (~L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3+ yrs eng/SE/technical PM",
+   "Customer engineering engagement"
+  ],
+  "flags": [
+   "Customer-facing"
+  ]
+ },
+ "2bf782417522": {
+  "fingerprint": "a98fe0b954622035",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 80,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Professional services migration architect, not product",
+   "level": "Asks 8+ yrs; senior delivery scope",
+   "domain": "Salesforce data/cloud platform migrations are adjacent",
+   "pathway": "Large multinational; inferred (not stated)",
+   "pay": "Ontario top CA$142.6K; BC range to CA$240K",
+   "skills": "Needs hands-on migration consulting you lack"
+  },
+  "summary": "Lead large-scale Salesforce platform migrations for customers as a solutions architect.",
+  "level_guess": "Senior Architect (~L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs services/technical consulting",
+   "Platform migrations"
+  ],
+  "flags": [
+   "Consulting role",
+   "Pay differs by province"
+  ]
+ },
+ "cc1d1b3a3ac3": {
+  "fingerprint": "5a84f37d570d4911",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 75,
+   "domain": 75,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Customer-facing solution architect, not product",
+   "level": "7+ yrs enterprise delivery; senior IC",
+   "domain": "Financial services focus overlaps your domain",
+   "pathway": "Large multinational; inferred (not stated)",
+   "pay": "Ontario top CA$165.2K: ok band",
+   "skills": "Needs implementation architecture experience"
+  },
+  "summary": "Architect Salesforce solutions for healthcare or financial services customers.",
+  "level_guess": "Senior Architect (~L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "7+ yrs enterprise projects",
+   "Industry solution design"
+  ],
+  "flags": [
+   "Customer-facing role"
+  ]
+ },
+ "0a6a5292eaa6": {
+  "fingerprint": "4bfb18218862e87a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 60,
+   "pathway": 65,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Sales engineering role, not product",
+   "level": "Account-level SE, seniority unclear",
+   "domain": "CRM and AI platform is general B2B SaaS",
+   "pathway": "Large multinational; inferred (not stated)",
+   "pay": "Ontario top CA$160.6K: ok band",
+   "skills": "Demo and sales skills are not your core"
+  },
+  "summary": "Partner with account executives to demo and shape Salesforce solutions.",
+  "level_guess": "Solution Engineer",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Technical demos",
+   "Customer discovery"
+  ],
+  "flags": [
+   "Pre-sales role"
+  ]
+ },
+ "affe979cd1f7": {
+  "fingerprint": "4d05de8cc91a39f8",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 30,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Pre-sales consultant for public sector, not product",
+   "level": "Mid-level consultant, all levels",
+   "domain": "Public sector CRM is general B2B",
+   "pathway": "Public sector roles may restrict eligibility; unclear",
+   "pay": "Ontario top CA$124.6K: below target",
+   "skills": "Pre-sales skills not core to you"
+  },
+  "summary": "Support public sector sales with solution consulting for Salesforce.",
+  "level_guess": "Consultant (~L3-L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Pre-sales consulting",
+   "Public sector knowledge"
+  ],
+  "flags": [
+   "Public sector",
+   "May need clearance"
+  ]
+ },
+ "69daf9cf57a6": {
+  "fingerprint": "124f0bb2102867b0",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 40,
+   "domain": 60,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Pre-sales solution engineer, not product",
+   "level": "All levels; scope unclear",
+   "domain": "CRM and AI platform is general B2B SaaS",
+   "pathway": "Large multinational; inferred (not stated)",
+   "pay": "Ontario top CA$145.1K: low band",
+   "skills": "Demo skills not core; analytics helps"
+  },
+  "summary": "Run technical demos and proofs of concept for Salesforce prospects.",
+  "level_guess": "Solution Engineer",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "Technical demos",
+   "Customer discovery"
+  ],
+  "flags": [
+   "Pre-sales role"
+  ]
+ },
+ "44375ed243f8": {
+  "fingerprint": "c1b3e8c99a9aa38b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 5,
+   "level": 30,
+   "domain": 25,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Returns logistics and operations, not a product job",
+   "level": "Specialist-level operations, 1-3 yrs logistics",
+   "domain": "Reverse logistics is unrelated to your domains",
+   "pathway": "Large multinational; inferred (not stated)",
+   "pay": "Pay not posted",
+   "skills": "Needs logistics experience you do not have"
+  },
+  "summary": "Manage product returns, pricing and reverse logistics for Samsung Canada.",
+  "level_guess": "Specialist (below L5)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "1-3 yrs reverse logistics",
+   "Stakeholder coordination"
+  ],
+  "flags": [
+   "Operations role",
+   "Onsite"
+  ]
+ },
+ "5b0681e3c10e": {
+  "fingerprint": "2d6b00c2229738de",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 50,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Manager of Product Management for mobile: core PM",
+   "level": "Manager title; scope unclear, likely single product area",
+   "domain": "Consumer mobile hardware ecosystem is general consumer",
+   "pathway": "Large multinational; inferred (not stated)",
+   "pay": "Top CA$135K sits in the low band",
+   "skills": "Core PM skills fit; mobile domain is new"
+  },
+  "summary": "Own product strategy and enhancements for Samsung's mobile experience in Canada.",
+  "level_guess": "Manager PM (~L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "PM experience",
+   "Cross-functional leadership",
+   "Roadmap ownership"
+  ],
+  "flags": [
+   "Onsite"
+  ]
+ },
+ "4f7f5405f272": {
+  "fingerprint": "ee735060e2dbdb5c",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 50,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Manager of Product Management: core PM",
+   "level": "Manager title; scope unclear",
+   "domain": "Consumer electronics is general consumer",
+   "pathway": "Large multinational; inferred (not stated)",
+   "pay": "Top CA$135K sits in the low band",
+   "skills": "Core PM skills fit; hardware domain is new"
+  },
+  "summary": "Own product management for a Samsung Electronics Canada product area.",
+  "level_guess": "Manager PM (~L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "PM experience",
+   "Cross-functional leadership"
+  ],
+  "flags": [
+   "Onsite"
+  ]
+ },
+ "420104ec79c8": {
+  "fingerprint": "9d146c8705890894",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 50,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 40,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Manager of Product Management: core PM",
+   "level": "Manager title; 5 yrs PM preferred",
+   "domain": "Consumer electronics is general consumer",
+   "pathway": "Large multinational; inferred (not stated)",
+   "pay": "Top CA$135K sits in the low band",
+   "skills": "You exceed the 5 yrs PM preference"
+  },
+  "summary": "Own product management for a Samsung Electronics Canada product area on an 18-month term.",
+  "level_guess": "Manager PM (~L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "5 yrs PM preferred",
+   "Cross-functional leadership"
+  ],
+  "flags": [
+   "18-month contract",
+   "Onsite"
+  ]
+ },
+ "9e766e0750c3": {
+  "fingerprint": "0fe949229b0b70bb",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 70,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Owns IAM security products: core PM",
+   "level": "Asks 7+ yrs PM; large-scale transformation",
+   "domain": "Identity and security are adjacent to your governance work",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Requires 4+ yrs hands-on IAM (Sailpoint, Entra) you lack"
+  },
+  "summary": "Lead product delivery for Scotiabank's identity and access management platforms.",
+  "level_guess": "Senior PM (~L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "7+ yrs PM",
+   "4+ yrs InfoSec/IT",
+   "4+ yrs IAM platforms"
+  ],
+  "flags": [
+   "IAM tooling required"
+  ]
+ },
+ "613a3c2d384b": {
+  "fingerprint": "a1a97f6647d75ff2",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 40,
+   "level": 30,
+   "domain": 85,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Sanctions program risk coordination, little product work",
+   "level": "Execution-level support to a Director",
+   "domain": "Sanctions and compliance overlap your risk work",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Needs sanctions/AML experience you lack"
+  },
+  "summary": "Support the sanctions program's risk assessments, trackers and governance for Scotiabank.",
+  "level_guess": "Manager (below L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Sanctions/compliance knowledge",
+   "Risk assessment"
+  ],
+  "flags": [
+   "Compliance operations role"
+  ]
+ },
+ "a2f137eb6d7e": {
+  "fingerprint": "59e9721eae0ee93d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 70,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Senior PM owning cloud security capabilities",
+   "level": "Asks 7+ yrs PM; enterprise scale",
+   "domain": "Cloud security is adjacent; platform governance overlaps",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Asks 5+ yrs cloud security you lack"
+  },
+  "summary": "Govern and guide delivery of enterprise cloud security products at Scotiabank.",
+  "level_guess": "Senior PM (~L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "7+ yrs PM",
+   "5+ yrs cloud security"
+  ],
+  "flags": [
+   "Security depth required"
+  ]
+ },
+ "d74c25fc7cd5": {
+  "fingerprint": "7a2e42fbcd0aec8b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 30,
+   "domain": 80,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "PM for AI security portfolio: core PM",
+   "level": "Asks 3-5 yrs; backlog and execution focus",
+   "domain": "AI security fits your enterprise AI governance work",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "AI governance fits; scope is below you"
+  },
+  "summary": "Drive roadmaps and backlogs for Scotiabank's AI security products.",
+  "level_guess": "PM II (~L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "3-5 yrs PM",
+   "3+ yrs InfoSec/IT"
+  ],
+  "flags": [
+   "Below your level"
+  ]
+ },
+ "3c5ff0935bc2": {
+  "fingerprint": "aaf08b3205c567de",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 50,
+   "domain": 75,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Technical PM bridging business and engineering",
+   "level": "3+ yrs asked; scope looks mid-level",
+   "domain": "Capital markets overlaps your financial-services work",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Needs capital markets knowledge; SQL fits"
+  },
+  "summary": "Translate capital markets business needs into plans for Scotiabank's engineering teams.",
+  "level_guess": "Technical PM (~L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "3+ yrs capital markets",
+   "3+ yrs SQL",
+   "Business/engineering liaison"
+  ],
+  "flags": [
+   "Capital markets depth"
+  ]
+ },
+ "e25e6b1cf474": {
+  "fingerprint": "a65816161b5d7be1",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 75,
+   "level": 50,
+   "domain": 60,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Product Owner delivering integration solutions",
+   "level": "Asks 5-8 yrs; delivery-focused scope",
+   "domain": "Integration and APIs are adjacent to payments/platforms",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Product ownership fits; integration depth unclear"
+  },
+  "summary": "Deliver business value for the Integration Solutions team as product owner.",
+  "level_guess": "Product Owner (~L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5-8 yrs product/project delivery",
+   "Regulatory compliance"
+  ],
+  "flags": [
+   "Delivery-heavy role"
+  ]
+ },
+ "a761d69e9d24": {
+  "fingerprint": "2038abbe9f6b39ea",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 80,
+   "domain": 70,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Architecture role for Treasury systems, not product",
+   "level": "Senior, asks 10+ yrs",
+   "domain": "Banking treasury systems fit financial services",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Requires 10+ yrs software engineering"
+  },
+  "summary": "Define and evolve architecture for Scotiabank's Treasury systems.",
+  "level_guess": "Senior Architect (~L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "10+ yrs software engineering",
+   "Hybrid cloud architecture"
+  ],
+  "flags": [
+   "Engineering depth required"
+  ]
+ },
+ "c7796beb24cb": {
+  "fingerprint": "d9e817184f75981e",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 75,
+   "level": 35,
+   "domain": 70,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 65
+  },
+  "reasons": {
+   "role": "Leads platform product strategy: product-heavy",
+   "level": "Director of platform products; likely a team lead",
+   "domain": "Cloud and developer platforms are adjacent to yours",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Platform-as-a-product matches your experience"
+  },
+  "summary": "Lead strategy and roadmap for Scotiabank's enterprise Kubernetes, Kafka and developer platforms.",
+  "level_guess": "Director Product Owner (~L6+)",
+  "people_mgmt": true,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Platform product strategy",
+   "Engineering partnership",
+   "Senior leadership"
+  ],
+  "flags": [
+   "Director scope",
+   "May include people mgmt"
+  ]
+ },
+ "13fb8caddc31": {
+  "fingerprint": "cccbf88db2e19ca5",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 85,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Senior PM owning lending decisioning data products",
+   "level": "Asks 5+ yrs end-to-end PM; senior scope",
+   "domain": "Commercial lending and data platforms fit your fintech work",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Posting title says English/Spanish; check language need"
+  },
+  "summary": "Own strategy and design of commercial lending decisioning data platforms at Scotiabank.",
+  "level_guess": "Senior PM (~L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs PM",
+   "English/Spanish",
+   "Lending domain"
+  ],
+  "flags": [
+   "Spanish language listed"
+  ]
+ },
+ "a0f603790cea": {
+  "fingerprint": "44b2eb7932608e80",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 80,
+   "domain": 70,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Security architecture role at a digital bank, not product",
+   "level": "Senior, asks 15+ yrs",
+   "domain": "Banking and security are adjacent to your domains",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Requires 15+ yrs security architecture"
+  },
+  "summary": "Design security architecture for Tangerine's digital banking platforms.",
+  "level_guess": "Senior Architect (~L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "15+ yrs security architecture",
+   "Cloud security"
+  ],
+  "flags": [
+   "Deep security expertise"
+  ]
+ },
+ "a6cd5ed96197": {
+  "fingerprint": "8edaba8b9ca2c15e",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 75,
+   "level": 30,
+   "domain": 70,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Leads IAM product, architecture and governance: mixed",
+   "level": "Senior Director with architect team: large org",
+   "domain": "Identity and security are adjacent to your governance work",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Needs 10+ yrs IAM and 7+ yrs IAM architecture"
+  },
+  "summary": "Lead product management, architecture and governance for Scotiabank's global IAM services.",
+  "level_guess": "Senior Director (above L6)",
+  "people_mgmt": true,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "7+ yrs PM",
+   "7+ yrs IAM architect",
+   "10+ yrs IAM platforms"
+  ],
+  "flags": [
+   "Senior Director scope",
+   "Deep IAM expertise"
+  ]
+ },
+ "9da96f87819d": {
+  "fingerprint": "f4ae4c8fb727bdb7",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 75,
+   "level": 35,
+   "domain": 75,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Director-level product owner for a protection platform",
+   "level": "Director asking 10+ yrs; large-scale scope",
+   "domain": "Banking and insurance products fit financial services",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Platform PM fits; 10+ yrs banking leadership is a stretch"
+  },
+  "summary": "Lead roadmap execution for the ScotiaProtect platform across International Banking markets.",
+  "level_guess": "Director PM (~L6+)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "10+ yrs product/platform leadership",
+   "Banking or insurance"
+  ],
+  "flags": [
+   "Director scope",
+   "Spanish an asset"
+  ]
+ },
+ "b1971ebfe0dd": {
+  "fingerprint": "43fe0b430dbc1af0",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 50,
+   "level": 50,
+   "domain": 40,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Product owner for a sales enablement tool, little product ownership",
+   "level": "Senior Manager; scope unclear",
+   "domain": "Sales enablement for a payments unit is niche",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Asks 4+ yrs in sales or enablement, not your area"
+  },
+  "summary": "Own the Seismic sales enablement tool for Scotiabank's Global Transaction Banking sales teams.",
+  "level_guess": "Senior Manager (~L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "4+ yrs sales/enablement",
+   "Product ownership"
+  ],
+  "flags": [
+   "Sales-enablement focus"
+  ]
+ },
+ "97ee04a995fd": {
+  "fingerprint": "6166795a1673b385",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 80,
+   "domain": 70,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Architecture role for capital markets apps, not product",
+   "level": "Senior, asks 12+ yrs",
+   "domain": "Capital markets overlaps financial services",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Requires 12+ yrs software engineering"
+  },
+  "summary": "Provide architecture guidance for major capital markets applications at Scotiabank.",
+  "level_guess": "Senior Architect (~L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "12+ yrs software engineering",
+   "Hybrid cloud architecture"
+  ],
+  "flags": [
+   "Engineering depth required"
+  ]
+ },
+ "8ca0eb95b517": {
+  "fingerprint": "1728f1770bc0bb73",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 40,
+   "level": 10,
+   "domain": 85,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Program coordination for AML transformation, not product",
+   "level": "Assistant Manager: junior support role",
+   "domain": "AML compliance overlaps your risk and compliance work",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Compliance fits; coordination role is below you"
+  },
+  "summary": "Coordinate delivery and day-to-day support for Scotiabank's Global AML Transformation program.",
+  "level_guess": "Assistant Manager (below L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Program coordination",
+   "AML knowledge"
+  ],
+  "flags": [
+   "Well below your level"
+  ]
+ },
+ "55c5061351ce": {
+  "fingerprint": "96893a28bb01c000",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 40,
+   "level": 60,
+   "domain": 90,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Fraud strategy and policy role, not product ownership",
+   "level": "Senior Manager; regional strategy authority",
+   "domain": "Application and identity fraud matches your fraud work",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Fraud background fits; credit-risk focus differs"
+  },
+  "summary": "Set regional strategy for application and synthetic-identity fraud across Scotiabank's International Banking.",
+  "level_guess": "Senior Manager (~L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "3+ yrs fraud/credit risk",
+   "Fraud strategy"
+  ],
+  "flags": [
+   "Spanish preferred"
+  ]
+ },
+ "90cdc7646ad9": {
+  "fingerprint": "325961e7052ae44e",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 30,
+   "level": 70,
+   "domain": 25,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Technical product owner for Windows laptops, engineering heavy",
+   "level": "Principal engineer scope, enterprise-wide",
+   "domain": "Workstation OS estate is unrelated to your domains",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Requires deep Windows engineering"
+  },
+  "summary": "Own design, engineering and product for Scotiabank's Windows laptop and desktop estate.",
+  "level_guess": "Principal Engineer/TPO",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Windows OS engineering",
+   "Technical product ownership"
+  ],
+  "flags": [
+   "Engineering role"
+  ]
+ },
+ "a8f077a9e6b1": {
+  "fingerprint": "0795b5d3a7658582",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 85,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Owns roadmap for wealth AI products: core PM",
+   "level": "Senior, asks 5-7 yrs; strategy and roadmap scope",
+   "domain": "AI in financial services matches your enterprise AI work",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Fits 5-7 yrs PM and AI product background"
+  },
+  "summary": "Drive development and adoption of AI-powered tools for Global Wealth Management advisors and clients.",
+  "level_guess": "Senior PM (~L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5-7 yrs digital PM",
+   "AI/fintech product ownership"
+  ],
+  "flags": []
+ },
+ "a28d20b09cd7": {
+  "fingerprint": "6ec28dde8ee8d357",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 75,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Senior PM for digital advice features: core PM",
+   "level": "Senior; asks 5+ yrs customer-facing products",
+   "domain": "Fintech advice fits your financial-services background",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Fits customer product background; advice domain is new"
+  },
+  "summary": "Lead delivery of digital advice and financial guidance features on Scotia's mobile and web.",
+  "level_guess": "Senior PM (~L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs customer digital products",
+   "Mobile/web delivery"
+  ],
+  "flags": []
+ },
+ "98daee4df8bb": {
+  "fingerprint": "729647825f1ceb18",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 50,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Marketing planning role, not product management",
+   "level": "Senior Manager leading 2 managers",
+   "domain": "Banking marketing is general consumer",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Needs marketing planning background you lack"
+  },
+  "summary": "Lead acquisition and engagement marketing planning for Scotiabank's Canadian Banking.",
+  "level_guess": "Senior Manager (~L5)",
+  "people_mgmt": true,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Marketing planning",
+   "Team leadership"
+  ],
+  "flags": [
+   "Manages 2 managers",
+   "Marketing role"
+  ]
+ },
+ "f8f36cb1f14e": {
+  "fingerprint": "78e7dd8c66fe0e89",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 70,
+   "domain": 90,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Senior product authority for data products: core PM",
+   "level": "Senior Manager; leads small PM team",
+   "domain": "Data products and platforms match your background",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Fits data platform and governance experience"
+  },
+  "summary": "Lead strategy and lifecycle of data products for Scotiabank International Banking and coach a PM team.",
+  "level_guess": "Senior Manager PM (~L5-L6)",
+  "people_mgmt": true,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Data product management",
+   "Team coaching",
+   "Stakeholder alignment"
+  ],
+  "flags": [
+   "Includes people management"
+  ]
+ },
+ "7f4a61e635aa": {
+  "fingerprint": "3d10cca992c4a003",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 80,
+   "level": 75,
+   "domain": 70,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 65
+  },
+  "reasons": {
+   "role": "Product owner driving wealth onboarding transformation",
+   "level": "Senior, asks 8+ yrs; cross-functional scope",
+   "domain": "Wealth/fintech onboarding fits financial services",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "PM skills fit; delivery-focused ownership"
+  },
+  "summary": "Deliver large-scale transformation of client and account onboarding in Global Wealth Management.",
+  "level_guess": "Senior PO (~L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "8+ yrs product ownership",
+   "Wealth/fintech experience"
+  ],
+  "flags": []
+ },
+ "f76cd17f1694": {
+  "fingerprint": "1f5b3a8504beab56",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 70,
+   "domain": 90,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Data product management in a data CoE: core PM",
+   "level": "Senior Manager under a Director",
+   "domain": "Data products and governance match your background",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Spanish is mandatory per posting; you lack it"
+  },
+  "summary": "Manage the lifecycle of data products in Global Wealth Management's Data Centre of Excellence.",
+  "level_guess": "Senior Manager PM (~L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Mandatory Spanish",
+   "Data product lifecycle",
+   "Stakeholder management"
+  ],
+  "flags": [
+   "Spanish required",
+   "Bilingual English/Spanish"
+  ]
+ },
+ "6f52c4cc6ada": {
+  "fingerprint": "7365069f035b875b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 75,
+   "level": 35,
+   "domain": 75,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product lead for tax reporting products, product-heavy",
+   "level": "Director scope; assigned tax operations",
+   "domain": "FATCA/CRS regulatory work overlaps your compliance work",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Needs tax operations expertise you lack"
+  },
+  "summary": "Lead tax products for FATCA, CRS and cross-border tax regimes at Scotiabank.",
+  "level_guess": "Director (~L6+)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Tax operations (FATCA/CRS)",
+   "Product leadership"
+  ],
+  "flags": [
+   "Director scope",
+   "Tax expertise needed"
+  ]
+ },
+ "c952bc235f0e": {
+  "fingerprint": "868267b04b546565",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 80,
+   "domain": 60,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Senior PM for enterprise decisioning: core PM",
+   "level": "Asks 8+ yrs; enterprise platform scope",
+   "domain": "Personalization/MarTech is adjacent to your ads and ML work",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Asks 3+ yrs hands-on with Pega-type decisioning tools"
+  },
+  "summary": "Shape and deliver enterprise decisioning and orchestration capabilities for Canadian Banking.",
+  "level_guess": "Senior PM (~L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "8+ yrs PM/MarTech",
+   "3+ yrs decisioning platforms (Pega)"
+  ],
+  "flags": [
+   "Decisioning tool experience"
+  ]
+ },
+ "8495d7a84e04": {
+  "fingerprint": "216cb80f86a47588",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 70,
+   "level": 40,
+   "domain": 75,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Product owner on card and lending system implementations",
+   "level": "Manager under a Senior Manager; delivery scope",
+   "domain": "Credit cards and lending fit financial services",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Asks 5 yrs lending/banking; delivery-oriented"
+  },
+  "summary": "Own requirements for credit card and line-of-credit system implementations.",
+  "level_guess": "Manager PO (~L4)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "5 yrs lending and banking",
+   "Vendor management"
+  ],
+  "flags": [
+   "Weekly onsite at Scarborough"
+  ]
+ },
+ "672fca6d79e7": {
+  "fingerprint": "f5dba1a1961b21d0",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 70,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Senior digital product owner for wealth platforms",
+   "level": "Senior; asks 5+ yrs digital PM",
+   "domain": "Wealth and fintech fit financial services",
+   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "pay": "Pay not posted",
+   "skills": "Title says Bilingual Spanish/English; you lack Spanish"
+  },
+  "summary": "Improve digital wealth platforms for Scotiabank's International Wealth Management clients.",
+  "level_guess": "Senior PO (~L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs digital PM",
+   "Spanish/English bilingual"
+  ],
+  "flags": [
+   "Spanish required"
+  ]
+ },
+ "a0cb137a8be3": {
+  "fingerprint": "03dea32b0416b5ed",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 80,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Forward-deployed engineering role, hands-on with customers",
+   "level": "Senior IC; scope unclear",
+   "domain": "Applied enterprise AI matches your agent work",
+   "pathway": "Large multinational; inferred (not stated)",
+   "pay": "Pay not posted",
+   "skills": "Needs hands-on engineering; PM background is a stretch"
+  },
+  "summary": "Embed with customers to build applied AI solutions on ServiceNow.",
+  "level_guess": "Senior FDE",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Applied AI/engineering",
+   "Customer-facing delivery"
+  ],
+  "flags": [
+   "Montreal; French may matter",
+   "Engineering role"
+  ]
+ },
+ "121bb191fa63": {
+  "fingerprint": "4c47a08601611972",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 65,
+   "level": 80,
+   "domain": 80,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "No description posted; Staff TPM likely product-adjacent",
+   "level": "Staff title implies multi-team scope",
+   "domain": "Shopify commerce overlaps your Shopping work",
+   "pathway": "No sponsorship information in posting (Remote-Americas)",
+   "pay": "Pay not posted",
+   "skills": "No description posted; skills unclear"
+  },
+  "summary": "Staff-level technical program manager at Shopify (no posting text available).",
+  "level_guess": "Staff TPM (~L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Program management",
+   "Engineering partnership"
+  ],
+  "flags": [
+   "No description posted"
+  ]
+ },
+ "b95b95521369": {
+  "fingerprint": "44723b1244329221",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Pre-sales solution engineering, not product",
+   "level": "Senior title, mid-market scope",
+   "domain": "Commerce platform overlaps your Shopping work",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Pay not posted",
+   "skills": "No description posted; pre-sales skills not core"
+  },
+  "summary": "Senior pre-sales engineer for Shopify's mid-market merchants.",
+  "level_guess": "Senior SE",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Pre-sales engineering"
+  ],
+  "flags": [
+   "No description posted",
+   "Pre-sales role"
+  ]
+ },
+ "5c3a9cf05379": {
+  "fingerprint": "51c005fab2be4450",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Partner-facing solutions architecture, not product",
+   "level": "Senior title; partner scope",
+   "domain": "Commerce ecosystem overlaps your Shopping work",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Pay not posted",
+   "skills": "No description posted; architect skills not core"
+  },
+  "summary": "Senior solution architect supporting Shopify's partner ecosystem.",
+  "level_guess": "Senior Architect",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Solution architecture",
+   "Partner engagement"
+  ],
+  "flags": [
+   "No description posted",
+   "Pre-sales role"
+  ]
+ },
+ "e49fd6398ffd": {
+  "fingerprint": "a454d4ff102b1220",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 65,
+   "level": 60,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Product ops for growth, product-adjacent",
+   "level": "Senior Lead title; scope unclear",
+   "domain": "Merchant growth overlaps your Commerce work",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Pay not posted",
+   "skills": "No description posted; product ops fits analytics skills"
+  },
+  "summary": "Senior lead for product operations on Shopify's Growth teams.",
+  "level_guess": "Senior Lead (~L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Product operations",
+   "Analytics"
+  ],
+  "flags": [
+   "No description posted"
+  ]
+ },
+ "960b51315d35": {
+  "fingerprint": "1ec0f6665a1c0850",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 50,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Generic Product Management role at Shopify",
+   "level": "Level not stated",
+   "domain": "Commerce platform matches your Commerce work",
+   "pathway": "No sponsorship information in posting (Remote-Americas)",
+   "pay": "Pay not posted",
+   "skills": "No description posted; PM background should fit"
+  },
+  "summary": "Product management role at Shopify; team and scope not stated.",
+  "level_guess": "PM (level unclear)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Product management"
+  ],
+  "flags": [
+   "No description posted",
+   "Team unknown"
+  ]
+ },
+ "483db362519f": {
+  "fingerprint": "61989c87085b72ce",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Partner-facing technical architect, not product",
+   "level": "Level unclear",
+   "domain": "Cross-border commerce and tax is adjacent to your compliance work",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Pay not posted",
+   "skills": "No description posted; architect skills not core"
+  },
+  "summary": "Solution architect helping partners with cross-border commerce and tax at Shopify.",
+  "level_guess": "Partner SA",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Solution architecture",
+   "Tax/cross-border"
+  ],
+  "flags": [
+   "No description posted",
+   "Pre-sales role"
+  ]
+ },
+ "9b66305e814a": {
+  "fingerprint": "f9912011f03041c9",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Enterprise pre-sales engineering, not product",
+   "level": "Enterprise SE; senior scope",
+   "domain": "Commerce platform overlaps your Shopping work",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Pay not posted",
+   "skills": "No description posted; pre-sales skills not core"
+  },
+  "summary": "Enterprise-level pre-sales engineer for Shopify.",
+  "level_guess": "Enterprise SE",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Pre-sales engineering"
+  ],
+  "flags": [
+   "No description posted",
+   "Pre-sales role"
+  ]
+ },
+ "8300a7a083a4": {
+  "fingerprint": "8b8ef9c3077ddf89",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 80,
+   "domain": 80,
+   "pathway": 65,
+   "pay": 80,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Pre-sales solution engineering, not product",
+   "level": "Asks 7-8 yrs; senior IC",
+   "domain": "Data platform and AI cloud match your data background",
+   "pathway": "Large multinational; inferred (not stated)",
+   "pay": "Top CA$212.6K: good band",
+   "skills": "Asks 5+ yrs pre-sales you lack"
+  },
+  "summary": "Senior pre-sales engineer demoing Snowflake's data and AI platform to customers.",
+  "level_guess": "Senior SE (~L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "7-8 yrs industry",
+   "5+ yrs pre-sales"
+  ],
+  "flags": [
+   "Pre-sales role",
+   "Up to 50% travel"
+  ]
+ },
+ "b4d2a7e6eed9": {
+  "fingerprint": "423d6304e9bd0ec1",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 30,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing leadership, not product management",
+   "level": "Director over a team; large org",
+   "domain": "Programmatic ads matches your ads background",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Top CA$231K: excellent band",
+   "skills": "Needs 7+ yrs people leadership in marketing"
+  },
+  "summary": "Lead StackAdapt's product marketing team for its ad platform.",
+  "level_guess": "Director PMM (above L5)",
+  "people_mgmt": true,
+  "work_mode": "remote",
+  "must_haves": [
+   "7+ yrs people leadership",
+   "Product marketing"
+  ],
+  "flags": [
+   "Marketing role",
+   "Manages team"
+  ]
+ },
+ "22ba044875f2": {
+  "fingerprint": "6e3812e91e22f116",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 60,
+   "level": 30,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Program management on an ad platform, product-adjacent",
+   "level": "Asks only 2-4 yrs despite Lead title",
+   "domain": "Adtech matches your ads background",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Top CA$137.5K: low band",
+   "skills": "Program and analytics skills fit"
+  },
+  "summary": "Lead technical programs for StackAdapt's ad platform.",
+  "level_guess": "Lead TPM (~L4)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "2-4 yrs TPM/analytics"
+  ],
+  "flags": [
+   "Below your level"
+  ]
+ },
+ "731cde1eb62a": {
+  "fingerprint": "cdef9aa1a7af1335",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 40,
+   "level": 10,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Program analyst on an ad platform, little ownership",
+   "level": "Senior Analyst asking 1-3 yrs: well below you",
+   "domain": "Adtech matches your ads background",
+   "pathway": "No sponsorship information in posting",
+   "pay": "Top CA$104.5K: below target",
+   "skills": "Analytics fits; role is junior"
+  },
+  "summary": "Analyze and coordinate technical programs for StackAdapt's ad platform.",
+  "level_guess": "Analyst (below L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "1-3 yrs TPM/analytics"
+  ],
+  "flags": [
+   "Well below your level"
+  ]
+ },
+ "9a0b276b88bc": {
+  "fingerprint": "c3b6847b6feb6f53",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Senior PM for ad creatives: core PM",
+   "level": "Senior PM at a scale-up; likely narrower scope",
+   "domain": "Programmatic ads matches your ads background",
+   "pathway": "Remote-first, open to Canada and US; no sponsorship info",
+   "pay": "Top CA$231K: excellent band",
+   "skills": "Fits ads, ML and experimentation experience"
+  },
+  "summary": "Own the creatives product within StackAdapt's programmatic ad platform.",
+  "level_guess": "Senior PM (~L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Senior PM experience",
+   "Ad tech knowledge"
+  ],
+  "flags": []
+ },
+ "4b6192be0707": {
+  "fingerprint": "ccf2d332f6dec13d",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 85
+  },
+  "reasons": {
+   "role": "Staff PM owning attribution: core PM",
+   "level": "Staff title implies multi-team scope",
+   "domain": "Ad measurement and attribution match your ads work",
+   "pathway": "Remote-first, open to Canada and US; no sponsorship info",
+   "pay": "Top CA$258.5K: excellent band",
+   "skills": "Fits ads, analytics and ML background"
+  },
+  "summary": "Own attribution strategy and roadmap as a Staff PM on StackAdapt's ad platform.",
+  "level_guess": "Staff PM (~L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Staff-level PM",
+   "Attribution/measurement",
+   "Ad tech"
+  ],
+  "flags": []
+ },
+ "e34170e40ebf": {
+  "fingerprint": "a1c127aa32d5ff88",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 80,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Staff PM for B2B solutions: core PM",
+   "level": "Staff title implies multi-team scope",
+   "domain": "Ad platform for marketers overlaps your ads work",
+   "pathway": "Remote-first, open to Canada and US; no sponsorship info",
+   "pay": "Top CA$258.5K: excellent band",
+   "skills": "Fits platform PM and ads experience"
+  },
+  "summary": "Own the B2B solutions roadmap as a Staff PM at StackAdapt.",
+  "level_guess": "Staff PM (~L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Staff-level PM",
+   "B2B platform product"
+  ],
+  "flags": []
+ },
+ "4de21eddf151": {
+  "fingerprint": "eee43a38525b52f9",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 85
+  },
+  "reasons": {
+   "role": "Staff PM owning measurement: core PM",
+   "level": "Staff title implies multi-team scope",
+   "domain": "Ad measurement matches your ads and analytics work",
+   "pathway": "Remote-first, open to Canada and US; no sponsorship info",
+   "pay": "Top CA$258.5K: excellent band",
+   "skills": "Fits ads, experimentation and analytics skills"
+  },
+  "summary": "Own measurement strategy and roadmap as a Staff PM on StackAdapt's ad platform.",
+  "level_guess": "Staff PM (~L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Staff-level PM",
+   "Measurement/analytics",
+   "Ad tech"
+  ],
+  "flags": []
+ },
+ "5c4ed8eb82a4": {
+  "fingerprint": "01b7de96bbfa8e3b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 80,
+   "domain": 95,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 85
+  },
+  "reasons": {
+   "role": "Owns ecosystem risk products: core PM",
+   "level": "Asks 7+ yrs PM; senior scope",
+   "domain": "Payments risk matches your fraud and risk work",
+   "pathway": "Large multinational with Toronto hub; inferred",
+   "pay": "Pay not posted",
+   "skills": "Fits your risk, fraud and compliance products"
+  },
+  "summary": "Own product strategy for risk across Stripe's payments ecosystem in Toronto.",
+  "level_guess": "Senior PM (~L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "7+ yrs PM",
+   "Risk/fraud product",
+   "Cross-functional leadership"
+  ],
+  "flags": []
+ },
+ "a1faa8365619": {
+  "fingerprint": "cfd20ded9808ad3b",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 75,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Product marketing, not product management",
+   "level": "Asks 10+ yrs product marketing",
+   "domain": "Data products at a payments firm are adjacent",
+   "pathway": "Large multinational with Toronto hub; inferred",
+   "pay": "Pay not posted",
+   "skills": "Needs 10+ yrs product marketing"
+  },
+  "summary": "Lead go-to-market messaging for Stripe's data products.",
+  "level_guess": "Senior PMM",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs product marketing"
+  ],
+  "flags": [
+   "Marketing role"
+  ]
+ },
+ "f6919850d499": {
+  "fingerprint": "32273b71827ec1fb",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 40,
+   "domain": 75,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Product marketing, not product management",
+   "level": "Lead role asking 15+ yrs and team management",
+   "domain": "Billing and payments are adjacent to your domains",
+   "pathway": "Large multinational with Toronto hub; inferred",
+   "pay": "Pay not posted",
+   "skills": "Needs 15+ yrs marketing and 5+ yrs managing"
+  },
+  "summary": "Lead product marketing for Stripe Billing and manage the team.",
+  "level_guess": "PMM Lead (above L5)",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "15+ yrs product marketing",
+   "5+ yrs managing teams"
+  ],
+  "flags": [
+   "Marketing role",
+   "Manages team"
+  ]
+ },
+ "b786e88b6f89": {
+  "fingerprint": "a073be97331e9ce8",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 75,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing, not product management",
+   "level": "Asks 7+ yrs product marketing",
+   "domain": "Payments is adjacent to your domains",
+   "pathway": "Large multinational with Toronto hub; inferred",
+   "pay": "Pay not posted",
+   "skills": "Needs product marketing experience"
+  },
+  "summary": "Run go-to-market for a Stripe product line as a product marketing manager.",
+  "level_guess": "PMM (~L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs product marketing"
+  ],
+  "flags": [
+   "Marketing role"
+  ]
+ },
+ "bda6b69e4e53": {
+  "fingerprint": "6ea1b78ec196add2",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing, not product management",
+   "level": "Asks 7+ yrs marketing/intelligence",
+   "domain": "Market intelligence at a payments firm is adjacent",
+   "pathway": "Large multinational with Toronto hub; inferred",
+   "pay": "Pay not posted",
+   "skills": "Needs competitive intelligence background"
+  },
+  "summary": "Provide market and competitive intelligence to Stripe's product marketing.",
+  "level_guess": "PMM (~L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs enablement/CI/PMM"
+  ],
+  "flags": [
+   "Marketing role"
+  ]
+ },
+ "dcf1d1adacbf": {
+  "fingerprint": "a4297703d454dc71",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 75,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing, not product management",
+   "level": "Asks 7+ yrs product marketing",
+   "domain": "Payments matches your financial-services background",
+   "pathway": "Large multinational with Toronto hub; inferred",
+   "pay": "Pay not posted",
+   "skills": "Needs product marketing experience"
+  },
+  "summary": "Run go-to-market for Stripe Payments as a product marketing manager.",
+  "level_guess": "PMM (~L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs product marketing at tech"
+  ],
+  "flags": [
+   "Marketing role"
+  ]
+ },
+ "08447403abf4": {
+  "fingerprint": "72f155afe7717850",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 65,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Product marketing, not product management",
+   "level": "Asks 7+ yrs marketing or product",
+   "domain": "Startup segment go-to-market is general B2B",
+   "pathway": "Large multinational with Toronto hub; inferred",
+   "pay": "Pay not posted",
+   "skills": "Marketing or product experience accepted"
+  },
+  "summary": "Run go-to-market for Stripe's startup customer segment.",
+  "level_guess": "PMM (~L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs marketing or product"
+  ],
+  "flags": [
+   "Marketing role"
+  ]
+ },
+ "9477be049fc7": {
+  "fingerprint": "31b37dc427f45343",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 70,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Staff PM owning mobile products: core PM",
+   "level": "Staff title with 8+ yrs; multi-team scope",
+   "domain": "Payments mobile is adjacent to your domains",
+   "pathway": "Large multinational with Toronto hub; inferred",
+   "pay": "Pay not posted",
+   "skills": "Fits 8+ yrs PM; mobile depth unclear"
+  },
+  "summary": "Own the mobile product strategy at Stripe as a Staff PM.",
+  "level_guess": "Staff PM (~L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "8+ yrs PM",
+   "Mobile product experience"
+  ],
+  "flags": []
+ },
+ "cd3464f0dd62": {
+  "fingerprint": "2b47af858ff08eb6",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T05:49:43+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 75,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Staff PM for Sail Core platform: core PM",
+   "level": "Staff title with 8+ yrs; platform scope",
+   "domain": "Platform/infra product is adjacent to your platforms",
+   "pathway": "Large multinational with Toronto hub; inferred",
+   "pay": "Pay not posted",
+   "skills": "Fits platform-as-product; wants 2 yrs infra/devtools"
+  },
+  "summary": "Own the Sail Core platform roadmap at Stripe as a Staff PM.",
+  "level_guess": "Staff PM (~L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "8+ yrs PM",
+   "2+ yrs platform/infra/devtools"
+  ],
+  "flags": []
  }
 }

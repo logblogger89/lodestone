@@ -145,17 +145,12 @@
    "postings": 26
   },
   "scoring": {
-   "at": "2026-10-15T05:47:03+00:00",
+   "at": "2026-10-15T05:49:43+00:00",
    "rubric": "1.0",
-   "scored": 420
+   "scored": 490
   }
  },
  "history": [
-  {
-   "component": "jobs:talentbrew",
-   "at": "2026-10-15T03:45:25+00:00",
-   "postings": 24
-  },
   {
    "component": "jobs:icims",
    "at": "2026-10-15T03:45:25+00:00",
@@ -412,6 +407,12 @@
    "at": "2026-10-15T05:47:03+00:00",
    "rubric": "1.0",
    "scored": 420
+  },
+  {
+   "component": "scoring",
+   "at": "2026-10-15T05:49:43+00:00",
+   "rubric": "1.0",
+   "scored": 490
   }
  ]
 }
