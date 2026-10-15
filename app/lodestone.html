@@ -102,6 +102,13 @@ details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
 .archive details{border-top:1px solid var(--line);padding:10px 0}
 .archive summary{cursor:pointer}
 .card.sug{display:grid;gap:6px;cursor:default}
+.checks{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
+.ck{display:inline-flex;align-items:center;gap:5px;font-size:12px;padding:2px 9px 2px 7px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+.ck b{font-size:11px}
+.ck-good{background:var(--good-soft);color:var(--good)}
+.ck-warn{background:var(--warn-soft);color:var(--warn)}
+.ck-bad{background:var(--bad-soft);color:var(--bad);font-weight:600}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .card.sug ul{margin:0;padding-left:18px}
 .archive h2{font-family:var(--font-display);font-size:18px;margin:22px 0 4px}
 .report button.link{border:0;background:none;padding:0;text-align:left;cursor:pointer;font-weight:600;color:var(--accent)}
@@ -241,6 +248,7 @@ const DEFAULT_PREFS = {
   regions:["GTA","Waterloo Region","Remote-Canada"], other_regions:true, tiers:["Core","Adjacent","Stretch"],
   exclude_people_mgmt:true, include_no_pay:true, digest_size:20, later_days:7, max_age_days:0,
   report_days:14,
+  checks:{green_regions:["GTA","Waterloo Region","Remote-Canada"],pay_green:190000,pay_yellow:160000,level_green:6,level_yellow:5,fresh_green:21,fresh_yellow:45},
   weights:{role:22,level:18,domain:18,pathway:14,pay:9,skills:9,freshness:10}
 };
 const DEFAULT_PREFS_W = DEFAULT_PREFS.weights;
@@ -248,7 +256,7 @@ const DEFAULT_PREFS_W = DEFAULT_PREFS.weights;
    Uses the posting date; when a site gives none, the day Lodestone first saw the role, capped lower because
    the role may be older than that. */
 function freshness(j){
-  const posted=parseWhen(j.posted_at), seen=parseWhen(j.first_seen), ms=posted??seen;
+  const posted=postedAt(j), seen=parseWhen(j.first_seen), ms=posted??seen;
   if(ms==null) return {score:50,days:null,why:"Posting date unknown"};
   const d=Math.max(0,Math.round((Date.now()-ms)/DAY));
   let v=d<=14?100:d<=30?85:d<=45?60:d<=60?30:d<=90?15:5;
@@ -276,13 +284,13 @@ function toast(msg){const t=$("#toast");t.textContent=msg;t.hidden=false;clearTi
 
 /* ---------- dates ---------- */
 const DAY=864e5;
-function parseWhen(v){
+function parseWhen(v,base){
   if(v==null||v==="") return null;
   if(typeof v==="number") return v>1e12?v:v*1000;
   const s=String(v).trim();
   if(/^\d{9,13}$/.test(s)){const n=+s;return n>1e12?n:n*1000}
   let m=s.match(/posted\s+(today|yesterday|(\d+)\+?\s+days?\s+ago)/i);
-  if(m){const d=/today/i.test(m[1])?0:/yesterday/i.test(m[1])?1:+m[2];return Date.now()-d*DAY}
+  if(m){const d=/today/i.test(m[1])?0:/yesterday/i.test(m[1])?1:+m[2];return (base??Date.now())-d*DAY}   // "Posted 10 days ago" counts from when it was read
   const t=Date.parse(s.replace(/\s+/g," "));return isNaN(t)?null:t;
 }
 function ago(ms){
@@ -292,7 +300,8 @@ function ago(ms){
   if(d<2) return "1 day ago"; if(d<60) return Math.round(d)+" days ago";
   return Math.round(d/30)+" months ago";
 }
-const postedMs = j => parseWhen(j.posted_at) ?? parseWhen(j.first_seen);
+const postedAt = j => parseWhen(j.posted_at, parseWhen(j.last_seen));
+const postedMs = j => postedAt(j) ?? parseWhen(j.first_seen);
 
 /* ---------- formatting ---------- */
 function fmtK(n){n=+n;if(!isFinite(n)) return "";if(n<1000) return n%1?n.toFixed(2):String(n);const k=n/1000;return (k%1?k.toFixed(1).replace(/\.0$/,""):String(k))+"K"}
@@ -510,6 +519,52 @@ function pathwayChips(j){
     return `<span class="chip ${bad?"s-none":SIG_CLASS[x.status]||""}" title="${esc(x.detail||"")}">${esc(short)} · ${esc(x.status)}</span>`;}).join("");
 }
 const managesPeople=j=>j.fit?!!j.fit.people_mgmt:!!j.people_mgmt;
+/* Preference checks (D-059): green / yellow / red against Ayush's own preferences, all from Settings (D-005). */
+const CHECK_ICON={good:"✓",warn:"~",bad:"✕"};
+const REGION_SHORT={"GTA":"Toronto area","Waterloo Region":"Waterloo","Remote-Canada":"Remote in Canada","Other Canada":"Elsewhere in Canada"};
+function levelNums(j){const g=(j.fit&&j.fit.level_guess)||"";return (g.match(/L(\d)/g)||[]).map(x=>+x.slice(1))}
+function prefChecks(j){
+  const c={...DEFAULT_PREFS.checks,...(S.prefs.checks||{})}, out=[];
+  // where
+  const rg=j.region||"";
+  const green=S.prefs.regions||c.green_regions;
+  out.push(green.includes(rg)?{k:"Location",l:"good",t:REGION_SHORT[rg]||rg,why:"In your preferred locations"}
+    :{k:"Location",l:"warn",t:REGION_SHORT[rg]||rg||"Canada",why:"In Canada, outside your preferred locations (would mean moving)"});
+  // work permit
+  const pw=j.pathway, ps=pw?+pw.score:45, sig=((pw&&pw.signals)||[])[0];
+  out.push(ps>=80?{k:"Work permit",l:"good",t:sig&&sig.label==="Intra-company transfer"?"Internal transfer":"Hires from abroad",why:pathwayWhy(j)||"Strong evidence they hire people from other countries"}
+    :ps<=20?{k:"Work permit",l:"bad",t:"Must already be eligible",why:pathwayWhy(j)||"The posting says no sponsorship"}
+    :{k:"Work permit",l:"warn",t:ps>=55?"Some evidence":"No information",why:pathwayWhy(j)||"No evidence either way about hiring from abroad"});
+  // pay
+  const pi=payInfo(j), m=pi.main;
+  if(m&&m.max&&m.currency!=="USD"){const top=m.interval==="hour"?m.max*2000:m.max, base=["base","unspecified",undefined].includes(m.kind);
+    out.push({k:"Pay",l:top>=c.pay_green?"good":top>=c.pay_yellow?"warn":"bad",t:`Up to CA$${Math.round(top/1000)}K${base?"":" incl. bonus"}`,
+      why:`Posted top of range vs your targets (green from CA$${c.pay_green/1000}K, yellow from CA$${c.pay_yellow/1000}K)`});}
+  else if(pi.est){out.push({k:"Pay",l:pi.est.max>=c.pay_green&&pi.est.confidence==="high"?"good":pi.est.max>=c.pay_yellow?"warn":"bad",   // an estimate is green only at high confidencet:`est. up to CA$${Math.round(pi.est.max/1000)}K`,
+      why:`No Canadian range posted; Lodestone's estimate (${pi.est.confidence} confidence)`});}
+  else out.push({k:"Pay",l:"warn",t:"Not posted",why:"No Canadian pay range and not enough data to estimate"});
+  // level
+  const L=levelNums(j);
+  if(!L.length) out.push({k:"Level",l:"warn",t:"Level unclear",why:"Couldn't tell the level from the posting"});
+  else{const hi=Math.max(...L), lo=Math.min(...L);
+    out.push({k:"Level",l:hi>=c.level_green?"good":hi>=c.level_yellow?"warn":"bad",t:lo===hi?`≈ Google L${hi}`:`≈ Google L${lo}–L${hi}`,why:`Your target is L${c.level_green} (L${c.level_yellow} shows yellow)`});}
+  // freshness
+  const fr=freshness(j);
+  out.push(fr.days==null?{k:"Posted",l:"warn",t:"Date unknown",why:fr.why}
+    :{k:"Posted",l:fr.days<=c.fresh_green?"good":fr.days<=c.fresh_yellow?"warn":"bad",t:fr.days===0?"Today":`${fr.days}d ago`,why:fr.why});
+  // people management: only when it goes against the preference
+  if(managesPeople(j)) out.push({k:"Team",l:S.prefs.exclude_people_mgmt?"bad":"warn",t:"Manages people",why:"You prefer individual-contributor roles"});
+  return out;
+}
+function checkStrip(j){
+  return `<div class="checks">${prefChecks(j).map(x=>`<span class="ck ck-${x.l}" title="${esc(x.k)}: ${esc(x.why)}"><b aria-hidden="true">${CHECK_ICON[x.l]}</b><span class="sr">${x.l==="good"?"Matches":x.l==="bad"?"Doesn't match":"Partly matches"}: ${esc(x.k)}, </span>${esc(x.t)}</span>`).join("")}</div>`;
+}
+function checksPanel(j){
+  const xs=prefChecks(j), n=xs.filter(x=>x.l==="good").length;
+  return `<section class="panel"><h4>Against your preferences <span class="note">${n} of ${xs.length} green</span></h4>
+    <dl class="facts">${xs.map(x=>`<dt>${esc(x.k)}</dt><dd><span class="ck ck-${x.l}"><b aria-hidden="true">${CHECK_ICON[x.l]}</b>${esc(x.t)}</span> <span class="note">${esc(x.why)}</span></dd>`).join("")}</dl>
+    <p class="note">Change what counts as green or yellow in Settings → Colour rules.</p></section>`;
+}
 /* Compass ring: the arc fills with the score and the needle points to true north at 100. */
 function ring(v,size){
   const r=24,c=2*Math.PI*r,off=c*(1-v/100),a=(v/100)*360-90,rad=a*Math.PI/180,nx=28+24*Math.cos(rad),ny=28+24*Math.sin(rad);
@@ -542,8 +597,9 @@ function card(j,i){
       <h3>${esc(j.title)}</h3>
       <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span>${(j.fit&&j.fit.work_mode&&j.fit.work_mode!=="unclear")?`<span>${esc(j.fit.work_mode)}</span>`:j.workplace?`<span>${esc(j.workplace)}</span>`:""}${staleTag(j)}</div>
       ${j.fit&&j.fit.summary?`<p class="fitsum">${esc(j.fit.summary)}</p>`:""}
+      ${checkStrip(j)}
       <div class="row">${payCard(j)}${srcLinks(j)}
-        ${pathwayChips(j)}${isNew(j)?'<span class="chip warn">New</span>':""}${managesPeople(j)?'<span class="chip" title="The posting says this role manages people">Manages people</span>':""}${((j.fit&&j.fit.flags)||[]).slice(0,2).map(f=>`<span class="chip warn">${esc(f)}</span>`).join("")}</div>
+        ${isNew(j)?'<span class="chip warn">New</span>':""}${((j.fit&&j.fit.flags)||[]).slice(0,2).map(f=>`<span class="chip warn">${esc(f)}</span>`).join("")}</div>
       ${S.pendingReasons===j.id&&t.status==="not"?reasonsRow(j):""}
     </div>
     <div class="triage">${triageBtns(j)}</div>
@@ -640,6 +696,7 @@ function viewDetail(j){
   <div class="row">${triageBtns(j)}</div>
   ${t.status==="not"?reasonsRow(j):""}
   ${!j.live?`<div class="chip bad">No longer live${j.closed_at?" since "+esc(new Date(parseWhen(j.closed_at)).toLocaleDateString()):""}</div>`:""}
+  ${checksPanel(j)}
   ${fitPanel(j)}
   <section class="panel"><h4>Posting</h4><dl class="facts">
     <dt>Location</dt><dd>${esc(where(j))}${j.region?` <span class="note">(${esc(j.region)})</span>`:""}</dd>
@@ -763,7 +820,7 @@ async function saveProfile(){
   catch(e){toast("Couldn't save the profile. Try again.");console.warn(e)}
 }
 function viewSettings(){
-  const p=S.prefs, W=p.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+wv(W,k),0);
+  const p=S.prefs, W=p.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+wv(W,k),0), ck={...DEFAULT_PREFS.checks,...(p.checks||{})};
   return `<div class="topbar"><h1>Settings</h1><span class="sp"></span>${freshChip()}</div>
   ${profilePanel()}
   <section class="panel"><h4>Where</h4>
@@ -780,6 +837,16 @@ function viewSettings(){
     <div class="field"><label for="ldays">"Later" roles come back after (days)</label><input type="number" id="ldays" min="1" max="60" value="${+p.later_days||7}"></div>
     <div class="field"><label for="rdays">Reports archive shows the last (days)</label><input type="number" id="rdays" min="1" max="90" value="${+p.report_days||14}"></div>
     <div class="field"><label for="maxage">Hide roles posted more than this many days ago (0 shows all)</label><input type="number" id="maxage" min="0" max="365" value="${+p.max_age_days||0}"></div></div>
+  </section>
+  <section class="panel"><h4>Colour rules</h4>
+    <p class="note">What turns a role's checks green, yellow or red. Locations ticked under "Your regions" above count as green.</p>
+    <div class="grid2">
+    <div class="field"><label for="ck-payg">Pay: green from (CA$, top of range)</label><input type="number" id="ck-payg" step="5000" value="${+ck.pay_green}"></div>
+    <div class="field"><label for="ck-payy">Pay: yellow from (CA$)</label><input type="number" id="ck-payy" step="5000" value="${+ck.pay_yellow}"></div>
+    <div class="field"><label for="ck-lg">Level: green at Google level (or above)</label><input type="number" id="ck-lg" min="3" max="9" value="${+ck.level_green}"></div>
+    <div class="field"><label for="ck-ly">Level: yellow at Google level</label><input type="number" id="ck-ly" min="3" max="9" value="${+ck.level_yellow}"></div>
+    <div class="field"><label for="ck-fg">Posted: green within (days)</label><input type="number" id="ck-fg" min="1" max="120" value="${+ck.fresh_green}"></div>
+    <div class="field"><label for="ck-fy">Posted: yellow within (days)</label><input type="number" id="ck-fy" min="1" max="365" value="${+ck.fresh_yellow}"></div></div>
   </section>
   <section class="panel"><h4>Advanced: fit-score weights</h4>
     <p class="note">How much each factor counts in the fit score. They always add up to 100%. Freshness is worked out from the posting date each day.</p>
@@ -871,7 +938,9 @@ async function savePrefs(){
   const weights={};SUBS.forEach(k=>weights[k]=Math.round(raw[k]*100/tot));
   const clamp=(x,a,b,d)=>{x=Math.round(+x);return isFinite(x)?Math.min(b,Math.max(a,x)):d};
   const body={regions,tiers:tiers.length?tiers:TIERS,other_regions:val("other").checked,exclude_people_mgmt:val("xpm").checked,
-    include_no_pay:val("nopay").checked,digest_size:clamp(val("dsize").value,1,100,20),later_days:clamp(val("ldays").value,1,60,7),report_days:clamp(val("rdays").value,1,90,14),max_age_days:clamp(val("maxage").value,0,365,0),weights,updated_at:new Date().toISOString()};
+    include_no_pay:val("nopay").checked,digest_size:clamp(val("dsize").value,1,100,20),later_days:clamp(val("ldays").value,1,60,7),report_days:clamp(val("rdays").value,1,90,14),
+    checks:{green_regions:regions,pay_green:clamp(val("ck-payg").value,50000,600000,190000),pay_yellow:clamp(val("ck-payy").value,30000,600000,160000),
+      level_green:clamp(val("ck-lg").value,3,9,6),level_yellow:clamp(val("ck-ly").value,3,9,5),fresh_green:clamp(val("ck-fg").value,1,120,21),fresh_yellow:clamp(val("ck-fy").value,1,365,45)},max_age_days:clamp(val("maxage").value,0,365,0),weights,updated_at:new Date().toISOString()};
   try{await S.db.doc("settings/prefs").set(body);S._editingPrefs=false;S.prefs={...DEFAULT_PREFS,...body};render();toast("Settings saved.")}
   catch(e){toast("Couldn't save settings. Try again.");console.warn(e)}
 }
