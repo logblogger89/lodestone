@@ -129,7 +129,7 @@
 | Q-17 | Express Entry details for DR-3 | — | ✅ Resolved | They become optional in-app inputs: an Express Entry profile and CRS calculator that adjust listings (CR-5). Ayush has the details and will enter them in the app |
 | Q-18 | Which PM-adjacent families count? | — | ✅ Resolved | Delegated to Claude (D-017), with defaults in PRD §2b. No people-management roles by default, via a toggle (CR-6) |
 | Q-21 | Coverage gap (R-15): build careers-site connections for companies without a hosted board, including Google? | Ayush | ✅ Answered | Yes, for every company, with an index of all sources (D-042) |
-| Q-22 | Triangulate pay estimates with outside data (levels.fyi, Reddit, Job Bank)? levels.fyi, reddit.com and jobbank.gc.ca are blocked from the cloud environment; options: (a) Ayush pastes levels.fyi pages into the paste inbox, (b) open network access and Claude reads levels.fyi per company, subject to its terms, (c) Job Bank government wages as a floor only. Reddit not recommended (anecdotal, tiny samples) | Ayush | 🟨 Answered: B, pending prerequisites | Ayush chose (b) on 10-15. Prerequisites: Ayush adds www.levels.fyi to the environment's allowed domains (only he can); Claude added it to the allowlist and will read the site's terms before building. If the terms forbid automated reading, fall back to (a) |
+| Q-22 | Triangulate pay estimates with outside data (levels.fyi etc.)? | Ayush | 🟨 Open | Ayush chose (b) direct reads. Claude checked levels.fyi's terms (10-15): they forbid reading the site "by any automated means … including artificial intelligence agents" or using it "to compile any dataset" without a written agreement; their robots.txt allows only fetches a person asks for at that moment (Claude-User). So scheduled reads at refresh are out. Remaining choices: on-demand reads per role when Ayush asks, his pastes (a), or their paid API. Awaiting Ayush |
 
 ## 5. RAID log (risks, assumptions, issues, dependencies)
 
@@ -189,6 +189,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | Q-22: levels.fyi terms checked; automated/scheduled reading not allowed; build paused pending Ayush | Claude |
 | 2026-10-15 | Q-22: Ayush chose levels.fyi direct reads (option B); www.levels.fyi added to the network allowlist; waiting on the environment setting | Claude |
 | 2026-10-15 | Sprint 4 checks: Later roles return after 7 days (verified); closed postings show "Posting closed <date>" in the pipeline. Fixed: moving a role from Interested to Later or Not now takes it off the auto-Shortlist. Q-22 raised (outside pay data) | Claude |
 | 2026-10-15 | Pay estimates live (D-053): 181 of 214 roles without a Canadian range now show an estimate (28 high, 9 medium, 117 medium-low, 27 low confidence); tests added | Claude |
