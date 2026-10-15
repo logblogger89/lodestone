@@ -17,6 +17,9 @@ Used by Claude to score each role against the candidate profile (PRD Appendix E,
 | **pay** | Featured Canadian range vs. target (`config/scoring.json`) | ≥ excellent 95; ≥ good 80; ≥ ok 60; ≥ low 40; below 20; no Canadian range 50 (say "not posted"). US-only ranges: 50 and say so. Bonus-inclusive or OTE ranges: compare at 90% |
 | **skills** | Must-haves the candidate has | 90 has nearly all must-haves; 70 most; 50 unclear; 30 missing key ones (e.g. deep domain credential, specific language, hands-on engineering) |
 
+## Computed by the app (not scored by Claude)
+| **freshness** | How recently the role was posted; older postings are more often filled (Ayush, 10-15) | ≤14 days 100; ≤30 85; ≤45 60; ≤60 30; ≤90 15; older 5. No posting date: uses the day Lodestone first saw the role, capped at 70. Recomputed daily, so no re-scoring is needed. Optional Settings cut-off hides roles older than N days |
+
 ## Also extract
 - `summary`: one plain sentence on what the job is ("Own the roadmap for X used by Y").
 - `level_guess`: e.g. "Senior PM (≈ L5)", "Principal PM (≈ L6)".

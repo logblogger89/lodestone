@@ -22,10 +22,10 @@
    "postings": 365
   },
   "jobs": {
-   "at": "2026-10-15T04:06:18+00:00",
-   "sources_ok": 188,
-   "sources_failed": 2,
-   "canada_postings": 10578,
+   "at": "2026-10-15T06:00:14+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_postings": 51,
    "candidates": 543
   },
   "jobs:google": {
@@ -109,7 +109,7 @@
    "postings": 24
   },
   "jobs:icims": {
-   "at": "2026-10-15T04:06:18+00:00",
+   "at": "2026-10-15T06:00:14+00:00",
    "postings": 116
   },
   "jobs:avature": {
@@ -151,16 +151,6 @@
   }
  },
  "history": [
-  {
-   "component": "jobs:meta",
-   "at": "2026-10-15T03:45:25+00:00",
-   "postings": 8
-  },
-  {
-   "component": "jobs:eightfold",
-   "at": "2026-10-15T03:45:25+00:00",
-   "postings": 143
-  },
   {
    "component": "jobs:workable",
    "at": "2026-10-15T03:45:25+00:00",
@@ -414,6 +404,19 @@
    "at": "2026-10-15T05:50:45+00:00",
    "rubric": "1.0",
    "scored": 543
+  },
+  {
+   "component": "jobs:icims",
+   "at": "2026-10-15T06:00:14+00:00",
+   "postings": 116
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-15T06:00:14+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_postings": 51,
+   "candidates": 543
   }
  ]
 }

@@ -97,6 +97,7 @@
 | D-045 | 10-15 | **Pay:** read every pay range from the posting (salary field or description text), keep all regions, feature the Canadian one (job's city/province first). Card shows the Canadian range plus "+N US"; detail lists all ranges with the source sentence. "No pay in posting" only when the full posting was read | Ayush's RCA request (postmortem 2026-10-15) | Ayush |
 | D-046 | 10-15 | Each pay range carries its **type** from the posting's wording (base, base + bonus, OTE, total compensation, not stated) and whether the employer calls it an estimate. Non-base ranges get a small card tag ("incl. bonus") and rank after base ranges in the pay sort. **Equity** is shown when mentioned: the amount if given, else "Offered" or "May be offered (amount not stated)"; diversity-statement and finance uses of "equity" are ignored. Every pay section names its source (company, job system, date read, link) and shows the exact wording with numbers highlighted | Ayush review of the Ratehub role | Ayush |
 | D-047 | 10-15 | Fit scoring runs in-session with Claude (Sonnet sub-agents, 2 batches at a time, results saved per batch) against rubric v1.0; only new or changed roles are re-scored on later refreshes. Inferred pathway scores are normalized per company | Usage-limit interruption (R-16) and cross-batch consistency | Claude |
+| D-048 | 10-15 | **Freshness** joins the fit score as a 7th factor (default 10%), computed by the app daily from the posting date (≤14 days 100 … >90 days 5; undated roles use first-seen, capped at 70). Optional Settings cut-off hides roles older than N days (off by default). Postings over 45 days show their age in amber | Ayush: a 50-day-old posting is likely filled | Ayush |
 
 ## 4. Open questions
 
@@ -182,6 +183,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-15 | Freshness factor and old-posting cut-off added (D-048); iCIMS posting dates captured | Claude |
 | 2026-10-15 | All 543 roles scored (D-047); top matches include Workday, Microsoft, Amazon, StackAdapt, Zip, Okta Principal/Staff PM roles. Scores live in the app | Claude |
 | 2026-10-15 | P1-S3 started: profile from CV (app db only), rubric v1.0, scoring pipeline, app score ring and breakdown; scoring run deferred to 7am ET by usage limit (R-16). App pinned to sidebar | Claude |
 | 2026-10-15 | Pay type, equity and source attribution added (D-046) | Claude |

@@ -74,6 +74,12 @@ class AvatureAdapter:
         return out
 
 
+def _us_date(s: str) -> str | None:
+    """'10/14/2026 5:26 PM' -> '2026-10-14'."""
+    m = re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", s.strip())
+    return f"{m.group(3)}-{int(m.group(1)):02d}-{int(m.group(2)):02d}" if m else None
+
+
 class ICIMSAdapter:
     """iCIMS hosted career portals ({host}/jobs/search). Feed params: host. Locations look like
     'CA-ON-Ottawa' or 'CA-Remote' and are rewritten to 'Ottawa, ON, Canada'."""
@@ -105,8 +111,10 @@ class ICIMSAdapter:
                     continue
                 where = "; ".join(dict.fromkeys(self._loc(_clean(l)) for l in locs for l in _clean(l).split("|")))
                 remote = re.search(r'Remote</dt>\s*<dd[^>]*><span[^>]*>\s*Yes', it) is not None
+                posted = re.search(r'Posted Date</dt>\s*<dd[^>]*><span title="([^"]+)"', it)
                 out.append(_p(self, company, host.split(".")[0], link.group(2), _clean(title.group(1) if title else ""),
-                              link.group(1), where, remote_hint=remote or None))
+                              link.group(1), where, remote_hint=remote or None,
+                              posted_at=_us_date(posted.group(1)) if posted else None))
             page += 1
             time.sleep(0.4)
         return out
