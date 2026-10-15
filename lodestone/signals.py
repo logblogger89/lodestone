@@ -130,25 +130,30 @@ def load(log=print) -> dict:
             "with_tech_roles": sum(1 for v in out["companies"].values() if v["tech_positions"])}
 
 
-ICT_COMPANIES = {"Google"}          # Ayush's current employer: intra-company transfer is LMIA-exempt (DR-3)
+ICT_URL = ("https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/hire-temporary-foreign/"
+           "international-mobility-program/framework/intra-company-transferees.html")
 _NO_SPONSOR = re.compile(r"no sponsorship|without sponsorship|must be (legally )?(eligible|authori[sz]ed)|"
                          r"eligib\w* to work|work authori[sz]ation (is )?required|clearance", re.I)
 
 
-def pathway_for(company: str, fit: dict | None, sig: dict | None, window: str) -> dict:
+def pathway_for(company: str, fit: dict | None, sig: dict | None, window: str, current_employer: str | None = None) -> dict:
     """Combine what the posting says (from scoring) with employer evidence (ESDC). Returns the pathway
-    sub-score used in the fit score and the signals shown in the app, each with status and source."""
+    sub-score used in the fit score and the signals shown in the app, each with status and source.
+    Nothing here is about one person (D-060): the app adds the viewer's own routes (an intra-company transfer
+    from their current employer, an open work permit) from their profile at read time. `current_employer` is
+    only for callers that know the user."""
     signals, score = [], None
     reason = ((fit or {}).get("reasons") or {}).get("pathway", "")
     claude = ((fit or {}).get("subs") or {}).get("pathway")
-    if company in ICT_COMPANIES:
+    ict = bool(current_employer) and norm(company) == norm(current_employer)
+    if ict:
         signals.append({"label": "Intra-company transfer", "status": "Strong route",
-                        "detail": "You work at Google today, so a transfer to Google Canada is LMIA-exempt (DR-3).",
-                        "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/hire-temporary-foreign/international-mobility-program/framework/intra-company-transferees.html"})
+                        "detail": f"You work at {current_employer} today, so a transfer to its Canadian office may not need an LMIA (DR-3).",
+                        "url": ICT_URL})
         score = 95
     if claude is not None and claude <= 20:
         signals.append({"label": "Posting limits who can apply", "status": "Stated", "detail": reason, "url": None})
-        score = 15 if company not in ICT_COMPANIES else score
+        score = 15 if not ict else score
     elif claude is not None and claude >= 85 and "stated" in reason.lower():
         signals.append({"label": "Sponsorship or relocation offered", "status": "Stated", "detail": reason, "url": None})
         score = max(score or 0, 85)

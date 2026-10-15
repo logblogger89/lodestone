@@ -22,8 +22,9 @@ class TestSignals(unittest.TestCase):
         self.assertEqual(p["score"], 15)
         self.assertEqual(p["signals"][0]["status"], "Stated")
 
-    def test_google_ict_and_unknown(self):
-        self.assertEqual(pathway_for("Google", None, None, "w")["score"], 95)
+    def test_ict_comes_from_the_users_employer_only(self):
+        self.assertEqual(pathway_for("Google", None, None, "w")["score"], 45)          # nobody is special-cased
+        self.assertEqual(pathway_for("Google", None, None, "w", current_employer="Google")["score"], 95)
         u = pathway_for("Microsoft", {"subs": {"pathway": 65}, "reasons": {"pathway": "Large multinational (inferred)"}}, None, "w")
         self.assertEqual((u["score"], u["signals"][0]["status"]), (45, "Unknown"))
 

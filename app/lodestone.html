@@ -179,7 +179,7 @@ a.src:hover{border-color:var(--accent);color:var(--accent)}
 /* forms */
 .field{display:flex;flex-direction:column;gap:6px}
 .field label{font-size:13px;font-weight:500}
-textarea,input[type=text],input[type=number]{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:10px;width:100%}
+textarea,input:not([type]),input[type=text],input[type=number],.field select{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:10px;width:100%}
 textarea{min-height:110px;resize:vertical;font-family:var(--font-mono);font-size:13px}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
 .switch{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
@@ -217,7 +217,7 @@ kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);bor
     <button class="nav" data-view="add">Add job</button>
     <button class="nav" data-view="reports">Reports</button>
     <button class="nav" data-view="companies">Companies</button>
-    <button class="nav" data-view="settings">Settings</button>
+    <button class="nav" data-view="settings">Profile</button>
   </nav>
   <main class="main"><div class="wrap" id="view"></div></main>
   <nav class="tabbar" aria-label="Main">
@@ -226,7 +226,7 @@ kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);bor
     <button data-view="add">Add</button>
     <button data-view="reports">Reports</button>
     <button data-view="companies">Companies</button>
-    <button data-view="settings">Settings</button>
+    <button data-view="settings">Profile</button>
   </nav>
 </div>
 <div id="overlay"></div>
@@ -451,6 +451,7 @@ async function boot(){
   S.db=db;
   const user=await use("user");
   if(user){const c=await Promise.resolve(user.can?.("data.write")).catch(()=>null);if(c===false) S.canWrite=false}
+  use("assets").then(a=>{S.assets=a;if(S.view==="settings"&&!S._editingPrefs)render()});   // resume upload (owner only)
   const fail=e=>{console.warn(e);if(e&&e.code==="revoked"){S.offline=true;render()}};
   db.collection("jobs").onSnapshot(snap=>{
     const all={};snap.docs.forEach(d=>Object.assign(all,(d.data()||{}).jobs||{}));
@@ -494,7 +495,7 @@ function freshChip(){
   const stale=!ms||(Date.now()-ms)>7*DAY;
   return `<button class="fresh${stale?" stale":""}" data-act="fresh" aria-label="When data was last updated"><span class="dot" aria-hidden="true"></span>${ms?"Jobs updated "+ago(ms):"Not refreshed yet"}</button>`;
 }
-/* Overall fit: the six sub-scores blended with the weights from Settings (computed here, so changing weights re-ranks instantly). */
+/* Overall fit: the six sub-scores blended with the weights from your Profile (computed here, so changing weights re-ranks instantly). */
 function fitScore(j){
   if(!j.fit||!j.fit.subs) return null;
   const W=S.prefs.weights||DEFAULT_PREFS.weights; let t=0,sum=0;
@@ -503,23 +504,43 @@ function fitScore(j){
 }
 /* Sub-score for one factor: freshness and pathway come from data the app holds (daily date math; ESDC and
    posting evidence), the rest from Claude's scoring. */
+/* The viewer's own routes come from their profile, never from code (D-060): a transfer from their current
+   employer, or an open work permit that makes sponsorship irrelevant. */
+const coKey=x=>String(x||"").toLowerCase().replace(/&/g," and ").replace(/\b(inc|ltd|llc|corp|corporation|company|co|ulc|canada)\b/g,"").replace(/[^a-z0-9]/g,"");
+const WORK_STATUS={needs_permit:"I'll need an employer to support a work permit",open_permit:"I have an open work permit (I can work for any employer in Canada)"};
+function pw(j){
+  const base=j.pathway||{score:45,signals:[]}, prof=S.profile||{}, emp=((prof.current||{}).employer||"").trim();
+  const limits=base.signals.find(x=>x.label.startsWith("Posting limits"));
+  if(prof.work_status==="open_permit"){
+    const hard=limits&&/citizen|permanent resident|clearance/i.test(limits.detail||"");
+    return {score:hard?15:95,signals:[{label:"You have an open work permit",status:"Strong route",detail:"You can work for any employer in Canada, so whether they sponsor doesn't matter."},...base.signals.filter(x=>!x.label.startsWith("Posting limits")||hard)]};
+  }
+  if(emp&&coKey(emp)&&coKey(emp)===coKey(j.company))
+    return {score:95,signals:[{label:"Intra-company transfer",status:"Strong route",detail:`You work at ${emp} today, so a transfer to its Canadian office may not need an LMIA.`},...base.signals.filter(x=>x.status!=="Unknown")]};
+  return base;
+}
+/* Pay sub-score from the viewer's own pay targets (Profile), not a fixed band. */
+function payScore(top,kind){const c={...DEFAULT_PREFS.checks,...(S.prefs.checks||{})},g=c.pay_green,y=c.pay_yellow;
+  let v=top>=g*1.2?95:top>=g?80:top>=y?60:top>=y*0.8?40:20;return ["base","unspecified",undefined].includes(kind)?v:Math.max(20,v-10)}
 function subVal(j,k){
   if(k==="freshness") return freshness(j).score;
-  if(k==="pathway"&&j.pathway) return +j.pathway.score||0;
-  if(k==="pay"){const pi=payInfo(j);if(!pi.main&&pi.est&&pi.est.score!=null) return Math.min(+pi.est.score,75);}  // estimates count, capped: they're uncertain
+  if(k==="pathway") return +pw(j).score||0;
+  if(k==="pay"){const pi=payInfo(j),m=pi.main;
+    if(m&&m.max&&m.currency!=="USD") return payScore(m.interval==="hour"?m.max*2000:m.max,m.kind);
+    if(pi.est&&pi.est.max) return Math.min(payScore(pi.est.max,"base"),75);}  // estimates count, capped: they're uncertain
   return +((j.fit&&j.fit.subs)||{})[k]||0;
 }
-function pathwayWhy(j){const g=(j.pathway&&j.pathway.signals)||[];return g.length?g.map(x=>`${x.label} (${x.status.toLowerCase()})`).join("; "):""}
+function pathwayWhy(j){const g=pw(j).signals||[];return g.length?g.map(x=>`${x.label} (${x.status.toLowerCase()})`).join("; "):""}
 const SIG_CLASS={"Strong route":"s-stated","Stated":"s-stated","Inferred":"s-inferred","Unknown":"s-unknown"};
 function pathwayChips(j){
-  const g=(j.pathway&&j.pathway.signals)||[];
+  const g=pw(j).signals||[];
   return g.filter(x=>x.status!=="Unknown").slice(0,2).map(x=>{
     const bad=x.label.startsWith("Posting limits");
     const short=x.label==="Intra-company transfer"?"Internal transfer":x.label.startsWith("Hires from abroad")?"Hires from abroad":bad?"No sponsorship":"Sponsorship offered";
     return `<span class="chip ${bad?"s-none":SIG_CLASS[x.status]||""}" title="${esc(x.detail||"")}">${esc(short)} · ${esc(x.status)}</span>`;}).join("");
 }
 const managesPeople=j=>j.fit?!!j.fit.people_mgmt:!!j.people_mgmt;
-/* Preference checks (D-059): green / yellow / red against Ayush's own preferences, all from Settings (D-005). */
+/* Preference checks (D-059): green / yellow / red against the viewer's own preferences, all from their Profile (D-005, D-060). */
 const CHECK_ICON={good:"✓",warn:"~",bad:"✕"};
 const REGION_SHORT={"GTA":"Toronto area","Waterloo Region":"Waterloo","Remote-Canada":"Remote in Canada","Other Canada":"Elsewhere in Canada"};
 function levelNums(j){const g=(j.fit&&j.fit.level_guess)||"";return (g.match(/L(\d)/g)||[]).map(x=>+x.slice(1))}
@@ -531,8 +552,8 @@ function prefChecks(j){
   out.push(green.includes(rg)?{k:"Location",l:"good",t:REGION_SHORT[rg]||rg,why:"In your preferred locations"}
     :{k:"Location",l:"warn",t:REGION_SHORT[rg]||rg||"Canada",why:"In Canada, outside your preferred locations (would mean moving)"});
   // work permit
-  const pw=j.pathway, ps=pw?+pw.score:45, sig=((pw&&pw.signals)||[])[0];
-  out.push(ps>=80?{k:"Work permit",l:"good",t:sig&&sig.label==="Intra-company transfer"?"Internal transfer":"Hires from abroad",why:pathwayWhy(j)||"Strong evidence they hire people from other countries"}
+  const pwj=pw(j), ps=+pwj.score, sig=(pwj.signals||[])[0];
+  out.push(ps>=80?{k:"Work permit",l:"good",t:sig&&sig.label==="Intra-company transfer"?"Internal transfer":sig&&sig.label.startsWith("You have an open")?"Open work permit":"Hires from abroad",why:pathwayWhy(j)||"Strong evidence they hire people from other countries"}
     :ps<=20?{k:"Work permit",l:"bad",t:"Must already be eligible",why:pathwayWhy(j)||"The posting says no sponsorship"}
     :{k:"Work permit",l:"warn",t:ps>=55?"Some evidence":"No information",why:pathwayWhy(j)||"No evidence either way about hiring from abroad"});
   // pay
@@ -563,7 +584,7 @@ function checksPanel(j){
   const xs=prefChecks(j), n=xs.filter(x=>x.l==="good").length;
   return `<section class="panel"><h4>Against your preferences <span class="note">${n} of ${xs.length} green</span></h4>
     <dl class="facts">${xs.map(x=>`<dt>${esc(x.k)}</dt><dd><span class="ck ck-${x.l}"><b aria-hidden="true">${CHECK_ICON[x.l]}</b>${esc(x.t)}</span> <span class="note">${esc(x.why)}</span></dd>`).join("")}</dl>
-    <p class="note">Change what counts as green or yellow in Settings → Colour rules.</p></section>`;
+    <p class="note">Change what counts as green or yellow in your Profile.</p></section>`;
 }
 /* Compass ring: the arc fills with the score and the needle points to true north at 100. */
 function ring(v,size){
@@ -627,7 +648,7 @@ function viewReports(){
   const body=!latest?`<div class="empty"><h2>No reports yet</h2><p>The daily run posts a report here every morning around 7am New York time.</p></div>`
     :`<section class="panel"><h4>${esc(reportDate(latest))}</h4><p><strong>${esc(latest.headline)}</strong></p>${reportBody(latest)}</section>
       <section class="archive"><h2>Archive <span class="note">last ${n} days</span></h2>
-      ${past.length?past.map(r=>`<details><summary><strong>${esc(reportDate(r))}</strong> · ${esc(r.headline)}</summary>${reportBody(r)}</details>`).join(""):`<p class="note">Earlier reports appear here. Change how many days to keep in view in Settings.</p>`}</section>`;
+      ${past.length?past.map(r=>`<details><summary><strong>${esc(reportDate(r))}</strong> · ${esc(r.headline)}</summary>${reportBody(r)}</details>`).join(""):`<p class="note">Earlier reports appear here. Change how many days to keep in view in your Profile.</p>`}</section>`;
   return `<div class="topbar"><h1>Reports</h1></div>${body}`;
 }
 function viewDigest(){
@@ -662,12 +683,12 @@ function viewDigest(){
     ${TIERS.map(t=>`<button class="chip toggle" data-tier="${t}" aria-pressed="${S.tierOn.has(t)}" title="${esc(TIER_HELP[t])}">${t}</button>`).join("")}
   </div>
   ${body}
-  <p class="note">"Best match" ranks by fit score (your weights in Settings), then role tier and region for anything not scored yet. Keyboard: <kbd>J</kbd>/<kbd>K</kbd> move, <kbd>I</kbd>/<kbd>L</kbd>/<kbd>N</kbd> triage, <kbd>Enter</kbd> opens.</p>`;
+  <p class="note">"Best match" ranks by fit score (your weights in Profile), then role tier and region for anything not scored yet. Keyboard: <kbd>J</kbd>/<kbd>K</kbd> move, <kbd>I</kbd>/<kbd>L</kbd>/<kbd>N</kbd> triage, <kbd>Enter</kbd> opens.</p>`;
 }
 function offlineState(){return `<div class="empty"><h2>Open Lodestone on claude.ai to see your jobs</h2><p>Your jobs and triage live in this page's private database, which only loads inside claude.ai while you're signed in.</p></div>`}
 /* Pathway signals (R10): each with its status and a link to the evidence. Signals, not immigration advice. */
 function pathwayPanel(j){
-  const g=(j.pathway&&j.pathway.signals)||[];
+  const g=pw(j).signals||[];
   if(!g.length) return "";
   return `<section class="panel"><h4>Work-permit pathway</h4>
     <table class="tbl"><thead><tr><th>Signal</th><th>Status</th><th>Evidence</th></tr></thead><tbody>
@@ -679,13 +700,13 @@ function pathwayPanel(j){
 function fitPanel(j){
   const f=j.fit; if(!f||!f.subs) return `<section class="panel"><h4>Fit</h4><p class="nopay">Not scored yet. It's scored at the next refresh.</p></section>`;
   const W=S.prefs.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+wv(W,k),0)||1, v=fitScore(j), fr=freshness(j);
-  const sub=k=>subVal(j,k), why=k=>k==="freshness"?fr.why:(k==="pathway"&&j.pathway)?pathwayWhy(j):((f.reasons||{})[k]||"");
+  const sub=k=>subVal(j,k), why=k=>k==="freshness"?fr.why:k==="pathway"?pathwayWhy(j):((f.reasons||{})[k]||"");
   return `<section class="panel"><h4>Fit for you</h4>
     <div class="overall">${ring(v)}<p>${esc(f.summary||"")}${f.level_guess?`<br><span class="note">Level: ${esc(f.level_guess)}</span>`:""}</p></div>
     ${SUBS.map(k=>`<div class="bar"><span>${SUBLABEL[k]} <span class="w">${Math.round(wv(W,k)*100/tot)}%</span></span><div class="track"><div class="fill" style="width:${sub(k)}%"></div></div><span class="mono">${sub(k)}</span><span class="why">${esc(why(k))}</span></div>`).join("")}
     ${(f.must_haves||[]).length?`<div><span class="note">Must-haves:</span> ${f.must_haves.map(m=>`<span class="chip">${esc(m)}</span>`).join(" ")}</div>`:""}
     ${(f.flags||[]).length?`<div class="chips">${f.flags.map(m=>`<span class="chip warn">${esc(m)}</span>`).join("")}</div>`:""}
-    <p class="note">Scored by Claude ${esc(ago(parseWhen(f.scored_at)))} against your profile (rubric v${esc(f.rubric||"")}). The weights are yours to change in Settings.</p>
+    <p class="note">Scored by Claude ${esc(ago(parseWhen(f.scored_at)))} against your profile (rubric v${esc(f.rubric||"")}). The weights are yours to change in your Profile.</p>
   </section>`;
 }
 function viewDetail(j){
@@ -797,63 +818,80 @@ function viewCompanies(){
   <p class="note">New companies are suggested above each week. You can also ask Claude in a Lodestone session to add or remove one.</p>`;
 }
 /* Profile: built from the CV, stored only in this app's private database. Edits are used at the next scoring run. */
-const PROFILE_FIELDS=[["headline","Headline",1],["summary","Summary",4],["domains","Domains (one per line)",5],["skills","Skills (one per line)",5],["scope_signals","Scope highlights (one per line)",5]];
-function profilePanel(){
-  const p=S.profile;
-  if(!p) return `<section class="panel"><h4>Profile</h4><p class="nopay">No profile yet. Claude builds it from your CV in a Lodestone session.</p></section>`;
-  const val=k=>Array.isArray(p[k])?p[k].join("\n"):(p[k]||"");
-  return `<section class="panel"><h4>Profile</h4>
-    <p class="note">Built from your CV (${esc(p.source||"")}). Only you can see it. Changes are used the next time roles are scored.</p>
-    <dl class="facts"><dt>Current</dt><dd>${esc([p.current&&p.current.title,p.current&&p.current.employer,p.current&&p.current.level].filter(Boolean).join(" · "))}</dd>
-    <dt>Experience</dt><dd>${esc(p.experience_years?`${p.experience_years.total} years, ${p.experience_years.product_management} in product management`:"")}</dd></dl>
-    ${PROFILE_FIELDS.map(([k,l,rows])=>`<div class="field"><label for="pf-${k}">${l}</label><textarea id="pf-${k}" rows="${rows}" style="min-height:${rows>1?110:44}px">${esc(val(k))}</textarea></div>`).join("")}
-    <div class="row"><button class="btn" data-act="saveprofile"${S.offline?" disabled":""}>Save profile</button></div>
-  </section>`;
+/* ---------- Profile (D-060): everything personal lives here, so anyone can use Lodestone with their own resume and preferences ---------- */
+const PROFILE_FIELDS=[["headline","Headline",1],["summary","Summary",4],["domains","Your domains (one per line)",5],["skills","Skills (one per line)",5],["scope_signals","Scope highlights (one per line)",5]];
+const RESUME_TYPES="application/pdf,text/plain,text/markdown,.pdf,.txt,.md";
+function resumeBlock(p){
+  const r=(p&&p.resume)||null;
+  const status=!r?"No resume uploaded yet."
+    :r.status==="read"?`Read ${esc(ago(parseWhen(r.read_at)))}: the fields below came from it. Fields you edit are kept.`
+    :`Uploaded ${esc(ago(parseWhen(r.uploaded_at)))}. Claude reads it at the next daily run (about 7am New York time) and fills in your profile.`;
+  return `<div class="field"><label>Resume</label>
+    <p class="note">${r&&r.name?`<b>${esc(r.name)}</b> · `:""}${status}</p>
+    <div class="row">${S.assets?`<label class="btn" for="cvfile">${r?"Replace resume":"Upload resume"} (PDF or text)</label><input type="file" id="cvfile" accept="${RESUME_TYPES}" hidden>`:`<span class="note">Uploading needs Lodestone open in claude.ai as its owner. You can paste the text instead.</span>`}</div>
+    <details class="quotes"${r&&r.text?" open":""}><summary>Or paste your resume as text</summary><textarea id="cvtext" rows="6" placeholder="Paste the full text of your resume">${esc((r&&r.text)||"")}</textarea></details></div>`;
 }
-async function saveProfile(){
-  if(!S.db||!S.profile) return;
-  const body={...S.profile};
-  PROFILE_FIELDS.forEach(([k])=>{const el=document.getElementById("pf-"+k);if(!el) return;const v=el.value.trim();
-    body[k]=Array.isArray(S.profile[k])?v.split("\n").map(x=>x.trim()).filter(Boolean):v});
-  body.version=(+S.profile.version||1)+1;body.edited_at=new Date().toISOString();
-  try{await S.db.doc("profile/main").set(body);S._editingPrefs=false;toast("Profile saved. It's used at the next scoring run.")}
-  catch(e){toast("Couldn't save the profile. Try again.");console.warn(e)}
+async function uploadResume(file){
+  if(!file) return;
+  if(!S.assets||!S.db){toast("Uploading works inside claude.ai only.");return}
+  if(file.size>10*1024*1024){toast("That file is over 10 MB. Try a PDF export of your resume.");return}
+  try{
+    toast("Uploading your resume…");
+    const a=await S.assets.upload(file);
+    const prof={...(S.profile||{version:1})};
+    prof.resume={asset_id:a.id,name:file.name.slice(0,120),content_type:a.contentType,uploaded_at:new Date().toISOString(),status:"uploaded"};
+    await S.db.doc("profile/main").set(prof);
+    toast("Resume uploaded. Claude reads it at the next daily run and fills in your profile.");
+  }catch(e){toast(e&&e.code==="unsupported_type"?"That file type isn't supported. Upload a PDF or paste the text.":"Couldn't upload the resume. Try again.");console.warn(e)}
 }
 function viewSettings(){
-  const p=S.prefs, W=p.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+wv(W,k),0), ck={...DEFAULT_PREFS.checks,...(p.checks||{})};
-  return `<div class="topbar"><h1>Settings</h1><span class="sp"></span>${freshChip()}</div>
-  ${profilePanel()}
-  <section class="panel"><h4>Where</h4>
-    <div class="chips">${REGIONS.filter(r=>r!=="Other Canada").map(r=>`<label class="chip"><input type="checkbox" data-region="${r}"${(p.regions||[]).includes(r)?" checked":""}> ${r}</label>`).join("")}</div>
-    <div class="switch"><label for="other">Also show the rest of Canada under "My regions"</label><input type="checkbox" id="other"${p.other_regions?" checked":""}></div>
+  const p=S.prefs, pr=S.profile||{}, cur=pr.current||{}, pref=pr.preferences||{}, W=p.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+wv(W,k),0), ck={...DEFAULT_PREFS.checks,...(p.checks||{})};
+  const val=k=>Array.isArray(pr[k])?pr[k].join("\n"):(pr[k]||"");
+  return `<div class="topbar"><h1>Profile</h1><span class="sp"></span>${freshChip()}</div>
+  <p class="note">Everything Lodestone knows about you and what you want. Only you can see it. Changes apply straight away to colours and ranking; roles are re-scored against a changed profile at the next daily run.</p>
+  <section class="panel"><h4>You</h4>
+    ${resumeBlock(pr)}
+    <div class="grid2">
+      <div class="field"><label for="pf-employer">Current employer</label><input id="pf-employer" value="${esc(cur.employer||"")}" placeholder="e.g. Google"><span class="note">Used to spot internal transfers to its Canadian offices.</span></div>
+      <div class="field"><label for="pf-title">Current title</label><input id="pf-title" value="${esc(cur.title||"")}"></div>
+      <div class="field"><label for="pf-level">Current level</label><input id="pf-level" value="${esc(cur.level||"")}" placeholder="e.g. L5, Senior PM"></div>
+      <div class="field"><label for="pf-where">Where you live now</label><input id="pf-where" value="${esc(pr.location_now||cur.location||"")}"></div>
+    </div>
+    <div class="field"><label for="pf-work">Work permit</label><select id="pf-work">${Object.entries(WORK_STATUS).map(([k,l])=>`<option value="${k}"${(pr.work_status||"needs_permit")===k?" selected":""}>${esc(l)}</option>`).join("")}</select>
+      <span class="note">Lodestone is for people who aren't yet Canadian citizens or permanent residents.</span></div>
+    ${PROFILE_FIELDS.map(([k,l,rows])=>`<div class="field"><label for="pf-${k}">${l}</label><textarea id="pf-${k}" rows="${rows}" style="min-height:${rows>1?110:44}px">${esc(val(k))}</textarea></div>`).join("")}
   </section>
-  <section class="panel"><h4>What</h4>
-    <div class="chips">${TIERS.map(t=>`<label class="chip"><input type="checkbox" data-ptier="${t}"${(p.tiers||[]).includes(t)?" checked":""}> ${t}</label>`).join("")}</div>
+  <section class="panel"><h4>What you're looking for</h4>
+    <div class="field"><label>Where (green in the colour checks)</label>
+      <div class="chips">${REGIONS.filter(r=>r!=="Other Canada").map(r=>`<label class="chip"><input type="checkbox" data-region="${r}"${(p.regions||[]).includes(r)?" checked":""}> ${r}</label>`).join("")}</div>
+      <div class="switch"><label for="other">Also show the rest of Canada under "My regions"</label><input type="checkbox" id="other"${p.other_regions?" checked":""}></div></div>
+    <div class="field"><label>Role types</label>
+      <div class="chips">${TIERS.map(t=>`<label class="chip"><input type="checkbox" data-ptier="${t}"${(p.tiers||[]).includes(t)?" checked":""}> ${t}</label>`).join("")}</div></div>
+    <div class="field"><label for="pf-dw">Domains you want</label><textarea id="pf-dw" rows="3">${esc(pref.domains_wanted||"")}</textarea></div>
+    <div class="grid2">
+      <div class="field"><label for="ck-lg">Target level: green at L (or above)</label><input type="number" id="ck-lg" min="3" max="9" value="${+ck.level_green}"></div>
+      <div class="field"><label for="ck-ly">Level: yellow at L</label><input type="number" id="ck-ly" min="3" max="9" value="${+ck.level_yellow}"></div>
+      <div class="field"><label for="ck-payg">Pay you want: green from (CA$, top of posted range)</label><input type="number" id="ck-payg" step="5000" value="${+ck.pay_green}"></div>
+      <div class="field"><label for="ck-payy">Pay: yellow from (CA$)</label><input type="number" id="ck-payy" step="5000" value="${+ck.pay_yellow}"></div>
+    </div>
+    <p class="note">Levels use Google's scale as a common reference (L5 Senior, L6 Staff, L7 Principal or Senior Staff).</p>
     <div class="switch"><label for="xpm">Hide roles that manage people</label><input type="checkbox" id="xpm"${p.exclude_people_mgmt?" checked":""}></div>
     <div class="switch"><label for="nopay">Include roles with no Canadian pay range</label><input type="checkbox" id="nopay"${p.include_no_pay?" checked":""}></div>
   </section>
-  <section class="panel"><h4>Digest</h4>
-    <div class="grid2"><div class="field"><label for="dsize">Roles in the digest (1–100)</label><input type="number" id="dsize" min="1" max="100" value="${+p.digest_size||20}"></div>
-    <div class="field"><label for="ldays">"Later" roles come back after (days)</label><input type="number" id="ldays" min="1" max="60" value="${+p.later_days||7}"></div>
-    <div class="field"><label for="rdays">Reports archive shows the last (days)</label><input type="number" id="rdays" min="1" max="90" value="${+p.report_days||14}"></div>
-    <div class="field"><label for="maxage">Hide roles posted more than this many days ago (0 shows all)</label><input type="number" id="maxage" min="0" max="365" value="${+p.max_age_days||0}"></div></div>
-  </section>
-  <section class="panel"><h4>Colour rules</h4>
-    <p class="note">What turns a role's checks green, yellow or red. Locations ticked under "Your regions" above count as green.</p>
-    <div class="grid2">
-    <div class="field"><label for="ck-payg">Pay: green from (CA$, top of range)</label><input type="number" id="ck-payg" step="5000" value="${+ck.pay_green}"></div>
-    <div class="field"><label for="ck-payy">Pay: yellow from (CA$)</label><input type="number" id="ck-payy" step="5000" value="${+ck.pay_yellow}"></div>
-    <div class="field"><label for="ck-lg">Level: green at Google level (or above)</label><input type="number" id="ck-lg" min="3" max="9" value="${+ck.level_green}"></div>
-    <div class="field"><label for="ck-ly">Level: yellow at Google level</label><input type="number" id="ck-ly" min="3" max="9" value="${+ck.level_yellow}"></div>
-    <div class="field"><label for="ck-fg">Posted: green within (days)</label><input type="number" id="ck-fg" min="1" max="120" value="${+ck.fresh_green}"></div>
-    <div class="field"><label for="ck-fy">Posted: yellow within (days)</label><input type="number" id="ck-fy" min="1" max="365" value="${+ck.fresh_yellow}"></div></div>
-  </section>
-  <section class="panel"><h4>Advanced: fit-score weights</h4>
-    <p class="note">How much each factor counts in the fit score. They always add up to 100%. Freshness is worked out from the posting date each day.</p>
+  <section class="panel"><h4>How roles are ranked</h4>
+    <p class="note">How much each factor counts in the fit score. They always add up to 100%.</p>
     ${SUBS.map(k=>`<div class="slider"><label for="w-${k}">${SUBLABEL[k]}</label><input type="range" id="w-${k}" min="0" max="60" step="5" value="${wv(W,k)}" data-w="${k}"><span class="mono" id="wv-${k}">${tot?Math.round(wv(W,k)*100/tot):0}%</span></div>`).join("")}
     <div class="row"><button class="btn" data-act="resetw">Reset to defaults</button></div>
   </section>
-  <div class="row"><button class="btn primary" data-act="saveprefs"${S.offline?" disabled":""}>Save settings</button><span class="note" id="savenote"></span></div>`;
+  <section class="panel"><h4>App</h4>
+    <div class="grid2"><div class="field"><label for="dsize">Roles in the digest (1–100)</label><input type="number" id="dsize" min="1" max="100" value="${+p.digest_size||20}"></div>
+    <div class="field"><label for="ldays">"Later" roles come back after (days)</label><input type="number" id="ldays" min="1" max="60" value="${+p.later_days||7}"></div>
+    <div class="field"><label for="ck-fg">Posted: green within (days)</label><input type="number" id="ck-fg" min="1" max="120" value="${+ck.fresh_green}"></div>
+    <div class="field"><label for="ck-fy">Posted: yellow within (days)</label><input type="number" id="ck-fy" min="1" max="365" value="${+ck.fresh_yellow}"></div>
+    <div class="field"><label for="maxage">Hide roles posted more than this many days ago (0 shows all)</label><input type="number" id="maxage" min="0" max="365" value="${+p.max_age_days||0}"></div>
+    <div class="field"><label for="rdays">Reports archive shows the last (days)</label><input type="number" id="rdays" min="1" max="90" value="${+p.report_days||14}"></div></div>
+  </section>
+  <div class="row"><button class="btn primary" data-act="saveprefs"${S.offline?" disabled":""}>Save profile</button><span class="note" id="savenote"></span></div>`;
 }
 function freshPanel(){
   const comps=S.freshness;
@@ -907,7 +945,6 @@ document.addEventListener("click",e=>{
   if(d.act==="suguall"){S.sugAll=true;render();return}
   if(d.act==="mreq"){e.stopPropagation();const j=jobById(d.id);if(j)requestMarket(j);return}
   if(d.act==="saveprefs"){savePrefs();return}
-  if(d.act==="saveprofile"){saveProfile();return}
   if(d.act==="resetw"){SUBS.forEach(k=>{const i=document.getElementById("w-"+k);if(i)i.value=DEFAULT_PREFS.weights[k]});updateWeightLabels();S._editingPrefs=true;return}
   if(d.open!==undefined&&!e.target.closest(".triage,.reasons,a,select")){S.open=d.open;if(d.idx)S.sel=+d.idx;render()}
 });
@@ -926,11 +963,12 @@ document.addEventListener("change",e=>{
   else if(t.dataset.move!==undefined){const id=t.dataset.move,j=jobById(id),cur=tri(id)||{};
     const body={...cur,stage:t.value||null,updated_at:new Date().toISOString()};S.triage={...S.triage,[id]:body};render();
     if(S.db) S.db.doc("triage/"+id).set(body).catch(()=>toast("Couldn't save. Try again."));}
+  else if(t.id==="cvfile"){uploadResume(t.files&&t.files[0]);t.value=""}
   else if(t.id==="notes"){const j=jobById(t.dataset.id);if(j&&(tri(j.id)||{}).notes!==t.value)writeTriage(j,{notes:t.value})}
 });
 function updateWeightLabels(){const v={};SUBS.forEach(k=>v[k]=+(document.getElementById("w-"+k)||{}).value||0);const tot=SUBS.reduce((a,k)=>a+v[k],0);SUBS.forEach(k=>{const s=document.getElementById("wv-"+k);if(s)s.textContent=(tot?Math.round(v[k]*100/tot):0)+"%"})}
 async function savePrefs(){
-  if(!S.db){toast("Settings save inside claude.ai only.");return}
+  if(!S.db){toast("Your profile saves inside claude.ai only.");return}
   const val=id=>document.getElementById(id);
   const regions=[...document.querySelectorAll("[data-region]")].filter(i=>i.checked).map(i=>i.dataset.region);
   const tiers=[...document.querySelectorAll("[data-ptier]")].filter(i=>i.checked).map(i=>i.dataset.ptier);
@@ -941,8 +979,15 @@ async function savePrefs(){
     include_no_pay:val("nopay").checked,digest_size:clamp(val("dsize").value,1,100,20),later_days:clamp(val("ldays").value,1,60,7),report_days:clamp(val("rdays").value,1,90,14),
     checks:{green_regions:regions,pay_green:clamp(val("ck-payg").value,50000,600000,190000),pay_yellow:clamp(val("ck-payy").value,30000,600000,160000),
       level_green:clamp(val("ck-lg").value,3,9,6),level_yellow:clamp(val("ck-ly").value,3,9,5),fresh_green:clamp(val("ck-fg").value,1,120,14),fresh_yellow:clamp(val("ck-fy").value,1,365,30)},max_age_days:clamp(val("maxage").value,0,365,0),weights,updated_at:new Date().toISOString()};
-  try{await S.db.doc("settings/prefs").set(body);S._editingPrefs=false;S.prefs={...DEFAULT_PREFS,...body};render();toast("Settings saved.")}
-  catch(e){toast("Couldn't save settings. Try again.");console.warn(e)}
+  const prof={...(S.profile||{version:0})};
+  prof.current={...(prof.current||{}),employer:val("pf-employer").value.trim(),title:val("pf-title").value.trim(),level:val("pf-level").value.trim()};
+  prof.location_now=val("pf-where").value.trim();prof.work_status=val("pf-work").value;
+  PROFILE_FIELDS.forEach(([k])=>{const v=val("pf-"+k).value.trim();prof[k]=Array.isArray((S.profile||{})[k])||k!=="headline"&&k!=="summary"?v.split("\n").map(x=>x.trim()).filter(Boolean):v});
+  prof.preferences={...(prof.preferences||{}),domains_wanted:val("pf-dw").value.trim()};
+  const cv=val("cvtext"); if(cv&&cv.value.trim()&&cv.value.trim()!==((prof.resume||{}).text||"")) prof.resume={...(prof.resume||{}),text:cv.value.trim().slice(0,40000),uploaded_at:new Date().toISOString(),status:"uploaded"};
+  prof.version=(+prof.version||0)+1;prof.edited_at=new Date().toISOString();
+  try{await S.db.doc("settings/prefs").set(body);await S.db.doc("profile/main").set(prof);S._editingPrefs=false;S.prefs={...DEFAULT_PREFS,...body};render();toast("Profile saved.")}
+  catch(e){toast("Couldn't save your profile. Try again.");console.warn(e)}
 }
 async function addJob(){
   const box=document.getElementById("paste");const text=(box&&box.value||"").trim();

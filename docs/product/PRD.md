@@ -48,7 +48,8 @@ Ayush is a Google L5 PM (operating near L6) on an H-1B in the NYC area. He wants
 | Persona | Description | MVP? |
 |---|---|---|
 | **P1: Ayush, cross-border senior PM** | Google L5 PM, enterprise AI, data governance, trust and safety, FS policy, commerce. H-1B holder targeting Canada, open to PM-adjacent IC roles, no people management. Has 5–30 minute windows, often on an iPad | **Primary** |
-| P2: Future cross-border job seeker | Any role, any origin and destination country. Served through role, geo and eligibility packs | Post-MVP (D-005) |
+| **P1b: Any non-citizen, non-PR professional seeking work in Canada, in tech product and adjacent roles** | Same industry as P1 for now. Brings their own resume, current employer, work-permit status (needs a permit, or has an open permit), target regions, level, pay and domains, all set in the app's Profile page (D-060). Gets their own private copy of Lodestone (Q-24 option A, `docs/ops/NEW_USER.md`) | **Designed for in the MVP**; P1 is still the only live user |
+| P2: Future cross-border job seeker | Any industry, any origin and destination country. Served through role, geo and eligibility packs, and a shared sign-in | Post-MVP (D-005) |
 
 ## 5. Critical user journeys (CUJs)
 
@@ -175,7 +176,7 @@ PR timeline view (C17) · interview prep pack for roles marked Interested (F27) 
 | **Express Entry** | There is a profile with strong IELTS scores, but the CRS is low because of age, and it drops at each birthday (R-09). For now a job or work permit is the main path to PR |
 | **Work mode** | In-office, hybrid or remote are all fine |
 | **Geography** | GTA plus Waterloo first. Expand to the rest of Canada if results are thin |
-| **Audience** | Just for Ayush for now. It might go public later |
+| **Audience** | Just for Ayush for now. It might go public later. **Updated 10-15 (D-060):** the MVP is designed for any non-citizen, non-PR professional seeking work in Canada in Ayush's industry; every personal input lives in the user's Profile |
 | **Market hypothesis** | Canadian employers may be reluctant to hire people outside Canada or without Canadian work experience (because of LMIA), which could limit options. *To be validated in domain research* |
 
 ## Appendix B. Default role families (D-017, user-editable)
