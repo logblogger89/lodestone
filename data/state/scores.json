@@ -11363,35 +11363,38 @@
   ]
  },
  "735e56da20dd": {
-  "fingerprint": "6e66aaf4ad4a081a",
+  "fingerprint": "1b4c3107d457b4e6",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:47:03+00:00",
+  "scored_at": "2026-10-15T13:04:08+00:00",
   "subs": {
-   "role": 95,
-   "level": 95,
-   "domain": 75,
+   "role": 90,
+   "level": 60,
+   "domain": 70,
    "pathway": 65,
    "pay": 95,
-   "skills": 80
+   "skills": 60
   },
   "reasons": {
-   "role": "Principal PM IC for identity threat detection",
-   "level": "Principal IC role, strategic scope",
-   "domain": "Identity security and threat detection, adjacent to your risk work",
-   "pathway": "Okta is a large multinational; work permit route inferred",
-   "pay": "Top CAD 286K clears 230K target",
-   "skills": "Security PM skills; your platform and ML work fit"
+   "role": "Individual-contributor product role owning a security product suite",
+   "level": "Director-titled but an IC player-coach role; scope is senior",
+   "domain": "Identity security is adjacent to your trust and risk work",
+   "pathway": "Large multinational; sponsorship inferred, not stated",
+   "pay": "Canadian range tops at CAD 286k, well above your target",
+   "skills": "Needs deep threat-protection and security-architecture background"
   },
-  "summary": "Drive product strategy for Okta's identity threat detection and response offerings.",
-  "level_guess": "Principal PM (≈ L6)",
+  "summary": "Own the roadmap and go-to-market for Okta's identity threat detection products.",
+  "level_guess": "Director PM, IC (≈ L6/L7)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "Strong PM background in security",
-   "Cybersecurity knowledge",
-   "Strategic roadmap ownership"
+   "Security product management",
+   "GTM and pricing",
+   "Technical background",
+   "Player-coach influence"
   ],
-  "flags": []
+  "flags": [
+   "Hybrid or onsite location not stated"
+  ]
  },
  "6f9ed284e673": {
   "fingerprint": "5673565d4835e9b1",
@@ -17467,6 +17470,105 @@
   "flags": [
    "Capital Markets operations required",
    "Above your level"
+  ]
+ },
+ "20f5b3c110aa": {
+  "fingerprint": "03b2cc6f8f3cdbf3",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T13:04:08+00:00",
+  "subs": {
+   "role": 50,
+   "level": 40,
+   "domain": 90,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Product owner running backlog and sprints more than product strategy",
+   "level": "Senior owner, but execution-focused rather than strategy scope",
+   "domain": "Governance, risk and compliance with AI matches your domains",
+   "pathway": "Large bank; sponsorship inferred, not stated",
+   "pay": "No pay posted",
+   "skills": "Strong on governance; role asks for Scrum and Jira ownership"
+  },
+  "summary": "Run the backlog and sprints for RBC's AI-driven governance and compliance automation.",
+  "level_guess": "Senior Product Owner (≈ L4/L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs Product Owner or BA",
+   "Agile and Scrum",
+   "Governance, risk or regulatory products"
+  ],
+  "flags": [
+   "Delivery-heavy product owner role"
+  ]
+ },
+ "ffa2f7fe3ba3": {
+  "fingerprint": "473ad18bf3daeecb",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T13:04:08+00:00",
+  "subs": {
+   "role": 50,
+   "level": 50,
+   "domain": 80,
+   "pathway": 55,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Program management of regulatory technology, little product ownership",
+   "level": "Senior program scope, but a different ladder than PM",
+   "domain": "Regulatory technology and financial services overlap your domains",
+   "pathway": "Large bank; sponsorship inferred, not stated",
+   "pay": "No pay posted",
+   "skills": "Asks for $5M+ program delivery experience, not PM work"
+  },
+  "summary": "Manage large multi-year regulatory technology programs at RBC.",
+  "level_guess": "Senior Program Manager",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Large program delivery ($5M+)",
+   "Stakeholder management",
+   "Financial services regulation"
+  ],
+  "flags": [
+   "Program management, not product"
+  ]
+ },
+ "e1bf62196682": {
+  "fingerprint": "39c5198c0dd1bc75",
+  "rubric": "1.0",
+  "scored_at": "2026-10-15T13:04:08+00:00",
+  "subs": {
+   "role": 75,
+   "level": 35,
+   "domain": 50,
+   "pathway": 65,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Product owner for self-serve and support journeys with AI and search",
+   "level": "3+ years asked, so below your level",
+   "domain": "Telecom customer support is general consumer product",
+   "pathway": "Large multinational; sponsorship inferred, not stated",
+   "pay": "No pay posted",
+   "skills": "AI-enabled support experience fits; level is much lower"
+  },
+  "summary": "Own digital self-serve and support journeys, including AI search, for Rogers customers.",
+  "level_guess": "Product Owner (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3+ yrs product ownership",
+   "Self-service and support experiences",
+   "Search and AI familiarity"
+  ],
+  "flags": [
+   "Likely below your level"
   ]
  }
 }

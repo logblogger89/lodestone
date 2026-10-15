@@ -115,9 +115,9 @@ def load(log=print) -> dict:
             a["quarters"].add(quarter)
             a["legal_names"].add(emp.strip())
             a["provinces"].add(row[header["Province/Territory"]].strip())
+    quarters = [re.search(r"(\d{4}q\d)", f).group(1) for f in files]
     out = {"source": DATASET_URL, "files": [f.rsplit("/", 1)[-1] for f in files],
-           "window": f"{min(re.search(r'(\d{4}q\d)', f).group(1) for f in files).upper()}–"
-                     f"{max(re.search(r'(\d{4}q\d)', f).group(1) for f in files).upper()}" if files else "",
+           "window": f"{min(quarters).upper()}–{max(quarters).upper()}" if files else "",
            "loaded_at": store.now(), "companies": {}}
     for c, a in agg.items():
         out["companies"][c] = {"positions": a["positions"], "tech_positions": a["tech_positions"],

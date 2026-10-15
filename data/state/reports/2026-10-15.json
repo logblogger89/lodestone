@@ -1,0 +1,77 @@
+{
+ "date": "2026-10-15",
+ "ran_at": "2026-10-15T12:46:56+00:00",
+ "headline": "Refresh done: 1 new role (Rogers) and 4 roles scored; best match is Okta's Director PM, Identity Threat Detection (fit 74). No roles closed. 3 sources were rate-limited.",
+ "stats": {
+  "new": 1,
+  "closed": 0,
+  "scored": 546,
+  "unscored": 0,
+  "open_roles": 550,
+  "failed_sources": 3
+ },
+ "top": [
+  {
+   "id": "greenhouse:okta:8157885",
+   "company": "Okta",
+   "title": "Director Product Manager, Identity Threat Detection and Response",
+   "fit": 74,
+   "pay": "CAD 208k-286k base (posted)",
+   "why": "Individual-contributor security product role with strong pay; Director title but player-coach scope."
+  },
+  {
+   "id": "phenom:RBCAA0088:R-0000188154",
+   "company": "RBC",
+   "title": "Senior Technical Product Owner, AI Governance & Compliance",
+   "fit": 58,
+   "pay": "est.",
+   "why": "Matches your governance and compliance domain, but the work is backlog and sprint running rather than strategy."
+  },
+  {
+   "id": "successfactors:jobs.rogers.com:1438848300",
+   "company": "Rogers",
+   "title": "Product Owner, Self Serve & Support",
+   "fit": 56,
+   "pay": "est.",
+   "why": "AI and search support journeys, but a lower level than you target."
+  }
+ ],
+ "sections": [
+  {
+   "title": "Closed roles",
+   "items": [
+    "No roles closed since the last refresh. None of your Interested or pipeline roles were affected."
+   ]
+  },
+  {
+   "title": "Paste inbox",
+   "items": [
+    "1 LinkedIn link pasted (job 4473171074). LinkedIn pages are never fetched, so it is marked needs text: paste the job description to add it."
+   ]
+  },
+  {
+   "title": "Market checks",
+   "items": [
+    "RBC Principal Product Manager (Toronto): median total pay CAD 175,135 at level PL06 (PL05 is CAD 178,995). Chose the lower level; this is base plus stock plus bonus."
+   ]
+  },
+  {
+   "title": "Companies",
+   "items": [
+    "No approvals waiting in the app. No new suggestions today (discovery runs Mondays)."
+   ]
+  },
+  {
+   "title": "Problems",
+   "items": [
+    "3 sources hit rate limits (HTTP 429) and were skipped today: Borrowell, Microsoft, Nuvei. Usually clears on its own.",
+    "Fixed a bug that stopped company-approval processing on this computer's Python version (lodestone/signals.py).",
+    "Careers pages read: Autoverify, Digitail, Taalas, Vidyard; no product roles on them.",
+    "Network check: all 93 hosts reachable."
+   ]
+  }
+ ],
+ "actions": [
+  "Optional: paste the full text of the LinkedIn role (4473171074) into the app's paste box if you want it scored."
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "cdabfda35899": {
+  "checked_at": "2026-10-15T12:32:50+00:00",
+  "currency": "CAD",
+  "level": "PL06",
+  "location": "Greater Toronto Area",
+  "median_total": 175135,
+  "metric": "median total pay (base + stock + bonus)",
+  "neighbours": [
+   {
+    "level": "PL07",
+    "median_total": 140886
+   },
+   {
+    "level": "PL05",
+    "median_total": 178995
+   }
+  ],
+  "note": "Principal PM maps to about L6; PL05 and PL06 are close, chose the lower",
+  "page_url": "https://www.levels.fyi/companies/rbc/salaries/product-manager/locations/greater-toronto-area",
+  "source": "levels.fyi",
+  "updated": "October 15, 2026"
+ }
+}

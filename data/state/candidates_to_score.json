@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-15T06:00:08+00:00",
- "count": 543,
+ "updated_at": "2026-10-15T12:59:41+00:00",
+ "count": 547,
  "candidates": [
   {
    "id": "ashby:1password:8151254c-b7d1-4653-87b1-7afeba176898",
@@ -5198,11 +5198,11 @@
   {
    "id": "greenhouse:okta:8157885",
    "company": "Okta",
-   "title": "Principal Product Manager - Okta Identity Threat Detection and Response Products",
+   "title": "Director Product Manager - Okta Identity Threat Detection and Response Products",
    "location": "Bellevue, Washington; Chicago, Illinois; New York, New York; San Francisco, California; Toronto, Ontario, Canada; Washington, DC",
    "region": "GTA",
    "role_tier": "Core",
-   "people_mgmt_hint": false,
+   "people_mgmt_hint": true,
    "pay": {
     "ranges": [
      {
@@ -6402,6 +6402,23 @@
    ]
   },
   {
+   "id": "phenom:RBCAA0088:R-0000188620",
+   "company": "RBC",
+   "title": "Product Management Analyst",
+   "location": "HALIFAX, Nova Scotia, Canada; TORONTO, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T02:02:41+00:00",
+   "sources": [
+    "phenom"
+   ],
+   "urls": [
+    "https://jobs.rbc.com/ca/en/job/R-0000188620/Product-Management-Analyst"
+   ]
+  },
+  {
    "id": "phenom:RBCAA0088:R-0000182550",
    "company": "RBC",
    "title": "Senior Director, AI Product Management",
@@ -6460,6 +6477,23 @@
    ],
    "urls": [
     "https://jobs.rbc.com/ca/en/job/R-0000188155/Senior-Technical-Product-Manager-AI-Governance-Compliance"
+   ]
+  },
+  {
+   "id": "phenom:RBCAA0088:R-0000188154",
+   "company": "RBC",
+   "title": "Senior Technical Product Owner - AI Governance & Compliance",
+   "location": "TORONTO, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T02:02:41+00:00",
+   "sources": [
+    "phenom"
+   ],
+   "urls": [
+    "https://jobs.rbc.com/ca/en/job/R-0000188154/Senior-Technical-Product-Owner-AI-Governance-Compliance"
    ]
   },
   {
@@ -6527,6 +6561,23 @@
    ],
    "urls": [
     "https://jobs.rogers.com/job/Toronto-Product-Manager-ON/1412934000/"
+   ]
+  },
+  {
+   "id": "successfactors:jobs.rogers.com:1438848300",
+   "company": "Rogers",
+   "title": "Product Owner, Self Serve & Support",
+   "location": "Toronto, ON, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T12:59:41+00:00",
+   "sources": [
+    "successfactors"
+   ],
+   "urls": [
+    "https://jobs.rogers.com/job/Toronto-Product-Owner%2C-Self-Serve-&-Support-ON/1438848300/"
    ]
   },
   {
@@ -11936,6 +11987,23 @@
    ],
    "urls": [
     "https://jobs.rbc.com/ca/en/job/R-0000187511/Manager-FSS-Business-Operations-Support"
+   ]
+  },
+  {
+   "id": "phenom:RBCAA0088:R-0000185606",
+   "company": "RBC",
+   "title": "Program Manager - Regulatory Technology",
+   "location": "TORONTO, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-15T02:02:41+00:00",
+   "sources": [
+    "phenom"
+   ],
+   "urls": [
+    "https://jobs.rbc.com/ca/en/job/R-0000185606/Program-Manager-Regulatory-Technology"
    ]
   },
   {
