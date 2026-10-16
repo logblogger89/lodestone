@@ -103,6 +103,7 @@ details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
 .archive summary{cursor:pointer}
 .card.sug{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;cursor:default}
 .panel button.link{border:0;background:none;padding:0;cursor:pointer;color:var(--accent);font-weight:600}
+button.plink{border:0;background:none;padding:0;font:inherit;color:var(--accent);text-decoration:underline;cursor:pointer}
 .checks{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
 .ck{display:inline-flex;align-items:center;gap:5px;font-size:12px;padding:2px 9px 2px 7px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
 .ck b{font-size:11px}
@@ -613,7 +614,7 @@ function checksPanel(j){
   const xs=prefChecks(j), n=xs.filter(x=>x.l==="good").length;
   return `<section class="panel"><h4>Against your preferences <span class="note">${n} of ${xs.length} green</span></h4>
     <dl class="facts">${xs.map(x=>`<dt>${esc(x.k)}</dt><dd><span class="ck ck-${x.l}"><b aria-hidden="true">${CHECK_ICON[x.l]}</b>${esc(x.t)}</span> <span class="note">${esc(x.why)}</span></dd>`).join("")}</dl>
-    <p class="note">Change what counts as green or yellow in your Profile.</p></section>`;
+    <p class="note">Change what counts as green or yellow in <button class="link plink" data-view="settings">your Profile</button>.</p></section>`;
 }
 /* Compass ring: the arc fills with the score and the needle points to true north at 100. */
 function ring(v,size){
@@ -677,7 +678,7 @@ function viewReports(){
   const body=!latest?`<div class="empty"><h2>No reports yet</h2><p>The daily run posts a report here every morning around 7am New York time.</p></div>`
     :`<section class="panel"><h4>${esc(reportDate(latest))}</h4><p><strong>${esc(latest.headline)}</strong></p>${reportBody(latest)}</section>
       <section class="archive"><h2>Archive <span class="note">last ${n} days</span></h2>
-      ${past.length?past.map(r=>`<details><summary><strong>${esc(reportDate(r))}</strong> · ${esc(r.headline)}</summary>${reportBody(r)}</details>`).join(""):`<p class="note">Earlier reports appear here. Change how many days to keep in view in your Profile.</p>`}</section>`;
+      ${past.length?past.map(r=>`<details><summary><strong>${esc(reportDate(r))}</strong> · ${esc(r.headline)}</summary>${reportBody(r)}</details>`).join(""):`<p class="note">Earlier reports appear here. Change how many days to keep in view in <button class="link plink" data-view="settings">your Profile</button>.</p>`}</section>`;
   return `<div class="topbar"><h1>Reports</h1></div>${body}`;
 }
 function viewDigest(){
@@ -712,13 +713,13 @@ function viewDigest(){
     <span class="flabel">Role type</span>${TIERS.map(t=>`<button class="chip toggle" data-tier="${t}" aria-pressed="${S.tierOn.has(t)}" title="${esc(TIER_WHAT[t])}">${esc(TIER_NAME[t])}</button>`).join("")}
   </div>
   <details class="legend"><summary>What the colours mean</summary>
-    <p><span class="ck ck-good"><b>✓</b>green</span> matches what you want · <span class="ck ck-warn"><b>~</b>yellow</span> partly, or unknown · <span class="ck ck-bad"><b>✕</b>red</span> goes against it. Set the thresholds in your Profile.</p>
+    <p><span class="ck ck-good"><b>✓</b>green</span> matches what you want · <span class="ck ck-warn"><b>~</b>yellow</span> partly, or unknown · <span class="ck ck-bad"><b>✕</b>red</span> goes against it. Set the thresholds in <button class="link plink" data-view="settings">your Profile</button>.</p>
     <ul><li><b>Work permit:</b> "Hires from abroad" = approved by the government to hire foreign workers recently; "Sponsors sometimes" = a few approvals, mostly non-tech; "Sponsorship unknown" = no public record either way; "No sponsorship" = the posting says you must already be allowed to work in Canada.</li>
     <li><b>Role type:</b> Core PM = product manager roles; PM-adjacent = TPM, program, strategy & ops, chief of staff, trust & safety; Stretch = product marketing, solutions, analytics.</li>
     <li><b>Grey tags</b> are facts, not colour checks: the role type, and the years of experience the posting asks for (when it says).</li>
     <li><b>Fit</b> (the ring) = how well the role matches your profile, out of 100.</li></ul></details>
   ${body}
-  <p class="note">"Best match" ranks by fit score (your weights in Profile), then role type and region for anything not scored yet. Keyboard: <kbd>J</kbd>/<kbd>K</kbd> move, <kbd>I</kbd>/<kbd>L</kbd>/<kbd>N</kbd> triage, <kbd>Enter</kbd> opens.</p>`;
+  <p class="note">"Best match" ranks by fit score (your weights in <button class="link plink" data-view="settings">Profile</button>), then role type and region for anything not scored yet. Keyboard: <kbd>J</kbd>/<kbd>K</kbd> move, <kbd>I</kbd>/<kbd>L</kbd>/<kbd>N</kbd> triage, <kbd>Enter</kbd> opens.</p>`;
 }
 function offlineState(){return `<div class="empty"><h2>Open Lodestone on claude.ai to see your jobs</h2><p>Your jobs and triage live in this page's private database, which only loads inside claude.ai while you're signed in.</p></div>`}
 /* Pathway signals (R10): each with its status and a link to the evidence. Signals, not immigration advice. */
@@ -741,7 +742,7 @@ function fitPanel(j){
     ${SUBS.map(k=>`<div class="bar"><span>${SUBLABEL[k]} <span class="w">${Math.round(wv(W,k)*100/tot)}%</span></span><div class="track"><div class="fill" style="width:${sub(k)}%"></div></div><span class="mono">${sub(k)}</span><span class="why">${esc(why(k))}</span></div>`).join("")}
     ${(f.must_haves||[]).length?`<div><span class="note">Must-haves:</span> ${f.must_haves.map(m=>`<span class="chip">${esc(m)}</span>`).join(" ")}</div>`:""}
     ${(f.flags||[]).length?`<div class="chips">${f.flags.map(m=>`<span class="chip warn">${esc(m)}</span>`).join("")}</div>`:""}
-    <p class="note">Scored by Claude ${esc(ago(parseWhen(f.scored_at)))} against your profile (rubric v${esc(f.rubric||"")}). The weights are yours to change in your Profile.</p>
+    <p class="note">Scored by Claude ${esc(ago(parseWhen(f.scored_at)))} against your profile (rubric v${esc(f.rubric||"")}). The weights are yours to change in <button class="link plink" data-view="settings">your Profile</button>.</p>
   </section>`;
 }
 function viewDetail(j){

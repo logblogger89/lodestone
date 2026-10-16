@@ -203,6 +203,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-16 | Every "your Profile" mention in the app is now a link that opens the Profile page (5 places) | Claude |
 | 2026-10-16 | Years of experience on cards (D-064); blank estimated-pay tag fixed; automated app check added | Claude |
 | 2026-10-16 | UX review: 15 issues fixed across Digest, detail, Companies, Add job and empty states (D-063); screenshots checked at phone and laptop sizes | Claude |
 | 2026-10-15 | D-062 built: score quality check (ranking vs triage, reading vs 22 hand-checked postings), Profile panel, 4 pay-reader fixes, hourly store roles filtered; refresh rerun; tests | Claude |
