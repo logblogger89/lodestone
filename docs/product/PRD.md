@@ -65,6 +65,7 @@ Ayush is a Google L5 PM (operating near L6) on an H-1B in the NYC area. He wants
 | **CUJ-4** | **Triage fast.** Mark Interested / Not / Later with a quick reason. The ranking learns from it | MVP |
 | **CUJ-5** | **Capture a role I found elsewhere.** Paste a LinkedIn (or any) link, or the JD text. Lodestone parses it, dedups it, scores it and adds the source icon | MVP |
 | **CUJ-6** | **Track my pipeline.** Move roles through stages. Lodestone flags postings that have closed | MVP |
+| **CUJ-0** | **Get started (D-067).** From first visit to a useful list in about a minute, with or without a resume; add experience later as an upgrade | MVP |
 | **CUJ-7** | **Manage my watchlist and sources.** Add or remove companies and see source health | MVP |
 | CUJ-8 | Tailor and apply: get a resume version tailored to the role, find referrals, follow an apply checklist | V1 |
 | CUJ-9 | Plan my PR path: optional Express Entry profile, CRS what-ifs, PR impact per job | V1 |
@@ -95,6 +96,12 @@ Ayush is a Google L5 PM (operating near L6) on an H-1B in the NYC area. He wants
 | **R13. Pipeline** (F25) | Stages: Discovered → Shortlisted → Applied → Screen → Interviewing → Offer → Closed. Liveness check on each refresh | A closed or removed posting is flagged "no longer live" within 24h and kept in the history |
 | **R14. Local and private** (NFR-1) | Runs on the user's Windows laptop, and the iPad can reach it on the LAN (or via Tailscale). All personal data stays local. API keys live in local config | No personal data leaves the machine except LLM API calls, which carry only the JD and profile text needed for scoring. Works offline for browsing already-fetched data |
 | **R15. Compliant sourcing** (DR-4) | Automated pulls only from sources whose access is permitted. LinkedIn, Indeed, Glassdoor and Wellfound are capture-only (R3) | A source registry records the access method and ToS status for every source |
+| **R26. Onboarding without a resume** (D-067, UX §8.3) | First visit: welcome with the promise and privacy line; destination (country, cities); status (citizen/PR, open permit, needs sponsorship, not sure); role in the user's own words, a pasted job they'd love, or example cards; an 8-role taste test (skippable); then their list | A new user sees real, filtered roles within about a minute, with no resume. Each screen asks one question and says why. Citizens and PRs see no work-permit layer |
+| **R27. Profile, three ways** (D-067, UX §8.4) | Offered after first value, never as a gate: upload, paste text, or "Build it with me" (about five questions). Read at the next daily run; "Here's what we understood" with every line editable | A user without a resume reaches a complete profile in under 5 minutes. Copy promises privacy, "a rough draft is fine", and delete any time |
+| **R28. Today stack** (D-067, UX §8.8) | The home view shows "N new for you" (default up to 10) that can be finished; the full ranked list is one tap away | An "All caught up" state exists. The backlog never appears as the default view |
+| **R29. Learning from signals** (D-067, UX §8.6) | Explicit actions plus reading time on the Job description tab (capped, with an off switch) feed ranking. Preference changes are suggested with one tap to accept, shown with their reason, and undoable. "More / less like this". About 1 in 10 cards is exploration, labelled | No preference changes silently. The off switch stops reading-time collection. The score quality check (D-062) gates any learning change |
+| **R30. Match-quality levels** (D-067, UX §8.5) | Levels 0–4 by what the system knows; a Profile meter shows the level and the next step | The meter is visible from the first visit and moves as the user acts |
+| **R31. One-tap questions in context** (D-067, UX §8.7) | Ask a preference question only when an action makes it relevant, once, dismissible | No question repeats after dismissal. Answers update the Profile |
 
 ### 6.2 P1: V1 (fast follow)
 

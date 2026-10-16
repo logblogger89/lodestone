@@ -115,3 +115,68 @@ Why tabs: the Summary is what you decide on and was already long; descriptions r
 1. Card density on iPad: **fine as is.** The card shows the right things at a glance (D-030).
 2. "Later" roles **come back in the digest after 7 days** (adjustable in Settings) (D-031).
 3. Marking a role **Interested adds it to Shortlisted** in the pipeline automatically (D-032).
+
+## 8. UX v2: end-to-end flow and onboarding (10-16, D-066, D-067)
+
+Lodestone is for **people moving countries for work** (D-066). Many arrive without a ready resume, or with one they'd rather not share yet. v2 is designed from their point of view: show value before asking for effort, ask one thing at a time, and let every action quietly sharpen the matches.
+
+### 8.1 Who arrives, and what they're thinking
+| Person | In their head | What the design does |
+|---|---|---|
+| No resume ready | "Let me see what's out there first" | Three ways to say what they want, none needs a resume |
+| Half-baked resume | "It undersells me; matches will be wrong" | Resume comes later, as an upgrade, with "a rough draft is fine" and an editable "what we understood" |
+| Privacy-wary | "Where does this go? Why ask my status?" | Privacy promise on the first screen; every question says why it's asked |
+| Busy, on a phone | "5 minutes, show me something" | Real roles in about a minute; one question per screen |
+| Unsure of status | "I don't know what permit I'd need" | "Not sure" is a first-class answer with a short explainer |
+| Citizen or PR | "Is this for me?" | Yes: the work-permit layer hides; nothing feels "not for them" |
+
+### 8.2 Principles (extends §1)
+1. **Value before effort.** Real roles on screen within a minute; ask for more only after showing why.
+2. **One clear next action per screen.**
+3. **Every signal is a free answer.** Taps, reasons, reading and pipeline moves teach the ranking; no tuning forms.
+4. **Show the learning** in plain words ("Ranked higher: like 3 AI-platform roles you shortlisted").
+5. **Explain on screen, never on hover.**
+6. **The user is in control.** Everything inferred is visible, editable and can be switched off.
+
+### 8.3 Onboarding (first visit)
+1. **Welcome.** Promise: *"Find the jobs that fit you, in the country you want to move to, and the ones that will actually hire you."* Privacy line: "Everything you tell us stays private to you. Nothing is shared with employers." Button: **Get started**.
+2. **Where do you want to work?** Country (Canada live; others "coming soon: tell us where", recorded as demand), then cities or "anywhere in the country / remote".
+3. **Can you already work there?** "Yes, I'm a citizen or permanent resident" · "I have an open work permit" · "I'll need sponsorship" · "Not sure" (treated as needing sponsorship, with a two-line explainer). "We use this only to show which employers hire people from abroad."
+4. **What kind of role?** Three ways, none needs a resume: type it in your own words ("senior PM, fintech, ~8 years"); paste a job you'd love; or "Not sure, show me examples" (tap role-family cards). Fields not covered yet get an honest "We don't cover this yet; want us to tell you when we do?"
+5. **Quick taste test (8 real roles, skippable).** Interested / not for each. Feels like browsing, and every tap trains the ranking.
+6. **Your list.** Banner: "Based on 3 answers and 8 taps. Your personalised ranking arrives tomorrow morning and gets sharper as you use Lodestone." (Scoring runs in the daily run, not on the viewer's Claude usage: Ayush, 10-16.) Until then the list is filtered by destination, status and role and sorted by the taste test and recency.
+
+### 8.4 The profile, later, as an upgrade
+Offered after the first session, or when a user opens a role's fit details ("Fit: not personal yet"). "Want sharper matches? Add your experience to see how it fits each role." Reassurance in plain words: a rough draft is fine; only you can see it; never sent to employers; delete it any time. Three ways:
+- **Upload** a resume (PDF or text).
+- **Paste** any text (even a LinkedIn "About" section and job titles).
+- **Build it with me** (MVP): about five short questions (current role and level, years, biggest win, domains, tools). Answers are saved instantly; the profile is built at the next daily run. The resulting summary can also be copied as a starting point for a resume.
+After it's read: **"Here's what we understood"**, every line editable, so a weak resume never has the last word.
+
+### 8.5 Match quality grows with signals
+| Level | What we know | What the user gets |
+|---|---|---|
+| 0 Answers | Destination, status, role in their words | Filtered list with work-permit signals, newest first |
+| 1 Taste test | ~8 likes and dislikes | Ranking by similarity to what they liked |
+| 2 Profile | Experience, level, domains (resume, text or build-with-me) | Fit scores with plain reasons |
+| 3 Daily use | Triage, "Not for me" reasons, what they open and read | Rankings that learn; one-tap suggestions |
+| 4 Applying | Pipeline moves | Nudges, follow-ups, pay checks |
+Shown on the Profile page as a meter: "Match quality: level 2 of 4 · Triage 10 more roles to reach level 3."
+
+### 8.6 Learning from signals (Q-23)
+- **Explicit:** Interested, Later, Not for me + reason, pipeline moves, market-check requests.
+- **Reading time** on the Job description tab (and opening the original posting), capped per role, **with an off switch** in the Profile ("Learn from what I read").
+- **Preference suggestions, one tap to accept** (never applied silently): after three "Pay too low", "Raise your pay target to CA$190K? · Accept · Not now". Accepted changes show in the Profile with their reason and can be undone.
+- **More / less like this** acts on the pattern (domain, company type, level), not only the one role.
+- **Exploration:** about 1 card in 10 is outside the user's pattern, labelled "Something different".
+- **Explain:** each card can say why it's ranked where it is, in a sentence.
+
+### 8.7 Ask only when it matters (one-tap questions)
+Asked once, at the moment they're relevant, each dismissible: first "Pay too low" → minimum base pay; three people-manager dismissals → hide manager roles?; shortlisting a role outside the user's regions → add that city?; a role at the user's current employer → count transfers as a strong route?
+
+### 8.8 The daily loop
+- **Today:** "N new for you" (default up to 10), a short stack you can finish ("All caught up" when done). The full ranked backlog is one tap away under "All roles".
+- **Evaluate:** the role view (§4.2) plus "why it's ranked here" and more / less like this.
+- **Act:** Interested opens a gentle next step: Open posting · Request market check · Add a note.
+- **Track:** pipeline with nudges ("Applied 10 days ago: follow up?") and closed-posting alerts.
+- **Weekly:** a Monday "Your week": market changes, what Lodestone learned about you, companies to consider.
