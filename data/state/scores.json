@@ -9745,7 +9745,7 @@
   },
   "reasons": {
    "role": "Own vision and roadmap for Identity data and insights products",
-   "level": "Manager = senior IC PM; owns vision and roadmap",
+   "level": "Manager title; posting asks for people management and mentoring",
    "domain": "Identity, fraud and risk data products; direct overlap",
    "pathway": "Large multinational; Global Talent Stream use inferred",
    "pay": "Top CA$169K is in the ok band",
@@ -9753,14 +9753,15 @@
   },
   "summary": "Own the vision and roadmap for Mastercard's Identity data and insights products.",
   "level_guess": "Senior PM (≈ L5)",
-  "people_mgmt": false,
+  "people_mgmt": true,
   "work_mode": "unclear",
   "must_haves": [
    "Product vision and roadmap",
    "Fintech or large tech experience"
   ],
   "flags": [
-   "Leads remote project teams"
+   "Leads remote project teams",
+   "Manages people"
   ]
  },
  "f05e5677e1a4": {

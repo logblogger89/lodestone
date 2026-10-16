@@ -207,6 +207,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-16 | Score fix: Mastercard "Manager, Product Management" (Data and Insights, Identity) asks for people management; the scorer had missed it. Corrected and added to the reading check with a Mastercard IC counter-example (gold set 24) | Claude |
 | 2026-10-16 | D-068: P1-S6 built and published (app v22): Today list, learning, reading time, one-tap suggestions, why-ranked; UX §8.9, PRD R28–R29, Eng Design layout; app check covers the new screens | Claude |
 | 2026-10-16 | D-067: UX v2 end-to-end flow and resume-optional onboarding specified (UX §8, PRD CUJ-0, R26–R31); roadmap proposal P1-S6/S7 | Claude |
 | 2026-10-16 | D-066: vision broadened to people moving countries for work; PRD overview updated; UX v2 onboarding brainstorm in progress | Claude |

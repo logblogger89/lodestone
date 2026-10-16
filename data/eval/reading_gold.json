@@ -168,6 +168,16 @@
    "region": "GTA",
    "people_mgmt": false,
    "years": 5
+  },
+  {
+   "id": "3970f017c31c",
+   "people_mgmt": true,
+   "note": "Mastercard Manager, PM (Data and Insights, Identity): 'Experienced in people management and mentoring while leading globally dispersed and remote project teams'"
+  },
+  {
+   "id": "1da6681a70c5",
+   "people_mgmt": false,
+   "note": "Mastercard Manager, PM (Agentic Commerce): 'Manager' is Mastercard's level name; the posting describes product ownership, no direct reports"
   }
  ]
 }
