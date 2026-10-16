@@ -10,23 +10,23 @@
    "postings": 1340
   },
   "jobs:greenhouse": {
-   "at": "2026-10-16T10:59:25+00:00",
-   "postings": 5097
+   "at": "2026-10-16T11:03:48+00:00",
+   "postings": 18
   },
   "jobs:ashby": {
    "at": "2026-10-16T10:59:25+00:00",
    "postings": 1869
   },
   "jobs:lever": {
-   "at": "2026-10-16T10:59:25+00:00",
-   "postings": 1400
+   "at": "2026-10-16T11:03:51+00:00",
+   "postings": 3
   },
   "jobs": {
-   "at": "2026-10-16T11:00:26+00:00",
-   "sources_ok": 1,
+   "at": "2026-10-16T11:04:28+00:00",
+   "sources_ok": 9,
    "sources_failed": 0,
-   "canada_postings": 14,
-   "candidates": 616
+   "canada_postings": 66,
+   "candidates": 631
   },
   "jobs:google": {
    "at": "2026-10-16T10:59:25+00:00",
@@ -45,8 +45,8 @@
    "postings": 7
   },
   "jobs:eightfold": {
-   "at": "2026-10-16T10:59:25+00:00",
-   "postings": 149
+   "at": "2026-10-16T11:04:13+00:00",
+   "postings": 30
   },
   "jobs:workday": {
    "at": "2026-10-16T10:59:25+00:00",
@@ -61,8 +61,8 @@
    "postings": 178
   },
   "jobs:oracle_hcm": {
-   "at": "2026-10-16T10:59:25+00:00",
-   "postings": 53
+   "at": "2026-10-16T11:04:03+00:00",
+   "postings": 132
   },
   "jobs:rippling": {
    "at": "2026-10-16T10:59:25+00:00",
@@ -81,8 +81,8 @@
    "postings": 44
   },
   "jobs:workable": {
-   "at": "2026-10-16T10:59:25+00:00",
-   "postings": 95
+   "at": "2026-10-16T11:03:45+00:00",
+   "postings": 8
   },
   "jobs:successfactors": {
    "at": "2026-10-16T10:59:25+00:00",
@@ -141,8 +141,8 @@
    "postings": 477
   },
   "jobs:page": {
-   "at": "2026-10-16T10:59:25+00:00",
-   "postings": 25
+   "at": "2026-10-16T11:04:28+00:00",
+   "postings": 97
   },
   "scoring": {
    "at": "2026-10-15T13:04:08+00:00",
@@ -161,66 +161,6 @@
   }
  },
  "history": [
-  {
-   "component": "jobs:avature",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 1012
-  },
-  {
-   "component": "jobs:google",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 71
-  },
-  {
-   "component": "jobs:jazzhr",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 25
-  },
-  {
-   "component": "jobs:ibm",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 76
-  },
-  {
-   "component": "jobs:ultipro",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 74
-  },
-  {
-   "component": "jobs:talentbrew",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 22
-  },
-  {
-   "component": "jobs:icims",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 117
-  },
-  {
-   "component": "jobs:meta",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 7
-  },
-  {
-   "component": "jobs:eightfold",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 143
-  },
-  {
-   "component": "jobs:workable",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 76
-  },
-  {
-   "component": "jobs:shopify",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 120
-  },
-  {
-   "component": "jobs:dover",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 2
-  },
   {
    "component": "jobs:adp",
    "at": "2026-10-15T20:26:18+00:00",
@@ -420,6 +360,84 @@
    "sources_failed": 0,
    "canada_postings": 14,
    "candidates": 616
+  },
+  {
+   "component": "jobs:workable",
+   "at": "2026-10-16T11:03:45+00:00",
+   "postings": 8
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-16T11:03:45+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_postings": 8,
+   "candidates": 616
+  },
+  {
+   "component": "jobs:greenhouse",
+   "at": "2026-10-16T11:03:48+00:00",
+   "postings": 18
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-16T11:03:48+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_postings": 9,
+   "candidates": 618
+  },
+  {
+   "component": "jobs:lever",
+   "at": "2026-10-16T11:03:51+00:00",
+   "postings": 3
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-16T11:03:51+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_postings": 1,
+   "candidates": 618
+  },
+  {
+   "component": "jobs:oracle_hcm",
+   "at": "2026-10-16T11:04:03+00:00",
+   "postings": 132
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-16T11:04:03+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_postings": 132,
+   "candidates": 623
+  },
+  {
+   "component": "jobs:eightfold",
+   "at": "2026-10-16T11:04:13+00:00",
+   "postings": 30
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-16T11:04:13+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_postings": 30,
+   "candidates": 624
+  },
+  {
+   "component": "jobs:page",
+   "at": "2026-10-16T11:04:28+00:00",
+   "postings": 97
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-16T11:04:28+00:00",
+   "sources_ok": 9,
+   "sources_failed": 0,
+   "canada_postings": 66,
+   "candidates": 631
   }
  ]
 }

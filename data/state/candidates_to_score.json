@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-16T11:00:23+00:00",
- "count": 616,
+ "updated_at": "2026-10-16T11:04:26+00:00",
+ "count": 631,
  "candidates": [
   {
    "id": "ashby:1password:8151254c-b7d1-4653-87b1-7afeba176898",
@@ -2463,6 +2463,23 @@
    ]
   },
   {
+   "id": "page:certn:1f3d6707e999",
+   "company": "Certn",
+   "title": "Senior Product Manager",
+   "location": "Remote, Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "sources": [
+    "page"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/HighlightTA/bf0c2eed-cbfb-48b1-b77d-78e21be1e8b3"
+   ]
+  },
+  {
    "id": "workday:clio/ClioCareerSite:REQ-5458",
    "company": "Clio",
    "title": "Product Manager - Fintech",
@@ -3423,6 +3440,108 @@
    ]
   },
   {
+   "id": "page:evenup:2688371897f1",
+   "company": "EvenUp",
+   "title": "Director of Product Design",
+   "location": "San Francisco (hybrid); Toronto (hybrid), ON, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "sources": [
+    "page"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/evenup/de8b71b1-c665-4852-863f-899ee4943701"
+   ]
+  },
+  {
+   "id": "page:evenup:f77af479b64b",
+   "company": "EvenUp",
+   "title": "Product Manager, AI Entities",
+   "location": "San Francisco (hybrid); Toronto (hybrid), ON, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "sources": [
+    "page"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/evenup/731e4f4a-799e-412f-a800-9c52f4a09e43"
+   ]
+  },
+  {
+   "id": "page:evenup:415d5134a964",
+   "company": "EvenUp",
+   "title": "Senior/Staff/Principal Product Manager, AI Orchestration & Agentic Workflows",
+   "location": "San Francisco (hybrid); Toronto (hybrid), ON, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "sources": [
+    "page"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/evenup/619241eb-7888-40e2-8ba5-ac6edc60f6bf"
+   ]
+  },
+  {
+   "id": "page:evenup:1e7600d8bee5",
+   "company": "EvenUp",
+   "title": "Senior/Staff/Principal Product Manager, Data Products",
+   "location": "San Francisco (hybrid); Toronto (hybrid), ON, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "sources": [
+    "page"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/evenup/08c63471-cd26-4bb2-b3f4-876aeee36e45"
+   ]
+  },
+  {
+   "id": "page:evenup:56b6241fbd2a",
+   "company": "EvenUp",
+   "title": "Senior/Staff/Principal Product Manager, First Mile AI",
+   "location": "San Francisco (hybrid); Toronto (hybrid), ON, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "sources": [
+    "page"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/evenup/9fa7c470-f073-4203-8908-cafa9cd54894"
+   ]
+  },
+  {
+   "id": "page:evenup:438baa503bb0",
+   "company": "EvenUp",
+   "title": "Senior/Staff/Principal Product Manager, Launch Experience",
+   "location": "San Francisco; Toronto, ON, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "sources": [
+    "page"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/evenup/6716dc15-3aea-4c53-9089-a6a78d6f1eaa"
+   ]
+  },
+  {
    "id": "greenhouse:faire:8864857002",
    "company": "Faire",
    "title": "Product Manager - Multiple Levels",
@@ -3629,6 +3748,84 @@
    ],
    "urls": [
     "https://jobs.ashbyhq.com/float/3760e99f-fd78-4f46-9187-e444badfd11c"
+   ]
+  },
+  {
+   "id": "oracle_hcm:edel/CX_2001:23258",
+   "company": "Fortinet",
+   "title": "Senior Technical Product Manager – Endpoint Security",
+   "location": "Burnaby, BC, Canada",
+   "region": "Vancouver",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 163000,
+      "max": 199000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": true,
+      "quote": "The Canada base salary range for this full-time position is expected to be between $163,000 - $199,000 annually."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "All roles are eligible to participate in the Fortinet equity program."
+    }
+   },
+   "first_seen": "2026-10-16T11:03:52+00:00",
+   "sources": [
+    "oracle_hcm"
+   ],
+   "urls": [
+    "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/23258"
+   ]
+  },
+  {
+   "id": "oracle_hcm:edel/CX_2001:22903",
+   "company": "Fortinet",
+   "title": "Sr. Product Manager for Cloud-Native SOC Platform",
+   "location": "Burnaby, BC, Canada",
+   "region": "Vancouver",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 145000,
+      "max": 200000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": true,
+      "quote": "The Canada base salary range for this full-time position is expected to be between $145,000 - $200,000 annually."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "All roles are eligible to participate in the Fortinet equity program."
+    }
+   },
+   "first_seen": "2026-10-16T11:03:52+00:00",
+   "sources": [
+    "oracle_hcm"
+   ],
+   "urls": [
+    "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/22903"
    ]
   },
   {
@@ -5780,6 +5977,60 @@
    ],
    "urls": [
     "https://jobs.lever.co/netomi/28e755b4-9e42-4728-8f46-9f4995ef299a"
+   ]
+  },
+  {
+   "id": "greenhouse:novisto78:4717306005",
+   "company": "Novisto",
+   "title": "Product Manager, Sustainability Content & Methodology Governance",
+   "location": "Montreal or Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [],
+    "primary": null,
+    "source": null,
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Stock option plan"
+    }
+   },
+   "first_seen": "2026-10-16T11:03:46+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://novisto.com/company/careers/job-openings?gh_jid=4717306005"
+   ]
+  },
+  {
+   "id": "greenhouse:novisto78:4741486005",
+   "company": "Novisto",
+   "title": "Sr. Product Manager",
+   "location": "Montreal or Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [],
+    "primary": null,
+    "source": null,
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Stock option plan"
+    }
+   },
+   "first_seen": "2026-10-16T11:03:46+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://novisto.com/company/careers/job-openings?gh_jid=4741486005"
    ]
   },
   {
@@ -11960,6 +12211,45 @@
    ]
   },
   {
+   "id": "oracle_hcm:edel/CX_2001:22724",
+   "company": "Fortinet",
+   "title": "Program Manager (Authorized Training Centers)",
+   "location": "Burnaby, BC, Canada",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 92000,
+      "max": 112000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": true,
+      "quote": "The Canada base salary range for this full-time position is expected to be between $92,000 - $112,000 annually."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "All roles are eligible to participate in the Fortinet equity program."
+    }
+   },
+   "first_seen": "2026-10-16T11:03:52+00:00",
+   "sources": [
+    "oracle_hcm"
+   ],
+   "urls": [
+    "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/22724"
+   ]
+  },
+  {
    "id": "greenhouse:gitlab:8693068002",
    "company": "GitLab",
    "title": "Principal Technical Program Manager",
@@ -15945,6 +16235,117 @@
    ],
    "urls": [
     "https://jobs.ea.com/en_US/careers/JobDetail/Senior-Analyst-EA-Sports-FC/216170"
+   ]
+  },
+  {
+   "id": "eightfold:ericsson.com:563121777187978",
+   "company": "Ericsson",
+   "title": "Solutions Architect",
+   "location": "Toronto,Ontario,Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 99500,
+      "max": 130725,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Ontario, Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "• Ontario: $99,500-130,725 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T11:04:03+00:00",
+   "sources": [
+    "eightfold"
+   ],
+   "urls": [
+    "https://jobs.ericsson.com/careers/job/563121777187978"
+   ]
+  },
+  {
+   "id": "oracle_hcm:edel/CX_2001:22095",
+   "company": "Fortinet",
+   "title": "Cloud Solution Architect",
+   "location": "Toronto, ON, Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 182300,
+      "max": 222900,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "ote",
+      "estimated": true,
+      "quote": "On-target earnings (OTE) for this full-time position is expected to be between $182,300 - $222,900 annually."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "All roles are eligible to participate in the Fortinet equity program."
+    }
+   },
+   "first_seen": "2026-10-16T11:03:52+00:00",
+   "sources": [
+    "oracle_hcm"
+   ],
+   "urls": [
+    "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/22095"
+   ]
+  },
+  {
+   "id": "oracle_hcm:edel/CX_2001:23081",
+   "company": "Fortinet",
+   "title": "SecOps Business Development Solution Consultant",
+   "location": "Vancouver, BC, Canada; Calgary, AB, Canada",
+   "region": "Vancouver",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 207000,
+      "max": 253000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "ote",
+      "estimated": true,
+      "quote": "The Canada on-target earnings (OTE) for this full-time position is expected to be between $207,000 - $253,000 annually."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "All roles are eligible to participate in the Fortinet equity program."
+    }
+   },
+   "first_seen": "2026-10-16T11:03:52+00:00",
+   "sources": [
+    "oracle_hcm"
+   ],
+   "urls": [
+    "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/23081"
    ]
   },
   {

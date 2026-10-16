@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-16T11:00:23+00:00",
+ "updated_at": "2026-10-16T11:04:26+00:00",
  "jobs": {
   "ashby:1password:b141ee0c-30aa-42f8-8ff7-b353f7f9d060": {
    "group": "1password|principal solutions engineer emerging technologies|remote-canada",
@@ -32261,6 +32261,677 @@
    "first_seen": "2026-10-16T10:56:28+00:00",
    "live": true,
    "last_seen": "2026-10-16T10:56:28+00:00"
+  },
+  "greenhouse:novisto78:4717306005": {
+   "group": "novisto|product manager sustainability content methodology governance|gta",
+   "company": "Novisto",
+   "title": "Product Manager, Sustainability Content & Methodology Governance",
+   "location": "Montreal or Toronto",
+   "region": "GTA",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": null,
+   "department": "Product ",
+   "posted_at": "2026-07-21T17:49:49-04:00",
+   "pay": {
+    "ranges": [],
+    "primary": null,
+    "source": null,
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Stock option plan"
+    }
+   },
+   "pay_field": null,
+   "pay_checked": true,
+   "role_tier": "Core",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Core via /\\bproduct manager\\b/",
+   "description": "We are looking for a Product Manager, Sustainability Content & Methodology Governance to own the product strategy, roadmap, and lifecycle management for Novisto’s ESG framework, questionnaire, and carbon methodology capabilities. \n\n This is a high-impact role for someone who enjoys operating at the intersection of product management, sustainability domain expertise, data governance, regulatory change, carbon accounting, and enterprise SaaS delivery. You will help ensure Novisto’s platform stays aligned with evolving ESG frameworks, CDP questionnaires, S&P questionnaires, carbon protocols, emissions factors, and calculation logic while translating complex methodology changes into scalable product capabilities.\n\n This role is ideal for a structured, customer-oriented product manager who can bring discipline to a fast-changing sustainability domain and create a repeatable operating model for monitoring, assessing, prioritizing, implementing, validating, and communicating content and methodology changes.\n\n Why This Role Matters \n\n- Customers need confidence that their ESG and carbon data is accurate, current, traceable, and ready for reporting and assurance.\n\n- Frameworks, questionnaires, protocols, emissions factors, and calculation methodologies are changing continuously and must be managed through a disciplined product lifecycle.\n\n- Novisto’s differentiation depends on combining deep sustainability expertise with scalable software, strong governance, and a clear customer experience.\n\n- This role will help Novisto move from content maintenance to a repeatable, productized methodology governance model that supports enterprise adoption and customer trust.\n\n Your responsibilities will include : \n\n Own the product roadmap for frameworks, questionnaires, and methodologies \n\n- Define and maintain the roadmap for ESG frameworks, CDP questionnaires, S&P questionnaires, carbon protocols, emissions factors, and calculation logic.\n\n- Translate evolving standards and questionnaire changes into product requirements, data model needs, workflow changes, reporting outputs, QA requirements, and release plans.\n\n- Prioritize work based on customer impact, regulatory deadlines, business value, risk, implementation complexity, and strategic fit.\n\n Build a scalable monitoring and governance process \n\n- Establish a recurring monitoring process for supported frameworks, questionnaires, protocols, and carbon methodologies.\n\n- Work with ESG experts, carbon experts, data analysts, external advisors, and customer-facing teams to identify changes and assess product implications.\n\n- Create clear governance for content updates, methodology changes, emissions factor updates, calculation logic, templates, mappings, standard phrases, and release documentation.\n\n Lead structured impact assessments \n\n- Assess whether each change impacts existing implementation, data structures, calculations, downstream reporting, customer workflows, assurance readiness, or exports.\n\n- Separate routine updates from non-routine changes that require deeper analysis, working groups, customer SME input, or new product capabilities.\n\n- Produce clear implementation scope, product requirements, acceptance criteria, QA approach, and release readiness plans.\n\n Partner cross-functionally to deliver high-quality product outcomes \n\n- Collaborate with Product, ESG experts, Carbon experts, Engineering, QA, Design, Customer Success, Implementation, Product Marketing, and Sales Enablement.\n\n- Ensure domain interpretation is translated into clear, buildable, testable product requirements.\n\n- Support release readiness, internal enablement, customer-facing documentation, and customer communications for major changes.\n\n Improve carbon calculation transparency and trust \n\n- Own product requirements for carbon calculation traceability, methodology documentation, emissions factor versioning, data quality checks, variance detection, and audit-ready evidence.\n\n- Help ensure carbon outputs are explainable, repeatable, and aligned with recognized protocols and enterprise customer expectations.\n\n- Support the evolution of Novisto’s carbon capabilities across Scope 1, Scope 2, Scope 3, supplier data, and calculation governance.\n\n What we’re looking for: \n\n- 5+ years of product management, product ownership, regulatory content management, sustainability software, carbon accounting, ESG reporting, EHS, compliance, or enterprise SaaS experience.\n\n- Experience translating complex domain, regulatory, methodological, or data requirements into product capabilities.\n\n- Familiarity with ESG reporting frameworks, sustainability questionnaires, carbon accounting, data governance, assurance readiness, or regulatory change management.\n\n- Strong structured thinking and ability to manage complex, recurring update cycles with cross-functional contributors.\n\n- Ability to work with subject-matter experts and engineering teams to create clear requirements, acceptance criteria, and release plans.\n\n- Excellent communication skills, including the ability to write customer-facing release notes, internal enablement materials, and executive-level updates.\n\n- Strong judgment and prioritization skills across regulatory timelines, customer commitments, implementation complexity, and commercial impact.\n\n Nice to Have \n\n- Experience with CDP, S&P Global CSA, GRI, SASB, ISSB, ESRS / CSRD, TCFD, SDGs, or other sustainability frameworks.\n\n- Knowledge of GHG Protocol, Scope 1, Scope 2, Scope 3, emissions factors, supplier data, or product carbon footprint concepts.\n\n- Experience with taxonomy management, calculation engines, reporting workflows, audit trails, controls, or evidence management.\n\n- Experience working with consultants, assurance providers, external advisors, customer advisory groups, or enterprise implementation teams.\n\n- Experience in a high-growth B2B SaaS environment.\n\n What we offer \n\n- Join an early-stage, well-financed company\n\n- Advance Novisto’s purpose of contributing to the sustainability of the economy, environment, and society by empowering companies to make better decisions and disclosures through our ESG data management software\n\n- Contribute your knowledge and insights to increase awareness and knowledge of sustainability\n\n- Generous health benefits (100% Insurance coverage & access to Dialogue's telemedicine app)\n\n- Flexible schedules & opportunity to work remotely\n\n- 4 weeks of vacation\n\n- Stock option plan\n\n- Summer hours\n\n- If you prefer to work at the office, we have a beautiful office in Old Montreal, close to downtown and steps away from a metro (subway) station",
+   "detail_api": null,
+   "sightings": [
+    {
+     "key": "greenhouse:novisto78:4717306005",
+     "source": "greenhouse",
+     "url": "https://novisto.com/company/careers/job-openings?gh_jid=4717306005",
+     "first_seen": "2026-10-16T11:03:46+00:00",
+     "last_seen": "2026-10-16T11:03:46+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:03:46+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:03:46+00:00"
+  },
+  "greenhouse:novisto78:4741486005": {
+   "group": "novisto|senior product manager|gta",
+   "company": "Novisto",
+   "title": "Sr. Product Manager",
+   "location": "Montreal or Toronto",
+   "region": "GTA",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": null,
+   "department": "Product ",
+   "posted_at": "2026-10-07T12:46:22-04:00",
+   "pay": {
+    "ranges": [],
+    "primary": null,
+    "source": null,
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Stock option plan"
+    }
+   },
+   "pay_field": null,
+   "pay_checked": true,
+   "role_tier": "Core",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Core via /\\bproduct manager\\b/",
+   "description": "Carbon is Novisto's broadest and most technically demanding product area — spanning Corporate Carbon Accounting (including Scope 3), Financed Emissions, Product Carbon Footprint, and Decarbonisation. It's also the area under the most active evolution: extended through partnership and acquisition, expected to incorporate AI capabilities as a baseline market expectation, and held to audit-grade standards of accuracy and traceability by the regulations it serves.\n\n This role owns product outcomes across that full suite. It's a broad, technically deep, customer-facing remit that calls for a PM who can move fluidly across multiple product lines, hold real domain and regulatory complexity, and operate with the rigor an audit-ready product demands — while raising the bar for the wider team's product practice in the process.\n\nThe Opportunity \n\n- Full ownership of a multi-product suite — not a single feature or workstream — requiring strong prioritisation and comfort with constant context-switching across genuinely different problem spaces.\n\n- A build/partner/acquire execution model: some capability is built in-house, some delivered through partners, some inherited through acquisition — this PM works across all three, not just one.\n\n- Direct customer exposure at a strategic level: roadmap and strategy presentations, live requirements conversations, and escalations, with real commercial and reputational stakes attached to accuracy and delivery.\n\n- Product evolution into AI-enabled capability as the suite matures, rather than steady-state maintenance of a settled product.\n\n Your responsibilities will include: \n\n Own outcomes across the Carbon suite\n\n- Hold end-to-end product accountability across Corporate Carbon Accounting (incl. Scope 3), Financed Emissions, Product Carbon Footprint, and Decarbonisation as one connected remit.\n\n- Prioritise ruthlessly across competing, genuinely different problem spaces, making trade-offs that are legible to engineering, leadership, and customers.\n\n- Build sufficient domain depth in each area to drive solutions forward independently, rather than waiting for fully-specified requirements from customers or SMEs.\n\n- Be accountable for measurable product outcomes — adoption, retention, delivery against commercial commitments — not just features shipped.\n\n Operate a build/partner/acquire model \n\n- Work directly with external partners to define scope, resolve product gaps, and manage the product-level relationship as capability is delivered through partnership rather than built in-house.\n\n- Assess and integrate acquired or partnered capability into a coherent product experience, rather than treating it as a bolt-on.\n\n- Bring enough commercial fluency to input into build-vs-buy-vs-partner decisions and hold your own on partner terms that affect the product — SLAs, data rights, and roadmap influence.\n\n Bring audit-grade rigor to everything you ship \n\n- Treat reporting rules and regulatory requirements as first-order product constraints, not compliance overhead layered on afterwards.\n\n- Apply meaningful attention to detail across validation logic, edge cases, and UX — the standard our live customer integrations have already shown gets tested in production.\n\n- Track evolving disclosure requirements as an active input to roadmap decisions, not a background concern.\n\n- Translate genuinely technical, regulation-driven requirements into decisions engineering can build against with confidence.\n\n Run modern discovery and delivery practice \n\n- Lead discovery — customer interviews, problem framing, prototyping with UX/UI — rather than working from a pre-built backlog.\n\n- Partner closely with Engineering on solution design to the degree the problem demands, while creating enough space for the team to own how problems get solved.\n\n- Operate in the spirit of empowered product teams: outcome-driven, discovery-led, and evidence-based, even where the wider organisation's process isn't fully there yet.\n\n- Design within a shared platform architecture and design system, balancing Carbon-specific needs against platform-wide consistency and reuse.\n\n Evolve the product with AI \n\n- Identify where AI capability should be embedded in the Carbon suite as it becomes a baseline market expectation rather than a differentiator.\n\n- Bring genuine curiosity and hands-on experimentation with AI tools into your own process, and use them to accelerate discovery, delivery, and product quality.\n\n Be the face of Carbon to customers \n\n- Lead strategy and roadmap conversations directly with customers, including senior stakeholders.\n\n- Take ownership of live customer feedback, requirements, and escalations — this is a highly customer-facing role with no back office to hide in.\n\n Work across the business \n\n- Partner effectively with Sales, Marketing, Customer Success, domain specialists in Carbon/ESG, and Engineering to move decisions forward, especially where formal process is still forming.\n\n- Raise the bar for product craft on the wider team through example — rigorous requirements, sharp trade-off framing, and disciplined discovery — even without formal management responsibility.\n\n- Use data — usage, adoption, feedback, delivery — to inform prioritisation and defend decisions, rather than relying on the loudest voice in the room.\n\nWhat We're Looking For \n\n- Significant experience as a Senior or Principal Product Manager in B2B SaaS, ideally at scale-up stage, with a track record of owning outcomes across more than one product line or workstream concurrently.\n\n- Demonstrated comfort operating in a technical, rules-heavy, or regulated domain — someone who has shipped product where correctness, traceability, and audit-readiness were real constraints, not necessarily carbon-specific.\n\n- Strong, current evidence of modern PM practice: discovery-led, outcome-oriented, and comfortable working in (even if not formally practising) an empowered product team model.\n\n- Experience running discovery with UX/UI Designers — prototyping, user journeys, and translating ambiguous problems into testable solutions.\n\n- Confident, senior-level customer-facing skills: strategy and roadmap presentations, handling feedback and escalations directly, and holding your own with technical and non-technical stakeholders alike.\n\n- A genuine data-informed approach to decision-making.\n\n- Excellent written and verbal communication, calibrated for both executive and highly technical audiences.\n\n- Willingness and enthusiasm to work with AI tooling across the product development lifecycle, even without direct prior experience.\n\n Nice to Have \n\n- Direct domain knowledge in carbon accounting, ESG, or sustainability reporting (e.g. Scope 1/2/3, GHG Protocol, PCAF, CSRD/ESRS) — where present, there's a real opportunity to shape strategy in this space, not just execute against it.\n\n- Experience managing or shaping products delivered through partnership or white-label arrangements.\n\n- Hands-on experience with AI tooling in the product development lifecycle.\n\n- Familiarity with product operations practice — process design, tooling, and governance that scales a growing product organisation.\n\n- Experience in a company expanding its platform scope through partnership or acquisition, rather than organic build alone.\n\n What we offer \n\n- Join an early-stage, well-financed company\n\n- Advance Novisto’s purpose of contributing to the sustainability of the economy, environment, and society by empowering companies to make better decisions and disclosures through our ESG data management software\n\n- Contribute your knowledge and insights to increase awareness and knowledge of sustainability\n\n- Flexible schedules & opportunity to work remotely\n\n- 4 weeks vacation\n\n- Stock option plan\n\n- If you prefer to work at the office, we have a beautiful office in downtown Montreal easily accessible by Metro/REM",
+   "detail_api": null,
+   "sightings": [
+    {
+     "key": "greenhouse:novisto78:4741486005",
+     "source": "greenhouse",
+     "url": "https://novisto.com/company/careers/job-openings?gh_jid=4741486005",
+     "first_seen": "2026-10-16T11:03:46+00:00",
+     "last_seen": "2026-10-16T11:03:46+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:03:46+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:03:46+00:00"
+  },
+  "oracle_hcm:edel/CX_2001:23258": {
+   "group": "fortinet|senior technical product manager endpoint security|vancouver",
+   "company": "Fortinet",
+   "title": "Senior Technical Product Manager – Endpoint Security",
+   "location": "Burnaby, BC, Canada",
+   "region": "Vancouver",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": null,
+   "department": "",
+   "posted_at": "2026-10-09",
+   "pay": {
+    "ranges": [
+     {
+      "min": 163000,
+      "max": 199000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": true,
+      "quote": "The Canada base salary range for this full-time position is expected to be between $163,000 - $199,000 annually."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "All roles are eligible to participate in the Fortinet equity program."
+    }
+   },
+   "pay_field": null,
+   "pay_checked": true,
+   "role_tier": "Core",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Core via /\\bproduct manager\\b/",
+   "description": "Join Fortinet, a cybersecurity pioneer with over two decades of excellence, as we continue to shape the future of cybersecurity and redefine the intersection of networking and security. At Fortinet, our mission is to safeguard people, devices, and data everywhere. \n We’re looking for an experienced Technical Product Manager to join our Product Management team and help lead the development and execution of our Unified Endpoint Security platform, which integrates Secure Zero Trust Access, Endpoint Security (EPP/EDR), and Data Protection into a single solution. In this role, you’ll collaborate closely with engineering teams to define technical requirements, shape the product roadmap, and drive the delivery of an enterprise-grade unified endpoint security SaaS offering.\n The ideal candidate will have a strong background in endpoint security and networking technologies—including secure access (VPN/ZTNA), threat protection, and endpoint security (EPP/EDR)—along with a solid understanding of engineering development cycles. The ability to collaborate effectively with multiple technical product teams is essential for success in this role.\n What you will do: \n\n- Work closely with various product development & design teams to define and execute Unified Endpoint Platform product roadmap. \n\n- Capture priority issues from technical, sales and support teams and follow up with respective engineering teams to ensure timely resolution.\n\n- Partner with cross-functional groups—Engineering, UX, Support, Marketing, and Sales—to drive alignment and execution.\n\n- Analyze market competitors and customer feedback to guide product decision-making.\n\n- Collaborate with design and engineering teams to create product prototypes and user interfaces.\n Requirements: \n\n- 10+ years of experience in cybersecurity or Endpoint Protection / EDR space\n\n- 5+ years of experience in project or product management role.\n\n- Hands-on experience with security solutions (Firewalls, IPS, Antivirus, Antispam, Endpoint Protection, ZTNA, DLP, etc.).\n\n- Proven experience overseeing all elements of the product development lifecycle.\n\n- Highly effective cross-functional team management.\n\n- Strong communication skills (written and verbal)\n\n- Strong analytical abilities and big-picture problem-solving skills, grounded in a deep commitment to customer needs.\n\n- Flexibility and Versatility – the position requires dealing with a wide range of technologies, interfaces, and multiple teams in a highly dynamic hypergrowth environment.\n\n- Expertise in platform architecture and/or SaaS product integration\n\n- Bachelor's Degree in Computer Science, Engineering, or a related technical discipline\n\n About Our Team: \n Join our team, known for its collaborative ethos, working seamlessly with global customers, internal engineering teams and product development groups. Our team culture emphasizes continuous learning, innovation, and a strong commitment to customer satisfaction. We embrace Fortinet’s core values of openness, teamwork and innovation, fostering an environment where team members support each other, share knowledge, and leverage AI to solve complex technical challenges. Our inclusive and dynamic team thrives on collaboration and is driven by the shared goal of maintaining Fortinet’s high standards of excellence in cybersecurity solutions.\n Why Join Us: \n We encourage candidates from all backgrounds and identities to apply. We offer a supportive work environment and a competitive Total Rewards package to support you with your overall health and financial well-being. Embark on a challenging, enjoyable, and rewarding career journey with Fortinet. Join us in bringing solutions that make a meaningful and lasting impact to our 660,000+ customers around the globe.\n The Canada base salary range for this full-time position is expected to be between $163,000 - $199,000 annually.  Wage ranges are based on various factors including the labour market, job type, and job level.  Exact salary offers will be determined by factors such as the candidate’s subject knowledge, skill level, qualifications, and experience.\n Fortinet strives to provide you and your family with a comprehensive benefits package. Benefits eligibility starts on your first day of hire and comprises of 100% company paid medical, dental, and vision coverage, including a Health Spending Account and a Personal Spending Account that gives you flexibility to spend where you need it the most. Our Employee & Family Assistance Plan (EFAP) offers you and your family access to various services like counseling, legal advice, mental health resources etc. We also provide critical illness, disability, and life insurance, as well as a Group Registered Retirement Savings Plan (RRSP) with a company match to help you save faster for retirement. We offer competitive Paid Time Off and flexible leave policies, including paid health days, to help you take care of yourself and your family members.\n All roles are eligible to participate in the Fortinet equity program.  Bonus eligibility is reviewed at time of hire and annually at the Company’s discretion.",
+   "detail_api": "https://edel.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2223258%22,siteNumber=CX_2001",
+   "sightings": [
+    {
+     "key": "oracle_hcm:edel/CX_2001:23258",
+     "source": "oracle_hcm",
+     "url": "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/23258",
+     "first_seen": "2026-10-16T11:03:52+00:00",
+     "last_seen": "2026-10-16T11:03:52+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:03:52+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:03:52+00:00"
+  },
+  "oracle_hcm:edel/CX_2001:22903": {
+   "group": "fortinet|senior product manager for cloud native soc platform|vancouver",
+   "company": "Fortinet",
+   "title": "Sr. Product Manager for Cloud-Native SOC Platform",
+   "location": "Burnaby, BC, Canada",
+   "region": "Vancouver",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": null,
+   "department": "",
+   "posted_at": "2026-05-26",
+   "pay": {
+    "ranges": [
+     {
+      "min": 145000,
+      "max": 200000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": true,
+      "quote": "The Canada base salary range for this full-time position is expected to be between $145,000 - $200,000 annually."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "All roles are eligible to participate in the Fortinet equity program."
+    }
+   },
+   "pay_field": null,
+   "pay_checked": true,
+   "role_tier": "Core",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Core via /\\bproduct manager\\b/",
+   "description": "We are actively seeking a Technical Product Manager to join our SecOps product team and help drive the development of our cloud-native unified SOC platform. This platform brings together SIEM, SOAR, XDR, UEBA, ITDR, Threat Intelligence and AI/ML into one integrated solution to help customers detect, respond, and mitigate threats faster. \n\n What You’ll Do \n\n- Define and own product requirements for our next-generation SOC platform. \n\n- Translate customer and field requests into clear functional specifications. \n\n- Prioritize features that deliver maximum business and customer impact. \n\n- Partner with R&D to guide development cycles, break down feature requests, and manage deliverables. \n\n- Collaborate with system leaders, field sales, and technical customers to validate needs and ensure adoption. \n\n- Bring new features and products to market with strong positioning and customer value. \n\n What We’re Looking For \n\n- Strong technical background in SIEM, SOAR, and XDR solutions. \n\n- Hands-on experience with cloud-native platforms and services. \n\n- Solid understanding of engineering development cycles (agile, CI/CD). \n\n- Ability to engage with technical customers, field engineers, and sales teams. \n\n- Experience in customer- or field-facing technical roles is a strong plus. \n\n Why Join Us \n You’ll be at the center of shaping one of the industry’s most advanced SOC platforms — delivering innovations that directly impact how enterprises secure and operate in a cloud-first world. \n\n The Canada base salary range for this full-time position is expected to be between $145,000 - $200,000 annually.  Wage ranges are based on various factors including the labour market, job type, and job level.  Exact salary offers will be determined by factors such as the candidate’s subject knowledge, skill level, qualifications, and experience. \n Fortinet strives to provide you and your family with a comprehensive benefits package. Benefits eligibility starts on your first day of hire and comprises of 100% company paid medical, dental, and vision coverage, including a Health Spending Account and a Personal Spending Account that gives you flexibility to spend where you need it the most. Our Employee & Family Assistance Plan (EFAP) offers you and your family access to various services like counseling, legal advice, mental health resources etc. We also provide critical illness, disability, and life insurance, as well as a Group Registered Retirement Savings Plan (RRSP) with a company match to help you save faster for retirement. We offer competitive Paid Time Off and flexible leave policies, including paid health days, to help you take care of yourself and your family members.\n All roles are eligible to participate in the Fortinet equity program.  Bonus eligibility is reviewed at time of hire and annually at the Company’s discretion.",
+   "detail_api": "https://edel.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2222903%22,siteNumber=CX_2001",
+   "sightings": [
+    {
+     "key": "oracle_hcm:edel/CX_2001:22903",
+     "source": "oracle_hcm",
+     "url": "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/22903",
+     "first_seen": "2026-10-16T11:03:52+00:00",
+     "last_seen": "2026-10-16T11:03:52+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:03:52+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:03:52+00:00"
+  },
+  "oracle_hcm:edel/CX_2001:23081": {
+   "group": "fortinet|secops business development solution consultant|vancouver",
+   "company": "Fortinet",
+   "title": "SecOps Business Development Solution Consultant",
+   "location": "Vancouver, BC, Canada; Calgary, AB, Canada",
+   "region": "Vancouver",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": "Hybrid",
+   "department": "",
+   "posted_at": "2026-05-25",
+   "pay": {
+    "ranges": [
+     {
+      "min": 207000,
+      "max": 253000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "ote",
+      "estimated": true,
+      "quote": "The Canada on-target earnings (OTE) for this full-time position is expected to be between $207,000 - $253,000 annually."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "All roles are eligible to participate in the Fortinet equity program."
+    }
+   },
+   "pay_field": null,
+   "pay_checked": true,
+   "role_tier": "Stretch",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Stretch via /\\bsolutions? (engineer|architect|consultant)\\b/",
+   "description": "SecOps Business Development Solutions Consultant \n\n Fortinet seeks a  Business Development Solutions Consultant with experience in Security Operations (SecOps) As a sales engineering specialist you will use your deep technical understanding of Fortinet’s advanced security products (SecOps) to convert that knowledge into a high-level conversation with our clients.  \n Business Development Solutions Consultant’s will have the capacity to demonstrate how Fortinet’s Fabric can be leveraged to increase a customer’s protection and defense against cybersecurity attacks by mitigating risks across multiple platform and attack vectors.  \n Business Development Solutions Consultant’s will have a clear understanding on how customers can utilize Fortinet’s solutions for a broad, integrated, and automated approach to securing users, devices, applications, and edges everywhere, making possible a digital world people can always trust. \n\n As a SecOps Business Development Solutions Consultant, you will: \n\n- Work closely across both internal sales and engineering teams to collaborate and coordinate efforts providing knowledge that can be used to improve products and influence sales strategy at the territory, account, and opportunity levels. \n\n- Customer-facing presentations on how Fortinet’s solutions can be used to create a mature security architecture to address customer challenges.  \n\n- Technical presentations and demos on how Fortinet’s Fabric allows for cross platform integration to provide additional visibility and automated responses to current threats.  \n\n- Translate customer technical requirements and market needs.  \n\n- Execute Internal sales presentation to both commercial and engineering teams on how to position new and current Fortinet products.  \n\n- Create technical documents, white papers, videos, and demos, that can help the field sales and marketing teams to impact products and solution adoption  \n\n- Work with Product Management to help identify product challenges, trends, competitors, to understand specific market needs.  \n\n- Build a competitive analysis, understanding of top market players, their products’, strengths, and weaknesses. \n\n- Support sales activities as a strategic and high-level regional technical resource for strategic pre-sales engagements and key opportunities.    \n\n- Work with Fortinet’s marketing teams to help understand specific market needs to drive the appropriate activities that can impact positively market’s perception of Fortinet.    \n\n- Ability to work effectively, to add value as a team member, and collaborate with a variety of teams such as engineering, sales, product management and marketing.    \n\n- Coordinate and run solution demonstrations and labs required by customers, in order to shorten the sales cycle and effectively highlight Fortinet’s advantages over competitors.    \n\n- Be a spokesperson/ presenter, appropriately representing the company at public conferences, and marketing events. \n\n- Availability to travel up to 30% of the time, sometimes on short notice. \n\n We Are Looking For: \n\n- Strong experience in SecOps: SIEM, SOAR, EDR, Incident Response, Threat Hunting.  \n\n- Knowledge of and how to apply security frameworks, architectures: NIST, MITRE, CMM. \n\n- Strong understanding of common networking protocols, such as TCP/ IP, Ethernet, VLANs, IP Routing (BGP, OSPF), VXLAN, etc. \n\n- Strong understanding in the following authentication technologies and protocols: 802.1x, SSL, IPSec, LDAP, RADIUS, Active Directory, Digital Certificates / PKI, SAML. \n\n- Wireless domain experience – RF propagation, 802.11 protocol and security required. \n\n- At least five years of experience on engineering pre-sales activities, including: Sales meetings, Proof-of-concepts, training, product sizing, solution design, assisting on creating sales proposals (with sales team) and answering RFPs / public bids..  \n\n- Ability to be a self-starter and learn new knowledge areas on his/her own. \n\n- Proven track as problem solver and ability to make quick decisions under pressure.  \n\n- Highly organized. Capable of working and multi-tasking across multiple projects. \n\n- Self-motivated, with ability to work without direct supervision. \n\n- Must be comfortable speaking in front of an audience. Strong presentation skills a must. \n\n- Adaptable and flexible, operating in a fast-paced, dynamic environment. \n\n- Minimum of seven years experience in SecOps \n\n- Previous experience in sales is a plus. \n\n Education and Certification: \n\n- DESIRED: Bachelor / Engineering degree in Computer Science, Electronics or Telecommunications. \n\n- An independent information/network/computer security certification such as CISSP, OCSP, and/ or CWNP. \n\n Why Join Us: \n We encourage candidates from all backgrounds and identities to apply. We offer a supportive work environment and a competitive Total Rewards package to support your overall health and financial well-being.\n\n Embark on a challenging, enjoyable, and rewarding career journey with us. Join in delivering solutions that make a meaningful and lasting impact for customers around the globe.\n The Canada on-target earnings (OTE) for this full-time position is expected to be between $207,000 - $253,000 annually.  Wage ranges are based on various factors including the labour market, job type, and job level.  Exact salary offers will be determined by factors such as the candidate’s subject knowledge, skill level, qualifications, and experience.\n This job posting represents an existing vacancy.\n Fortinet strives to provide you and your family with a comprehensive benefits package. Benefits eligibility starts on your first day of hire and comprises of 100% company paid medical, dental, and vision coverage, including a Health Spending Account and a Personal Spending Account that gives you flexibility to spend where you need it the most. Our Employee & Family Assistance Plan (EFAP) offers you and your family access to various services like counseling, legal advice, mental health resources etc. We also provide critical illness, disability, and life insurance, as well as a Group Registered Retirement Savings Plan (RRSP) with a company match to help you save faster for retirement. We offer competitive Paid Time Off and flexible leave policies, including paid health days, to help you take care of yourself and your family members.\n All roles are eligible to participate in the Fortinet equity program.  Bonus eligibility is reviewed at time of hire and annually at the Company’s discretion.\n Why Join Us:\nWe encourage candidates from all backgrounds and identities to apply. We offer a supportive work environment and a competitive Total Rewards package to support you with your overall health and financial well-being.  \n Embark on a challenging, enjoyable, and rewarding career journey with Fortinet. Join us in bringing solutions that make a meaningful and lasting impact to our 890,000+ customers around the globe.",
+   "detail_api": "https://edel.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2223081%22,siteNumber=CX_2001",
+   "sightings": [
+    {
+     "key": "oracle_hcm:edel/CX_2001:23081",
+     "source": "oracle_hcm",
+     "url": "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/23081",
+     "first_seen": "2026-10-16T11:03:52+00:00",
+     "last_seen": "2026-10-16T11:03:52+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:03:52+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:03:52+00:00"
+  },
+  "oracle_hcm:edel/CX_2001:22724": {
+   "group": "fortinet|program manager authorized training centers|vancouver",
+   "company": "Fortinet",
+   "title": "Program Manager (Authorized Training Centers)",
+   "location": "Burnaby, BC, Canada",
+   "region": "Vancouver",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": "Hybrid",
+   "department": "",
+   "posted_at": "2026-04-20",
+   "pay": {
+    "ranges": [
+     {
+      "min": 92000,
+      "max": 112000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": true,
+      "quote": "The Canada base salary range for this full-time position is expected to be between $92,000 - $112,000 annually."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "All roles are eligible to participate in the Fortinet equity program."
+    }
+   },
+   "pay_field": null,
+   "pay_checked": true,
+   "role_tier": "Adjacent",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Adjacent via /\\bprogram manager\\b/",
+   "description": "Fortinet is seeking a Program Manager to lead and scale the Authorized Training Center (ATC) program globally. This role is responsible for developing and executing on a business plan to drive partner performance and revenue through the delivery of the Fortinet NSE Certification program, aligning training delivery with sales and partner strategies, ensuring consistent execution of the program and driving automation and AI-enabled solutions to enhance program efficiency and improve the partner experience. \n The Program Manager will work cross-functionally with Sales, Channel, Marketing, and regional stakeholders to strengthen ATC partnerships, expand reach, and increase the impact of Fortinet training and certification programs. \n Key Responsibilities \n\n- Own and manage the ATC program globally, serving as the primary point of contact for ATC partners. \n\n- Develop and execute ATC strategy aligned with Fortinet sales priorities, partner strengths, and Fortinet Training Institute goals. \n\n- Recruit, onboard, and enable new ATC partners to expand geographic and market coverage to grow revenue. \n\n- Drive ATC performance through regular business reviews, KPI tracking, and action plans to increase training delivery, certifications, and revenue impact. \n\n- Partner closely with sales, channel, and partner teams to support pipeline, customer enablement, and partner-led training initiatives. \n\n- Ensure ATCs are aligned with Fortinet certification updates, program requirements, and quality standards. \n\n- Identify regional gaps, risks, and growth opportunities, and proactively recommend improvements to program structure and execution. \n\n- Implement automation and self-service capabilities   within the ATC program to streamline reporting, onboarding, and partner support, improving response time and operational efficiency. \n\n- Leverage AI tools   to enhance data-driven insights, predictive analytics, and personalized support for ATC partners. \n\n- Support regional and global initiatives, including reporting, planning, and participation in key partner and training events. \n\n Qualifications \n\n- 5–8+ years of experience in program management, partner management, or channel operations, preferably in cybersecurity, technology, or education/training environments. \n\n- Experience working with partner ecosystems, training providers, or certification programs. \n\n- Strong understanding of sales and channel programs. \n\n- Proven ability to manage multiple stakeholders and initiatives across regions and time zones. \n\n- Strong analytical, organizational, and communication skills, with executive-level presentation capability. \n\n- Experience driving automation and leveraging AI tools to improve program efficiency. \n\n- Ability to work independently in a fast-paced organization. \n\n Preferred Experience \n\n- Experience supporting global or regional training, certification, or workforce development programs. \n\n- Familiarity with learning management systems (LMS), partner portals, and performance reporting tools. \n\n- Experience collaborating with government, education, or public-sector partners is a plus. \n\n The Canada base salary range for this full-time position is expected to be between $92,000 - $112,000 annually.  Wage ranges are based on various factors including the labour market, job type, and job level.  Exact salary offers will be determined by factors such as the candidate’s subject knowledge, skill level, qualifications, and experience.  \n Fortinet strives to provide you and your family with a comprehensive benefits package. Benefits eligibility starts on your first day of hire and comprises of 100% company paid medical, dental, and vision coverage, including a Health Spending Account and a Personal Spending Account that gives you flexibility to spend where you need it the most. Our Employee & Family Assistance Plan (EFAP) offers you and your family access to various services like counseling, legal advice, mental health resources etc. We also provide critical illness, disability, and life insurance, as well as a Group Registered Retirement Savings Plan (RRSP) with a company match to help you save faster for retirement. We offer competitive Paid Time Off and flexible leave policies, including paid health days, to help you take care of yourself and your family members.\n All roles are eligible to participate in the Fortinet equity program.  Bonus eligibility is reviewed at time of hire and annually at the Company’s discretion.",
+   "detail_api": "https://edel.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2222724%22,siteNumber=CX_2001",
+   "sightings": [
+    {
+     "key": "oracle_hcm:edel/CX_2001:22724",
+     "source": "oracle_hcm",
+     "url": "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/22724",
+     "first_seen": "2026-10-16T11:03:52+00:00",
+     "last_seen": "2026-10-16T11:03:52+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:03:52+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:03:52+00:00"
+  },
+  "oracle_hcm:edel/CX_2001:22095": {
+   "group": "fortinet|cloud solution architect|gta",
+   "company": "Fortinet",
+   "title": "Cloud Solution Architect",
+   "location": "Toronto, ON, Canada",
+   "region": "GTA",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": "Remote",
+   "department": "",
+   "posted_at": "2026-04-07",
+   "pay": {
+    "ranges": [
+     {
+      "min": 182300,
+      "max": 222900,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "ote",
+      "estimated": true,
+      "quote": "On-target earnings (OTE) for this full-time position is expected to be between $182,300 - $222,900 annually."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "All roles are eligible to participate in the Fortinet equity program."
+    }
+   },
+   "pay_field": null,
+   "pay_checked": true,
+   "role_tier": "Stretch",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Stretch via /\\bsolutions? (engineer|architect|consultant)\\b/",
+   "description": "Join Fortinet, a cybersecurity pioneer with over two decades of excellence, as we continue to shape the future of cybersecurity and redefine the intersection of networking and security. At Fortinet, our mission is to safeguard people, devices, and data everywhere. \n Fortinet is seeking an experienced Cloud Solution Architect.  This individual will be part of the Cloud Security Consulting team and become the center of excellence for specific Cloud Security technology areas and associated Fortinet products/ solutions. They will need to be comfortable in front of customers of all levels and be able to deliver paid consulting services and proof of concepts. Ideal candidates will have excellent knowledge of public and/or private cloud technologies, software development experience, network/application   security   expertise,   Generative   AI   /   Agentic   AI   experience,   and   support   four main areas of responsibility: \n\n- Cloud   and   AI   Security   Solution Expert \n\n- Assist   customers   with   creating   multi-cloud   and   hybrid   cloud   security   blueprints   with   a focus   on   vendor-neutral   and   cloud-agnostic   design   and   implementation   best   practices \n\n- Work   with   other   team   members   to   develop   Agentic   AI   applications   to   address customers’ challenges in the cloud and cybersecurity domains effectively \n\n- Become   an   expert   in   Fortinet   products   within   cloud   solutions \n\n- Maintain   knowledge   of   competitive   products   and   services \n\n- Respond   to   industry   analyst   inquiries   and   conduct   demos \n\n- Trusted   Advisor \n\n- Attend   customer   meetings   and   provide   expert   opinion   on   cloud   security   design/ architecture \n\n- Provide   custom   architecture   and   automation   code,   as   per   the   requirements   set   by   a given customer for their cloud deployments \n\n- Publish   reference   architectures   for   specific   use   cases \n\n- Continuous   Learner \n\n- Dedicate   a   percentage   of   their   time   to   ongoing   training/education   for   new   technologies \n\n- Help   drive   technical   webinars   and   hands-on   demo’s \n\n- Help   the   NSE   institute   with   advanced   course   materials \n\n- Help   training   teams   at   SE   Training   events \n\n- Evangelist \n\n- Publish   public   information,   such   as   whitepapers   and   blogs   around   salient   technology topics \n\n- Draft   architecture   papers   for   in-depth   analysis   and   reasoning   for   technology   adoption \n\n- Continuous   active   networking   within   the   industry   to   build   relationships   and   awareness \n\n Required   Skills: \n\n- The   ideal   candidate   will   have   10+   years   in   roles   such   as   SE,   Consulting   SE,   Software Architect, or Solution Architect in the Cloud, Networking, Infrastructure, and/or Cybersecurity industries \n\n- In   depth   knowledge   and   hands   on   experience   with   one   or   more   of   the   following   public/ private cloud platforms: AWS, Azure, GCP, NSX \n\n- Proficiency in modern software architecture using CI/CD, DevOps tools (Ansible / CloudFormation   /   Azure   ARM),   Infrastructure   as   Code   (IaC),   Scalability,   and   API-first strategy \n\n- Prior   experience   in   building   Agentic   AI   applications   is   highly   desired \n\n- Working   knowledge   of   Python,   Java   and/or   other   programming   languages \n\n- Cloud   certifications   such   as   AWS   Solution   Architect   and   GCP   Cloud   Architect   are   desired \n\n- Prior   experience   in   designing   and   building   applications   using   Container   and   serverless technologies is preferred \n\n- Excellent   presentation   and   demo   skills \n\n- Superior   documentation   and   technical   writing   capabilities \n\n- Five   or   more   years   of   experience   with   cloud   solutions,   virtual   platforms,   and   software development \n\n- Proficiency   in   English   languages   is required \n\n- Comfortable   in   public   speaking \n\n Education: \n\n- Bachelor's   Degree   or   equivalent   experience.   Graduate   Degree   favorable \n\n About Our Team: \n Join our team, known for its collaborative ethos, working seamlessly with global customers, internal engineering teams and product development groups. Our team culture emphasizes continuous learning, innovation, and a strong commitment to customer satisfaction. We embrace Fortinet’s core values of openness, teamwork and innovation, fostering an environment where team members support each other, share knowledge, and leverage AI to solve complex technical challenges. Our inclusive and dynamic team thrives on collaboration and is driven by the shared goal of maintaining Fortinet’s high standards of excellence in cybersecurity solutions. \n Why Join Us: \n We encourage candidates from all backgrounds and identities to apply. We offer a supportive work environment and a competitive Total Rewards package to support you with your overall health and financial well-being. Embark on a challenging, enjoyable, and rewarding career journey with Fortinet. Join us in bringing solutions that make a meaningful and lasting impact to our 660,000+ customers around the globe. \n Fortinet strives to provide you and your family with a comprehensive benefits package. Benefits eligibility starts on your first day of hire and comprises of 100% company paid medical, dental, and vision coverage, including a Health Spending Account and a Personal Spending Account that gives you flexibility to spend where you need it the most. Our Employee & Family Assistance Plan (EFAP) offers you and your family access to various services like counseling, legal advice, mental health resources etc. We also provide critical illness, disability, and life insurance, as well as a Group Registered Retirement Savings Plan (RRSP) with a company match to help you save faster for retirement. We offer competitive Paid Time Off and flexible leave policies, including paid health days, to help you take care of yourself and your family members. \n\n Must be authorized to work in Canada without sponsorship \n On-target earnings (OTE) for this full-time position is expected to be between $182,300 - $222,900 annually.  Wage ranges are based on various factors including the labour market, job type, and job level.   Exact salary offers will be determined by factors such as the candidate’s subject knowledge, skill level, qualifications, and experience.   \n\n This job posting represents an existing vacancy. \n All roles are eligible to participate in the Fortinet equity program.   Bonus eligibility is reviewed at time of hire and annually at the Company’s discretion.",
+   "detail_api": "https://edel.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2222095%22,siteNumber=CX_2001",
+   "sightings": [
+    {
+     "key": "oracle_hcm:edel/CX_2001:22095",
+     "source": "oracle_hcm",
+     "url": "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/22095",
+     "first_seen": "2026-10-16T11:03:52+00:00",
+     "last_seen": "2026-10-16T11:03:52+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:03:52+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:03:52+00:00"
+  },
+  "eightfold:ericsson.com:563121777187978": {
+   "group": "ericsson|solutions architect|gta",
+   "company": "Ericsson",
+   "title": "Solutions Architect",
+   "location": "Toronto,Ontario,Canada",
+   "region": "GTA",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": "hybrid",
+   "department": "82 Service Delivery",
+   "posted_at": "1790625530",
+   "pay": {
+    "ranges": [
+     {
+      "min": 99500,
+      "max": 130725,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Ontario, Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "• Ontario: $99,500-130,725 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "pay_field": null,
+   "pay_checked": true,
+   "role_tier": "Stretch",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Stretch via /\\bsolutions? (engineer|architect|consultant)\\b/",
+   "description": "Join our Team\n\n At this time, Ericsson Canada Inc. does not provide immigration assistance/sponsorship now or in the future for this position. \n\n About this opportunity: The Data Analytics organization delivers innovative analytics, observability, and AI-powered solutions for telecom operators across the Americas. This is a highly specialized position at the intersection of telecom network analytics, monitoring and probing ecosystems, and AI-driven customer engagements. Based in Mississauga, Canada, you will serve as a trusted technical advisor to customers, leading the design and positioning of advanced analytics solutions that address network visibility, service assurance, and operational intelligence challenges. \n\n What you will do: \n- Act as a subject matter expert in telecom call flows and signaling, applying in-depth knowledge of 4G, 5G, and IMS network interactions to design analytics solutions \n\n- Transform probe data and network telemetry into actionable analytics use cases, including service assurance, customer experience analytics, and network performance insights \n\n- Design end-to-end data architectures spanning ingestion, parsing, enrichment, correlation, streaming/batch processing, and analytics layers \n\n- Advance AI-enabled solutions and customer engagements by incorporating machine learning and advanced analytics to enhance network observability and automation \n\n- Provide hands-on guidance to engineering and delivery teams to support the successful implementation and operationalization of analytics solutions \n\n- Identify solution risks, define mitigation strategies, and continuously develop reusable analytics frameworks and architecture patterns \n\n The skills you bring: \n- Education: At least a Bachelor’s degree in electrical engineering, computer science or related field\n\n- Extensive hands-on experience with telecom monitoring ecosystems, including probes and network function integrations \n\n- Strong working knowledge of end-to-end call flows across 4G, 5G, and IMS networks, including associated signaling protocols and data formats \n\n- Demonstrated ability to translate network events and telemetry into meaningful analytics insights and operational use cases \n\n- Proven experience designing and delivering end-to-end analytics and data pipeline architectures for real-time and operational environments \n\n- Hands-on experience with data ingestion and processing pipelines, streaming and batch processing architectures, and observability platforms \n\n- Practical experience with AI/ML and Generative AI applications, including deploying and operationalizing models within telecom environments \n\n- Solid understanding of cloud-native architectures, including containers, microservices, and distributed systems \n\n- Experience with major public cloud platforms such as Azure, AWS, and GCP \n\n- Familiarity with big data and analytics technologies, including Hadoop, Databricks, Elasticsearch, and Vertica \n\n- Proficiency in Python or other scripting languages for data processing and automation \n\n- Working knowledge of DevOps, CI/CD pipelines, and Infrastructure as Code practices \n\n Why join Ericsson? \n At Ericsson, you´ll have an outstanding opportunity. The chance to use your skills and imagination to push the boundaries of what´s possible. To build solutions never seen before to some of the world’s toughest problems. You´ll be challenged, but you won’t be alone. You´ll be joining a team of diverse innovators, all driven to go beyond the status quo to craft what comes next.\n\n What happens once you apply? \n Click Here  to find all you need to know about what our typical hiring process looks like.\n\n Ericsson uses a merit-based hiring approach that values people with different experiences, perspectives and skillsets. We truly believe this approach drives innovation, which is essential for our future growth. We encourage people from all backgrounds to apply and realize their full potential as part of our Ericsson team.  Ericsson is proud to be an Equal Opportunity employer,  learn more. \n\n If you need assistance or to request an accommodation due to a disability, please contact Ericsson at hr.direct.americas@ericsson.com. \n\n DISCLAIMER: The above statements are intended to describe the general nature and level of work being performed by employees in this position. They are not an exhaustive list of all responsibilities, duties and skills required for this position, and you may be required to perform additional job tasks as assigned.\n\n Primary country and city: Canada (CA) || Toronto (Country/ City)\n\n Job details: Solution Architect\n\n Compensation and Benefits at Ericsson \nAt Ericsson, we know that our people are the key to our success. We offer a competitive package to help with your individual needs and goals.\n\n Your Pay \nThe salary offered is dependent on various factors including, but not limited to, location, and the candidate’s combination of job-related knowledge, qualifications, skills, education, training, and experience.\n\n The salary range for this position is\n\n • Ontario: $99,500-130,725 CAD\n\n Short-Term Variable Compensation Plan :  Your pay also includes the opportunity for an annual bonus. Actual bonus payouts are based on performance of the business against the unit’s objectives, individual performance, and the individual bonus target. Certain eligibility and pro-ration rules apply. \n\n Your Health \nEricsson offers excellent health benefits including the choice of 3 medical and dental plan options that allow an employee to select the level of coverage that suits their needs.  Core level coverage is paid for fully by Ericsson.\n\n Your Financial Security \nWe invest in both your short and long-term financial wellbeing. Ericsson’s Group Retirement & Savings Program offers an automatic 2% company contribution into the Pension Plan. Ericsson also offers a 50% match of employee’s contribution into the Registered Retirement Savings Plan, up to 8% of the employee’s contribution (maximum of 4% match). This leads to a total company contribution potential of 6%. Employees will also receive basic life insurance and basic accidental death and dismemberment coverage at two-times annual base pay at no cost, as well as short-term disability coverage. Employees also have the option to participate in Ericsson’s Stock Purchase Plan.\n\n Your Time \nYour work-life balance is important to us. New employees are provided a minimum of 18 days of accrued vacation, plus at least 3personal days, minimum 10 holidays, 1 volunteer day, and sick days. Please note paid time off is pro-rated based on the employee’s start date. Furthermore, Ericsson provides up to 10 weeks of paid maternity leave and 6 weeks of parental or adoption leave at 100% of pay.\n\n Additional Benefits \nEricsson offers many other company-paid benefits such as financial wellness programs, educational assistance, matching gifts, wellness account, and recognition programs.",
+   "detail_api": "https://jobs.ericsson.com/api/pcsx/position_details?position_id=563121777187978&domain=ericsson.com",
+   "sightings": [
+    {
+     "key": "eightfold:ericsson.com:563121777187978",
+     "source": "eightfold",
+     "url": "https://jobs.ericsson.com/careers/job/563121777187978",
+     "first_seen": "2026-10-16T11:04:03+00:00",
+     "last_seen": "2026-10-16T11:04:03+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:04:03+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:04:03+00:00"
+  },
+  "page:certn:1f3d6707e999": {
+   "group": "certn|senior product manager|remote-canada",
+   "company": "Certn",
+   "title": "Senior Product Manager",
+   "location": "Remote, Canada",
+   "region": "Remote-Canada",
+   "remote": true,
+   "cec_credit": true,
+   "workplace": null,
+   "department": "",
+   "posted_at": null,
+   "pay": null,
+   "pay_field": null,
+   "pay_checked": false,
+   "role_tier": "Core",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Core via /\\bproduct manager\\b/",
+   "description": "",
+   "detail_api": null,
+   "sightings": [
+    {
+     "key": "page:certn:1f3d6707e999",
+     "source": "page",
+     "url": "https://jobs.ashbyhq.com/HighlightTA/bf0c2eed-cbfb-48b1-b77d-78e21be1e8b3",
+     "first_seen": "2026-10-16T11:04:26+00:00",
+     "last_seen": "2026-10-16T11:04:26+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:04:26+00:00"
+  },
+  "page:evenup:2688371897f1": {
+   "group": "evenup|director of product design|gta",
+   "company": "EvenUp",
+   "title": "Director of Product Design",
+   "location": "San Francisco (hybrid); Toronto (hybrid), ON, Canada",
+   "region": "GTA",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": null,
+   "department": "",
+   "posted_at": null,
+   "pay": null,
+   "pay_field": null,
+   "pay_checked": false,
+   "role_tier": "Core",
+   "role_excluded": false,
+   "people_mgmt_hint": true,
+   "role_reason": "Core via /\\bdirector of product\\b/",
+   "description": "",
+   "detail_api": null,
+   "sightings": [
+    {
+     "key": "page:evenup:2688371897f1",
+     "source": "page",
+     "url": "https://jobs.ashbyhq.com/evenup/de8b71b1-c665-4852-863f-899ee4943701",
+     "first_seen": "2026-10-16T11:04:26+00:00",
+     "last_seen": "2026-10-16T11:04:26+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:04:26+00:00"
+  },
+  "page:evenup:f77af479b64b": {
+   "group": "evenup|product manager ai entities|gta",
+   "company": "EvenUp",
+   "title": "Product Manager, AI Entities",
+   "location": "San Francisco (hybrid); Toronto (hybrid), ON, Canada",
+   "region": "GTA",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": null,
+   "department": "",
+   "posted_at": null,
+   "pay": null,
+   "pay_field": null,
+   "pay_checked": false,
+   "role_tier": "Core",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Core via /\\bproduct manager\\b/",
+   "description": "",
+   "detail_api": null,
+   "sightings": [
+    {
+     "key": "page:evenup:f77af479b64b",
+     "source": "page",
+     "url": "https://jobs.ashbyhq.com/evenup/731e4f4a-799e-412f-a800-9c52f4a09e43",
+     "first_seen": "2026-10-16T11:04:26+00:00",
+     "last_seen": "2026-10-16T11:04:26+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:04:26+00:00"
+  },
+  "page:evenup:415d5134a964": {
+   "group": "evenup|senior staff principal product manager ai orchestration agentic workflows|gta",
+   "company": "EvenUp",
+   "title": "Senior/Staff/Principal Product Manager, AI Orchestration & Agentic Workflows",
+   "location": "San Francisco (hybrid); Toronto (hybrid), ON, Canada",
+   "region": "GTA",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": null,
+   "department": "",
+   "posted_at": null,
+   "pay": null,
+   "pay_field": null,
+   "pay_checked": false,
+   "role_tier": "Core",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Core via /\\bproduct manager\\b/",
+   "description": "",
+   "detail_api": null,
+   "sightings": [
+    {
+     "key": "page:evenup:415d5134a964",
+     "source": "page",
+     "url": "https://jobs.ashbyhq.com/evenup/619241eb-7888-40e2-8ba5-ac6edc60f6bf",
+     "first_seen": "2026-10-16T11:04:26+00:00",
+     "last_seen": "2026-10-16T11:04:26+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:04:26+00:00"
+  },
+  "page:evenup:1e7600d8bee5": {
+   "group": "evenup|senior staff principal product manager data products|gta",
+   "company": "EvenUp",
+   "title": "Senior/Staff/Principal Product Manager, Data Products",
+   "location": "San Francisco (hybrid); Toronto (hybrid), ON, Canada",
+   "region": "GTA",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": null,
+   "department": "",
+   "posted_at": null,
+   "pay": null,
+   "pay_field": null,
+   "pay_checked": false,
+   "role_tier": "Core",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Core via /\\bproduct manager\\b/",
+   "description": "",
+   "detail_api": null,
+   "sightings": [
+    {
+     "key": "page:evenup:1e7600d8bee5",
+     "source": "page",
+     "url": "https://jobs.ashbyhq.com/evenup/08c63471-cd26-4bb2-b3f4-876aeee36e45",
+     "first_seen": "2026-10-16T11:04:26+00:00",
+     "last_seen": "2026-10-16T11:04:26+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:04:26+00:00"
+  },
+  "page:evenup:56b6241fbd2a": {
+   "group": "evenup|senior staff principal product manager first mile ai|gta",
+   "company": "EvenUp",
+   "title": "Senior/Staff/Principal Product Manager, First Mile AI",
+   "location": "San Francisco (hybrid); Toronto (hybrid), ON, Canada",
+   "region": "GTA",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": null,
+   "department": "",
+   "posted_at": null,
+   "pay": null,
+   "pay_field": null,
+   "pay_checked": false,
+   "role_tier": "Core",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Core via /\\bproduct manager\\b/",
+   "description": "",
+   "detail_api": null,
+   "sightings": [
+    {
+     "key": "page:evenup:56b6241fbd2a",
+     "source": "page",
+     "url": "https://jobs.ashbyhq.com/evenup/9fa7c470-f073-4203-8908-cafa9cd54894",
+     "first_seen": "2026-10-16T11:04:26+00:00",
+     "last_seen": "2026-10-16T11:04:26+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:04:26+00:00"
+  },
+  "page:evenup:438baa503bb0": {
+   "group": "evenup|senior staff principal product manager launch experience|gta",
+   "company": "EvenUp",
+   "title": "Senior/Staff/Principal Product Manager, Launch Experience",
+   "location": "San Francisco; Toronto, ON, Canada",
+   "region": "GTA",
+   "remote": false,
+   "cec_credit": true,
+   "workplace": null,
+   "department": "",
+   "posted_at": null,
+   "pay": null,
+   "pay_field": null,
+   "pay_checked": false,
+   "role_tier": "Core",
+   "role_excluded": false,
+   "people_mgmt_hint": false,
+   "role_reason": "Core via /\\bproduct manager\\b/",
+   "description": "",
+   "detail_api": null,
+   "sightings": [
+    {
+     "key": "page:evenup:438baa503bb0",
+     "source": "page",
+     "url": "https://jobs.ashbyhq.com/evenup/6716dc15-3aea-4c53-9089-a6a78d6f1eaa",
+     "first_seen": "2026-10-16T11:04:26+00:00",
+     "last_seen": "2026-10-16T11:04:26+00:00",
+     "live": true,
+     "missed_runs": 0
+    }
+   ],
+   "first_seen": "2026-10-16T11:04:26+00:00",
+   "live": true,
+   "last_seen": "2026-10-16T11:04:26+00:00"
   }
  }
 }
