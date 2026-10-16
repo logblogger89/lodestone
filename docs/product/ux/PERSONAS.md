@@ -182,6 +182,28 @@ notes are what Claude saw while playing the persona: *works*, *annoyance*, *bug*
 ## Findings log
 Newest first. Each finding names the persona, what happened, and what changed.
 
+### Round 3 (2026-10-16): Lena's design pass; 7 personas, 112 checks, all pass (app v27)
+Lena's journey audits 13 screens (Today, All to triage, the role view's three tabs, Pipeline, Add job, Reports,
+Companies, Profile, setup, the "not sure" step, an empty search) at 1440, 1024, 768, 390 and 320px, in light and dark
+mode: 130 screen states, 52 screenshots reviewed by eye. 7 of 17 checks failed at first.
+| # | What Lena saw | Fix |
+|---|---|---|
+| 1 | **13 font sizes** (9 to 28px, including a stray 12.5px) and 5 weights | One scale: 11, 12, 13, 15, 16, 18, 22, 26px; weights 400, 600, 700 |
+| 2 | **Noisy cards**: six tag styles over up to three rows (role, checks, years, a bold monospace source chip, outlined "+ equity" pills, orange flags) | One row of tags; the source is a quiet link in the company line; pay notes are plain grey text; at most one flag; "New" is a quiet accent tag |
+| 3 | Green and yellow tag text slightly under readable contrast (4.4 and 4.2 to 1); the grey "Unknown" tag 4.1 | Darker text colours; all text now passes in light and dark |
+| 4 | "$181K" with no currency | Unknown currency says so: "181K–241K (currency not stated)"; never a bare $ |
+| 5 | The next card jumped down when you answered one | The "Later: back in 7 days" note replaces the one-line summary instead of adding a line |
+| 6 | Panel headings in small capitals, some of them full sentences ("MATCH QUALITY: LEVEL 2 OF 4") | Sentence case, one heading style |
+| 7 | "Open posting" button underlined, unlike every other button | Buttons are never underlined |
+| 8 | Selected filters were a glaring white pill in dark mode | Selected filters use the accent colour in both themes |
+| 9 | The Pipeline cut its last column ("Closed") off the screen | All six stages fit on a laptop screen; phones scroll sideways |
+| 10 | "Careers ↗" broke over two lines in the Companies table | Kept on one line |
+| 11 | Spacing values off the scale (7, 9, 15, 22px) | On the scale |
+| 12 | The "FIT" caption touched the score; "Upload" bold beside regular buttons; two reassurance lines far apart | Aligned, matched, merged |
+
+**Left for later.** Role-type filters read heavy when all three are on (three solid pills); consider showing them only
+when one is off. Long titles wrap to three lines on phones; fine, but worth a look with real users.
+
 ### Round 2 (2026-10-16): P1-S7 onboarding; 6 personas, 95 checks, all pass (app v26)
 | # | Persona | What happened | Fix |
 |---|---|---|---|

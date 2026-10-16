@@ -181,6 +181,16 @@ Asked once, at the moment they're relevant, each dismissible: first "Pay too low
 - **Track:** pipeline with nudges ("Applied 10 days ago: follow up?") and closed-posting alerts.
 - **Weekly (not built yet, §8.9):** a Monday "Your week": market changes, what Lodestone learned about you, companies to consider.
 
+### 8.12 Visual system after the design pass (10-16, D-074)
+- **Type scale:** 11 (small captions), 12 (tags, meta), 13 (secondary text), 15 (body, buttons), 16 (card titles, scores),
+  18 (empty states, section titles), 22 (role title, onboarding questions), 26px (page titles); weights 400, 600, 700.
+- **Spacing** comes from one scale: 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 32px.
+- **Cards:** title; company · location · work mode · source link; one-line summary; one row of tags (role type, colour
+  checks, years); then at most one flag, "New", and plain pay notes. Answering a role swaps the summary line for what
+  you chose, so nothing moves.
+- **Headings** are sentence case. **Selected filters** use the accent colour. **Money** always names its currency.
+- Lena's audit (`tests/personas/7_lena.cjs`) enforces these on every screen, width and theme.
+
 ### 8.11 Built in P1-S7 (10-16, D-073)
 - **Setup (§8.3)** replaces the D-072 welcome card for anyone with no profile and no history: promise and privacy line
   → where (Canada; "somewhere else" is recorded as demand; cities, remote in Canada always included) → can you work there
