@@ -12,7 +12,11 @@
 
 ## 1. Overview
 
-**Lodestone** is a personal, locally hosted job-search portal. It finds roles in Canada that fit a senior PM on a path to Canadian PR, explains *why* each one fits, and tracks the pipeline from discovery to offer.
+**Vision (D-066, 10-16):** Lodestone is the job platform for people moving countries for work: *the jobs that fit you, in the country you want to move to, and the ones that will actually hire you.* Its core advantage is helping country-switchers and immigrants (who sponsors, internal-transfer routes, pay in local terms, level translation, the route to permanent status). Citizens and permanent residents are welcome too; for them the work-permit layer simply disappears.
+
+**MVP scope:** destination Canada; tech product and adjacent roles; users from any starting point and any status. Expansion to other destinations, job types and functions comes through packages (destination country: sources, government data, permit routes, pay norms, cities; role type: families and scoring rules; status rules per country), not rebuilds (D-005, D-060, D-061). The first live user is Ayush (P1).
+
+*Original framing (M1, 10-14):* a personal job-search portal that finds roles in Canada that fit a senior PM on a path to Canadian PR, explains *why* each one fits, and tracks the pipeline from discovery to offer.
 
 What makes it different from a generic job board:
 - **It understands both sides.** It reads the job description *and* the user's CV, then ranks by real fit (role, level, domain, pay, immigration pathway) with explainable sub-scores.
