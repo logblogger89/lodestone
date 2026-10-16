@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-16T11:08:16+00:00",
- "count": 631,
+ "updated_at": "2026-10-16T16:57:36+00:00",
+ "count": 623,
  "candidates": [
   {
    "id": "ashby:1password:8151254c-b7d1-4653-87b1-7afeba176898",
@@ -1735,40 +1735,6 @@
    ]
   },
   {
-   "id": "workday:bmo/External:R260027799",
-   "company": "BMO",
-   "title": "Senior Digital Product Owner",
-   "location": "Toronto, ON, CAN",
-   "region": "GTA",
-   "role_tier": "Core",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://bmo.wd3.myworkdayjobs.com/en-US/External/job/Toronto-ON-CAN/Senior-Digital-Product-Owner_R260027799"
-   ]
-  },
-  {
-   "id": "workday:bmo/External:R260027805",
-   "company": "BMO",
-   "title": "Senior Digital Product Owner, Open Banking - Business Banking",
-   "location": "Toronto, ON, CAN",
-   "region": "GTA",
-   "role_tier": "Core",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://bmo.wd3.myworkdayjobs.com/en-US/External/job/Toronto-ON-CAN/Senior-Digital-Product-Owner--Open-Banking---Business-Banking_R260027805"
-   ]
-  },
-  {
    "id": "workday:bmo/External:R260028278",
    "company": "BMO",
    "title": "Senior Manager, AI Strategy & Product Management",
@@ -2952,7 +2918,7 @@
       "canada": true,
       "kind": "base",
       "estimated": false,
-      "quote": "Job titles may span multiple career levels, and the targeted hiring base salary range for this role in Canada is [$164,000 - $205,000]."
+      "quote": "Job titles may span multiple career levels, and the targeted hiring base salary range for this role in Canada is $164,000 - $205,000."
      }
     ],
     "primary": 0,
@@ -3049,40 +3015,6 @@
    ],
    "urls": [
     "https://desjardins.wd10.myworkdayjobs.com/en-US/Desjardins/job/Montral/Responsable-de-Produits--Solutions-March-des-capitaux_R2611840-1"
-   ]
-  },
-  {
-   "id": "workday:desjardins/Desjardins:R2610060",
-   "company": "Desjardins",
-   "title": "Product Owner, Product  management",
-   "location": "Montréal",
-   "region": "Montreal",
-   "role_tier": "Core",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://desjardins.wd10.myworkdayjobs.com/en-US/Desjardins/job/Montral/Product-Manager--Plateformes-de-donnes-infonuagiques_R2610060"
-   ]
-  },
-  {
-   "id": "workday:desjardins/Desjardins:R2611670",
-   "company": "Desjardins",
-   "title": "Product Owner, Product Management",
-   "location": "Montréal",
-   "region": "Montreal",
-   "role_tier": "Core",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://desjardins.wd10.myworkdayjobs.com/en-US/Desjardins/job/Montral/XMLNAME--Responsable-de-produit-Intgrateur--Plateforme-de-gouvernance-des-donnes_R2611670-2"
    ]
   },
   {
@@ -5015,45 +4947,6 @@
    ]
   },
   {
-   "id": "greenhouse:lyft:8621699002",
-   "company": "Lyft",
-   "title": "Senior Product Manager, Hardware (Bikeshare Stations) - Lyft Urban Solutions (Micromobility)",
-   "location": "Montreal, Canada",
-   "region": "Montreal",
-   "role_tier": "Core",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 112000,
-      "max": 140000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Montreal, Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": true,
-      "quote": "The expected base pay range for this position in the Montreal area is CAD $112,000 - CAD $140,000, not inclusive of potential equity offering, bonus or benefits."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "The expected base pay range for this position in the Montreal area is CAD $112,000 - CAD $140,000, not inclusive of potential equity offering, bonus or benefits."
-    }
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://app.careerpuck.com/job-board/lyft/job/8621699002?gh_jid=8621699002"
-   ]
-  },
-  {
    "id": "greenhouse:lyft:8648144002",
    "company": "Lyft",
    "title": "Staff Product Manager, Customer Care Platform & Data",
@@ -6849,6 +6742,23 @@
    ]
   },
   {
+   "id": "phenom:OPJOPEUS:53561",
+   "company": "OpenText",
+   "title": "Principal Product Manager",
+   "location": "Waterloo, Ontario, CAN, N2L 0A1",
+   "region": "Waterloo Region",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T16:57:36+00:00",
+   "sources": [
+    "phenom"
+   ],
+   "urls": [
+    "https://careers.opentext.com/us/en/job/53561/Principal-Product-Manager"
+   ]
+  },
+  {
    "id": "phenom:OPJOPEUS:53906",
    "company": "OpenText",
    "title": "Principal Product Manager (Healthcare Solutions)",
@@ -7361,20 +7271,20 @@
    ]
   },
   {
-   "id": "phenom:RBCAA0088:R-0000174810",
+   "id": "phenom:RBCAA0088:R-0000187708",
    "company": "RBC",
-   "title": "Director, AI Strategy and Product Management",
-   "location": "TORONTO, Ontario, Canada",
+   "title": "Director EIAM Strategy &Technical Product Management (Global Security)",
+   "location": "TORONTO, Ontario, Canada; BEDFORD, Nova Scotia, Canada; VANCOUVER, British Columbia, Canada",
    "region": "GTA",
    "role_tier": "Core",
    "people_mgmt_hint": true,
    "pay": null,
-   "first_seen": "2026-10-15T02:02:41+00:00",
+   "first_seen": "2026-10-16T16:57:36+00:00",
    "sources": [
     "phenom"
    ],
    "urls": [
-    "https://jobs.rbc.com/ca/en/job/R-0000174810/Director-AI-Strategy-and-Product-Management"
+    "https://jobs.rbc.com/ca/en/job/R-0000187708/Director-EIAM-Strategy-Technical-Product-Management-Global-Security"
    ]
   },
   {
@@ -7692,39 +7602,6 @@
    ],
    "urls": [
     "https://sec.wd3.myworkdayjobs.com/en-US/Samsung_Careers/job/2050-Derry-Rd-W-Mississauga-Canada/Manager--Product-Management_R120812"
-   ]
-  },
-  {
-   "id": "workday:sec/Samsung_Careers:R119965",
-   "company": "Samsung AI Center",
-   "title": "Manager, Product Management (18 Month Contract)",
-   "location": "2050 Derry Rd W Mississauga, Canada",
-   "region": "GTA",
-   "role_tier": "Core",
-   "people_mgmt_hint": true,
-   "pay": {
-    "ranges": [
-     {
-      "min": 98000,
-      "max": 135000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": true,
-      "quote": "The salary range for this role is expected to be between $98,000 to $135,000 and reflects base salary only."
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://sec.wd3.myworkdayjobs.com/en-US/Samsung_Careers/job/2050-Derry-Rd-W-Mississauga-Canada/Manager--Product-Management--18-Month-Contract-_R119965"
    ]
   },
   {
@@ -8433,39 +8310,6 @@
    ],
    "urls": [
     "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Product-Manager_R_1515551"
-   ]
-  },
-  {
-   "id": "workday:td/TD_Bank_Careers:R_1513477",
-   "company": "TD",
-   "title": "Product Owner II - Everyday Advice Journey Delivery",
-   "location": "Toronto, Ontario",
-   "region": "GTA",
-   "role_tier": "Core",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 115600,
-      "max": 163200,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "$115,600 - $163,200 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Product-Owner-II---Everyday-Advice-Journey-Delivery_R_1513477"
    ]
   },
   {
@@ -9544,45 +9388,6 @@
    ],
    "urls": [
     "https://workday.wd5.myworkdayjobs.com/en-US/Workday/job/Canada-BC-Vancouver/Sr---Principal-Product-Manager---AI-Agent-Products_JR-0107436"
-   ]
-  },
-  {
-   "id": "workday:workday/Workday:JR-IC-000061",
-   "company": "Workday",
-   "title": "Sr Principal, Product Manager",
-   "location": "Canada, BC, Victoria",
-   "region": "Vancouver",
-   "role_tier": "Core",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 195400,
-      "max": 293000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Primary CAN Base Pay Range: $195,400 - $293,000 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "As a part of the total compensation package, this role may be eligible for the Workday Bonus Plan or a role-specific commission/bonus, as well as annual refresh stock grants."
-    }
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://workday.wd5.myworkdayjobs.com/en-US/Workday/job/Canada-BC-Victoria/Sr-Principal--Product-Manager_JR-IC-000061-1"
    ]
   },
   {
@@ -10800,45 +10605,6 @@
    ]
   },
   {
-   "id": "workday:autodesk/Ext:26WD99517",
-   "company": "Autodesk",
-   "title": "Senior Research Program Manager, Construction",
-   "location": "Toronto, ON, CAN",
-   "region": "GTA",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 111400,
-      "max": 163350,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "For Canada based roles, we expect a starting base salary between $111,400 and $163,350."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "In addition to base salaries, our compensation package may include annual cash bonuses, commissions for sales roles, stock grants, and a comprehensive benefits package."
-    }
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://autodesk.wd1.myworkdayjobs.com/en-US/Ext/job/Toronto-ON-CAN/Senior-Research-Program-Manager--Construction--Canada--EST----Remote_26WD99517"
-   ]
-  },
-  {
    "id": "workday:autodesk/Ext:26WD101205",
    "company": "Autodesk",
    "title": "Technical Program Manager , AI/ML",
@@ -11040,39 +10806,6 @@
    ],
    "urls": [
     "https://bmo.wd3.myworkdayjobs.com/en-US/External/job/Toronto-ON-CAN/Senior-Manager--Credit-Risk-Strategy-Oversight_R260028939"
-   ]
-  },
-  {
-   "id": "workday:bmo/External:R260019047",
-   "company": "BMO",
-   "title": "Senior Manager, Lending Fraud Strategy",
-   "location": "Toronto, ON, CAN",
-   "region": "GTA",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 85500,
-      "max": 185000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "$85,500.00 - $185,000.00"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://bmo.wd3.myworkdayjobs.com/en-US/External/job/Toronto-ON-CAN/Senior-Manager--Lending-Fraud-Strategy_R260019047"
    ]
   },
   {
@@ -12427,6 +12160,45 @@
    ]
   },
   {
+   "id": "greenhouse:instacart:8249753",
+   "company": "Instacart",
+   "title": "Senior Design Program Manager II",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 143000,
+      "max": 151000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "$143,000 — $151,000 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "Additionally, this role is eligible for a new hire equity grant as well as annual refresh grants."
+    }
+   },
+   "first_seen": "2026-10-16T16:57:36+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8249753"
+   ]
+  },
+  {
    "id": "workday:interac/Interac:REQ-2164",
    "company": "Interac",
    "title": "ERM Product Risk, Lead",
@@ -13760,23 +13532,6 @@
    ]
   },
   {
-   "id": "successfactors:jobs.scotiabank.com:606570017",
-   "company": "Scotiabank",
-   "title": "Manager, Program Risk, Global Sanctions & Screening",
-   "location": "Toronto, ON, Canada, M5C2W1",
-   "region": "GTA",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "successfactors"
-   ],
-   "urls": [
-    "https://jobs.scotiabank.com/job/Toronto-Manager%2C-Program-Risk%2C-Global-Sanctions-&-Screening-ON-M5C2W1/606570017/"
-   ]
-  },
-  {
    "id": "successfactors:jobs.scotiabank.com:606393417",
    "company": "Scotiabank",
    "title": "Senior Director, IAM Product, Architecture, and Governance",
@@ -13808,6 +13563,23 @@
    ],
    "urls": [
     "https://jobs.scotiabank.com/job/Toronto-Senior-Manager%2C-Fraud-&-Risk-Strategy-ON-M5H1B6/607019017/"
+   ]
+  },
+  {
+   "id": "successfactors:jobs.scotiabank.com:606049017",
+   "company": "Scotiabank",
+   "title": "Senior Manager, Fraud Analytics & Strategy",
+   "location": "Toronto, NU, Canada, M5H1B6",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T16:57:36+00:00",
+   "sources": [
+    "successfactors"
+   ],
+   "urls": [
+    "https://jobs.scotiabank.com/job/Toronto-Senior-Manager%2C-Fraud-Analytics-&-Strategy-NU-M5H1B6/606049017/"
    ]
   },
   {
@@ -14004,39 +13776,6 @@
    ],
    "urls": [
     "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Senior-Analyst--Volcker-Program-Governance_R_1505681"
-   ]
-  },
-  {
-   "id": "workday:td/TD_Bank_Careers:R_1513473",
-   "company": "TD",
-   "title": "Senior Manager, Program Delivery, Market Risk",
-   "location": "Toronto, Ontario",
-   "region": "GTA",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 115600,
-      "max": 163200,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "$115,600 - $163,200 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Senior-Manager--Program-Delivery--Market-Risk_R_1513473"
    ]
   },
   {
@@ -16262,6 +16001,23 @@
    ],
    "urls": [
     "https://databricks.com/company/careers/open-positions/job?gh_jid=8876599002"
+   ]
+  },
+  {
+   "id": "lever:eqbank:a20b80c5-53c4-4c34-b8de-c6d9208994a6",
+   "company": "EQ Bank",
+   "title": "AI Solutions Engineer, Technology Workplace Services",
+   "location": "Toronto",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T16:57:36+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/eqbank/a20b80c5-53c4-4c34-b8de-c6d9208994a6"
    ]
   },
   {

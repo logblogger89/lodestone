@@ -73,7 +73,7 @@ def build() -> dict[str, dict[str, dict]]:
             team = jdsections.team_about(desc)
             docs["desc"][desc_bucket(rec["id"])]["jobs"][rec["id"]] = {
                 "text": app["text"], "truncated": app["truncated"], "has_legal": bool(app["legal"]),
-                "team": {"heading": team[0], "text": team[1]} if team else None, "read_at": j.get("last_seen")}
+                "team": {"heading": team[0], "text": team[1]} if team else None, "read_at": j.get("first_seen")}   # first read; last_seen would change every run and re-push all 32 documents
             abouts.setdefault(j["company"], []).append(jdsections.company_about(desc, j["company"]))
     for b, items in buckets.items():
         docs["jobs"][b] = {"jobs": items}

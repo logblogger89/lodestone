@@ -213,6 +213,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-16 | 1pm update: 5 new roles scored, 13 closed (incl. Workday Sr Principal PM, shortlisted); 2 Workable feeds rate-limited; job-description documents now keep the first-read date so unchanged ones aren't re-uploaded every run | Claude |
 | 2026-10-16 | Morning run: 94 new roles (38 approved companies added; 10 needed source research: 5 feeds, 5 careers pages), 8 closed, 266 scored; quality 9/13 Interested in top 25, 61%; reading 100% on 26; pay reader reads 'minimum … maximum salary' (Jobber); 3 companies suggested; CGI blocked. A batch-file overwrite mid-run matched 70 scores to the wrong roles: caught, re-scored, app re-pushed; prepare now refuses to overwrite pending batches and ingest flags mismatches | Claude |
 | 2026-10-16 | D-074: Lena design pass; app v27; 7 personas, 112 checks pass | Claude |
 | 2026-10-16 | D-073: P1-S7 built and published (app v26): onboarding, experience three ways, meter, one-tap questions; persona Sam added; 95 persona checks pass | Claude |

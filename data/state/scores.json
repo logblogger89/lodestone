@@ -18555,37 +18555,37 @@
   ]
  },
  "d99a23cd6540": {
-  "fingerprint": "82b5ece73a1a8255",
+  "fingerprint": "631bdb4a8b7b92b2",
   "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-16T11:04:59+00:00",
+  "scored_at": "2026-10-16T17:02:22+00:00",
   "subs": {
    "role": 85,
-   "level": 85,
-   "domain": 85,
+   "level": 90,
+   "domain": 90,
    "pathway": 45,
    "pay": 80,
-   "skills": 70
+   "skills": 75
   },
   "reasons": {
-   "role": "PM owning enterprise AI deployments end to end",
-   "level": "Senior PM, 8+ yrs asked",
-   "domain": "Enterprise AI deployments",
-   "pathway": "No work permit info in the posting",
-   "pay": "Top CA$205K is in the good band",
-   "skills": "Enterprise AI and exec work fit; heavy customer deployment focus"
+   "role": "Product owner for enterprise AI deployments; partly customer-facing",
+   "level": "Senior PM asking 8+ years, shapes a new motion",
+   "domain": "Enterprise AI deployments match your AI and agents work",
+   "pathway": "Posting says nothing about work permits",
+   "pay": "Top CA$205K base is in the good band",
+   "skills": "B2B PM and AI product judgment match; forward-deployed style is new"
   },
-  "summary": "Own enterprise AI customer deployments at Coursera from discovery to value realization.",
-  "level_guess": "Senior PM (≈ L5)",
+  "summary": "Own Coursera's enterprise AI customer deployments from discovery and scoping to adoption and value.",
+  "level_guess": "Senior PM (≈ L5–L6)",
   "people_mgmt": false,
   "work_mode": "unclear",
   "must_haves": [
-   "8+ yrs B2B PM or solutions",
-   "Enterprise deployments",
-   "Technical architecture fluency"
+   "8+ years B2B product management",
+   "Enterprise customer work",
+   "AI product judgment"
   ],
   "flags": [
-   "Customer-facing, forward-deployed role"
+   "Customer-facing deployment role"
   ]
  },
  "9cffba9ef6a4": {
@@ -21400,5 +21400,177 @@
    "AI-first PM practice"
   ],
   "flags": []
+ },
+ "29de594977b1": {
+  "fingerprint": "db7481212b81adb8",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T17:02:22+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Solutions engineering with hands-on build work, not product ownership",
+   "level": "Level unclear from the posting",
+   "domain": "Fintech bank and AI automation are near your domains",
+   "pathway": "Posting says nothing about work permits",
+   "pay": "No pay range posted",
+   "skills": "Low-code and scripting build work is unclear for you"
+  },
+  "summary": "Design and build AI and automation for EQ Bank's internal workplace services.",
+  "level_guess": "Unclear",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "AI and automation platforms",
+   "Business analysis",
+   "Scripting or low-code"
+  ],
+  "flags": [
+   "Includes IT operations support"
+  ]
+ },
+ "f976e21e3217": {
+  "fingerprint": "7422564eba8a6641",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T17:02:22+00:00",
+  "subs": {
+   "role": 50,
+   "level": 75,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Program management of design operations, little product ownership",
+   "level": "6+ years asked, roughly L5",
+   "domain": "Design operations at a commerce company; general fit",
+   "pathway": "Posting says nothing about work permits",
+   "pay": "Top CA$151K base is below your ok band",
+   "skills": "Asks for design-ops and design-systems background"
+  },
+  "summary": "Run programs, tooling and AI-enabled workflows for Instacart's design organization.",
+  "level_guess": "Senior Program Manager (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "6+ years program management in design orgs",
+   "Design systems fluency",
+   "Vendor management"
+  ],
+  "flags": [
+   "Remote only in ON, AB, BC or NS",
+   "Design operations focus"
+  ]
+ },
+ "1f15a9016de8": {
+  "fingerprint": "f9cadfbe407af78c",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T17:02:22+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core PM owning DAST security testing products",
+   "level": "Mid-career role asking 4-8 years despite the Principal title",
+   "domain": "Application security is next to your trust and integrity work",
+   "pathway": "Posting says nothing about work permits",
+   "pay": "No pay range posted",
+   "skills": "AI knowledge matches; AppSec background preferred"
+  },
+  "summary": "Own OpenText Fortify's dynamic application security testing products, roadmap through adoption.",
+  "level_guess": "PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "4-8 years product management",
+   "Practical AI knowledge",
+   "AppSec or cybersecurity background"
+  ],
+  "flags": [
+   "On-site in Waterloo",
+   "AppSec experience preferred"
+  ]
+ },
+ "74b0f0d938cd": {
+  "fingerprint": "bcd5fd343a5ef024",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T17:02:22+00:00",
+  "subs": {
+   "role": 75,
+   "level": 75,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Technical product strategy for identity and access; hands-on technologist role",
+   "level": "Director level asking 10+ years in IAM",
+   "domain": "Identity and access governance is next to your risk and governance work",
+   "pathway": "Posting says nothing about work permits",
+   "pay": "No pay range posted",
+   "skills": "Needs deep hands-on IAM engineering experience"
+  },
+  "summary": "Set RBC's enterprise identity and access management platform strategy and roadmap, hands-on with engineering.",
+  "level_guess": "Director (≈ L6–L7)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ years IAM experience",
+   "Hands-on identity systems engineering",
+   "Vendor evaluation"
+  ],
+  "flags": [
+   "Deep IAM engineering required"
+  ]
+ },
+ "f21f998e3ab9": {
+  "fingerprint": "c964a90b7cd8677d",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T17:02:22+00:00",
+  "subs": {
+   "role": 50,
+   "level": 75,
+   "domain": 95,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Fraud risk strategy, not product ownership",
+   "level": "5+ years asked, senior manager scope",
+   "domain": "Application fraud and synthetic identity match your fraud work",
+   "pathway": "Posting says nothing about work permits",
+   "pay": "No pay range posted",
+   "skills": "Fraud analytics fit; credit-risk and Latin America focus is new"
+  },
+  "summary": "Lead Scotiabank's digital application fraud strategy for its International Banking countries.",
+  "level_guess": "Senior Manager (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ years fraud or credit risk analytics",
+   "Fraud controls and scoring",
+   "Stakeholder management across countries"
+  ],
+  "flags": [
+   "Covers Latin America and the Caribbean"
+  ]
  }
 }
