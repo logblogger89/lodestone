@@ -33,414 +33,434 @@
  },
  "5014f6a1daef": {
   "fingerprint": "2422dd09dfabb1c1",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 50,
-   "level": 70,
-   "domain": 45,
-   "pathway": 65,
+   "role": 45,
+   "level": 75,
+   "domain": 40,
+   "pathway": 45,
    "pay": 60,
-   "skills": 50
+   "skills": 30
   },
   "reasons": {
-   "role": "Research program mgmt, little product ownership",
-   "level": "Senior; asks 8+ yrs, portfolio scope",
-   "domain": "Construction/AI research; niche",
-   "pathway": "Large multinational; inferred",
+   "role": "Research program management, little product ownership",
+   "level": "8+ yrs; senior IC program scope",
+   "domain": "Construction research with AI agents; specialist domain",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$163K is in the ok band",
-   "skills": "Needs construction/research ops background"
+   "skills": "Needs construction workflow knowledge (BIM/VDC)"
   },
-  "summary": "Lead a portfolio of construction research programs at Autodesk Research.",
+  "summary": "Lead a portfolio of Autodesk construction research programs exploring AI and agentic workflows.",
   "level_guess": "Senior Program Manager (≈ L5)",
   "people_mgmt": false,
   "work_mode": "unclear",
   "must_haves": [
-   "8+ yrs program mgmt",
-   "Construction domain",
-   "Research ops"
+   "8+ yrs program management",
+   "Construction workflow knowledge",
+   "Multi-workstream programs"
   ],
   "flags": [
-   "Program role, not PM"
+   "Construction domain required"
   ]
  },
  "ac92a634d9dc": {
   "fingerprint": "e312f5336a5d6b1b",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 95,
-   "level": 90,
-   "domain": 70,
-   "pathway": 65,
+   "level": 95,
+   "domain": 80,
+   "pathway": 45,
    "pay": 80,
    "skills": 75
   },
   "reasons": {
-   "role": "Core PM: product direction for the platform",
-   "level": "Principal, 8+ yrs, platform-wide scope",
-   "domain": "Developer/cloud platform and AI",
-   "pathway": "Large multinational; inferred",
-   "pay": "Top CA$207.9K is in the good band",
-   "skills": "Platform and AI-native PM matches your work"
+   "role": "Core PM redefining the platform through working AI proofs",
+   "level": "8+ yrs; principal scope across systems",
+   "domain": "AI-native platform and agentic workflows; adjacent to your agent work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$208K is in the good band",
+   "skills": "AI prototyping fits; very hands-on building asked"
   },
-  "summary": "Principal PM redefining how Autodesk's platform is accessed and built on, using AI prototypes.",
+  "summary": "Find and prove a better way to use Autodesk's platform by building AI-assisted prototypes in a small squad.",
   "level_guess": "Principal PM (≈ L6)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
    "8+ yrs product direction",
-   "Technical platform depth",
-   "AI prototyping"
+   "Hands-on AI prototyping",
+   "Cross-system product judgment"
   ],
-  "flags": []
+  "flags": [
+   "Very hands-on builder role"
+  ]
  },
  "3d9f287d70c7": {
   "fingerprint": "29236e4f330838fa",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 95,
-   "level": 75,
-   "domain": 85,
-   "pathway": 65,
+   "level": 60,
+   "domain": 90,
+   "pathway": 45,
    "pay": 60,
-   "skills": 75
+   "skills": 55
   },
   "reasons": {
-   "role": "Core PM for a data platform",
-   "level": "Senior PM; 4+ yrs asked, narrower scope",
-   "domain": "Data and AI platform matches your work",
-   "pathway": "Large multinational; inferred",
-   "pay": "Top CA$179.3K is in the ok band",
-   "skills": "Platform PM background fits; infra depth unclear"
+   "role": "Core PM owning data platform storage and compute",
+   "level": "4+ yrs PM asked; below your target",
+   "domain": "Data platform with access controls and compliance, a direct match",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$179K is in the ok band",
+   "skills": "Data platform fit; deep infra (Spark, Iceberg, Kubernetes) a gap"
   },
-  "summary": "Own the roadmap for Autodesk's analytics data platform infrastructure.",
-  "level_guess": "Senior PM (≈ L5)",
+  "summary": "Own the vision and roadmap for storage, compute and self-serve access on Autodesk's analytics data platform.",
+  "level_guess": "Senior PM (≈ L4-L5)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "4+ yrs PM",
-   "Infra/platform products"
+   "4+ yrs infra/platform PM",
+   "Storage/compute technical depth",
+   "Platform migrations"
   ],
   "flags": []
  },
  "9a46fbeed2a0": {
   "fingerprint": "bcb07355ac0b3d8e",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 95,
-   "level": 75,
-   "domain": 70,
-   "pathway": 65,
+   "level": 85,
+   "domain": 75,
+   "pathway": 45,
    "pay": 60,
-   "skills": 70
+   "skills": 80
   },
   "reasons": {
-   "role": "Core PM owning platform capabilities",
-   "level": "Senior PM owning a broad capability set",
-   "domain": "APIs, MCP and agents; developer platform",
-   "pathway": "Large multinational; inferred",
-   "pay": "Top CA$179.3K is in the ok band",
-   "skills": "APIs/agent platform fits; BIM domain is new"
+   "role": "Core PM owning Revit platform APIs, agents and data",
+   "level": "Senior PM owning a broad platform portfolio",
+   "domain": "APIs, MCP/agents and data workflows; adjacent to your agent platform work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$179K is in the ok band",
+   "skills": "AI prototyping and platform PM fit; AEC is a plus, not required"
   },
-  "summary": "Own Revit's API, MCP/agentic, cloud and interoperability capabilities.",
+  "summary": "Own Revit Core platform capabilities: APIs, agentic workflows, extensibility and data interoperability.",
   "level_guess": "Senior PM (≈ L5)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "remote",
   "must_haves": [
-   "Platform/API PM",
-   "Agentic capabilities"
+   "PM for APIs/dev platforms/AI",
+   "Hands-on LLM/agent work",
+   "Technical credibility with engineers"
   ],
-  "flags": [
-   "French posting follows"
-  ]
+  "flags": []
  },
  "2b68805c71e1": {
   "fingerprint": "e35bad4797f8f7b3",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 95,
+   "role": 85,
    "level": 90,
-   "domain": 45,
-   "pathway": 65,
+   "domain": 35,
+   "pathway": 45,
    "pay": 50,
-   "skills": 70
+   "skills": 25
   },
   "reasons": {
-   "role": "Core PM leading a GenAI product",
-   "level": "Principal, 8+ yrs, product lead",
-   "domain": "GenAI creative tools; media domain",
-   "pathway": "Large multinational; inferred",
+   "role": "PM lead turning GenAI strategy into roadmap; part orchestration",
+   "level": "8+ yrs; principal scope",
+   "domain": "Generative AI for film and VFX; specialist domain",
+   "pathway": "No work permit info in the posting",
    "pay": "US range only; no Canadian range posted",
-   "skills": "GenAI product leadership fits; media is new"
+   "skills": "Requires Media & Entertainment and creative AI tool experience"
   },
-  "summary": "Lead Autodesk Flow Studio, a GenAI product for entertainment studios, with a Europe-based dev team.",
+  "summary": "Turn Flow Studio's GenAI product strategy into roadmap and launches for artists and studios.",
   "level_guess": "Principal PM (≈ L6)",
   "people_mgmt": false,
   "work_mode": "remote",
   "must_haves": [
-   "8+ yrs PM or program leadership",
-   "GenAI product"
+   "8+ yrs PM/program leadership",
+   "M&E/VFX experience",
+   "Creative GenAI tools"
   ],
   "flags": [
-   "East Coast Canada/US remote"
+   "M&E industry experience required",
+   "Works with a Europe-based team"
   ]
  },
  "be93c1fdcb0b": {
   "fingerprint": "08aa23eb1a030729",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 50,
-   "level": 50,
-   "domain": 70,
-   "pathway": 65,
+   "role": 55,
+   "level": 60,
+   "domain": 75,
+   "pathway": 45,
    "pay": 40,
-   "skills": 60
+   "skills": 65
   },
   "reasons": {
-   "role": "TPM driving AI programs, little product ownership",
-   "level": "TPM, 5+ yrs; mid-senior scope",
-   "domain": "Enterprise AI program",
-   "pathway": "Large multinational; inferred",
-   "pay": "Top CA$138.6K is in the low band",
-   "skills": "TPM asks fit; AI accelerator work overlaps"
+   "role": "TPM delivering AI programs; some product shaping",
+   "level": "5+ yrs, 3+ as TPM/PM; mid-senior",
+   "domain": "Generative AI programs with responsible AI; adjacent to your AI work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$139K is in the low band",
+   "skills": "AI fluency fits; distributed systems depth asked"
   },
-  "summary": "Drive Autodesk's GenAI accelerator programs from research into production.",
-  "level_guess": "Senior TPM (≈ L5)",
+  "summary": "Drive delivery of Autodesk's Generative AI Accelerator programs from research into production.",
+  "level_guess": "TPM (≈ L4-L5)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "5+ yrs complex programs",
-   "3+ yrs TPM/PM"
+   "5+ yrs cross-team delivery",
+   "3+ yrs TPM/PM",
+   "Cloud and distributed systems",
+   "AI/ML concepts"
   ],
-  "flags": [
-   "Program role, not PM"
-  ]
+  "flags": []
  },
  "755ab9be2167": {
   "fingerprint": "86468b2030e6179b",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 40,
-   "level": 80,
-   "domain": 35,
-   "pathway": 65,
+   "role": 50,
+   "level": 90,
+   "domain": 40,
+   "pathway": 45,
    "pay": 60,
-   "skills": 45
+   "skills": 65
   },
   "reasons": {
-   "role": "Go-to-market PMO transformation, not product",
-   "level": "Senior Principal; 10+ yrs, high visibility",
-   "domain": "Internal GTM ops; unrelated",
-   "pathway": "Large multinational; inferred",
-   "pay": "Top CA$178.2K is in the ok band",
-   "skills": "Consulting/PMO background asked; not yours"
+   "role": "GTM transformation program leadership; little product ownership",
+   "level": "10+ yrs; senior exec-facing scope",
+   "domain": "Go-to-market transformation; unrelated",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$178K is in the ok band",
+   "skills": "Cross-org alignment fits; GTM transformation background a gap"
   },
-  "summary": "Lead GTM transformation programs across functions from Autodesk's PMO.",
-  "level_guess": "Senior Principal PM (≈ L6)",
+  "summary": "Lead complex go-to-market transformation programs for Autodesk's GTM PMO with senior leaders.",
+  "level_guess": "Senior Principal Program Manager (≈ L6)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "10+ yrs consulting/program mgmt",
-   "Transformation leadership"
+   "10+ yrs consulting/program/transformation",
+   "Enterprise-scale programs",
+   "VP-level stakeholders"
   ],
-  "flags": [
-   "Program role, not PM"
-  ]
+  "flags": []
  },
  "1f23b9d424ee": {
   "fingerprint": "3563b443404e24cd",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 95,
-   "level": 75,
+   "level": 60,
    "domain": 85,
-   "pathway": 65,
+   "pathway": 45,
    "pay": 60,
-   "skills": 75
+   "skills": 70
   },
   "reasons": {
-   "role": "Core PM for an internal ML platform",
-   "level": "Senior PM; 3+ yrs asked, narrower scope",
-   "domain": "ML/AI platform matches enterprise AI work",
-   "pathway": "Large multinational; inferred",
-   "pay": "Top CA$179.3K is in the ok band",
-   "skills": "ML platform PM fits; hands-on ML tooling helps"
+   "role": "Core PM owning the ML platform roadmap",
+   "level": "3+ yrs PM asked; below your target",
+   "domain": "ML/AI platform for internal practitioners; adjacent to your AI platform work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$179K is in the ok band",
+   "skills": "ML launches and platform PM fit; ML infra depth may be a gap"
   },
-  "summary": "Define the roadmap for Autodesk's ML platform serving ML engineers and data scientists.",
-  "level_guess": "Senior PM (≈ L5)",
+  "summary": "Own roadmap for Autodesk's ML platform to speed up how ML engineers build, deploy and monitor models.",
+  "level_guess": "Senior PM (≈ L4-L5)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "3+ yrs ML platform PM",
-   "CS/Data degree"
+   "3+ yrs ML/platform PM",
+   "ML lifecycle knowledge",
+   "Model deployment and inference",
+   "Technical practitioner empathy"
   ],
   "flags": []
  },
  "50f0355e1585": {
   "fingerprint": "2051caf82e270c4e",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 95,
    "level": 75,
-   "domain": 45,
-   "pathway": 65,
+   "domain": 50,
+   "pathway": 45,
    "pay": 60,
-   "skills": 55
+   "skills": 25
   },
   "reasons": {
-   "role": "Core PM for a platform product",
-   "level": "Senior PM; scope appears product-level",
-   "domain": "AI platform, media domain; niche",
-   "pathway": "Large multinational; inferred",
-   "pay": "Top CA$179.3K is in the ok band",
-   "skills": "Requires 7 yrs in Media & Entertainment"
+   "role": "Core PM shaping an AI-native agentic platform",
+   "level": "Senior PM reporting to a director; 3 yrs PM recommended",
+   "domain": "Agentic AI platform, but for film and games production",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$179K is in the ok band",
+   "skills": "Requires 7 yrs Media & Entertainment experience"
   },
-  "summary": "Senior PM for Autodesk's AI-native Flow platform in Media & Entertainment.",
+  "summary": "Shape the roadmap for AI-assisted, agentic experiences on Autodesk's Flow platform for film and games studios.",
   "level_guess": "Senior PM (≈ L5)",
   "people_mgmt": false,
   "work_mode": "remote",
   "must_haves": [
-   "7 yrs Media & Entertainment",
-   "SaaS shipping record"
+   "7+ yrs Media & Entertainment",
+   "Production pipeline knowledge",
+   "Shipped AI/agentic products"
   ],
   "flags": [
-   "French posting follows"
+   "M&E industry experience required"
   ]
  },
  "197f6d1fdbc2": {
   "fingerprint": "4d86ff05a1bc6535",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 40,
-   "level": 80,
-   "domain": 35,
-   "pathway": 65,
+   "role": 50,
+   "level": 90,
+   "domain": 40,
+   "pathway": 45,
    "pay": 50,
-   "skills": 45
+   "skills": 65
   },
   "reasons": {
-   "role": "Go-to-market PMO transformation, not product",
-   "level": "Senior Principal; 10+ yrs, high visibility",
-   "domain": "Internal GTM ops; unrelated",
-   "pathway": "Large multinational; inferred",
+   "role": "GTM transformation program leadership; little product ownership",
+   "level": "10+ yrs; senior exec-facing scope",
+   "domain": "Go-to-market transformation; unrelated",
+   "pathway": "No work permit info in the posting",
    "pay": "US range only; no Canadian range posted",
-   "skills": "Consulting/PMO background asked; not yours"
+   "skills": "Cross-org alignment fits; GTM transformation background a gap"
   },
-  "summary": "Lead GTM transformation programs across functions from Autodesk's PMO.",
-  "level_guess": "Senior Principal PM (≈ L6)",
+  "summary": "Lead complex go-to-market transformation programs for Autodesk's GTM PMO with senior leaders.",
+  "level_guess": "Senior Principal Program Manager (≈ L6)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "10+ yrs consulting/program mgmt",
-   "Transformation leadership"
+   "10+ yrs consulting/program/transformation",
+   "Enterprise-scale programs",
+   "VP-level stakeholders"
   ],
-  "flags": [
-   "Program role, not PM"
-  ]
+  "flags": []
  },
  "73eec7000e23": {
   "fingerprint": "05b85d5db4dd1504",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 95,
    "level": 90,
-   "domain": 50,
-   "pathway": 65,
+   "domain": 55,
+   "pathway": 45,
    "pay": 60,
    "skills": 70
   },
   "reasons": {
-   "role": "Core PM owning an HR tech platform",
-   "level": "Principal, 8+ yrs, owns product end to end",
-   "domain": "Internal HR/people data platform",
-   "pathway": "Large multinational; inferred",
-   "pay": "Top CA$182.9K is in the ok band",
-   "skills": "Platform PM fits; HR systems domain is new"
+   "role": "Core PM owning an internal HR-tech product portfolio",
+   "level": "8+ yrs PM; principal scope",
+   "domain": "Internal HR/people tech with AI and vendor decisions; general",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$183K is in the ok band",
+   "skills": "Platform and AI fit; HR tech experience is a plus"
   },
-  "summary": "Own the experience and intelligence layer above Workday for Autodesk's HR org.",
+  "summary": "Own product strategy and roadmap for an Autodesk HR and workplace tech domain above Workday.",
   "level_guess": "Principal PM (≈ L6)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
    "8+ yrs PM",
-   "Platform ownership"
+   "Minimal-oversight ownership",
+   "Engineering partnership"
   ],
-  "flags": [
-   "French posting follows"
-  ]
+  "flags": []
  },
  "1b9140d03779": {
   "fingerprint": "2d87afe839c79615",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 45,
+   "role": 50,
    "level": 60,
    "domain": 35,
-   "pathway": 65,
+   "pathway": 45,
    "pay": 50,
-   "skills": 50
+   "skills": 65
   },
   "reasons": {
-   "role": "Program mgmt of GTM transformation, not product",
-   "level": "Senior PgM; 5+ yrs, small-to-medium programs",
-   "domain": "Internal GTM ops; unrelated",
-   "pathway": "Large multinational; inferred",
+   "role": "Go-to-market program management, little product ownership",
+   "level": "5+ yrs; small-to-medium programs",
+   "domain": "Sales and GTM operations; unrelated",
+   "pathway": "No work permit info in the posting",
    "pay": "US range only; no Canadian range posted",
-   "skills": "Program skills transfer; no product ownership"
+   "skills": "Program discipline fits; GTM ops background a gap"
   },
-  "summary": "Lead small-to-medium GTM transformation programs at Autodesk.",
-  "level_guess": "Senior Program Manager (≈ L5)",
+  "summary": "Lead small-to-medium go-to-market transformation programs for Autodesk's GTM PMO.",
+  "level_guess": "Senior Program Manager (≈ L4-L5)",
   "people_mgmt": false,
-  "work_mode": "remote",
+  "work_mode": "hybrid",
   "must_haves": [
-   "5+ yrs experience",
-   "2+ yrs cross-functional programs"
+   "5+ yrs, 2+ running programs",
+   "GTM partner experience",
+   "PMO tools"
   ],
   "flags": [
-   "Program role, not PM"
+   "Up to 25% travel",
+   "Mostly US locations"
   ]
  },
  "262e6432cca8": {
   "fingerprint": "4b1bf4b54e1de178",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 75,
-   "level": 50,
-   "domain": 65,
-   "pathway": 65,
+   "level": 55,
+   "domain": 60,
+   "pathway": 45,
    "pay": 40,
-   "skills": 60
+   "skills": 45
   },
   "reasons": {
-   "role": "Product owner for AEC data APIs and services",
-   "level": "Product Owner; seniority unclear",
-   "domain": "Data platform / information requirements",
-   "pathway": "Large multinational; inferred",
-   "pay": "Top CA$151.8K is in the low band",
-   "skills": "Data platform fits; PO scope may be narrow"
+   "role": "Product owner focused on backlog and delivery",
+   "level": "5+ yrs PO; backlog-level scope",
+   "domain": "AEC data platform with data governance angles; adjacent",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$152K is in the low band",
+   "skills": "Needs AEC/BIM knowledge and PO practice"
   },
-  "summary": "Product owner for information-requirements features on Autodesk's AEC data platform.",
-  "level_guess": "Product Owner (≈ L4-L5)",
+  "summary": "Own the backlog for Autodesk's AEC information-requirements data capabilities.",
+  "level_guess": "Product Owner (≈ L4)",
   "people_mgmt": false,
   "work_mode": "remote",
   "must_haves": [
-   "Product ownership",
-   "Data/API platform"
+   "5+ yrs PO in agile",
+   "AEC/BIM knowledge",
+   "SaaS delivery, Jira"
   ],
   "flags": [
-   "Posting in French first"
+   "AEC domain required"
   ]
  },
  "38939b274903": {
@@ -702,132 +722,138 @@
  },
  "8a2c31c0ce4f": {
   "fingerprint": "26bc558ac616474e",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 40,
-   "level": 45,
-   "domain": 40,
-   "pathway": 60,
+   "level": 50,
+   "domain": 30,
+   "pathway": 45,
    "pay": 20,
    "skills": 50
   },
   "reasons": {
-   "role": "Ecosystem and sponsorship programs, not product",
-   "level": "Program manager; mid scope",
-   "domain": "Embedded software ecosystem; niche",
-   "pathway": "Mid-size firm; no information",
+   "role": "Ecosystem and partnership program ops, little product ownership",
+   "level": "Years not stated; mid-level scope",
+   "domain": "Embedded OS developer ecosystem; unrelated",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$126K is below the low band",
-   "skills": "Partner program skills only partly match"
+   "skills": "Program skills fit; embedded systems familiarity a gap"
   },
-  "summary": "Run QNX's partner ecosystem and sponsorship programs.",
-  "level_guess": "Program Manager (≈ L4-L5)",
+  "summary": "Run the QNX Everywhere developer ecosystem program with partners, universities and startups.",
+  "level_guess": "Program Manager (≈ L4)",
   "people_mgmt": false,
-  "work_mode": "onsite",
+  "work_mode": "unclear",
   "must_haves": [
-   "Partner program mgmt",
-   "Contracts and budgets"
+   "Partnership/ecosystem programs",
+   "Program management",
+   "Embedded/OS familiarity"
   ],
   "flags": [
-   "Program role, not PM"
+   "Travel required"
   ]
  },
  "cf2d15cf1705": {
   "fingerprint": "d98f45e16c0cb91f",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 90,
    "level": 75,
    "domain": 25,
-   "pathway": 60,
+   "pathway": 45,
    "pay": 40,
-   "skills": 45
+   "skills": 30
   },
   "reasons": {
-   "role": "Core technical PM for a product line",
-   "level": "Senior technical PM",
-   "domain": "Embedded OS and robotics; niche",
-   "pathway": "No pathway information",
-   "pay": "Top CA$152.3K is in the low band",
-   "skills": "Needs embedded/real-time systems depth"
+   "role": "Core PM owning integrated embedded solutions",
+   "level": "Senior title; pay suggests one level off",
+   "domain": "Industrial automation and embedded systems; unrelated",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$152K is in the low band",
+   "skills": "Needs industrial automation/embedded PM experience and EE/CS degree"
   },
-  "summary": "Own QNX's industrial automation and robotics product strategy.",
-  "level_guess": "Senior Technical PM (≈ L5)",
+  "summary": "Own QNX integrated embedded solutions for industrial automation and robotics, from strategy to go-to-market.",
+  "level_guess": "Senior PM (≈ L5)",
   "people_mgmt": false,
-  "work_mode": "onsite",
+  "work_mode": "unclear",
   "must_haves": [
-   "Embedded software knowledge",
-   "Industrial/robotics domain"
+   "PM in industrial automation/IoT/embedded",
+   "EE or CS degree",
+   "Go-to-market leadership"
   ],
   "flags": [
-   "Deep technical domain"
+   "Embedded/hardware domain"
   ]
  },
  "acc3fecfa3e3": {
   "fingerprint": "26bc558ac616474e",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 40,
-   "level": 45,
-   "domain": 40,
-   "pathway": 60,
+   "level": 50,
+   "domain": 30,
+   "pathway": 45,
    "pay": 20,
    "skills": 50
   },
   "reasons": {
-   "role": "Ecosystem and sponsorship programs, not product",
-   "level": "Program manager; mid scope",
-   "domain": "Embedded software ecosystem; niche",
-   "pathway": "Mid-size firm; no information",
+   "role": "Ecosystem and partnership program ops, little product ownership",
+   "level": "Years not stated; mid-level scope",
+   "domain": "Embedded OS developer ecosystem; unrelated",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$126K is below the low band",
-   "skills": "Partner program skills only partly match"
+   "skills": "Program skills fit; embedded systems familiarity a gap"
   },
-  "summary": "Run QNX's partner ecosystem and sponsorship programs.",
-  "level_guess": "Program Manager (≈ L4-L5)",
+  "summary": "Run the QNX Everywhere developer ecosystem program with partners, universities and startups.",
+  "level_guess": "Program Manager (≈ L4)",
   "people_mgmt": false,
-  "work_mode": "onsite",
+  "work_mode": "unclear",
   "must_haves": [
-   "Partner program mgmt",
-   "Contracts and budgets"
+   "Partnership/ecosystem programs",
+   "Program management",
+   "Embedded/OS familiarity"
   ],
   "flags": [
-   "Program role, not PM",
-   "Duplicate posting"
+   "Travel required"
   ]
  },
  "9b545e6bb895": {
   "fingerprint": "d98f45e16c0cb91f",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 90,
    "level": 75,
    "domain": 25,
-   "pathway": 60,
+   "pathway": 45,
    "pay": 40,
-   "skills": 45
+   "skills": 30
   },
   "reasons": {
-   "role": "Core technical PM for a product line",
-   "level": "Senior technical PM",
-   "domain": "Embedded OS and robotics; niche",
-   "pathway": "No pathway information",
-   "pay": "Top CA$152.3K is in the low band",
-   "skills": "Needs embedded/real-time systems depth"
+   "role": "Core PM owning integrated embedded solutions",
+   "level": "Senior title; pay suggests one level off",
+   "domain": "Industrial automation and embedded systems; unrelated",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$152K is in the low band",
+   "skills": "Needs industrial automation/embedded PM experience and EE/CS degree"
   },
-  "summary": "Own QNX's industrial automation and robotics product strategy.",
-  "level_guess": "Senior Technical PM (≈ L5)",
+  "summary": "Own QNX integrated embedded solutions for industrial automation and robotics, from strategy to go-to-market.",
+  "level_guess": "Senior PM (≈ L5)",
   "people_mgmt": false,
-  "work_mode": "onsite",
+  "work_mode": "unclear",
   "must_haves": [
-   "Embedded software knowledge",
-   "Industrial/robotics domain"
+   "PM in industrial automation/IoT/embedded",
+   "EE or CS degree",
+   "Go-to-market leadership"
   ],
   "flags": [
-   "Deep technical domain",
-   "Duplicate posting"
+   "Embedded/hardware domain"
   ]
  },
  "610b452e02e3": {
@@ -898,95 +924,103 @@
  },
  "f1fc2cfee47a": {
   "fingerprint": "50c12c2b2d3a626e",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 70,
-   "level": 20,
+   "role": 80,
+   "level": 55,
    "domain": 45,
-   "pathway": 65,
+   "pathway": 45,
    "pay": 40,
-   "skills": 45
+   "skills": 50
   },
   "reasons": {
-   "role": "Platform owner for a bank IVR, narrower than PM",
-   "level": "Associate level; 5-7 yrs but narrow scope",
-   "domain": "Contact-centre migration; limited overlap",
-   "pathway": "Large bank; inferred, not stated",
-   "pay": "Range 70K-150K; top is in the low band",
-   "skills": "Contact-centre tech; below your scope"
+   "role": "Product owner for an IVR platform; backlog-heavy",
+   "level": "Associate title; 5-7 yrs asked; below your target",
+   "domain": "Contact centre IVR; general product",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$150K is in the low band",
+   "skills": "Needs IVR/Amazon Connect and InvestorLine knowledge"
   },
-  "summary": "Support the migration and growth of BMO's IVR platform on Amazon Connect.",
-  "level_guess": "Associate Product Owner (≈ L4)",
+  "summary": "Own BMO's IVR platform through its move to Amazon Connect, then drive enhancements.",
+  "level_guess": "Associate PO (≈ L4)",
   "people_mgmt": false,
   "work_mode": "remote",
   "must_haves": [
-   "5-7 yrs relevant",
-   "IVR/CCaaS platform"
+   "5-7 yrs relevant experience",
+   "IVR / contact centre platforms",
+   "Backlog and agile delivery",
+   "InvestorLine knowledge"
   ],
   "flags": [
-   "Junior title",
-   "Wide bank pay range"
+   "Eastern hours required"
   ]
  },
  "7b77acc87bbc": {
   "fingerprint": "527542b000b81747",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 75,
-   "level": 85,
-   "domain": 70,
-   "pathway": 65,
+   "role": 85,
+   "level": 90,
+   "domain": 55,
+   "pathway": 45,
    "pay": 80,
-   "skills": 60
+   "skills": 35
   },
   "reasons": {
-   "role": "Enterprise platform product owner",
-   "level": "Enterprise-wide strategy with dotted-line leadership",
-   "domain": "Observability tooling is a tech platform area",
-   "pathway": "Large bank; inferred, not stated",
+   "role": "Platform product owner setting enterprise strategy and roadmap",
+   "level": "Senior; multi-year bank-wide roadmap and exec audience",
+   "domain": "Observability platform with AI governance and auditability angles",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$215K is in the good band",
-   "skills": "Platform PM fits; observability/SRE depth unclear"
+   "skills": "Needs deep hands-on Dynatrace and SRE experience"
   },
-  "summary": "Own BMO's enterprise observability strategy and roadmap across monitoring, APM and SRE teams.",
-  "level_guess": "Principal Product Owner (≈ L6)",
+  "summary": "Own BMO's enterprise observability strategy and roadmap, steering monitoring, APM and SRE teams.",
+  "level_guess": "Senior/Staff PO (≈ L6)",
   "people_mgmt": false,
   "work_mode": "hybrid",
   "must_haves": [
-   "Enterprise platform strategy",
-   "Observability/SRE knowledge"
+   "Owned enterprise platforms",
+   "Deep Dynatrace experience",
+   "Azure/AWS observability",
+   "Multi-year roadmaps"
   ],
   "flags": [
-   "Wide bank pay range"
+   "Dotted-line leadership of 3 teams"
   ]
  },
  "156f619a47e4": {
   "fingerprint": "4436ea39a6c4c4d9",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 5,
    "level": 50,
-   "domain": 35,
-   "pathway": 65,
+   "domain": 30,
+   "pathway": 45,
    "pay": 40,
-   "skills": 25
+   "skills": 10
   },
   "reasons": {
-   "role": "Hands-on ServiceNow engineering, not product",
-   "level": "Senior engineer; 5-7 yrs hands-on",
-   "domain": "IT service management; unrelated",
-   "pathway": "Large bank; inferred, not stated",
-   "pay": "Range 70K-150K; top is in the low band",
+   "role": "ServiceNow engineering, not a product job",
+   "level": "5-7 yrs hands-on development",
+   "domain": "IT asset management on ServiceNow; unrelated",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$150K is in the low band",
    "skills": "Needs hands-on ServiceNow development"
   },
-  "summary": "Build and configure ServiceNow asset-management solutions for BMO.",
-  "level_guess": "Senior Engineer (≈ L5)",
+  "summary": "Build ServiceNow ITSM, asset management and CMDB solutions and mentor two junior developers.",
+  "level_guess": "Senior Developer (≈ L5)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "5-7 yrs ServiceNow development"
+   "5-7 yrs ServiceNow development",
+   "ITSM/ITAM/CMDB",
+   "JavaScript"
   ],
   "flags": [
    "Engineering role"
@@ -994,552 +1028,586 @@
  },
  "b44f03c40b49": {
   "fingerprint": "e5d57d88e0dc60fb",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 75,
-   "level": 60,
+   "role": 95,
+   "level": 85,
    "domain": 90,
-   "pathway": 65,
+   "pathway": 45,
    "pay": 40,
    "skills": 75
   },
   "reasons": {
-   "role": "AI product and strategy blend; product-heavy",
-   "level": "VP title but 6+ yrs asked; scope unclear",
-   "domain": "AI strategy in capital markets matches your work",
-   "pathway": "Large bank; inferred, not stated",
+   "role": "Core PM owning vision and roadmap for AI products",
+   "level": "6+ yrs; bank VP title maps to about senior IC scope",
+   "domain": "Enterprise AI with responsible AI and governance in a regulated bank",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$150K is in the low band",
-   "skills": "AI product plus strategy fits; 6+ yrs asked"
+   "skills": "AI/LLM products and governance fit; Capital Markets workflows are a gap"
   },
-  "summary": "Set AI strategy and run AI products for BMO Capital Markets.",
-  "level_guess": "VP / Senior PM (≈ L5-L6)",
+  "summary": "Own vision, roadmap and adoption of AI and data products for BMO Capital Markets front-office users.",
+  "level_guess": "Senior PM (≈ L5)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "6+ yrs PM/strategy/transformation",
-   "AI product experience"
+   "6+ yrs PM/strategy",
+   "Hands-on LLM/RAG products",
+   "Capital Markets workflows (asset)",
+   "Responsible AI practice"
   ],
   "flags": [
-   "Pay range looks low for VP"
+   "Bank VP title, mid-level pay"
   ]
  },
  "7cf5b385b6ba": {
   "fingerprint": "758d8fee3665e765",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 85,
    "level": 55,
    "domain": 85,
-   "pathway": 65,
+   "pathway": 45,
    "pay": 40,
    "skills": 75
   },
   "reasons": {
-   "role": "Product owner for AI products in commercial banking",
-   "level": "Product Owner; scope across business leaders",
-   "domain": "Banking AI and analytics matches your work",
-   "pathway": "Large bank; inferred, not stated",
-   "pay": "Range 70K-150K; top is in the low band",
-   "skills": "AI and analytics PM background fits well"
+   "role": "Product owner shaping AI product direction and backlog",
+   "level": "Years not visible; PO title ≈ L4-L5",
+   "domain": "AI and analytics products for bankers; matches your AI work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$150K is in the low band",
+   "skills": "AI product delivery fits; commercial banking knowledge a gap"
   },
-  "summary": "Own AI-powered products for BMO's Commercial Banking teams.",
-  "level_guess": "Product Owner (≈ L5)",
+  "summary": "Shape and deliver AI-powered products for BMO Commercial Banking teams, from discovery to adoption.",
+  "level_guess": "Product Owner (≈ L4-L5)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "AI product ownership",
-   "Stakeholder partnering"
+   "AI/ML product delivery",
+   "Stakeholder discovery",
+   "Roadmaps and backlogs"
   ],
-  "flags": [
-   "Wide bank pay range"
-  ]
+  "flags": []
  },
  "82c5768a7926": {
   "fingerprint": "16106df770e34e12",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 10,
-   "level": 65,
-   "domain": 70,
-   "pathway": 65,
+   "role": 15,
+   "level": 75,
+   "domain": 80,
+   "pathway": 45,
    "pay": 60,
-   "skills": 35
+   "skills": 30
   },
   "reasons": {
-   "role": "Second-line credit risk oversight, not product",
-   "level": "Senior Manager; 7+ yrs credit risk",
-   "domain": "Credit risk and governance overlap your domains",
-   "pathway": "Large bank; inferred, not stated",
+   "role": "Second-line credit risk oversight, not a product job",
+   "level": "7+ yrs; senior manager who leads a team",
+   "domain": "Credit risk governance and regulatory oversight; matches your risk work",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$185K is in the ok band",
-   "skills": "Needs credit risk policy depth you lack"
+   "skills": "Needs deep credit risk modelling and a quant graduate degree"
   },
-  "summary": "Provide independent challenge on credit strategy for BMO's retail lending.",
-  "level_guess": "Senior Manager (≈ L5-L6)",
+  "summary": "Provide independent second-line challenge on BMO's Canadian retail lending credit strategies and lead a small analytics team.",
+  "level_guess": "Senior Manager, Risk (≈ L5-L6)",
   "people_mgmt": true,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "7+ yrs credit risk/policy",
-   "Governance and oversight"
+   "7+ yrs credit risk",
+   "Quant graduate degree",
+   "Python/SQL/SAS",
+   "Credit risk frameworks"
   ],
   "flags": [
-   "Risk role, not PM",
-   "Wide bank pay range"
+   "Second-line risk role",
+   "Manages analysts"
   ]
  },
  "d3c47c916c30": {
   "fingerprint": "6f3f308e0c1c7757",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 70,
-   "level": 70,
+   "role": 90,
+   "level": 90,
    "domain": 90,
-   "pathway": 65,
+   "pathway": 45,
    "pay": 95,
-   "skills": 60
+   "skills": 70
   },
   "reasons": {
-   "role": "Strategy-plus-product AI role; product-heavy",
-   "level": "Senior Manager; 6+ yrs, owns AI portfolio",
-   "domain": "AI in wealth and regulated finance fits you",
-   "pathway": "Large bank; inferred, not stated",
+   "role": "Strategy plus product role owning an AI portfolio and roadmap",
+   "level": "6+ yrs; owns multi-year AI strategy, senior scope",
+   "domain": "Enterprise AI with responsible AI in a regulated firm, a direct match",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$240K is in the excellent band",
-   "skills": "Needs 2 yrs consulting; AI PM and governance fit"
+   "skills": "Shipped AI products and governance fit; 2 yrs consulting required"
   },
-  "summary": "Shape BMO InvestorLine's AI portfolio and lead AI products to launch.",
-  "level_guess": "Senior Manager (≈ L5-L6)",
+  "summary": "Own BMO InvestorLine's AI strategy and roadmap and lead AI products from discovery to adoption.",
+  "level_guess": "Senior PM (≈ L5-L6)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
    "6+ yrs strategy and product",
-   "2 yrs consulting",
-   "2 yrs AI PM"
+   "2+ yrs management consulting",
+   "Shipped an AI product",
+   "Responsible AI and regulatory fluency"
   ],
   "flags": [
-   "Wide bank pay range"
+   "Consulting experience required"
   ]
  },
  "826acc2f0fcd": {
   "fingerprint": "535e9f816581c715",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
-  "subs": {
-   "role": 15,
-   "level": 65,
-   "domain": 70,
-   "pathway": 65,
-   "pay": 60,
-   "skills": 40
-  },
-  "reasons": {
-   "role": "Risk program management, not product",
-   "level": "Senior Manager; 7+ yrs",
-   "domain": "Risk governance and reporting overlap",
-   "pathway": "Large bank; inferred, not stated",
-   "pay": "Top CA$185K is in the ok band",
-   "skills": "Needs bank risk framework experience"
-  },
-  "summary": "Support first-line risk programs, stress testing and Board reporting for BMO's P&BB Canada.",
-  "level_guess": "Senior Manager (≈ L5)",
-  "people_mgmt": false,
-  "work_mode": "hybrid",
-  "must_haves": [
-   "7+ yrs relevant",
-   "Risk reporting"
-  ],
-  "flags": [
-   "Risk role, not PM",
-   "Wide bank pay range"
-  ]
- },
- "514a16bc06dd": {
-  "fingerprint": "e9546260bf1df4f5",
-  "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
-  "subs": {
-   "role": 90,
-   "level": 70,
-   "domain": 80,
-   "pathway": 65,
-   "pay": 60,
-   "skills": 70
-  },
-  "reasons": {
-   "role": "Core PM owning a home financing portfolio",
-   "level": "Group PM; multi-year roadmaps, people leadership",
-   "domain": "Consumer banking products fit your fintech work",
-   "pathway": "Large bank; inferred, not stated",
-   "pay": "Top CA$185K is in the ok band",
-   "skills": "Strategy fits; people leadership is not wanted"
-  },
-  "summary": "Lead product strategy and a team for BMO's Canadian home financing portfolio.",
-  "level_guess": "Group PM (≈ L6)",
-  "people_mgmt": true,
-  "work_mode": "hybrid",
-  "must_haves": [
-   "Multi-year roadmaps",
-   "Product and people leadership"
-  ],
-  "flags": [
-   "Manages people",
-   "Wide bank pay range"
-  ]
- },
- "96aec053b8b0": {
-  "fingerprint": "ac074b956d862870",
-  "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
-  "subs": {
-   "role": 10,
-   "level": 35,
-   "domain": 75,
-   "pathway": 65,
-   "pay": 40,
-   "skills": 40
-  },
-  "reasons": {
-   "role": "Compliance testing program support, not product",
-   "level": "Specialist level; junior scope",
-   "domain": "Regulatory compliance overlaps your domain",
-   "pathway": "Large bank; inferred, not stated",
-   "pay": "Range 70K-150K; top is in the low band",
-   "skills": "Compliance testing; policy work partly matches"
-  },
-  "summary": "Coordinate regulatory compliance risk assessment and testing for BMO.",
-  "level_guess": "Specialist (≈ L4)",
-  "people_mgmt": false,
-  "work_mode": "hybrid",
-  "must_haves": [
-   "Compliance monitoring",
-   "Risk assessment"
-  ],
-  "flags": [
-   "Compliance role, not PM",
-   "Wide bank pay range"
-  ]
- },
- "5ecce1ff0cea": {
-  "fingerprint": "40255e74a028960b",
-  "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 30,
-   "level": 65,
-   "domain": 95,
-   "pathway": 65,
+   "level": 75,
+   "domain": 80,
+   "pathway": 45,
    "pay": 60,
    "skills": 50
   },
   "reasons": {
-   "role": "Fraud strategy lead; project-led, not product",
-   "level": "Senior Manager; 7+ yrs, advisor to leaders",
-   "domain": "Cards fraud matches your scams and fraud work",
-   "pathway": "Large bank; inferred, not stated",
+   "role": "Risk governance and business management, little product ownership",
+   "level": "7+ yrs; senior manager who manages a team",
+   "domain": "First-line risk management and governance; matches your risk work",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$185K is in the ok band",
-   "skills": "Fraud domain fits; strategy not a product role"
+   "skills": "Governance and exec work fit; bank risk program experience a gap"
   },
-  "summary": "Design and deliver commercial cards fraud strategy for BMO's Financial Crimes group.",
-  "level_guess": "Senior Manager (≈ L5-L6)",
-  "people_mgmt": false,
-  "work_mode": "hybrid",
+  "summary": "Run first-line risk programs (risk appetite, stress testing, Board reporting) for BMO P&BB Canada and lead a team.",
+  "level_guess": "Senior Manager (≈ L5-L6, people manager)",
+  "people_mgmt": true,
+  "work_mode": "unclear",
   "must_haves": [
-   "7+ yrs relevant",
+   "7+ yrs relevant experience",
+   "Risk governance programs",
+   "Regulatory knowledge",
+   "People leadership"
+  ],
+  "flags": [
+   "Manages people",
+   "Risk governance role"
+  ]
+ },
+ "514a16bc06dd": {
+  "fingerprint": "e9546260bf1df4f5",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:10:16+00:00",
+  "subs": {
+   "role": 40,
+   "level": 75,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Banking P&L product role for mortgages, not software PM",
+   "level": "Senior GPM with direct reports; you want IC",
+   "domain": "Mortgage lending in a regulated bank; adjacent to fintech",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$185K is in the ok band",
+   "skills": "Mortgage product and pricing expertise asked, which you lack"
+  },
+  "summary": "Lead strategy, pricing and P&L for a BMO Home Financing product portfolio and manage a product team.",
+  "level_guess": "Group PM (≈ L6, people manager)",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Home financing product expertise",
+   "Portfolio economics and pricing",
+   "Multi-year roadmaps",
+   "People leadership"
+  ],
+  "flags": [
+   "Manages people",
+   "Banking P&L product role"
+  ]
+ },
+ "96aec053b8b0": {
+  "fingerprint": "ac074b956d862870",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:10:16+00:00",
+  "subs": {
+   "role": 15,
+   "level": 50,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Compliance testing specialist, not a product job",
+   "level": "Specialist level; years not stated",
+   "domain": "Regulatory compliance controls and testing; matches your compliance work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$150K is in the low band",
+   "skills": "Regulatory work fits; compliance testing practice experience unclear"
+  },
+  "summary": "Run compliance risk assessments, monitoring and testing for a BMO business group.",
+  "level_guess": "Compliance Specialist (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Compliance monitoring and testing",
+   "Regulatory knowledge",
+   "Risk assessment"
+  ],
+  "flags": [
+   "Compliance operations role"
+  ]
+ },
+ "5ecce1ff0cea": {
+  "fingerprint": "40255e74a028960b",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:10:16+00:00",
+  "subs": {
+   "role": 45,
+   "level": 75,
+   "domain": 95,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Fraud strategy initiatives; program work, little product ownership",
+   "level": "7+ yrs; senior manager IC scope",
+   "domain": "Fraud strategy, a direct match to your fraud and scams work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$185K is in the ok band",
+   "skills": "Fraud depth fits; commercial cards experience a gap"
+  },
+  "summary": "Lead large fraud strategy initiatives for BMO commercial cards within Financial Crimes.",
+  "level_guess": "Senior Manager (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs relevant experience",
+   "Project and change management",
    "Fraud strategy"
   ],
   "flags": [
-   "Strategy role, not PM",
-   "Wide bank pay range"
+   "Toronto or Halifax"
   ]
  },
  "45bba67f347b": {
   "fingerprint": "7490b38fa82ddae7",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 10,
-   "level": 40,
-   "domain": 70,
-   "pathway": 65,
+   "role": 15,
+   "level": 55,
+   "domain": 80,
+   "pathway": 45,
    "pay": 40,
    "skills": 35
   },
   "reasons": {
-   "role": "Credit risk oversight analytics, not product",
-   "level": "Manager; 5-7 yrs analytics",
-   "domain": "Credit risk overlaps your governance domain",
-   "pathway": "Large bank; inferred, not stated",
-   "pay": "Range 70K-150K; top is in the low band",
+   "role": "Second-line credit risk analytics, not a product job",
+   "level": "5-7 yrs; manager-level IC",
+   "domain": "Credit risk governance; matches your risk work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$150K is in the low band",
    "skills": "Needs credit risk analytics experience"
   },
-  "summary": "Provide credit-risk analytics and challenge for BMO's retail lending.",
-  "level_guess": "Manager (≈ L4-L5)",
+  "summary": "Provide second-line analytics and challenge on BMO's Canadian retail lending credit strategies.",
+  "level_guess": "Manager, Risk (≈ L4-L5)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "5-7 yrs risk analytics",
-   "Credit strategy"
+   "5-7 yrs credit risk analytics",
+   "Python/SQL/SAS",
+   "Credit risk principles"
   ],
   "flags": [
-   "Risk role, not PM",
-   "Wide bank pay range"
+   "Second-line risk role"
   ]
  },
  "06bf764b383c": {
   "fingerprint": "b6cd375229d6302c",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 85,
    "level": 75,
-   "domain": 70,
-   "pathway": 65,
+   "domain": 55,
+   "pathway": 45,
    "pay": 50,
-   "skills": 70
+   "skills": 65
   },
   "reasons": {
-   "role": "Core digital product owner role",
-   "level": "Senior PO; asks 7+ yrs, end-to-end lifecycle",
-   "domain": "Digital banking is adjacent to your fintech work",
-   "pathway": "Large bank; inferred, not stated",
+   "role": "Product owner role owning roadmap and backlog",
+   "level": "7+ yrs; leadership bullets imply managing people",
+   "domain": "Product area not stated; general banking",
+   "pathway": "No work permit info in the posting",
    "pay": "Pay not posted",
-   "skills": "Product lifecycle fits; banking channels are new"
+   "skills": "Generic PO skills fit; product area unknown"
   },
-  "summary": "Own the full lifecycle of a digital banking product at BMO.",
-  "level_guess": "Senior Product Owner (≈ L5)",
-  "people_mgmt": false,
-  "work_mode": "hybrid",
+  "summary": "Own the product lifecycle and backlog for an unspecified BMO digital product.",
+  "level_guess": "Senior PO (≈ L5, people manager)",
+  "people_mgmt": true,
+  "work_mode": "unclear",
   "must_haves": [
-   "7+ yrs relevant",
-   "Backlog and lifecycle mgmt"
+   "7+ yrs relevant experience",
+   "Product lifecycle (agile)",
+   "Business requirements mapping"
   ],
-  "flags": []
+  "flags": [
+   "Product area not stated",
+   "Leadership duties listed"
+  ]
  },
  "15a7e79504bc": {
   "fingerprint": "bb69d697da497622",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 85,
    "level": 75,
-   "domain": 85,
-   "pathway": 65,
+   "domain": 75,
+   "pathway": 45,
    "pay": 50,
    "skills": 70
   },
   "reasons": {
-   "role": "Core product owner for open banking",
-   "level": "Senior PO; asks 7+ yrs, end-to-end lifecycle",
-   "domain": "Open banking is fintech and data sharing",
-   "pathway": "Large bank; inferred, not stated",
+   "role": "Product owner role owning roadmap and backlog",
+   "level": "7+ yrs; leadership bullets imply managing people",
+   "domain": "Open banking for business clients; adjacent to fintech policy",
+   "pathway": "No work permit info in the posting",
    "pay": "Pay not posted",
-   "skills": "Fintech and data PM fits; open banking is new"
+   "skills": "PM fundamentals fit; open banking and banking ops depth a gap"
   },
-  "summary": "Own the open banking product for BMO Business Banking.",
-  "level_guess": "Senior Product Owner (≈ L5)",
-  "people_mgmt": false,
-  "work_mode": "hybrid",
+  "summary": "Own product strategy and backlog for BMO's open banking capabilities for business banking clients.",
+  "level_guess": "Senior PO (≈ L5, people manager)",
+  "people_mgmt": true,
+  "work_mode": "unclear",
   "must_haves": [
-   "7+ yrs relevant",
-   "Open banking/API products"
+   "7+ yrs relevant experience",
+   "Product lifecycle (agile)",
+   "Business requirements mapping"
   ],
-  "flags": []
+  "flags": [
+   "Leadership duties listed"
+  ]
  },
  "cd439aa66b71": {
   "fingerprint": "013e28cf0668f101",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 30,
-   "level": 70,
+   "role": 45,
+   "level": 75,
    "domain": 95,
-   "pathway": 65,
+   "pathway": 45,
    "pay": 60,
-   "skills": 55
+   "skills": 40
   },
   "reasons": {
-   "role": "Fraud strategy leader; not a product role",
-   "level": "Senior Manager; 7+ yrs, high visibility",
-   "domain": "Lending fraud matches your scams and fraud work",
-   "pathway": "Large bank; inferred, not stated",
+   "role": "Fraud strategy and controls; strategy role, little product ownership",
+   "level": "7+ yrs; senior manager IC scope",
+   "domain": "Lending fraud strategy, a direct match to your fraud work",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$185K is in the ok band",
-   "skills": "Needs lending fraud experience; domain overlaps"
+   "skills": "Fraud fits; 7+ yrs lending experience asked"
   },
-  "summary": "Shape BMO's lending fraud strategy across risk, analytics and operations.",
-  "level_guess": "Senior Manager (≈ L5-L6)",
-  "people_mgmt": true,
-  "work_mode": "hybrid",
+  "summary": "Design and run lending fraud strategies and controls across BMO's lending portfolio.",
+  "level_guess": "Senior Manager (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
   "must_haves": [
    "7+ yrs lending experience",
-   "Fraud strategy"
+   "Fraud strategy",
+   "Project management"
   ],
-  "flags": [
-   "Strategy role, not PM",
-   "Wide bank pay range"
-  ]
+  "flags": []
  },
  "33ea2fd33533": {
   "fingerprint": "f03eda70cc82b1fe",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 90,
-   "level": 70,
-   "domain": 75,
-   "pathway": 65,
+   "role": 40,
+   "level": 75,
+   "domain": 60,
+   "pathway": 45,
    "pay": 60,
-   "skills": 70
+   "skills": 35
   },
   "reasons": {
-   "role": "Core PM with P&L for a mortgage channel",
-   "level": "Group PM; 7+ yrs, P&L accountability",
-   "domain": "Mortgage products; financial services adjacent",
-   "pathway": "Large bank; inferred, not stated",
+   "role": "Mortgage broker channel P&L role, not software PM",
+   "level": "7+ yrs; GPM with P&L; may lead analytics team",
+   "domain": "Mortgage broker channel; adjacent to fintech",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$185K is in the ok band",
-   "skills": "PM and analytics fit; no mortgage P&L history"
+   "skills": "Needs mortgage broker, credit and SAS experience"
   },
-  "summary": "Own performance and P&L for BMO's mortgage broker channel.",
+  "summary": "Own P&L, pricing and performance of BMO's mortgage broker channel.",
   "level_guess": "Group PM (≈ L5-L6)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "7+ yrs relevant",
-   "P&L accountability"
+   "7+ yrs relevant experience",
+   "Mortgage broker industry",
+   "Consumer credit products",
+   "SAS/SQL/Power BI"
   ],
   "flags": [
-   "Wide bank pay range"
+   "Banking P&L product role"
   ]
  },
  "c65d25728e78": {
   "fingerprint": "2854501d99d70156",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 60,
-   "level": 35,
-   "domain": 90,
-   "pathway": 65,
+   "role": 80,
+   "level": 55,
+   "domain": 85,
+   "pathway": 45,
    "pay": 40,
-   "skills": 65
+   "skills": 80
   },
   "reasons": {
-   "role": "AI strategy and product blend; strategy-led",
-   "level": "Manager; 3+ yrs asked, below your level",
-   "domain": "AI in wealth management fits your AI work",
-   "pathway": "Large bank; inferred, not stated",
-   "pay": "Range 70K-150K; top is in the low band",
-   "skills": "AI strategy skills match; STEM degree asked"
+   "role": "AI strategy and product discovery, supporting delivery",
+   "level": "3+ yrs asked; ≈ L4 scope",
+   "domain": "Enterprise AI in financial services, a direct match",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$150K is in the low band",
+   "skills": "Business cases, exec decks and AI fluency fit well"
   },
-  "summary": "Define and deliver AI strategy and business cases for BMO InvestorLine.",
-  "level_guess": "Manager (≈ L4)",
+  "summary": "Help define BMO InvestorLine's AI strategy, business cases and product discovery for AI initiatives.",
+  "level_guess": "PM/Strategy Manager (≈ L4)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "3+ yrs relevant",
-   "STEM degree"
+   "3+ yrs relevant experience",
+   "1+ yr consulting or strategy",
+   "AI technology fluency",
+   "Business cases"
   ],
-  "flags": [
-   "Below your level",
-   "Wide bank pay range"
-  ]
+  "flags": []
  },
  "c2c95aa585bc": {
   "fingerprint": "4cdb24714373c7fc",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 10,
-   "level": 75,
-   "domain": 60,
-   "pathway": 65,
+   "role": 15,
+   "level": 60,
+   "domain": 55,
+   "pathway": 45,
    "pay": 60,
-   "skills": 25
+   "skills": 15
   },
   "reasons": {
-   "role": "Solution architecture, not product",
-   "level": "Senior architect; 5+ yrs",
-   "domain": "AI and AWS banking architecture",
-   "pathway": "Large bank; inferred, not stated",
+   "role": "Solution architecture, not a product job",
+   "level": "5+ yrs architect; senior IC",
+   "domain": "Banking AI with fraud and security design; adjacent",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$185K is in the ok band",
-   "skills": "Needs architect experience you lack"
+   "skills": "Needs 5+ yrs software development and architecture"
   },
-  "summary": "Architect AI and AWS solutions for BMO Personal and Business Banking.",
-  "level_guess": "Senior Architect (≈ L5)",
+  "summary": "Architect personal and business banking solutions on AI and AWS at BMO.",
+  "level_guess": "Senior Solution Architect (≈ L5)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
    "5+ yrs solution architect",
-   "AWS and AI"
+   "5+ yrs software development",
+   "TOGAF",
+   "Microservices and APIs"
   ],
   "flags": [
-   "Architecture role"
+   "Architecture role, not PM"
   ]
  },
  "ef36125d2769": {
   "fingerprint": "a7659c61553cb75c",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 85,
-   "level": 40,
-   "domain": 70,
-   "pathway": 65,
+   "role": 40,
+   "level": 50,
+   "domain": 55,
+   "pathway": 45,
    "pay": 40,
-   "skills": 60
+   "skills": 55
   },
   "reasons": {
-   "role": "Core PM supporting chequing products",
-   "level": "PM reporting to Group PM; supports strategy",
-   "domain": "Retail banking products fit your fintech work",
-   "pathway": "Large bank; inferred, not stated",
-   "pay": "Range 70K-150K; top is in the low band",
-   "skills": "PM and pricing analytics fit; below your level"
+   "role": "Chequing pricing and P&L product role, not software PM",
+   "level": "4-7 yrs; reports to a GPM; below your target",
+   "domain": "Retail bank chequing products; general banking",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$150K is in the low band",
+   "skills": "Analytics fits; banking pricing experience a gap"
   },
-  "summary": "Support strategy, pricing and lifecycle for BMO's chequing products.",
-  "level_guess": "PM II (≈ L4)",
+  "summary": "Support strategy, pricing and performance of BMO chequing accounts under a Group PM.",
+  "level_guess": "PM (≈ L4)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "4-7 yrs PM or analytics",
-   "Pricing analysis"
+   "4-7 yrs PM/analytics/strategy",
+   "Pricing analysis",
+   "Banking product knowledge (asset)"
   ],
   "flags": [
-   "Below your level",
-   "Wide bank pay range"
+   "Banking P&L product role"
   ]
  },
  "cdfddd9139a4": {
   "fingerprint": "beab3ae605216d2e",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 90,
-   "level": 45,
-   "domain": 70,
-   "pathway": 65,
+   "role": 40,
+   "level": 60,
+   "domain": 60,
+   "pathway": 45,
    "pay": 40,
-   "skills": 60
+   "skills": 40
   },
   "reasons": {
-   "role": "Core PM owning a product end to end",
-   "level": "PM; 5-7 yrs, product-level scope",
-   "domain": "Mortgage products; financial services adjacent",
-   "pathway": "Large bank; inferred, not stated",
-   "pay": "Range 70K-150K; top is in the low band",
-   "skills": "PM background fits; no mortgage experience"
+   "role": "Mortgage leads program and analytics, not software PM",
+   "level": "5-7 yrs; mid-level scope",
+   "domain": "Mortgage acquisition in banking; adjacent to fintech",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$150K is in the low band",
+   "skills": "Needs residential mortgage product experience"
   },
-  "summary": "Own BMO's home financing products from vision to growth.",
-  "level_guess": "PM (≈ L4-L5)",
+  "summary": "Own BMO's Home Financing leads program, forecasting and acquisition reporting.",
+  "level_guess": "PM (≈ L4)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "5-7 yrs PM or consulting",
-   "Graduate degree preferred"
+   "Mortgage/secured lending product experience",
+   "Leads or acquisition program ownership",
+   "Forecasting and analytics"
   ],
   "flags": [
-   "Wide bank pay range"
+   "Banking P&L product role"
   ]
  },
  "b65d74a2b3c7": {
@@ -1608,40 +1676,44 @@
  },
  "888b2b06e946": {
   "fingerprint": "ee58cc22b33c4c9c",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 10,
-   "level": 70,
+   "role": 15,
+   "level": 60,
    "domain": 45,
    "pathway": 45,
    "pay": 40,
    "skills": 25
   },
   "reasons": {
-   "role": "Solution architecture, not product",
-   "level": "Architect; 7+ yrs tech, 3+ yrs architecture",
-   "domain": "Retail supply chain and digital",
-   "pathway": "No pathway information",
+   "role": "Solutions architecture, not a product job",
+   "level": "7+ yrs tech, 3+ in architecture; senior IC scope",
+   "domain": "Retail tech across supply chain, stores and eCommerce; general",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$131K is in the low band",
-   "skills": "Needs architecture background"
+   "skills": "Needs hands-on cloud and integration architecture experience"
   },
-  "summary": "Design end-to-end architectures across Canadian Tire's retail value chain.",
-  "level_guess": "Architect (≈ L5)",
+  "summary": "Design and govern end-to-end retail solution architectures across supply chain, stores, merchandising and digital.",
+  "level_guess": "Senior Solutions Architect (≈ L5)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "7+ yrs technology",
-   "3+ yrs architecture"
+   "7+ yrs tech, 3+ yrs architecture",
+   "Retail platform experience",
+   "API/event-driven integration",
+   "Hands-on Azure or GCP"
   ],
   "flags": [
-   "Architecture role"
+   "Architecture role, not PM"
   ]
  },
  "d7586df21fc9": {
   "fingerprint": "79e814e0389e1ef5",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 30,
    "level": 10,
@@ -1651,151 +1723,159 @@
    "skills": 45
   },
   "reasons": {
-   "role": "Retail program coordination, not product",
-   "level": "Associate; 3-5 yrs, junior scope",
-   "domain": "Retail sales operations",
-   "pathway": "No pathway information",
+   "role": "Retail sales program coordination, not product management",
+   "level": "Associate level, 3-5 yrs; far below your target",
+   "domain": "Retail dealer and merchandising programs; loosely tied to commerce",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$83K is below the low band",
-   "skills": "Program skills only; far below your level"
+   "skills": "Retail/dealer operations background asked, which you lack"
   },
-  "summary": "Run sales acceleration programs between Merchandising and Dealer stores.",
-  "level_guess": "Associate PgM (≈ L3)",
+  "summary": "Coordinate sales-driving programs and dealer engagement across Canadian Tire stores on an 18-month contract.",
+  "level_guess": "Associate Program Manager (≈ L3)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "3-5 yrs program mgmt",
-   "Retail operations"
+   "3-5 yrs program mgmt or retail ops",
+   "Stakeholder communications",
+   "Microsoft 365 / Excel"
   ],
   "flags": [
-   "18-month contract",
-   "Below your level"
+   "Contract role (18 months)",
+   "Retail store-focused"
   ]
  },
  "e901230cf6aa": {
   "fingerprint": "871197fab52b26e8",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 40,
-   "level": 70,
-   "domain": 60,
+   "role": 45,
+   "level": 75,
+   "domain": 40,
    "pathway": 45,
    "pay": 40,
-   "skills": 40
+   "skills": 25
   },
   "reasons": {
-   "role": "Security program mgmt, little product ownership",
-   "level": "Program manager; 7+ yrs, roadmap owner",
-   "domain": "Cyber infrastructure is adjacent",
-   "pathway": "No pathway information",
+   "role": "Technical program manager for security infra roadmap; little product ownership",
+   "level": "7+ yrs program mgmt asked; senior scope",
+   "domain": "Network security infrastructure; specialist, only loosely tied to risk",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$131K is in the low band",
-   "skills": "Needs cybersecurity program experience"
+   "skills": "Needs 4+ yrs network security and CISSP/CISM/CCNP"
   },
-  "summary": "Lead network and security infrastructure programs for Canadian Tire's cyber team.",
+  "summary": "Build and run the network and security infrastructure capability roadmap for Canadian Tire's cyber team.",
   "level_guess": "Senior TPM (≈ L5)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
    "7+ yrs program mgmt",
-   "4+ yrs cybersecurity"
+   "4+ yrs network/security infra",
+   "CISSP, CISM or CCNP Security",
+   "NIST/CIS/ISO 27001"
   ],
   "flags": [
-   "Program role, not PM"
+   "Security certification required"
   ]
  },
  "4d3e3d8ed53e": {
   "fingerprint": "0d7e54ed01f3e2cd",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 45,
-   "level": 60,
+   "level": 75,
    "domain": 70,
    "pathway": 45,
    "pay": 40,
    "skills": 55
   },
   "reasons": {
-   "role": "AI program orchestration, not product ownership",
-   "level": "Program Manager leading PMs; portfolio scope",
-   "domain": "Enterprise AI program delivery",
-   "pathway": "No pathway information",
+   "role": "Program/portfolio management of AI projects, little product ownership",
+   "level": "Program lead who directly manages PMs; you want IC",
+   "domain": "AI programs with governance and audit focus; adjacent to your AI governance work",
+   "pathway": "No work permit info in the posting",
    "pay": "Top CA$131K is in the low band",
-   "skills": "AI and governance fit; delivery focus"
+   "skills": "Portfolio governance fits; Planview and PM people management are gaps"
   },
-  "summary": "Orchestrate Canadian Tire's AI Activation portfolio and supervise its project managers.",
-  "level_guess": "Program Manager (≈ L5)",
+  "summary": "Run the AI Activation program portfolio at Canadian Tire, supervising all project managers and owning governance and financials.",
+  "level_guess": "Program Manager lead (≈ L5)",
   "people_mgmt": true,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "Program portfolio mgmt",
-   "Governance and finance rigor"
+   "Lead multi-project programs",
+   "Portfolio and financial governance",
+   "Directly manage PMs",
+   "Complex tech/AI programs"
   ],
   "flags": [
-   "Supervises project managers",
-   "Program role, not PM"
+   "Manages project managers"
   ]
  },
  "8490126f92b6": {
   "fingerprint": "1b4da999144a8c62",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 90,
+   "role": 95,
    "level": 55,
-   "domain": 90,
-   "pathway": 65,
+   "domain": 75,
+   "pathway": 45,
    "pay": 40,
    "skills": 85
   },
   "reasons": {
-   "role": "Core PM at a bank; software products",
-   "level": "Principal Associate; 3-5+ yrs asked",
-   "domain": "Financial services PM matches your fintech work",
-   "pathway": "Large multinational; inferred, not stated",
-   "pay": "Top CA$153.3K is in the low band",
-   "skills": "Posting wants 5+ yrs PM in financial services"
+   "role": "Core software PM owning a credit card product roadmap",
+   "level": "3+ yrs PM asked (5+ preferred); below your target level",
+   "domain": "Consumer credit cards; adjacent to your fintech and fraud work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$153K is in the low band",
+   "skills": "Has PM, data-driven and fintech experience asked"
   },
-  "summary": "Own a banking product and its roadmap at Capital One Canada.",
-  "level_guess": "Principal Associate PM (≈ L4-L5)",
+  "summary": "Own the roadmap and KPIs for a Capital One Canada credit card product such as eligibility, fraud or servicing.",
+  "level_guess": "PM (≈ L4)",
   "people_mgmt": false,
   "work_mode": "hybrid",
   "must_haves": [
-   "3-5+ yrs PM",
-   "Financial services",
-   "Bachelor's degree"
+   "3+ yrs software PM",
+   "Delivered a software product",
+   "Strong quantitative skills"
   ],
-  "flags": [
-   "Below your level"
-  ]
+  "flags": []
  },
  "d105682fbc5a": {
   "fingerprint": "d07d0168248d4ff3",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:39:59+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 95,
-   "level": 75,
-   "domain": 85,
-   "pathway": 65,
+   "level": 85,
+   "domain": 90,
+   "pathway": 45,
    "pay": 60,
    "skills": 85
   },
   "reasons": {
-   "role": "Core PM for data products at a bank",
-   "level": "Manager-titled IC; asks 5+ yrs",
-   "domain": "Data products in banking match your data work",
-   "pathway": "Large multinational; inferred, not stated",
-   "pay": "Top CA$179.6K is in the ok band",
-   "skills": "Data PM, financial services and MBA all fit"
+   "role": "Core PM owning data products and their long-term roadmap",
+   "level": "5+ yrs PM; senior IC role with no direct reports",
+   "domain": "Data products and data definition, a direct match to your data platform work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$180K is in the ok band",
+   "skills": "Data strategy, SQL/Python and exec influence all match"
   },
-  "summary": "Own data products and roadmaps at Capital One Canada.",
-  "level_guess": "Manager PM (≈ L5)",
+  "summary": "Own the roadmap and OKRs for reusable data products at Capital One Canada, as a senior IC with no direct reports.",
+  "level_guess": "Senior PM (≈ L5)",
   "people_mgmt": false,
   "work_mode": "hybrid",
   "must_haves": [
    "5+ yrs PM",
-   "Customer-facing data products"
+   "Data-driven product strategy",
+   "SQL/Python data analysis",
+   "Data architecture fluency"
   ],
   "flags": []
  },
@@ -4253,195 +4333,207 @@
  },
  "c66b4c6ce760": {
   "fingerprint": "eec737f7eec6e94b",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:40:18+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 70,
-   "level": 25,
-   "domain": 70,
+   "role": 75,
+   "level": 15,
+   "domain": 50,
    "pathway": 45,
    "pay": 50,
-   "skills": 40
+   "skills": 20
   },
   "reasons": {
-   "role": "Product executive, owns portfolio P&L, not IC PM",
-   "level": "VP-level with large org",
-   "domain": "Endpoint security product line; adjacent",
-   "pathway": "No sponsorship info in posting; inferred neutral",
-   "pay": "No pay range posted",
-   "skills": "VP experience and P&L ownership required"
+   "role": "Product leadership role managing PMs",
+   "level": "Executive VP role; far above your IC target",
+   "domain": "Endpoint security; specialist domain",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "Needs deep endpoint security expertise"
   },
-  "summary": "Lead Arctic Wolf's Endpoint Security product line strategy and revenue.",
-  "level_guess": "VP Product",
+  "summary": "Own Arctic Wolf's Endpoint Security product line strategy and P&L and lead its PM team.",
+  "level_guess": "VP Product (executive)",
   "people_mgmt": true,
   "work_mode": "remote",
   "must_haves": [
-   "VP-level product leadership",
-   "P&L ownership",
-   "Security market expertise"
+   "Endpoint security expertise",
+   "Owned financial targets",
+   "Leads PM team"
   ],
   "flags": [
    "Executive role",
-   "People management"
+   "Manages PMs"
   ]
  },
  "eaebb713b547": {
   "fingerprint": "ff0baceff19bbb6b",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:40:18+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 90,
+   "role": 85,
    "level": 75,
-   "domain": 70,
+   "domain": 55,
    "pathway": 45,
    "pay": 50,
-   "skills": 60
+   "skills": 65
   },
   "reasons": {
-   "role": "PM bridging product and engineering on customer onboarding",
-   "level": "Senior PM, onboarding scope",
-   "domain": "Managed security services; security adjacent",
-   "pathway": "No sponsorship info in posting; inferred neutral",
-   "pay": "US range only (USD 173-259K); no Canadian range posted",
-   "skills": "Onboarding journey and backlog ownership; you match most"
+   "role": "PM owning onboarding backlog; execution-heavy",
+   "level": "Senior PM under higher-level PMs; one level off",
+   "domain": "Managed security services onboarding; adjacent",
+   "pathway": "No work permit info in the posting",
+   "pay": "USD range only; no Canadian range posted",
+   "skills": "Backlog and telemetry skills fit; security services knowledge a gap"
   },
-  "summary": "Own the self-service customer onboarding experience across Arctic Wolf's managed security services.",
+  "summary": "Own the customer onboarding experience across Arctic Wolf's managed security products.",
   "level_guess": "Senior PM (≈ L5)",
   "people_mgmt": false,
   "work_mode": "remote",
   "must_haves": [
-   "Senior PM experience",
-   "Onboarding/process design",
-   "Cross-functional prioritization"
+   "Onboarding workflows",
+   "Backlog and Jira/Aha!",
+   "Telemetry-driven decisions"
   ],
   "flags": []
  },
  "9a7780977c69": {
   "fingerprint": "c646215d1e71e4fb",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:40:18+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 40,
-   "level": 45,
-   "domain": 40,
+   "level": 50,
+   "domain": 45,
    "pathway": 45,
-   "pay": 60,
-   "skills": 40
+   "pay": 80,
+   "skills": 55
   },
   "reasons": {
-   "role": "Technology enablement program role at a retailer",
-   "level": "Mid-senior program manager",
-   "domain": "Retail IT; unrelated",
-   "pathway": "No sponsorship info in posting; inferred neutral",
-   "pay": "CA$100-300K range too wide to trust",
-   "skills": "Enablement programs and change mgmt"
+   "role": "Developer enablement program management; little product ownership",
+   "level": "Years not stated",
+   "domain": "Internal developer platform adoption; general",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$300K, but the 100-300K band is very wide",
+   "skills": "Program and comms skills fit; dev-rel and docs expertise asked"
   },
-  "summary": "Run technology enablement programs at Aritzia.",
-  "level_guess": "Program Manager",
+  "summary": "Run developer enablement at Aritzia: docs hub, communities, hackathons and platform adoption tracking.",
+  "level_guess": "Program Manager (level unclear)",
   "people_mgmt": false,
   "work_mode": "unclear",
   "must_haves": [
    "Program management",
-   "Change enablement"
+   "Technical writing and docs",
+   "Developer feedback loops"
   ],
   "flags": [
-   "Very wide pay range"
+   "Very wide pay band"
   ]
  },
  "500b02b40f92": {
   "fingerprint": "4692d1fd8aba0b55",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:40:18+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 50,
-   "level": 60,
-   "domain": 65,
+   "level": 50,
+   "domain": 50,
    "pathway": 45,
-   "pay": 60,
+   "pay": 80,
    "skills": 40
   },
   "reasons": {
-   "role": "Cyber security TPM managing a roadmap, little product ownership",
-   "level": "Mid-senior TPM",
-   "domain": "Cybersecurity program; adjacent",
-   "pathway": "No sponsorship info in posting; inferred neutral",
-   "pay": "CA$100-300K range too wide to trust",
-   "skills": "Security roadmap coordination; partial match"
+   "role": "Technical program management of a security roadmap",
+   "level": "Years not stated",
+   "domain": "Cybersecurity risk reduction; adjacent to risk",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$300K, but the 100-300K band is very wide",
+   "skills": "Needs security technical depth and Jira admin expertise"
   },
-  "summary": "Manage Aritzia's integrated cybersecurity roadmap across internal teams.",
-  "level_guess": "TPM",
+  "summary": "Manage Aritzia's integrated cybersecurity roadmap, dependencies and security vendors.",
+  "level_guess": "TPM (level unclear)",
   "people_mgmt": false,
   "work_mode": "unclear",
   "must_haves": [
-   "TPM experience",
-   "Cybersecurity roadmap knowledge"
+   "Security program management",
+   "Cloud security and IAM concepts",
+   "Jira/JSM administration",
+   "SQL/APIs for risk metrics"
   ],
   "flags": [
-   "Very wide pay range"
+   "Very wide pay band"
   ]
  },
  "98336a3bf687": {
   "fingerprint": "abb8259191ac496c",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:40:18+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 50,
+   "role": 55,
    "level": 60,
-   "domain": 45,
+   "domain": 70,
    "pathway": 45,
-   "pay": 50,
-   "skills": 45
+   "pay": 80,
+   "skills": 50
   },
   "reasons": {
-   "role": "Digital shipping/returns program leadership, some strategy",
-   "level": "Senior PM/Manager, leads a team",
-   "domain": "E-commerce fulfilment experience; commerce-adjacent",
-   "pathway": "No sponsorship info in posting; inferred neutral",
-   "pay": "No pay range posted",
-   "skills": "Omni strategy and customer touchpoints"
+   "role": "Program owning shipping and returns strategy and tools",
+   "level": "5+ yrs; manager or senior program level",
+   "domain": "eCommerce post-purchase logistics; adjacent to your commerce work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Range read from description: top CA$300K, very wide band",
+   "skills": "Commerce fits; retail logistics experience asked"
   },
-  "summary": "Lead Aritzia's shipping and returns strategy across digital touchpoints.",
-  "level_guess": "Senior Program Manager",
-  "people_mgmt": true,
+  "summary": "Lead Aritzia's shipping and returns program and omni post-purchase experience.",
+  "level_guess": "Senior Program Manager (≈ L5)",
+  "people_mgmt": false,
   "work_mode": "unclear",
   "must_haves": [
-   "Program/ops leadership",
-   "E-commerce experience"
+   "5+ yrs omni/eCommerce/ops",
+   "Retail logistics exposure",
+   "Cross-functional leadership"
   ],
   "flags": [
-   "People management"
+   "Very wide pay band"
   ]
  },
  "f22b55e33c1b": {
   "fingerprint": "496786545b99eb4a",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:40:18+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 20,
-   "level": 60,
+   "role": 15,
+   "level": 50,
    "domain": 40,
    "pathway": 45,
-   "pay": 60,
-   "skills": 25
+   "pay": 80,
+   "skills": 20
   },
   "reasons": {
-   "role": "Solution architecture, not product",
-   "level": "Senior/Solution Architect",
-   "domain": "Retail digital architecture; unrelated",
-   "pathway": "No sponsorship info in posting; inferred neutral",
-   "pay": "CA$100-300K range too wide to trust",
-   "skills": "Enterprise architecture skills required"
+   "role": "Solution architecture, not a product job",
+   "level": "Senior or mid level; years not stated",
+   "domain": "Retail digital architecture; general",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$300K, but the 100-300K band is very wide",
+   "skills": "Needs hands-on architecture and integration experience"
   },
-  "summary": "Design Aritzia's digital architecture.",
-  "level_guess": "Senior SA",
+  "summary": "Design shared technical components and architecture for Aritzia's digital products.",
+  "level_guess": "Solution Architect (level unclear)",
   "people_mgmt": false,
   "work_mode": "unclear",
   "must_haves": [
-   "Enterprise architecture"
+   "Digital architecture",
+   "Enterprise integration patterns",
+   "Apigee/GCP/SAP CPI"
   ],
   "flags": [
-   "Very wide pay range",
-   "Not product management"
+   "Architecture role, not PM",
+   "Very wide pay band"
   ]
  },
  "98f0f8eda13f": {
@@ -10708,34 +10800,33 @@
  },
  "90ea1f5ace35": {
   "fingerprint": "d84ea4b1bd5cbca7",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:46:48+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 40,
    "level": 50,
-   "domain": 40,
+   "domain": 45,
    "pathway": 45,
    "pay": 50,
    "skills": 50
   },
   "reasons": {
-   "role": "Program manager for a founders-in-residence program at Mila",
-   "level": "Level unclear; no description provided",
-   "domain": "Description missing; AI research institute program",
-   "pathway": "No work permit info in posting (neutral)",
-   "pay": "No pay range found; not posted",
-   "skills": "Description missing; cannot confirm must-haves"
+   "role": "Program role for a founders programme; product ownership unclear",
+   "level": "No description; level unclear",
+   "domain": "Unclear without a description",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "No description to compare skills"
   },
-  "summary": "Run the Founders in Residence program at Mila in Montreal (no description available).",
-  "level_guess": "Unclear",
+  "summary": "Program manager for Mila's Founders in Residence program; no description was available.",
+  "level_guess": "Program Manager (level unclear)",
   "people_mgmt": false,
   "work_mode": "unclear",
-  "must_haves": [
-   "Description unavailable"
-  ],
+  "must_haves": [],
   "flags": [
-   "No description",
-   "Possibly French required"
+   "No description available",
+   "French may be required"
   ]
  },
  "7040fed278d0": {
@@ -14273,35 +14364,35 @@
  },
  "e25e6b1cf474": {
   "fingerprint": "a65816161b5d7be1",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:49:43+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
    "role": 75,
-   "level": 50,
-   "domain": 60,
-   "pathway": 55,
+   "level": 60,
+   "domain": 45,
+   "pathway": 45,
    "pay": 50,
    "skills": 55
   },
   "reasons": {
-   "role": "Product Owner delivering integration solutions",
-   "level": "Asks 5-8 yrs; delivery-focused scope",
-   "domain": "Integration and APIs are adjacent to payments/platforms",
-   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "role": "Product owner for automation solutions; backlog-heavy",
+   "level": "5-8 yrs; mid-senior PO",
+   "domain": "Internal automation and RPA; general",
+   "pathway": "No work permit info in the posting",
    "pay": "Pay not posted",
-   "skills": "Product ownership fits; integration depth unclear"
+   "skills": "PO skills fit; RPA/Pega and scrum certification asked"
   },
-  "summary": "Deliver business value for the Integration Solutions team as product owner.",
-  "level_guess": "Product Owner (~L4-L5)",
+  "summary": "Own vision and backlog for Scotiabank's integration and automation solutions.",
+  "level_guess": "Product Owner (≈ L4-L5)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "5-8 yrs product/project delivery",
-   "Regulatory compliance"
+   "5-8 yrs product/delivery",
+   "Product Owner certification or scrum",
+   "Backlog management"
   ],
-  "flags": [
-   "Delivery-heavy role"
-  ]
+  "flags": []
  },
  "a761d69e9d24": {
   "fingerprint": "2038abbe9f6b39ea",
@@ -14571,66 +14662,72 @@
  },
  "8ca0eb95b517": {
   "fingerprint": "1728f1770bc0bb73",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:49:43+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 40,
+   "role": 45,
    "level": 10,
    "domain": 85,
-   "pathway": 55,
-   "pay": 50,
-   "skills": 40
-  },
-  "reasons": {
-   "role": "Program coordination for AML transformation, not product",
-   "level": "Assistant Manager: junior support role",
-   "domain": "AML compliance overlaps your risk and compliance work",
-   "pathway": "No sponsorship info; large multinational bank (inferred)",
-   "pay": "Pay not posted",
-   "skills": "Compliance fits; coordination role is below you"
-  },
-  "summary": "Coordinate delivery and day-to-day support for Scotiabank's Global AML Transformation program.",
-  "level_guess": "Assistant Manager (below L5)",
-  "people_mgmt": false,
-  "work_mode": "hybrid",
-  "must_haves": [
-   "Program coordination",
-   "AML knowledge"
-  ],
-  "flags": [
-   "Well below your level"
-  ]
- },
- "55c5061351ce": {
-  "fingerprint": "96893a28bb01c000",
-  "rubric": "1.0",
-  "scored_at": "2026-10-15T05:49:43+00:00",
-  "subs": {
-   "role": 40,
-   "level": 60,
-   "domain": 90,
-   "pathway": 55,
+   "pathway": 45,
    "pay": 50,
    "skills": 55
   },
   "reasons": {
-   "role": "Fraud strategy and policy role, not product ownership",
-   "level": "Senior Manager; regional strategy authority",
-   "domain": "Application and identity fraud matches your fraud work",
-   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "role": "Project support on an AML platform; light product work",
+   "level": "Assistant manager; junior scope",
+   "domain": "AML compliance transformation, a direct match",
+   "pathway": "No work permit info in the posting",
    "pay": "Pay not posted",
-   "skills": "Fraud background fits; credit-risk focus differs"
+   "skills": "Risk and SQL fit; junior coordination role"
   },
-  "summary": "Set regional strategy for application and synthetic-identity fraud across Scotiabank's International Banking.",
-  "level_guess": "Senior Manager (~L5)",
+  "summary": "Support delivery of Scotiabank's Global AML Transformation program and platform design.",
+  "level_guess": "Assistant Manager (≈ L3)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "unclear",
   "must_haves": [
-   "3+ yrs fraud/credit risk",
-   "Fraud strategy"
+   "Project management",
+   "Risk management tools",
+   "SQL/Power BI"
   ],
   "flags": [
-   "Spanish preferred"
+   "Junior role"
+  ]
+ },
+ "55c5061351ce": {
+  "fingerprint": "96893a28bb01c000",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:10:16+00:00",
+  "subs": {
+   "role": 40,
+   "level": 60,
+   "domain": 95,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Fraud strategy and frameworks; little product ownership",
+   "level": "3+ yrs asked, though title is senior manager",
+   "domain": "Application and synthetic identity fraud, a direct match",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "Fraud fits; Spanish preferred and credit fraud background asked"
+  },
+  "summary": "Set application fraud strategy for Scotiabank International Banking and lead a team.",
+  "level_guess": "Senior Manager (≈ L5, people manager)",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3+ yrs fraud/credit risk",
+   "Strategy implementation",
+   "Multi-country influence"
+  ],
+  "flags": [
+   "Spanish preferred",
+   "Latin America focus",
+   "Manages a team"
   ]
  },
  "90cdc7646ad9": {
@@ -14727,35 +14824,37 @@
  },
  "98daee4df8bb": {
   "fingerprint": "729647825f1ceb18",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:49:43+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 25,
-   "level": 50,
-   "domain": 50,
-   "pathway": 55,
+   "role": 15,
+   "level": 60,
+   "domain": 40,
+   "pathway": 45,
    "pay": 50,
-   "skills": 30
+   "skills": 25
   },
   "reasons": {
-   "role": "Marketing planning role, not product management",
-   "level": "Senior Manager leading 2 managers",
-   "domain": "Banking marketing is general consumer",
-   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "role": "Marketing planning and campaign delivery, not product",
+   "level": "Senior manager with 2 manager reports",
+   "domain": "Banking marketing campaigns; unrelated",
+   "pathway": "No work permit info in the posting",
    "pay": "Pay not posted",
-   "skills": "Needs marketing planning background you lack"
+   "skills": "Needs campaign marketing and martech experience"
   },
-  "summary": "Lead acquisition and engagement marketing planning for Scotiabank's Canadian Banking.",
-  "level_guess": "Senior Manager (~L5)",
+  "summary": "Lead marketing planning and campaign delivery for Scotiabank Canadian Banking with two manager reports.",
+  "level_guess": "Senior Manager, Marketing (≈ L6, people manager)",
   "people_mgmt": true,
-  "work_mode": "hybrid",
+  "work_mode": "onsite",
   "must_haves": [
-   "Marketing planning",
-   "Team leadership"
+   "Campaign planning and delivery",
+   "Marketing measurement",
+   "Martech stack"
   ],
   "flags": [
-   "Manages 2 managers",
-   "Marketing role"
+   "Marketing role",
+   "Manages 2 managers"
   ]
  },
  "f8f36cb1f14e": {
@@ -14857,35 +14956,37 @@
  },
  "6f52c4cc6ada": {
   "fingerprint": "7365069f035b875b",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:49:43+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 75,
-   "level": 35,
+   "role": 25,
+   "level": 60,
    "domain": 75,
-   "pathway": 55,
+   "pathway": 45,
    "pay": 50,
-   "skills": 35
+   "skills": 15
   },
   "reasons": {
-   "role": "Product lead for tax reporting products, product-heavy",
-   "level": "Director scope; assigned tax operations",
-   "domain": "FATCA/CRS regulatory work overlaps your compliance work",
-   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "role": "Tax operations compliance lead, not a product job",
+   "level": "Director title; tax specialist scope",
+   "domain": "Tax regulatory compliance (FATCA/CRS); adjacent to compliance",
+   "pathway": "No work permit info in the posting",
    "pay": "Pay not posted",
-   "skills": "Needs tax operations expertise you lack"
+   "skills": "Needs deep FATCA, CRS and tax reporting expertise"
   },
-  "summary": "Lead tax products for FATCA, CRS and cross-border tax regimes at Scotiabank.",
-  "level_guess": "Director (~L6+)",
+  "summary": "Lead tax operations compliance for FATCA, CRS and cross-border tax reporting at Scotiabank.",
+  "level_guess": "Director, Tax Ops (≈ L6)",
   "people_mgmt": false,
-  "work_mode": "hybrid",
+  "work_mode": "onsite",
   "must_haves": [
-   "Tax operations (FATCA/CRS)",
-   "Product leadership"
+   "FATCA/CRS/QI expertise",
+   "Canadian tax reporting",
+   "Accounting/reconciliation"
   ],
   "flags": [
-   "Director scope",
-   "Tax expertise needed"
+   "Tax specialist role",
+   "~10% travel"
   ]
  },
  "c952bc235f0e": {
@@ -14922,34 +15023,36 @@
  },
  "8495d7a84e04": {
   "fingerprint": "216cb80f86a47588",
+  "profile_key": "555fcc7e615a",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:49:43+00:00",
+  "scored_at": "2026-10-16T11:10:16+00:00",
   "subs": {
-   "role": 70,
-   "level": 40,
-   "domain": 75,
-   "pathway": 55,
+   "role": 60,
+   "level": 45,
+   "domain": 60,
+   "pathway": 45,
    "pay": 50,
-   "skills": 50
+   "skills": 35
   },
   "reasons": {
-   "role": "Product owner on card and lending system implementations",
-   "level": "Manager under a Senior Manager; delivery scope",
-   "domain": "Credit cards and lending fit financial services",
-   "pathway": "No sponsorship info; large multinational bank (inferred)",
+   "role": "Supporting product owner on card system implementation",
+   "level": "Supports a senior PO; below your target",
+   "domain": "Credit cards and lending systems; adjacent to fintech",
+   "pathway": "No work permit info in the posting",
    "pay": "Pay not posted",
-   "skills": "Asks 5 yrs lending/banking; delivery-oriented"
+   "skills": "Needs 5 yrs lending experience and TSYS knowledge"
   },
-  "summary": "Own requirements for credit card and line-of-credit system implementations.",
-  "level_guess": "Manager PO (~L4)",
+  "summary": "Support the backlog and implementation of Scotiabank's core credit card and lending system.",
+  "level_guess": "Product Owner (≈ L4)",
   "people_mgmt": false,
-  "work_mode": "onsite",
+  "work_mode": "hybrid",
   "must_haves": [
-   "5 yrs lending and banking",
-   "Vendor management"
+   "5 yrs lending/banking",
+   "Credit card product knowledge",
+   "TSYS (asset)"
   ],
   "flags": [
-   "Weekly onsite at Scarborough"
+   "Weekly on-site in Scarborough"
   ]
  },
  "672fca6d79e7": {
