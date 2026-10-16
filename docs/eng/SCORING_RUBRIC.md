@@ -3,7 +3,7 @@
 Used by Claude to score each role against the candidate profile (PRD Appendix E, R6–R9). Every sub-score is 0–100 with a one-line reason a person can check against the posting. **Missing information scores 50 (neutral) and says so; it never hides a job (D-021).** Weights live in `config/scoring.json` and each user's Profile; the overall score is computed in the app at read time.
 
 ## Inputs
-- The candidate profile (stored in the app's private database; a working copy is passed to the scorer, never committed). Read its `current` (employer, title, level), `domains`, `preferences` (target level, domains wanted, people management), `skills` and `scope_signals`. Nothing about any one person is written in this rubric: everything comes from the profile.
+- The candidate profile (stored in the app's private database; a working copy is passed to the scorer, never committed). Read its `current` (employer, title, level), `domains`, `preferences` (target level, domains wanted, people management, and from onboarding `role_wanted` in their own words and `role_families` picked), `skills` and `scope_signals`. Nothing about any one person is written in this rubric: everything comes from the profile. A new profile may hold only onboarding answers (no resume): score from what's there and say so in `reasons` ("based on your answers; add experience for sharper scores") rather than guessing.
 - One posting: title, company, location, pay as posted (with type), the full description.
 
 ## Sub-scores

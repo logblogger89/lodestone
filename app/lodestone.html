@@ -131,6 +131,12 @@ details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
 .tmeta{display:flex;flex-direction:column;gap:2px;flex:1 1 260px;min-width:0}
 .tmeta span{font-size:13px;color:var(--muted)}
 .tbtns{display:flex;gap:6px}
+.xpways{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:8px 0}
+.xpway{display:flex;flex-direction:column;gap:6px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--surface)}
+.xpway span{font-size:13px;color:var(--muted)}
+.xpbuild{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:8px 0;background:var(--bg)}
+h4.understood{margin:16px 0 2px}
+.sbanner.nudge{border-left-color:var(--accent)}
 .obbanner{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;background:var(--surface);padding:12px 14px;margin:0 0 14px}
 .obbanner>div{flex:1 1 280px;min-width:0}
 .obbanner span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
@@ -1110,7 +1116,7 @@ function viewDigest(){
   if(S.offline) body=offlineState();
   else if(!S.ready) body=`<div class="empty"><h2>Loading your jobs…</h2><p>Reading Lodestone's database.</p></div>`;
   else if(!live.length) body=`<div class="empty"><h2>No jobs yet</h2><p>Roles appear after the next update (about 7am, 1pm and 6pm New York time).</p></div>`;
-  else if(isToday) body=obBanner()+viewToday();
+  else if(isToday) body=obBanner()+profileNudge()+viewToday();
   else if(!all.length) body=`<div class="empty"><h2>Nothing matches these filters</h2><p>Try "All of Canada", turn on more role types, or clear the search.</p></div>`;
   else body=`<div class="list">
       ${fresh.length?`<div class="section-label">New since your last visit</div>`:""}
@@ -1340,15 +1346,73 @@ function viewCompanies(){
 /* ---------- Profile (D-060): everything personal lives here, so anyone can use Lodestone with their own resume and preferences ---------- */
 const PROFILE_FIELDS=[["headline","Headline",1],["summary","Summary",4],["domains","Your domains (one per line)",5],["skills","Skills (one per line)",5],["scope_signals","Scope highlights (one per line)",5]];
 const RESUME_TYPES="application/pdf,text/plain,text/markdown,.pdf,.txt,.md";
+/* Your experience, three ways (P1-S7, PRD R27, UX §8.4): offered, never required. */
+const hasExperience=p=>!!(p&&(p.resume||p.builder||p.headline||(p.summary&&p.summary.length)));
 function resumeBlock(p){
-  const r=(p&&p.resume)||null;
-  const status=!r?"No resume yet? That's fine. Upload one, paste a rough draft or a few lines about your work, or skip it: the fields below are enough to start."
-    :r.status==="read"?`Read ${esc(ago(parseWhen(r.read_at)))}: the fields below came from it. Fields you edit are kept.`
-    :`Uploaded ${esc(ago(parseWhen(r.uploaded_at)))}. Claude reads it at the next update (about 7am, 1pm or 6pm New York time) and fills in your profile.`;
-  return `<div class="field"><label>Resume</label>
-    <p class="note">${r&&r.name?`<b>${esc(r.name)}</b> · `:""}${status}</p>
-    <div class="row">${S.assets?`<label class="btn" for="cvfile">${r?"Replace resume":"Upload resume"} (PDF or text)</label><input type="file" id="cvfile" accept="${RESUME_TYPES}" hidden>`:`<span class="note">Uploading needs Lodestone open in claude.ai as its owner. You can paste the text instead.</span>`}</div>
-    <details class="quotes"${r&&r.text?" open":""}><summary>Or paste your resume as text</summary><textarea id="cvtext" rows="6" placeholder="Paste the full text of your resume">${esc((r&&r.text)||"")}</textarea></details></div>`;
+  const r=(p&&p.resume)||null, b=(p&&p.builder)||null, ans=(b&&b.answers)||{};
+  const status=r?(r.status==="read"?`Your resume${r.name?` (${esc(r.name)})`:""} was read ${esc(ago(parseWhen(r.read_at)))}.`
+      :`Resume${r.name?` (${esc(r.name)})`:""} saved ${esc(ago(parseWhen(r.uploaded_at)))}. Lodestone reads it at the next update (within about 6 hours) and fills in the fields below.`)
+    :b?(b.status==="read"?`Built from your answers ${esc(ago(parseWhen(b.read_at)))}.`:`Your answers are saved. Lodestone builds your profile from them at the next update (within about 6 hours).`)
+    :"No resume needed. Pick whichever is easiest; you can change or delete it any time.";
+  const open=S.xpOpen||"";
+  return `<div class="field"><label>Your experience</label>
+    <p class="note">${status}</p>
+    <p class="note">A rough draft is fine. Only you can see this, it's never sent to employers, and you can delete it any time.</p>
+    <div class="xpways">
+      <div class="xpway"><b>Upload a resume</b><span>PDF or text file</span>${S.assets?`<label class="btn" for="cvfile">${r&&r.asset_id?"Replace file":"Upload"}</label><input type="file" id="cvfile" accept="${RESUME_TYPES}" hidden>`:`<span class="note">Needs Lodestone open in claude.ai. Paste the text instead.</span>`}</div>
+      <div class="xpway"><b>Paste any text</b><span>Even a LinkedIn "About" section and job titles</span><button class="btn" data-xp="paste" aria-expanded="${open==="paste"||!!(r&&r.text)}">Paste text</button></div>
+      <div class="xpway"><b>Build it with me</b><span>Five short questions, about two minutes</span><button class="btn" data-xp="build" aria-expanded="${open==="build"}">Start</button></div>
+    </div>
+    <div id="xp-paste"${open==="paste"||(r&&r.text)?"":" hidden"}><label for="cvtext">Your resume or notes, as text</label><textarea id="cvtext" rows="6" placeholder="Paste anything: a resume, a draft, a list of past roles">${esc((r&&r.text)||"")}</textarea><span class="note">Saved when you press Save profile.</span></div>
+    <div id="xp-build" class="xpbuild"${open==="build"?"":" hidden"}>
+      <div class="field"><label for="b-role">1. What's your current role and level?</label><input id="b-role" value="${esc(ans.role||"")}" placeholder="e.g. Senior product marketing manager"></div>
+      <div class="field"><label for="b-years">2. Years of work experience</label><input id="b-years" type="number" min="0" max="50" value="${esc(ans.years??"")}"></div>
+      <div class="field"><label for="b-win">3. Your biggest win, in a sentence or two</label><textarea id="b-win" rows="2" placeholder="e.g. Launched a payments product used by 2 million people">${esc(ans.win||"")}</textarea></div>
+      <div class="field"><label for="b-domains">4. Domains you know (comma-separated)</label><input id="b-domains" value="${esc(ans.domains||"")}" placeholder="e.g. fintech, payments, consumer apps"></div>
+      <div class="field"><label for="b-tools">5. Tools and skills (comma-separated)</label><input id="b-tools" value="${esc(ans.tools||"")}" placeholder="e.g. SQL, Figma, A/B testing"></div>
+      <div class="row"><button class="btn primary" data-act="savebuild">Save my answers</button></div>
+    </div>
+    ${hasExperience(p)?`<div class="row"><button class="link plink" data-act="delxp">Delete my experience</button></div>`:""}</div>`;
+}
+function builderAnswers(){
+  const g=id=>(document.getElementById(id)||{}).value||"";
+  const a={role:g("b-role").trim(),years:g("b-years").trim(),win:g("b-win").trim(),domains:g("b-domains").trim(),tools:g("b-tools").trim()};
+  return Object.values(a).some(Boolean)?a:null;
+}
+function applyBuilder(prof,a){   // instant value from the answers; the next run writes the headline and summary
+  const list=x=>x.split(/[,\n]/).map(t=>t.trim()).filter(Boolean);
+  prof.builder={answers:a,status:"new",saved_at:new Date().toISOString()};
+  prof.current={...(prof.current||{})};
+  if(a.role&&!prof.current.title) prof.current.title=a.role;
+  if(a.years&&isFinite(+a.years)) prof.experience_years=+a.years;
+  if(a.domains&&!(prof.domains||[]).length) prof.domains=list(a.domains);
+  if(a.tools&&!(prof.skills||[]).length) prof.skills=list(a.tools);
+  if(a.win&&!(prof.scope_signals||[]).length) prof.scope_signals=[a.win];
+  return prof;
+}
+async function saveBuilder(){
+  const a=builderAnswers(); if(!a){toast("Answer at least one question first.");return}
+  if(!S.db||!S.canWrite){toast("Your profile saves inside claude.ai only.");return}
+  const prof=applyBuilder({...(S.profile||{version:0})},a); prof.version=(+prof.version||0)+1; prof.edited_at=new Date().toISOString();
+  try{await S.db.doc("profile/main").set(prof);S.profile=prof;S.xpOpen="";S._editingPrefs=false;render();toast("Saved. Lodestone builds your profile from these at the next update (within about 6 hours).")}
+  catch(e){toast("Couldn't save. Try again.");console.warn(e)}
+}
+async function deleteExperience(btn){
+  if(btn&&btn.dataset.armed!=="1"){btn.dataset.armed="1";btn.textContent="Tap again to delete your resume, answers and the fields they filled";return}
+  const prof={...(S.profile||{})};
+  ["resume","builder","headline","summary","domains","skills","scope_signals","experience_years"].forEach(k=>delete prof[k]);
+  prof.version=(+prof.version||0)+1; prof.edited_at=new Date().toISOString();
+  try{await S.db.doc("profile/main").set(prof);S.profile=prof;S._editingPrefs=false;render();toast("Deleted. Your experience is no longer in Lodestone.")}
+  catch(e){toast("Couldn't delete. Try again.");console.warn(e)}
+}
+/* After first value (3+ roles triaged): offer the profile as an upgrade, once, dismissible. */
+const asked=id=>(S.prefs.asked||[]).includes(id);
+function markAsked(id,extra){return savePatch({asked:[...(S.prefs.asked||[]),id].slice(-200),...(extra||{})})}
+function profileNudge(){
+  if(!S.ready||!S.canWrite||asked("profile-nudge")||hasExperience(S.profile)) return "";
+  if(Object.values(S.triage).filter(t=>t&&t.status).length<3) return "";
+  return `<div class="sbanner nudge" role="region" aria-label="Sharper matches"><div><strong>Want sharper matches?</strong><span class="note">Add your experience and Lodestone scores every role against it. A rough draft is fine, and no resume is needed.</span></div>
+    <button class="btn primary" data-act="gobuild">Build it with me</button><button class="btn" data-act="goxp">Upload or paste</button><button class="btn" data-ask-no="profile-nudge">Not now</button></div>`;
 }
 async function uploadResume(file){
   if(!file) return;
@@ -1407,6 +1471,7 @@ function viewSettings(){
     </div>
     <div class="field"><label for="pf-work">Work permit</label><select id="pf-work">${Object.entries(WORK_STATUS).map(([k,l])=>`<option value="${k}"${(pr.work_status||"needs_permit")===k?" selected":""}>${esc(l)}</option>`).join("")}</select>
       <span class="note">Lodestone is built first for people who need a work permit for Canada. If you don't need one, the work-permit checks step aside.</span></div>
+    ${(pr.resume&&pr.resume.status==="read")||(pr.builder&&pr.builder.status==="read")?`<h4 class="understood">Here's what we understood</h4><p class="note">Every line is editable. Fix anything that's wrong or undersells you; your edits are kept.</p>`:""}
     ${PROFILE_FIELDS.map(([k,l,rows])=>`<div class="field"><label for="pf-${k}">${l}</label><textarea id="pf-${k}" rows="${rows}" style="min-height:${rows>1?110:44}px">${esc(val(k))}</textarea></div>`).join("")}
   </section>
   <section class="panel"><h4>What you're looking for</h4>
@@ -1507,6 +1572,11 @@ document.addEventListener("click",e=>{
   if(d.costatus){S.coStatus=d.costatus;render();return}
   if(d.act==="expand"){S.expanded=true;render();return}
   if(d.act==="moretoday"){moreToday();return}
+  if(d.xp){const box=document.getElementById("xp-"+d.xp);if(box){box.hidden=!box.hidden;el.setAttribute("aria-expanded",String(!box.hidden));if(!box.hidden)box.querySelector("input,textarea")?.focus()}S.xpOpen=box&&!box.hidden?d.xp:"";return}
+  if(d.act==="savebuild"){saveBuilder();return}
+  if(d.act==="delxp"){deleteExperience(el);return}
+  if(d.act==="gobuild"||d.act==="goxp"){S.xpOpen=d.act==="gobuild"?"build":"";setView("settings");if(d.act==="goxp")document.querySelector(".xpways")?.scrollIntoView({block:"center"});else document.getElementById("b-role")?.focus();return}
+  if(d.askNo){markAsked(d.askNo);return}
   if(d.act==="obbanner"){lsSet("obBannerOff",true);render();return}
   if(d.act==="reonboard"){S._obForce=true;S._obDone=false;S.ob=null;setView("digest");return}
   if(d.ob){obCapture();const o=obState();
@@ -1584,6 +1654,7 @@ async function savePrefs(){
   prof.location_now=val("pf-where").value.trim();prof.work_status=val("pf-work").value;
   PROFILE_FIELDS.forEach(([k])=>{const v=val("pf-"+k).value.trim();prof[k]=Array.isArray((S.profile||{})[k])||k!=="headline"&&k!=="summary"?v.split("\n").map(x=>x.trim()).filter(Boolean):v});
   prof.preferences={...(prof.preferences||{}),domains_wanted:val("pf-dw").value.trim()};
+  const ba=document.getElementById("xp-build")&&!document.getElementById("xp-build").hidden?builderAnswers():null; if(ba) applyBuilder(prof,ba);
   const cv=val("cvtext"); if(cv&&cv.value.trim()&&cv.value.trim()!==((prof.resume||{}).text||"")) prof.resume={...(prof.resume||{}),text:cv.value.trim().slice(0,40000),uploaded_at:new Date().toISOString(),status:"uploaded"};
   prof.version=(+prof.version||0)+1;prof.edited_at=new Date().toISOString();
   try{await S.db.doc("settings/prefs").set(body);await S.db.doc("profile/main").set(prof);S._editingPrefs=false;S.prefsRaw=body;S.prefs={...DEFAULT_PREFS,...body};if(body.learn_reading===false)flushReading();refreshToday();lsSet("welcomed",true);render();toast("Profile saved. Today's list now follows it.")}

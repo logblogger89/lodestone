@@ -53,6 +53,11 @@ standard library only, so no installs are needed.
    anything the user typed after the last read (`edited_at` later than `resume.read_at`), never touch `preferences`,
    `work_status` or app settings, then write it back with `ArtifactData update profile/main` (if_version) and set
    `resume.status` = `read`, `resume.read_at` = now. The resume and profile never go into the repo or the report.
+   **If `builder.status` is `new`** ("Build it with me" answers, P1-S7): do the same from `builder.answers` (role and
+   level, years, biggest win, domains, tools), writing a short `headline` and `summary` in plain words and filling empty
+   fields only, then set `builder.status` = `read`, `builder.read_at` = now. The app shows "Here's what we understood"
+   once either is read. `onboarding` and `preferences.role_wanted` / `role_families` are the user's own answers: use
+   them when scoring (role type wanted), never overwrite them.
    Then `python3 -m lodestone score prepare --profile <profile file>` writes batches of roles that need a (re)score: new or
    changed roles, a new rubric version, and up to 150 a day (across all runs) scored against an older profile (it
    reports how many still wait). Score each batch against `docs/eng/SCORING_RUBRIC.md` and `config/scoring.json` (for large runs, one sub-agent per
