@@ -178,6 +178,26 @@
    "id": "1da6681a70c5",
    "people_mgmt": false,
    "note": "Mastercard Manager, PM (Agentic Commerce): 'Manager' is Mastercard's level name; the posting describes product ownership, no direct reports"
+  },
+  {
+   "id": "8ffa50dc6b9c",
+   "pay": [
+    145900,
+    197400,
+    null
+   ],
+   "pay_kind": "base",
+   "note": "Jobber Senior Product Manager, Voice: 'minimum annual salary of $145,900, a midpoint of $171,600, and a maximum salary of $197,400' (added 10-16: the reader missed this wording)"
+  },
+  {
+   "id": "8b10f4db22b7",
+   "pay": [
+    145900,
+    197400,
+    "CAD"
+   ],
+   "pay_kind": "base",
+   "note": "Jobber Senior Product Manager, Supply: 'minimum annual salary of $145,900, a midpoint of $171,600, and a maximum salary of $197,400' (added 10-16: the reader missed this wording)"
   }
  ]
 }

@@ -26,6 +26,16 @@ US = ["united states", "u.s.", " us ", "usa", "new york", "nyc", "san francisco"
       "virginia", "illinois", "massachusetts", "us-based", "us location", "eligible us"]
 
 
+# "a minimum annual salary of $145,900, a midpoint of $171,600, and a maximum salary of $197,400" (Jobber and others)
+_MINMAX = re.compile(rf"minimum(?: annual)? (?:salary|pay|base(?: salary| pay)?)(?: is)?(?: of)?\s*(?P<a>(?:{_CUR})?\s?(?:{_NUM}))"
+                     rf"(?P<mid>.{{0,120}}?)maximum(?: annual)? (?:salary|pay|base(?: salary| pay)?)(?: is)?(?: of)?\s*(?P<b>(?:{_CUR})?\s?(?:{_NUM}))", re.I)
+
+
+def _minmax(s: str) -> str:
+    """Rewrite a minimum/maximum sentence as a plain range the range reader understands."""
+    return _MINMAX.sub(lambda m: f"salary range {m.group('a')} - {m.group('b')}{' CAD' if 'CAD' in m.group('mid') else ''}", s)
+
+
 def _amount(s: str) -> float | None:
     s = s.strip().replace(" ", "")
     k = s[-1:].lower() == "k"
@@ -190,6 +200,7 @@ def from_text(text: str) -> list[dict]:
     prev = (None, None)
     recent: list[str] = []                                    # the lines just above: headings like "Base pay range"
     for s in _sentences(text or ""):
+        s = _minmax(s)
         context = " ".join(recent[-2:])
         recent.append(s)
         here = _label(s)

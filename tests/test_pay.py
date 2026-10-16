@@ -47,6 +47,14 @@ class TestPay(unittest.TestCase):
         self.assertEqual(r["source"], "field")
 
 
+    def test_minimum_midpoint_maximum_wording(self):
+        from lodestone import pay
+        r = pay.from_text("This role has a minimum annual salary of $145,900, a midpoint of $171,600, and a maximum salary of $197,400.")
+        self.assertEqual((r[0]["min"], r[0]["max"]), (145900, 197400))
+        r = pay.from_text("Canada: minimum annual salary of $145,900 CAD, a midpoint of $171,600, and a maximum salary of $197,400 CAD.")
+        self.assertEqual((r[0]["min"], r[0]["max"], r[0]["currency"]), (145900, 197400, "CAD"))
+
+
 if __name__ == "__main__":
     unittest.main()
 

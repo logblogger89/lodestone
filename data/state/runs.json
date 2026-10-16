@@ -14,18 +14,18 @@
    "postings": 18
   },
   "jobs:ashby": {
-   "at": "2026-10-16T10:59:25+00:00",
-   "postings": 1869
+   "at": "2026-10-16T11:08:19+00:00",
+   "postings": 42
   },
   "jobs:lever": {
    "at": "2026-10-16T11:03:51+00:00",
    "postings": 3
   },
   "jobs": {
-   "at": "2026-10-16T11:04:28+00:00",
-   "sources_ok": 9,
+   "at": "2026-10-16T11:08:19+00:00",
+   "sources_ok": 1,
    "sources_failed": 0,
-   "canada_postings": 66,
+   "canada_postings": 39,
    "candidates": 631
   },
   "jobs:google": {
@@ -145,9 +145,9 @@
    "postings": 97
   },
   "scoring": {
-   "at": "2026-10-15T13:04:08+00:00",
+   "at": "2026-10-16T11:05:08+00:00",
    "rubric": "1.0",
-   "scored": 546
+   "scored": 649
   },
   "signals": {
    "at": "2026-10-15T12:58:55+00:00",
@@ -161,40 +161,6 @@
   }
  },
  "history": [
-  {
-   "component": "jobs:adp",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 6
-  },
-  {
-   "component": "jobs:hibob",
-   "at": "2026-10-15T20:26:18+00:00",
-   "postings": 74
-  },
-  {
-   "component": "jobs",
-   "at": "2026-10-15T20:26:18+00:00",
-   "sources_ok": 188,
-   "sources_failed": 2,
-   "canada_postings": 10753,
-   "candidates": 545
-  },
-  {
-   "component": "source_index",
-   "at": "2026-10-16T10:55:03+00:00",
-   "companies": 210,
-   "indexed": 210
-  },
-  {
-   "component": "jobs:ashby",
-   "at": "2026-10-16T10:59:25+00:00",
-   "postings": 1869
-  },
-  {
-   "component": "jobs:lever",
-   "at": "2026-10-16T10:59:25+00:00",
-   "postings": 1400
-  },
   {
    "component": "jobs:smartrecruiters",
    "at": "2026-10-16T10:59:25+00:00",
@@ -437,6 +403,44 @@
    "sources_ok": 9,
    "sources_failed": 0,
    "canada_postings": 66,
+   "candidates": 631
+  },
+  {
+   "component": "scoring",
+   "at": "2026-10-16T11:04:59+00:00",
+   "rubric": "1.0",
+   "scored": 603
+  },
+  {
+   "component": "scoring",
+   "at": "2026-10-16T11:05:08+00:00",
+   "rubric": "1.0",
+   "scored": 649
+  },
+  {
+   "component": "jobs:ashby",
+   "at": "2026-10-16T11:07:53+00:00",
+   "postings": 42
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-16T11:07:53+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_postings": 39,
+   "candidates": 631
+  },
+  {
+   "component": "jobs:ashby",
+   "at": "2026-10-16T11:08:19+00:00",
+   "postings": 42
+  },
+  {
+   "component": "jobs",
+   "at": "2026-10-16T11:08:19+00:00",
+   "sources_ok": 1,
+   "sources_failed": 0,
+   "canada_postings": 39,
    "candidates": 631
   }
  ]

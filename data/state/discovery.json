@@ -2961,7 +2961,7 @@
    "name": "Apply Digital ULC",
    "routes": {
     "lmia": "3 approved tech/product hires 2024Q2–2025Q2 (3 via Global Talent Stream); British Columbia; top roles: Database analysts and data administrators, Web designers",
-    "search": "Senior Product Manager, Toronto hybrid (Lever)"
+    "search": "Senior Product Manager, Toronto (Lever)"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -2972,7 +2972,7 @@
    "lmia_gts": 3,
    "board": null,
    "probed_at": "2026-10-15T08:36:00+00:00",
-   "careers_url": "https://jobs.lever.co/applydigital",
+   "careers_url": "https://jobs.lever.co/applydigital/b737211f-e227-42a0-925e-ebcacd98c040",
    "kind": "services",
    "why": "Digital agency/consultancy: client work rather than in-house product.",
    "verdict": "skip"
@@ -8170,7 +8170,7 @@
    "name": "Mejuri",
    "routes": {
     "search": "Senior Product Manager (contract), Toronto (web search)",
-    "vc": "Real Ventures portfolio; 201–1,000 staff; 172 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
+    "vc": "Real Ventures portfolio; 201–1,000 staff; 174 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:42:46+00:00",
@@ -8458,7 +8458,7 @@
   "super-com": {
    "name": "Super.com",
    "routes": {
-    "vc": "Inovia Capital portfolio; 51–200 staff; 16 open jobs; Toronto, ON, Canada"
+    "vc": "Inovia Capital portfolio; 51–200 staff; 19 open jobs; Toronto, ON, Canada"
    },
    "status": "reviewed",
    "first_found": "2026-10-15T08:45:15+00:00",
@@ -8588,7 +8588,7 @@
   "city-waterloo": {
    "name": "City of Waterloo",
    "routes": {
-    "vc": "Communitech portfolio; 201–1,000 staff; 7 open jobs; Waterloo, ON, Canada"
+    "vc": "Communitech portfolio; 201–1,000 staff; 6 open jobs; Waterloo, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8603,7 +8603,7 @@
   "conestoga-college": {
    "name": "Conestoga College",
    "routes": {
-    "vc": "Communitech portfolio; 1,000+ staff; 7 open jobs; Kitchener, ON, Canada"
+    "vc": "Communitech portfolio; 1,000+ staff; 8 open jobs; Kitchener, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8618,7 +8618,7 @@
   "dematic": {
    "name": "Dematic",
    "routes": {
-    "vc": "Communitech portfolio; size unknown; 14 open jobs; Mississauga, ON, Canada"
+    "vc": "Communitech portfolio; size unknown; 18 open jobs; Mississauga, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8633,7 +8633,7 @@
   "ey": {
    "name": "EY",
    "routes": {
-    "vc": "Communitech portfolio; size unknown; 49 open jobs; Toronto, ON, Canada, Calgary, AB, Canada"
+    "vc": "Communitech portfolio; size unknown; 27 open jobs; Toronto, ON, Canada, Calgary, AB, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8649,7 +8649,7 @@
   "fidus-systems": {
    "name": "Fidus Systems",
    "routes": {
-    "vc": "Communitech portfolio; 51–200 staff; 7 open jobs; Kanata, Ottawa, ON, Canada, Ottawa, ON, Canada"
+    "vc": "Communitech portfolio; 51–200 staff; 8 open jobs; Kanata, Ottawa, ON, Canada, Ottawa, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8704,7 +8704,7 @@
   "kpmg": {
    "name": "KPMG Canada",
    "routes": {
-    "vc": "Communitech portfolio; size unknown; 430 open jobs; Toronto, ON, Canada, Calgary, AB, Canada"
+    "vc": "Communitech portfolio; size unknown; 441 open jobs; Toronto, ON, Canada, Calgary, AB, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8750,7 +8750,7 @@
   "perimeter-institute": {
    "name": "Perimeter Institute",
    "routes": {
-    "vc": "Communitech portfolio; 201–1,000 staff; 37 open jobs; Waterloo, ON, Canada, Waterloo, CA, USA"
+    "vc": "Communitech portfolio; 201–1,000 staff; 39 open jobs; Waterloo, ON, Canada, Waterloo, CA, USA"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8780,7 +8780,7 @@
   "toronto-metropolitan-university": {
    "name": "Toronto Metropolitan University",
    "routes": {
-    "vc": "Communitech portfolio; 1,000+ staff; 23 open jobs; Toronto, ON, Canada"
+    "vc": "Communitech portfolio; 1,000+ staff; 109 open jobs; Toronto, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8795,7 +8795,7 @@
   "university-waterloo": {
    "name": "University of Waterloo (UW)",
    "routes": {
-    "vc": "Communitech portfolio; size unknown; 107 open jobs; Waterloo, ON, Canada"
+    "vc": "Communitech portfolio; size unknown; 105 open jobs; Waterloo, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8810,7 +8810,7 @@
   "wilfrid-laurier-university": {
    "name": "Wilfrid Laurier University (WLU)",
    "routes": {
-    "vc": "Communitech portfolio; 1,000+ staff; 18 open jobs; Waterloo, ON, Canada, Brantford, ON, Canada"
+    "vc": "Communitech portfolio; 1,000+ staff; 20 open jobs; Waterloo, ON, Canada, Brantford, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -9114,7 +9114,7 @@
   "transit": {
    "name": "Transit",
    "routes": {
-    "vc": "Real Ventures portfolio; 201–1,000 staff; 2 open jobs; Montréal-Nord, Montreal, QC, Canada, Montreal, QC, Canada"
+    "vc": "Real Ventures portfolio; 201–1,000 staff; 3 open jobs; Montréal-Nord, Montreal, QC, Canada, Montreal, QC, Canada"
    },
    "status": "reviewed",
    "first_found": "2026-10-15T08:45:32+00:00",
@@ -9169,7 +9169,103 @@
    "brand": "Zeffy",
    "verdict": "suggest",
    "display": "Zeffy"
+  },
+  "pine": {
+   "name": "Pine",
+   "routes": {
+    "vc": "Inovia Capital portfolio; 51–200 staff; 3 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
+   },
+   "status": "reviewed",
+   "first_found": "2026-10-16T11:05:51+00:00",
+   "careers_url": "https://careers.inovia.vc/companies/pine",
+   "domain": "pine.ca",
+   "about": "Pine is a real estate technology company transforming homeownership by delivering a digital-first, direct-to-consumer platform for mortgages. The Pine platform encompasses real estate search, mortgage origination, servicing, and other home ",
+   "board": {
+    "platform": "greenhouse",
+    "slug": "pine",
+    "confidence": "high"
+   },
+   "jobs_total": 4,
+   "jobs_canada": 4,
+   "roles_canada": 1,
+   "sample_roles": [
+    "BizOps Analyst - Winter 2027 (Toronto - ON - Canada)"
+   ],
+   "probed_at": "2026-10-16T11:06:36+00:00",
+   "segment": "Canadian fintech",
+   "why": "Toronto mortgage-tech startup backed by Canadian VCs; only a BizOps intern role open today, worth watching for PM roles.",
+   "brand": "Pine",
+   "verdict": "suggest",
+   "display": "Pine"
+  },
+  "routethis": {
+   "name": "RouteThis",
+   "routes": {
+    "vc": "Inovia Capital portfolio; 51–200 staff; 3 open jobs; Kitchener, ON, Canada"
+   },
+   "status": "skipped",
+   "first_found": "2026-10-16T11:05:51+00:00",
+   "careers_url": "https://careers.inovia.vc/companies/routethis",
+   "domain": "routethis.com",
+   "about": "RouteThis is an operator of a network connectivity support platform to revolutionize in-home network diagnostics by delivering flawless WiFi connectivity.",
+   "board": null,
+   "probed_at": "2026-10-16T11:06:39+00:00",
+   "segment": "Canadian SaaS and scale-ups",
+   "why": "No public job board found; nothing to pull.",
+   "brand": "RouteThis",
+   "verdict": "skip",
+   "display": "RouteThis"
+  },
+  "7shifts": {
+   "name": "7shifts",
+   "routes": {
+    "search": "AI & Self-Serve Experience Manager, Toronto/Saskatoon remote (Greenhouse)"
+   },
+   "status": "reviewed",
+   "first_found": "2026-10-16T11:06:36+00:00",
+   "careers_url": "https://job-boards.greenhouse.io/7shifts/jobs/5729988004",
+   "board": {
+    "platform": "ashby",
+    "slug": "7shifts",
+    "confidence": "high"
+   },
+   "jobs_total": 13,
+   "jobs_canada": 13,
+   "roles_canada": 1,
+   "sample_roles": [
+    "Senior Product Manager (Toronto; Saskatoon)"
+   ],
+   "probed_at": "2026-10-16T11:06:39+00:00",
+   "segment": "Canadian SaaS and scale-ups",
+   "why": "Restaurant scheduling and payroll software from Saskatoon; hiring a Senior Product Manager in Toronto or Saskatoon now.",
+   "brand": "7shifts",
+   "verdict": "suggest",
+   "display": "7shifts"
+  },
+  "witnessai": {
+   "name": "WitnessAI",
+   "routes": {
+    "search": "Director, Product Management, Vancouver (Built In Vancouver)"
+   },
+   "status": "reviewed",
+   "first_found": "2026-10-16T11:06:36+00:00",
+   "careers_url": "https://builtinvancouver.org/job/director-product-managment/4470174",
+   "board": {
+    "platform": "ashby",
+    "slug": "witnessai",
+    "confidence": "high"
+   },
+   "jobs_total": 7,
+   "jobs_canada": 0,
+   "roles_canada": 0,
+   "sample_roles": [],
+   "probed_at": "2026-10-16T11:06:39+00:00",
+   "segment": "AI and security",
+   "why": "AI security and governance platform with a Vancouver team; product leadership roles have been posted there, none open in Canada today.",
+   "brand": "WitnessAI",
+   "verdict": "suggest",
+   "display": "WitnessAI"
   }
  },
- "updated_at": "2026-10-16T10:55:49+00:00"
+ "updated_at": "2026-10-16T11:07:01+00:00"
 }

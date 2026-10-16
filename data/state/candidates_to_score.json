@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-16T11:04:26+00:00",
+ "updated_at": "2026-10-16T11:08:16+00:00",
  "count": 631,
  "candidates": [
   {
@@ -4619,9 +4619,21 @@
    "role_tier": "Core",
    "people_mgmt_hint": false,
    "pay": {
-    "ranges": [],
-    "primary": null,
-    "source": null,
+    "ranges": [
+     {
+      "min": 145900,
+      "max": 197400,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "This role has a salary range $145,900 - $197,400, designed to reflect the progression from learning the ropes to truly excelling."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
     "equity": {
      "offered": true,
      "certainty": "offered",
@@ -4646,9 +4658,21 @@
    "role_tier": "Core",
    "people_mgmt_hint": false,
    "pay": {
-    "ranges": [],
-    "primary": null,
-    "source": null,
+    "ranges": [
+     {
+      "min": 145900,
+      "max": 197400,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Canada: salary range $145,900 - $197,400 CAD CAD."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
     "equity": {
      "offered": true,
      "certainty": "offered",
@@ -4673,9 +4697,21 @@
    "role_tier": "Core",
    "people_mgmt_hint": false,
    "pay": {
-    "ranges": [],
-    "primary": null,
-    "source": null,
+    "ranges": [
+     {
+      "min": 145900,
+      "max": 197400,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "This role has a salary range $145,900 - $197,400, designed to reflect the progression from learning the ropes to truly excelling."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
     "equity": {
      "offered": true,
      "certainty": "offered",
@@ -4700,9 +4736,21 @@
    "role_tier": "Core",
    "people_mgmt_hint": false,
    "pay": {
-    "ranges": [],
-    "primary": null,
-    "source": null,
+    "ranges": [
+     {
+      "min": 145900,
+      "max": 197400,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "This role has a salary range $145,900 - $197,400, designed to show the progression from learning the ropes to truly excelling."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
     "equity": {
      "offered": true,
      "certainty": "offered",
@@ -4727,9 +4775,21 @@
    "role_tier": "Core",
    "people_mgmt_hint": false,
    "pay": {
-    "ranges": [],
-    "primary": null,
-    "source": null,
+    "ranges": [
+     {
+      "min": 169200,
+      "max": 228900,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "This role has a salary range $169,200 - $228,900, designed to show the progression from learning the ropes to truly excelling."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
     "equity": {
      "offered": true,
      "certainty": "offered",
@@ -16746,9 +16806,21 @@
    "role_tier": "Stretch",
    "people_mgmt_hint": false,
    "pay": {
-    "ranges": [],
-    "primary": null,
-    "source": null,
+    "ranges": [
+     {
+      "min": 125800,
+      "max": 170100,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "This role has a salary range $125,800 - $170,100, designed to reflect the progression from learning the ropes to truly excelling."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
     "equity": {
      "offered": true,
      "certainty": "offered",

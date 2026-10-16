@@ -194,6 +194,63 @@
     "excluded": 1.0
    },
    "errors": []
+  },
+  {
+   "at": "2026-10-16T11:07:30+00:00",
+   "kind": "reading",
+   "rubric": "1.0",
+   "postings": 24,
+   "accuracy": {
+    "pay": 1.0,
+    "pay_kind": 1.0,
+    "region": 1.0,
+    "people_mgmt": 1.0,
+    "level": 1.0,
+    "years": 1.0,
+    "excluded": 1.0
+   },
+   "errors": []
+  },
+  {
+   "at": "2026-10-16T11:07:53+00:00",
+   "kind": "reading",
+   "rubric": "1.0",
+   "postings": 26,
+   "accuracy": {
+    "pay": 1.0,
+    "pay_kind": 0.86,
+    "region": 1.0,
+    "people_mgmt": 1.0,
+    "level": 1.0,
+    "years": 1.0,
+    "excluded": 1.0
+   },
+   "errors": [
+    {
+     "id": "8b10f4db22b7",
+     "field": "pay_kind",
+     "expected": "unspecified",
+     "got": "base",
+     "title": "Senior Product Manager, Supply",
+     "company": "Jobber"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-16T11:08:19+00:00",
+   "kind": "reading",
+   "rubric": "1.0",
+   "postings": 26,
+   "accuracy": {
+    "pay": 1.0,
+    "pay_kind": 1.0,
+    "region": 1.0,
+    "people_mgmt": 1.0,
+    "level": 1.0,
+    "years": 1.0,
+    "excluded": 1.0
+   },
+   "errors": []
   }
  ]
 }
