@@ -54,7 +54,8 @@ standard library only, so no installs are needed.
    Then `python3 -m lodestone score prepare --profile <profile file>` writes batches of roles that need a (re)score: new or
    changed roles, a new rubric version, and up to 150 a day scored against an older profile (it reports how many still
    wait). Score each batch against `docs/eng/SCORING_RUBRIC.md` and `config/scoring.json` (for large runs, one sub-agent per
-   batch with the same brief), producing a JSON list of `{id, fingerprint, profile_key, subs, reasons, summary, level_guess,
+   batch with the same brief, 2 at a time). Scoring uses the most capable model, the one this session runs on (D-070):
+   sub-agents inherit it, so never set a cheaper model for them unless Ayush asks, producing a JSON list of `{id, fingerprint, profile_key, subs, reasons, summary, level_guess,
    people_mgmt, work_mode, must_haves, flags}` (copy `fingerprint` and `profile_key` from the batch), then
    `python3 -m lodestone score ingest <results.json>`. Before trusting a new rubric, compare scores with the user's triage
    (`triage` collection): roles marked Interested should rank high, "Not for me" low.
