@@ -160,6 +160,6 @@ def ingest(results: list[dict]) -> dict:
     suspect = []
     for r in results:
         j, sw = jobs.get(r.get("id")), _words(r.get("summary"))
-        if j and len(sw) >= 4 and len(sw & _words(f"{j['title']} {j['company']} {(j.get('description') or '')[:6000]}")) / len(sw) < 0.4:
+        if j and j["company"].split(" (")[0].lower() not in (r.get("summary") or "").lower() and len(sw) >= 4 and len(sw & _words(f"{j['title']} {j['company']} {(j.get('description') or '')[:6000]}")) / len(sw) < 0.4:
             suspect.append({"id": r["id"], "company": j["company"], "title": j["title"], "summary": r.get("summary", "")[:100]})
     return {"stored": ok, "rejected": bad, "total_scored": len(scores), "suspect_mismatch": suspect}

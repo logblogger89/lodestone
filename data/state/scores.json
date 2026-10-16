@@ -19059,5 +19059,1172 @@
    "French and English required",
    "Must reside in Quebec"
   ]
+ },
+ "efea5f2bdffd": {
+  "fingerprint": "7e9443b70b5c27b6",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 50,
+   "level": 75,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Chief of staff to leadership; runs OKRs and ops, little product ownership",
+   "level": "5+ yrs incl. 2 as chief of staff; senior scope",
+   "domain": "Creator monetization and affiliate commerce; adjacent to your commerce work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "Asks for prior chief-of-staff experience at a 200+ person company"
+  },
+  "summary": "Chief of Staff to Stay22's leadership team in Montreal, running OKRs, operating rhythm and cross-team initiatives.",
+  "level_guess": "Chief of Staff (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs strategy/consulting/ops",
+   "2+ yrs as chief of staff",
+   "Montreal-based"
+  ],
+  "flags": [
+   "Posting in French first",
+   "Montreal hybrid"
+  ]
+ },
+ "8163111596b1": {
+  "fingerprint": "38e9e1c6cbf5c71a",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 10,
+   "level": 60,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Sales RevOps role (territories, forecasting, deal desk), not product",
+   "level": "4+ yrs RevOps asked; below your target",
+   "domain": "Creator monetization platform; general B2B",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "Requires having carried a sales quota and HubSpot RevOps depth"
+  },
+  "summary": "Own sales territory planning, pipeline forecasting and deal desk in Stay22's RevOps team.",
+  "level_guess": "Sales Ops Manager (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "4+ yrs RevOps/sales ops",
+   "Carried a sales quota",
+   "HubSpot pipeline governance"
+  ],
+  "flags": [
+   "Sales operations role",
+   "Sales quota experience required"
+  ]
+ },
+ "0c5af5873996": {
+  "fingerprint": "cbca0b6c087dfba1",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 80,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core PM owning the travel supplier integrations roadmap",
+   "level": "7+ yrs PM; senior IC with real ownership",
+   "domain": "Affiliate attribution and marketplace supply; near your ads and commerce work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "Analytics and partner work fit; deep API and ingestion fluency asked"
+  },
+  "summary": "Own Stay22's travel supplier integrations roadmap: supplier APIs, ingestion, attribution, reporting and reliability.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs PM on technical products",
+   "API and data-flow fluency",
+   "External partner management",
+   "Strong analytics"
+  ],
+  "flags": []
+ },
+ "e5877c066fb0": {
+  "fingerprint": "8cfd91998703b8d5",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 90,
+   "level": 45,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "PM running a squad's backlog and delivery",
+   "level": "2-4 yrs asked; well below your target",
+   "domain": "Workforce management for security guard firms; unrelated domain",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "Agile backlog and user-story skills you have"
+  },
+  "summary": "Run day-to-day delivery and backlog for TrackTik's workforce management (scheduling, payroll, billing) squad.",
+  "level_guess": "Product Manager (≈ L3-L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "2-4 yrs PM or BA",
+   "Agile/Jira",
+   "Strong user stories"
+  ],
+  "flags": [
+   "Execution-focused junior role"
+  ]
+ },
+ "4ae3c0dfd849": {
+  "fingerprint": "e06315bc0ca6bab0",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 80,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Product marketing, not product management",
+   "level": "3+ yrs asked; below your target",
+   "domain": "Privacy compliance software, close to your risk and compliance work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$130K is in the low band",
+   "skills": "Needs content writing and video production experience"
+  },
+  "summary": "Write messaging, launch content and website copy for TrustArc's privacy compliance products.",
+  "level_guess": "Product Marketing Manager (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "3+ yrs product marketing",
+   "3+ yrs content writing",
+   "Video content"
+  ],
+  "flags": [
+   "Marketing role"
+  ]
+ },
+ "a0931cb9896c": {
+  "fingerprint": "9a28e186f04c8f12",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Pre-sales solutions engineering, not product",
+   "level": "5+ yrs SE asked; mid-level scope",
+   "domain": "Privacy compliance platform; adjacent to your compliance work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$115K is below your target",
+   "skills": "Needs hands-on REST API and enterprise integration work"
+  },
+  "summary": "Lead technical discovery, demos and POCs for TrustArc's privacy compliance platform alongside sales.",
+  "level_guess": "Solutions Engineer (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs solutions/sales engineering",
+   "REST APIs and integrations",
+   "RFP and security questionnaires"
+  ],
+  "flags": [
+   "Sales engineering role"
+  ]
+ },
+ "9190fab16865": {
+  "fingerprint": "223a4883049ac966",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 55,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core PM for Veeva Network data integrations",
+   "level": "3+ yrs PM asked; below your target",
+   "domain": "Master data management, a direct fit with your data governance work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$150K is in the low band",
+   "skills": "SQL and data analysis fit; life sciences context is new"
+  },
+  "summary": "Build Veeva Network's master data integrations with Vault CRM, Vault and SAP Concur, plus AI features.",
+  "level_guess": "Product Manager (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "3+ yrs software PM",
+   "SQL and data analysis",
+   "Integration/MDM understanding"
+  ],
+  "flags": [
+   "Life sciences domain"
+  ]
+ },
+ "bf4fc600c273": {
+  "fingerprint": "2d7ba967a4932de5",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 60,
+   "domain": 50,
+   "pathway": 15,
+   "pay": 40,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Core PM for Vault-to-Vault connections",
+   "level": "4+ yrs asked; below your target",
+   "domain": "Medical affairs software for life sciences; general B2B",
+   "pathway": "Must already be authorized to work in the US or Canada",
+   "pay": "Top CA$150K is in the low band",
+   "skills": "Hands-on configuration and life sciences knowledge asked"
+  },
+  "summary": "Build and grow standard Vault-to-Vault connections for Veeva's Vault Medical product.",
+  "level_guess": "Product Manager (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "4+ yrs PM",
+   "Hands-on configuration",
+   "Eastern time zone"
+  ],
+  "flags": [
+   "Must be authorized to work in US/Canada",
+   "Eastern time zone"
+  ]
+ },
+ "6a8a646b12d2": {
+  "fingerprint": "0c956684f430aca6",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 55,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core PM for regulatory information management features",
+   "level": "3+ yrs asked; below your target",
+   "domain": "Regulatory compliance software; adjacent to your risk and compliance work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$150K is in the low band",
+   "skills": "Enterprise PM fits; life sciences regulatory knowledge is new"
+  },
+  "summary": "Define and deliver features in Veeva RIM that help life sciences firms manage global regulatory changes.",
+  "level_guess": "Product Manager (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "3+ yrs PM",
+   "3+ yrs enterprise software"
+  ],
+  "flags": [
+   "Life sciences domain"
+  ]
+ },
+ "34f8045c5655": {
+  "fingerprint": "14ac294196fd4b10",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 80,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core PM building AI agent products",
+   "level": "5+ yrs asked; senior IC, a bit below your L6 aim",
+   "domain": "AI agents for compliance review, close to your agent and compliance work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$180K is in the ok band",
+   "skills": "AI product fit; hands-on RAG and prompt engineering depth asked"
+  },
+  "summary": "Design AI agent solutions that speed up medical, legal and regulatory review for Veeva PromoMats and Vault Medical.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs enterprise PM/eng",
+   "2+ yrs hands-on AI/LLM",
+   "RAG and prompt design"
+  ],
+  "flags": [
+   "Life sciences domain"
+  ]
+ },
+ "4bd0cfcbbe68": {
+  "fingerprint": "5c6356ef91222564",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 80,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Core PM setting roadmap for Vault CRM Campaign Manager",
+   "level": "5+ yrs asked; senior IC, a bit below your L6 aim",
+   "domain": "Marketing automation for life sciences; outside your domains",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$180K is in the ok band",
+   "skills": "Requires 5+ yrs PM in marketing automation software"
+  },
+  "summary": "Set direction and roadmap for Campaign Manager, the marketing automation part of Veeva's Vault CRM.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs marketing automation PM",
+   "Life sciences processes"
+  ],
+  "flags": [
+   "Marketing automation experience required"
+  ]
+ },
+ "c17bd1a775b2": {
+  "fingerprint": "054ffc08bb8e39ff",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 85,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core PM owning data quality features on a data platform",
+   "level": "6+ yrs asked; senior IC near your target",
+   "domain": "Data platform quality and governance, a direct fit",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$170K is in the ok band",
+   "skills": "Data and analytics depth fits; healthcare claims data is new"
+  },
+  "summary": "Own data quality, enrichment and curation features on Veeva's Compass healthcare claims data platform.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "6+ yrs PM or analytics",
+   "Data quality and transformation",
+   "Requirements for data pipelines"
+  ],
+  "flags": [
+   "Healthcare data domain"
+  ]
+ },
+ "51c2a4db6036": {
+  "fingerprint": "fdc581e758c1c13b",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 70,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core PM owning part of an applied AI authoring product",
+   "level": "4+ yrs asked; senior title but scope below your aim",
+   "domain": "Applied generative AI in a regulated setting; near your AI work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$180K is in the ok band",
+   "skills": "AI product fit; medical writing domain is new"
+  },
+  "summary": "Own a core part of Falcon Writer, Veeva's AI tool that drafts regulated life sciences documents.",
+  "level_guess": "Senior PM (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "4+ yrs hands-on PM",
+   "Applied AI product",
+   "Work with regulated customers"
+  ],
+  "flags": [
+   "Eastern/Central time zone preferred"
+  ]
+ },
+ "b38d7a781b76": {
+  "fingerprint": "5c5d79a692b86ccd",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 80,
+   "domain": 35,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Core PM owning Veeva's LIMS product",
+   "level": "5+ yrs asked; senior IC, a bit below your L6 aim",
+   "domain": "Lab and manufacturing quality software; specialist domain",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$180K is in the ok band",
+   "skills": "Regulated B2B fits; lab and manufacturing knowledge is a gap"
+  },
+  "summary": "Define and deliver Veeva's LIMS (lab information management) product for life sciences quality teams.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs enterprise PM",
+   "Regulated B2B launches"
+  ],
+  "flags": [
+   "Lab/manufacturing domain"
+  ]
+ },
+ "cf66e26f104c": {
+  "fingerprint": "fd32399e4b16a6be",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 45,
+   "pathway": 15,
+   "pay": 60,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Core PM for Veeva MedInquiry",
+   "level": "8+ yrs asked; senior scope near your target",
+   "domain": "Medical inquiry case management; outside your domains",
+   "pathway": "Must already be authorized to work in the US or Canada",
+   "pay": "Top CA$180K is in the ok band",
+   "skills": "Needs case management and service intake product experience"
+  },
+  "summary": "Build, launch and grow Veeva MedInquiry, case management for life sciences medical information teams.",
+  "level_guess": "Senior PM (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "8+ yrs PM",
+   "Case management experience",
+   "Eastern time zone"
+  ],
+  "flags": [
+   "Must be authorized to work in US/Canada",
+   "Eastern time zone"
+  ]
+ },
+ "54e6455944a3": {
+  "fingerprint": "0fc6ac78298c3edf",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 80,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Core PM owning PromoMats strategy and roadmap",
+   "level": "5+ yrs asked; senior IC, a bit below your L6 aim",
+   "domain": "Promotional content compliance review, near your ads policy work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$180K is in the ok band",
+   "skills": "Needs strong Python and LangChain coding plus marketing ops experience"
+  },
+  "summary": "Own strategy and roadmap for PromoMats claims, MLR review and asset management, including AI features.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs enterprise PM/eng",
+   "2+ yrs hands-on LLM work",
+   "Python coding",
+   "Marketing ops experience"
+  ],
+  "flags": [
+   "Hands-on coding required"
+  ]
+ },
+ "20eb073ac14b": {
+  "fingerprint": "f19588bfa1b13e56",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 80,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Core PM owning SAP ERP integration strategy",
+   "level": "5+ yrs asked; senior IC, a bit below your L6 aim",
+   "domain": "SAP integrations for manufacturing quality; specialist domain",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$180K is in the ok band",
+   "skills": "Requires 5+ yrs SAP integration experience"
+  },
+  "summary": "Define and deliver the SAP ERP integration strategy for Veeva Quality applications.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs PM/BA/consulting",
+   "5+ yrs SAP integration"
+  ],
+  "flags": [
+   "SAP expertise required"
+  ]
+ },
+ "d10cac3bc18d": {
+  "fingerprint": "09b6b53a4952b07c",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 85,
+   "pathway": 15,
+   "pay": 60,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Core PM building AI agents for Vault Medical",
+   "level": "7+ yrs asked; senior scope near your target",
+   "domain": "AI agents with compliance needs, close to your agent work",
+   "pathway": "Must already be authorized to work in the US or Canada",
+   "pay": "Top CA$180K is in the ok band",
+   "skills": "AI product fit; 2+ yrs hands-on AI/ML building asked"
+  },
+  "summary": "Design AI agents for Veeva Vault Medical that speed medical review, publishing and inquiry responses.",
+  "level_guess": "Senior PM (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "7+ yrs enterprise PM/eng/DS",
+   "2+ yrs hands-on AI/ML",
+   "Eastern time zone"
+  ],
+  "flags": [
+   "Must be authorized to work in US/Canada",
+   "Eastern time zone"
+  ]
+ },
+ "d9001cf8d370": {
+  "fingerprint": "a79c8adda366dbed",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 70,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core PM building AI agents for Quality Cloud",
+   "level": "5+ yrs asked; mid-level title below your target",
+   "domain": "AI agents turning documents into data; near your agent work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$150K is in the low band",
+   "skills": "AI product fit; hands-on agent design and evaluation asked"
+  },
+  "summary": "Design AI agents that extract structured data from documents across Veeva Quality Cloud.",
+  "level_guess": "Technical PM (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs SaaS PM/eng",
+   "2+ yrs AI/ML product",
+   "Agent evaluations"
+  ],
+  "flags": [
+   "Hands-on AI build"
+  ]
+ },
+ "d2504d4d9a27": {
+  "fingerprint": "0b288b0e20841ad6",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 70,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core PM building AI agents for QualityDocs and Training",
+   "level": "5+ yrs asked; mid-level title below your target",
+   "domain": "AI agents for regulated content and training; adjacent to your agent work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$150K is in the low band",
+   "skills": "AI product fit; hands-on agent design and evaluation asked"
+  },
+  "summary": "Design AI agents that automate Veeva QualityDocs and Veeva Training processes for life sciences.",
+  "level_guess": "Technical PM (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs SaaS PM/eng",
+   "2+ yrs AI/ML product",
+   "Agent evaluations"
+  ],
+  "flags": [
+   "Hands-on AI build"
+  ]
+ },
+ "b65aac3edb53": {
+  "fingerprint": "4ce6bdb644480ad4",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 90,
+   "level": 70,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Core PM owning ESG framework and methodology roadmap",
+   "level": "5+ yrs asked; mid-senior scope",
+   "domain": "Regulatory change and content governance; adjacent to your compliance work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "Governance fits; ESG and carbon accounting familiarity asked"
+  },
+  "summary": "Own Novisto's roadmap and governance for ESG frameworks, questionnaires and carbon methodology changes.",
+  "level_guess": "Product Manager (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs PM or regulatory content",
+   "ESG/carbon framework familiarity",
+   "Turn regulation into requirements"
+  ],
+  "flags": []
+ },
+ "1a2f1a67d8cf": {
+  "fingerprint": "570be21b6b1c7b72",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 65
+  },
+  "reasons": {
+   "role": "Core PM owning outcomes across a multi-product suite",
+   "level": "Senior/Principal experience asked; multi-product scope",
+   "domain": "Audit-grade regulated product incl. financed emissions; adjacent to your compliance work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "Regulated-product rigor fits; carbon accounting depth is new"
+  },
+  "summary": "Own outcomes across Novisto's Carbon suite: carbon accounting, financed emissions, footprints and decarbonisation.",
+  "level_guess": "Senior PM (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Senior/Principal B2B SaaS PM",
+   "Regulated or audit-grade products",
+   "Multi-product ownership",
+   "Discovery with UX"
+  ],
+  "flags": []
+ },
+ "964391df2d25": {
+  "fingerprint": "6eb5b107ded74f86",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 80,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Core technical PM for the endpoint security platform",
+   "level": "10+ yrs in endpoint security asked; senior scope",
+   "domain": "Endpoint security (EPP/EDR, ZTNA); specialist domain",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$199K is in the good band",
+   "skills": "Requires 10+ yrs endpoint security or EDR experience"
+  },
+  "summary": "Drive the roadmap for Fortinet's unified endpoint security SaaS (ZTNA, EPP/EDR, data protection).",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs cybersecurity/EDR",
+   "5+ yrs project or PM",
+   "VPN/ZTNA knowledge"
+  ],
+  "flags": [
+   "Deep security expertise required",
+   "Burnaby, BC"
+  ]
+ },
+ "240c73246072": {
+  "fingerprint": "f8b506b4b9faa7f0",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Core PM defining requirements for a SOC platform",
+   "level": "Years not stated; senior title",
+   "domain": "Security operations and threat detection; adjacent at best",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$200K is in the good band",
+   "skills": "Needs hands-on SIEM, SOAR and XDR background"
+  },
+  "summary": "Define requirements and features for Fortinet's cloud-native SOC platform (SIEM, SOAR, XDR, AI/ML).",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "SIEM/SOAR/XDR depth",
+   "Cloud-native platforms",
+   "Agile/CI/CD"
+  ],
+  "flags": [
+   "Deep security expertise required",
+   "Burnaby, BC"
+  ]
+ },
+ "dddf5c3451df": {
+  "fingerprint": "02425b7b1850e13a",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 25,
+   "level": 75,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 15
+  },
+  "reasons": {
+   "role": "Pre-sales solutions consulting, not product",
+   "level": "7+ yrs SecOps asked; senior specialist",
+   "domain": "Security operations; specialist domain",
+   "pathway": "No work permit info in the posting",
+   "pay": "OTE top CA$253K, about CA$228K at 90%, good band",
+   "skills": "Needs SecOps pre-sales engineering depth"
+  },
+  "summary": "Pre-sales specialist showing customers how Fortinet's SecOps products fit their security architecture.",
+  "level_guess": "Solutions Consultant (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs SecOps",
+   "5+ yrs pre-sales engineering",
+   "Travel up to 30%"
+  ],
+  "flags": [
+   "Sales engineering role",
+   "OTE pay",
+   "Travel up to 30%"
+  ]
+ },
+ "6ff7794e37c4": {
+  "fingerprint": "e87b132518413f1e",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 45,
+   "level": 75,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Program management of a partner training channel, little product",
+   "level": "5-8+ yrs asked; mid-senior scope",
+   "domain": "Training and channel partner programs; outside your domains",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$112K is below your target",
+   "skills": "Needs channel or partner management experience"
+  },
+  "summary": "Lead and scale Fortinet's global Authorized Training Center partner program for NSE certifications.",
+  "level_guess": "Program Manager (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5-8+ yrs program/partner mgmt",
+   "Channel operations",
+   "Cybersecurity preferred"
+  ],
+  "flags": [
+   "Channel program role"
+  ]
+ },
+ "cc2953934963": {
+  "fingerprint": "fc1aff9c971dc28e",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 25,
+   "level": 75,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 15
+  },
+  "reasons": {
+   "role": "Customer-facing cloud security architect, not product",
+   "level": "10+ yrs architect/SE asked; senior specialist",
+   "domain": "Cloud and AI security consulting; specialist domain",
+   "pathway": "No work permit info in the posting",
+   "pay": "OTE top $223K, about $201K at 90%, good band",
+   "skills": "Needs hands-on cloud architecture and software development"
+  },
+  "summary": "Fortinet cloud security consultant designing multi-cloud security blueprints and agentic AI solutions for clients.",
+  "level_guess": "Solution Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs SE/architect",
+   "Cloud and network security",
+   "Software development"
+  ],
+  "flags": [
+   "Consulting/pre-sales role",
+   "OTE pay"
+  ]
+ },
+ "3e6efde044fa": {
+  "fingerprint": "00e488b35f78cab6",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 20,
+   "level": 50,
+   "domain": 45,
+   "pathway": 15,
+   "pay": 40,
+   "skills": 15
+  },
+  "reasons": {
+   "role": "Customer-facing solutions architect, not product",
+   "level": "Years not stated",
+   "domain": "Telecom network analytics; specialist despite the analytics angle",
+   "pathway": "Says no immigration sponsorship for this role",
+   "pay": "Top CA$131K is in the low band",
+   "skills": "Needs deep 4G/5G/IMS call-flow expertise"
+  },
+  "summary": "Ericsson technical advisor designing telecom network analytics and AI solutions for operators.",
+  "level_guess": "Solutions Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "4G/5G/IMS call flows",
+   "Data architecture",
+   "Telecom probing tools"
+  ],
+  "flags": [
+   "No sponsorship",
+   "Telecom expertise required"
+  ]
+ },
+ "c51f5c882d71": {
+  "fingerprint": "6cc99182128ecf54",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 80,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Core senior PM title; no description to check",
+   "level": "Senior PM title; scope not described",
+   "domain": "No description; domain unknown",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "No description; must-haves unknown"
+  },
+  "summary": "Senior Product Manager at Certn, remote in Canada; the posting has no description.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [],
+  "flags": [
+   "No description available"
+  ]
+ },
+ "7e08d54de1fa": {
+  "fingerprint": "d77b6d191546d00c",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 15,
+   "level": 30,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Design leadership role, not product management",
+   "level": "Director title; likely beyond an IC target",
+   "domain": "No description; legal-tech AI company",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "Design leadership skills, not in your profile"
+  },
+  "summary": "Director of Product Design at EvenUp (San Francisco or Toronto, hybrid); no description posted.",
+  "level_guess": "Director (≈ L7)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [],
+  "flags": [
+   "No description available",
+   "Design role"
+  ]
+ },
+ "7ef2d2d5f3cc": {
+  "fingerprint": "d3456abf30d69074",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 50,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Core PM on AI entities",
+   "level": "No description; level not stated",
+   "domain": "AI product per title; near your AI work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "No description; must-haves unknown"
+  },
+  "summary": "Product Manager for AI Entities at EvenUp (San Francisco or Toronto, hybrid); no description posted.",
+  "level_guess": "Product Manager (level unclear)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [],
+  "flags": [
+   "No description available"
+  ]
+ },
+ "3a94891368f9": {
+  "fingerprint": "3a3c7048fa01b5ec",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Core PM on AI orchestration and agents",
+   "level": "Senior to Principal range covers your target",
+   "domain": "AI orchestration and agentic workflows, a direct match",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "No description; must-haves unknown"
+  },
+  "summary": "Senior-to-Principal PM for AI orchestration and agentic workflows at EvenUp; no description posted.",
+  "level_guess": "Senior/Staff/Principal PM (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [],
+  "flags": [
+   "No description available"
+  ]
+ },
+ "d7e1b78626ad": {
+  "fingerprint": "676cfd96b03a6995",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Core PM on data products",
+   "level": "Senior to Principal range covers your target",
+   "domain": "Data products, a direct fit with your data platform work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "No description; must-haves unknown"
+  },
+  "summary": "Senior-to-Principal PM for data products at EvenUp; no description posted.",
+  "level_guess": "Senior/Staff/Principal PM (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [],
+  "flags": [
+   "No description available"
+  ]
+ },
+ "d48456d5d0cb": {
+  "fingerprint": "888416405234dd31",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Core PM on First Mile AI",
+   "level": "Senior to Principal range covers your target",
+   "domain": "Applied AI per title; near your AI work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "No description; must-haves unknown"
+  },
+  "summary": "Senior-to-Principal PM for EvenUp's First Mile AI product; no description posted.",
+  "level_guess": "Senior/Staff/Principal PM (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [],
+  "flags": [
+   "No description available"
+  ]
+ },
+ "422b761d72fc": {
+  "fingerprint": "3c03d3054dad21db",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:16:59+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Core PM on launch experience",
+   "level": "Senior to Principal range covers your target",
+   "domain": "No description; general product area",
+   "pathway": "No work permit info in the posting",
+   "pay": "Pay not posted",
+   "skills": "No description; must-haves unknown"
+  },
+  "summary": "Senior-to-Principal PM for EvenUp's Launch Experience; no description posted.",
+  "level_guess": "Senior/Staff/Principal PM (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [],
+  "flags": [
+   "No description available"
+  ]
  }
 }
