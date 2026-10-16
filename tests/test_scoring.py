@@ -47,5 +47,12 @@ class TestScoringPrepare(unittest.TestCase):
         self.assertEqual(a, b)
 
 
+    def test_prepare_refuses_to_replace_batches_still_being_scored(self):
+        scoring.prepare(profile={"headline": "PM", "domains": ["AI"]}, max_rescore=2)
+        with self.assertRaises(RuntimeError):
+            scoring.prepare(profile={"headline": "PM", "domains": ["AI"]}, max_rescore=2)
+        self.assertTrue(scoring.prepare(profile={"headline": "PM", "domains": ["AI"]}, max_rescore=2, force=True))
+
+
 if __name__ == "__main__":
     unittest.main()

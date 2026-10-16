@@ -67,7 +67,24 @@ def _pay_summary(pay: dict | None) -> str:
     return "; ".join(out)
 
 
-def prepare(batch_size: int = 70, profile: dict | None = None, max_rescore: int = 150) -> list[dict]:
+def pending_batches() -> list[str]:
+    """Roles in the current batch files that haven't been ingested yet (a scorer may still be working on them)."""
+    scores = store.load("scores", {})
+    left = []
+    for f in sorted(INBOX.glob("batch_*.json")) if INBOX.exists() else []:
+        for r in json.loads(f.read_text()):
+            have = scores.get(r["id"], {})
+            if have.get("fingerprint") != r.get("fingerprint") or have.get("profile_key") != r.get("profile_key"):
+                left.append(r["id"])
+    return left
+
+
+def prepare(batch_size: int = 70, profile: dict | None = None, max_rescore: int = 150, force: bool = False) -> list[dict]:
+    """Writes new batch files. Refuses while earlier batches are still being scored (their files would be replaced
+    under the scorer, and results would be matched to the wrong roles: 2026-10-16), unless force=True."""
+    if not force and (left := pending_batches()):
+        raise RuntimeError(f"{len(left)} roles in the current batches aren't ingested yet; ingest their results first, "
+                           "or pass --force if those scorers have stopped")
     rubric = config()["rubric_version"]
     pkey = profile_key(profile)
     jobs = store.load("jobs", {"jobs": {}})["jobs"]
@@ -106,6 +123,13 @@ def _packet(key: str, j: dict, fp: str, pkey: str | None) -> dict:
             "pay": _pay_summary(j.get("pay")), "description": trim(j.get("description") or "") or "(no description available)"}
 
 
+_STOP = set("the and for with own lead drive its from that this their role product manager senior staff principal".split())
+
+
+def _words(t: str) -> set:
+    return {w for w in re.findall(r"[a-z]{4,}", (t or "").lower()) if w not in _STOP}
+
+
 def ingest(results: list[dict]) -> dict:
     """Validate and store scores. Each result: id, fingerprint, subs{6}, reasons{6}, summary, level_guess,
     people_mgmt, work_mode, must_haves, flags."""
@@ -131,4 +155,11 @@ def ingest(results: list[dict]) -> dict:
         ok += 1
     store.save("scores", scores)
     store.mark_fresh("scoring", rubric=config()["rubric_version"], scored=len(scores))
-    return {"stored": ok, "rejected": bad, "total_scored": len(scores)}
+    # Sanity check: a summary that shares few words with its own posting was probably written for another role.
+    jobs = {job_id(k): j for k, j in store.load("jobs", {"jobs": {}})["jobs"].items()}
+    suspect = []
+    for r in results:
+        j, sw = jobs.get(r.get("id")), _words(r.get("summary"))
+        if j and len(sw) >= 4 and len(sw & _words(f"{j['title']} {j['company']} {(j.get('description') or '')[:6000]}")) / len(sw) < 0.4:
+            suspect.append({"id": r["id"], "company": j["company"], "title": j["title"], "summary": r.get("summary", "")[:100]})
+    return {"stored": ok, "rejected": bad, "total_scored": len(scores), "suspect_mismatch": suspect}

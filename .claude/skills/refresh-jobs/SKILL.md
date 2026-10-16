@@ -64,7 +64,10 @@ standard library only, so no installs are needed.
    batch with the same brief, 2 at a time). Scoring uses the most capable model, the one this session runs on (D-070):
    sub-agents inherit it, so never set a cheaper model for them unless Ayush asks. Each batch produces a JSON list of `{id, fingerprint, profile_key, subs, reasons, summary, level_guess,
    people_mgmt, work_mode, must_haves, flags}` (copy `fingerprint` and `profile_key` from the batch), then
-   `python3 -m lodestone score ingest <results.json>`. Before trusting a new rubric, compare scores with the user's triage
+   `python3 -m lodestone score ingest <results.json>`. Never re-run `score prepare` while scorers are still working:
+   it now refuses (use `--force` only when they've stopped), because replacing the batch files under a scorer matched
+   70 scores to the wrong roles on 10-16. Give each scorer its own copy of its batch. If `ingest` lists
+   `suspect_mismatch` entries (a summary that doesn't describe its own posting), delete those scores and re-score them. Before trusting a new rubric, compare scores with the user's triage
    (`triage` collection): roles marked Interested should rank high, "Not for me" low.
 5b. **Score quality check (P1-S5).** Once a day, in the morning run (update runs skip it, so the history isn't
    crowded with near-identical entries), and before and after any scoring change. `ArtifactData list triage` and `get settings/prefs` with `out_dir` (scratchpad), then

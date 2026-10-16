@@ -27,6 +27,7 @@ def main(argv=None) -> int:
     sc.add_argument("--batch", type=int, default=70)
     sc.add_argument("--profile", help="prepare: the app's profile/main JSON (scratchpad); re-scores roles scored against an older profile")
     sc.add_argument("--max-rescore", type=int, default=150, help="prepare: daily cap on profile-change re-scores")
+    sc.add_argument("--force", action="store_true", help="prepare: replace batches even if some aren't ingested yet")
     sg = sub.add_parser("signals", help="load ESDC positive-LMIA lists into per-company pathway signals")
     sg.add_argument("action", choices=["load"])
     ib = sub.add_parser("inbox", help="paste inbox: prepare pasted items for Claude, or add the jobs Claude read")
@@ -70,7 +71,7 @@ def main(argv=None) -> int:
     elif a.cmd == "score":
         from . import scoring
         if a.action == "prepare":
-            out = scoring.prepare(a.batch, json.load(open(a.profile)) if a.profile else None, a.max_rescore)
+            out = scoring.prepare(a.batch, json.load(open(a.profile)) if a.profile else None, a.max_rescore, a.force)
         else:
             if not a.file:
                 ap.error("score ingest needs a results file")
