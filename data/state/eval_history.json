@@ -295,6 +295,115 @@
     }
    ],
    "enough_labels": true
+  },
+  {
+   "at": "2026-10-16T11:17:23+00:00",
+   "kind": "ranking",
+   "rubric": "1.0",
+   "labels": {
+    "interested": 13,
+    "later": 12,
+    "not": 1
+   },
+   "pairwise": 0.476,
+   "interested_in_top25": 7,
+   "precision_at_10": 0.62,
+   "labelled_in_top10": 8,
+   "mean_fit": {
+    "interested": 74.4,
+    "later": 82.2,
+    "not": 80.0
+   },
+   "roles_ranked": 631,
+   "misses": [
+    {
+     "id": "7a51cdb5bb24",
+     "title": "Staff Product Manager",
+     "company": "Klue",
+     "rank": 30,
+     "fit": 80
+    },
+    {
+     "id": "467a8db8ddc4",
+     "title": "Staff Product Manager",
+     "company": "Loopio",
+     "rank": 31,
+     "fit": 80
+    },
+    {
+     "id": "5c4ed8eb82a4",
+     "title": "Product Manager, Ecosystem Risk",
+     "company": "Stripe",
+     "rank": 39,
+     "fit": 79
+    },
+    {
+     "id": "8e1083a22d85",
+     "title": "Principal Product Manager - Workday AI - Agent Factory",
+     "company": "Workday",
+     "rank": 481,
+     "fit": 50
+    },
+    {
+     "id": "770395b6f9a2",
+     "title": "Sr Principal, Product Manager",
+     "company": "Workday",
+     "rank": 501,
+     "fit": 49
+    }
+   ],
+   "enough_labels": true
+  },
+  {
+   "at": "2026-10-16T16:54:47+00:00",
+   "kind": "ranking",
+   "rubric": "1.0",
+   "labels": {
+    "interested": 13,
+    "later": 12,
+    "not": 1
+   },
+   "pairwise": 0.609,
+   "interested_in_top25": 9,
+   "precision_at_10": 0.67,
+   "labelled_in_top10": 9,
+   "mean_fit": {
+    "interested": 83.2,
+    "later": 82.2,
+    "not": 80.0
+   },
+   "roles_ranked": 631,
+   "misses": [
+    {
+     "id": "7a51cdb5bb24",
+     "title": "Staff Product Manager",
+     "company": "Klue",
+     "rank": 30,
+     "fit": 80
+    },
+    {
+     "id": "467a8db8ddc4",
+     "title": "Staff Product Manager",
+     "company": "Loopio",
+     "rank": 31,
+     "fit": 80
+    },
+    {
+     "id": "5c4ed8eb82a4",
+     "title": "Product Manager, Ecosystem Risk",
+     "company": "Stripe",
+     "rank": 40,
+     "fit": 79
+    },
+    {
+     "id": "770395b6f9a2",
+     "title": "Sr Principal, Product Manager",
+     "company": "Workday",
+     "rank": 71,
+     "fit": 77
+    }
+   ],
+   "enough_labels": true
   }
  ]
 }

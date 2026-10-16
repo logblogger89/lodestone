@@ -1,0 +1,87 @@
+{
+ "date": "2026-10-16",
+ "ran_at": "2026-10-16T16:55:35+00:00",
+ "headline": "94 new roles from 38 newly approved companies and the usual sources; best new match is Jobber's Staff PM, Fintech New Bets (fit 81). 8 roles closed, none you'd triaged.",
+ "stats": {
+  "new": 94,
+  "closed": 8,
+  "scored": 266,
+  "unscored": 0,
+  "open_roles": 641,
+  "failed_sources": 2
+ },
+ "top": [
+  {
+   "id": "11749d559158",
+   "company": "Jobber",
+   "title": "Staff Product Manager, Fintech New Bets",
+   "fit": 81,
+   "pay": "CA$169K–229K",
+   "why": "New fintech bets (insurance, financing, cards) at a Canadian SaaS company; remote in Canada"
+  },
+  {
+   "id": "4e1d264e922f",
+   "company": "Jobber",
+   "title": "Senior Product Manager, Automations Platform",
+   "fit": 81,
+   "pay": "CA$146K–197K",
+   "why": "Platform behind Jobber's AI Teammate: agent authoring and execution; Toronto"
+  },
+  {
+   "id": "c17bd1a775b2",
+   "company": "Veeva Systems",
+   "title": "Senior Product Manager - Compass Platform",
+   "fit": 78,
+   "pay": "CA$120K–170K",
+   "why": "Data quality and curation on a healthcare data platform; Toronto"
+  }
+ ],
+ "sections": [
+  {
+   "title": "Closed roles",
+   "items": [
+    "8 closed today (AMD, Celestica, EA, Instacart, Interac, Moneris, RBC, Salesforce). None were in your Interested list or pipeline."
+   ]
+  },
+  {
+   "title": "Paste inbox",
+   "items": [
+    "Nothing new. The LinkedIn link from yesterday still needs the job description pasted as text."
+   ]
+  },
+  {
+   "title": "Market checks",
+   "items": [
+    "Cohere, Product Manager, Managed North: levels.fyi has no Canadian figures for Cohere PMs yet (US only), so there's no market number."
+   ]
+  },
+  {
+   "title": "Companies",
+   "items": [
+    "Your 38 approvals are in: 28 pulled automatically, 10 needed their careers sites researched (5 automatic feeds, 5 careers pages Claude reads).",
+    "Worth a look from them: EvenUp has five Senior/Staff/Principal PM roles in Toronto (AI orchestration, data products); Certn has a Senior PM, remote in Canada; Jobber has five PM roles.",
+    "3 new companies suggested: 7shifts (Senior PM, Toronto/Saskatoon), Pine (Toronto mortgage tech), WitnessAI (AI security, Vancouver)."
+   ]
+  },
+  {
+   "title": "Scoring",
+   "items": [
+    "266 roles scored: 94 new and 172 re-scored against your current profile (365 more re-scores spread over the next few days).",
+    "Score quality: 9 of your 13 Interested roles are in the top 25; Interested beat Later/Not 61% of the time (yesterday 59–61%). Reading check 100% on 26 hand-checked postings.",
+    "Pay reader fix: Jobber's 'minimum … midpoint … maximum salary' wording is now read, so 24 more roles show pay."
+   ]
+  },
+  {
+   "title": "Problems",
+   "items": [
+    "CGI's careers site now rejects automated requests; its roles are kept as they were (mostly IT consulting, few matches).",
+    "EQ Bank's feed dropped the connection once; it will be retried at the 1pm update.",
+    "EvenUp's postings have no descriptions yet (its board loads them with scripts), so its roles were scored from titles; worth opening the originals.",
+    "A scoring mix-up matched 70 scores to the wrong roles mid-run. Caught before the report, re-scored, and the app was updated; safeguards added so it can't recur silently."
+   ]
+  }
+ ],
+ "actions": [
+  "Review 3 suggested companies in the app: Companies > Suggested companies (7shifts, Pine, WitnessAI)."
+ ]
+}

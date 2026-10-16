@@ -20226,5 +20226,1179 @@
   "flags": [
    "No description available"
   ]
+ },
+ "44375ed243f8": {
+  "fingerprint": "c1b3e8c99a9aa38b",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 5,
+   "level": 10,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Reverse logistics operations, not a product job",
+   "level": "1-3 yrs asked; junior specialist",
+   "domain": "Consumer electronics logistics; little overlap",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$82.5K (in description) is below your target",
+   "skills": "Needs SAP/ERP and last-mile logistics experience"
+  },
+  "summary": "Run Samsung Canada's reverse logistics: returns, claims, SOPs and KPI reporting.",
+  "level_guess": "Specialist (≈ L3)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "1-3 yrs reverse logistics",
+   "SAP/ERP (SD/MM)",
+   "Last-mile carrier knowledge"
+  ],
+  "flags": [
+   "Onsite",
+   "Operations role"
+  ]
+ },
+ "5b0681e3c10e": {
+  "fingerprint": "2d6b00c2229738de",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 40,
+   "level": 50,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Category P&L product management for hardware, not software PM",
+   "level": "Years not stated; manager title, pay suggests mid-level",
+   "domain": "Wearables and accessories retail category; unrelated",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$135K is in the low band",
+   "skills": "Needs consumer electronics category, forecasting and channel experience"
+  },
+  "summary": "Own Samsung Canada's wearables and accessories category: line-up, pricing, promotions, forecasts and P&L.",
+  "level_guess": "Category Manager (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Category P&L ownership",
+   "Sell-through forecasting",
+   "Channel and promo planning"
+  ],
+  "flags": [
+   "Hardware category role, not software PM"
+  ]
+ },
+ "4f7f5405f272": {
+  "fingerprint": "ee735060e2dbdb5c",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 40,
+   "level": 50,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Category P&L product management for hardware, not software PM",
+   "level": "Years not stated; supports a senior manager",
+   "domain": "Consumer electronics retail category; unrelated",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$135K is in the low band",
+   "skills": "Needs consumer electronics category, pricing and dealer channel experience"
+  },
+  "summary": "Drive Samsung Canada home electronics category plans: line-up, pricing, forecasts, dealer promotions and P&L.",
+  "level_guess": "Category Manager (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Category P&L",
+   "Pricing and forecasting",
+   "Dealer channel strategy"
+  ],
+  "flags": [
+   "Hardware category role, not software PM"
+  ]
+ },
+ "60dc48a15874": {
+  "fingerprint": "17add9a1bdee0cdc",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 80,
+   "level": 60,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 65
+  },
+  "reasons": {
+   "role": "Product owner running backlog and delivery for a banking journey",
+   "level": "PO II; years not stated, delivery scope below your target",
+   "domain": "Consumer banking advice journey; near your financial-services work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$163K is in the ok band",
+   "skills": "Roadmap and stakeholder skills fit; Agile/Scrum depth asked"
+  },
+  "summary": "Own the backlog and delivery roadmap for TD's Everyday Advice digital banking journey.",
+  "level_guess": "Product Owner (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Agile/Scrum product ownership",
+   "Backlog and delivery management",
+   "Stakeholder alignment"
+  ],
+  "flags": []
+ },
+ "62167b451a4c": {
+  "fingerprint": "f278d2ffe11a9610",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 40,
+   "level": 60,
+   "domain": 55,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Banking product management of liquidity products, not software PM",
+   "level": "5+ yrs asked; VP title at bank is mid-senior IC",
+   "domain": "Transaction banking; adjacent to your fintech work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$160K is in the ok band",
+   "skills": "Needs liquidity and cash management product expertise"
+  },
+  "summary": "Own TD's liquidity products (virtual accounts, pooling, sweeps) from requirements through launch.",
+  "level_guess": "Product Manager (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs transaction banking PM",
+   "Liquidity product expertise",
+   "Cash management regulation"
+  ],
+  "flags": [
+   "Banking product role"
+  ]
+ },
+ "1ae4fdcf0ec8": {
+  "fingerprint": "fa822a1795093d69",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 35,
+   "level": 70,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Data center estate and cost management, little software product work",
+   "level": "7+ yrs asked; senior specialist scope",
+   "domain": "Data center facilities and vendor contracts; unrelated",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$137K is in the low band",
+   "skills": "Needs data center capacity, lease and vendor management experience"
+  },
+  "summary": "Manage TD's enterprise data center estate: costs, capacity, leases, vendor contracts and budgets.",
+  "level_guess": "Senior Specialist (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs relevant experience",
+   "Data center cost and capacity",
+   "Vendor contract management"
+  ],
+  "flags": [
+   "Infrastructure/facilities role"
+  ]
+ },
+ "001c70d11b60": {
+  "fingerprint": "101e223058c44bc0",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 15,
+   "level": 30,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Compliance governance analyst, not a product job",
+   "level": "Senior analyst; two levels below your target",
+   "domain": "Risk and compliance governance, a direct match",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$115K is below your target",
+   "skills": "Governance fits; needs Volcker Rule and markets knowledge"
+  },
+  "summary": "Support TD Securities' Volcker Rule program governance, controls and regulatory exam readiness.",
+  "level_guess": "Senior Analyst (≈ L3-L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Compliance or risk background",
+   "Volcker Rule knowledge",
+   "Global markets understanding"
+  ],
+  "flags": [
+   "Analyst-level role"
+  ]
+ },
+ "4de4d113ce7d": {
+  "fingerprint": "66019039d7e88d08",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 15,
+   "level": 70,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Solution architecture, not product management",
+   "level": "7+ yrs asked; senior architect scope",
+   "domain": "Marketing tech and customer data platforms; some data overlap",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$137K is in the low band (premium possible)",
+   "skills": "Needs hands-on Salesforce and integration architecture"
+  },
+  "summary": "Design end-to-end solution architecture for TD's marketing technology and AI personalization stack.",
+  "level_guess": "Solution Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs architecture",
+   "Salesforce Marketing/Data Cloud",
+   "Integration architecture"
+  ],
+  "flags": [
+   "Hands-on architecture role"
+  ]
+ },
+ "83d42018abe6": {
+  "fingerprint": "f5e251e9675e4242",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 50,
+   "level": 75,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Program delivery lead with little product ownership",
+   "level": "Senior manager delivery lead; near your target",
+   "domain": "Market risk reporting and regulation; adjacent to your risk work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$163K is in the ok band",
+   "skills": "Delivery skills fit; market risk domain knowledge expected"
+  },
+  "summary": "Lead TD Securities market risk delivery programs from requirements through testing and go-live.",
+  "level_guess": "Senior Program Manager (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Complex program delivery",
+   "Market risk knowledge",
+   "Testing and go-live governance"
+  ],
+  "flags": []
+ },
+ "f03b68b1fae5": {
+  "fingerprint": "708c2649e3184274",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 85,
+   "level": 85,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Technical product owner setting AI product vision and roadmap",
+   "level": "5+ yrs asked; mid to senior levels hiring",
+   "domain": "Enterprise AI/ML with model risk and governance, a direct match",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$240K is in the excellent band (market premium)",
+   "skills": "ML product fit; deep MLOps, Python and CI/CD asked"
+  },
+  "summary": "Lead TD Layer 6 teams delivering production AI, ML and GenAI solutions and own the AI product roadmap.",
+  "level_guess": "Senior Technical PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs AI/ML product delivery",
+   "3+ yrs leading ML teams",
+   "Python, SQL, MLOps depth"
+  ],
+  "flags": [
+   "Highly technical role"
+  ]
+ },
+ "cb7946cc7f47": {
+  "fingerprint": "29bff47caf944410",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 25,
+   "level": 75,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 45
+  },
+  "reasons": {
+   "role": "Hands-on AI engineering lead, not product management",
+   "level": "Leadership IC reporting to a VP; near your target",
+   "domain": "Analytics agents, evals and AI governance; close to your work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$175K is in the ok band",
+   "skills": "Prototyping fits; strong hands-on engineering asked"
+  },
+  "summary": "Build and own Thomson Reuters Product Analytics' shared AI agent infrastructure, evals and build standards.",
+  "level_guess": "AI Engineering Lead (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "2+ yrs hands-on AI building",
+   "Agent evals",
+   "Scaling standards across a team"
+  ],
+  "flags": [
+   "Hands-on engineering role"
+  ]
+ },
+ "fac0069dc0f8": {
+  "fingerprint": "9eb3c5f2ef3019c8",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 95,
+   "level": 65,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core PM owning a strategic analytics product line",
+   "level": "No years stated; scope reads mid-senior, below your target",
+   "domain": "Analytics products for regulated professionals; overlaps your analytics work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$176K is in the ok band",
+   "skills": "Roadmap and AI launch fit; tax/accounting software preferred"
+  },
+  "summary": "Own vision and roadmap for Thomson Reuters analytical solutions, from strategy through launch and commercialization.",
+  "level_guess": "Product Manager (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Analytical product PM",
+   "Product commercialization",
+   "Cross-functional leadership"
+  ],
+  "flags": []
+ },
+ "e83e232d0b44": {
+  "fingerprint": "9fee8e66981884e9",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 10,
+   "level": 75,
+   "domain": 35,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 10
+  },
+  "reasons": {
+   "role": "Hands-on CPQ engineering, not a product job",
+   "level": "10+ yrs asked; senior engineering lead",
+   "domain": "Sales pricing and quoting systems; little overlap",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$191K is in the good band",
+   "skills": "Needs 4+ yrs hands-on Conga CPQ and Salesforce"
+  },
+  "summary": "Lead engineering strategy and build of Thomson Reuters' Conga CPQ and PROS pricing solutions.",
+  "level_guess": "Lead Solution Engineer (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "10+ yrs CRM technical",
+   "4+ yrs Conga CPQ",
+   "Salesforce integration"
+  ],
+  "flags": [
+   "Hands-on engineering role"
+  ]
+ },
+ "f1e50af8067d": {
+  "fingerprint": "90da31c46eabd61d",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Core technical PM owning a platform roadmap",
+   "level": "Staff level with exec influence; at your target",
+   "domain": "Mobile game engine platform; specialist domain",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$230K (Zone A) is in the good band",
+   "skills": "Needs deep Android and developer tools depth"
+  },
+  "summary": "Own Unity's mobile platform roadmap so developers ship high-performing games across mobile hardware.",
+  "level_guess": "Staff PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Technical PM for dev tools/OS",
+   "Deep Android expertise",
+   "Executive influence"
+  ],
+  "flags": [
+   "Montreal-based"
+  ]
+ },
+ "1820e4ab7317": {
+  "fingerprint": "7f26e01ec648328e",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 50,
+   "level": 60,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 65
+  },
+  "reasons": {
+   "role": "Strategy and operations support with little product ownership",
+   "level": "Senior manager supporting a VP; years not shown",
+   "domain": "Commercial payments and money movement; adjacent to your fintech work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Not posted",
+   "skills": "Analytics and planning fit; payments depth to build"
+  },
+  "summary": "Run planning, scorecards and strategic initiatives for Visa Canada's Commercial and Money Movement business.",
+  "level_guess": "Senior Manager, Strategy & Ops (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Business planning and reporting",
+   "Analytical skills",
+   "Cross-functional PMO"
+  ],
+  "flags": []
+ },
+ "770395b6f9a2": {
+  "fingerprint": "f0d8e8793dc8f426",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Core PM as product authority for a major platform",
+   "level": "10+ yrs PM leader; Sr Principal is one level above your target",
+   "domain": "UI and agentic experience platform; adjacent to your agent work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$293K is in the excellent band",
+   "skills": "Strategy fits; deep UI/UX platform expertise asked"
+  },
+  "summary": "Set strategy and roadmap for Workday's Intelligent Experience Platform powering user and agent experiences.",
+  "level_guess": "Senior Principal PM (≈ L7)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs PM leadership",
+   "UI/UX platform depth",
+   "Enterprise SaaS"
+  ],
+  "flags": [
+   "Victoria, BC location"
+  ]
+ },
+ "a4d3d8885d2d": {
+  "fingerprint": "7790c6d2289450ae",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 25,
+   "level": 60,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Partner solution consulting, a stretch from product management",
+   "level": "5+ yrs asked; senior consultant level",
+   "domain": "Finance agentic AI; adjacent to your enterprise AI work",
+   "pathway": "No work permit info in the posting",
+   "pay": "US ranges only; no Canadian range posted",
+   "skills": "Needs deep finance and accounting domain expertise"
+  },
+  "summary": "Enable Workday's strategic partners to position and demo Workday Financials and agentic Finance AI.",
+  "level_guess": "Senior Partner Consultant (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs finance domain",
+   "Workday Financials knowledge",
+   "Partner enablement"
+  ],
+  "flags": [
+   "Pre-sales role"
+  ]
+ },
+ "8e1083a22d85": {
+  "fingerprint": "43740a82e978910f",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 95,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 55
+  },
+  "reasons": {
+   "role": "Core PM owning an AI agent product end to end",
+   "level": "Principal scope; at your target, though 11+ yrs PM asked",
+   "domain": "Enterprise AI agents in regulated domains, a direct match",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$244K is in the excellent band",
+   "skills": "Agent fit; 11+ yrs PM and shipped revenue agents asked"
+  },
+  "summary": "Own a Workday Agent Factory AI agent from concept to GA in finance or HCM.",
+  "level_guess": "Principal PM (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "11+ yrs PM",
+   "Shipped production AI agents",
+   "Agent architecture depth"
+  ],
+  "flags": [
+   "Very hands-on builder role",
+   "Vancouver location"
+  ]
+ },
+ "a828a82f74b6": {
+  "fingerprint": "931e5403b5e28417",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 95,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core PM owning an AI agent product line",
+   "level": "Senior or Principal; at your target",
+   "domain": "Enterprise AI agents with auditability, a direct match",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$244K is in the excellent band",
+   "skills": "AI prototyping and regulated domains fit; 0-to-1 track asked"
+  },
+  "summary": "Own a Workday AI agent product from opportunity discovery through GA in finance and HCM.",
+  "level_guess": "Senior/Principal PM (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs PM (11+ Principal)",
+   "0-to-1 product track record",
+   "Hands-on AI tools"
+  ],
+  "flags": [
+   "Vancouver location"
+  ]
+ },
+ "c1c506d9ebf7": {
+  "fingerprint": "64ac7274ffb0e286",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 75,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core PM owning a contract AI portfolio roadmap",
+   "level": "8+ yrs asked for Senior; at your target",
+   "domain": "Generative AI for legal contracts; adjacent to your AI work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$204K is in the good band",
+   "skills": "GenAI launches fit; legal contract knowledge a bonus"
+  },
+  "summary": "Own vision and roadmap for Workday Evisort contract intelligence and analytics AI features.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs PM",
+   "GenAI product launches",
+   "LLM proficiency"
+  ],
+  "flags": [
+   "Vancouver location"
+  ]
+ },
+ "4183e2d279b7": {
+  "fingerprint": "f1d3e39b4c5ad3b3",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 70,
+   "level": 60,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Part product strategy, part pre-sales activation",
+   "level": "4+ yrs asked; below your target",
+   "domain": "Contract AI adoption; adjacent to your enterprise AI work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$204K is in the good band",
+   "skills": "Needs a law or legal-tech background"
+  },
+  "summary": "Define how Workday's Evisort contract AI is demoed, evaluated and adopted by enterprise customers.",
+  "level_guess": "Product Manager (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "4+ yrs PM or GTM",
+   "Legal or legal-tech background",
+   "Generative AI fluency"
+  ],
+  "flags": [
+   "Legal background required",
+   "Vancouver location"
+  ]
+ },
+ "59fddf966cca": {
+  "fingerprint": "07f3923433ff3ecb",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 80,
+   "level": 30,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Owns enterprise data product strategy and roadmap",
+   "level": "Managing Director, 10+ yrs; well above your IC target",
+   "domain": "Governed, AI-ready data products, a direct match",
+   "pathway": "No work permit info in the posting",
+   "pay": "Not posted",
+   "skills": "Data governance fits; deep capital markets expertise required"
+  },
+  "summary": "Own RBC Capital Markets enterprise data products: strategy, governance and AI-ready data capabilities.",
+  "level_guess": "Managing Director (≈ L8)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs capital markets",
+   "Enterprise data strategy",
+   "Data governance"
+  ],
+  "flags": [
+   "Executive-level role"
+  ]
+ },
+ "6c46c9b37bd1": {
+  "fingerprint": "9ceae00e98653083",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 50,
+   "level": 75,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Operations platform product owner with ops leadership focus",
+   "level": "Director, 10-15 yrs; one level above your target",
+   "domain": "FX settlement operations; specialist domain",
+   "pathway": "No work permit info in the posting",
+   "pay": "Not posted",
+   "skills": "Needs 10-15 yrs FX and money markets operations"
+  },
+  "summary": "Own RBC's FX and Money Markets operations platform backlog, settlement KPIs and regulatory readiness.",
+  "level_guess": "Director (≈ L7)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10-15 yrs capital markets ops",
+   "FX settlement expertise",
+   "Ops transformation"
+  ],
+  "flags": [
+   "Deep FX ops domain"
+  ]
+ },
+ "e1bf62196682": {
+  "fingerprint": "39c5198c0dd1bc75",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 90,
+   "level": 55,
+   "domain": 55,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Product owner with strategy and roadmap for digital support",
+   "level": "3+ yrs asked; below your target",
+   "domain": "Consumer digital self-serve with AI search; general consumer",
+   "pathway": "No work permit info in the posting",
+   "pay": "Not posted",
+   "skills": "AI and A/B testing fit; support UX depth asked"
+  },
+  "summary": "Own Rogers' strategy and roadmap for digital self-serve and support journeys across web, app, search and AI.",
+  "level_guess": "Product Owner (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3+ yrs product ownership",
+   "Digital self-service at scale",
+   "Experimentation"
+  ],
+  "flags": []
+ },
+ "f1cbc4bed3fc": {
+  "fingerprint": "89a0b6b4d6e7fe11",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 15,
+   "level": 55,
+   "domain": 35,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Solution architecture, not product management",
+   "level": "About 5 yrs asked; below your target",
+   "domain": "Enterprise content management; little overlap",
+   "pathway": "No work permit info in the posting",
+   "pay": "Not posted",
+   "skills": "Needs ECM, cost estimation and AWS architecture"
+  },
+  "summary": "Design ECM solution architectures and cost estimates for National Bank technology projects.",
+  "level_guess": "Solutions Architect (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "ECM knowledge",
+   "Solution architecture",
+   "AWS certification"
+  ],
+  "flags": [
+   "French required",
+   "Montreal-based"
+  ]
+ },
+ "08c7f3b9102c": {
+  "fingerprint": "67ba2edb13c73c47",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 70,
+   "level": 65,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Customer-facing agentic solution design; product-heavy adjacent",
+   "level": "4-10 yrs asked; senior title",
+   "domain": "Enterprise agentic AI, close to your agent work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Not posted",
+   "skills": "Agent fit; solutions architecture and integration background asked"
+  },
+  "summary": "Design and deploy Netomi agentic AI workflows for enterprise customers as solution owner.",
+  "level_guess": "Senior PM / Solutions (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "4-10 yrs solutions architecture",
+   "Enterprise integrations",
+   "Customer-facing consulting"
+  ],
+  "flags": [
+   "Implementation-heavy role"
+  ]
+ },
+ "c1efd816b4eb": {
+  "fingerprint": "601861b9a7abb59a",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 35,
+   "level": 75,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Content program management with little product ownership",
+   "level": "8+ yrs asked; senior program scope",
+   "domain": "Customer education video content; unrelated",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$132K is in the low band",
+   "skills": "Needs video and multimedia content program experience"
+  },
+  "summary": "Lead Oracle NetSuite learning content programs and define how content production operates.",
+  "level_guess": "Senior Program Manager (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs content/video programs",
+   "Portfolio leadership",
+   "Directing on-camera talent"
+  ],
+  "flags": [
+   "US location preferred"
+  ]
+ },
+ "9d5a758cd0b3": {
+  "fingerprint": "8ffe9326d062dc18",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 30,
+   "level": 50,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 25
+  },
+  "reasons": {
+   "role": "Content production program management, little product work",
+   "level": "5+ yrs asked; below your target",
+   "domain": "Customer education video content; unrelated",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$117K is below your target",
+   "skills": "Needs video and multimedia content program experience"
+  },
+  "summary": "Run Oracle NetSuite learning content programs from intake through video production and publication.",
+  "level_guess": "Program Manager (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs content/video programs",
+   "Directing on-camera talent",
+   "Production SOPs"
+  ],
+  "flags": [
+   "US location preferred"
+  ]
+ },
+ "e6aa2a5f913b": {
+  "fingerprint": "e2df70c052ef6351",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 50,
+   "level": 50,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "No description available; business operations is adjacent",
+   "level": "No description to judge level",
+   "domain": "No description to judge domain",
+   "pathway": "No work permit info in the posting",
+   "pay": "Not posted",
+   "skills": "No description to judge must-haves"
+  },
+  "summary": "Business operations lead role at Quandri; the posting text was not available.",
+  "level_guess": "Unclear",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [],
+  "flags": [
+   "No description available"
+  ]
+ },
+ "acce55d2c532": {
+  "fingerprint": "cc88b6f9a1bc30e2",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Core PM owning commercial product strategy and roadmap",
+   "level": "7+ yrs PM asked; senior scope near your target",
+   "domain": "AI for commercial insurance brokers; adjacent to fintech",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$200K is in the good band",
+   "skills": "0-to-1 and AI prototyping fit; insurance knowledge preferred"
+  },
+  "summary": "Own Quandri's commercial insurance product strategy and roadmap, 0-to-1 through launch.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs PM",
+   "0-to-1 experience",
+   "AI-first prototyping"
+  ],
+  "flags": []
+ },
+ "20e039f2f0f9": {
+  "fingerprint": "ac0eae26fd0c92d5",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Core PM owning a whole market across the portfolio",
+   "level": "6+ yrs asked; broad market scope near your target",
+   "domain": "AI for insurance brokerages; adjacent to fintech",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$200K is in the good band",
+   "skills": "Influence and business cases fit; P&L modelling asked"
+  },
+  "summary": "Own Quandri's Canadian market across its insurance AI products, setting investment strategy and priorities.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "6+ yrs, mostly PM",
+   "Influence without authority",
+   "P&L or investment modelling"
+  ],
+  "flags": []
+ },
+ "e6dff86d266f": {
+  "fingerprint": "a9f139b77efbe831",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Core PM owning the user growth funnel",
+   "level": "5+ yrs asked; lead PM with company-level scope",
+   "domain": "Consumer UGC growth; general consumer",
+   "pathway": "No work permit info in the posting",
+   "pay": "Top CA$264K (Toronto) is in the excellent band",
+   "skills": "Experimentation fits; consumer growth track record asked"
+  },
+  "summary": "Lead Quora's growth funnel: acquisition, activation and retention across web and mobile.",
+  "level_guess": "Lead PM (≈ L5-L6)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs PM",
+   "Consumer growth track record",
+   "Experimentation at scale"
+  ],
+  "flags": [
+   "Pacific-time coordination hours"
+  ]
+ },
+ "099f382d23de": {
+  "fingerprint": "ca2b6e3387e83b9c",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 25,
+   "level": 70,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Product marketing, a stretch from product management",
+   "level": "Director-level IC; years not stated",
+   "domain": "AI security products; adjacent to your AI and safety work",
+   "pathway": "No work permit info in the posting",
+   "pay": "Not posted",
+   "skills": "Needs category product marketing and launch experience"
+  },
+  "summary": "Lead Sophos' positioning, messaging and launches for its AI security portfolio as an IC.",
+  "level_guess": "Director, Product Marketing (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Product marketing leadership",
+   "AI fluency",
+   "Cybersecurity GTM"
+  ],
+  "flags": [
+   "Product marketing role"
+  ]
+ },
+ "20e4160d02a8": {
+  "fingerprint": "9f2fa86da4b2af11",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 25,
+   "level": 75,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Solutions engineering, a stretch from product management",
+   "level": "8+ yrs asked; senior IC",
+   "domain": "Managed security and AI security; specialist domain",
+   "pathway": "No work permit info in the posting",
+   "pay": "Not posted",
+   "skills": "Needs hands-on cybersecurity and MSSP engineering"
+  },
+  "summary": "Lead Sophos' technical work with MSSP partners and serve as global AI security solutions expert.",
+  "level_guess": "Senior Solutions Engineer (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs solutions/sales engineering",
+   "MDR/XDR/SIEM depth",
+   "MSSP models"
+  ],
+  "flags": [
+   "Up to 50% travel"
+  ]
+ },
+ "6c09473d1329": {
+  "fingerprint": "12d3d185317524c0",
+  "profile_key": "555fcc7e615a",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T11:17:23+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 45,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 35
+  },
+  "reasons": {
+   "role": "Core PM owning product strategy and roadmap",
+   "level": "5+ yrs asked; senior PM near your target",
+   "domain": "Endpoint security; specialist but near trust and safety",
+   "pathway": "No work permit info in the posting",
+   "pay": "Not posted",
+   "skills": "AI-first PM fits; EDR and endpoint security depth asked"
+  },
+  "summary": "Own Sophos Endpoint Detection and Response strategy, roadmap and go-to-market.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs PM",
+   "EDR workflow knowledge",
+   "AI-first PM practice"
+  ],
+  "flags": []
  }
 }
