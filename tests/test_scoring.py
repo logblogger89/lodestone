@@ -17,7 +17,8 @@ class TestScoringPrepare(unittest.TestCase):
         rubric = scoring.config()["rubric_version"]
         self.scores = {job_id(k): {"fingerprint": scoring._fingerprint(j, rubric)} for k, j in JOBS.items()}
         for p in (mock.patch.object(scoring, "INBOX", Path(self.tmp.name) / "inbox"),
-                  mock.patch.object(scoring.store, "load", lambda n, d: {"jobs": JOBS} if n == "jobs" else self.scores)):
+                  mock.patch.object(scoring.store, "load", lambda n, d: {"jobs": JOBS} if n == "jobs" else self.scores),
+                  mock.patch.object(scoring.store, "save", lambda n, d: None)):   # never write the real data/state
             p.start()
             self.addCleanup(p.stop)
 
