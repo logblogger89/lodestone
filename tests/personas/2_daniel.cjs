@@ -98,7 +98,7 @@ module.exports = {
     h.check((pr.domains || []).includes('fintech') && (pr.current || {}).title, 'Domains and title fill in straight away');
     const prof = await h.text();
     h.check(/next update \(within about 6 hours\)/.test(prof), 'It says when the profile will be built');
-    h.check(/Match quality: level [0-4] of 4/i.test(prof), 'The match-quality meter shows his level');
+    h.check(/How well Lodestone knows you.*Level [0-4] of 4/i.test(prof), 'The match-quality meter shows his level');
     h.check(/Next:/.test(prof), 'The meter names the one next step');
     h.check(/never sent to employers/i.test(prof), 'Privacy promise next to his experience');
     await h.shot('profile-after-builder');

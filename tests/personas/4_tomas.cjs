@@ -51,6 +51,19 @@ module.exports = {
       h.check(await undo.count(), 'The accepted change is listed with Undo');
       if (await undo.count()) { await undo.first().click(); await h.wait(300) }
       h.check(!((await h.store())['settings/prefs'].learned || []).length, 'Undo removes it');
+      h.task('Jump around the Profile on the phone, change one thing, save');
+      h.check(await h.page.locator('.jumpbar').isVisible(), 'A row of "jump to" chips sits at the top of the Profile');
+      await h.page.locator('.jumpbar [data-jump="ps-app"]').click(); await h.wait(700);
+      const r = await h.evalS(() => { const s = document.getElementById('ps-app').getBoundingClientRect(), b = document.querySelector('.jumpbar').getBoundingClientRect(); return { top: Math.round(s.top), bar: Math.round(b.bottom) } });
+      h.check(r.top >= r.bar - 2 && r.top < 200, `Tapping "Lists" lands on that section, not hidden under the chips (section at ${r.top}px, chips end at ${r.bar}px)`);
+      h.check(await h.page.locator('.jumpbar').isVisible() && (await h.evalS(() => Math.round(document.querySelector('.jumpbar').getBoundingClientRect().top))) <= 1, 'The chips stay at the top while he scrolls');
+      await h.page.fill('#ldays', '5'); await h.wait(150);
+      const sb = await h.evalS(() => { const b = document.getElementById('savebar').getBoundingClientRect(), t = document.querySelector('.tabbar').getBoundingClientRect(); return { dirty: document.getElementById('savebar').classList.contains('dirty'), bottom: Math.round(b.bottom), tab: Math.round(t.top), vis: b.top < innerHeight } });
+      h.check(sb.dirty && sb.vis && sb.bottom <= sb.tab, `After a change, "Save changes" is on screen just above the tab bar (bar ends ${sb.bottom}px, tabs start ${sb.tab}px)`);
+      h.check(/unsaved changes/i.test(await h.text('#savebar')), 'It says he has unsaved changes');
+      await h.shot('profile-phone-save');
+      await h.page.locator('#savebar [data-act="saveprefs"]').click(); await h.wait(300);
+      h.check(((await h.store())['settings/prefs'] || {}).later_days === 5, 'Saving from the bar keeps his change');
       await h.click('[data-view="digest"]'); await h.wait(250);
     } else h.check(false, 'Suggestion banner present');
 

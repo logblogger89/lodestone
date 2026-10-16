@@ -26,7 +26,7 @@ module.exports = {
     if (await got.count()) { await got.click(); await h.wait(200); h.check(!(await h.has('Your first list')), '"Got it" dismisses the first-list banner') }
     await h.click('[data-view="settings"]'); await h.wait(250);
     const p = await h.text();
-    h.check(/Match quality: level 0 of 4/i.test(p), 'Profile shows match quality level 0');
+    h.check(/Level 0 of 4/i.test(p), 'Profile shows match quality level 0');
     h.check(/Run the quick setup again/.test(p), 'Setup can be started from the Profile later');
     await h.shot('profile');
     await h.click('[data-act="reonboard"]'); await h.wait(250);

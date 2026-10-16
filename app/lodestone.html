@@ -42,6 +42,16 @@ a{color:var(--accent)}
 .nav{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;border:0;background:none;text-align:left;cursor:pointer;color:var(--muted);min-height:44px}
 .nav[aria-current="page"]{background:var(--accent-soft);color:var(--fg);font-weight:600}
 .nav .count{margin-left:auto;font-family:var(--font-mono);font-size:12px}
+.subnav{display:flex;flex-direction:column;gap:2px;margin:2px 0 4px 12px;padding-left:10px;border-left:1px solid var(--line)}
+.subnav[hidden]{display:none}
+.subnav button{border:0;background:none;text-align:left;cursor:pointer;color:var(--muted);font-size:13px;padding:6px 10px;border-radius:6px;min-height:32px}
+.subnav button:hover,.jumpbar button:hover{color:var(--fg)}
+.subnav button[aria-current="true"]{color:var(--accent);font-weight:600;background:var(--accent-soft)}
+.jumpbar{display:none}
+.pfsec{scroll-margin-top:16px}
+.pfsec .lead{margin-top:-4px}
+.savebar{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.savebar.dirty{position:sticky;bottom:12px;z-index:5;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 14px;box-shadow:0 4px 16px rgba(0,0,0,.08)}
 .main{min-width:0;padding-block:18px 96px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
 .wrap{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
 .topbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
@@ -290,6 +300,12 @@ kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);bor
   .tabbar{display:grid;grid-template-columns:repeat(6,1fr);position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:6px max(6px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(6px,env(safe-area-inset-left,0px));z-index:15}
   .tabbar button{border:0;background:none;min-height:48px;font-size:11px;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer}
   .tabbar button[aria-current="page"]{color:var(--accent);font-weight:600}
+  .jumpbar{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;position:sticky;top:0;z-index:6;background:var(--bg);margin:0 -16px;padding:8px 16px;border-bottom:1px solid var(--line)}
+  .jumpbar::-webkit-scrollbar{display:none}
+  .jumpbar button{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:6px 12px;font-size:13px;min-height:36px;cursor:pointer}
+  .jumpbar button[aria-current="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-fg);font-weight:600}
+  .pfsec{scroll-margin-top:64px}
+  .savebar.dirty{bottom:calc(72px + env(safe-area-inset-bottom,0px))}
 }
 @media (max-width: 560px){
   .showtabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px 2px}
@@ -319,6 +335,7 @@ kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);bor
     <button class="nav" data-view="reports">Reports</button>
     <button class="nav" data-view="companies">Companies</button>
     <button class="nav" data-view="settings">Profile</button>
+    <div class="subnav" id="pf-subnav" aria-label="Profile sections" hidden></div>
   </nav>
   <main class="main"><div class="wrap" id="view"></div></main>
   <nav class="tabbar" aria-label="Main">
@@ -1398,7 +1415,7 @@ function resumeBlock(p){
       <div class="xpway"><b>Paste any text</b><span>Even a LinkedIn "About" section and job titles</span><button class="btn" data-xp="paste" aria-expanded="${open==="paste"||!!(r&&r.text)}">Paste text</button></div>
       <div class="xpway"><b>Build it with me</b><span>Five short questions, about two minutes</span><button class="btn" data-xp="build" aria-expanded="${open==="build"}">Start</button></div>
     </div>
-    <div id="xp-paste"${open==="paste"||(r&&r.text)?"":" hidden"}><label for="cvtext">Your resume or notes, as text</label><textarea id="cvtext" rows="6" placeholder="Paste anything: a resume, a draft, a list of past roles">${esc((r&&r.text)||"")}</textarea><span class="note">Saved when you press Save profile.</span></div>
+    <div id="xp-paste"${open==="paste"||(r&&r.text)?"":" hidden"}><label for="cvtext">Your resume or notes, as text</label><textarea id="cvtext" rows="6" placeholder="Paste anything: a resume, a draft, a list of past roles">${esc((r&&r.text)||"")}</textarea><span class="note">Saved when you press Save changes.</span></div>
     <div id="xp-build" class="xpbuild"${open==="build"?"":" hidden"}>
       <div class="field"><label for="b-role">1. What's your current role and level?</label><input id="b-role" value="${esc(ans.role||"")}" placeholder="e.g. Senior product marketing manager"></div>
       <div class="field"><label for="b-years">2. Years of work experience</label><input id="b-years" type="number" min="0" max="50" value="${esc(ans.years??"")}"></div>
@@ -1453,7 +1470,7 @@ function matchQuality(){
 }
 function qualityMeter(){
   const q=matchQuality();
-  return `<section class="panel meter"><h4>Match quality: level ${q.level} of 4</h4>
+  return `<section class="panel meter"><h4>How well Lodestone knows you <span class="note">· Level ${q.level} of 4</span></h4>
     <div class="msteps" role="img" aria-label="Level ${q.level} of 4">${q.steps.map(x=>`<span class="${x.ok?"on":""}">${esc(x.name)}</span>`).join("")}</div>
     <p class="note">${q.nxt?`Next: ${q.nxt.act?`<button class="link plink" data-act="${q.nxt.act}">${esc(q.nxt.next)}</button>`:`<button class="link plink" data-view="${q.nxt.view}">${esc(q.nxt.next)}</button>`}`:"Lodestone knows enough to rank well. It keeps learning as you go."}</p></section>`;
 }
@@ -1517,7 +1534,7 @@ function qualityPanel(){
   const pct=x=>x==null?"–":Math.round(x*100)+"%";
   const acc=rd&&rd.accuracy?Object.entries(rd.accuracy).filter(([,v])=>v!=null):[];
   const NAMES={pay:"pay amounts",pay_kind:"pay type",region:"location",people_mgmt:"people management",level:"level",years:"years of experience",excluded:"filtering out non-roles"};
-  return `<section class="panel"><h4>Score quality</h4>
+  return `${pfHead("check")}
     <dl class="facts">
       <dt>Your picks</dt><dd>${r.pos?`<b>${r.top25} of ${r.pos}</b> roles you marked Interested are in Lodestone's top 25 (of ${r.ranked}).`:"Mark roles Interested to see how they rank."}</dd>
       <dt>Order</dt><dd>${r.pairwise!=null?`Interested roles score above your Later / Not for me roles <b>${pct(r.pairwise)}</b> of the time (50% would be a coin flip).${r.learned!=null?` With what Lodestone learned from your choices: <b>${pct(r.learned)}</b>.`:""}`:"Needs at least one Interested and one Later or Not for me role."}</dd>
@@ -1527,14 +1544,40 @@ function qualityPanel(){
     <p class="note">${enough?"Enough triage for a reliable read.":`Early read: it gets reliable at 10+ Interested and 10+ Later or Not for me (you have ${r.pos} and ${r.neg}). "Not for me" with a reason helps most.`}</p>
   </section>`;
 }
+/* Profile sections: one list drives the headings, the side-menu sub-items and the phone "jump to" chips. */
+const PF_SECS=[["work","Tell Lodestone about your work","About you"],["want","Choose the jobs you want","Jobs you want"],
+  ["rank","Change how roles are ranked","Ranking"],["learn","Control what Lodestone learns","Learning"],
+  ["check","See how well the ranking fits your choices","Ranking check"],["app","Adjust your lists and reminders","Lists"]];
+const pfHead=k=>{const s=PF_SECS.find(x=>x[0]===k);return `<section class="panel pfsec" id="ps-${k}" aria-labelledby="pfh-${k}"><h4 id="pfh-${k}" tabindex="-1">${esc(s[1])}</h4>`};
+function jumpTo(id){
+  const go=()=>{const sec=document.getElementById(id);if(!sec)return;
+    const smooth=!matchMedia("(prefers-reduced-motion: reduce)").matches;
+    sec.scrollIntoView({behavior:smooth?"smooth":"auto",block:"start"});sec.querySelector("h4")?.focus({preventScroll:true});markSection(id)};
+  if(S.view!=="settings"){setView("settings");requestAnimationFrame(go)}else go();
+}
+function markSection(id){document.querySelectorAll("[data-jump]").forEach(b=>b.setAttribute("aria-current",b.dataset.jump===id?"true":"false"));
+  const c=document.querySelector(`.jumpbar [data-jump="${id}"]`);if(c&&c.offsetParent){const bar=c.parentElement;if(c.offsetLeft<bar.scrollLeft||c.offsetLeft+c.offsetWidth>bar.scrollLeft+bar.clientWidth)bar.scrollLeft=c.offsetLeft-16}}
+let _spy=0, _spyHold=0;
+function spySections(){
+  if(S.view!=="settings"||Date.now()<_spyHold) return;
+  const secs=[...document.querySelectorAll(".pfsec")]; if(!secs.length) return;
+  const atEnd=window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4;
+  let cur=atEnd?secs[secs.length-1]:secs[0];
+  if(!atEnd) for(const s of secs){if(s.getBoundingClientRect().top<=window.innerHeight*.3)cur=s}
+  markSection(cur.id);
+}
+window.addEventListener("scroll",()=>{if(_spy)return;_spy=requestAnimationFrame(()=>{_spy=0;spySections()})},{passive:true});
+function markDirty(){const b=document.getElementById("savebar");if(b&&!b.classList.contains("dirty")){b.classList.add("dirty");const n=document.getElementById("savenote");if(n)n.textContent="You have unsaved changes."}}
 function viewSettings(){
   const p=S.prefs, pr=S.profile||{}, cur=pr.current||{}, pref=pr.preferences||{}, W=p.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+wv(W,k),0), ck={...DEFAULT_PREFS.checks,...(p.checks||{})};
   const val=k=>Array.isArray(pr[k])?pr[k].join("\n"):(pr[k]||"");
   return `<div class="topbar"><h1>Profile</h1><span class="sp"></span>${freshChip()}</div>
+  <nav class="jumpbar" aria-label="Profile sections">${PF_SECS.map(([k,,n])=>`<button data-jump="ps-${k}">${esc(n)}</button>`).join("")}</nav>
   <p class="note">Everything Lodestone knows about you and what you want. Only you can see it. Changes apply straight away to colours and ranking; roles are re-scored against a changed profile at the next update.</p>
   ${qualityMeter()}
   <p class="note"><button class="link plink" data-act="reonboard">Run the quick setup again</button> to change where, what and your work status in one go.</p>
-  <section class="panel"><h4>You</h4>
+  ${pfHead("work")}
+    <p class="note lead">Your experience is what Lodestone scores every role against.</p>
     ${resumeBlock(pr)}
     <div class="grid2">
       <div class="field"><label for="pf-employer">Current employer</label><input id="pf-employer" value="${esc(cur.employer||"")}" placeholder="e.g. Google"><span class="note">Used to spot internal transfers to its Canadian offices.</span></div>
@@ -1547,7 +1590,8 @@ function viewSettings(){
     ${(pr.resume&&pr.resume.status==="read")||(pr.builder&&pr.builder.status==="read")?`<h4 class="understood">Here's what we understood</h4><p class="note">Every line is editable. Fix anything that's wrong or undersells you; your edits are kept.</p>`:""}
     ${PROFILE_FIELDS.map(([k,l,rows])=>`<div class="field"><label for="pf-${k}">${l}</label><textarea id="pf-${k}" rows="${rows}" style="min-height:${rows>1?110:44}px">${esc(val(k))}</textarea></div>`).join("")}
   </section>
-  <section class="panel"><h4>What you're looking for</h4>
+  ${pfHead("want")}
+    <p class="note lead">Roles that match turn green on every card.</p>
     <div class="field"><label>Where (green in the colour checks)</label>
       <div class="chips">${REGIONS.filter(r=>r!=="Other Canada").map(r=>`<label class="chip"><input type="checkbox" data-region="${r}"${(p.regions||[]).includes(r)?" checked":""}> ${r}</label>`).join("")}</div>
       <div class="switch"><label for="other">Also show the rest of Canada under "My regions"</label><input type="checkbox" id="other"${p.other_regions?" checked":""}></div></div>
@@ -1564,14 +1608,15 @@ function viewSettings(){
     <div class="switch"><label for="xpm">Hide roles that manage people</label><input type="checkbox" id="xpm"${p.exclude_people_mgmt?" checked":""}></div>
     <div class="switch"><label for="nopay">Include roles with no Canadian pay range</label><input type="checkbox" id="nopay"${p.include_no_pay?" checked":""}></div>
   </section>
-  ${learnPanel()}
-  ${qualityPanel()}
-  <section class="panel"><h4>How roles are ranked</h4>
-    <p class="note">How much each factor counts in the fit score. They always add up to 100%.</p>
+  ${pfHead("rank")}
+    <p class="note lead">Choose how much each factor counts in the fit score. They always add up to 100%.</p>
     ${SUBS.map(k=>`<div class="slider"><label for="w-${k}">${SUBLABEL[k]}</label><input type="range" id="w-${k}" min="0" max="60" step="5" value="${wv(W,k)}" data-w="${k}"><span class="mono" id="wv-${k}">${tot?Math.round(wv(W,k)*100/tot):0}%</span></div>`).join("")}
     <div class="row"><button class="btn" data-act="resetw">Reset to defaults</button></div>
   </section>
-  <section class="panel"><h4>App</h4>
+  ${learnPanel()}
+  ${qualityPanel()}
+  ${pfHead("app")}
+    <p class="note lead">How many roles you see, when Later roles come back, and what counts as fresh.</p>
     <div class="grid2"><div class="field"><label for="tsize">Roles in Today's list (3–30, from tomorrow's list)</label><input type="number" id="tsize" min="3" max="30" value="${todaySize()}"></div>
     <div class="field"><label for="dsize">Roles on the first page of All to triage (1–100)</label><input type="number" id="dsize" min="1" max="100" value="${+p.digest_size||20}"></div>
     <div class="field"><label for="ldays">"Later" roles come back after (days)</label><input type="number" id="ldays" min="1" max="60" value="${+p.later_days||7}"></div>
@@ -1580,18 +1625,18 @@ function viewSettings(){
     <div class="field"><label for="maxage">Hide roles posted more than this many days ago (0 shows all)</label><input type="number" id="maxage" min="0" max="365" value="${+p.max_age_days||0}"></div>
     <div class="field"><label for="rdays">Reports archive shows the last (days)</label><input type="number" id="rdays" min="1" max="90" value="${+p.report_days||14}"></div></div>
   </section>
-  <div class="row"><button class="btn primary" data-act="saveprefs"${S.offline?" disabled":""}>Save profile</button><span class="note" id="savenote"></span></div>`;
+  <div class="savebar" id="savebar"><button class="btn primary" data-act="saveprefs"${S.offline?" disabled":""}>Save changes</button><span class="note" id="savenote"></span></div>`;
 }
 function learnPanel(){
   const P=S.prefs, L=(P.learned||[]).slice().reverse(), hid=P.hidden_companies||[], nRead=Object.values(S.sig||{}).filter(g=>g&&+g.read_secs>0).length, nLike=Object.values(S.likes||{}).filter(l=>l&&l.v).length;
-  return `<section class="panel"><h4>What Lodestone learns from you</h4>
+  return `${pfHead("learn")}
     <p class="note">Roles move up or down a little (at most ${LEARN_CAP} points) when they're similar to ones you marked Interested or Not for me, or asked to see more or less like. Each move is explained on the card. You have ${nLike} "more / less like this" choice${nLike===1?"":"s"}.</p>
     <div class="switch"><label for="lread">Learn from what I read (time spent on a role's Job description tab)</label><input type="checkbox" id="lread"${P.learn_reading!==false?" checked":""}></div>
     <div class="row"><button class="btn" data-act="delreading"${nRead?"":" disabled"}>Delete my reading data</button><span class="note">${nRead?`Reading time saved for ${nRead} role${nRead===1?"":"s"}. Only you can see it.`:"No reading data saved."}</span></div>
-    <h4 style="margin-top:14px">Changes you accepted</h4>
+    <h4 style="margin-top:14px">Undo changes you accepted</h4>
     ${L.length?`<ul class="learned">${L.map(x=>`<li><b>${esc(x.text)}</b> <span class="note">${esc(x.why)} ${esc(ago(parseWhen(x.at)))}</span> <button class="link" data-undo="${esc(x.id)}">Undo</button></li>`).join("")}</ul>`
       :`<p class="note">Nothing yet. When your choices show a pattern (say, "Pay too low" three times), Lodestone suggests a change at the top of the Digest and you accept it with one tap.</p>`}
-    ${hid.length?`<h4 style="margin-top:14px">Hidden companies</h4><div class="chips">${hid.map(c=>`<span class="chip">${esc(c)} <button class="link" data-unhide="${esc(c)}" aria-label="Show ${esc(c)} again">Show again</button></span>`).join("")}</div>`:""}
+    ${hid.length?`<h4 style="margin-top:14px">Show hidden companies again</h4><div class="chips">${hid.map(c=>`<span class="chip">${esc(c)} <button class="link" data-unhide="${esc(c)}" aria-label="Show ${esc(c)} again">Show again</button></span>`).join("")}</div>`:""}
   </section>`;
 }
 function freshPanel(){
@@ -1618,6 +1663,7 @@ function render(){
   const v={digest:viewDigest,pipeline:viewPipeline,add:viewAdd,reports:viewReports,companies:viewCompanies,settings:viewSettings}[S.view]||viewDigest;
   // keep unsaved settings edits and the paste box while live data re-renders
   if(S.view==="settings"&&document.getElementById("dsize")&&S._editingPrefs) {} else $("#view").innerHTML=v();
+  const sn=$("#pf-subnav"); if(sn){sn.hidden=S.view!=="settings";if(!sn.hidden&&!sn.firstChild)sn.innerHTML=PF_SECS.map(([k,,n])=>`<button data-jump="ps-${k}">${esc(n)}</button>`).join("");if(!sn.hidden)spySections()}
   const ov=$("#overlay");
   if(S.open==="__fresh") ov.innerHTML=`<div class="scrim" data-act="close"></div><aside class="drawer" role="dialog" aria-label="Last updated">${freshPanel()}</aside>`;
   else if(S.open&&S.jobs[S.open]) ov.innerHTML=`<div class="scrim" data-act="close"></div><aside class="drawer" role="dialog" aria-label="${esc(S.jobs[S.open].title)}">${viewDetail(S.jobs[S.open])}</aside>`;
@@ -1638,6 +1684,7 @@ document.addEventListener("click",e=>{
   if(el.tagName==="A"){if(S.open&&S.jobs[S.open]&&el.closest(".drawer"))addSignal(S.open,{opened_original:true});return}
   const d=el.dataset;
   if(d.view){setView(d.view);return}
+  if(d.jump){_spyHold=Date.now()+700;jumpTo(d.jump);return}
   if(d.tri){e.stopPropagation();const j=jobById(d.id);if(j)triage(j,d.tri);return}
   if(d.reason){e.stopPropagation();const j=jobById(d.id),t=tri(d.id)||{};const r=new Set(t.reasons||[]);r.has(d.reason)?r.delete(d.reason):r.add(d.reason);if(j)writeTriage(j,{reasons:[...r]});return}
   if(d.show){S.show=d.show;S.sel=0;S.expanded=false;S.recent.clear();render();return}
@@ -1688,7 +1735,7 @@ document.addEventListener("click",e=>{
   if(d.cofilter){S.view="digest";S.q=d.cofilter;S.show="all";S.region="all";S.open=null;S.sel=0;render();window.scrollTo(0,0);return}
   if(d.act==="mreq"){e.stopPropagation();const j=jobById(d.id);if(j)requestMarket(j);return}
   if(d.act==="saveprefs"){savePrefs();return}
-  if(d.act==="resetw"){SUBS.forEach(k=>{const i=document.getElementById("w-"+k);if(i)i.value=DEFAULT_PREFS.weights[k]});updateWeightLabels();S._editingPrefs=true;return}
+  if(d.act==="resetw"){SUBS.forEach(k=>{const i=document.getElementById("w-"+k);if(i)i.value=DEFAULT_PREFS.weights[k]});updateWeightLabels();S._editingPrefs=true;markDirty();return}
   if(d.open!==undefined&&!e.target.closest(".triage,.reasons,.ask,a,select")){openJob(d.open,d.idx!=null&&d.idx!==""?+d.idx:null)}
 });
 document.addEventListener("keydown",e=>{   // arrow keys move between detail tabs (ARIA tabs pattern)
@@ -1701,7 +1748,8 @@ document.addEventListener("input",e=>{
   const t=e.target;
   if(t.id==="q"){S.q=t.value;S.sel=0;render()}
   else if(t.id==="coq"){S.coQ=t.value;render()}
-  else if(t.dataset.w){updateWeightLabels();S._editingPrefs=true}
+  else if(t.dataset.w){updateWeightLabels();S._editingPrefs=true;markDirty()}
+  else if(S.view==="settings"&&t.closest("#view")&&!t.closest("#xp-build")){S._editingPrefs=true;markDirty()}
   else if(S.view==="settings") S._editingPrefs=true;
 });
 document.addEventListener("change",e=>{

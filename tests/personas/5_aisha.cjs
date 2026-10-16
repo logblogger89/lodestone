@@ -46,8 +46,24 @@ module.exports = {
     h.note('works', 'Card focusability: ' + ring);
     h.check(await h.evalS(() => document.querySelector('#view .card').tabIndex >= 0), 'Cards can be reached with Tab');
 
-    h.task('Learning controls: stop reading-time learning, delete reading data');
+    h.task('Find her way around the Profile with the side menu');
+    h.check(await h.evalS(() => document.getElementById('pf-subnav').hidden), 'Profile sub-items stay hidden outside the Profile');
     await h.click('[data-view="settings"]'); await h.wait(250);
+    const subs = await h.page.locator('#pf-subnav button').allInnerTexts();
+    h.check(subs.length === 6, `The side menu lists the Profile's ${subs.length} sections under Profile (${subs.join(', ')})`);
+    const heads = await h.page.locator('.pfsec > h4[id^="pfh-"]').allInnerTexts();
+    h.check(heads.length === 6 && heads.every(t => /^(Tell|Choose|Change|Control|See|Adjust)\b/.test(t)), `Every section heading says what you can do there (${heads.join(' / ')})`);
+    await h.page.locator('#pf-subnav [data-jump="ps-learn"]').focus(); await k('Enter'); await h.wait(700);
+    h.check(await h.evalS(() => document.activeElement.id === 'pfh-learn'), 'Enter on "Learning" moves focus to that section, so a screen reader reads it next');
+    const top = await h.evalS(() => Math.round(document.getElementById('ps-learn').getBoundingClientRect().top));
+    h.check(top >= 0 && top < 120, `The Learning section is scrolled to the top of the screen (${top}px)`);
+    h.check((await h.page.locator('#pf-subnav [data-jump="ps-learn"]').getAttribute('aria-current')) === 'true', 'The side menu marks Learning as the section she is in');
+    await h.shot('profile-subnav');
+    await h.page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight)); await h.wait(300);
+    h.check((await h.page.locator('#pf-subnav [data-jump="ps-app"]').getAttribute('aria-current')) === 'true', 'Scrolling to the bottom moves the highlight to the last section');
+    await h.page.evaluate(() => window.scrollTo(0, 0)); await h.wait(200);
+
+    h.task('Learning controls: stop reading-time learning, delete reading data');
     await h.page.locator('#lread').uncheck();
     await h.click('[data-act="saveprefs"]'); await h.wait(300);
     h.check((await h.store())['settings/prefs'].learn_reading === false, 'Reading-time learning switched off and saved');
