@@ -40,7 +40,8 @@
   {
    "title": "Updates today",
    "items": [
-    "1:00pm: 5 new roles scored (best: OpenText Principal PM, Waterloo, fit 70); 13 closed, including Workday's Sr Principal PM that you'd shortlisted; Borrowell and Mila feeds rate-limited, retried at 6pm."
+    "1:00pm: 5 new roles scored (best: OpenText Principal PM, Waterloo, fit 70); 13 closed, including Workday's Sr Principal PM that you'd shortlisted; Borrowell and Mila feeds rate-limited, retried at 6pm.",
+    "6:15pm: 7 new roles; 41 scored, incl. re-scores after your Profile edit about banks (best: Workday Principal PM, Evisort AI, fit 82; Thinkific Senior PM, 81); 10 closed. Business analyst, project and data-analytics roles are now collected for other job seekers; they stay out of your list."
    ]
   },
   {
@@ -89,5 +90,8 @@
  ],
  "actions": [
   "Review 3 suggested companies in the app: Companies > Suggested companies (7shifts, Pine, WitnessAI)."
+ ],
+ "families": [
+  "pm"
  ]
 }

@@ -145,9 +145,9 @@
    "postings": 97
   },
   "scoring": {
-   "at": "2026-10-16T17:02:22+00:00",
+   "at": "2026-10-16T22:05:07+00:00",
    "rubric": "1.0",
-   "scored": 654
+   "scored": 691
   },
   "signals": {
    "at": "2026-10-15T12:58:55+00:00",
@@ -161,11 +161,6 @@
   }
  },
  "history": [
-  {
-   "component": "jobs:coveo",
-   "at": "2026-10-16T20:48:52+00:00",
-   "postings": 52
-  },
   {
    "component": "jobs:dayforce",
    "at": "2026-10-16T20:48:52+00:00",
@@ -416,6 +411,12 @@
    "sources_failed": 2,
    "canada_postings": 11075,
    "candidates": 915
+  },
+  {
+   "component": "scoring",
+   "at": "2026-10-16T22:05:07+00:00",
+   "rubric": "1.0",
+   "scored": 691
   }
  ]
 }

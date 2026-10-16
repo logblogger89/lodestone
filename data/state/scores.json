@@ -11765,37 +11765,40 @@
   ]
  },
  "558739fad521": {
-  "fingerprint": "4d585bb88fd3ebdd",
+  "fingerprint": "325b9402cd97a312",
+  "profile_key": "2e02ed8d6841",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:47:03+00:00",
+  "scored_at": "2026-10-16T22:05:07+00:00",
   "subs": {
-   "role": 10,
+   "role": 25,
    "level": 30,
-   "domain": 50,
-   "pathway": 65,
+   "domain": 75,
+   "pathway": 45,
    "pay": 95,
-   "skills": 25
+   "skills": 30
   },
   "reasons": {
-   "role": "Product marketing leadership, not product",
-   "level": "Senior Director leading a team, large org",
-   "domain": "Partner marketing in SaaS, no domain overlap",
-   "pathway": "Okta is a large multinational; work permit route inferred",
-   "pay": "Top CAD 297K clears 230K target",
-   "skills": "10+ yrs product marketing; not your background"
+   "role": "Product marketing for partners, a stretch from product management",
+   "level": "Director who leads a team; you want an IC role around L6",
+   "domain": "Identity security for AI agents is adjacent to your enterprise AI and agents work",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "CAD 176k-297k base; top is above your excellent target",
+   "skills": "Asks 10+ years of product marketing and partner GTM, which you lack"
   },
-  "summary": "Lead global partner product marketing and alliances strategy and its team.",
-  "level_guess": "Senior Director",
+  "summary": "Lead Okta's global partner product marketing and joint go-to-market with tech alliance partners.",
+  "level_guess": "Director, Product Marketing (≈ L7)",
   "people_mgmt": true,
   "work_mode": "hybrid",
   "must_haves": [
    "10+ yrs SaaS product marketing",
+   "Partner/alliance GTM",
    "Team leadership",
-   "Technology partnerships"
+   "Agentic AI knowledge"
   ],
   "flags": [
-   "Manages people",
-   "Not a PM role"
+   "Manages a team",
+   "Travel up to 30%",
+   "Not product management"
   ]
  },
  "33c441411098": {
@@ -12481,35 +12484,39 @@
   "flags": []
  },
  "4e817ffdccf6": {
-  "fingerprint": "872bd5b6219472cc",
+  "fingerprint": "b483e074ebb1d158",
+  "profile_key": "2e02ed8d6841",
   "rubric": "1.0",
-  "scored_at": "2026-10-15T05:47:03+00:00",
+  "scored_at": "2026-10-16T22:05:07+00:00",
   "subs": {
    "role": 95,
-   "level": 90,
-   "domain": 60,
-   "pathway": 65,
+   "level": 95,
+   "domain": 45,
+   "pathway": 45,
    "pay": 50,
-   "skills": 60
+   "skills": 30
   },
   "reasons": {
-   "role": "Core Principal PM for a healthcare B2B platform",
-   "level": "Principal, 8+ yrs, multi-solution portfolio",
-   "domain": "Regulated B2B exchange, healthcare IT",
-   "pathway": "OpenText is a large multinational; work permit route inferred",
-   "pay": "No Canadian pay range posted",
-   "skills": "Platform PM fit; healthcare IT domain is a gap"
+   "role": "Core IC product management: owns a healthcare product portfolio",
+   "level": "Principal PM owning multi-year portfolio strategy, about L6",
+   "domain": "Regulatory data exchange touches your compliance work, but it is deep US healthcare",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "No pay range posted; scored neutral",
+   "skills": "Needs deep US healthcare, HL7/FHIR and HIPAA expertise you don't list"
   },
-  "summary": "Lead strategy for OpenText Business Network healthcare solutions across a multi-solution portfolio.",
+  "summary": "Own strategy and roadmap for OpenText's healthcare connectivity, compliance and workflow products.",
   "level_guess": "Principal PM (≈ L6)",
   "people_mgmt": false,
   "work_mode": "onsite",
   "must_haves": [
-   "8+ yrs enterprise or healthcare IT PM",
+   "8+ yrs enterprise PM",
+   "US healthcare domain",
+   "HL7/FHIR/HIPAA",
    "Portfolio ownership"
   ],
   "flags": [
-   "Office based"
+   "Office-based",
+   "Deep healthcare domain required"
   ]
  },
  "eb1e8ea6eeaf": {
@@ -17979,38 +17986,39 @@
   ]
  },
  "0b2e63a632b4": {
-  "fingerprint": "293e72b135310964",
-  "profile_key": "555fcc7e615a",
+  "fingerprint": "bbc5770c8054e552",
+  "profile_key": "2e02ed8d6841",
   "rubric": "1.0",
-  "scored_at": "2026-10-16T11:04:59+00:00",
+  "scored_at": "2026-10-16T22:05:07+00:00",
   "subs": {
-   "role": 90,
-   "level": 65,
-   "domain": 65,
+   "role": 95,
+   "level": 75,
+   "domain": 85,
    "pathway": 45,
    "pay": 50,
-   "skills": 30
+   "skills": 70
   },
   "reasons": {
-   "role": "Core PM leadership of the domain platform",
-   "level": "Group PM leading a team; you want IC",
-   "domain": "Audit and assurance platform; compliance adjacent",
-   "pathway": "No work permit info in the posting",
-   "pay": "No pay range posted",
-   "skills": "Requires 8+ yrs external audit experience"
+   "role": "Product management of an audit workflow platform: core PM work",
+   "level": "Group PM with mentoring; may lead PMs, roughly L6 to L7",
+   "domain": "Audit compliance software plus AI fits your risk, compliance and enterprise AI work",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "No pay range posted; scored neutral",
+   "skills": "Strong PM and AI fit; audit methodology knowledge is a gap"
   },
-  "summary": "Set strategy for Caseware's audit domain platform products and lead the PM team behind them.",
+  "summary": "Shape strategy for Caseware's cloud audit workflow platform, including AI-driven audit features.",
   "level_guess": "Group PM (≈ L6)",
-  "people_mgmt": true,
-  "work_mode": "unclear",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
   "must_haves": [
-   "8+ yrs product launches",
-   "8+ yrs external audit",
-   "Analytics product vision"
+   "Platform PM craft",
+   "Audit methodology understanding",
+   "AI product strategy",
+   "KPI-driven roadmap"
   ],
   "flags": [
-   "Requires external audit background",
-   "Leads a team of PMs"
+   "May oversee other PMs (unclear)",
+   "Hybrid 3 days, Toronto"
   ]
  },
  "16958ee18fa5": {
@@ -18349,37 +18357,39 @@
   "flags": []
  },
  "925a1fe660c6": {
-  "fingerprint": "6249c9a20a5ef563",
-  "profile_key": "555fcc7e615a",
+  "fingerprint": "eafcebeb46c1219e",
+  "profile_key": "2e02ed8d6841",
   "rubric": "1.0",
-  "scored_at": "2026-10-16T11:04:59+00:00",
+  "scored_at": "2026-10-16T22:05:07+00:00",
   "subs": {
-   "role": 70,
-   "level": 50,
-   "domain": 80,
-   "pathway": 45,
+   "role": 75,
+   "level": 75,
+   "domain": 85,
+   "pathway": 15,
    "pay": 50,
-   "skills": 65
+   "skills": 70
   },
   "reasons": {
-   "role": "TPM on the AI product roadmap and launches",
-   "level": "Level not stated",
-   "domain": "Enterprise AI programs",
-   "pathway": "No work permit info in the posting",
-   "pay": "No pay range posted",
-   "skills": "Cross-functional launch and roadmap work fits"
+   "role": "TPM owning an AI roadmap and launches: related to PM work",
+   "level": "TPM level not stated; scope looks around L5, below your Staff preference",
+   "domain": "Enterprise AI programs for audit software match your enterprise AI and compliance work",
+   "pathway": "Says applicants must already be eligible to work in Canada and live in Toronto",
+   "pay": "No pay range posted; scored neutral",
+   "skills": "Cross-team AI launch experience fits; TPM operating cadence is adjacent"
   },
-  "summary": "Run Caseware's AI roadmap source of truth, launch programs and cross-team dependencies.",
-  "level_guess": "Technical Program Manager",
+  "summary": "Run planning and delivery of Caseware's AI roadmap and AI feature launches across products.",
+  "level_guess": "TPM (≈ L5)",
   "people_mgmt": false,
-  "work_mode": "unclear",
+  "work_mode": "hybrid",
   "must_haves": [
-   "AI program management",
-   "Launch readiness",
-   "Dependency management"
+   "Technical program management",
+   "AI launch coordination",
+   "Roadmap tracking",
+   "Stakeholder reporting"
   ],
   "flags": [
-   "Program role, not PM"
+   "Must already be work-eligible in Canada",
+   "Must live in Toronto"
   ]
  },
  "83824e8d93a4": {
@@ -21571,6 +21581,1326 @@
   ],
   "flags": [
    "Covers Latin America and the Caribbean"
+  ]
+ },
+ "2fdd40695cf1": {
+  "fingerprint": "b8a030e53cded572",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 25,
+   "level": 75,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Sales engineering, a stretch from product management",
+   "level": "Senior IC about L5, but in a sales-engineering track",
+   "domain": "Identity and access security for people and AI agents is adjacent to your work",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "CAD 127k-184k base plus commission; top falls in the ok band",
+   "skills": "Needs 7+ yrs technical sales and Fortune 100 selling you don't have"
+  },
+  "summary": "Be the technical advisor on 1Password enterprise sales deals, running demos and solution design.",
+  "level_guess": "Senior Sales Engineer (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "7+ yrs technical sales",
+   "Fortune 100 selling",
+   "MEDDPICC",
+   "SSO/SAML/SCIM knowledge"
+  ],
+  "flags": [
+   "Must be in Mountain or Pacific time",
+   "Travel up to 25%",
+   "Not product management"
+  ]
+ },
+ "c650bb8e0506": {
+  "fingerprint": "63ea478f0702373b",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 25,
+   "level": 30,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Presales consulting, a stretch from product management",
+   "level": "Asks 3-5 years; well below your L5-L6 target",
+   "domain": "AI agents for customer service match your enterprise AI and agents work",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "No pay range posted; scored neutral",
+   "skills": "AI fluency fits, but a presales deal-winning record is a key gap"
+  },
+  "summary": "Run technical discovery and build custom AI agent demos to win Ada enterprise deals.",
+  "level_guess": "Presales Consultant (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "3-5 yrs presales",
+   "Deal-winning track record",
+   "LLM knowledge",
+   "API/SaaS integrations"
+  ],
+  "flags": [
+   "Not product management",
+   "Junior for your level"
+  ]
+ },
+ "73ba9ea129ab": {
+  "fingerprint": "f5c04a86ffcf90fe",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 25,
+   "level": 75,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Sales engineering, a stretch from product management",
+   "level": "Asks 4+ years; about one level below your target",
+   "domain": "Payments and checkout match your fintech and commerce work",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "OTE CAD 136k-204k; at 90% the top is in the ok band",
+   "skills": "Needs payments sales-engineering experience and scripting you don't list"
+  },
+  "summary": "Design technical checkout and payment integrations for Affirm's enterprise merchants in pre-sales.",
+  "level_guess": "Senior Sales Engineer (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "4+ yrs sales/solutions engineering",
+   "3+ yrs payments/fintech",
+   "API integration skills",
+   "Scripting"
+  ],
+  "flags": [
+   "OTE pay, includes variable",
+   "Travel up to 30%",
+   "Not product management"
+  ]
+ },
+ "8ddce3c2782b": {
+  "fingerprint": "3c70fa24341d1362",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 50,
+   "level": 30,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Program management of data-centre capacity delivery, little PM work",
+   "level": "Asks 3+ years; well below your L5-L6 target",
+   "domain": "Data-centre construction and infrastructure isn't one of your domains",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "CAD 97.6k-163k base; top falls in the ok band",
+   "skills": "Prefers data-centre, construction or engineering background you lack"
+  },
+  "summary": "Own delivery of AWS data-centre capacity builds in Canada, coordinating design, construction and power teams.",
+  "level_guess": "TPM (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "3+ yrs technical program management",
+   "Data-centre/infrastructure delivery",
+   "Capital budgets",
+   "MS Project"
+  ],
+  "flags": [
+   "Montreal (French helpful)",
+   "Travel 25%",
+   "Construction-heavy role"
+  ]
+ },
+ "9aa3cfa6d149": {
+  "fingerprint": "5b7c966bf1d56158",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 50,
+   "level": 50,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Hardware/software co-engineering program management, little PM work",
+   "level": "Level unclear: 'Sr. Analyst' title, no years stated",
+   "domain": "Chip-level Windows security is a hardware specialty outside your domains",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "No pay range posted; scored neutral",
+   "skills": "Program management fits; pre-silicon and security engineering depth unclear"
+  },
+  "summary": "Run co-engineering programs with Microsoft and OEMs to enable Windows security features on AMD chips.",
+  "level_guess": "Senior TPM Analyst (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Program management",
+   "Security/software dev understanding",
+   "JIRA/Confluence",
+   "Agile"
+  ],
+  "flags": [
+   "1-year contract",
+   "Hardware/pre-silicon",
+   "Asia time-zone hours"
+  ]
+ },
+ "c47bbf35e8a5": {
+  "fingerprint": "5b55511a1379b4e0",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 50,
+   "level": 75,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Platform TPM for delivery and vendor logistics; little product work",
+   "level": "Manager/Senior Manager title, described as an IC TPM; near your level",
+   "domain": "Internal engineering platform at a fashion retailer; general domain",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "CAD 100k-300k; top is above excellent, but the range is very wide",
+   "skills": "Needs Jira/Linear admin, DevOps and vendor SOW skills; partly matches"
+  },
+  "summary": "Run the roadmap, dependencies and vendor workforce for Aritzia's internal engineering platform team.",
+  "level_guess": "Senior TPM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Agile/Kanban program mgmt",
+   "Cloud/DevOps fluency",
+   "Vendor SOW management",
+   "Jira/Linear, SQL"
+  ],
+  "flags": [
+   "Vancouver (lower priority)",
+   "Very wide pay range"
+  ]
+ },
+ "97bd007881b0": {
+  "fingerprint": "9d23ad140e245699",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Customer education programs, a stretch from product management",
+   "level": "Level not stated; first live-learning hire, IC",
+   "domain": "Recruiting software customer education; general B2B domain",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "CAD 100k-154k base; top is in the low band",
+   "skills": "Needs learning design and facilitation experience you don't list"
+  },
+  "summary": "Build and run Ashby's live customer webinar and workshop program.",
+  "level_guess": "Customer Education Program Manager (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Live learning program ops",
+   "Learning design",
+   "Presenter coaching",
+   "Facilitation"
+  ],
+  "flags": [
+   "Not product management"
+  ]
+ },
+ "39d9752b6999": {
+  "fingerprint": "1c3b3ab7c4509fdc",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 50,
+   "level": 75,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Program management of HR operations, little PM work",
+   "level": "Asks 10+ years; senior IC, about one level off",
+   "domain": "HR workforce planning isn't one of your domains",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "Only a US range posted; no Canadian range, scored neutral",
+   "skills": "Needs headcount planning and Workday Adaptive Planning experience"
+  },
+  "summary": "Run Autodesk's operational workforce and headcount planning cycles across HR and Finance.",
+  "level_guess": "Senior Program Manager (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Headcount planning programs",
+   "Workday Adaptive Planning",
+   "10+ yrs ops/planning",
+   "Governance"
+  ],
+  "flags": [
+   "US pay only",
+   "HR operations role"
+  ]
+ },
+ "37101f0779ed": {
+  "fingerprint": "b09e069d46b26a9c",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 50,
+   "level": 75,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Industry strategy and GTM; touches product requirements but no roadmap ownership",
+   "level": "Asks 8+ years, IC strategy manager; about one level off",
+   "domain": "Architecture/engineering/construction (BIM) is a specialist domain outside yours",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "Only a US range posted; no Canadian range, scored neutral",
+   "skills": "Requires BIM, ISO 19650 and AEC project delivery experience"
+  },
+  "summary": "Define strategy and go-to-market for digital project delivery in Autodesk's AEC cloud.",
+  "level_guess": "Industry Strategy Manager (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "8+ yrs AEC industry",
+   "BIM delivery",
+   "ISO 19650",
+   "Business cases"
+  ],
+  "flags": [
+   "Deep AEC domain required",
+   "US pay only",
+   "International travel"
+  ]
+ },
+ "1e8723166642": {
+  "fingerprint": "e56665c09907ed50",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 25,
+   "level": 10,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Entry-level strategy analyst, a stretch from product management",
+   "level": "Graduate program for under 3 years' experience; far below your level",
+   "domain": "Telecom corporate strategy; general domain",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "No pay range posted; scored neutral",
+   "skills": "Eligibility requires recent graduation and under 3 years' experience"
+  },
+  "summary": "Join Bell's 30-month rotational graduate program in corporate strategy and transformation.",
+  "level_guess": "Strategy Analyst, new grad (≈ L3)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Graduated 2024-2027",
+   "<3 yrs experience",
+   "Financial modelling",
+   "Excel/PowerPoint"
+  ],
+  "flags": [
+   "Graduate program",
+   "You likely don't meet eligibility",
+   "French needed in Quebec"
+  ]
+ },
+ "683bb3186bca": {
+  "fingerprint": "6331fe5ab73e8176",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 25,
+   "level": 75,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Training program leadership, far from product management",
+   "level": "Senior manager leading a team; you want IC",
+   "domain": "Employee training for field technicians isn't one of your domains",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "No pay range posted; scored neutral",
+   "skills": "Needs learning and development and LMS experience you don't list"
+  },
+  "summary": "Lead Bell's national training programs for support agents and field technicians.",
+  "level_guess": "Senior Manager, Training Programs (≈ L6)",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Training strategy",
+   "Team leadership",
+   "Program management",
+   "LMS/learning tech"
+  ],
+  "flags": [
+   "Manages a team",
+   "Learning & development role"
+  ]
+ },
+ "1daa9e18a038": {
+  "fingerprint": "ea7622ed74e44352",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 25,
+   "level": 10,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Capital construction program delivery, far from product management",
+   "level": "Program Director asking 15+ years in capital programs; executive level",
+   "domain": "Data-centre construction isn't one of your domains",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "No pay range posted; scored neutral",
+   "skills": "Requires hyperscale data-centre construction delivery experience"
+  },
+  "summary": "Lead delivery of Bell's national AI data-centre construction program across multiple sites.",
+  "level_guess": "Program Director (≈ L8)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "15+ yrs capital programs",
+   "Data-centre construction",
+   "Master scheduling",
+   "Executive reporting"
+  ],
+  "flags": [
+   "Calgary",
+   "Construction-heavy role",
+   "Executive level"
+  ]
+ },
+ "487971125583": {
+  "fingerprint": "eae48c86e5d48f77",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 75,
+   "level": 30,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "TPM leadership on a product and engineering org; related to PM",
+   "level": "Director managing an established TPM team; you want IC",
+   "domain": "Credit cards fit financial services, but it's a large bank and pay isn't posted as top-tier",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "No pay range posted; scored neutral",
+   "skills": "Needs 7+ yrs TPM, direct reports and cloud delivery depth"
+  },
+  "summary": "Lead Capital One Canada's TPM team driving cloud migration and application convergence programs.",
+  "level_guess": "Director, TPM (≈ L7)",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs TPM",
+   "Managing direct reports",
+   "Cloud/AWS programs",
+   "Data migration"
+  ],
+  "flags": [
+   "Manages a team",
+   "Large bank, pay not posted"
+  ]
+ },
+ "9cdc90bfd02c": {
+  "fingerprint": "9cce98603af08fe7",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 5,
+   "level": 10,
+   "domain": 25,
+   "pathway": 15,
+   "pay": 20,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Supply-chain materials coordination, not product work",
+   "level": "Specialist role asking 3-5 years; far below your level",
+   "domain": "Electronics manufacturing supply chain isn't one of your domains",
+   "pathway": "Involves Controlled Goods, which usually needs a security assessment",
+   "pay": "Up to CAD 90k incl. bonus; below your low target",
+   "skills": "Needs manufacturing supply-chain and cost accounting background"
+  },
+  "summary": "Coordinate materials planning, bills of material and supplier bids for Celestica customers.",
+  "level_guess": "Materials Program Specialist (≈ L3)",
+  "people_mgmt": false,
+  "work_mode": "onsite",
+  "must_haves": [
+   "Supply chain/MRP",
+   "Cost accounting/FP&A",
+   "Customer negotiation",
+   "BOM analysis"
+  ],
+  "flags": [
+   "Controlled Goods",
+   "Onsite Newmarket",
+   "Low pay"
+  ]
+ },
+ "e748277207b1": {
+  "fingerprint": "ee87c9c49976759b",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 5,
+   "level": 75,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Hands-on security architecture, not product work",
+   "level": "Asks 10+ years incl. 7 in architecture; senior IC",
+   "domain": "Endpoint and cloud security tooling is a specialist domain outside yours",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "No pay range posted; scored neutral",
+   "skills": "Needs CISSP-type certs and hands-on EDR/SIEM architecture"
+  },
+  "summary": "Design cybersecurity architecture (EDR, SIEM, IAM, cloud) for a CGI client's enterprise.",
+  "level_guess": "Security Architect (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "10+ yrs IT, 7 in security architecture",
+   "CISSP/CISM etc.",
+   "EDR/XDR/SIEM",
+   "Cloud security"
+  ],
+  "flags": [
+   "Montreal; French likely needed",
+   "Certifications required",
+   "Client-site consulting"
+  ]
+ },
+ "fa0eda92f91d": {
+  "fingerprint": "ff0a873082e6e3f0",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 25,
+   "level": 30,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Sales engineering, a stretch from product management",
+   "level": "Asks 3+ years; well below your level",
+   "domain": "Education technology; general domain",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "CAD 72k-84k total; below your low target",
+   "skills": "Requires 3+ years as a Brightspace admin or instructor"
+  },
+  "summary": "Demo and propose D2L's Brightspace learning platform to schools and companies in pre-sales.",
+  "level_guess": "Solutions Engineer (≈ L3)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "3+ yrs Brightspace use",
+   "Product demos",
+   "Proposal writing",
+   "EdTech knowledge"
+  ],
+  "flags": [
+   "Travel 25-50%",
+   "Low pay",
+   "Not product management"
+  ]
+ },
+ "1c777e0bc9da": {
+  "fingerprint": "d17852599947883a",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 75,
+   "level": 75,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "TPM on a commerce and identity platform; related to PM",
+   "level": "TPM III asking 5+ years; about L5, below your Staff preference",
+   "domain": "Commerce and identity platform overlaps your commerce work, in gaming",
+   "pathway": "Posting says nothing about work permits or sponsorship",
+   "pay": "CAD 114k-156k; top is in the low band",
+   "skills": "Cross-team program leadership fits; CI/CD and systems depth partly"
+  },
+  "summary": "Lead multi-team technical programs for EA's commerce and identity platform services.",
+  "level_guess": "TPM III (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "5+ yrs technical program management",
+   "Software architecture fluency",
+   "Dependency/risk mgmt",
+   "Stakeholder alignment"
+  ],
+  "flags": [
+   "18-month temporary role",
+   "Vancouver (lower priority)"
+  ]
+ },
+ "bc07ae601ac5": {
+  "fingerprint": "80ac9672846ee3d0",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 45,
+   "level": 30,
+   "domain": 65,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "TPM people-manager role leading a PMO, not IC product management",
+   "level": "Senior Manager over TPMs; you want IC, so this is a management step off target",
+   "domain": "DevSecOps platform with security/compliance angle, adjacent to your governance work",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "No Canadian pay range posted",
+   "skills": "Cross-org exec alignment fits; prior TPM people-manager experience is asked for"
+  },
+  "summary": "Lead and grow a team of TPMs in GitLab's new R&D program management office.",
+  "level_guess": "Senior Manager, TPM (≈ L6, people manager)",
+  "people_mgmt": true,
+  "work_mode": "remote",
+  "must_haves": [
+   "People-manager experience",
+   "IC TPM background",
+   "R&D program leadership"
+  ],
+  "flags": [
+   "Manages people",
+   "Remote: check Canada eligibility"
+  ]
+ },
+ "4c2bb3c7ad09": {
+  "fingerprint": "f40d81afe5505232",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 50,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Pre-sales solutions engineering, a stretch from product management",
+   "level": "Senior SE level; scope is unclear from the short posting",
+   "domain": "Data-streaming (Confluent) sales; general B2B, no direct overlap stated",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "No Canadian pay range posted",
+   "skills": "Posting is very short; must-haves unclear"
+  },
+  "summary": "Technical pre-sales engineer selling IBM's Confluent data-streaming offering in Canada.",
+  "level_guess": "Senior Solutions Sales Engineer (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Pre-sales engineering",
+   "Confluent/Kafka knowledge"
+  ],
+  "flags": [
+   "Sales role",
+   "Posting details missing"
+  ]
+ },
+ "2f18636ac183": {
+  "fingerprint": "de1415e4d06542ee",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 50,
+   "level": 75,
+   "domain": 85,
+   "pathway": 35,
+   "pay": 60,
+   "skills": 40
+  },
+  "reasons": {
+   "role": "Program delivery role partnering with PMs, little hands-on product work",
+   "level": "Lead with 10+ years program management; near your level but delivery-focused",
+   "domain": "Payments, identity and fraud protection overlap your fraud and fintech work",
+   "pathway": "Says you must be 'eligible to work'; no sponsorship mentioned",
+   "pay": "Top of range $175k is in the ok band, below your target",
+   "skills": "PMP certification is required and 10+ yrs program management, which you lack"
+  },
+  "summary": "Lead planning and delivery of strategic payments technology programs at Interac.",
+  "level_guess": "Program Management Lead (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "PMP certification",
+   "10+ yrs program management",
+   "Vendor/transformation delivery"
+  ],
+  "flags": [
+   "PMP required",
+   "Must be eligible to work"
+  ]
+ },
+ "3272555b1d23": {
+  "fingerprint": "d0423d42104658d8",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 75,
+   "level": 30,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Strategy role with planning and analysis; related to your roadmap work",
+   "level": "Asks 3-5 years; junior to your target level",
+   "domain": "Commerce/POS SaaS, adjacent to your commerce work",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "No Canadian pay range posted",
+   "skills": "Analysis, modelling and exec materials match your skills"
+  },
+  "summary": "Support Lightspeed's enterprise strategy with analysis, business cases and planning.",
+  "level_guess": "Strategy Manager (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Strategy/consulting analysis",
+   "Financial modelling",
+   "Exec-ready materials"
+  ],
+  "flags": [
+   "Below target level",
+   "English working language (Quebec)"
+  ]
+ },
+ "eda170fd8562": {
+  "fingerprint": "79e50be3128bfdf3",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 75,
+   "level": 30,
+   "domain": 60,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Strategy role with planning and analysis; related to your roadmap work",
+   "level": "Asks 3-5 years; junior to your target level",
+   "domain": "Commerce/POS SaaS, adjacent to your commerce work",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "Total comp $100-140k incl. bonus, well below your target",
+   "skills": "Analysis, modelling and exec materials match your skills"
+  },
+  "summary": "Support Lightspeed's enterprise strategy with analysis, business cases and planning.",
+  "level_guess": "Strategy Manager (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "Strategy/consulting analysis",
+   "Financial modelling",
+   "Exec-ready materials"
+  ],
+  "flags": [
+   "Below target level",
+   "Low pay",
+   "Posting text names Montreal team"
+  ]
+ },
+ "ee64c1faaaf0": {
+  "fingerprint": "5ddedf51dd4cde97",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 95,
+   "level": 75,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "IC product management owning a horizontal cross-platform experience",
+   "level": "Senior PM with 7+ yrs; scope is cross-BU but likely below Staff",
+   "domain": "Insurer and digital health; you prefer not traditional FIs unless pay is top",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "Top of range $142.9k base is in the low band",
+   "skills": "Platform and exec skills fit; 7+ yrs PM and health partner work asked"
+  },
+  "summary": "Own Manulife's cross-platform member experience, stitching journeys across business units.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "7+ yrs digital PM",
+   "Horizontal multi-platform ownership",
+   "APIs/SDKs expertise"
+  ],
+  "flags": [
+   "Traditional insurer",
+   "Pay below target"
+  ]
+ },
+ "f93381e11586": {
+  "fingerprint": "767710ad61e803d4",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 75,
+   "level": 70,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Product operations PM: platform health and triage, less product strategy",
+   "level": "Senior PM, 7+ yrs; operational scope, a bit below your target",
+   "domain": "Insurer and digital health; you prefer not traditional FIs unless pay is top",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "Top of range $142.9k base is in the low band",
+   "skills": "Platform skills fit; incident and root-cause ops experience is asked"
+  },
+  "summary": "Own operational health and fixes for Manulife's member and digital health platforms.",
+  "level_guess": "Senior PM, Product Ops (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "7+ yrs PM or product ops",
+   "Backend/API/integration knowledge",
+   "Incident triage and RCA"
+  ],
+  "flags": [
+   "Traditional insurer",
+   "Ops-heavy role",
+   "Pay below target"
+  ]
+ },
+ "1120a3461bea": {
+  "fingerprint": "6ad8e0829819440d",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 90,
+   "level": 75,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Product manager owning merchant analytics products",
+   "level": "Manager PM leading large teams; one step off your IC target",
+   "domain": "Payments fraud/risk services, ads and analytics match your domains",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "Top of range $169k is in the ok band",
+   "skills": "AI, analytics and ads fit; leading large global teams is asked"
+  },
+  "summary": "Drive strategy for Mastercard's AI-powered merchant analytics products.",
+  "level_guess": "PM Manager (≈ L5-L6)",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Merchant analytics/ads ecosystem",
+   "AI and data products",
+   "Leading global teams"
+  ],
+  "flags": [
+   "Manages teams"
+  ]
+ },
+ "3a5e4916f5da": {
+  "fingerprint": "175ba419d7d1dd26",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 50,
+   "level": 75,
+   "domain": 70,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "PMO/strategic execution role, little core product work",
+   "level": "Director scope; senior to L6 but governance-focused, roughly one level up",
+   "domain": "Payments for SMEs, adjacent to your commerce and fintech work",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "Top of range $221k is in the good band",
+   "skills": "Exec alignment and governance fit; transformation/consulting background asked"
+  },
+  "summary": "Run governance and cross-functional execution for Mastercard's global SME business.",
+  "level_guess": "Director, Program Management (≈ L6-L7)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Growth/transformation leadership",
+   "Exec influence in matrix",
+   "Operating models"
+  ],
+  "flags": [
+   "Director-level PMO role"
+  ]
+ },
+ "1686ff774e6c": {
+  "fingerprint": "d77a3cc964d8327e",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 50,
+   "level": 10,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 20,
+   "skills": 80
+  },
+  "reasons": {
+   "role": "Business analyst in program delivery; related but not product management",
+   "level": "Asks 2-4 years; far below your target level",
+   "domain": "Pension investment data platforms; you prefer not traditional FIs at this pay",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "Top of range $108k is below your target",
+   "skills": "Requirements, data and analytics skills cover this easily"
+  },
+  "summary": "Gather requirements and support delivery of OMERS investment data and AI platforms.",
+  "level_guess": "Business Analyst (≈ L3)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "2-4 yrs BA experience",
+   "Requirements documentation",
+   "Testing/UAT support"
+  ],
+  "flags": [
+   "Junior role",
+   "4 days/week in office",
+   "Low pay"
+  ]
+ },
+ "49f2e2e6826a": {
+  "fingerprint": "d16e53f84be84e4c",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 50,
+   "level": 75,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Consulting program delivery for hospitality installs, not product management",
+   "level": "Program Director over accounts; scope roughly matches but delivery-led",
+   "domain": "Hotel/restaurant tech consulting, unrelated to your domains",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "Top of range $143.9k base is in the low band",
+   "skills": "Needs Oracle OPERA and hospitality operations experience you don't have"
+  },
+  "summary": "Oversee Oracle Hospitality consulting project delivery for nominated customer accounts.",
+  "level_guess": "Program Director (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Oracle OPERA installs",
+   "Hotel/restaurant operations",
+   "Infrastructure knowledge"
+  ],
+  "flags": [
+   "Hospitality domain",
+   "Customer-facing consulting"
+  ]
+ },
+ "6814bf0397eb": {
+  "fingerprint": "6ea248a81dfde7fa",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 50,
+   "level": 75,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "Process transformation program lead, little core product work",
+   "level": "Senior Manager, multi-year exec-facing programs; near your level",
+   "domain": "Bank payments ops; you prefer not traditional FIs unless pay is top (not posted)",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "No Canadian pay range posted",
+   "skills": "Risk controls and AI fit; process re-engineering experience is asked"
+  },
+  "summary": "Lead multi-year process transformation programs for RBC's cash, cheque and payment operations.",
+  "level_guess": "Senior Manager, Program Management (≈ L6)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "5+ yrs process re-engineering",
+   "Multi-year transformation",
+   "Risk controls frameworks"
+  ],
+  "flags": [
+   "Traditional bank",
+   "Ops transformation role"
+  ]
+ },
+ "6ea914be6441": {
+  "fingerprint": "3e8016ce9e9071b5",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 5,
+   "level": 30,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 20
+  },
+  "reasons": {
+   "role": "Finance systems operations manager; not product management",
+   "level": "Manager of a shared-service team; operational scope off your target",
+   "domain": "Bank finance systems; unrelated, and you prefer not traditional FIs",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "No Canadian pay range posted",
+   "skills": "Requires prior RBC finance systems knowledge (FIBRS, EPM)"
+  },
+  "summary": "Manage RBC's team running FIBRS finance business-rules processing and enhancements.",
+  "level_guess": "Manager, Business Operations (≈ L4)",
+  "people_mgmt": true,
+  "work_mode": "unclear",
+  "must_haves": [
+   "RBC finance systems (FIBRS, EPM)",
+   "SOX audit support",
+   "Process documentation"
+  ],
+  "flags": [
+   "Manages people",
+   "Traditional bank",
+   "Internal-systems knowledge required"
+  ]
+ },
+ "7eec66cf5982": {
+  "fingerprint": "63eaa048f2c379cf",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 25,
+   "level": 70,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Pre-sales solutions engineering, a stretch from product management",
+   "level": "Senior SE asking 3+ yrs; scope a bit below your target",
+   "domain": "Cybersecurity sales, loosely adjacent to your risk work",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "No Canadian pay range posted",
+   "skills": "Needs French fluency and hands-on security pre-sales experience"
+  },
+  "summary": "Technical pre-sales advisor for Sophos cybersecurity in Ontario and Quebec mid-market.",
+  "level_guess": "Senior Sales Engineer (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "English/French fluency",
+   "Security pre-sales",
+   "Travel in ON/QC"
+  ],
+  "flags": [
+   "French required",
+   "Sales role",
+   "Travel"
+  ]
+ },
+ "b982d6fa8642": {
+  "fingerprint": "f3e90d71d1edc7d3",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 50,
+   "level": 50,
+   "domain": 25,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 50
+  },
+  "reasons": {
+   "role": "Real-estate portfolio strategy; related strategy work, not product",
+   "level": "Asks 3-5+ yrs under a program manager; level unclear, likely below target",
+   "domain": "Corporate real estate at an insurer; unrelated to your domains",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "No Canadian pay range posted",
+   "skills": "Business case skills fit; real-estate experience is asked"
+  },
+  "summary": "Plan site and real-estate decisions across a portfolio of Sun Life offices.",
+  "level_guess": "Portfolio Strategy Lead (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Corporate real estate/leasing",
+   "Financial analysis",
+   "Exec materials"
+  ],
+  "flags": [
+   "Real-estate domain",
+   "Traditional insurer"
+  ]
+ },
+ "1f44982d27f0": {
+  "fingerprint": "7247ce337604e226",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 25,
+   "level": 50,
+   "domain": 30,
+   "pathway": 45,
+   "pay": 50,
+   "skills": 30
+  },
+  "reasons": {
+   "role": "Field sales engineering, a stretch from product management",
+   "level": "Levelled at interview across experience levels; unclear",
+   "domain": "AI hardware/accelerators; specialist hardware domain",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "Only a $100k-500k all-engineers range; no Canadian range",
+   "skills": "Needs hands-on ML frameworks, FPGA/accelerators and data-center skills"
+  },
+  "summary": "Customer-facing sales engineer driving adoption of Tenstorrent AI hardware and software.",
+  "level_guess": "Field Sales Engineer (≈ L4-L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "5+ yrs SE/solutions",
+   "PyTorch/TensorFlow",
+   "AI accelerators/FPGA"
+  ],
+  "flags": [
+   "Sales role",
+   "Hardware-heavy"
+  ]
+ },
+ "4afa8993d1db": {
+  "fingerprint": "e133791cc8a53193",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 95,
+   "level": 95,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 60,
+   "skills": 85
+  },
+  "reasons": {
+   "role": "IC product management owning Commerce, payments and pricing",
+   "level": "Senior PM, 6+ yrs, owns multiple product lines; right at your level",
+   "domain": "Commerce and payments match your commerce and fintech work",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "Top of range $175k is in the ok band",
+   "skills": "Strategy, experimentation and AI prototyping match your skills"
+  },
+  "summary": "Own Thinkific's Commerce product: payments, checkout, pricing, onboarding and site building.",
+  "level_guess": "Senior PM (≈ L5)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "6+ yrs PM",
+   "Payments/commerce product",
+   "Data-driven experimentation"
+  ],
+  "flags": []
+ },
+ "9cde01af425f": {
+  "fingerprint": "1bc3f8bb529b4353",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 75,
+   "level": 30,
+   "domain": 85,
+   "pathway": 45,
+   "pay": 80,
+   "skills": 75
+  },
+  "reasons": {
+   "role": "Corporate strategy role owning roadmaps and governance; related to PM",
+   "level": "Senior Director; two levels above your IC target",
+   "domain": "Identity verification, fraud and regulatory risk match your domains",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "Top of range $220k base is in the good band",
+   "skills": "Exec alignment and governance fit; M&A/corp dev experience likely asked"
+  },
+  "summary": "Shape Trulioo's corporate strategy and run governance of its top strategic initiatives.",
+  "level_guess": "Senior Director, Strategy (≈ L7-L8)",
+  "people_mgmt": false,
+  "work_mode": "remote",
+  "must_haves": [
+   "Corporate strategy leadership",
+   "Board-level materials",
+   "Corp dev/M&A"
+  ],
+  "flags": [
+   "Executive-level role"
+  ]
+ },
+ "632815ead602": {
+  "fingerprint": "8f5fed9899bcaa96",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 90,
+   "level": 30,
+   "domain": 40,
+   "pathway": 45,
+   "pay": 40,
+   "skills": 70
+  },
+  "reasons": {
+   "role": "Product owner role leading a digital delivery pod",
+   "level": "Product Owner I; entry-level PO, about two levels below your target",
+   "domain": "Bank digital products; you prefer not traditional FIs unless pay is top",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "Top of range $136.8k is in the low band",
+   "skills": "Roadmaps and stakeholder skills fit; Agile delivery experience asked"
+  },
+  "summary": "Lead a TD cross-functional pod delivering digital features for enterprise functions.",
+  "level_guess": "Product Owner (≈ L4)",
+  "people_mgmt": false,
+  "work_mode": "unclear",
+  "must_haves": [
+   "Leading delivery pods",
+   "Roadmap management",
+   "Agile delivery"
+  ],
+  "flags": [
+   "Traditional bank",
+   "Below target level",
+   "Pay below target"
+  ]
+ },
+ "91b645298884": {
+  "fingerprint": "debbc5facb65f5a0",
+  "profile_key": "2e02ed8d6841",
+  "rubric": "1.0",
+  "scored_at": "2026-10-16T22:05:07+00:00",
+  "subs": {
+   "role": 95,
+   "level": 90,
+   "domain": 90,
+   "pathway": 45,
+   "pay": 95,
+   "skills": 60
+  },
+  "reasons": {
+   "role": "IC product management owning an AI contract-intelligence portfolio",
+   "level": "Principal PM with 12+ yrs; at the top of your L6 target",
+   "domain": "Enterprise AI with compliance standards, a direct match to your AI work",
+   "pathway": "Posting says nothing about work permit sponsorship",
+   "pay": "Top of range $244.2k CAD base is excellent",
+   "skills": "Gen-AI launches fit; 12+ yrs PM and legal/contract domain are asked"
+  },
+  "summary": "Lead vision and roadmap for Workday's Evisort AI contract intelligence and analytics features.",
+  "level_guess": "Principal PM (≈ L6-L7)",
+  "people_mgmt": false,
+  "work_mode": "hybrid",
+  "must_haves": [
+   "12+ yrs PM",
+   "Gen-AI product launches",
+   "Contract/legal domain a plus"
+  ],
+  "flags": [
+   "Asks 12+ yrs PM (you have 6)",
+   "Vancouver location"
   ]
  }
 }

@@ -83,7 +83,7 @@ standard library only, so no installs are needed.
    confirmed push. Then `ArtifactData list` the `jobs`, `meta` and `desc` collections to get each document's
    `version`, and write them with `ArtifactData batch` `set` entries using `file_path` and that `if_version`
    (omit it only for a document that doesn't exist yet). One batch is capped at 1 MiB, so send the jobs buckets
-   six or seven at a time (`b0–b6`, `b7–b13`, then `b14–b15` plus `meta/*`), keeping each batch under 1 MiB. Job descriptions (`desc/d00–d31`, ~120–200 KB each, D-065):
+   six or seven at a time (`b0–b6`, `b7–b13`, then `b14–b15` plus `meta/*`), keeping each batch under 1 MiB. Job descriptions (`desc/d00–d63`, ~100 KB each, D-065; push `meta/layout` with them, it tells the app how many there are):
    push only the ones `export` marks `"changed": true`, four per batch. After the batches succeed, run
    `python3 -m lodestone export --mark-pushed` (or list only the `collection/doc_id` keys that went through, if some
    failed), so anything not pushed is marked changed again next time. Never write `triage` or `settings`, and `profile` only as step 5 describes

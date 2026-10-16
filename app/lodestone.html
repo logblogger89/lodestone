@@ -841,7 +841,7 @@ async function boot(){
     S.jobs=all;S._tokc={};S.ready=true;render();
   },fail);
   db.collection("meta").onSnapshot(snap=>{
-    snap.docs.forEach(d=>{const x=d.data()||{};if(d.id==="companies")S.companies=x.companies||[];if(d.id==="suggestions")S.suggestions=x.suggestions||[];if(d.id==="eval")S.evalm=x;if(d.id==="company_profiles")S.cprof=x.companies||{};if(d.id==="freshness")S.freshness=x.components||{};if(d.id==="families"&&(x.families||[]).length)S.families=x.families});
+    snap.docs.forEach(d=>{const x=d.data()||{};if(d.id==="companies")S.companies=x.companies||[];if(d.id==="suggestions")S.suggestions=x.suggestions||[];if(d.id==="eval")S.evalm=x;if(d.id==="company_profiles")S.cprof=x.companies||{};if(d.id==="freshness")S.freshness=x.components||{};if(d.id==="families"&&(x.families||[]).length)S.families=x.families;if(d.id==="layout"&&+x.desc_buckets&&+x.desc_buckets!==S.descN){S.descN=+x.desc_buckets;S.desc={}}});
     render();
   },fail);
   db.collection("triage").onSnapshot(snap=>{const t={};snap.docs.forEach(d=>t[d.id]=d.data());S.triage=t;S.triLoaded=true;render()},fail);
@@ -1293,7 +1293,7 @@ function viewDetail(j){
 /* Detail tabs (D-065): Summary (decide), Job description (read), Company & team (context). The chosen tab sticks while
    you move between roles, so reading descriptions with J/K stays on that tab. */
 const DTABS=[["summary","Summary"],["jd","Job description"],["company","Company & team"]];
-function descBucket(id){return "d"+String(parseInt(id,16)%32).padStart(2,"0")}
+function descBucket(id){return "d"+String(parseInt(id,16)%(S.descN||32)).padStart(2,"0")}   // count from meta/layout
 function descFor(j){
   const b=descBucket(j.id), d=S.desc[b];
   if(d===undefined&&S.db){S.desc[b]="loading";S.db.doc("desc/"+b).get().then(snap=>{S.desc[b]=snap.exists?(snap.data()||{}):{jobs:{}};render()}).catch(e=>{console.warn(e);S.desc[b]="error";render()})}

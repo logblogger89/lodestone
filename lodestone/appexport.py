@@ -17,7 +17,8 @@ from .experience import years_required
 
 OUT = store.STATE / "app_export"
 BUCKETS = 16                    # ~40-90 jobs per document, well under the 256 KiB document limit (more role families, D-076)
-DESC_BUCKETS = 32               # job descriptions (D-065): ~120 KB each, loaded only when a role is opened
+DESC_BUCKETS = 64               # job descriptions (D-065): ~100 KB each, loaded only when a role is opened; the app reads the
+                                # count from meta/layout, so it can change without an app release (64 since D-076)
 
 
 def job_id(key: str) -> str:
@@ -95,6 +96,7 @@ def build() -> dict[str, dict[str, dict]]:
                      "careers_url": best.get("careers_url") or "", "note": (best.get("notes") or "")[:160]})
     docs["meta"]["companies"] = {"companies": rows}
     from . import rules
+    docs["meta"]["layout"] = {"desc_buckets": DESC_BUCKETS, "job_buckets": BUCKETS}
     docs["meta"]["families"] = {"version": 2, "families": rules.families(), "default": rules.default_families()}
     written = json.loads((store.ROOT / "data" / "companies" / "summaries.json").read_text())["companies"]
     profiles = {}
