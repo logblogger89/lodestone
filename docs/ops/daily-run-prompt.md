@@ -1,6 +1,6 @@
 # Lodestone daily run: scheduled-task prompt
 
-The daily scheduled task (D-056) follows these steps. It runs in the build session, which has GitHub access (I-03).
+The daily scheduled task (D-056) follows these steps at 6:53am New York time. It is the full run: the only one that rebuilds the source index, runs discovery and writes the daily report. Two lighter runs at 12:53pm and 5:53pm refresh and score only (D-069, [`update-run-prompt.md`](./update-run-prompt.md)). It runs in the build session, which has GitHub access (I-03).
 
 ---
 

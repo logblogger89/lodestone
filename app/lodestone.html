@@ -933,7 +933,7 @@ function viewDigest(){
   let body;
   if(S.offline) body=offlineState();
   else if(!S.ready) body=`<div class="empty"><h2>Loading your jobs…</h2><p>Reading Lodestone's database.</p></div>`;
-  else if(!live.length) body=`<div class="empty"><h2>No jobs yet</h2><p>Roles appear after the daily run (about 7am New York time).</p></div>`;
+  else if(!live.length) body=`<div class="empty"><h2>No jobs yet</h2><p>Roles appear after the next update (about 7am, 1pm and 6pm New York time).</p></div>`;
   else if(isToday) body=viewToday();
   else if(!all.length) body=`<div class="empty"><h2>Nothing matches these filters</h2><p>Try "All regions", turn on more role tiers, or clear the search.</p></div>`;
   else body=`<div class="list">
@@ -1104,7 +1104,7 @@ function viewAdd(){
   <div class="tip">Found a role on LinkedIn or anywhere else? Copy the link and paste it here. You can paste several links at once, or the job description text if the page needs a login.</div>
   <section class="panel">
     <div class="field"><label for="paste">Links or job description</label><textarea id="paste" placeholder="https://www.linkedin.com/jobs/view/..."></textarea></div>
-    <div class="row"><button class="btn primary" data-act="addjob"${S.offline?" disabled":""}>Add to inbox</button><span class="note">Lodestone reads these at the next daily run (about 7am New York time), matches them to known roles, and adds new ones to the digest.</span></div>
+    <div class="row"><button class="btn primary" data-act="addjob"${S.offline?" disabled":""}>Add to inbox</button><span class="note">Lodestone reads these at the next update (about 7am, 1pm or 6pm New York time), matches them to known roles, and adds new ones to the digest.</span></div>
   </section>
   ${items.length?`<section class="panel"><h4>Inbox</h4><table class="tbl"><thead><tr><th>Added</th><th>What you pasted</th><th>Status</th></tr></thead><tbody>
     ${items.map(x=>`<tr><td class="mono">${esc(ago(parseWhen(x.created_at)))}</td><td style="overflow-wrap:anywhere">${esc(String(x.text||"").slice(0,160))}</td><td><span class="chip ${INBOX_CLASS[x.status]||""}">${esc(INBOX_LABEL[x.status]||x.status||"")}</span>${x.result?`<div class="note">${esc(x.result)}</div>`:""}${x.job_id&&S.jobs[x.job_id]?` <button class="btn" data-open="${esc(x.job_id)}">Open role</button>`:""}</td></tr>`).join("")}
@@ -1167,7 +1167,7 @@ function resumeBlock(p){
   const r=(p&&p.resume)||null;
   const status=!r?"No resume uploaded yet."
     :r.status==="read"?`Read ${esc(ago(parseWhen(r.read_at)))}: the fields below came from it. Fields you edit are kept.`
-    :`Uploaded ${esc(ago(parseWhen(r.uploaded_at)))}. Claude reads it at the next daily run (about 7am New York time) and fills in your profile.`;
+    :`Uploaded ${esc(ago(parseWhen(r.uploaded_at)))}. Claude reads it at the next update (about 7am, 1pm or 6pm New York time) and fills in your profile.`;
   return `<div class="field"><label>Resume</label>
     <p class="note">${r&&r.name?`<b>${esc(r.name)}</b> · `:""}${status}</p>
     <div class="row">${S.assets?`<label class="btn" for="cvfile">${r?"Replace resume":"Upload resume"} (PDF or text)</label><input type="file" id="cvfile" accept="${RESUME_TYPES}" hidden>`:`<span class="note">Uploading needs Lodestone open in claude.ai as its owner. You can paste the text instead.</span>`}</div>
@@ -1183,7 +1183,7 @@ async function uploadResume(file){
     const prof={...(S.profile||{version:1})};
     prof.resume={asset_id:a.id,name:file.name.slice(0,120),content_type:a.contentType,uploaded_at:new Date().toISOString(),status:"uploaded"};
     await S.db.doc("profile/main").set(prof);
-    toast("Resume uploaded. Claude reads it at the next daily run and fills in your profile.");
+    toast("Resume uploaded. Claude reads it at the next update and fills in your profile.");
   }catch(e){toast(e&&e.code==="unsupported_type"?"That file type isn't supported. Upload a PDF or paste the text.":"Couldn't upload the resume. Try again.");console.warn(e)}
 }
 /* Score quality (P1-S5): does the ranking agree with your own triage, and does Lodestone read postings correctly?
@@ -1219,7 +1219,7 @@ function viewSettings(){
   const p=S.prefs, pr=S.profile||{}, cur=pr.current||{}, pref=pr.preferences||{}, W=p.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+wv(W,k),0), ck={...DEFAULT_PREFS.checks,...(p.checks||{})};
   const val=k=>Array.isArray(pr[k])?pr[k].join("\n"):(pr[k]||"");
   return `<div class="topbar"><h1>Profile</h1><span class="sp"></span>${freshChip()}</div>
-  <p class="note">Everything Lodestone knows about you and what you want. Only you can see it. Changes apply straight away to colours and ranking; roles are re-scored against a changed profile at the next daily run.</p>
+  <p class="note">Everything Lodestone knows about you and what you want. Only you can see it. Changes apply straight away to colours and ranking; roles are re-scored against a changed profile at the next update.</p>
   <section class="panel"><h4>You</h4>
     ${resumeBlock(pr)}
     <div class="grid2">
@@ -1287,7 +1287,7 @@ function freshPanel(){
     const extra=Object.entries(c).filter(([x])=>x!=="at").map(([x,v])=>`${x.replace(/_/g," ")}: ${typeof v==="object"?"…":v}`).join(" · ");
     return `<tr><td>${esc(name)}${extra?`<div class="note">${esc(extra)}</div>`:""}</td><td class="mono">${esc(ago(ms))}</td><td>${old?'<span class="chip warn">Over 7 days</span>':""}</td></tr>`};
   return `<div class="row" style="justify-content:space-between"><h2>Last updated</h2><button class="btn" data-act="close">Close</button></div>
-  <p class="note">Lodestone updates every morning at about 7am New York time. Anything older than 7 days is flagged.</p>
+  <p class="note">Lodestone looks for new roles and scores them three times a day (about 7am, 1pm and 6pm New York time) and looks for new companies once a day, in the morning. Anything older than 7 days is flagged.</p>
   <section class="panel"><table class="tbl"><thead><tr><th>Component</th><th>Updated</th><th></th></tr></thead><tbody>${keys.map(row).join("")||'<tr><td colspan="3">No refresh recorded yet.</td></tr>'}
 
 </tbody></table></section>`;
