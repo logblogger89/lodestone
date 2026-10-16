@@ -16,6 +16,7 @@ module.exports = {
     h.check(!(await h.has('Get started')) && !(await h.page.locator('.ob').count()), 'An existing user never sees the setup flow');
     const v = await h.text();
     h.check(/left today/.test(v), 'Today list is the first thing she sees');
+    h.check(/picked at \d/.test(v), 'The list says what time it was picked');
     const cards = await h.page.locator('#view .card').count();
     h.check(cards >= 5 && cards <= 10, `Today shows a short list (${cards} roles)`);
     await h.shot('today');
@@ -58,12 +59,13 @@ module.exports = {
     h.check(/Applied/.test(await h.text()), 'Pipeline has an Applied column with her role');
     await h.shot('pipeline');
 
-    h.task('Finish the list: what does All caught up offer?');
+    h.task('Finish the list: the rest of the matches follow straight away');
     await h.click('[data-view="digest"]'); await h.wait(200);
-    for (let i = 0; i < 12; i++) { const b = h.page.locator('#view .card:not(.done) [data-tri="later"]').first(); if (!(await b.count())) break; await b.click(); await h.wait(150) }
-    h.check(await h.has('All caught up'), 'All caught up state after the last role');
-    await h.shot('caught-up');
-    await h.tap('Show');
-    h.check(await h.page.locator('#view .card').count() > 0, '"Show more" adds roles');
+    for (let i = 0; i < 15 && !(await h.has('reviewed your top matches')); i++) { const b = h.page.locator('#view .card:not(.done) [data-tri="later"]').first(); if (!(await b.count())) break; await b.click(); await h.wait(150) }
+    h.check(await h.has("You've reviewed your top matches for today"), 'A message says today\'s top matches are done');
+    const rest = await h.page.locator('#view .card').count();
+    h.check(rest >= 5, `Other matches show straight away, no extra tap (${rest})`);
+    h.check(!(await h.has('All caught up')), 'No dead-end "All caught up" screen');
+    await h.shot('after-top-matches');
   }
 };

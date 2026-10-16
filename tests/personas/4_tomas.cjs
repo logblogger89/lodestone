@@ -54,11 +54,12 @@ module.exports = {
       await h.click('[data-view="digest"]'); await h.wait(250);
     } else h.check(false, 'Suggestion banner present');
 
-    h.task('Run out of today\'s list, get more');
-    for (let i = 0; i < 12; i++) { const b = h.page.locator('#view .card:not(.done) [data-tri="later"]').first(); if (!(await b.count())) break; await b.click(); await h.wait(120) }
-    await h.shot('caught-up');
-    const more = h.page.getByRole('button', { name: /Show .* more/ });
-    h.check(await more.count(), 'Show more is offered');
-    if (await more.count()) { await more.first().click(); await h.wait(250); h.check(await h.page.locator('#view .card').count() > 0, 'More roles appear') }
+    h.task('Run out of today\'s list, keep going');
+    for (let i = 0; i < 15 && !(await h.has('reviewed your top matches')); i++) { const b = h.page.locator('#view .card:not(.done) [data-tri="later"]').first(); if (!(await b.count())) break; await b.click(); await h.wait(120) }
+    await h.shot('after-top-matches');
+    h.check(await h.has("You've reviewed your top matches for today"), 'The phone shows the done message');
+    h.check(await h.page.locator('#view .card').count() > 0, 'More roles appear without hunting for a button');
+    const top = await h.evalS(() => { const c = document.querySelector('#view .card'); return c ? Math.round(c.getBoundingClientRect().top) : 9999 });
+    h.check(top < 844 - 150, `The first of the other roles is on screen (${top}px)`);
   }
 };
