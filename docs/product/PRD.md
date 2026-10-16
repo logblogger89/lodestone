@@ -230,7 +230,7 @@ Tiers: **MVP** (v1 launch) · **V1** (fast follow) · **Later** · **Dropped**. 
 | A3d | **One-click capture from the browser.** A bookmarklet or extension, "Send to Lodestone," that captures the job page the user is viewing | V1 | ToS check before building (R-14) |
 | A3e | **Job-alert email ingestion.** Parse LinkedIn, Indeed and Glassdoor job-alert emails that the user already gets, from a Gmail label or by forwarding | V1 | The user's own email, so no scraping |
 | A3f | **Search launcher.** Generate ready-made searches on LinkedIn, Indeed and Wellfound from the user's preferences (titles, locations, families), opening in the browser for fast manual browsing | V1 | |
-| A3g | **Mobile share target.** Share a job from the phone (e.g. the LinkedIn app) straight into Lodestone | Later | Needs the app reachable from the phone, which conflicts with local-only hosting (D-015) |
+| A3g | **Mobile share target.** Share a job from the phone (e.g. the LinkedIn app) straight into Lodestone | Later | Needs the app reachable from the phone. The Phase 1 Artifact app already opens on a phone (D-036) |
 | A3h | **In-app coaching.** Empty states and tips: "Found a role on LinkedIn? Paste the link or press Cmd+V," a first-run tour, and shortcut hints | MVP | |
 | A4 | Dedup, repost flag, posting age, "new since last visit" | MVP | |
 | A5 | Company hiring signals (funding, headcount, layoffs) | V1 | |

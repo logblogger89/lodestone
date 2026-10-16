@@ -179,7 +179,7 @@ Asked once, at the moment they're relevant, each dismissible: first "Pay too low
 - **Evaluate:** the role view (§4.2) plus "why it's ranked here" and more / less like this.
 - **Act:** Interested opens a gentle next step: Open posting · Request market check · Add a note.
 - **Track:** pipeline with nudges ("Applied 10 days ago: follow up?") and closed-posting alerts.
-- **Weekly:** a Monday "Your week": market changes, what Lodestone learned about you, companies to consider.
+- **Weekly (not built yet, §8.9):** a Monday "Your week": market changes, what Lodestone learned about you, companies to consider.
 
 ### 8.9 Built in P1-S6 (10-16, D-068)
 What shipped, and where it differs from the design above:

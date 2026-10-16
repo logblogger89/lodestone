@@ -3,26 +3,31 @@
 | | |
 |---|---|
 | **Author** | Claude (SWE/TL), for Ayush's review |
-| **Status** | **v1, in review** (gate M3). Phase 1 = Claude Code engine + Artifact app (D-036). Cloud Run is Phase 2 |
+| **Status** | **v1, approved at M3** (D-040). Phase 1 = Claude Code engine + Artifact app (D-036). Cloud Run is Phase 2 |
 | **Implements** | [PRD v0](../product/PRD.md) P0 R1–R15 (+ R1a), [UX spec](../product/ux/UX_SPEC.md) |
 | **Decisions** | [ADRs](adr/) · [Tracker](../program/TRACKER.md) |
-| **Last updated** | 2026-10-14 |
+| **Last updated** | 2026-10-16 |
 
 ---
 
 ## Phase 1 (current): Claude Code as the engine, an Artifact as the app (D-036)
 
-No cloud servers and no paid API yet. **Phase 2** (Cloud Run + the Claude API, §1–§14 below) starts when there are more users or the data needs a fixed schedule.
+No cloud servers and no paid API yet. **Phase 2** (Cloud Run + the Claude API, §0–§14 below) starts when there are more users or the runs need to happen without a Claude Code session.
 
 **How it works**
 1. **The app** is a private claude.ai Artifact (the prototype, made real). Ayush opens it on any device.
 2. **Its data** lives in the Artifact's built-in database (the `db` capability): jobs, scores, signals, and Ayush's triage, pipeline and preferences. The page reads it live. Claude reads and writes it from any Claude Code session.
-3. **A refresh** happens when Ayush asks for one in a Claude Code session (`/refresh-jobs`, from the iPad or the laptop browser):
+3. **A refresh** runs on a schedule in the build session (D-056, D-069), and whenever Ayush asks (`/refresh-jobs`):
+   - **full run, 6:53am New York time:** market checks, refresh, scoring, daily company discovery, and the daily report
+   - **update runs, 12:53pm and 5:53pm:** refresh and scoring only (no discovery); they add an "Updates today" line to the day's report
+   - there is no email or phone alert: the report is on the app's Reports page and is the run's final message in the session
+
+   In each run:
    - a repo script (`lodestone refresh`) pulls public job-system feeds for the watchlist, normalizes them, removes duplicates, applies the rules filter, and checks whether postings are still live
-   - **Claude, in the session, reads and scores the new candidates.** This is covered by Ayush's Claude subscription, so there's no API bill
+   - **Claude, in the session, reads and scores the new candidates** on the session's most capable model (D-070). This is covered by Ayush's Claude subscription, so there's no API bill
    - the results are written to the Artifact's database, and the code changes are pushed to GitHub
-4. **Capture:** Ayush pastes a link or job description in the app. It lands in an "inbox" in the database and is processed at the next refresh. Pasted text can also be parsed right away inside the app via the `sample` capability (to verify during the build).
-5. **Learning:** Claude reads Ayush's triage from the database at each refresh, adjusts the rankings, and grows the eval set.
+4. **Capture:** Ayush pastes a link or job description in the app. It lands in an "inbox" in the database and is processed at the next run (within about 6 hours).
+5. **Learning:** runs in the app itself (D-068), so it reacts instantly: triage, More / Less like this and reading time move similar roles by at most 8 points. The runs read triage to grow the eval set (D-062).
 
 **Where jobs come from: the source index (D-042).** `data/sources/source_index.csv` lists every watched company's job source: the job system, its feed parameters (as data, D-005), status and last Canada count. A readable copy is at `data/sources/README.md`. Sources are found two ways:
 - **Auto-detection** (`lodestone detect`) tries the company name on the hosted boards (Greenhouse, Ashby, Lever, SmartRecruiters).
@@ -37,33 +42,37 @@ Each job system is one adapter file in `lodestone/adapters/`, reused by every co
 | HTML pages | Avature, iCIMS, TalentBrew, Njoyn | Read from the public search-results pages; a parse that finds nothing is reported as an error |
 | Careers page read by Claude (D-043) | Any plain careers page with no feed | `lodestone pages fetch` saves the page as text with its links; Claude reads it during `/refresh-jobs` and records the jobs (`pages save`). No API cost; one page read per company per refresh |
 
-Etiquette: requests are slow and sequential per site (one refresh a few times a week), only public job listings are read, and nothing behind a login, captcha or bot challenge is bypassed. Sites that block automated reading (e.g. Indeed, WestJet's portal) are marked "paste only" and covered by capture (A3). A few sites refuse requests that name a tool in the user agent; for those Lodestone sends a plain browser user agent, at the same low volume.
+Etiquette: requests are slow and sequential per site (three refreshes a day), only public job listings are read, and nothing behind a login, captcha or bot challenge is bypassed. Sites that block automated reading (e.g. Indeed, WestJet's portal) are marked "paste only" and covered by capture (A3). A few sites refuse requests that name a tool in the user agent; for those Lodestone sends a plain browser user agent, at the same low volume.
 
 **What stays the same for Phase 2:** the job-system adapters, dedup, rules, prompts, scoring schema and data model are shared code. Phase 2 only changes *who calls the model* (the API instead of the session) and *where data lives* (Postgres instead of the Artifact database).
 
-**Trade-offs:** data is only as fresh as the last refresh (fine for a personal search; a scheduled Claude Code routine can automate it later without the API). A large refresh uses a meaningful share of a Pro plan's usage, so score only what passes the rules filter, and upgrade to Max only if limits bite.
+**Trade-offs:** data is only as fresh as the last run, at most about 6 hours old (fine for a personal search). Runs need the build session to be available. A large refresh uses a meaningful share of a Pro plan's usage, so score only what passes the rules filter, and upgrade to Max only if limits bite.
 
 **Prerequisite (one-time, Ayush, done 10-14):** network access for this Claude Code environment is set to Full. `scripts/check_network.py` checks `config/network_allowlist.txt` plus every careers-site host in the source index at the start of each refresh, and names any that are blocked.
 
 **Commands (project skills, D-039).** Each command updates its own timestamp in the freshness panel (R11a):
 | Command | Does | Typical cadence |
 |---|---|---|
-| `/refresh-jobs` | Pull new postings, dedup, filter, score new jobs, flag closed postings, process the paste inbox | Whenever you like (e.g. a few times a week) |
-| `/discover-companies` | Run the discovery pathways and add new companies to the watchlist | Weekly |
+| `/refresh-jobs` | Pull new postings, dedup, filter, score new and changed jobs (re-scoring after a profile or rubric change is built in, capped at 150 a day across all runs), flag closed postings, process the paste inbox | Three times a day (scheduled), plus on request |
+| `/discover-companies` | Run the discovery pathways and suggest new companies; they join the watchlist only when Ayush approves (D-058) | Daily (morning run) |
 | `/refresh-signals` | Load the newest ESDC LMIA employer list and recompute pathway signals | Quarterly (`/refresh-jobs` warns when it's due) |
-| `/rescore` | Re-score every open job after a change to the scoring logic or your profile | After changes |
+| `/market-check` | Read levels.fyi for a role Ayush asked about and show its market pay (D-054, D-055) | On request, up to 20 a day across all runs |
 
 **Phase 1 build plan**
 | Sprint | Scope | Exit |
 |---|---|---|
 | P1-S1 ✅ | Core library: Greenhouse, Lever, Ashby and SmartRecruiters adapters, normalization, Canada filter, dedup, rules, plus the `/refresh-jobs` command (D-039) | A refresh produces deduplicated Canadian candidates from the seed list |
 | P1-S1b ✅ | Source index and careers-site adapters for every watchlist company without a hosted board (Q-21, D-042) | Every watchlist company is either pulled or marked paste-only, with the reason |
-| P1-S2 🟦 | The Artifact app wired to the `db` capability: digest, detail, triage, pipeline, settings, companies. App: `app/lodestone.html`, published privately at https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7. Database layout: `jobs/b0–b7` (jobs packed 8 ways), `desc/d00–d31` (job descriptions and team sections, packed 32 ways, read only when a role's Job description or Company tab opens, D-065), `meta/companies`, `meta/company_profiles` (D-065), `meta/freshness`, `meta/eval` (D-062), `meta/suggestions` (D-058), `reports/<date>` (D-057) (written by the run); `triage/<job id>`, `settings/prefs`, `profile/main` (owner-only), `inbox/<id>`, `market_req/<job id>`, `company_decisions/<company>`, `settings/today` (the day's frozen Today list), `likes/<job id>` (More / Less like this), `signals/<job id>` (reading time, opens; only while "Learn from what I read" is on) (written by the app, D-068). Learning runs in the app, not the daily run, so it reacts instantly. Only the owner can write. `export` records a hash per document so a push sends only documents that changed | Ayush triages real jobs on the iPad |
-| P1-S3 | Profile (from the CV, stored in the Artifact's database, never in the repo), Claude scoring with explanations, weights | Ranked, explained digest |
-| P1-S4 | Capture inbox, pay estimates, pathway signals (ESDC list), liveness | All P0 journeys work |
-| P1-S5 | Discovery (ATS reverse search through the session's web search, VC boards, ESDC, capture spill-over), eval set | M4 dogfood |
+| P1-S2 ✅ | The Artifact app wired to the `db` capability: digest, detail, triage, pipeline, Profile (was settings), companies. App: `app/lodestone.html`, published privately at https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7. Database layout: `jobs/b0–b7` (jobs packed 8 ways), `desc/d00–d31` (job descriptions and team sections, packed 32 ways, read only when a role's Job description or Company tab opens, D-065), `meta/companies`, `meta/company_profiles` (D-065), `meta/freshness`, `meta/eval` (D-062), `meta/suggestions` (D-058), `reports/<date>` (D-057) (written by the run); `triage/<job id>`, `settings/prefs`, `profile/main` (owner-only), `inbox/<id>`, `market_req/<job id>`, `company_decisions/<company>`, `settings/today` (the day's frozen Today list), `likes/<job id>` (More / Less like this), `signals/<job id>` (reading time, opens; only while "Learn from what I read" is on) (written by the app, D-068). Learning runs in the app, not in the scheduled runs, so it reacts instantly. Only the owner can write. `export` records a hash per document so a push sends only documents that changed | Ayush triages real jobs on the iPad |
+| P1-S3 ✅ | Profile (from the CV, stored in the Artifact's database, never in the repo), Claude scoring with explanations, weights | Ranked, explained digest |
+| P1-S4 ✅ | Capture inbox, pay estimates, pathway signals (ESDC list), liveness | All P0 journeys work |
+| P1-S5 ✅ | Discovery (ATS reverse search through the session's web search, VC boards, ESDC, capture spill-over), eval set, profile for anyone (D-058, D-061, D-062) | Suggested companies with evidence; score quality check |
+| P1-S6 ✅ | Today list, learning from choices, reading time with an off switch, one-tap suggestions, "why it's ranked here" (D-068) | M4 dogfood |
+| P1-S7 (next) | Onboarding for anyone (PRD R26–R31) | A new user gets a useful list in about a minute |
 
-## 0. Plain-English summary
+## 0. Plain-English summary (Phase 2)
+
+**Phase 2 (deferred, D-036):** this summary describes the Google Cloud version, not what runs today.
 
 - **What runs where:** The app lives on Google Cloud, in your own account. You open it in any browser (iPad or laptop) and sign in with your Google account. Nobody else can get in.
 - **How it updates:** When I change the code and push it to GitHub, it tests itself and goes live automatically. You don't install or run anything.

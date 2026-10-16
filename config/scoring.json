@@ -1,5 +1,5 @@
 {
-  "_doc": "Fit-scoring config (D-005, PRD Appendix E). Weights are defaults; the app's Settings override them at read time. Pay bands compare the featured Canadian range (CAD, annual) to the user's target. Rubric text: docs/eng/SCORING_RUBRIC.md.",
+  "_doc": "Fit-scoring config (D-005, PRD Appendix E). Weights are defaults; the user's Profile in the app overrides them at read time. Pay bands compare the featured Canadian range (CAD, annual) to the user's target. Rubric text: docs/eng/SCORING_RUBRIC.md.",
   "rubric_version": "1.0",
   "default_weights": {
     "role": 22,

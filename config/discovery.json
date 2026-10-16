@@ -1,5 +1,5 @@
 {
-  "_doc": "Company discovery settings (P1-S5). VC/ecosystem boards are Getro boards: Lodestone reads the board's public company list (a few requests a week), keeps Canadian companies big enough to hire PMs, then finds their own job boards. Add a board by adding its URL.",
+  "_doc": "Company discovery settings (P1-S5). VC/ecosystem boards are Getro boards: Lodestone reads the board's public company list (a few requests a day, as part of daily discovery), keeps Canadian companies big enough to hire PMs, then finds their own job boards. Add a board by adding its URL.",
   "vc_boards": [
     {
       "name": "Inovia Capital",

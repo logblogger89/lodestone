@@ -18,6 +18,9 @@ Used by Claude to score each role against the candidate profile (PRD Appendix E,
 | **skills** | Must-haves the candidate has | 90 has nearly all must-haves; 70 most; 50 unclear; 30 missing key ones (e.g. deep domain credential, specific language, hands-on engineering) |
 
 ## Computed by the app (not scored by Claude)
+
+| Factor | What it measures | Anchors |
+|---|---|---|
 | **freshness** | How recently the role was posted; older postings are more often filled (10-15) | ≤14 days 100; ≤30 85; ≤45 60; ≤60 30; ≤90 15; older 5. No posting date: uses the day Lodestone first saw the role, capped at 70. Recomputed daily, so no re-scoring is needed. Optional Profile cut-off hides roles older than N days |
 
 ## Also extract

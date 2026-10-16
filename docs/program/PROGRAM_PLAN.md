@@ -6,7 +6,7 @@
 | **Sponsor and decision-maker** | Ayush Gupta |
 | **Program manager (TPgM)** | Claude |
 | **Doc status** | v2, **approved 2026-10-14** (D-013) |
-| **Last updated** | 2026-10-14 |
+| **Last updated** | 2026-10-16 |
 | **Live status** | [`TRACKER.md`](./TRACKER.md) |
 
 > **Scope of this doc.** This is the *program* plan: why the program exists, what it commits to, milestones, timeline, staffing, governance and risks. *Product* content (users, CUJs, requirements, features, UX) lives in the PRD ([`docs/product/PRD.md`](../product/PRD.md)) and is worked in the Product phase.
@@ -38,7 +38,7 @@ The biggest lever on that path is a qualifying Canadian job offer, or a parallel
 
 | In scope | Out of scope (for now) |
 |---|---|
-| A single-user product for Ayush, kept private | Multi-user accounts, a public launch. Revisit after launch (D-006) |
+| A product built for Ayush first and ready for others, kept private (D-005, D-060, D-066) | Multi-user accounts, a public launch. Revisit after launch (D-006) |
 | Roles in Canada: GTA and Waterloo first, then the rest of Canada if results are thin | Roles outside Canada |
 | PM and PM-adjacent roles, both external and through a Google-internal transfer (D-011, D-012) | |
 | Discovery, fit evaluation and tracking of roles (details in the PRD) | Running the applications themselves or giving immigration legal advice |
@@ -65,11 +65,11 @@ All dates are **targets, not commitments**. The sponsor's availability is unpred
 | **M1** | PRD approved | Problem, users, CUJs, P0/P1/P2 requirements, MVP cut line, metrics. Domain research (leveling, comp, immigration) folded in | Wed 10-14 |
 | **M2** | UX review passed | Flows, mocks and a clickable prototype that cover every P0 CUJ | Thu 10-15 |
 | **M3** | Eng Design Doc approved | Architecture, data model, sourcing, scoring, extensibility seams, privacy and security, test plan, build estimate | Fri 10-16 |
-| **M4** | MVP dogfood | P0 CUJs work end to end on real job data, and Ayush uses it daily | **Re-baselined at M3** (placeholder: ~2 weeks after M3) |
-| **M5** | Launch (v1) | Launch checklist complete (privacy, security, ToS, quality bar), launch approved | **Re-baselined at M3** |
+| **M4** | MVP dogfood | P0 CUJs work end to end on real job data, and Ayush uses it daily | After the Phase 1 sprints P1-S1 to P1-S6 (built; dogfood next) |
+| **M5** | Launch (v1) | Launch checklist complete (privacy, security, ToS, quality bar), launch approved | **Set at the M4 gate** |
 | **M6** | Post-launch review | Review against O2, then a V1.x roadmap and a decision on going public | Launch + 2 weeks |
 
-The build schedule (M4 and M5) can't be committed honestly until the scope is frozen at M1 and the design is set at M3. It is committed at M3.
+The build schedule (M4 and M5) can't be committed honestly until the scope is frozen at M1 and the design is set at M3. M4 follows the Phase 1 build sprints, and the M5 date is set at the M4 gate.
 
 ## 6. Staffing and roles (RASCI)
 
@@ -124,9 +124,9 @@ The full RAID log is in the tracker. These are the risks that matter at program 
 
 | Artifact | Type | Owner | Status |
 |---|---|---|---|
-| Program Plan (this doc) | PgM | Claude → Ayush | In review |
+| Program Plan (this doc) | PgM | Claude → Ayush | Approved (D-013) |
 | [Tracker](./TRACKER.md) (status, deliverables, decisions, questions, RAID) | PgM | Claude | Live |
-| [PRD](../product/PRD.md) | Product | Ayush + Claude | Stub, inputs captured |
-| UX spec, mocks and prototype | Product | Claude → Ayush | Not started (M2) |
-| Eng Design Doc and ADRs | Engineering | Claude → Ayush | Not started (M3) |
+| [PRD](../product/PRD.md) | Product | Ayush + Claude | Approved (D-029) |
+| [UX spec](../product/ux/UX_SPEC.md), mocks and prototype | Product | Claude → Ayush | Approved (D-033) |
+| [Eng Design Doc](../eng/ENG_DESIGN.md) and ADRs | Engineering | Claude → Ayush | Approved (D-040) |
 | Launch checklist | PgM / Launch | Claude | Not started (M5) |
