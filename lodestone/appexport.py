@@ -17,6 +17,7 @@ from .experience import years_required
 
 OUT = store.STATE / "app_export"
 BUCKETS = 8                     # ~70 jobs per document, well under the 256 KiB document limit
+DESC_BUCKETS = 32               # job descriptions (D-065): ~120 KB each, loaded only when a role is opened
 
 
 def job_id(key: str) -> str:
@@ -48,7 +49,9 @@ def build() -> dict[str, dict[str, dict]]:
     estimates = payest.build()
     market = store.load("market_checks", {})
     sigs = store.load("signals", {"companies": {}, "window": ""})
-    docs: dict[str, dict[str, dict]] = {"jobs": {}, "meta": {}}
+    from . import jdsections
+    docs: dict[str, dict[str, dict]] = {"jobs": {}, "meta": {}, "desc": {f"d{i:02d}": {"jobs": {}} for i in range(DESC_BUCKETS)}}
+    abouts: dict[str, list] = {}
     buckets = {f"b{i}": {} for i in range(BUCKETS)}
     for key, j in jobs.items():
         if not j.get("role_tier") or j.get("role_excluded"):
@@ -64,6 +67,14 @@ def build() -> dict[str, dict[str, dict]]:
             rec["fit"] = {k: sc[k] for k in ("subs", "reasons", "summary", "level_guess", "people_mgmt", "work_mode",
                                              "must_haves", "flags", "scored_at", "rubric")}
         buckets[f"b{int(rec['id'], 16) % BUCKETS}"][rec["id"]] = rec
+        desc = j.get("description") or ""
+        if j.get("live") and len(desc) > 200:
+            app = jdsections.for_app(desc)
+            team = jdsections.team_about(desc)
+            docs["desc"][desc_bucket(rec["id"])]["jobs"][rec["id"]] = {
+                "text": app["text"], "truncated": app["truncated"], "has_legal": bool(app["legal"]),
+                "team": {"heading": team[0], "text": team[1]} if team else None, "read_at": j.get("last_seen")}
+            abouts.setdefault(j["company"], []).append(jdsections.company_about(desc, j["company"]))
     for b, items in buckets.items():
         docs["jobs"][b] = {"jobs": items}
 
@@ -79,6 +90,15 @@ def build() -> dict[str, dict[str, dict]]:
                      "status": best["status"], "canada_jobs": best.get("canada_jobs") or None,
                      "careers_url": best.get("careers_url") or "", "note": (best.get("notes") or "")[:160]})
     docs["meta"]["companies"] = {"companies": rows}
+    written = json.loads((store.ROOT / "data" / "companies" / "summaries.json").read_text())["companies"]
+    profiles = {}
+    for name in set(abouts) | set(written):
+        own = jdsections.best_company_about(abouts.get(name, []), name)
+        if own:
+            profiles[name] = {"about": own, "source": "posting"}
+        elif name in written:
+            profiles[name] = {"about": written[name], "source": "claude"}
+    docs["meta"]["company_profiles"] = {"companies": profiles}
     hist = store.load("eval_history", {"runs": []})["runs"]
     last = lambda k: next((r for r in reversed(hist) if r.get("kind") == k), None)
     docs["meta"]["eval"] = {"reading": last("reading"), "ranking": last("ranking"),
@@ -87,15 +107,27 @@ def build() -> dict[str, dict[str, dict]]:
     return docs
 
 
+def desc_bucket(jid: str) -> str:
+    return f"d{int(jid, 16) % DESC_BUCKETS:02d}"
+
+
 def write() -> list[dict]:
+    """Writes every document and marks which changed since the last export (`changed`), so a push can skip the large
+    description documents that didn't change."""
+    import hashlib
     docs = build()
     shutil.rmtree(OUT, ignore_errors=True)
-    out = []
+    before = store.load("export_hashes", {})
+    hashes, out = {}, []
     for coll, items in docs.items():
         (OUT / coll).mkdir(parents=True, exist_ok=True)
         for doc_id, body in items.items():
             path = OUT / coll / f"{doc_id}.json"
             text = json.dumps(body, ensure_ascii=False, separators=(",", ":"))
             path.write_text(text)
-            out.append({"collection": coll, "doc_id": doc_id, "file": str(path), "bytes": len(text.encode())})
+            h = hashlib.sha1(text.encode()).hexdigest()[:16]
+            hashes[f"{coll}/{doc_id}"] = h
+            out.append({"collection": coll, "doc_id": doc_id, "file": str(path), "bytes": len(text.encode()),
+                        "changed": before.get(f"{coll}/{doc_id}") != h})
+    store.save("export_hashes", hashes)
     return out

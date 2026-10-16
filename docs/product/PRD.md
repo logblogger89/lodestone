@@ -57,7 +57,7 @@ Ayush is a Google L5 PM (operating near L6) on an H-1B in the NYC area. He wants
 |---|---|---|
 | **CUJ-1** | **Set up my profile.** Upload my CV, review the extracted profile (roles, scope, domains, current employer), and set preferences (locations, work mode, role families, pay, toggles) | MVP |
 | **CUJ-2** | **Morning check.** Open Lodestone, see "N new since yesterday," scan the ranked digest with fit scores, source icons and badges | MVP |
-| **CUJ-3** | **Evaluate a role.** Open a listing: parsed summary, fit breakdown with reasons, pay (posted or est.), pathway badges (stated, inferred or unknown), internal-transfer badge, all sources, link to apply | MVP |
+| **CUJ-3** | **Evaluate a role.** Open a listing: parsed summary, fit breakdown with reasons, pay (posted or est.), pathway badges (stated, inferred or unknown), internal-transfer badge, all sources, link to apply. **Plus (10-16, D-065):** the full job description in its own tab with the key sentences highlighted, and a Company & team tab (what the company does, in its own words where possible; the team's description when the posting has one) | MVP |
 | **CUJ-4** | **Triage fast.** Mark Interested / Not / Later with a quick reason. The ranking learns from it | MVP |
 | **CUJ-5** | **Capture a role I found elsewhere.** Paste a LinkedIn (or any) link, or the JD text. Lodestone parses it, dedups it, scores it and adds the source icon | MVP |
 | **CUJ-6** | **Track my pipeline.** Move roles through stages. Lodestone flags postings that have closed | MVP |
