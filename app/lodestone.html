@@ -107,10 +107,33 @@ details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
 .todayhead{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:4px 0 2px}
 .progress{flex:1 1 160px;max-width:260px;height:6px;border-radius:999px;background:var(--line);overflow:hidden}
 .progress>span{display:block;height:100%;background:var(--accent)}
-.welcome{border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-soft);padding:16px 18px;margin:0 0 14px}
-.welcome h2{margin:0 0 6px;font-size:18px}
-.welcome ol{margin:8px 0 12px;padding-left:20px}
-.welcome li{margin:4px 0}
+.ob{max-width:640px;margin:8px 0 24px}
+.ob h1.obpromise{font-family:var(--font-display);font-size:28px;line-height:1.25;margin:4px 0 12px}
+.ob h2{font-size:22px;margin:8px 0 4px}
+.obkicker{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.obwhy{color:var(--muted);margin:0 0 16px}
+.obprivacy{font-size:13px;color:var(--muted);border-left:3px solid var(--good);padding:4px 0 4px 10px;margin:14px 0 18px}
+.obprog{display:flex;align-items:center;gap:10px;margin:0 0 14px}
+.obprog .dots{display:flex;gap:4px}
+.obprog .dots i{width:28px;height:4px;border-radius:2px;background:var(--line)}
+.obprog .dots i.on{background:var(--accent)}
+.obnav{display:flex;align-items:center;gap:10px;margin-top:20px;flex-wrap:wrap}
+.obopts,.obfams{display:grid;gap:8px}
+.obfams{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.obopt{display:flex;flex-direction:column;gap:2px;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:12px 14px;cursor:pointer;color:var(--fg);font:inherit}
+.obopt span{font-size:13px;color:var(--muted)}
+.obopt[aria-checked="true"],.obopt[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);background:var(--accent-soft)}
+.obexplain{font-size:13px;background:var(--accent-soft);border-radius:8px;padding:10px 12px;margin:12px 0 0}
+.obexplain p{margin:0 0 6px}.obexplain p:last-child{margin:0}
+.taste{display:grid;gap:8px}
+.tcard{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:10px 12px}
+.tcard.picked{background:var(--bg)}
+.tmeta{display:flex;flex-direction:column;gap:2px;flex:1 1 260px;min-width:0}
+.tmeta span{font-size:13px;color:var(--muted)}
+.tbtns{display:flex;gap:6px}
+.obbanner{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;background:var(--surface);padding:12px 14px;margin:0 0 14px}
+.obbanner>div{flex:1 1 280px;min-width:0}
+.obbanner span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
 .morerow{justify-content:center;margin:14px 0 4px}
 .explore-note{font-size:12px;color:var(--muted);margin:-4px 2px 0}
 .whyrank{font-size:13px;margin:0 0 12px;padding:10px 12px;border-radius:8px;background:var(--accent-soft)}
@@ -558,7 +581,7 @@ function learnMap(){
   }
   S._lm={k,m}; return m;
 }
-function rankScore(j){const f=fitScore(j);if(f==null) return null;const l=learnMap()[j.id];return f+(l?l.adj:0)}
+function rankScore(j){const f=fitScore(j)??provScore(j);const l=learnMap()[j.id];return f+(l?l.adj:0)}   // provisional until scored (P1-S7)
 const SRC_TEXT={interested:"which you marked Interested",not:"which you marked Not for me",later:"which you put on Later",
   more:"which you asked to see more like",less:"which you asked to see less like",read:"whose description you read closely"};
 function learnText(j){
@@ -577,7 +600,7 @@ const todayKey=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMo
 const todaySize=()=>Math.max(3,Math.min(30,+S.prefs.today_size||10));
 function stackPick(n,taken,explore){
   const mine=j=>(S.prefs.regions||[]).includes(j.region)?0:1;   // your own locations first, then the rest of Canada if you allow it
-  const pool=Object.values(S.jobs).filter(j=>prefOk(j)&&inPreferred(j)&&isTodo(j)&&!taken.has(j.id)&&fitScore(j)!=null).sort((a,b)=>mine(a)-mine(b)||rankScore(b)-rankScore(a));
+  const pool=Object.values(S.jobs).filter(j=>prefOk(j)&&inPreferred(j)&&isTodo(j)&&!taken.has(j.id)).sort((a,b)=>mine(a)-mine(b)||rankScore(b)-rankScore(a));
   const top=pool.slice(0,Math.ceil(pool.length/2)), recent=j=>Date.now()-(parseWhen(j.first_seen)||0)<2*DAY;
   const fresh=top.filter(recent), fs=new Set(fresh.map(j=>j.id));
   const pos=learnSignals().filter(g=>g.w>0);
@@ -939,18 +962,117 @@ function viewReports(){
       ${past.length?past.map(r=>`<details><summary><strong>${esc(reportDate(r))}</strong> · ${esc(r.headline)}</summary>${reportBody(r)}</details>`).join(""):`<p class="note">Earlier reports appear here. Change how many days to keep in view in <button class="link plink" data-view="settings">your Profile</button>.</p>`}</section>`;
   return `<div class="topbar"><h1>Reports</h1></div>${body}`;
 }
-/* First visit (P1-S7 brings full onboarding): say what Lodestone is and offer the Profile, without blocking the list. */
-function welcome(){
-  if(lsGet("welcomed",false)||!S.ready||S.offline) return "";
-  const pr=S.profile||{}, set=pr.headline||pr.resume||(pr.current||{}).title||Object.keys(S.triage).length;
-  if(set) return "";
-  return `<section class="welcome" aria-label="Welcome"><h2>Welcome to Lodestone</h2>
-    <p>Lodestone finds tech product roles in Canada, ranks them for you, and shows which employers hire people who need a work permit. Three steps:</p>
-    <ol><li><b>Tell it where and what</b> (2 minutes): cities, role types, pay, and whether you need a work permit.</li>
-    <li><b>Triage today's list</b>: Interested, Later or Not for me. It learns from every answer.</li>
-    <li><b>Add your background</b> any time: a resume, a rough draft, or a few lines. No resume? Start without one.</li></ol>
-    <div class="row"><button class="btn primary" data-view="settings">Set up my profile</button><button class="btn" data-act="welcomed">Just browse for now</button></div></section>`;
+/* ---------- Onboarding (P1-S7, PRD R26, UX §8.3): four quick questions and a taste test, no resume needed ---------- */
+const OB_FAMILIES=[["pm","Product manager","Own a product: roadmap, priorities, launches","Core"],
+  ["tpm","Program or technical program manager","Run complex work across teams","Adjacent"],
+  ["ops","Strategy, operations or chief of staff","Plan and run the business with leaders","Adjacent"],
+  ["tns","Trust & safety, risk or policy","Keep users and the business safe","Adjacent"],
+  ["pmm","Product marketing","Take products to market","Stretch"],
+  ["sol","Solutions or analytics","Work with customers or data on the product","Stretch"]];
+const OB_STATUS=[["no_permit","Yes, I'm a citizen or permanent resident","The work-permit checks step aside."],
+  ["open_permit","I have an open work permit","You can work for any employer, so sponsorship doesn't matter."],
+  ["needs_permit","I'll need an employer to support a work permit","Lodestone shows which employers have hired from abroad."],
+  ["not_sure","Not sure","We'll treat it as needing a permit for now. You can change it any time."]];
+const OB_COVERED=/product|program|pm\b|tpm|strategy|operations|\bops\b|chief of staff|trust|safety|risk|policy|marketing|solution|analytics|platform|growth/i;
+function needsOnboarding(){
+  if(S._obForce) return true;
+  if(!S.ready||S.offline||!S.triLoaded||S.profile===undefined||S._obDone) return false;
+  const pr=S.profile||{};
+  if(pr.onboarded_at) return false;
+  return !(pr.headline||pr.resume||pr.builder||(pr.current||{}).title||Object.keys(S.triage).length);   // existing users never see it
 }
+function obState(){return S.ob||(S.ob={step:0,a:{cities:[],anywhere:false,status:"",role_text:"",families:[],paste:"",other_country:"",taste:{}}})}
+function tastePicks(){   // 8 real, recent roles across role types and companies, in the cities chosen
+  const o=obState(), a=o.a; if(o.picks) return o.picks;
+  const tiers=new Set(a.families.length?OB_FAMILIES.filter(f=>a.families.includes(f[0])).map(f=>f[3]):TIERS);
+  const inCity=j=>a.anywhere||!a.cities.length||a.cities.includes(j.region);
+  const pool=Object.values(S.jobs).filter(j=>j.live&&tiers.has(j.tier)&&inCity(j)).sort((x,y)=>freshness(y).score-freshness(x).score||(postedMs(y)||0)-(postedMs(x)||0));
+  const out=[],cos=new Set(),by={Core:[],Adjacent:[],Stretch:[]};
+  pool.forEach(j=>by[j.tier]&&by[j.tier].push(j));
+  for(let r=0;out.length<8&&r<60;r++) for(const t of TIERS){const j=by[t].find(x=>!cos.has(x.company));if(j&&out.length<8){out.push(j.id);cos.add(j.company);by[t]=by[t].filter(x=>x!==j)}}
+  return o.picks=out;
+}
+function viewOnboard(){
+  const o=obState(), a=o.a, step=o.step;
+  const prog=step>0?`<div class="obprog"><span class="dots" aria-hidden="true">${[1,2,3,4].map(i=>`<i class="${i<=step?"on":""}"></i>`).join("")}</span><span class="note">Step ${step} of 4</span><span class="sp"></span><button class="link plink" data-ob="skipall">Skip setup</button></div>`:"";
+  const nav=(label,disabled)=>`<div class="obnav"><button class="btn" data-ob="back">Back</button><span class="sp"></span><button class="link plink" data-ob="next">Skip this question</button><button class="btn primary" data-ob="next"${disabled?" disabled":""}>${label}</button></div>`;
+  let body="";
+  if(step===0) body=`<p class="obkicker">Lodestone</p>
+    <h1 class="obpromise">Find the jobs that fit you, in the country you want to move to, and the ones that will actually hire you.</h1>
+    <p>Lodestone reads company job boards several times a day, ranks the roles for you, and shows which employers hire people from abroad. Four quick questions, about a minute. No resume needed.</p>
+    <p class="obprivacy">Everything you tell Lodestone stays private to you. Nothing is shared with employers.</p>
+    <div class="row"><button class="btn primary" data-ob="next">Get started</button><button class="btn" data-ob="skipall">Skip and browse</button></div>`;
+  else if(step===1) body=`<h2>Where do you want to work?</h2><p class="obwhy">So your list shows roles you could actually take.</p>
+    <div class="field"><span class="flabel">Country</span><div class="chips"><button class="chip toggle" aria-pressed="${!a.other}" data-obf="country" data-v="ca">Canada</button><button class="chip toggle" aria-pressed="${!!a.other}" data-obf="country" data-v="other">Somewhere else</button></div>
+    ${a.other?`<div class="field"><label for="ob-country">Which country?</label><input id="ob-country" value="${esc(a.other_country)}" placeholder="e.g. Germany"><span class="note">Lodestone covers Canada today. We'll note where you'd like next; meanwhile you can explore Canada.</span></div>`:""}</div>
+    <div class="field"><span class="flabel">Cities</span><div class="chips">${REGIONS.filter(r=>r!=="Other Canada").map(r=>`<button class="chip toggle" aria-pressed="${a.cities.includes(r)}" data-obf="city" data-v="${esc(r)}">${esc(REGION_SHORT[r]||r)}</button>`).join("")}
+      <button class="chip toggle" aria-pressed="${a.anywhere}" data-obf="anywhere">Anywhere in Canada</button></div>
+      <span class="note">Pick as many as you like. None picked means anywhere.</span></div>${nav("Continue")}`;
+  else if(step===2) body=`<h2>Can you already work in Canada?</h2><p class="obwhy">We use this only to show which employers hire people from abroad.</p>
+    <div class="obopts" role="radiogroup" aria-label="Work permit">${OB_STATUS.map(([k,l,d])=>`<button class="obopt" role="radio" aria-checked="${a.status===k}" data-obf="status" data-v="${k}"><b>${esc(l)}</b><span>${esc(d)}</span></button>`).join("")}</div>
+    ${a.status==="not_sure"?`<div class="obexplain"><p>That's common. Most people moving to Canada for a job need a work permit linked to an employer. Some employers first get government approval to hire from abroad (an LMIA); some roles and countries are exempt.</p><p>Lodestone shows which employers have hired from abroad before. This is general information, not immigration advice.</p></div>`:""}
+    ${nav("Continue")}`;
+  else if(step===3){
+    const off=a.role_text&&!a.families.length&&!OB_COVERED.test(a.role_text);
+    body=`<h2>What kind of role are you looking for?</h2><p class="obwhy">So your first list is about the work you want. Answer any way you like.</p>
+    <div class="field"><label for="ob-role">In your own words</label><input id="ob-role" value="${esc(a.role_text)}" placeholder="e.g. senior product manager, fintech, about 8 years"></div>
+    <div class="field"><span class="flabel">Or pick one or more</span><div class="obfams">${OB_FAMILIES.map(([k,l,d])=>`<button class="obopt" aria-pressed="${a.families.includes(k)}" data-obf="fam" data-v="${k}"><b>${esc(l)}</b><span>${esc(d)}</span></button>`).join("")}</div></div>
+    <details class="quotes"${a.paste?" open":""}><summary>Or paste a job you'd love</summary><textarea id="ob-paste" rows="3" placeholder="A link or the job description">${esc(a.paste)}</textarea><span class="note">Lodestone adds it to your inbox and uses it as an example of what you want.</span></details>
+    ${off?`<p class="obexplain">Lodestone covers product and nearby roles today. We'll note what you're after and tell you when we cover it.</p>`:""}
+    ${nav("Continue")}`;
+  }
+  else if(step===4){
+    const ids=tastePicks(), n=Object.keys(a.taste).length;
+    body=`<h2>Quick taste test</h2><p class="obwhy">Tap what appeals. ${ids.length} real roles, about 20 seconds. It shapes your first list.</p>
+    <div class="taste">${ids.map(id=>{const j=S.jobs[id];if(!j) return "";const v=a.taste[id];const pi=payInfo(j),m=pi.main;
+      return `<div class="tcard${v?" picked":""}"><div class="tmeta"><b>${esc(j.title)}</b><span>${esc(j.company)} · ${esc(REGION_SHORT[j.region]||j.region||where(j))}</span>
+        <span class="note">${esc(TIER_NAME[j.tier]||"")}${m&&m.max&&m.currency!=="USD"?` · ${esc(rangeText(m))}`:""}</span></div>
+        <div class="tbtns"><button class="tbtn${v===1?" on-interested":""}" aria-pressed="${v===1}" data-obt="1" data-id="${esc(id)}">Interested</button><button class="tbtn${v===-1?" on-not":""}" aria-pressed="${v===-1}" data-obt="-1" data-id="${esc(id)}">Not for me</button></div></div>`}).join("")}</div>
+    <p class="note" aria-live="polite">${n} of ${ids.length} answered</p>
+    <div class="obnav"><button class="btn" data-ob="back">Back</button><span class="sp"></span><button class="link plink" data-ob="finish">Skip</button><button class="btn primary" data-ob="finish">See my list</button></div>`;
+  }
+  return `<section class="ob" aria-label="Set up Lodestone">${prog}${body}</section>`;
+}
+function obCapture(){   // keep typed answers when moving between steps
+  const a=obState().a, g=id=>document.getElementById(id);
+  if(g("ob-country")) a.other_country=g("ob-country").value.trim();
+  if(g("ob-role")) a.role_text=g("ob-role").value.trim();
+  if(g("ob-paste")) a.paste=g("ob-paste").value.trim();
+}
+async function obFinish(skipped){
+  obCapture();
+  const o=obState(), a=o.a, now=new Date().toISOString(), tasted=Object.entries(a.taste).filter(([,v])=>v);
+  const regions=a.cities.length?a.cities:(S.prefs.regions||DEFAULT_PREFS.regions);
+  const fams=OB_FAMILIES.filter(f=>a.families.includes(f[0]));
+  const tiers=fams.length?[...new Set(fams.map(f=>f[3]))]:TIERS;
+  const prof={...(S.profile||{version:0})};
+  prof.work_status=a.status==="no_permit"||a.status==="open_permit"?a.status:"needs_permit";
+  prof.preferences={...(prof.preferences||{}),...(a.role_text?{role_wanted:a.role_text}:{}),...(fams.length?{role_families:fams.map(f=>f[1])}:{})};
+  prof.onboarding={at:now,skipped:!!skipped,status_answer:a.status||null,other_country:a.other?a.other_country||"(not given)":null,
+    uncovered:a.role_text&&!fams.length&&!OB_COVERED.test(a.role_text)?a.role_text:null,taste:tasted.length};
+  prof.onboarded_at=now; prof.version=(+prof.version||0)+1;
+  S.profile=prof; S._obDone=true; S._obForce=false; S.show="today"; S.recent.clear();
+  const patch=skipped&&!a.cities.length?{}:{regions,other_regions:a.anywhere||!a.cities.length,tiers,checks:{...DEFAULT_PREFS.checks,...(S.prefs.checks||{}),green_regions:regions}};
+  // likes from the taste test train the ranking straight away
+  const L={...S.likes};tasted.forEach(([id,v])=>{const j=S.jobs[id];L[id]={v,at:now,title:j?j.title:"",company:j?j.company:"",source:"taste"}});S.likes=L;
+  S.today=null; await savePatch(patch);   // also re-renders; today's list is picked with the new answers
+  if(!S.db||!S.canWrite) return;
+  try{
+    await S.db.doc("profile/main").set(prof);
+    await Promise.all(tasted.map(([id])=>S.db.doc("likes/"+id).set(L[id])));
+    if(a.paste) await S.db.collection("inbox").add({text:a.paste.slice(0,20000),created_at:now,status:"new",from:"onboarding"});
+  }catch(e){toast("Couldn't save everything. Try again from your Profile.");console.warn(e)}
+}
+/* After setup: say honestly what the list is based on until the next run scores roles for this person. */
+function obBanner(){
+  const pr=S.profile||{}, at=parseWhen(pr.onboarded_at); if(!at||lsGet("obBannerOff",false)) return "";
+  const scored=parseWhen((S.freshness.scoring||{}).at); if(scored&&scored>at) return "";
+  if(Date.now()-at>2*DAY) return "";
+  const ob=pr.onboarding||{}, answers=[pr.work_status,(pr.preferences||{}).role_wanted||(pr.preferences||{}).role_families,S.prefs.regions].filter(Boolean).length;
+  return `<div class="obbanner" role="status"><div><strong>Your first list</strong><span>Based on ${ob.skipped?"default settings":`${answers} answers`}${ob.taste?` and ${ob.taste} taps`:""}. Your personal fit scores arrive at the next update (within about 6 hours), and the list gets sharper as you use it.</span></div><button class="btn" data-act="obbanner">Got it</button></div>`;
+}
+/* Until a role is scored for you: rank by role type, freshness and (through learning) the taste test. */
+function provScore(j){return Math.round(({Core:60,Adjacent:55,Stretch:48}[j.tier]||48)*0.8+freshness(j).score*0.2)}
 function viewToday(){
   ensureToday();
   const T=S.today;
@@ -968,6 +1090,7 @@ function viewToday(){
     ${ex?`<div class="section-label">Something different</div><p class="explore-note">A well-scored role unlike the ones you usually pick. Your answer tells Lodestone whether to widen your list.</p>${card(ex,main.length)}`:""}</div>${moreRow}`;
 }
 function viewDigest(){
+  if(needsOnboarding()) return viewOnboard();
   const all=visible(), n=S.prefs.digest_size||20;
   const fresh=all.filter(isNew), rest=all.filter(j=>!isNew(j));
   const first=(fresh.length?fresh:all).slice(0,n);
@@ -983,7 +1106,7 @@ function viewDigest(){
   if(S.offline) body=offlineState();
   else if(!S.ready) body=`<div class="empty"><h2>Loading your jobs…</h2><p>Reading Lodestone's database.</p></div>`;
   else if(!live.length) body=`<div class="empty"><h2>No jobs yet</h2><p>Roles appear after the next update (about 7am, 1pm and 6pm New York time).</p></div>`;
-  else if(isToday) body=welcome()+viewToday();
+  else if(isToday) body=obBanner()+viewToday();
   else if(!all.length) body=`<div class="empty"><h2>Nothing matches these filters</h2><p>Try "All of Canada", turn on more role types, or clear the search.</p></div>`;
   else body=`<div class="list">
       ${fresh.length?`<div class="section-label">New since your last visit</div>`:""}
@@ -1380,7 +1503,22 @@ document.addEventListener("click",e=>{
   if(d.costatus){S.coStatus=d.costatus;render();return}
   if(d.act==="expand"){S.expanded=true;render();return}
   if(d.act==="moretoday"){moreToday();return}
-  if(d.act==="welcomed"){lsSet("welcomed",true);render();return}
+  if(d.act==="obbanner"){lsSet("obBannerOff",true);render();return}
+  if(d.act==="reonboard"){S._obForce=true;S._obDone=false;S.ob=null;setView("digest");return}
+  if(d.ob){obCapture();const o=obState();
+    if(d.ob==="next"){o.step=Math.min(4,o.step+1);if(o.step===4)o.picks=null}
+    else if(d.ob==="back") o.step=Math.max(0,o.step-1);
+    else if(d.ob==="finish") obFinish(false);
+    else if(d.ob==="skipall") obFinish(true);
+    render();window.scrollTo(0,0);return}
+  if(d.obf){obCapture();const a=obState().a,v=d.v;
+    if(d.obf==="city"){a.cities=a.cities.includes(v)?a.cities.filter(x=>x!==v):[...a.cities,v];a.anywhere=false}
+    else if(d.obf==="anywhere"){a.anywhere=!a.anywhere;if(a.anywhere)a.cities=[]}
+    else if(d.obf==="country") a.other=v==="other";
+    else if(d.obf==="status") a.status=v;
+    else if(d.obf==="fam") a.families=a.families.includes(v)?a.families.filter(x=>x!==v):[...a.families,v];
+    render();return}
+  if(d.obt){const t=obState().a.taste,v=+d.obt;t[d.id]=t[d.id]===v?0:v;render();return}
   if(d.sacc){acceptSuggestion(d.sacc);return}
   if(d.sdis){dismissSuggestion(d.sdis);return}
   if(d.undo){undoLearned(d.undo);return}
