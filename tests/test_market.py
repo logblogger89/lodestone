@@ -73,6 +73,15 @@ class TestMarket(unittest.TestCase):
         self.assertEqual((len(out["process"]), len(out["deferred"])), (20, 5))
         self.assertEqual(out["process"][0]["id"], f"{0:012x}")
 
+    def test_cap_is_per_day_across_runs(self):
+        market.fetch("shopify senior", getter=lambda u, a: PAGE)        # an earlier run today read one role
+        d = Path(self.tmp.name) / "req2"
+        d.mkdir()
+        for i in range(25):
+            (d / f"{i:012x}.json").write_text(json.dumps({"status": "requested", "requested_at": f"2026-10-15T{i:02d}:00:00Z"}))
+        out = market.pending(str(d))
+        self.assertEqual((len(out["process"]), out["read_today"]), (19, 1))
+
 
 if __name__ == "__main__":
     unittest.main()

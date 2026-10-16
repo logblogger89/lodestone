@@ -1,4 +1,5 @@
-"""CLI: python3 -m lodestone {detect,refresh,stats}. Used by the /refresh-jobs skill."""
+"""CLI: python3 -m lodestone {detect,refresh,stats,index,pages,export,score,signals,inbox,market,discover,report,eval}.
+Used by the skills in .claude/skills/ and the scheduled runs (docs/ops/)."""
 from __future__ import annotations
 
 import argparse
@@ -49,7 +50,8 @@ def main(argv=None) -> int:
     rp = sub.add_parser("report", help="save the daily run report for the app and the repo")
     rp.add_argument("action", choices=["save"])
     rp.add_argument("file", help="report JSON written by Claude")
-    sub.add_parser("export", help="package jobs, companies and freshness for the app's database")
+    ex = sub.add_parser("export", help="package jobs, companies and freshness for the app's database")
+    ex.add_argument("--mark-pushed", nargs="*", metavar="COLL/DOC", help="after a successful push: record it (all, or only these documents)")
     sub.add_parser("index", help="rewrite data/sources/README.md, the readable source index")
     a = ap.parse_args(argv)
     log = lambda m: print(m, file=sys.stderr)
@@ -113,7 +115,7 @@ def main(argv=None) -> int:
         out = capture.prepare(data) if a.action == "prepare" else capture.add(data)
     elif a.cmd == "export":
         from . import appexport
-        out = appexport.write()
+        out = appexport.mark_pushed(a.mark_pushed or None) if a.mark_pushed is not None else appexport.write()
     elif a.cmd == "index":
         from . import sources, store
         path = sources.INDEX.parent / "README.md"

@@ -26,6 +26,11 @@ class TestReport(unittest.TestCase):
             self.assertEqual(out["delete_from_db"], ["reports/2026-06-01"])
             self.assertEqual(json.loads((Path(d) / "2026-10-16.json").read_text())["top"][0]["fit"], 84)
 
+    def test_save_accepts_a_report_read_back_from_the_app(self):
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(report, "DIR", Path(d)):
+            out = report.save({"id": "2026-10-16", "data": GOOD, "version": 3}, today=dt.date(2026, 10, 16))
+            self.assertEqual(out["status"], "saved")
+
 
 if __name__ == "__main__":
     unittest.main()

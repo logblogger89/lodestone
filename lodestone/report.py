@@ -40,6 +40,7 @@ def validate(r: dict) -> list[str]:
 
 
 def save(r: dict, today: dt.date | None = None) -> dict:
+    r = r.get("data", r) if isinstance(r.get("data"), dict) else r    # a report read back from the app
     errs = validate(r)
     if errs:
         return {"status": "invalid", "errors": errs}

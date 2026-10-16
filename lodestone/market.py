@@ -82,6 +82,7 @@ def fetch(query: str, *, getter=_get) -> dict:
                 "matches": [{"id": i, "company": j["company"], "title": j["title"], "location": j.get("location")} for i, j in hits[:15]]}
     jid, j = hits[0]
     cfg = config()
+    store.log_today("market_log", jid)               # counts toward the daily cap, whatever the answer
     locs = [cfg["locations"].get(j.get("region") or "", cfg["locations"]["default"]), cfg["locations"]["default"]]
     tried = []
     for loc in dict.fromkeys(locs):
@@ -122,7 +123,8 @@ def add(jid: str, level: str, note: str = "") -> dict:
 
 
 def pending(folder: str) -> dict:
-    """Requests saved from the app (`ArtifactData list market_req` with out_dir), oldest first, capped per day."""
+    """Requests saved from the app (`ArtifactData list market_req` with out_dir), oldest first. The cap is per day
+    (New York time) across all runs: roles already read today count against it."""
     from pathlib import Path
     reqs = []
     for f in sorted(Path(folder).rglob("*.json")):
@@ -131,8 +133,9 @@ def pending(folder: str) -> dict:
         if d.get("status") == "requested":
             reqs.append({"id": f.stem, **{k: d.get(k) for k in ("company", "title", "requested_at")}})
     reqs.sort(key=lambda r: r.get("requested_at") or "")
-    cap = config().get("daily_cap", 20)
-    return {"process": reqs[:cap], "deferred": [r["id"] for r in reqs[cap:]]}
+    done = store.count_today("market_log")
+    cap = max(0, config().get("daily_cap", 20) - done)
+    return {"process": reqs[:cap], "deferred": [r["id"] for r in reqs[cap:]], "read_today": done}
 
 
 def _now() -> str:

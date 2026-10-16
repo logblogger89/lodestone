@@ -33,6 +33,14 @@ class TestScoringPrepare(unittest.TestCase):
         self.assertEqual([b["title"] for b in batch], ["PM 4", "PM 3"])
         self.assertTrue(batch[0]["profile_key"])
 
+    def test_rescore_cap_counts_earlier_runs_today(self):
+        from lodestone import store
+        log = {store.today(): ["a", "b", "c"]}
+        with mock.patch.object(scoring.store, "load", lambda n, d: {"jobs": JOBS} if n == "jobs" else log if n == "rescore_log" else self.scores):
+            out = scoring.prepare(profile={"headline": "PM", "domains": ["AI"]}, max_rescore=4)
+        self.assertEqual(out[0]["jobs"], 1)
+        self.assertEqual(out[-1], {"profile_rescore_waiting": 4})
+
     def test_profile_key_ignores_the_resume_file(self):
         a = scoring.profile_key({"headline": "x", "resume": {"asset_id": "1"}})
         b = scoring.profile_key({"headline": "x", "resume": {"asset_id": "2"}})

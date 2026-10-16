@@ -16,6 +16,29 @@ def now() -> str:
     return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
 
 
+def today() -> str:
+    """Today's date in New York time: the day the scheduled runs and the app's daily caps count against."""
+    try:
+        from zoneinfo import ZoneInfo
+        return dt.datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+    except Exception:                                    # no time-zone data: UTC is close enough for a cap
+        return dt.datetime.now(dt.timezone.utc).date().isoformat()
+
+
+def count_today(name: str) -> int:
+    """How many items a daily log holds for today (each log: {date: [ids]}, last 14 days kept)."""
+    return len(load(name, {}).get(today(), []))
+
+
+def log_today(name: str, item: str) -> int:
+    log = load(name, {})
+    day = log.setdefault(today(), [])
+    if item not in day:
+        day.append(item)
+    save(name, {d: v for d, v in sorted(log.items())[-14:]})
+    return len(day)
+
+
 def load(name: str, default):
     path = STATE / f"{name}.json"
     if not path.exists():

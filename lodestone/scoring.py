@@ -85,6 +85,7 @@ def prepare(batch_size: int = 70, profile: dict | None = None, max_rescore: int 
             continue
         todo.append((key, fp))
     stale.sort(reverse=True)
+    max_rescore = max(0, max_rescore - store.count_today("rescore_log"))   # the cap is per day, across all runs
     todo += [(k, fp) for _, k, fp in stale[:max_rescore]]
     todo = [_packet(key, jobs[key], fp, pkey) for key, fp in todo]
     shutil.rmtree(INBOX, ignore_errors=True)
@@ -115,6 +116,9 @@ def ingest(results: list[dict]) -> dict:
         if not r.get("id") or set(SUBS) - set(subs) or not all(isinstance(subs[k], (int, float)) and 0 <= subs[k] <= 100 for k in SUBS):
             bad.append(r.get("id"))
             continue
+        prev = scores.get(r["id"]) or {}
+        if prev.get("fingerprint") == r.get("fingerprint") and prev.get("profile_key") != r.get("profile_key"):
+            store.log_today("rescore_log", r["id"])    # a re-score against a changed profile
         scores[r["id"]] = {
             "fingerprint": r.get("fingerprint"), "profile_key": r.get("profile_key"), "rubric": config()["rubric_version"], "scored_at": store.now(),
             "subs": {k: int(round(subs[k])) for k in SUBS},

@@ -92,7 +92,7 @@ def build() -> dict[str, dict[str, dict]]:
     docs["meta"]["companies"] = {"companies": rows}
     written = json.loads((store.ROOT / "data" / "companies" / "summaries.json").read_text())["companies"]
     profiles = {}
-    for name in set(abouts) | set(written):
+    for name in sorted(set(abouts) | set(written)):   # sorted, so the same data always gives the same document
         own = jdsections.best_company_about(abouts.get(name, []), name)
         if own:
             profiles[name] = {"about": own, "source": "posting"}
@@ -112,8 +112,9 @@ def desc_bucket(jid: str) -> str:
 
 
 def write() -> list[dict]:
-    """Writes every document and marks which changed since the last export (`changed`), so a push can skip the large
-    description documents that didn't change."""
+    """Writes every document and marks which changed since the last successful push (`changed`), so a push can skip
+    the large description documents that didn't change. Run `export --mark-pushed` after the push succeeds; until then a
+    document stays `changed`, so a failed or partial push is retried next time."""
     import hashlib
     docs = build()
     shutil.rmtree(OUT, ignore_errors=True)
@@ -129,5 +130,14 @@ def write() -> list[dict]:
             hashes[f"{coll}/{doc_id}"] = h
             out.append({"collection": coll, "doc_id": doc_id, "file": str(path), "bytes": len(text.encode()),
                         "changed": before.get(f"{coll}/{doc_id}") != h})
-    store.save("export_hashes", hashes)
+    store.save("export_hashes_pending", hashes)
     return out
+
+
+def mark_pushed(only: list[str] | None = None) -> dict:
+    """Record the last export as pushed (all documents, or only the given `collection/doc_id` keys)."""
+    pending, pushed = store.load("export_hashes_pending", {}), store.load("export_hashes", {})
+    keys = [k for k in (only or pending) if k in pending]
+    pushed.update({k: pending[k] for k in keys})
+    store.save("export_hashes", pushed)
+    return {"marked": len(keys)}
