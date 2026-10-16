@@ -424,9 +424,9 @@ function payPanel(j){
     :marketAsk(j);
   return `<section class="panel"><h4>Pay</h4>${body}${est}${eq}${market}${evidence}</section>`;
 }
-/* Market check requests (D-055): one levels.fyi read per role you ask for, answered by Claude's next session. */
+/* Market check requests (D-055): one levels.fyi read per role you ask for, answered at the next scheduled run. */
 const MREQ_DAILY=20;   // mirrors config/market.json daily_cap
-const MREQ_MSG={requested:"Requested. Claude checks levels.fyi at its next session.",no_data:"levels.fyi has no Canadian figures for this company and role type.",failed:"The check failed. Tap to try again."};
+const MREQ_MSG={requested:"Requested. Claude checks levels.fyi at the next update (about 7am, 1pm or 6pm New York time).",no_data:"levels.fyi has no Canadian figures for this company and role type.",failed:"The check failed. Tap to try again."};
 function marketAsk(j){
   const r=S.mreq[j.id];
   if(r&&r.status==="requested") return `<p class="note mreq"><span class="est">Requested</span> ${MREQ_MSG.requested}</p>`;
@@ -440,7 +440,7 @@ async function requestMarket(j){
   if(recent>=MREQ_DAILY){toast(`That's ${MREQ_DAILY} requests today. levels.fyi allows reads you ask for, not bulk pulls, so try again tomorrow.`);return}
   const body={status:"requested",requested_at:new Date().toISOString(),company:j.company,title:j.title};
   S.mreq={...S.mreq,[j.id]:body};render();
-  try{await S.db.doc("market_req/"+j.id).set(body);toast("Requested. It's answered at Claude's next session.")}catch(e){toast("Couldn't save. Check your connection and try again.");console.warn(e)}
+  try{await S.db.doc("market_req/"+j.id).set(body);toast("Requested. It's answered at the next update (about 7am, 1pm or 6pm New York time).")}catch(e){toast("Couldn't save. Check your connection and try again.");console.warn(e)}
 }
 /* Pay sort: base (or unlabelled) ranges compete with each other; bonus-inclusive, OTE and total-comp ranges rank after them. */
 const payMax=j=>{const pi=payInfo(j),m=pi.main;if(!m) return pi.est?(pi.est.max||0)-1:-1;const v=(m.interval==="hour"?m.max*2000:m.max)||0;return (["base","unspecified",undefined].includes(m.kind)?1e9:0)+v};
@@ -618,7 +618,7 @@ async function acceptSuggestion(id){
   const s=suggestionsList().find(x=>x.id===id); if(!s) return;
   const before={};Object.keys(s.patch).forEach(k=>before[k]=S.prefsRaw&&k in S.prefsRaw?S.prefsRaw[k]:null);
   const ok=await savePatch({...s.patch,learned:[...(S.prefs.learned||[]),{id:s.id,text:s.text,why:s.why,at:new Date().toISOString(),before}].slice(-30)});
-  if(ok) toast("Done. Undo it any time in your Profile, under What Lodestone learned.");
+  if(ok) toast("Done. Undo it any time in your Profile, under Changes you accepted.");
 }
 function dismissSuggestion(id){savePatch({dismissed_suggestions:[...(S.prefs.dismissed_suggestions||[]),id].slice(-200)})}
 function undoLearned(id){
@@ -897,7 +897,7 @@ function reportBanner(){
 function viewReports(){
   const n=+S.prefs.report_days||14, cutoff=Date.now()-n*DAY;
   const [latest,...rest]=S.reports, past=rest.filter(r=>new Date(r.date+"T12:00:00")>=cutoff);
-  const body=!latest?`<div class="empty"><h2>No reports yet</h2><p>The daily run posts a report here every morning around 7am New York time.</p></div>`
+  const body=!latest?`<div class="empty"><h2>No reports yet</h2><p>The morning run posts a report here around 7am New York time. The 1pm and 6pm updates add to it when they find something.</p></div>`
     :`<section class="panel"><h4>${esc(reportDate(latest))}</h4><p><strong>${esc(latest.headline)}</strong></p>${reportBody(latest)}</section>
       <section class="archive"><h2>Archive <span class="note">last ${n} days</span></h2>
       ${past.length?past.map(r=>`<details><summary><strong>${esc(reportDate(r))}</strong> · ${esc(r.headline)}</summary>${reportBody(r)}</details>`).join(""):`<p class="note">Earlier reports appear here. Change how many days to keep in view in <button class="link plink" data-view="settings">your Profile</button>.</p>`}</section>`;
@@ -912,8 +912,8 @@ function viewToday(){
   S._order=main.concat(ex?[ex]:[]);
   const head=`<div class="todayhead"><strong>${!inStack.length?"Nothing new fits your Profile today":left.length?`${left.length} of ${inStack.length} left today`:`All ${inStack.length} done`}</strong>
     <span class="progress" role="progressbar" aria-label="Today's progress" aria-valuemin="0" aria-valuemax="${inStack.length}" aria-valuenow="${done}"><span style="width:${inStack.length?Math.round(done*100/inStack.length):0}%"></span></span>
-    <span class="note">Picked this morning from your best matches${T.explore?", plus one wildcard":""}. The list stays put until tomorrow.</span></div>`;
-  if(!left.length) return `${head}<div class="empty"><h2>All caught up for today</h2><p>Nice work. Tomorrow's list is ready after the morning run.</p>
+    <span class="note">Picked from your best matches when you first opened Lodestone today${T.explore?", plus one wildcard":""}. Roles you triage drop off; roles found later today wait for tomorrow's list (see them now under All to triage).</span></div>`;
+  if(!left.length) return `${head}<div class="empty"><h2>All caught up for today</h2><p>Nice work. A new list is picked the first time you open Lodestone tomorrow.</p>
     <div class="row" style="justify-content:center"><button class="btn primary" data-act="moretoday">Show ${todaySize()} more</button><button class="btn" data-show="todo">Browse all roles to triage</button></div></div>`;
   return `${head}<div class="list">${main.map((j,i)=>card(j,i)).join("")}
     ${ex?`<div class="section-label">Something different</div><p class="explore-note">A well-scored role unlike the ones you usually pick. Your answer tells Lodestone whether to widen your list.</p>${card(ex,main.length)}`:""}</div>`;
@@ -935,7 +935,7 @@ function viewDigest(){
   else if(!S.ready) body=`<div class="empty"><h2>Loading your jobs…</h2><p>Reading Lodestone's database.</p></div>`;
   else if(!live.length) body=`<div class="empty"><h2>No jobs yet</h2><p>Roles appear after the next update (about 7am, 1pm and 6pm New York time).</p></div>`;
   else if(isToday) body=viewToday();
-  else if(!all.length) body=`<div class="empty"><h2>Nothing matches these filters</h2><p>Try "All regions", turn on more role tiers, or clear the search.</p></div>`;
+  else if(!all.length) body=`<div class="empty"><h2>Nothing matches these filters</h2><p>Try "All of Canada", turn on more role types, or clear the search.</p></div>`;
   else body=`<div class="list">
       ${fresh.length?`<div class="section-label">New since your last visit</div>`:""}
       ${first.map((j,i)=>card(j,i)).join("")}
@@ -973,7 +973,7 @@ function pathwayPanel(j){
   </section>`;
 }
 function fitPanel(j){
-  const f=j.fit; if(!f||!f.subs) return `<section class="panel"><h4>Fit</h4><p class="nopay">Not scored yet. It's scored at the next refresh.</p></section>`;
+  const f=j.fit; if(!f||!f.subs) return `<section class="panel"><h4>Fit</h4><p class="nopay">Not scored yet. It's scored at the next update (about 7am, 1pm or 6pm New York time).</p></section>`;
   const W=S.prefs.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+wv(W,k),0)||1, v=fitScore(j), fr=freshness(j);
   const sub=k=>subVal(j,k), why=k=>k==="freshness"?fr.why:k==="pathway"?pathwayWhy(j):((f.reasons||{})[k]||"");
   return `<section class="panel"><h4>Fit for you</h4>
@@ -1157,7 +1157,7 @@ function viewCompanies(){
   ${S.offline?offlineState():`<div class="tblwrap"><table class="tbl"><thead><tr><th>Company</th><th>Segment</th><th>Job system</th><th>Status</th><th>Canada roles</th><th></th></tr></thead><tbody>
   ${rows.map(c=>`<tr><td><b>${esc(c.name)}</b>${c.status!=="active"&&c.note?`<div class="note">${esc(c.note)}</div>`:""}</td><td>${esc(c.segment)}</td><td>${esc(c.system)}</td><td>${esc(label[c.status]||c.status)}</td><td class="mono">${c.canada_jobs??""}</td><td>${c.careers_url?`<a href="${esc(safeUrl(c.careers_url))}" target="_blank" rel="noopener">Careers ↗</a>`:""}</td></tr>`).join("")}
   </tbody></table></div>`}
-  <p class="note">New companies are suggested above each week. You can also ask Claude in a Lodestone session to add or remove one.</p>`;
+  <p class="note">New companies are suggested above each morning. You can also ask Claude in a Lodestone session to add or remove one.</p>`;
 }
 /* Profile: built from the CV, stored only in this app's private database. Edits are used at the next scoring run. */
 /* ---------- Profile (D-060): everything personal lives here, so anyone can use Lodestone with their own resume and preferences ---------- */
@@ -1229,7 +1229,7 @@ function viewSettings(){
       <div class="field"><label for="pf-where">Where you live now</label><input id="pf-where" value="${esc(pr.location_now||cur.location||"")}"></div>
     </div>
     <div class="field"><label for="pf-work">Work permit</label><select id="pf-work">${Object.entries(WORK_STATUS).map(([k,l])=>`<option value="${k}"${(pr.work_status||"needs_permit")===k?" selected":""}>${esc(l)}</option>`).join("")}</select>
-      <span class="note">Lodestone is for people who aren't yet Canadian citizens or permanent residents.</span></div>
+      <span class="note">Lodestone is built first for people who need a work permit for Canada. Citizens and permanent residents are welcome too; a setting for that arrives with the new sign-up flow.</span></div>
     ${PROFILE_FIELDS.map(([k,l,rows])=>`<div class="field"><label for="pf-${k}">${l}</label><textarea id="pf-${k}" rows="${rows}" style="min-height:${rows>1?110:44}px">${esc(val(k))}</textarea></div>`).join("")}
   </section>
   <section class="panel"><h4>What you're looking for</h4>
@@ -1257,7 +1257,7 @@ function viewSettings(){
     <div class="row"><button class="btn" data-act="resetw">Reset to defaults</button></div>
   </section>
   <section class="panel"><h4>App</h4>
-    <div class="grid2"><div class="field"><label for="tsize">Roles in Today's list (3–30)</label><input type="number" id="tsize" min="3" max="30" value="${todaySize()}"></div>
+    <div class="grid2"><div class="field"><label for="tsize">Roles in Today's list (3–30, from tomorrow's list)</label><input type="number" id="tsize" min="3" max="30" value="${todaySize()}"></div>
     <div class="field"><label for="dsize">Roles on the first page of All to triage (1–100)</label><input type="number" id="dsize" min="1" max="100" value="${+p.digest_size||20}"></div>
     <div class="field"><label for="ldays">"Later" roles come back after (days)</label><input type="number" id="ldays" min="1" max="60" value="${+p.later_days||7}"></div>
     <div class="field"><label for="ck-fg">Posted: green within (days)</label><input type="number" id="ck-fg" min="1" max="120" value="${+ck.fresh_green}"></div>
@@ -1275,7 +1275,7 @@ function learnPanel(){
     <div class="row"><button class="btn" data-act="delreading"${nRead?"":" disabled"}>Delete my reading data</button><span class="note">${nRead?`Reading time saved for ${nRead} role${nRead===1?"":"s"}. Only you can see it.`:"No reading data saved."}</span></div>
     <h4 style="margin-top:14px">Changes you accepted</h4>
     ${L.length?`<ul class="learned">${L.map(x=>`<li><b>${esc(x.text)}</b> <span class="note">${esc(x.why)} ${esc(ago(parseWhen(x.at)))}</span> <button class="link" data-undo="${esc(x.id)}">Undo</button></li>`).join("")}</ul>`
-      :`<p class="note">Nothing yet. When your choices show a pattern (say, "Pay too low" three times), Lodestone suggests a change on the Today page and you accept it with one tap.</p>`}
+      :`<p class="note">Nothing yet. When your choices show a pattern (say, "Pay too low" three times), Lodestone suggests a change at the top of the Digest and you accept it with one tap.</p>`}
     ${hid.length?`<h4 style="margin-top:14px">Hidden companies</h4><div class="chips">${hid.map(c=>`<span class="chip">${esc(c)} <button class="link" data-unhide="${esc(c)}" aria-label="Show ${esc(c)} again">Show again</button></span>`).join("")}</div>`:""}
   </section>`;
 }
@@ -1396,8 +1396,8 @@ async function addJob(){
   const box=document.getElementById("paste");const text=(box&&box.value||"").trim();
   if(!text){toast("Paste a link or a job description first.");return}
   if(!S.db){toast("Adding jobs works inside claude.ai only.");return}
-  try{await S.db.collection("inbox").add({text:text.slice(0,20000),created_at:new Date().toISOString(),status:"new"});box.value="";toast("Added. It's processed at your next refresh.")}
-  catch(e){toast(e&&e.code==="quota_exceeded"?"The inbox is full. Run a refresh to clear it.":"Couldn't add it. Try again.");console.warn(e)}
+  try{await S.db.collection("inbox").add({text:text.slice(0,20000),created_at:new Date().toISOString(),status:"new"});box.value="";toast("Added. It's processed at the next update (about 7am, 1pm or 6pm New York time).")}
+  catch(e){toast(e&&e.code==="quota_exceeded"?"The inbox is full. It clears at the next update; try again after that.":"Couldn't add it. Try again.");console.warn(e)}
 }
 document.addEventListener("keydown",e=>{
   if(e.target.closest("input,textarea,select")) return;
