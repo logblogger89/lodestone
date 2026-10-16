@@ -3,9 +3,9 @@
 > The live status of the work in [`PROGRAM_PLAN.md`](./PROGRAM_PLAN.md). Claude updates it at the end of every working session.
 > Legend: `⬜ Not started` · `🟦 In progress` · `🟨 In review` · `✅ Done` · `⛔ Blocked` · `➖ Dropped` | RAG: `🟢` `🟡` `🔴`
 
-**Last updated:** 2026-10-15 · **Current milestone:** M4 (build) · **Overall RAG:** 🟢
+**Last updated:** 2026-10-16 · **Current milestone:** M4 (build) · **Overall RAG:** 🟢
 
-**Status summary (2026-10-15).** **P1-S3 done (D-049):** 543 roles scored with explanations, freshness factor added; Ayush's Interested picks rank at the top (5 of 9 in the top 7). **P1-S4 built:** pathway signals (D-050), paste inbox (D-052), pay estimates (D-053), Later/closed checks passed. Market pay checks from levels.fyi on request (D-054). **P1-S5 built:** discovery (D-058), profile for anyone (D-061), score quality check (D-062). **Next: M4 gate review with Ayush** (daily use, P0 journeys end to end).
+**Status summary (2026-10-15).** **P1-S3 done (D-049):** 543 roles scored with explanations, freshness factor added; Ayush's Interested picks rank at the top (5 of 9 in the top 7). **P1-S4 built:** pathway signals (D-050), paste inbox (D-052), pay estimates (D-053), Later/closed checks passed. Market pay checks from levels.fyi on request (D-054). **P1-S5 built:** discovery (D-058), profile for anyone (D-061), score quality check (D-062). **P1-S6 built (D-068):** Today list as the home view, learning from your choices (ordering check 60% → 70%), reading time with an off switch, one-tap suggestions with undo, "why it's ranked here". **Next:** Ayush uses Today for a few days; then the M4 gate review and P1-S7 (onboarding for anyone).
 
 ---
 
@@ -41,7 +41,7 @@
 | D3.1 | Eng Design Doc | Engineering | M3 | ✅ | Claude → Ayush | [ENG_DESIGN.md](../eng/ENG_DESIGN.md) v1: Phase 1 = Claude Code engine + Artifact app |
 | D3.2 | ADRs (stack, hosting, sourcing, scoring) | Engineering | M3 | ✅ | Claude → Ayush | [adr/](../eng/adr/) 0001 (accepted) to 0007 |
 | D3.3 | Build plan and estimate (commits M4 and M5) | PgM / Eng | M3 | ✅ | Claude → Ayush | ENG_DESIGN §14: S1–S5 ≈ 10–15 sessions, then hardening |
-| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 ✅ (calibrated on 11 triaged roles, D-049), P1-S4 ✅ (pathway signals, paste inbox, pay estimates, Later/closed checks; market checks) |
+| D4.1 | MVP build | Engineering | M4 | 🟦 | Claude | P1-S1 ✅, P1-S1b ✅, P1-S2 🟨 (awaiting Ayush's triage on iPad), P1-S3 ✅ (calibrated on 11 triaged roles, D-049), P1-S4 ✅ (pathway signals, paste inbox, pay estimates, Later/closed checks; market checks), P1-S5 ✅, P1-S6 ✅ (Today list and learning, D-068) |
 | D4.2 | Dogfood and bug bash | Launch | M4 | ⬜ | Ayush | |
 | D5.1 | Launch checklist (privacy, security, ToS, quality) | Launch | M5 | ⬜ | Claude | |
 | D6.1 | Post-launch review and V1.x roadmap | PgM / Product | M6 | ⬜ | Ayush + Claude | |
@@ -117,6 +117,7 @@
 | D-065 | 10-16 | **Job description and Company & team in the role view (Ayush ask):** the detail drawer gets three tabs: Summary (everything for deciding, as before), Job description (the posting formatted, years-of-experience and pay sentences highlighted, legal notices left out, ~12,000-character cap, link to the original) and Company & team (the company's own "About us" text from its postings for 66 of 108 companies with open roles, a labelled Claude summary for the other 41; open roles with a "See all" filter, where in Canada, work-permit evidence, careers site; the team's name and "About the team" section, found in 91 postings). The chosen tab sticks while moving between roles. Descriptions live in 32 extra database documents loaded on demand (~4 MB), and pushes send only changed ones | CUJ-3, UX §4.2 | Ayush |
 | D-066 | 10-16 | **Vision broadened (Ayush):** Lodestone is the job platform for people moving countries for work; helping country-switchers and immigrants is the core advantage, and citizens and permanent residents are welcome too (the work-permit layer hides for them). MVP stays Canada + tech product and adjacent roles, open to users from anywhere with any status; other destinations, job types and functions come later as packages. Broadens D-060. Promise line (working draft): "Find the jobs that fit you, in the country you want to move to, and the ones that will actually hire you." Onboarding redesign (UX v2: resume-optional, destination first, taste test, match levels) in progress | PRD §1 | Ayush |
 | D-067 | 10-16 | **UX v2 decisions (Ayush):** promise line as drafted; "Build it with me" profile builder in the MVP; taste test of 8 roles, skippable; short explainer for "not sure" about status (deeper route helper later, carefully worded); personalised ranking arrives at the next morning's run (no dependence on the viewer's Claude usage); Ayush keeps his current setup for now; a finishable "Today" stack replaces the backlog as the home view; learning uses explicit actions plus reading time, with an off switch; preference changes are suggested with one tap to accept. Spec: UX §8; PRD CUJ-0 and R26–R31. Answers Q-23 (adaptive recommendations) at the design level | UX §8, PRD R26–R31 | Ayush |
+| D-068 | 10-16 | **P1-S6 built:** Today list (10 roles, frozen for the day, new first, one "Something different" slot) is the home tab; learning from Interested / Later / Not for me / More-Less like this / reading time moves similar roles by at most 8 points, always explained; reading time has an off switch and delete; one-tap suggestions (pay, level, people management, company, city) with undo; "why it's ranked here" line; next steps after Interested. Learning settings tuned on Ayush's triage with each role judged without its own signal: ordering 60% → 70%. Profile saves no longer overwrite learned settings. Vancouver suggestion pre-dismissed (Ayush said it isn't green) | UX §8.9, PRD R28–R29, ENG_DESIGN database layout | Claude |
 
 ## 4. Open questions
 
@@ -206,6 +207,7 @@
 | 2026-10-14 | Network access set to Full. All refresh sources verified reachable (I-01 closed) | Claude |
 | 2026-10-14 | Command names set (D-039) | Claude |
 | 2026-10-14 | M3 approved (D-040). P1-S1 built and run live: 146 candidates from 71 feeds. Added D-041, R-15, Q-21 | Claude |
+| 2026-10-16 | D-068: P1-S6 built and published (app v22): Today list, learning, reading time, one-tap suggestions, why-ranked; UX §8.9, PRD R28–R29, Eng Design layout; app check covers the new screens | Claude |
 | 2026-10-16 | D-067: UX v2 end-to-end flow and resume-optional onboarding specified (UX §8, PRD CUJ-0, R26–R31); roadmap proposal P1-S6/S7 | Claude |
 | 2026-10-16 | D-066: vision broadened to people moving countries for work; PRD overview updated; UX v2 onboarding brainstorm in progress | Claude |
 | 2026-10-16 | Role view tabs: Summary, Job description, Company & team (D-065); UX spec §4.2, PRD CUJ-3, Eng Design database layout and runbook updated; app check covers all tabs | Claude |

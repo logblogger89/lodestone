@@ -180,3 +180,16 @@ Asked once, at the moment they're relevant, each dismissible: first "Pay too low
 - **Act:** Interested opens a gentle next step: Open posting · Request market check · Add a note.
 - **Track:** pipeline with nudges ("Applied 10 days ago: follow up?") and closed-posting alerts.
 - **Weekly:** a Monday "Your week": market changes, what Lodestone learned about you, companies to consider.
+
+### 8.9 Built in P1-S6 (10-16, D-068)
+What shipped, and where it differs from the design above:
+- **Today** is the home tab: up to 10 roles (Profile: 3–30), picked once a day from the best matches that fit the Profile, with new roles (first seen in the last 2 days) first. The list is frozen for the day (`settings/today`), so it doesn't shift while you work. Triaged roles drop off; a progress bar shows "N of 10 left today". When it's empty: "All caught up", **Show 10 more**, or **Browse all roles to triage**. Search, region, sort and role-type filters live on the other tabs, not on Today.
+- **Something different:** the last slot, once there are 3+ positive signals. It's the well-scored role least like the ones you liked, labelled with a one-line reason. (The design said about 1 in 10; with a 10-role list that's one slot.)
+- **Learning:** similar roles move up or down by at most 8 points. Similarity uses shared words in the title (counted twice), team and fit summary, plus same company and role type. Signal weights: Interested +1, Later −0.25, Not for me −1, More/Less like this ±1.5, reading 60s+ of a description +0.3. A role's own signal never counts for itself. Cards say "▲ Ranked up: similar to X at Y, which you marked Interested" for moves of 4+ points; the role view explains every move.
+- **Reading time** counts only while the Job description tab is on screen and the page is visible, capped at 10 minutes a role. Opens and "opened the original" are recorded but don't change ranking yet. Off switch and **Delete my reading data** are in the Profile.
+- **One-tap suggestions** (banner on the digest, one at a time, Accept / Not now): 3× "Pay too low" → raise pay targets by CA$10k (again at 6, 9…); 3× "Level too junior" → L(yellow)+1; 3× "People management" → hide manager roles; 2× "Company" for one company → hide it; 2 Interested roles in a city outside your locations → add it. Accepted changes list in the Profile under "Changes you accepted" with **Undo**; hidden companies have **Show again**. Pipeline nudges and the Monday "Your week" are not built yet.
+- **Why it's ranked here:** first line of the Summary tab: "Ranked #12 of 536 open roles. Strongest: role (95) and domain (92). Weakest: work permit (45)." plus the learning reason.
+- **After Interested:** a "Next steps" row: Request market check · Add a note (Open posting is already the main button).
+- **More / Less like this** sits under the triage buttons in the role view.
+- **Score quality** (Profile) adds "With what Lodestone learned" to the ordering check. On Ayush's 10-16 triage: 60% → 70%.
+
