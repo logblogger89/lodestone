@@ -16,6 +16,7 @@ will actually hire you", D-066), and a different way of using the app:
 | 3 | **Mei**, AI PM, permanent resident in Montreal | Not urgent, exploring the market | Doesn't need one | Ready | Desktop, weekly, browses | Companies, pay comparison, search, the work-permit layer for someone who doesn't need it |
 | 4 | **Tomás**, TPM, Mexico City | Busy, sporadic | Needs sponsorship | Half-done | Phone only, a few minutes on the bus | Mobile layout, Later, "Not for me" reasons, one-tap suggestions, catching up after days away |
 | 5 | **Aisha**, Principal PM, London → Toronto | Careful, privacy-minded | Needs sponsorship | Ready | Keyboard only, screen reader | Keyboard flow, focus, labels, learning controls, deleting her data |
+| 6 | **Sam**, product manager, curious but wary | Not ready to commit; skips every question | Unknown | None | Phone, a few minutes | Skipping: does everything still work with no answers, and can setup be done later? |
 | 7 | **Lena**, Group PM with a design background, Berlin → Vancouver | Discerning, judges a product by its polish | Needs sponsorship | Ready | Large desktop monitor, laptop, phone; light and dark mode | Visual consistency: type, spacing, colour, alignment, wording, every screen size and state |
 
 ---
@@ -112,6 +113,24 @@ Privacy-minded after a data breach at a previous employer.
 
 ---
 
+## 6. Sam Park: "Let me look around first"
+**Who.** 27, product manager at a Seoul gaming studio, idly curious about Canada. Hasn't decided to move, doesn't
+want to explain himself to an app, and taps "Skip" on anything that looks like a form.
+
+**Mindset.** Wary of questions and sign-up walls. Will give the app about a minute; if it shows him real jobs, he'll come
+back and maybe tell it more later.
+
+**Goals.** See what's out there with zero effort; set things up later only if it seems worth it.
+
+**Tasks (journey)**
+1. Skip setup on the first screen; does he still get a real list straight away, and does it say what it's based on?
+2. Come back later (reload): setup must not ask again.
+3. Find where to do setup later, run it, and skip every question including the taste test.
+4. Everything works on a phone, with no sideways scrolling.
+
+**Delight.** Real roles in seconds with no questions; the option to say more, later, without pressure.
+**Frustration.** Being forced through questions; nagging; an empty or broken list when he hasn't said anything.
+
 ## 7. Lena Vogel: "If the details are sloppy, why trust the data?"
 **Who.** 36, Group PM at a Berlin design-tools company; spent five years as a product designer before moving into
 product. Moving to Vancouver with her partner; needs sponsorship. Uses a 27-inch monitor at work, a laptop at home and
@@ -162,6 +181,21 @@ notes are what Claude saw while playing the persona: *works*, *annoyance*, *bug*
 
 ## Findings log
 Newest first. Each finding names the persona, what happened, and what changed.
+
+### Round 2 (2026-10-16): P1-S7 onboarding; 6 personas, 95 checks, all pass (app v26)
+| # | Persona | What happened | Fix |
+|---|---|---|---|
+| 1 | Daniel | The taste test showed only 3 roles: few roles of his types in Calgary | Taste test tops up from remote-in-Canada roles, then the rest of Canada, one role per company, mixed role types |
+| 2 | Daniel | His Today list had only 4 roles: picking Calgary left out remote-in-Canada roles he could take | Setup always includes "Remote in Canada" with any city, and says so |
+| 3 | Daniel | "LODESTONE" above the promise repeated the logo beside it | It says "Welcome" |
+| 4 | Daniel | "Delete my experience" was a bold accent link right under the three options | A quiet grey link |
+| 5 | Daniel | The Upload button was smaller than Paste text and Start | Same size |
+| 6 | Sam | (checks) Skip on the first screen, reload, skip every question, phone layout | All worked first time |
+| 7 | Priya, Aisha | (checks) Existing users never see setup | Worked: setup only shows with no profile and no history |
+
+**Left for later.** The city question (shortlisting a role outside your cities) wasn't exercised by Daniel, because all
+his roles were in Calgary or remote; give a persona a mixed list next round. One-tap "count internal transfers?" isn't
+needed: transfers count automatically once the current employer is in the Profile.
 
 ### Round 1 (2026-10-16): 5 personas, 57 checks; 19 failed at first, all 57 pass after fixes (app v25)
 | # | Persona | What happened | Fix |

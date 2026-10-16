@@ -181,6 +181,25 @@ Asked once, at the moment they're relevant, each dismissible: first "Pay too low
 - **Track:** pipeline with nudges ("Applied 10 days ago: follow up?") and closed-posting alerts.
 - **Weekly (not built yet, §8.9):** a Monday "Your week": market changes, what Lodestone learned about you, companies to consider.
 
+### 8.11 Built in P1-S7 (10-16, D-073)
+- **Setup (§8.3)** replaces the D-072 welcome card for anyone with no profile and no history: promise and privacy line
+  → where (Canada; "somewhere else" is recorded as demand; cities, remote in Canada always included) → can you work there
+  (citizen/PR, open permit, needs a permit, not sure with a short explainer) → what kind of role (own words, role
+  cards, or paste a job) → taste test (8 real roles, mixed types, one per company) → Today. Step dots, Back, "Skip this
+  question" and "Skip setup" on every step. Existing users never see it; "Run the quick setup again" is on the Profile.
+- **First list banner** says what the list is based on and that personal fit scores arrive at the next update; it
+  goes away once the next scoring run has happened, after two days, or with "Got it".
+- **Until scored**, roles rank provisionally by role type and freshness, nudged by the taste test through the learning.
+- **Your experience (§8.4)**: three cards (upload, paste, build it with me). Build it with me is five questions saved
+  instantly (title, years, domains, skills fill in straight away; the next run writes the headline and summary). Then
+  "Here's what we understood" above the editable fields. "Delete my experience" clears the resume, answers and what they
+  filled. After 3 answered roles, a one-time "Want sharper matches?" offer appears on Today.
+- **Match quality (§8.5)**: a four-step meter (Taste, Experience, Daily use, Applying) at the top of the Profile with
+  one "Next:" action. Level 0 to 4 counts the steps done.
+- **One-tap questions (§8.7)**: first "Pay too low" asks the lowest base pay you'd consider (sets where pay turns red);
+  shortlisting a role outside your cities asks to add that city. Each is asked once and can be skipped. Hiding manager
+  roles and raising pay after repeated answers stay as suggestions (§8.9).
+
 ### 8.10 Changes from persona testing (10-16, D-072)
 Five test personas ([PERSONAS.md](./PERSONAS.md)) found 15 issues; all are fixed in app v25. The ones that change this spec:
 - Today always offers **Show 10 more** and **See all N roles to triage** under the list; you never have to finish first.
