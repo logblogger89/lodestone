@@ -16,6 +16,7 @@ will actually hire you", D-066), and a different way of using the app:
 | 3 | **Mei**, AI PM, permanent resident in Montreal | Not urgent, exploring the market | Doesn't need one | Ready | Desktop, weekly, browses | Companies, pay comparison, search, the work-permit layer for someone who doesn't need it |
 | 4 | **Tomás**, TPM, Mexico City | Busy, sporadic | Needs sponsorship | Half-done | Phone only, a few minutes on the bus | Mobile layout, Later, "Not for me" reasons, one-tap suggestions, catching up after days away |
 | 5 | **Aisha**, Principal PM, London → Toronto | Careful, privacy-minded | Needs sponsorship | Ready | Keyboard only, screen reader | Keyboard flow, focus, labels, learning controls, deleting her data |
+| 7 | **Lena**, Group PM with a design background, Berlin → Vancouver | Discerning, judges a product by its polish | Needs sponsorship | Ready | Large desktop monitor, laptop, phone; light and dark mode | Visual consistency: type, spacing, colour, alignment, wording, every screen size and state |
 
 ---
 
@@ -110,6 +111,48 @@ Privacy-minded after a data breach at a previous employer.
 **Frustration.** Focus lost after an action, unlabelled icons, controls that only work with a mouse.
 
 ---
+
+## 7. Lena Vogel: "If the details are sloppy, why trust the data?"
+**Who.** 36, Group PM at a Berlin design-tools company; spent five years as a product designer before moving into
+product. Moving to Vancouver with her partner; needs sponsorship. Uses a 27-inch monitor at work, a laptop at home and
+her phone in between, and switches between light and dark mode with the time of day.
+
+**Mindset.** Notices everything: a button 2px off, two greys that almost match, "CA$200k" next to "CA$148K", a heading
+in Title Case beside one in sentence case. To her, polish is a proxy for care: if the interface is sloppy, she assumes the
+scores are too. She likes calm, minimal, professional screens with few colours, one type scale and generous space.
+Decoration that carries no meaning (extra borders, badges, emoji, three kinds of tag on one card) annoys her.
+
+**Goals.** A tool she'd be proud to show a design-minded hiring manager; screens she can scan in seconds.
+
+**Tasks (journey)**
+1. **Card audit.** Look at ten cards on Today: is there one clear hierarchy (title, company, then everything else)? How
+   many tag styles, colours and font sizes does one card use? Does anything wrap awkwardly, truncate mid-word, or
+   misalign between cards?
+2. **Every screen, every size.** Visit Today, All to triage, the role view (all three tabs), Pipeline, Add job, Reports,
+   Companies and Profile at 1440, 1024, 768, 390 and 320px wide, in light and dark mode. Look for horizontal scroll,
+   cramped or uneven spacing, text running into edges, and colours that lose contrast in dark mode.
+3. **States.** Loading, empty (no jobs, nothing matches, all caught up, empty pipeline, no reports), error and
+   offline states: are they designed, or just leftover text?
+4. **Wording and numbers.** One way to write money (CA$148K, not also CA$200k or $148,000), dates ("7d ago" vs "7 days
+   ago"), sentence case for every heading and button, consistent punctuation (one separator, no doubled spaces), no
+   jargon or internal names on screen.
+5. **Interaction polish.** Hover, pressed and focus states on every button; no layout jump when a toast, banner or
+   reason row appears; smooth (or no) motion; nothing that looks clickable but isn't, and the reverse.
+
+**Delight.** Calm, consistent screens where the eye goes straight to what matters; dark mode as good as light.
+**Frustration.** Visual noise, mixed styles, inconsistent numbers and capitals, anything that looks unfinished.
+
+**Planned automated checks** (to build in `tests/personas/7_lena.cjs`; screenshots reviewed by eye as well):
+- Distinct font sizes on screen ≤ 6, font weights ≤ 3, font families ≤ 3 (body, display, mono).
+- Distinct text and background colours per screen within the design tokens (no stray hard-coded colours).
+- Spacing values (margins, padding, gaps) come from one scale (4/6/8/10/12/14/16/20/24…); flag outliers.
+- No horizontal scroll and no element wider than the viewport at 320, 390, 768, 1024 and 1440px, in both themes.
+- Text contrast ≥ 4.5:1 (3:1 for large text) in light and dark mode.
+- Tags per card ≤ 8, tag styles per card ≤ 4; card heights within a sane range; titles not truncated mid-word.
+- Money, dates and counts match one format each (regex audit of all visible text); headings and buttons in sentence case;
+  no doubled spaces, stray separators, or text like "undefined", "null", "NaN".
+- No layout shift (cumulative movement of the list) when a toast, banner, reason row or "done" state appears.
+- Every interactive element has visible hover and focus styles; nothing with a pointer cursor lacks an action.
 
 ## Running the journeys
 `node scripts/persona_test.cjs [persona …]` (needs `data/state/app_export/`, made by `python3 -m lodestone export`).
