@@ -140,6 +140,8 @@ details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
 .xpways{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:8px 0}
 .xpway{display:flex;flex-direction:column;gap:6px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--surface)}
 .xpway span{font-size:13px;color:var(--muted)}
+.xpway .btn{font-size:14px;min-height:36px;padding:6px 14px;display:inline-flex;align-items:center}
+.xpdel{border:0;background:none;padding:0;font:inherit;font-size:13px;color:var(--muted);text-decoration:underline;cursor:pointer}
 .xpbuild{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:8px 0;background:var(--bg)}
 h4.understood{margin:16px 0 2px}
 .sbanner.nudge{border-left-color:var(--accent)}
@@ -1022,9 +1024,9 @@ function viewOnboard(){
   else if(step===1) body=`<h2>Where do you want to work?</h2><p class="obwhy">So your list shows roles you could actually take.</p>
     <div class="field"><span class="flabel">Country</span><div class="chips"><button class="chip toggle" aria-pressed="${!a.other}" data-obf="country" data-v="ca">Canada</button><button class="chip toggle" aria-pressed="${!!a.other}" data-obf="country" data-v="other">Somewhere else</button></div>
     ${a.other?`<div class="field"><label for="ob-country">Which country?</label><input id="ob-country" value="${esc(a.other_country)}" placeholder="e.g. Germany"><span class="note">Lodestone covers Canada today. We'll note where you'd like next; meanwhile you can explore Canada.</span></div>`:""}</div>
-    <div class="field"><span class="flabel">Cities</span><div class="chips">${REGIONS.filter(r=>r!=="Other Canada").map(r=>`<button class="chip toggle" aria-pressed="${a.cities.includes(r)}" data-obf="city" data-v="${esc(r)}">${esc(REGION_SHORT[r]||r)}</button>`).join("")}
+    <div class="field"><span class="flabel">Cities</span><div class="chips">${REGIONS.filter(r=>r!=="Other Canada"&&r!=="Remote-Canada").map(r=>`<button class="chip toggle" aria-pressed="${a.cities.includes(r)}" data-obf="city" data-v="${esc(r)}">${esc(REGION_SHORT[r]||r)}</button>`).join("")}
       <button class="chip toggle" aria-pressed="${a.anywhere}" data-obf="anywhere">Anywhere in Canada</button></div>
-      <span class="note">Pick as many as you like. None picked means anywhere.</span></div>${nav("Continue")}`;
+      <span class="note">Pick as many as you like; remote roles in Canada are always included. None picked means anywhere.</span></div>${nav("Continue")}`;
   else if(step===2) body=`<h2>Can you already work in Canada?</h2><p class="obwhy">We use this only to show which employers hire people from abroad.</p>
     <div class="obopts" role="radiogroup" aria-label="Work permit">${OB_STATUS.map(([k,l,d])=>`<button class="obopt" role="radio" aria-checked="${a.status===k}" data-obf="status" data-v="${k}"><b>${esc(l)}</b><span>${esc(d)}</span></button>`).join("")}</div>
     ${a.status==="not_sure"?`<div class="obexplain"><p>That's common. Most people moving to Canada for a job need a work permit linked to an employer. Some employers first get government approval to hire from abroad (an LMIA); some roles and countries are exempt.</p><p>Lodestone shows which employers have hired from abroad before. This is general information, not immigration advice.</p></div>`:""}
@@ -1059,7 +1061,7 @@ function obCapture(){   // keep typed answers when moving between steps
 async function obFinish(skipped){
   obCapture();
   const o=obState(), a=o.a, now=new Date().toISOString(), tasted=Object.entries(a.taste).filter(([,v])=>v);
-  const regions=a.cities.length?a.cities:(S.prefs.regions||DEFAULT_PREFS.regions);
+  const regions=a.cities.length?[...new Set([...a.cities,"Remote-Canada"])]:(S.prefs.regions||DEFAULT_PREFS.regions);   // remote roles in Canada fit any city
   const fams=OB_FAMILIES.filter(f=>a.families.includes(f[0]));
   const tiers=fams.length?[...new Set(fams.map(f=>f[3]))]:TIERS;
   const prof={...(S.profile||{version:0})};
@@ -1380,7 +1382,7 @@ function resumeBlock(p){
       <div class="field"><label for="b-tools">5. Tools and skills (comma-separated)</label><input id="b-tools" value="${esc(ans.tools||"")}" placeholder="e.g. SQL, Figma, A/B testing"></div>
       <div class="row"><button class="btn primary" data-act="savebuild">Save my answers</button></div>
     </div>
-    ${hasExperience(p)?`<div class="row"><button class="link plink" data-act="delxp">Delete my experience</button></div>`:""}</div>`;
+    ${hasExperience(p)?`<div class="row"><button class="xpdel" data-act="delxp">Delete my experience</button></div>`:""}</div>`;
 }
 function builderAnswers(){
   const g=id=>(document.getElementById(id)||{}).value||"";

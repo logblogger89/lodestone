@@ -18,6 +18,7 @@ module.exports = {
     const focusName = () => h.evalS(() => { const a = document.activeElement; return a ? (a.getAttribute('aria-label') || a.textContent || a.id || a.tagName).trim().slice(0, 40) : '' });
 
     h.task('Triage by keyboard');
+    h.check(!(await h.has('Get started')) && !(await h.page.locator('.ob').count()), 'An existing user never sees the setup flow');
     await k('j'); await k('j');
     const sel = await h.page.locator('#view .card.sel').count();
     h.check(sel === 1, 'J moves the highlighted role');

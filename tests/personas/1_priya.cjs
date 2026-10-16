@@ -13,6 +13,7 @@ module.exports = {
   }),
   async run(h) {
     h.task('Morning: open the app and see today\'s list');
+    h.check(!(await h.has('Get started')) && !(await h.page.locator('.ob').count()), 'An existing user never sees the setup flow');
     const v = await h.text();
     h.check(/left today/.test(v), 'Today list is the first thing she sees');
     const cards = await h.page.locator('#view .card').count();

@@ -23,11 +23,14 @@ function loadExport() {
 // The fake database: the same calls the app makes on window.claude.use("db"), backed by a plain object, with live listeners.
 const MOCK = `(() => {
   const store = window.__seed || {}; const subs = [];
+  const SHARED = /^(jobs|desc|meta|reports)[/]/;   // the user's own docs survive a reload, like the real database
+  try { const kept = JSON.parse(sessionStorage.getItem('__userdocs') || 'null'); if (kept) { Object.keys(store).filter(k => !SHARED.test(k)).forEach(k => delete store[k]); Object.assign(store, kept) } } catch (e) {}
+  const persist = () => { try { sessionStorage.setItem('__userdocs', JSON.stringify(Object.fromEntries(Object.entries(store).filter(([k]) => !SHARED.test(k))))) } catch (e) {} };
   const clone = x => x == null ? x : JSON.parse(JSON.stringify(x));
   const docsIn = c => Object.keys(store).filter(k => k.startsWith(c + '/') && !k.slice(c.length + 1).includes('/'))
     .map(k => ({ id: k.slice(c.length + 1), exists: true, data: () => clone(store[k]) }));
   const snapDoc = p => ({ id: p.split('/').pop(), exists: p in store, data: () => clone(store[p]) });
-  const notify = () => setTimeout(() => subs.forEach(s => s()), 0);
+  const notify = () => { persist(); setTimeout(() => subs.forEach(s => s()), 0) };
   const writes = window.__writes = [];
   const db = {
     collection: c => ({
@@ -59,6 +62,7 @@ function helpers(page, persona, out, log) {
     note(kind, text) { task.notes.push({ kind, text }) },   // kind: works | annoyance | bug | idea
     async click(sel) { await page.locator(sel + ' >> visible=true').first().click({ timeout: 4000 }); await page.waitForTimeout(150) },   // the phone layout hides the side menu
     async tap(text, within = 'body') { await page.locator(within).getByRole('button', { name: text, exact: false }).first().click({ timeout: 4000 }); await page.waitForTimeout(150) },
+    async reload() { await page.reload(); await page.waitForFunction(() => typeof S !== "undefined" && S.ready && S.triLoaded && S.todayLoaded, null, { timeout: 8000 }); await page.waitForTimeout(250) },
     async has(text) { return (await page.locator('body').innerText()).includes(text) },
     async text(sel = '#view') { return page.locator(sel).innerText() },
     evalS: fn => page.evaluate(fn),
