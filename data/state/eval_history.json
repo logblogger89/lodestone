@@ -251,6 +251,50 @@
     "excluded": 1.0
    },
    "errors": []
+  },
+  {
+   "at": "2026-10-16T11:11:28+00:00",
+   "kind": "ranking",
+   "rubric": "1.0",
+   "labels": {
+    "interested": 13,
+    "later": 12,
+    "not": 1
+   },
+   "pairwise": 0.598,
+   "interested_in_top25": 10,
+   "precision_at_10": 0.6,
+   "labelled_in_top10": 10,
+   "mean_fit": {
+    "interested": 83.4,
+    "later": 82.7,
+    "not": 80.0
+   },
+   "roles_ranked": 536,
+   "misses": [
+    {
+     "id": "7a51cdb5bb24",
+     "title": "Staff Product Manager",
+     "company": "Klue",
+     "rank": 26,
+     "fit": 80
+    },
+    {
+     "id": "467a8db8ddc4",
+     "title": "Staff Product Manager",
+     "company": "Loopio",
+     "rank": 27,
+     "fit": 80
+    },
+    {
+     "id": "5c4ed8eb82a4",
+     "title": "Product Manager, Ecosystem Risk",
+     "company": "Stripe",
+     "rank": 34,
+     "fit": 79
+    }
+   ],
+   "enough_labels": true
   }
  ]
 }

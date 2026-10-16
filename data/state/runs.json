@@ -145,7 +145,7 @@
    "postings": 97
   },
   "scoring": {
-   "at": "2026-10-16T11:10:16+00:00",
+   "at": "2026-10-16T11:11:21+00:00",
    "rubric": "1.0",
    "scored": 649
   },
@@ -161,11 +161,6 @@
   }
  },
  "history": [
-  {
-   "component": "jobs:greenhouse",
-   "at": "2026-10-16T10:59:25+00:00",
-   "postings": 5097
-  },
   {
    "component": "jobs:workday",
    "at": "2026-10-16T10:59:25+00:00",
@@ -441,6 +436,12 @@
   {
    "component": "scoring",
    "at": "2026-10-16T11:10:16+00:00",
+   "rubric": "1.0",
+   "scored": 649
+  },
+  {
+   "component": "scoring",
+   "at": "2026-10-16T11:11:21+00:00",
    "rubric": "1.0",
    "scored": 649
   }
