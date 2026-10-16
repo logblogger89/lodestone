@@ -130,6 +130,22 @@
    "roles_ranked": 536,
    "misses": [],
    "enough_labels": false
+  },
+  {
+   "at": "2026-10-16T02:07:37+00:00",
+   "kind": "reading",
+   "rubric": "1.0",
+   "postings": 22,
+   "accuracy": {
+    "pay": 1.0,
+    "pay_kind": 1.0,
+    "region": 1.0,
+    "people_mgmt": 1.0,
+    "level": 1.0,
+    "years": 1.0,
+    "excluded": 1.0
+   },
+   "errors": []
   }
  ]
 }

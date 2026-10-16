@@ -107,6 +107,7 @@ details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
 .ck{display:inline-flex;align-items:center;gap:5px;font-size:12px;padding:2px 9px 2px 7px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
 .ck b{font-size:11px}
 .ck-good{background:var(--good-soft);color:var(--good)}
+.ck.info{background:var(--surface);color:var(--fg);border-color:var(--line)}
 .ck.tier{background:var(--surface-2);color:var(--fg);border-color:var(--line);font-weight:600}
 .ck.tier.t-core{background:var(--accent-soft);color:var(--accent);border-color:transparent}
 .flabel{font-size:12px;color:var(--muted);align-self:center}
@@ -583,7 +584,8 @@ function prefChecks(j){
   if(m&&m.max&&m.currency!=="USD"){const top=m.interval==="hour"?m.max*2000:m.max, base=["base","unspecified",undefined].includes(m.kind);
     out.push({k:"Pay",l:top>=c.pay_green?"good":top>=c.pay_yellow?"warn":"bad",t:`${rangeText(m)}${base?"":" incl. bonus"}`,
       why:`Posted top of range vs your targets (green from CA$${c.pay_green/1000}K, yellow from CA$${c.pay_yellow/1000}K)`});}
-  else if(pi.est){out.push({k:"Pay",l:pi.est.max>=c.pay_green&&pi.est.confidence==="high"?"good":pi.est.max>=c.pay_yellow?"warn":"bad",   // an estimate is green only at high confidencet:`${rangeText(pi.est)} est.`,
+  else if(pi.est){   // an estimate is green only at high confidence
+    out.push({k:"Pay",l:pi.est.max>=c.pay_green&&pi.est.confidence==="high"?"good":pi.est.max>=c.pay_yellow?"warn":"bad",t:`${rangeText(pi.est)} est.`,
       why:`No Canadian range posted; Lodestone's estimate (${pi.est.confidence} confidence)`});}
   else out.push({k:"Pay",l:"warn",t:pi.ranges.length?"US pay only":"Pay not posted",why:pi.ranges.length?"The posting only lists pay for other countries":"No Canadian pay range and not enough data to estimate"});
   // level
@@ -599,9 +601,13 @@ function prefChecks(j){
   if(managesPeople(j)) out.push({k:"Team",l:S.prefs.exclude_people_mgmt?"bad":"warn",t:"Manages people",why:"You prefer individual-contributor roles"});
   return out;
 }
+/* Years of experience the posting asks for (D-064): information, not a preference check, so it stays neutral. */
+const yrsText=y=>y?(y.max&&y.max!==y.min?`${y.min}–${y.max}`:`${y.min}+`)+" yrs exp":"";
+function yearsTag(j){return j.years?`<span class="ck info" title="${esc(j.years.quote||"")}">${esc(yrsText(j.years))}</span>`:""}
 function tierTag(j){return j.tier?`<span class="ck tier t-${esc(j.tier.toLowerCase())}" title="${esc(TIER_WHAT[j.tier]||"")}">${esc(TIER_NAME[j.tier]||j.tier)}</span>`:""}
 function checkStrip(j){
-  return `<div class="checks">${tierTag(j)}${prefChecks(j).map(x=>`<span class="ck ck-${x.l}" title="${esc(x.k)}: ${esc(x.why)}"><b aria-hidden="true">${CHECK_ICON[x.l]}</b><span class="sr">${x.l==="good"?"Matches":x.l==="bad"?"Doesn't match":"Partly matches"}: ${esc(x.k)}, </span>${esc(x.t)}</span>`).join("")}</div>`;
+  const xs=prefChecks(j), at=xs.findIndex(x=>x.k==="Level")+1;
+  return `<div class="checks">${tierTag(j)}${xs.map(x=>`<span class="ck ck-${x.l}" title="${esc(x.k)}: ${esc(x.why)}"><b aria-hidden="true">${CHECK_ICON[x.l]}</b><span class="sr">${x.l==="good"?"Matches":x.l==="bad"?"Doesn't match":"Partly matches"}: ${esc(x.k)}, </span>${esc(x.t)}</span>`).map((h,i)=>i===at-1?h+yearsTag(j):h).join("")}</div>`;
 }
 function checksPanel(j){
   const xs=prefChecks(j), n=xs.filter(x=>x.l==="good").length;
@@ -709,6 +715,7 @@ function viewDigest(){
     <p><span class="ck ck-good"><b>✓</b>green</span> matches what you want · <span class="ck ck-warn"><b>~</b>yellow</span> partly, or unknown · <span class="ck ck-bad"><b>✕</b>red</span> goes against it. Set the thresholds in your Profile.</p>
     <ul><li><b>Work permit:</b> "Hires from abroad" = approved by the government to hire foreign workers recently; "Sponsors sometimes" = a few approvals, mostly non-tech; "Sponsorship unknown" = no public record either way; "No sponsorship" = the posting says you must already be allowed to work in Canada.</li>
     <li><b>Role type:</b> Core PM = product manager roles; PM-adjacent = TPM, program, strategy & ops, chief of staff, trust & safety; Stretch = product marketing, solutions, analytics.</li>
+    <li><b>Grey tags</b> are facts, not colour checks: the role type, and the years of experience the posting asks for (when it says).</li>
     <li><b>Fit</b> (the ring) = how well the role matches your profile, out of 100.</li></ul></details>
   ${body}
   <p class="note">"Best match" ranks by fit score (your weights in Profile), then role type and region for anything not scored yet. Keyboard: <kbd>J</kbd>/<kbd>K</kbd> move, <kbd>I</kbd>/<kbd>L</kbd>/<kbd>N</kbd> triage, <kbd>Enter</kbd> opens.</p>`;
@@ -753,6 +760,7 @@ function viewDetail(j){
     ${j.department?`<dt>Team</dt><dd>${esc(j.department)}</dd>`:""}
     <dt>Posted</dt><dd>${esc(ago(postedMs(j))||"Unknown")}</dd>
     <dt>First seen</dt><dd>${esc(ago(parseWhen(j.first_seen)))}</dd>
+    <dt>Experience asked</dt><dd>${j.years?`${esc(yrsText(j.years))} <span class="note">“${esc(j.years.quote)}”</span>`:"Not stated in the posting"}</dd>
     <dt>Manages people</dt><dd>${managesPeople(j)?"Yes, the posting says so":"No (individual contributor)"}</dd>
   </dl></section>
   ${payPanel(j)}
@@ -888,7 +896,7 @@ function qualityPanel(){
   const r=rankingCheck(), rd=S.evalm&&S.evalm.reading, enough=r.pos>=10&&r.neg>=10;
   const pct=x=>x==null?"–":Math.round(x*100)+"%";
   const acc=rd&&rd.accuracy?Object.entries(rd.accuracy).filter(([,v])=>v!=null):[];
-  const NAMES={pay:"pay amounts",pay_kind:"pay type",region:"location",people_mgmt:"people management",level:"level",excluded:"filtering out non-roles"};
+  const NAMES={pay:"pay amounts",pay_kind:"pay type",region:"location",people_mgmt:"people management",level:"level",years:"years of experience",excluded:"filtering out non-roles"};
   return `<section class="panel"><h4>Score quality</h4>
     <dl class="facts">
       <dt>Your picks</dt><dd>${r.pos?`<b>${r.top25} of ${r.pos}</b> roles you marked Interested are in Lodestone's top 25 (of ${r.ranked}).`:"Mark roles Interested to see how they rank."}</dd>

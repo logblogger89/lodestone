@@ -106,3 +106,18 @@ class TestReadingCheckFixes(unittest.TestCase):
         self.assertEqual(pay.pay_kind("Salary Range: $92,300 - $138,500 plus commissions"), "base")
         self.assertEqual(pay.pay_kind("Canada: $162000 - $166000 (CAD) + 42.86% bonus target + equity"), "base")
         self.assertEqual(pay.pay_kind("On-target earnings: $150,000 - $200,000"), "ote")
+
+
+from lodestone.experience import years_required  # noqa: E402
+
+
+class TestYearsRequired(unittest.TestCase):
+    def test_product_requirement_wins_and_preferred_loses(self):
+        y = years_required("- 3+ years leading teams.\n- 8+ years of product management experience.\n- 10 years in fintech preferred.")
+        self.assertEqual((y["min"], y["max"]), (8, None))
+
+    def test_ranges_words_and_noise(self):
+        self.assertEqual(years_required("3-5 years' experience in a Product Management capacity")["max"], 5)
+        self.assertEqual(years_required("A minimum of eight years of relevant experience")["min"], 8)
+        self.assertIsNone(years_required("We've been on this mission for over 10 years, and growing."))
+        self.assertEqual(years_required("8+ years of software engineering, including 3+ years building production ML systems")["min"], 8)

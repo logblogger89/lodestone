@@ -13,6 +13,7 @@ import json
 import shutil
 
 from . import pipeline, sources, store
+from .experience import years_required
 
 OUT = store.STATE / "app_export"
 BUCKETS = 8                     # ~70 jobs per document, well under the 256 KiB document limit
@@ -33,6 +34,7 @@ def _job(key: str, j: dict) -> dict:
         "first_seen": j.get("first_seen"), "last_seen": j.get("last_seen"), "live": bool(j.get("live", True)),
         "closed_at": j.get("closed_at"),
         "captured": bool(j.get("captured")),
+        "years": years_required(j.get("description") or ""),
         "sources": [{"label": s.get("label") or labels.get(s["source"], s["source"]), "url": s["url"], "live": s.get("live", True)}
                     for s in j["sightings"]],
     }

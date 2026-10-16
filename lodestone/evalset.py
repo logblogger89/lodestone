@@ -158,7 +158,8 @@ def reading() -> dict:
     from .appexport import job_id
     jobs = {job_id(k): j for k, j in store.load("jobs", {"jobs": {}})["jobs"].items()}
     scores = store.load("scores", {})
-    fields = {"pay": [0, 0], "pay_kind": [0, 0], "region": [0, 0], "people_mgmt": [0, 0], "level": [0, 0], "excluded": [0, 0]}
+    from .experience import years_required
+    fields = {"pay": [0, 0], "pay_kind": [0, 0], "region": [0, 0], "people_mgmt": [0, 0], "level": [0, 0], "years": [0, 0], "excluded": [0, 0]}
     errors = []
     for g in gold:
         j = jobs.get(g["id"])
@@ -169,6 +170,7 @@ def reading() -> dict:
         got = {"pay": [m["min"], m["max"], m.get("currency")] if m else None, "pay_kind": (m or {}).get("kind"),
                "region": j.get("region"), "people_mgmt": (scores.get(g["id"]) or {}).get("people_mgmt"),
                "level": _lv((scores.get(g["id"]) or {}).get("level_guess")),
+               "years": (years_required(j.get("description") or "") or {}).get("min"),
                "excluded": bool(j.get("role_excluded"))}
         for f in fields:
             if f not in g:
