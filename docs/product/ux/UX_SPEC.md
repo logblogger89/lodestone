@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Owner** | Claude (UX, under PM), for Ayush's review |
-| **Status** | v0, in review (gate M2) |
+| **Status** | v0 approved at M2 (D-033); §8 v2 added 10-16 |
 | **Implements** | [PRD v0](../PRD.md) P0 requirements R1–R15, CUJ-1 to CUJ-7 |
 | **Prototype** | [prototype.html](prototype.html) (open locally, or via the published link in the tracker) |
 
@@ -16,7 +16,7 @@
 3. **Explain every number.** The fit score expands into sub-scores, each with a one-line reason.
 4. **Two taps to triage.** Interested, Later and Not are always visible. Reasons are optional chips.
 5. **Every claim links to its source.** Source icons, "found on" entries and pathway-signal sources are deep links (the exact posting, dataset or official page). Jargon (role tier, LMIA, CEC, Stated/Inferred/Unknown) is explained in place via a "What do these labels mean?" panel. (Ayush's review, 2026-10-14)
-6. **Built for one, ready for many.** Every preference lives in Settings as data, not code (D-005).
+6. **Built for one, ready for many.** Every preference lives in the Profile as data, not code (D-005).
 
 ## 2. Information architecture
 
@@ -27,7 +27,7 @@ Lodestone
 ├── Pipeline                 CUJ-6: Discovered → Shortlisted → Applied → Screen → Interviewing → Offer → Closed
 ├── Add job (global)         CUJ-5: paste URL(s) or JD text from anywhere (Cmd/Ctrl+V or the + button)
 ├── Companies                CUJ-7: watchlist, discovery candidates, source health
-└── Settings                 CUJ-1
+└── Profile                  CUJ-1 (was Settings, D-061)
     ├── Profile              CV-derived profile, editable
     ├── Preferences          locations, work mode, role families, pay filter, toggles, digest size
     └── Advanced             score weights (sum to 100%)
@@ -93,7 +93,7 @@ Why tabs: the Summary is what you decide on and was already long; descriptions r
 - **Candidates:** discovered companies waiting for review (ATS not found, or Canada presence unclear)
 - **Source health:** each source with last success, item count and errors
 
-### 4.6 Settings
+### 4.6 Profile (was Settings, D-061)
 - **Profile:** fields extracted from the CV (current employer, roles, scope signals, domains, skills). All editable
 - **Preferences:** locations (GTA + Waterloo, expand to Canada) · work mode · role families by tier · pay range (CAD) · **include roles without posted pay** · **exclude people-management roles** · digest size (1–100, default 20)
 - **Advanced:** six weight sliders that always sum to 100%, plus "Reset to defaults"
@@ -113,7 +113,7 @@ Why tabs: the Summary is what you decide on and was already long; descriptions r
 ## 7. UX review questions (resolved 2026-10-14)
 
 1. Card density on iPad: **fine as is.** The card shows the right things at a glance (D-030).
-2. "Later" roles **come back in the digest after 7 days** (adjustable in Settings) (D-031).
+2. "Later" roles **come back in the digest after 7 days** (adjustable in the Profile) (D-031).
 3. Marking a role **Interested adds it to Shortlisted** in the pipeline automatically (D-032).
 
 ## 8. UX v2: end-to-end flow and onboarding (10-16, D-066, D-067)
@@ -144,13 +144,13 @@ Lodestone is for **people moving countries for work** (D-066). Many arrive witho
 3. **Can you already work there?** "Yes, I'm a citizen or permanent resident" · "I have an open work permit" · "I'll need sponsorship" · "Not sure" (treated as needing sponsorship, with a two-line explainer). "We use this only to show which employers hire people from abroad."
 4. **What kind of role?** Three ways, none needs a resume: type it in your own words ("senior PM, fintech, ~8 years"); paste a job you'd love; or "Not sure, show me examples" (tap role-family cards). Fields not covered yet get an honest "We don't cover this yet; want us to tell you when we do?"
 5. **Quick taste test (8 real roles, skippable).** Interested / not for each. Feels like browsing, and every tap trains the ranking.
-6. **Your list.** Banner: "Based on 3 answers and 8 taps. Your personalised ranking arrives tomorrow morning and gets sharper as you use Lodestone." (Scoring runs in the daily run, not on the viewer's Claude usage: Ayush, 10-16.) Until then the list is filtered by destination, status and role and sorted by the taste test and recency.
+6. **Your list.** Banner: "Based on 3 answers and 8 taps. Your personalised ranking arrives at the next run (within about 6 hours) and gets sharper as you use Lodestone." (Scoring runs in the scheduled runs, not on the viewer's Claude usage: Ayush, 10-16.) Until then the list is filtered by destination, status and role and sorted by the taste test and recency.
 
 ### 8.4 The profile, later, as an upgrade
 Offered after the first session, or when a user opens a role's fit details ("Fit: not personal yet"). "Want sharper matches? Add your experience to see how it fits each role." Reassurance in plain words: a rough draft is fine; only you can see it; never sent to employers; delete it any time. Three ways:
 - **Upload** a resume (PDF or text).
 - **Paste** any text (even a LinkedIn "About" section and job titles).
-- **Build it with me** (MVP): about five short questions (current role and level, years, biggest win, domains, tools). Answers are saved instantly; the profile is built at the next daily run. The resulting summary can also be copied as a starting point for a resume.
+- **Build it with me** (MVP): about five short questions (current role and level, years, biggest win, domains, tools). Answers are saved instantly; the profile is built at the next run (within about 6 hours). The resulting summary can also be copied as a starting point for a resume.
 After it's read: **"Here's what we understood"**, every line editable, so a weak resume never has the last word.
 
 ### 8.5 Match quality grows with signals
@@ -183,7 +183,7 @@ Asked once, at the moment they're relevant, each dismissible: first "Pay too low
 
 ### 8.9 Built in P1-S6 (10-16, D-068)
 What shipped, and where it differs from the design above:
-- **Today** is the home tab: up to 10 roles (Profile: 3–30), picked once a day from the best matches that fit the Profile, with new roles (first seen in the last 2 days) first. The list is frozen for the day (`settings/today`), so it doesn't shift while you work. Triaged roles drop off; a progress bar shows "N of 10 left today". When it's empty: "All caught up", **Show 10 more**, or **Browse all roles to triage**. Search, region, sort and role-type filters live on the other tabs, not on Today.
+- **Today** is the default view of the Digest tab: up to 10 roles (Profile: 3–30), picked once a day from the best matches that fit the Profile, with new roles (first seen in the last 2 days) first. The list is frozen for the day (`settings/today`), so it doesn't shift while you work. Triaged roles drop off; a progress bar shows "N of 10 left today". When it's empty: "All caught up", **Show 10 more**, or **Browse all roles to triage**. Search, region, sort and role-type filters live on the other tabs, not on Today.
 - **Something different:** the last slot, once there are 3+ positive signals. It's the well-scored role least like the ones you liked, labelled with a one-line reason. (The design said about 1 in 10; with a 10-role list that's one slot.)
 - **Learning:** similar roles move up or down by at most 8 points. Similarity uses shared words in the title (counted twice), team and fit summary, plus same company and role type. Signal weights: Interested +1, Later −0.25, Not for me −1, More/Less like this ±1.5, reading 60s+ of a description +0.3. A role's own signal never counts for itself. Cards say "▲ Ranked up: similar to X at Y, which you marked Interested" for moves of 4+ points; the role view explains every move.
 - **Reading time** counts only while the Job description tab is on screen and the page is visible, capped at 10 minutes a role. Opens and "opened the original" are recorded but don't change ranking yet. Off switch and **Delete my reading data** are in the Profile.

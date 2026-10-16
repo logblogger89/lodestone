@@ -4,7 +4,7 @@
 |---|---|
 | **PM** | Ayush Gupta (lead), Claude (PM partner) |
 | **Status** | **v0, approved 2026-10-14** (D-029, gate M1) |
-| **Last updated** | 2026-10-14 |
+| **Last updated** | 2026-10-16 |
 | **Program** | [Program Plan](../program/PROGRAM_PLAN.md) · [Tracker](../program/TRACKER.md) |
 | **Research** | [DR-1 Leveling](research/DR-1_LEVELING.md) · [DR-2 Pay](research/DR-2_PAY.md) · [DR-3 Immigration](research/DR-3_IMMIGRATION_PATHWAYS.md) · [DR-4 Job sources](research/DR-4_JOB_SOURCES.md) |
 
@@ -38,7 +38,7 @@ Ayush is a Google L5 PM (operating near L6) on an H-1B in the NYC area. He wants
 2. Rank roles by explainable fit to Ayush's profile, so the top of the digest is worth his time.
 3. Show pay (posted or estimated) and immigration-pathway signals (stated or inferred), clearly labelled.
 4. Make triage and pipeline tracking fast enough to do in a few spare minutes.
-5. Run locally, keep personal data on the user's machine, and use only sources whose ToS allow it.
+5. Keep personal data private (a private Artifact app; nothing personal in the repo) and use only sources whose ToS allow it (D-036, D-006).
 
 **Non-goals (MVP)**
 - Multi-user accounts or public hosting (D-006)
@@ -79,8 +79,8 @@ Ayush is a Google L5 PM (operating near L6) on an H-1B in the NYC area. He wants
 
 | ID | Requirement | Acceptance criteria |
 |---|---|---|
-| **R1. Ingestion** (A1, A2) | Pull jobs from public ATS feeds (Greenhouse, Lever, Ashby, SmartRecruiters, plus Workday and Workable once verified) for every company on the watchlist. Use discovery boards (VC portfolio boards, Communitech, YC, Built In Toronto, etc.) to add companies and their ATS slugs. The watchlist is managed in the UI and pre-seeded | Daily refresh. New postings show up within 24h of appearing in an ATS feed. Seed watchlist of 210 companies (data/seed/watchlist_seed.csv). Per-source health shown (last success, item count, errors) |
-| **R1a. Company discovery engine** (A2, DR-5) | The watchlist grows automatically. Discovery pathways (ATS reverse search, VC and ecosystem boards, ESDC LMIA list, capture spill-over) feed a candidate queue. Each candidate gets **auto ATS detection** and a **Canada-presence check**, then is auto-accepted or held for review. Pathways are pluggable config | ≥500 watchlist companies within 2 weeks of dogfood. Each company shows its discovery pathway(s), ATS, and open Canadian roles. Mute and block available |
+| **R1. Ingestion** (A1, A2) | Pull jobs from public ATS feeds (Greenhouse, Lever, Ashby, SmartRecruiters, plus Workday and Workable once verified) for every company on the watchlist. Use discovery boards (VC portfolio boards, Communitech, YC, Built In Toronto, etc.) to add companies and their ATS slugs. The watchlist is managed in the UI and pre-seeded | Three refreshes a day (D-069). New postings show up within 24h of appearing in an ATS feed. Seed watchlist of 210 companies (data/seed/watchlist_seed.csv). Per-source health shown (last success, item count, errors) |
+| **R1a. Company discovery engine** (A2, DR-5) | The watchlist grows automatically. Discovery pathways (ATS reverse search, VC and ecosystem boards, ESDC LMIA list, capture spill-over) feed a candidate queue. Each candidate gets **auto ATS detection** and a **Canada-presence check**, then is suggested to the user, and joins the watchlist only when Ayush approves it (D-058). Pathways are pluggable config | ≥500 watchlist companies within 2 weeks of dogfood. Each company shows its discovery pathway(s), ATS, and open Canadian roles. Mute and block available |
 | **R2. Dedup and source attribution** (A1, A4) | Merge the same job across sources, using the canonical ATS ID or URL first and a fuzzy match second. Keep every sighting | One listing per job. **One icon per source**, each one a deep link to the exact posting on that source. **Click-through test: every icon lands on the posting page itself, never a company home page or a search results page.** Posting age, "new since last visit" and a repost flag are visible. Dedup precision ≥95% on a 100-pair spot check |
 | **R3. Capture** (A3, A3a, A3b, A3c, A3h) | Paste one or more URLs anywhere (Cmd/Ctrl+V or "+ Add job"). Fall back to pasted JD text. Resolve to the ATS source and dedup. Show coaching tips | A pasted LinkedIn URL produces a scored listing within 30s, or prompts for the JD text if the page can't be fetched. A known job reports "already in Lodestone via X" and adds the icon. A confirmation card lets the user fix the parsed fields |
 | **R4. Profile** (H31, CR-4) | Import the CV (PDF or DOCX) into a structured profile: roles, scope signals, domains, skills, seniority, current employer. LinkedIn data export is optional. Every field can be edited | Ayush reviews his profile in ≤10 minutes. Current employer is set (from the CV or manually). No CV is stored in the repo (D-003) |
@@ -90,14 +90,14 @@ Ayush is a Google L5 PM (operating near L6) on an H-1B in the NYC area. He wants
 | **R8. Pay display** (B8, DR-2) | Show pay as posted (currency as posted). When it's missing, show an estimate with an **"est." icon** and a confidence level | No estimate ever appears without the est. icon. The estimate's source tier is visible on hover or tap |
 | **R9. Pathway signals** (B9, CR-3, CR-3a, DR-3) | Per listing: ICT-eligible, sponsorship mentioned, sponsored before (ESDC positive-LMIA list), GTS-likely, and whether the work location is in Canada (CEC credit). Each one is labelled **Stated / Inferred / Unknown** with its source and date | No listing is hidden for missing signals (D-021). Inferred signals always show their source **as a deep link** (e.g. the ESDC dataset, official IRCC pages). Plain-language explanations of LMIA, CEC, tiers and statuses are available in place. The ESDC list is loaded and matched to companies |
 | **R10. Internal-transfer badge** (B10, CR-4) | When the listing's employer equals the user's current employer, show an "Internal transfer" badge and the ICT route | All Google Canada roles carry the badge when the current employer is Google |
-| **R11. Daily digest** (D18) | An in-app home view: top N new matches since the last visit (**N=20 by default, configurable from 1 to 100**, D-025), then the full ranked list | Loads in <2s locally. Readable and usable on an iPad browser (responsive) |
-| **R11a. Freshness indicator** (D-037) | The app always shows when each part of the data was last refreshed: **job pulls** (overall and per source), **scoring** (last run, plus the prompt and model version that scored the jobs), **pathway signals** (ESDC list quarter and load date), **company discovery**, and **profile** (last update). Refreshes are on request in Phase 1 (D-036) | A header chip shows "Updated <time ago>". Tapping it opens a panel with every component's timestamp and version. Anything older than 7 days is flagged |
+| **R11. Daily digest** (D18) | An in-app digest: top N new matches since the last visit (**N=20 by default, configurable from 1 to 100**, D-025), then the full ranked list. Today (R28) is the home view; the full digest is one tap away | Loads in <2s locally. Readable and usable on an iPad browser (responsive) |
+| **R11a. Freshness indicator** (D-037) | The app always shows when each part of the data was last refreshed: **job pulls** (overall and per source), **scoring** (last run, plus the prompt and model version that scored the jobs), **pathway signals** (ESDC list quarter and load date), **company discovery**, and **profile** (last update). Refreshes run at about 7am, 1pm and 6pm New York time, plus on request (D-056, D-069) | A header chip shows "Updated <time ago>". Tapping it opens a panel with every component's timestamp and version. Anything older than 7 days is flagged |
 | **R12. Triage and learning** (D19) | Interested / Not / Later, with optional quick reasons (e.g. "wrong level," "people management," "domain," "location"). It feeds the weights and the eval set. **Later** roles come back in the digest after 7 days (configurable). **Interested** adds the role to Shortlisted | Triage takes ≤2 taps or keys. Keyboard shortcuts on desktop. Reasons are stored and visible in the eval set |
 | **R13. Pipeline** (F25) | Stages: Discovered → Shortlisted → Applied → Screen → Interviewing → Offer → Closed. Liveness check on each refresh | A closed or removed posting is flagged "no longer live" within 24h and kept in the history |
-| **R14. Local and private** (NFR-1) | Runs on the user's Windows laptop, and the iPad can reach it on the LAN (or via Tailscale). All personal data stays local. API keys live in local config | No personal data leaves the machine except LLM API calls, which carry only the JD and profile text needed for scoring. Works offline for browsing already-fetched data |
+| **R14. Private** (NFR-1) | Private Artifact app, owner-only writes, no personal data in the repo (D-036, D-006) | Only the owner can write to the app's database. No resume or contact details are committed. Scoring runs inside the owner's own Claude Code session |
 | **R15. Compliant sourcing** (DR-4) | Automated pulls only from sources whose access is permitted. LinkedIn, Indeed, Glassdoor and Wellfound are capture-only (R3) | A source registry records the access method and ToS status for every source |
 | **R26. Onboarding without a resume** (D-067, UX §8.3) | First visit: welcome with the promise and privacy line; destination (country, cities); status (citizen/PR, open permit, needs sponsorship, not sure); role in the user's own words, a pasted job they'd love, or example cards; an 8-role taste test (skippable); then their list | A new user sees real, filtered roles within about a minute, with no resume. Each screen asks one question and says why. Citizens and PRs see no work-permit layer |
-| **R27. Profile, three ways** (D-067, UX §8.4) | Offered after first value, never as a gate: upload, paste text, or "Build it with me" (about five questions). Read at the next daily run; "Here's what we understood" with every line editable | A user without a resume reaches a complete profile in under 5 minutes. Copy promises privacy, "a rough draft is fine", and delete any time |
+| **R27. Profile, three ways** (D-067, UX §8.4) | Offered after first value, never as a gate: upload, paste text, or "Build it with me" (about five questions). Read at the next run (within about 6 hours); "Here's what we understood" with every line editable | A user without a resume reaches a complete profile in under 5 minutes. Copy promises privacy, "a rough draft is fine", and delete any time |
 | **R28. Today stack** (D-067, UX §8.8) | The home view shows "N new for you" (default up to 10) that can be finished; the full ranked list is one tap away | An "All caught up" state exists. The backlog never appears as the default view. **Built P1-S6 (D-068)** |
 | **R29. Learning from signals** (D-067, UX §8.6) | Explicit actions plus reading time on the Job description tab (capped, with an off switch) feed ranking. Preference changes are suggested with one tap to accept, shown with their reason, and undoable. "More / less like this". About 1 in 10 cards is exploration, labelled | No preference changes silently. The off switch stops reading-time collection. The score quality check (D-062) gates any learning change. **Built P1-S6 (D-068)**: ordering with learning 70% vs 60% without, on the owner's triage |
 | **R30. Match-quality levels** (D-067, UX §8.5) | Levels 0–4 by what the system knows; a Profile meter shows the level and the next step | The meter is visible from the first visit and moves as the user acts |
@@ -144,8 +144,8 @@ PR timeline view (C17) · interview prep pack for roles marked Interested (F27) 
 
 ## 9. Privacy, security and legal
 
-- Personal data (CV, profile, immigration details) is stored only locally, is never committed to the repo (D-003), and gets scrubbed before any public release (A-03).
-- LLM calls send only the minimum text needed. The provider and key are set in local config. The spend budget gets decided at M3 (Q-10).
+- Personal data (CV, profile, immigration details) is stored only in the private Artifact app's database (D-036), is never committed to the repo (D-003), and gets scrubbed before any public release (A-03).
+- Phase 1 scoring runs in the owner's Claude Code session, covered by the Claude subscription, so there is no API key or extra spend (Q-10). Provider keys and a spend budget come with Phase 2.
 - Source ToS are tracked in the source registry (R15). Polite crawling: rate limits, caching, a clear user agent.
 - Immigration content is always labelled "signals, not advice," with links to official IRCC tools.
 
@@ -169,7 +169,7 @@ PR timeline view (C17) · interview prep pack for roles marked Interested (F27) 
 - **Scraping LinkedIn or Indeed directly.** Rejected: ToS (DR-4). Replaced by capture (R3) and, in V1, email-alert ingestion.
 - **Pure keyword matching.** Rejected: it can't handle title and level ambiguity. The LLM scoring with explainable sub-scores and an eval set is kept.
 - **Normalizing pay.** Rejected by Ayush (B8). Pay shows as posted, and the filter compares in CAD internally.
-- **Hosted web app.** Deferred: local-first for privacy and cost (D-015). LAN or Tailscale gives iPad access.
+- **Hosted web app.** Phase 2 (deferred, D-036). Local hosting (D-015) was replaced first by Cloud Run (D-034) and then by the private Artifact app, which works on the iPad with no server to run.
 
 ---
 
@@ -213,7 +213,7 @@ Proposed by Claude. The defaults are based on Ayush's background: enterprise AI 
 | CR-4 | **Current-employer awareness and an "internal transfer" badge.** Know the user's current employer (via LinkedIn connect, import or manual entry). When a listing's employer matches it, label the listing "internal transfer" and show the ICT route | Ayush (answer to Q-16), D-012 | Feasibility risk R-10: LinkedIn API limits |
 | CR-5 | **Optional in-app Express Entry profile and CRS calculator.** The user enters their own and their spouse's details (age, education, language, work experience, ECA). Lodestone computes the CRS, shows which levers move it and by how much (a year of Canadian work experience, French, a provincial nomination, swapping the principal applicant), and weights or labels listings by how much they advance PR | Ayush (answer to Q-17) | Every field optional. CRS rules live in versioned config (R-12). Not advice (R-03) |
 | CR-6 | **People-management toggle.** Include or exclude roles that have direct reports. Defaults to exclude | Ayush (answer to Q-18) | Needs a "manages people" classifier on each listing |
-| NFR-1 | **Runs locally.** The MVP runs on the user's own machine | D-015 | Input to the Eng Design Doc |
+| NFR-1 | **Runs locally.** The MVP runs on the user's own machine | D-015 | Superseded: Phase 1 is a private Artifact app (D-036); see R14 |
 
 ## Appendix D. Feature backlog (brainstorm 2026-10-14)
 
