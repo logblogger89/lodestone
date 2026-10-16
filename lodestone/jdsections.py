@@ -8,7 +8,7 @@ import re
 MAX_TEXT = 12000
 _HEAD_WORDS = re.compile(
     r"^(about|who we are|who you are|our (team|company|mission|story|values)|the team|meet the team|team overview|"
-    r"what you|what we|why |the role|the opportunity|the impact|responsibilities|requirements|qualifications|"
+    r"what you|what we|why |the role|role (overview|summary|description)|position (overview|summary)|the position|the opportunity|the impact|responsibilities|requirements|qualifications|"
     r"key responsibilities|basic qualifications|preferred qualifications|minimum qualifications|nice to have|bonus|"
     r"benefits|perks|compensation|pay|salary|location|how we work|life at|working at|equal|accommodation|"
     r"diversity|inclusion|privacy|additional information|job description|overview|summary|your (role|impact|day)|"
@@ -23,11 +23,18 @@ LEGAL_HEAD = re.compile(r"equal (employment|opportunit)|\beeo\b|accommodation|pr
                         r"diversity,? (equity|inclusion)|our commitment to (diversity|inclusion)", re.I)
 
 
+def _caps_heading(t: str) -> bool:
+    """A short line in capitals ("ROLE OVERVIEW", "THE PERKS"), but not a pay range, a hashtag-style tag ("LI-REMOTE")
+    or an acronym on its own line."""
+    return t.isupper() and not re.search(r"[\d$€£#@]|^LI-", t) and len(re.findall(r"[A-Z]{3,}", t)) >= 2
+
+
 def _is_heading(line: str) -> bool:
     t = line.strip().strip("*#_").strip()
     if not t or len(t) > 70 or t.endswith((".", ",", ";")) or t.startswith(("-", "•", "·")):
         return False
-    return t.endswith(":") or bool(_HEAD_WORDS.match(t)) or (len(t.split()) <= 6 and t.istitle())
+    short = len(t.split()) <= 6
+    return t.endswith(":") or bool(_HEAD_WORDS.match(t)) or (short and (t.istitle() or _caps_heading(t)))
 
 
 def sections(text: str) -> list[tuple[str, str]]:

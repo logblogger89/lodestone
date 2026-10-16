@@ -181,6 +181,17 @@ Asked once, at the moment they're relevant, each dismissible: first "Pay too low
 - **Track:** pipeline with nudges ("Applied 10 days ago: follow up?") and closed-posting alerts.
 - **Weekly (not built yet, §8.9):** a Monday "Your week": market changes, what Lodestone learned about you, companies to consider.
 
+### 8.10 Changes from persona testing (10-16, D-072)
+Five test personas ([PERSONAS.md](./PERSONAS.md)) found 15 issues; all are fixed in app v25. The ones that change this spec:
+- Today always offers **Show 10 more** and **See all N roles to triage** under the list; you never have to finish first.
+- An answered role stays in place, dimmed, with what you chose and "tap again to undo", until you leave the tab.
+- Saving the Profile (or accepting a suggestion that changes cities, role types or hidden companies) re-picks the
+  unanswered part of today's list. Today picks from your own cities first.
+- First visit: a welcome card with three steps (Profile, triage, background) and "Just browse".
+- Work-permit status has a third choice, citizen or permanent resident, which removes the permit layer.
+- Counts live on the tabs ("All to triage 364"); on phones the tabs are one swipeable row and the report banner one line.
+- Keyboard: cards are focusable; Enter opens and focuses the role; Escape returns to the card.
+
 ### 8.9 Built in P1-S6 (10-16, D-068)
 What shipped, and where it differs from the design above:
 - **Today** is the default view of the Digest tab: up to 10 roles (Profile: 3–30), picked once a day from the best matches that fit the Profile, with new roles (first seen in the last 2 days) first. The list is frozen for the day (`settings/today`), so it doesn't shift while you work. Triaged roles drop off; a progress bar shows "N of 10 left today". When it's empty: "All caught up", **Show 10 more**, or **Browse all roles to triage**. Search, region, sort and role-type filters live on the other tabs, not on Today.

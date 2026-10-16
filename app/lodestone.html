@@ -52,6 +52,7 @@ a{color:var(--accent)}
 .fresh .dot{width:8px;height:8px;border-radius:50%;background:var(--good)}
 .fresh.stale .dot{background:var(--warn)}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip .cnt{font-family:var(--font-mono);font-size:11px;opacity:.7;margin-left:2px}
 .chip{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--surface-2);color:var(--fg);border:1px solid transparent;white-space:nowrap}
 .chip.t-core{background:var(--accent-soft);color:var(--accent);font-weight:600}
 .chip.t-adjacent{background:var(--good-soft);color:var(--good)}
@@ -68,8 +69,12 @@ a{color:var(--accent)}
 .list{display:flex;flex-direction:column;gap:10px}
 .section-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:8px 2px 0}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:start;cursor:pointer}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#dtitle:focus{outline:none}
 .card.sel{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
-.card.done{opacity:.6}
+.card.done{background:var(--bg)}
+.card.done h3,.card.done .meta,.card.done .fitsum,.card.done .checks,.card.done .compass{opacity:.55}
+.donenote{font-size:12px;color:var(--muted);margin:6px 0 0}
 .card h3{margin:0;font-size:16px;font-weight:600;line-height:1.3}
 .co{color:var(--fg);font-weight:500}
 .meta{color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 12px;margin:2px 0 8px}
@@ -102,6 +107,11 @@ details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
 .todayhead{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:4px 0 2px}
 .progress{flex:1 1 160px;max-width:260px;height:6px;border-radius:999px;background:var(--line);overflow:hidden}
 .progress>span{display:block;height:100%;background:var(--accent)}
+.welcome{border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-soft);padding:16px 18px;margin:0 0 14px}
+.welcome h2{margin:0 0 6px;font-size:18px}
+.welcome ol{margin:8px 0 12px;padding-left:20px}
+.welcome li{margin:4px 0}
+.morerow{justify-content:center;margin:14px 0 4px}
 .explore-note{font-size:12px;color:var(--muted);margin:-4px 2px 0}
 .whyrank{font-size:13px;margin:0 0 12px;padding:10px 12px;border-radius:8px;background:var(--accent-soft)}
 .nextstep{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:13px;margin:4px 0 10px}
@@ -185,6 +195,7 @@ a.src:hover{border-color:var(--accent);color:var(--accent)}
 .tbtn.on-not{background:var(--bad-soft);border-color:var(--bad);color:var(--bad);font-weight:600}
 .reasons{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .reasons button{font-size:12px;border:1px dashed var(--line);background:none;border-radius:999px;padding:4px 10px;cursor:pointer;min-height:30px}
+@media (pointer:coarse){.tbtn{min-height:44px}.reasons button{min-height:40px;font-size:13px;padding:6px 12px}}
 .reasons button[aria-pressed="true"]{border-style:solid;border-color:var(--bad);color:var(--bad)}
 .more{align-self:center}
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:28px 20px;text-align:center;color:var(--muted);display:flex;flex-direction:column;gap:8px;align-items:center}
@@ -234,6 +245,14 @@ kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);bor
   .tabbar button[aria-current="page"]{color:var(--accent);font-weight:600}
 }
 @media (max-width: 560px){
+  .showtabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px 2px}
+  .showtabs::-webkit-scrollbar{display:none}
+  .showtabs .chip{flex:0 0 auto}
+  .rbanner{padding:10px 12px}
+  .rbanner .rhead{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+  .rbanner small{display:none}
+  .sbanner{padding:10px 12px}
+  .sbanner .btn{flex:1}
   .card{grid-template-columns:48px minmax(0,1fr);gap:10px}
   .compass{width:46px;height:46px} .compass b{font-size:13px}
   .triage{grid-column:1 / -1;flex-direction:row}
@@ -310,7 +329,7 @@ const S = {
   db:null, ready:false, offline:false, canWrite:true,
   jobs:{}, triage:{}, prefs:{...DEFAULT_PREFS}, companies:[], freshness:{}, inbox:[], mreq:{}, reports:[], suggestions:[], codec:{}, sugAll:false, desc:{}, cprof:{}, likes:{}, sig:{}, today:null, todayLoaded:false, triLoaded:false, prefsRaw:{}, dtab:lsGet("dtab","summary"),
   view:"digest", open:null, sel:0, show:"today", region:"preferred", q:"", tierOn:new Set(TIERS), sort:"best",
-  coQ:"", coStatus:"all", expanded:false, lastVisit:null, pendingReasons:null
+  coQ:"", coStatus:"all", expanded:false, recent:new Set(), lastVisit:null, pendingReasons:null
 };
 const $ = (s,el=document)=>el.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -480,7 +499,7 @@ const isTodo=j=>{const t=tri(j.id);return !t||!t.status||laterDue(t)};
 function matches(j){
   if(!matchesBase(j)) return false;
   const t=tri(j.id);
-  if(S.show==="todo"||S.show==="today") return isTodo(j);
+  if(S.show==="todo"||S.show==="today") return isTodo(j)||S.recent.has(j.id);   // just triaged: stays in place until you leave the tab
   if(S.show==="all") return true;
   return t&&t.status===S.show;
 }
@@ -557,7 +576,8 @@ function learnLine(j){
 const todayKey=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
 const todaySize=()=>Math.max(3,Math.min(30,+S.prefs.today_size||10));
 function stackPick(n,taken,explore){
-  const pool=Object.values(S.jobs).filter(j=>prefOk(j)&&inPreferred(j)&&isTodo(j)&&!taken.has(j.id)&&fitScore(j)!=null).sort((a,b)=>rankScore(b)-rankScore(a));
+  const mine=j=>(S.prefs.regions||[]).includes(j.region)?0:1;   // your own locations first, then the rest of Canada if you allow it
+  const pool=Object.values(S.jobs).filter(j=>prefOk(j)&&inPreferred(j)&&isTodo(j)&&!taken.has(j.id)&&fitScore(j)!=null).sort((a,b)=>mine(a)-mine(b)||rankScore(b)-rankScore(a));
   const top=pool.slice(0,Math.ceil(pool.length/2)), recent=j=>Date.now()-(parseWhen(j.first_seen)||0)<2*DAY;
   const fresh=top.filter(recent), fs=new Set(fresh.map(j=>j.id));
   const pos=learnSignals().filter(g=>g.w>0);
@@ -576,6 +596,13 @@ function ensureToday(){
   if(S.today&&S.today.date===todayKey()&&Array.isArray(S.today.ids)) return;
   const p=stackPick(todaySize(),new Set(),true);
   S.today={date:todayKey(),ids:p.ids,explore:p.explore,built_at:new Date().toISOString()};
+  if(S.db&&S.canWrite) S.db.doc("settings/today").set(S.today).catch(e=>console.warn(e));
+}
+function refreshToday(){   // after a Profile change: keep what you've triaged today, re-pick the rest with the new settings
+  const T=S.today; if(!T||T.date!==todayKey()) return;
+  const keep=T.ids.filter(id=>{const j=S.jobs[id];return j&&!isTodo(j)});
+  const p=stackPick(Math.max(0,todaySize()-keep.length),new Set(keep),true);
+  S.today={...T,ids:keep.concat(p.ids),explore:p.explore};
   if(S.db&&S.canWrite) S.db.doc("settings/today").set(S.today).catch(e=>console.warn(e));
 }
 function moreToday(){
@@ -610,7 +637,9 @@ function suggestionsList(){
 }
 async function savePatch(patch){   // changes only the given settings; everything else in settings/prefs stays as saved
   const body={...(S.prefsRaw||{}),...patch,updated_at:new Date().toISOString()};
-  S.prefsRaw=body;S.prefs={...DEFAULT_PREFS,...body};S._editingPrefs=false;render();
+  S.prefsRaw=body;S.prefs={...DEFAULT_PREFS,...body};S._editingPrefs=false;
+  if(["regions","hidden_companies","exclude_people_mgmt","tiers"].some(k=>k in patch)) refreshToday();
+  render();
   if(!S.db||!S.canWrite){toast("Open Lodestone signed in as its owner to save this.");return false}
   try{await S.db.doc("settings/prefs").set(body);return true}catch(e){toast("Couldn't save. Try again.");console.warn(e);return false}
 }
@@ -727,10 +756,11 @@ function triage(j,status){
   const patch={status};
   if(status==="interested"&&!cur.stage) patch.stage="Shortlisted";
   if(status!=="interested"&&cur.stage==="Shortlisted") patch.stage=null;   // auto-shortlisted, so un-shortlist; later stages (Applied…) were set by hand and stay
+  if(S.show==="todo"||S.show==="today") S.recent.add(j.id);
   if(status==="not"){patch.reasons=cur.reasons||[];S.pendingReasons=j.id}
   else S.pendingReasons=null;
   writeTriage(j,patch);
-  toast(status==="interested"?"Added to your pipeline (Shortlisted).":status==="later"?`Back in your digest in ${S.prefs.later_days||7} days.`:"Hidden. Tap a reason below if you like.");
+  toast(status==="interested"?"Added to your pipeline (Shortlisted).":status==="later"?`Back in your list in ${S.prefs.later_days||7} days.`:"Not for me. A reason helps Lodestone learn (optional).");
 }
 
 /* ---------- views ---------- */
@@ -751,10 +781,14 @@ function fitScore(j){
 /* The viewer's own routes come from their profile, never from code (D-060): a transfer from their current
    employer, or an open work permit that makes sponsorship irrelevant. */
 const coKey=x=>String(x||"").toLowerCase().replace(/&/g," and ").replace(/\b(inc|ltd|llc|corp|corporation|company|co|ulc|canada)\b/g,"").replace(/[^a-z0-9]/g,"");
-const WORK_STATUS={needs_permit:"I'll need an employer to support a work permit",open_permit:"I have an open work permit (I can work for any employer in Canada)"};
+const WORK_STATUS={needs_permit:"I'll need an employer to support a work permit",open_permit:"I have an open work permit (I can work for any employer in Canada)",
+  no_permit:"I'm a Canadian citizen or permanent resident (no work permit needed)"};
+const permitFree=()=>["open_permit","no_permit"].includes((S.profile||{}).work_status);
 function pw(j){
   const base=j.pathway||{score:45,signals:[]}, prof=S.profile||{}, emp=((prof.current||{}).employer||"").trim();
   const limits=base.signals.find(x=>x.label.startsWith("Posting limits"));
+  if(prof.work_status==="no_permit")
+    return {score:100,signals:[{label:"No work permit needed",status:"Strong route",detail:"You're a Canadian citizen or permanent resident, so sponsorship doesn't apply."}]};
   if(prof.work_status==="open_permit"){
     const hard=limits&&/citizen|permanent resident|clearance/i.test(limits.detail||"");
     return {score:hard?15:95,signals:[{label:"You have an open work permit",status:"Strong route",detail:"You can work for any employer in Canada, so whether they sponsor doesn't matter."},...base.signals.filter(x=>!x.label.startsWith("Posting limits")||hard)]};
@@ -797,7 +831,8 @@ function prefChecks(j){
     :{k:"Location",l:"warn",t:REGION_SHORT[rg]||rg||"Canada",why:"In Canada, outside your preferred locations (would mean moving)"});
   // work permit
   const pwj=pw(j), ps=+pwj.score, sig=(pwj.signals||[])[0];
-  out.push(ps>=80?{k:"Work permit",l:"good",t:sig&&sig.label==="Intra-company transfer"?"Internal transfer":sig&&sig.label.startsWith("You have an open")?"You have an open permit":sig&&sig.label.startsWith("Sponsorship")?"Sponsorship offered":"Hires from abroad",why:pathwayWhy(j)||"Strong evidence they hire people from other countries"}
+  if(permitFree()&&ps>=80){}   // nothing to check: you can work for any employer (a posting limited to citizens still shows red)
+  else out.push(ps>=80?{k:"Work permit",l:"good",t:sig&&sig.label==="Intra-company transfer"?"Internal transfer":sig&&sig.label.startsWith("You have an open")?"You have an open permit":sig&&sig.label.startsWith("Sponsorship")?"Sponsorship offered":"Hires from abroad",why:pathwayWhy(j)||"Strong evidence they hire people from other countries"}
     :ps<=20?{k:"Work permit",l:"bad",t:"No sponsorship",why:pathwayWhy(j)||"The posting says you must already be allowed to work in Canada"}
     :ps>=55?{k:"Work permit",l:"warn",t:"Sponsors sometimes",why:pathwayWhy(j)||"A few approvals to hire from abroad, mostly non-tech roles"}
     :{k:"Work permit",l:"warn",t:"Sponsorship unknown",why:pathwayWhy(j)||"No public record either way of hiring from abroad"});
@@ -863,7 +898,7 @@ function reasonsRow(j){
 }
 function card(j,i){
   const t=tri(j.id)||{};
-  return `<article class="card${i===S.sel?" sel":""}${t.status&&(S.show==="todo"||S.show==="today")?" done":""}" data-open="${esc(j.id)}" data-idx="${i}">
+  return `<article class="card${i===S.sel?" sel":""}${t.status&&(S.show==="todo"||S.show==="today")?" done":""}" id="card-${esc(j.id)}" data-open="${esc(j.id)}" data-idx="${i}" tabindex="0" aria-label="${esc(j.title)} at ${esc(j.company)}${t.status?", marked "+({interested:"Interested",later:"Later",not:"Not for me"}[t.status]||""):""}">
     ${tierCompass(j)}
     <div style="min-width:0">
       <h3>${esc(j.title)}</h3>
@@ -873,7 +908,8 @@ function card(j,i){
       ${learnLine(j)}
       <div class="row">${payExtras(j)}${srcLinks(j)}
         ${isNew(j)?'<span class="chip warn">New</span>':""}${cardFlags(j).map(f=>`<span class="chip warn">${esc(f)}</span>`).join("")}</div>
-      ${S.pendingReasons===j.id&&t.status==="not"?reasonsRow(j):""}
+      ${t.status==="not"&&(S.pendingReasons===j.id||S.recent.has(j.id))?reasonsRow(j):""}
+      ${t.status&&S.recent.has(j.id)?`<p class="donenote">${{interested:"Interested: added to your pipeline.",later:`Later: back in ${S.prefs.later_days||7} days.`,not:"Not for me."}[t.status]||""} Tap the button again to undo.</p>`:""}
     </div>
     <div class="triage">${triageBtns(j)}</div>
   </article>`;
@@ -892,7 +928,7 @@ function reportBody(r){
 function reportBanner(){
   const r=S.reports[0]; if(!r) return "";
   const age=(Date.now()-new Date(r.date+"T12:00:00"))/DAY; if(age>2) return "";
-  return `<button class="rbanner" data-view="reports"><strong>Daily report · ${esc(reportDate(r))}</strong> ${esc(r.headline)}<small>${(r.actions||[]).length?`${r.actions.length} thing${r.actions.length>1?"s":""} need${r.actions.length>1?"":"s"} you · `:""}Read the report →</small></button>`;
+  return `<button class="rbanner" data-view="reports"><span class="rhead"><strong>Daily report · ${esc(reportDate(r))}</strong> ${esc(r.headline)}</span><small>${(r.actions||[]).length?`${r.actions.length} thing${r.actions.length>1?"s":""} need${r.actions.length>1?"":"s"} you · `:""}Read the report →</small></button>`;
 }
 function viewReports(){
   const n=+S.prefs.report_days||14, cutoff=Date.now()-n*DAY;
@@ -903,20 +939,33 @@ function viewReports(){
       ${past.length?past.map(r=>`<details><summary><strong>${esc(reportDate(r))}</strong> · ${esc(r.headline)}</summary>${reportBody(r)}</details>`).join(""):`<p class="note">Earlier reports appear here. Change how many days to keep in view in <button class="link plink" data-view="settings">your Profile</button>.</p>`}</section>`;
   return `<div class="topbar"><h1>Reports</h1></div>${body}`;
 }
+/* First visit (P1-S7 brings full onboarding): say what Lodestone is and offer the Profile, without blocking the list. */
+function welcome(){
+  if(lsGet("welcomed",false)||!S.ready||S.offline) return "";
+  const pr=S.profile||{}, set=pr.headline||pr.resume||(pr.current||{}).title||Object.keys(S.triage).length;
+  if(set) return "";
+  return `<section class="welcome" aria-label="Welcome"><h2>Welcome to Lodestone</h2>
+    <p>Lodestone finds tech product roles in Canada, ranks them for you, and shows which employers hire people who need a work permit. Three steps:</p>
+    <ol><li><b>Tell it where and what</b> (2 minutes): cities, role types, pay, and whether you need a work permit.</li>
+    <li><b>Triage today's list</b>: Interested, Later or Not for me. It learns from every answer.</li>
+    <li><b>Add your background</b> any time: a resume, a rough draft, or a few lines. No resume? Start without one.</li></ol>
+    <div class="row"><button class="btn primary" data-view="settings">Set up my profile</button><button class="btn" data-act="welcomed">Just browse for now</button></div></section>`;
+}
 function viewToday(){
   ensureToday();
   const T=S.today;
   if(!T) return `<div class="empty"><h2>Getting today's list ready…</h2></div>`;
-  const inStack=T.ids.map(id=>S.jobs[id]).filter(j=>j&&j.live), left=inStack.filter(j=>isTodo(j)&&prefOk(j)), done=inStack.length-left.length;
+  const inStack=T.ids.map(id=>S.jobs[id]).filter(j=>j&&j.live&&prefOk(j)), open=inStack.filter(j=>isTodo(j)), left=inStack.filter(j=>isTodo(j)||S.recent.has(j.id)), done=inStack.length-open.length;
   const main=left.filter(j=>j.id!==T.explore), ex=left.find(j=>j.id===T.explore);
   S._order=main.concat(ex?[ex]:[]);
-  const head=`<div class="todayhead"><strong>${!inStack.length?"Nothing new fits your Profile today":left.length?`${left.length} of ${inStack.length} left today`:`All ${inStack.length} done`}</strong>
+  const head=`<div class="todayhead"><strong>${!inStack.length?"Nothing new fits your Profile today":open.length?`${open.length} of ${inStack.length} left today`:`All ${inStack.length} done`}</strong>
     <span class="progress" role="progressbar" aria-label="Today's progress" aria-valuemin="0" aria-valuemax="${inStack.length}" aria-valuenow="${done}"><span style="width:${inStack.length?Math.round(done*100/inStack.length):0}%"></span></span>
-    <span class="note">Picked from your best matches when you first opened Lodestone today${T.explore?", plus one wildcard":""}. Roles you triage drop off; roles found later today wait for tomorrow's list (see them now under All to triage).</span></div>`;
-  if(!left.length) return `${head}<div class="empty"><h2>All caught up for today</h2><p>Nice work. A new list is picked the first time you open Lodestone tomorrow.</p>
+    <span class="note">Your best matches, picked when you first opened Lodestone today${T.explore?", plus one wildcard":""}.</span></div>`;
+  const moreRow=`<div class="row morerow"><button class="btn" data-act="moretoday">Show ${todaySize()} more</button><button class="link plink" data-show="todo">See all ${Object.values(S.jobs).filter(j=>prefOk(j)&&isTodo(j)).length} roles to triage</button></div>`;
+  if(!open.length) return `${head}<div class="empty"><h2>All caught up for today</h2><p>Nice work. A new list is picked the first time you open Lodestone tomorrow.</p>
     <div class="row" style="justify-content:center"><button class="btn primary" data-act="moretoday">Show ${todaySize()} more</button><button class="btn" data-show="todo">Browse all roles to triage</button></div></div>`;
   return `${head}<div class="list">${main.map((j,i)=>card(j,i)).join("")}
-    ${ex?`<div class="section-label">Something different</div><p class="explore-note">A well-scored role unlike the ones you usually pick. Your answer tells Lodestone whether to widen your list.</p>${card(ex,main.length)}`:""}</div>`;
+    ${ex?`<div class="section-label">Something different</div><p class="explore-note">A well-scored role unlike the ones you usually pick. Your answer tells Lodestone whether to widen your list.</p>${card(ex,main.length)}`:""}</div>${moreRow}`;
 }
 function viewDigest(){
   const all=visible(), n=S.prefs.digest_size||20;
@@ -927,14 +976,14 @@ function viewDigest(){
   S._order=first.concat(S.expanded?more:[]);
   const live=Object.values(S.jobs).filter(j=>j.live);
   const counts={todo:0,interested:0,later:0,not:0};
-  live.forEach(j=>{const t=tri(j.id);if(!t||!t.status||laterDue(t))counts.todo++;else counts[t.status]=(counts[t.status]||0)+1});
+  live.forEach(j=>{const t=tri(j.id);if(!t||!t.status||laterDue(t)){if(prefOk(j))counts.todo++}else counts[t.status]=(counts[t.status]||0)+1});
   const showTabs=[["today","Today"],["todo","All to triage"],["interested","Interested"],["later","Later"],["not","Not for me"],["all","All"]];
   const isToday=S.show==="today";
   let body;
   if(S.offline) body=offlineState();
   else if(!S.ready) body=`<div class="empty"><h2>Loading your jobs…</h2><p>Reading Lodestone's database.</p></div>`;
   else if(!live.length) body=`<div class="empty"><h2>No jobs yet</h2><p>Roles appear after the next update (about 7am, 1pm and 6pm New York time).</p></div>`;
-  else if(isToday) body=viewToday();
+  else if(isToday) body=welcome()+viewToday();
   else if(!all.length) body=`<div class="empty"><h2>Nothing matches these filters</h2><p>Try "All of Canada", turn on more role types, or clear the search.</p></div>`;
   else body=`<div class="list">
       ${fresh.length?`<div class="section-label">New since your last visit</div>`:""}
@@ -943,8 +992,8 @@ function viewDigest(){
         :`<button class="btn more" data-act="expand">Show ${more.length} more</button>`):""}
     </div>`;
   return `<div class="topbar"><h1>${isToday?"Today":"Digest"}</h1><span class="sp"></span>${freshChip()}</div>${reportBanner()}${sugBanner()}
-  <div class="summary"><span><strong class="mono">${counts.todo}</strong> to triage</span><span>${counts.interested||0} interested</span><span>${counts.later||0} later</span><span>${live.length} open roles tracked</span></div>
-  <div class="chips" role="group" aria-label="Show">${showTabs.map(([k,l])=>`<button class="chip toggle" data-show="${k}" aria-pressed="${S.show===k}">${l}</button>`).join("")}</div>
+  <div class="chips showtabs" role="group" aria-label="Show">${showTabs.map(([k,l])=>{const c=k==="todo"?counts.todo:k==="all"?live.length:k==="today"?null:counts[k]||0;
+    return `<button class="chip toggle" data-show="${k}" aria-pressed="${S.show===k}">${l}${c!=null?` <span class="cnt">${c}</span>`:""}</button>`}).join("")}</div>
   ${isToday?"":`<div class="filters">
     <input type="search" id="q" placeholder="Search title, company, team" value="${esc(S.q)}" aria-label="Search">
     <select id="region" aria-label="Region"><option value="preferred"${S.region==="preferred"?" selected":""}>My regions</option><option value="all"${S.region==="all"?" selected":""}>All of Canada</option>${REGIONS.map(r=>`<option${S.region===r?" selected":""}>${r}</option>`).join("")}</select>
@@ -955,6 +1004,7 @@ function viewDigest(){
     <p><span class="ck ck-good"><b>✓</b>green</span> matches what you want · <span class="ck ck-warn"><b>~</b>yellow</span> partly, or unknown · <span class="ck ck-bad"><b>✕</b>red</span> goes against it. Set the thresholds in <button class="link plink" data-view="settings">your Profile</button>.</p>
     <ul><li><b>Work permit:</b> "Hires from abroad" = approved by the government to hire foreign workers recently; "Sponsors sometimes" = a few approvals, mostly non-tech; "Sponsorship unknown" = no public record either way; "No sponsorship" = the posting says you must already be allowed to work in Canada.</li>
     <li><b>Role type:</b> Core PM = product manager roles; PM-adjacent = TPM, program, strategy & ops, chief of staff, trust & safety; Stretch = product marketing, solutions, analytics.</li>
+    <li><b>Level ≈ L6:</b> Lodestone's estimate of the role's seniority on Google's scale, used as a common yardstick: L4 mid-level, L5 Senior, L6 Staff, L7 Principal.</li>
     <li><b>Grey tags</b> are facts, not colour checks: the role type, and the years of experience the posting asks for (when it says).</li>
     <li><b>Fit</b> (the ring) = how well the role matches your profile, out of 100.</li></ul></details>
   ${body}
@@ -964,7 +1014,7 @@ function offlineState(){return `<div class="empty"><h2>Open Lodestone on claude.
 /* Pathway signals (R10): each with its status and a link to the evidence. Signals, not immigration advice. */
 function pathwayPanel(j){
   const g=pw(j).signals||[];
-  if(!g.length) return "";
+  if(!g.length||(S.profile||{}).work_status==="no_permit") return "";   // citizens and PRs: nothing to show
   return `<section class="panel"><h4>Work-permit pathway</h4>
     <table class="tbl"><thead><tr><th>Signal</th><th>Status</th><th>Evidence</th></tr></thead><tbody>
     ${g.map(x=>`<tr><td>${esc(x.label)}</td><td><span class="chip ${x.label.startsWith("Posting limits")?"s-none":SIG_CLASS[x.status]||""}">${esc(x.status)}</span></td><td>${esc(x.detail||"")}${x.url?` <a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener">Source ↗</a>`:""}</td></tr>`).join("")}
@@ -987,7 +1037,7 @@ function fitPanel(j){
 function viewDetail(j){
   const t=tri(j.id)||{};
   return `<div class="row" style="justify-content:space-between"><span class="chip t-${(j.tier||"").toLowerCase()}">${esc(TIER_NAME[j.tier]||j.tier||"")} · ${esc(TIER_WHAT[j.tier]||"")}</span><button class="btn" data-act="close">Close</button></div>
-  <h2>${esc(j.title)}</h2>
+  <h2 id="dtitle" tabindex="-1">${esc(j.title)}</h2>
   <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span></div>
   <div class="row actrow">${triageBtns(j)}${(j.sources||[])[0]?`<a class="btn primary" href="${esc(safeUrl(j.sources[0].url))}" target="_blank" rel="noopener">Open posting ↗</a>`:""}</div>
   ${t.status==="not"?reasonsRow(j):""}
@@ -1042,7 +1092,7 @@ function companyPanel(j){
     <dl class="facts">
       <dt>Open roles</dt><dd>${roles.length} in Lodestone${untriaged?`, ${untriaged} not triaged yet`:""} ${roles.length>1?`<button class="link plink" data-cofilter="${esc(j.company)}">See all</button>`:""}</dd>
       ${regs.length?`<dt>In Canada</dt><dd>${esc(regs.join(" · "))}</dd>`:""}
-      <dt>Work permit</dt><dd>${esc(sig.length?sig.map(x=>x.label).join("; "):"No public signal")}</dd>
+      ${(S.profile||{}).work_status==="no_permit"?"":`<dt>Work permit</dt><dd>${esc(sig.length?sig.map(x=>x.label).join("; "):"No public signal")}</dd>`}
       ${co.careers_url?`<dt>Careers site</dt><dd><a href="${esc(safeUrl(co.careers_url))}" target="_blank" rel="noopener">${esc(co.system?co.system+" ↗":"Open ↗")}</a></dd>`:""}
     </dl></section>
   <section class="panel"><h4>The team${j.department?` <span class="note">· ${esc(j.department)}</span>`:""}</h4>
@@ -1165,7 +1215,7 @@ const PROFILE_FIELDS=[["headline","Headline",1],["summary","Summary",4],["domain
 const RESUME_TYPES="application/pdf,text/plain,text/markdown,.pdf,.txt,.md";
 function resumeBlock(p){
   const r=(p&&p.resume)||null;
-  const status=!r?"No resume uploaded yet."
+  const status=!r?"No resume yet? That's fine. Upload one, paste a rough draft or a few lines about your work, or skip it: the fields below are enough to start."
     :r.status==="read"?`Read ${esc(ago(parseWhen(r.read_at)))}: the fields below came from it. Fields you edit are kept.`
     :`Uploaded ${esc(ago(parseWhen(r.uploaded_at)))}. Claude reads it at the next update (about 7am, 1pm or 6pm New York time) and fills in your profile.`;
   return `<div class="field"><label>Resume</label>
@@ -1229,7 +1279,7 @@ function viewSettings(){
       <div class="field"><label for="pf-where">Where you live now</label><input id="pf-where" value="${esc(pr.location_now||cur.location||"")}"></div>
     </div>
     <div class="field"><label for="pf-work">Work permit</label><select id="pf-work">${Object.entries(WORK_STATUS).map(([k,l])=>`<option value="${k}"${(pr.work_status||"needs_permit")===k?" selected":""}>${esc(l)}</option>`).join("")}</select>
-      <span class="note">Lodestone is built first for people who need a work permit for Canada. Citizens and permanent residents are welcome too; a setting for that arrives with the new sign-up flow.</span></div>
+      <span class="note">Lodestone is built first for people who need a work permit for Canada. If you don't need one, the work-permit checks step aside.</span></div>
     ${PROFILE_FIELDS.map(([k,l,rows])=>`<div class="field"><label for="pf-${k}">${l}</label><textarea id="pf-${k}" rows="${rows}" style="min-height:${rows>1?110:44}px">${esc(val(k))}</textarea></div>`).join("")}
   </section>
   <section class="panel"><h4>What you're looking for</h4>
@@ -1296,21 +1346,25 @@ function freshPanel(){
 /* ---------- render ---------- */
 function render(){
   document.querySelectorAll("[data-view]").forEach(b=>b.setAttribute("aria-current",b.dataset.view===S.view?"page":"false"));
-  const todo=Object.values(S.jobs).filter(j=>matchesBase(j)&&isTodo(j)).length;
+  const todo=Object.values(S.jobs).filter(j=>prefOk(j)&&isTodo(j)).length;   // same count as the Digest header
   $("#nc-digest").textContent=S.ready&&todo?String(todo):"";
   $("#nc-pipe").textContent=String(Object.values(S.triage).filter(t=>t&&t.stage).length||"");
   const active=document.activeElement, keepId=active&&active.id, caret=active&&active.selectionStart;
   const v={digest:viewDigest,pipeline:viewPipeline,add:viewAdd,reports:viewReports,companies:viewCompanies,settings:viewSettings}[S.view]||viewDigest;
   // keep unsaved settings edits and the paste box while live data re-renders
   if(S.view==="settings"&&document.getElementById("dsize")&&S._editingPrefs) {} else $("#view").innerHTML=v();
-  if(keepId){const el=document.getElementById(keepId);if(el&&el!==active){el.focus();try{el.setSelectionRange(caret,caret)}catch{}}}
   const ov=$("#overlay");
   if(S.open==="__fresh") ov.innerHTML=`<div class="scrim" data-act="close"></div><aside class="drawer" role="dialog" aria-label="Last updated">${freshPanel()}</aside>`;
   else if(S.open&&S.jobs[S.open]) ov.innerHTML=`<div class="scrim" data-act="close"></div><aside class="drawer" role="dialog" aria-label="${esc(S.jobs[S.open].title)}">${viewDetail(S.jobs[S.open])}</aside>`;
   else ov.innerHTML="";
+  if(keepId)   // after both the page and the role panel are redrawn, so focus survives a live update
+    {const el=document.getElementById(keepId);if(el&&el!==active){el.focus();try{el.setSelectionRange(caret,caret)}catch{}}}
   trackReading();
 }
-function setView(v){S.view=v;S.open=null;S.sel=0;S._editingPrefs=false;lsSet("ui",{view:v,sort:S.sort,region:S.region});render();window.scrollTo(0,0)}
+/* Opening and closing a role moves keyboard focus sensibly: into the role, then back to the card you came from. */
+function openJob(id,idx){S.open=id;if(idx!=null)S.sel=idx;render();const h=document.getElementById("dtitle");if(h)h.focus()}
+function closeJob(){const id=S.open;S.open=null;render();if(id){const c=document.querySelector(`#view .card[data-open="${CSS.escape(id)}"]`);if(c)c.focus()}}
+function setView(v){S.view=v;S.open=null;S.sel=0;S._editingPrefs=false;S.recent.clear();lsSet("ui",{view:v,sort:S.sort,region:S.region});render();window.scrollTo(0,0)}
 function jobById(id){return S.jobs[id]}
 
 /* ---------- events ---------- */
@@ -1321,11 +1375,12 @@ document.addEventListener("click",e=>{
   if(d.view){setView(d.view);return}
   if(d.tri){e.stopPropagation();const j=jobById(d.id);if(j)triage(j,d.tri);return}
   if(d.reason){e.stopPropagation();const j=jobById(d.id),t=tri(d.id)||{};const r=new Set(t.reasons||[]);r.has(d.reason)?r.delete(d.reason):r.add(d.reason);if(j)writeTriage(j,{reasons:[...r]});return}
-  if(d.show){S.show=d.show;S.sel=0;S.expanded=false;render();return}
+  if(d.show){S.show=d.show;S.sel=0;S.expanded=false;S.recent.clear();render();return}
   if(d.tier){S.tierOn.has(d.tier)?S.tierOn.delete(d.tier):S.tierOn.add(d.tier);render();return}
   if(d.costatus){S.coStatus=d.costatus;render();return}
   if(d.act==="expand"){S.expanded=true;render();return}
   if(d.act==="moretoday"){moreToday();return}
+  if(d.act==="welcomed"){lsSet("welcomed",true);render();return}
   if(d.sacc){acceptSuggestion(d.sacc);return}
   if(d.sdis){dismissSuggestion(d.sdis);return}
   if(d.undo){undoLearned(d.undo);return}
@@ -1334,7 +1389,7 @@ document.addEventListener("click",e=>{
   if(d.like){e.stopPropagation();const j=jobById(d.id);if(j)like(j,+d.like);return}
   if(d.act==="note"){S.dtab="summary";lsSet("dtab","summary");render();const n=document.getElementById("notes");if(n){n.focus();n.scrollIntoView({block:"center"})}return}
   if(d.act==="fresh"){S.open="__fresh";render();return}
-  if(d.act==="close"){S.open=null;render();return}
+  if(d.act==="close"){if(S.open==="__fresh"){S.open=null;render()}else closeJob();return}
   if(d.act==="addjob"){addJob();return}
   if(d.sug){e.stopPropagation();decideCompany(d.key,d.sug);return}
   if(d.act==="suguall"){S.sugAll=true;render();return}
@@ -1343,7 +1398,7 @@ document.addEventListener("click",e=>{
   if(d.act==="mreq"){e.stopPropagation();const j=jobById(d.id);if(j)requestMarket(j);return}
   if(d.act==="saveprefs"){savePrefs();return}
   if(d.act==="resetw"){SUBS.forEach(k=>{const i=document.getElementById("w-"+k);if(i)i.value=DEFAULT_PREFS.weights[k]});updateWeightLabels();S._editingPrefs=true;return}
-  if(d.open!==undefined&&!e.target.closest(".triage,.reasons,a,select")){S.open=d.open;if(d.idx)S.sel=+d.idx;render()}
+  if(d.open!==undefined&&!e.target.closest(".triage,.reasons,a,select")){openJob(d.open,d.idx!=null&&d.idx!==""?+d.idx:null)}
 });
 document.addEventListener("keydown",e=>{   // arrow keys move between detail tabs (ARIA tabs pattern)
   const t=e.target; if(!t||t.getAttribute("role")!=="tab"||!["ArrowLeft","ArrowRight","Home","End"].includes(e.key)) return;
@@ -1389,7 +1444,7 @@ async function savePrefs(){
   prof.preferences={...(prof.preferences||{}),domains_wanted:val("pf-dw").value.trim()};
   const cv=val("cvtext"); if(cv&&cv.value.trim()&&cv.value.trim()!==((prof.resume||{}).text||"")) prof.resume={...(prof.resume||{}),text:cv.value.trim().slice(0,40000),uploaded_at:new Date().toISOString(),status:"uploaded"};
   prof.version=(+prof.version||0)+1;prof.edited_at=new Date().toISOString();
-  try{await S.db.doc("settings/prefs").set(body);await S.db.doc("profile/main").set(prof);S._editingPrefs=false;S.prefsRaw=body;S.prefs={...DEFAULT_PREFS,...body};if(body.learn_reading===false)flushReading();render();toast("Profile saved.")}
+  try{await S.db.doc("settings/prefs").set(body);await S.db.doc("profile/main").set(prof);S._editingPrefs=false;S.prefsRaw=body;S.prefs={...DEFAULT_PREFS,...body};if(body.learn_reading===false)flushReading();refreshToday();lsSet("welcomed",true);render();toast("Profile saved. Today's list now follows it.")}
   catch(e){toast("Couldn't save your profile. Try again.");console.warn(e)}
 }
 async function addJob(){
@@ -1401,13 +1456,17 @@ async function addJob(){
 }
 document.addEventListener("keydown",e=>{
   if(e.target.closest("input,textarea,select")) return;
-  if(e.key==="Escape"&&S.open){S.open=null;render();return}
+  if(e.key==="Escape"&&S.open){closeJob();return}
   if(S.view!=="digest"||S.open&&e.key!=="Escape") return;
   const list=S._order||[];if(!list.length) return;
   const k=e.key.toLowerCase();
-  if(k==="j"||k==="k"){S.sel=Math.max(0,Math.min(list.length-1,S.sel+(k==="j"?1:-1)));render();document.querySelector(".card.sel")?.scrollIntoView({block:"nearest"});e.preventDefault()}
-  else if(k==="enter"){S.open=list[S.sel].id;render()}
-  else if(k==="i"||k==="l"||k==="n"){triage(list[S.sel],{i:"interested",l:"later",n:"not"}[k])}
+  if(k==="j"||k==="k"){S.sel=Math.max(0,Math.min(list.length-1,S.sel+(k==="j"?1:-1)));render();const c=document.querySelector(".card.sel");if(c){c.focus();c.scrollIntoView({block:"nearest"})}e.preventDefault()}
+  else if(k==="enter"||(k===" "&&e.target.classList.contains("card"))){
+    if(e.target.closest("button,a")) return;   // Enter on a button does that button
+    const c=e.target.closest(".card");
+    const i=c?+c.dataset.idx:S.sel;if(list[i]){e.preventDefault();openJob(list[i].id,i)}}
+  else if(k==="i"||k==="l"||k==="n"){triage(list[S.sel],{i:"interested",l:"later",n:"not"}[k]);
+    S.sel=Math.min(list.length-1,S.sel+1);render();document.querySelector(".card.sel")?.focus()}
 });
 document.addEventListener("paste",e=>{
   if(e.target.closest("input,textarea")) return;
