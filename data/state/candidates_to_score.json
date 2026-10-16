@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-15T20:22:19+00:00",
- "count": 545,
+ "updated_at": "2026-10-16T11:00:23+00:00",
+ "count": 616,
  "candidates": [
   {
    "id": "ashby:1password:8151254c-b7d1-4653-87b1-7afeba176898",
@@ -1005,6 +1005,39 @@
    ]
   },
   {
+   "id": "greenhouse:appdirect:8702728002",
+   "company": "AppDirect",
+   "title": "Director of Product Management, Seller/Merchant Growth",
+   "location": "Canada",
+   "region": "Other Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": true,
+   "pay": {
+    "ranges": [
+     {
+      "min": 175000,
+      "max": 235000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "$175,000 — $235,000 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/appdirect/jobs/8702728002"
+   ]
+  },
+  {
    "id": "workday:arcticwolf/External:R26_1072",
    "company": "Arctic Wolf",
    "title": "Senior Product Manager - Managed Security Services (Onboarding)",
@@ -1068,6 +1101,44 @@
    ],
    "urls": [
     "https://arcticwolf.wd1.myworkdayjobs.com/en-US/External/job/Remote-United-States/Vice-President--Product-Management--Endpoint-Security-_R26_1048"
+   ]
+  },
+  {
+   "id": "ashby:ashby:390e266b-4b6c-4490-ad74-05ff5e0bb36a",
+   "company": "Ashby",
+   "title": "Product Manager, Onboarding and Growth",
+   "location": "Remote - US; Remote - Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 180000,
+      "max": 260000,
+      "currency": "USD",
+      "interval": "year",
+      "label": "US Remote",
+      "canada": false,
+      "kind": "base",
+      "estimated": false,
+      "quote": "$180K – $260K • Offers Equity"
+     }
+    ],
+    "primary": null,
+    "source": "field",
+    "equity": {
+     "offered": true,
+     "amounts": [],
+     "quote": "Offers Equity"
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/ashby/390e266b-4b6c-4490-ad74-05ff5e0bb36a"
    ]
   },
   {
@@ -1849,6 +1920,23 @@
    ]
   },
   {
+   "id": "phenom:BECACA:433121",
+   "company": "Bell",
+   "title": "Technical Product Manager I",
+   "location": "Mississauga, Ontario",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "phenom"
+   ],
+   "urls": [
+    "https://jobs.bell.ca/ca/en/job/433121/Technical-Product-Manager-I"
+   ]
+  },
+  {
    "id": "phenom:BECACA:433021",
    "company": "Bell",
    "title": "Technical Product Manager II",
@@ -2236,6 +2324,142 @@
    ],
    "urls": [
     "https://capitalone.wd12.myworkdayjobs.com/en-US/Capital_One/job/Toronto-ON/Principal-Associate--Product-Management_R242630-1"
+   ]
+  },
+  {
+   "id": "lever:caseware:aeb64915-118e-45b8-be6e-fa887606c392",
+   "company": "Caseware",
+   "title": "Director of Product — Ecosystem",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/caseware/aeb64915-118e-45b8-be6e-fa887606c392"
+   ]
+  },
+  {
+   "id": "lever:caseware:3f96d364-def9-46af-9c0b-bbce4ba13507",
+   "company": "Caseware",
+   "title": "Group Product Manager - Domain Platform",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/caseware/3f96d364-def9-46af-9c0b-bbce4ba13507"
+   ]
+  },
+  {
+   "id": "lever:caseware:21db6ea3-e03c-45ca-98d8-f31e1a7c280f",
+   "company": "Caseware",
+   "title": "Product Manager, Assurance Platform",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/caseware/21db6ea3-e03c-45ca-98d8-f31e1a7c280f"
+   ]
+  },
+  {
+   "id": "lever:caseware:3aff9c45-0216-4ecf-8c56-843c2c142dd9",
+   "company": "Caseware",
+   "title": "Senior Product Manager — North American Financial Reporting",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/caseware/3aff9c45-0216-4ecf-8c56-843c2c142dd9"
+   ]
+  },
+  {
+   "id": "lever:caseware:e9096d5f-cb85-421e-a182-b6c22a26c688",
+   "company": "Caseware",
+   "title": "Technical Product Manager",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/caseware/e9096d5f-cb85-421e-a182-b6c22a26c688"
+   ]
+  },
+  {
+   "id": "lever:caseware:2657fa88-df24-41af-bf97-15b08c76af40",
+   "company": "Caseware",
+   "title": "Technical Product Manager - Pioneer",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/caseware/2657fa88-df24-41af-bf97-15b08c76af40"
+   ]
+  },
+  {
+   "id": "lever:caseware:0503fb40-b703-4002-b40c-0c5fda65bf21",
+   "company": "Caseware",
+   "title": "Technical Product Manager, Applied Science – AI Products",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/caseware/0503fb40-b703-4002-b40c-0c5fda65bf21"
+   ]
+  },
+  {
+   "id": "lever:caseware:c6f62e68-7717-4449-b765-16451a819b8d",
+   "company": "Caseware",
+   "title": "Technical Product Manager, Core Platform",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/caseware/c6f62e68-7717-4449-b765-16451a819b8d"
    ]
   },
   {
@@ -2693,6 +2917,39 @@
    ]
   },
   {
+   "id": "greenhouse:coursera:6211986004",
+   "company": "Coursera",
+   "title": "Senior Product Manager, Applied AI",
+   "location": "Canada",
+   "region": "Other Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 164000,
+      "max": 205000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Job titles may span multiple career levels, and the targeted hiring base salary range for this role in Canada is [$164,000 - $205,000]."
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/coursera/jobs/6211986004"
+   ]
+  },
+  {
    "id": "coveo:coveo:8706288002",
    "company": "Coveo",
    "title": "Senior Technical Product Manager",
@@ -2707,6 +2964,23 @@
    ],
    "urls": [
     "https://www.coveo.com/en/company/careers/open-positions/8706288002"
+   ]
+  },
+  {
+   "id": "coveo:coveo:8892871002",
+   "company": "Coveo",
+   "title": "Senior Technical Product Manager, ML Platform",
+   "location": "Canada; Montreal (Province of Quebec, Canada); Province of Quebec (Canada)",
+   "region": "Montreal",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "coveo"
+   ],
+   "urls": [
+    "https://www.coveo.com/en/company/careers/open-positions/8892871002"
    ]
   },
   {
@@ -2792,6 +3066,123 @@
    ],
    "urls": [
     "https://desjardins.wd10.myworkdayjobs.com/en-US/Desjardins/job/Montral/XMLNAME--Responsable-de-produit-Intgrateur--Plateforme-de-gouvernance-des-donnes_R2611670-2"
+   ]
+  },
+  {
+   "id": "ashby:docebo:6c6ced29-4d69-4e93-b808-e6aea83d87f3",
+   "company": "Docebo",
+   "title": "Salesforce Product Owner",
+   "location": "Toronto, Ontario",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 90800,
+      "max": 121000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "CA$90.8K – CA$121K"
+     }
+    ],
+    "primary": 0,
+    "source": "field",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Empowering Our Talent Culture: We build a culture of trust and empowerment by designing our rewards and benefits with transparency, equity, and flexibility, enabling our people to do their best work and stay for the long haul."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/docebo/6c6ced29-4d69-4e93-b808-e6aea83d87f3"
+   ]
+  },
+  {
+   "id": "ashby:docebo:ae5eb154-a2cc-44c9-aa8d-7d1c9aa69d85",
+   "company": "Docebo",
+   "title": "Technical Product Manager - Integration Ecosystems & Tooling",
+   "location": "Toronto, Ontario",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 118500,
+      "max": 158000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "CA$118.5K – CA$158K"
+     }
+    ],
+    "primary": 0,
+    "source": "field",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Empowering Our Talent Culture: We build a culture of trust and empowerment by designing our rewards and benefits with transparency, equity, and flexibility, enabling our people to do their best work and stay for the long haul."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/docebo/ae5eb154-a2cc-44c9-aa8d-7d1c9aa69d85"
+   ]
+  },
+  {
+   "id": "ashby:docebo:0bebc901-a0ba-44ac-9d0f-dc8e9f169e3b",
+   "company": "Docebo",
+   "title": "Technical Product Manager - Native Integrations",
+   "location": "Toronto, Ontario",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 118500,
+      "max": 158000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "CA$118.5K – CA$158K"
+     }
+    ],
+    "primary": 0,
+    "source": "field",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Empowering Our Talent Culture: We build a culture of trust and empowerment by designing our rewards and benefits with transparency, equity, and flexibility, enabling our people to do their best work and stay for the long haul."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/docebo/0bebc901-a0ba-44ac-9d0f-dc8e9f169e3b"
    ]
   },
   {
@@ -2996,6 +3387,39 @@
    ],
    "urls": [
     "https://jobs.ea.com/en_US/careers/JobDetail/Senior-Lead-Game-Product-Manager-EA-Sports-FC/214892"
+   ]
+  },
+  {
+   "id": "greenhouse:epicgames:6013462004",
+   "company": "Epic Games",
+   "title": "Director, Product Management (Discovery, Search, Personalization)",
+   "location": "Vancouver,British Columbia,Canada",
+   "region": "Vancouver",
+   "role_tier": "Core",
+   "people_mgmt_hint": true,
+   "pay": {
+    "ranges": [
+     {
+      "min": 269967,
+      "max": 395952,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "$269,967 — $395,952 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://epicgames.com/careers/jobs/6013462004?gh_jid=6013462004"
    ]
   },
   {
@@ -3388,6 +3812,39 @@
    ],
    "urls": [
     "https://job-boards.greenhouse.io/gitlab/jobs/8871820002"
+   ]
+  },
+  {
+   "id": "greenhouse:guidepoint:8751110002",
+   "company": "Guidepoint",
+   "title": "Senior Product Manager",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 140000,
+      "max": 160000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "The annual base salary range for this position is 140,000-160,000 CAD ."
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/guidepoint/jobs/8751110002"
    ]
   },
   {
@@ -3954,6 +4411,141 @@
    ],
    "urls": [
     "https://jobs.ashbyhq.com/jane/2d2a4d4b-25d1-4eb8-8c3b-6cd654180015"
+   ]
+  },
+  {
+   "id": "ashby:jobber:8f88e508-9c9f-4562-a602-64466aa8b0c4",
+   "company": "Jobber",
+   "title": "Senior Product Manager, Automations Platform",
+   "location": "Toronto; Vancouver; Boston; Edmonton",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [],
+    "primary": null,
+    "source": null,
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Base salary is just one part of a total compensation package that will include equity rewards, annual stipends for health and wellness, retirement savings matching, and an extended health package with fully paid premiums for body and mind."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/jobber/8f88e508-9c9f-4562-a602-64466aa8b0c4"
+   ]
+  },
+  {
+   "id": "ashby:jobber:bd63e612-efb7-4a54-a833-f6640479ad4d",
+   "company": "Jobber",
+   "title": "Senior Product Manager, Supply",
+   "location": "Toronto; Vancouver; Kitchener-Waterloo; Edmonton",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [],
+    "primary": null,
+    "source": null,
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Base salary is just one part of a total compensation package that will include equity rewards, annual stipends for health and wellness, retirement savings matching, and an extended health package with fully paid premiums for body and mind."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/jobber/bd63e612-efb7-4a54-a833-f6640479ad4d"
+   ]
+  },
+  {
+   "id": "ashby:jobber:07cee15e-0f9d-463f-8359-871ca36ffe07",
+   "company": "Jobber",
+   "title": "Senior Product Manager, Teammate Growth",
+   "location": "Toronto; Vancouver; Boston; Edmonton",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [],
+    "primary": null,
+    "source": null,
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Base salary is just one part of a total compensation package that will include equity rewards, annual stipends for health and wellness, retirement savings matching, and an extended health package with fully paid premiums for body and mind."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/jobber/07cee15e-0f9d-463f-8359-871ca36ffe07"
+   ]
+  },
+  {
+   "id": "ashby:jobber:d4b305cd-cb5b-49e4-bd2d-df75a623247a",
+   "company": "Jobber",
+   "title": "Senior Product Manager, Voice",
+   "location": "Toronto; Vancouver; Kitchener-Waterloo; Edmonton",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [],
+    "primary": null,
+    "source": null,
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Base salary is just one part of a total compensation package that will include equity rewards, annual stipends for health and wellness, retirement savings matching, and an extended health package with fully paid premiums for body and mind."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/jobber/d4b305cd-cb5b-49e4-bd2d-df75a623247a"
+   ]
+  },
+  {
+   "id": "ashby:jobber:2b8ae7cc-d8df-4d4f-889c-a1cd9c533c9d",
+   "company": "Jobber",
+   "title": "Staff Product Manager, Fintech New Bets",
+   "location": "Remote",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [],
+    "primary": null,
+    "source": null,
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Base salary is just one part of a total compensation package that will include equity rewards, annual stipends for health and wellness, retirement savings matching, and an extended health package with fully paid premiums for body and mind."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/jobber/2b8ae7cc-d8df-4d4f-889c-a1cd9c533c9d"
    ]
   },
   {
@@ -4917,6 +5509,56 @@
    ]
   },
   {
+   "id": "greenhouse:maximizer:4379612009",
+   "company": "Maximizer",
+   "title": "Product Manager",
+   "location": "Vancouver, British Columbia, Canada",
+   "region": "Vancouver",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 95000,
+      "max": 115000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "$95,000 — $115,000 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/maximizer/jobs/4379612009"
+   ]
+  },
+  {
+   "id": "smartrecruiters:medfar:744000155599001",
+   "company": "Medfar",
+   "title": "Senior Product Owner (SaaS / Healthcare)",
+   "location": "Montreal, Quebec, CA",
+   "region": "Montreal",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "smartrecruiters"
+   ],
+   "urls": [
+    "https://jobs.smartrecruiters.com/Medfar/744000155599001"
+   ]
+  },
+  {
    "id": "eightfold:microsoft.com:1970393556950363",
    "company": "Microsoft",
    "title": "Principal Product Manager",
@@ -5002,39 +5644,6 @@
    ],
    "urls": [
     "https://moneris.wd3.myworkdayjobs.com/en-US/Moneris/job/Toronto/Product-Owner---Digital-Customer-Support_JR105978"
-   ]
-  },
-  {
-   "id": "workday:moneris/Moneris:JR105970",
-   "company": "Moneris",
-   "title": "Senior Product Manager, Partner Experience",
-   "location": "Toronto",
-   "region": "GTA",
-   "role_tier": "Core",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 125000,
-      "max": 155000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": true,
-      "quote": "Salary Range: The expected base salary range for this role is $125,000 - $155,000."
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://moneris.wd3.myworkdayjobs.com/en-US/Moneris/job/Toronto/Senior-Product-Manager--Partner-Experience_JR105970-1"
    ]
   },
   {
@@ -5154,6 +5763,23 @@
    ],
    "urls": [
     "https://ats.rippling.com/nesto/jobs/0693ec9c-c5ed-4e97-b8b7-bd74dc40fd17"
+   ]
+  },
+  {
+   "id": "lever:netomi:28e755b4-9e42-4728-8f46-9f4995ef299a",
+   "company": "Netomi",
+   "title": "Sr. Agentic Product Manager (North America)",
+   "location": "Toronto , Canada",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/netomi/28e755b4-9e42-4728-8f46-9f4995ef299a"
    ]
   },
   {
@@ -6151,6 +6777,84 @@
    ]
   },
   {
+   "id": "lever:quandri:423ac9bc-333d-48d9-86fc-a232827ea554",
+   "company": "Quandri",
+   "title": "Senior Product Manager",
+   "location": "Vancouver",
+   "region": "Vancouver",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 150000,
+      "max": 200000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<p>The range for base pay is $150k - $200k CAD, dependent on level of experience, performance and choice of stock option compensation."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "<p>The range for base pay is $150k - $200k CAD, dependent on level of experience, performance and choice of stock option compensation."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/quandri/423ac9bc-333d-48d9-86fc-a232827ea554"
+   ]
+  },
+  {
+   "id": "lever:quandri:887db332-bc0e-4a0a-a550-dbd58aa0899c",
+   "company": "Quandri",
+   "title": "Senior Product Manager, Canada",
+   "location": "Vancouver Hybrid, Remote",
+   "region": "Vancouver",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 150000,
+      "max": 200000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "The range for base pay is $150k - $200k CAD, most hires land around the midpoint of the range, while candidates with standout experience may land closer to the top."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Employee stock options, granted based off experience level upon hire and subject to a standard vesting schedule"
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/quandri/887db332-bc0e-4a0a-a550-dbd58aa0899c"
+   ]
+  },
+  {
    "id": "dayforce:qfg:17274",
    "company": "Questrade",
    "title": "Future Opportunities - Product Management",
@@ -6265,6 +6969,67 @@
    ],
    "urls": [
     "https://jobs.dayforcehcm.com/en-US/qfg/CANDIDATEPORTAL/jobs/18010"
+   ]
+  },
+  {
+   "id": "ashby:quora:b0a4e9ff-5d89-41c0-a14e-e66267cfbcac",
+   "company": "Quora",
+   "title": "Lead Product Manager - Growth, Quora (Remote)",
+   "location": "Remote - Multiple Locations; United States; Ireland; Canada; & 13 other countries",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 166328,
+      "max": 256660,
+      "currency": "USD",
+      "interval": "year",
+      "label": "United States",
+      "canada": false,
+      "kind": "base",
+      "estimated": false,
+      "quote": "- US candidates only: For US based applicants, the salary range is $166,328 - $256,660 USD + equity + benefits."
+     },
+     {
+      "min": 213567,
+      "max": 263644,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Toronto, Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "- Canada candidates only: For Toronto and Vancouver based applicants, the salary range is $213,567 - $263,644 CAD + equity + benefits."
+     },
+     {
+      "min": 199329,
+      "max": 246068,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "For all other locations in Canada, the salary range is $199,329 - $246,068 CAD + equity + benefits."
+     }
+    ],
+    "primary": 1,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Quora offers a wide range of benefits including medical/dental/vision coverage, equity refreshers, remote work reimbursement, paid time off, employee assistance programs, and more."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/quora/b0a4e9ff-5d89-41c0-a14e-e66267cfbcac"
    ]
   },
   {
@@ -6455,23 +7220,6 @@
    ],
    "urls": [
     "https://jobs.rbc.com/ca/en/job/R-0000188155/Senior-Technical-Product-Manager-AI-Governance-Compliance"
-   ]
-  },
-  {
-   "id": "phenom:RBCAA0088:R-0000188154",
-   "company": "RBC",
-   "title": "Senior Technical Product Owner - AI Governance & Compliance",
-   "location": "TORONTO, Ontario, Canada",
-   "region": "GTA",
-   "role_tier": "Core",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "phenom"
-   ],
-   "urls": [
-    "https://jobs.rbc.com/ca/en/job/R-0000188154/Senior-Technical-Product-Owner-AI-Governance-Compliance"
    ]
   },
   {
@@ -7059,6 +7807,23 @@
    ]
   },
   {
+   "id": "lever:sophos:3effac05-c50c-4364-87d5-cce8003cf60f",
+   "company": "Sophos",
+   "title": "Senior Product Manager — Sophos Endpoint Detection and Response",
+   "location": "United States; Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/sophos/3effac05-c50c-4364-87d5-cce8003cf60f"
+   ]
+  },
+  {
    "id": "greenhouse:stackadapt:4299186009",
    "company": "StackAdapt",
    "title": "Senior Product Manager (Creatives)",
@@ -7256,6 +8021,23 @@
    ],
    "urls": [
     "https://job-boards.greenhouse.io/stackadapt/jobs/4422767009"
+   ]
+  },
+  {
+   "id": "greenhouse:stay22:4450332009",
+   "company": "Stay22",
+   "title": "Senior Technical Product Manager – Integrations",
+   "location": "Montreal HQ",
+   "region": "Montreal",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/stay22/jobs/4450332009"
    ]
   },
   {
@@ -7520,6 +8302,23 @@
    ]
   },
   {
+   "id": "lever:tracktik:b7756fb2-0ef7-4437-b1fc-46e0f5faba39",
+   "company": "TrackTik",
+   "title": "Product Manager – Workforce Management",
+   "location": "Montreal",
+   "region": "Montreal",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/tracktik/b7756fb2-0ef7-4437-b1fc-46e0f5faba39"
+   ]
+  },
+  {
    "id": "ashby:trulioo:29ac1954-3d7e-406a-8d1b-54288ba065e7",
    "company": "Trulioo",
    "title": "Product Manager (KYB)",
@@ -7710,6 +8509,468 @@
    ],
    "urls": [
     "https://unitytech.wd1.myworkdayjobs.com/en-US/Unity/job/Remote-Texas-USA/Staff-Technical-Product-Manager_JOBREQ-2616436"
+   ]
+  },
+  {
+   "id": "lever:veeva:54011d58-cec6-4bcf-9758-ac567db971ec",
+   "company": "Veeva Systems",
+   "title": "Product Manager - Network",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 150000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li>Base pay: $100,000 - $150,000 CAD</li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/54011d58-cec6-4bcf-9758-ac567db971ec"
+   ]
+  },
+  {
+   "id": "lever:veeva:26300f4d-67c1-453e-8dd2-0ab5610c1124",
+   "company": "Veeva Systems",
+   "title": "Product Manager - Vault Medical Connections",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 150000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li>Base pay: $<span data-sheets-root=\"1\">100,000 - $150,000 CAD</span></li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/26300f4d-67c1-453e-8dd2-0ab5610c1124"
+   ]
+  },
+  {
+   "id": "lever:veeva:ea970c9f-0c11-4039-be8c-bee3e11aaaa0",
+   "company": "Veeva Systems",
+   "title": "Product Manager - Veeva RIM",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 150000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li>Base pay: $100,000 - $150,000 CAD</li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/ea970c9f-0c11-4039-be8c-bee3e11aaaa0"
+   ]
+  },
+  {
+   "id": "lever:veeva:2ba83d37-f87b-4ec3-95ed-ef925dd760dd",
+   "company": "Veeva Systems",
+   "title": "Senior Product Manager",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 130000,
+      "max": 180000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li><span data-sheets-root=\"1\">Base pay:&nbsp;</span>$<span data-sheets-root=\"1\">130,000 - $180,000 CAD</span></li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/2ba83d37-f87b-4ec3-95ed-ef925dd760dd"
+   ]
+  },
+  {
+   "id": "lever:veeva:d1248451-8f1c-40d1-adb9-14ce1edbd545",
+   "company": "Veeva Systems",
+   "title": "Senior Product Manager - Campaign Manager",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 130000,
+      "max": 180000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li>Base pay: $<span data-sheets-root=\"1\">130,000 - $180,000 CAD</span></li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/d1248451-8f1c-40d1-adb9-14ce1edbd545"
+   ]
+  },
+  {
+   "id": "lever:veeva:3731839b-199a-4621-b431-2886e3b15dd9",
+   "company": "Veeva Systems",
+   "title": "Senior Product Manager - Compass Platform",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 120000,
+      "max": 170000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li>Base pay: $120,000 - $170,000<span data-sheets-root=\"1\">&nbsp;CAD</span></li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/3731839b-199a-4621-b431-2886e3b15dd9"
+   ]
+  },
+  {
+   "id": "lever:veeva:23e0a229-cab8-4ca8-aa07-89e147c6e54b",
+   "company": "Veeva Systems",
+   "title": "Senior Product Manager - Falcon Writer",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 130000,
+      "max": 180000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li>Base pay: $<span data-sheets-root=\"1\">130,000 - $180,000 CAD</span></li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/23e0a229-cab8-4ca8-aa07-89e147c6e54b"
+   ]
+  },
+  {
+   "id": "lever:veeva:9babb33d-751b-47cc-8b38-fecc8c72d2e7",
+   "company": "Veeva Systems",
+   "title": "Senior Product Manager - LIMS",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 130000,
+      "max": 180000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li><span data-sheets-root=\"1\">Base pay:&nbsp; </span>$<span data-sheets-root=\"1\">130,000 - $180,000 CAD</span></li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/9babb33d-751b-47cc-8b38-fecc8c72d2e7"
+   ]
+  },
+  {
+   "id": "lever:veeva:cd6a0ae6-baed-4c4a-8cae-9003253458f9",
+   "company": "Veeva Systems",
+   "title": "Senior Product Manager - Medical Inquiry",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 130000,
+      "max": 180000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li>Base pay:&nbsp;$<span data-sheets-root=\"1\">130,000 - $180,000 CAD</span></li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/cd6a0ae6-baed-4c4a-8cae-9003253458f9"
+   ]
+  },
+  {
+   "id": "lever:veeva:65c5ac3a-13b4-4f6f-8ea4-6c6a82057ac8",
+   "company": "Veeva Systems",
+   "title": "Senior Product Manager - PromoMats",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 130000,
+      "max": 180000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li>Base pay: $<span data-sheets-root=\"1\">130,000 - $180,000 CAD</span></li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/65c5ac3a-13b4-4f6f-8ea4-6c6a82057ac8"
+   ]
+  },
+  {
+   "id": "lever:veeva:30fb6ab3-1906-4b13-976c-017ef552dee3",
+   "company": "Veeva Systems",
+   "title": "Senior Product Manager - SAP ERP Integrations",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 130000,
+      "max": 180000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li>Base pay: $<span data-sheets-root=\"1\">130,000 - $180,000 CAD</span></li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/30fb6ab3-1906-4b13-976c-017ef552dee3"
+   ]
+  },
+  {
+   "id": "lever:veeva:e2671ae5-15c6-4230-843a-b462836470b9",
+   "company": "Veeva Systems",
+   "title": "Senior Technical Product Manager (AI) - Vault Medical",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 130000,
+      "max": 180000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li><span data-sheets-root=\"1\">Base pay: $130,000 - $180,000 CAD</span></li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/e2671ae5-15c6-4230-843a-b462836470b9"
+   ]
+  },
+  {
+   "id": "lever:veeva:9323dc71-74a8-4ae3-8d30-d2fb3271b106",
+   "company": "Veeva Systems",
+   "title": "Technical Product Manager (AI) - Veeva Quality Cloud",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 150000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li>Base pay: $100,000 - $150,000 CAD</li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/9323dc71-74a8-4ae3-8d30-d2fb3271b106"
+   ]
+  },
+  {
+   "id": "lever:veeva:c0f4972b-95e3-4f90-96be-ba8e033b4c03",
+   "company": "Veeva Systems",
+   "title": "Technical Product Manager (AI) - Veeva QualityDocs & Training",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Core",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 150000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li>Base pay: $100,000 - $150,000 CAD</li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/c0f4972b-95e3-4f90-96be-ba8e033b4c03"
    ]
   },
   {
@@ -8182,20 +9443,42 @@
    ]
   },
   {
-   "id": "jibe:amd:85795",
-   "company": "AMD",
-   "title": "Technical Program Manager - Windows Security (1 year contract)",
-   "location": "Markham, Ontario, Canada",
-   "region": "GTA",
+   "id": "greenhouse:affirm:8031366003",
+   "company": "Affirm",
+   "title": "GTM Strategy & Operations Lead (Legal & Field Ops)",
+   "location": "Remote Canada",
+   "region": "Remote-Canada",
    "role_tier": "Adjacent",
    "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-15T02:02:41+00:00",
+   "pay": {
+    "ranges": [
+     {
+      "min": 117000,
+      "max": 167000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "CAN base pay range per year:  $117,000  -  $167,000"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Equity Grade - 4"
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
    "sources": [
-    "jibe"
+    "greenhouse"
    ],
    "urls": [
-    "https://careers.amd.com/careers-home/jobs/85795"
+    "https://job-boards.greenhouse.io/affirm/jobs/8031366003"
    ]
   },
   {
@@ -9581,6 +10864,23 @@
    ]
   },
   {
+   "id": "greenhouse:block:5442203008",
+   "company": "Block (Square / Cash App)",
+   "title": "Sales Enablement Program Manager",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "http://block.xyz/careers/jobs/5442203008?gh_jid=5442203008"
+   ]
+  },
+  {
    "id": "workday:cibc/search:2615991",
    "company": "CIBC",
    "title": "Senior Director, Risk Data Strategy",
@@ -9726,6 +11026,40 @@
    ]
   },
   {
+   "id": "lever:caseware:d59a9355-ca96-46d7-968d-60401531b0dd",
+   "company": "Caseware",
+   "title": "Senior Manager, Product Strategy & Operations",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/caseware/d59a9355-ca96-46d7-968d-60401531b0dd"
+   ]
+  },
+  {
+   "id": "lever:caseware:c8a2572d-e3bb-402b-b7ba-593e12483a7b",
+   "company": "Caseware",
+   "title": "Technical Program Manager, AI Programs",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/caseware/c8a2572d-e3bb-402b-b7ba-593e12483a7b"
+   ]
+  },
+  {
    "id": "successfactors:careers.celestica.com:1407125333",
    "company": "Celestica",
    "title": "HW/SW Technical Program Lead",
@@ -9795,6 +11129,217 @@
    ],
    "urls": [
     "https://clio.wd3.myworkdayjobs.com/en-US/ClioCareerSite/job/Vancouver/Senior-Strategy---Operations-Associate_REQ-5325"
+   ]
+  },
+  {
+   "id": "greenhouse:clutch:6180068004",
+   "company": "Clutch",
+   "title": "Chief of Staff",
+   "location": "Toronto, Ontario",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 120000,
+      "max": 190000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "- Salary range: $120,000 - $190,000 (plus equity)"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Salary range: $120,000 - $190,000 (plus equity)"
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/clutch/jobs/6180068004"
+   ]
+  },
+  {
+   "id": "greenhouse:clutch:5792377004",
+   "company": "Clutch",
+   "title": "Strategy & Operations Manager",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 110000,
+      "max": 130000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "- S&O: $110k - $130k (plus equity)"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [
+      {
+       "min": 110000,
+       "max": 130000,
+       "unit": "currency",
+       "currency": null,
+       "quote": "- S&O: $110k - $130k (plus equity)"
+      }
+     ],
+     "quote": "- S&O: $110k - $130k (plus equity)"
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/clutch/jobs/5792377004"
+   ]
+  },
+  {
+   "id": "greenhouse:clutch:6122697004",
+   "company": "Clutch",
+   "title": "Strategy & Operations Manager (Revenue)",
+   "location": "Mississauga, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 110000,
+      "max": 130000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "- Salary range: $110k - $130k (plus equity)"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Competitive package: Market cash, equity upside, full benefits, and a collaborative in-office culture built on pace and curiosity."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/clutch/jobs/6122697004"
+   ]
+  },
+  {
+   "id": "greenhouse:clutch:6190321004",
+   "company": "Clutch",
+   "title": "Strategy & Operations, Financial Services",
+   "location": "Toronto",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 120000,
+      "max": 170000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "- Salary range: $120,000 - $170,000 annually plus stock options"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Competitive compensation and equity incentives"
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/clutch/jobs/6190321004"
+   ]
+  },
+  {
+   "id": "greenhouse:clutch:5792372004",
+   "company": "Clutch",
+   "title": "Strategy & Operations, Senior Manager",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 130000,
+      "max": 150000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "S&O: $130k-$150k (plus equity)"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [
+      {
+       "min": 130000,
+       "max": 150000,
+       "unit": "currency",
+       "currency": null,
+       "quote": "S&O: $130k-$150k (plus equity)"
+      }
+     ],
+     "quote": "S&O: $130k-$150k (plus equity)"
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/clutch/jobs/5792372004"
    ]
   },
   {
@@ -10212,39 +11757,6 @@
    ]
   },
   {
-   "id": "avature:jobs.ea.com:214012",
-   "company": "Electronic Arts",
-   "title": "Assistant Producer - EA SPORTS™ FC Mobile, Business Operations",
-   "location": "Vancouver, Canada",
-   "region": "Vancouver",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 67000,
-      "max": 92700,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "Victoria) *$67,000 - $92,700 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "avature"
-   ],
-   "urls": [
-    "https://jobs.ea.com/en_US/careers/JobDetail/Assistant-Producer-EA-SPORTS-FC-Mobile-Business-Operations/214012"
-   ]
-  },
-  {
    "id": "avature:jobs.ea.com:216324",
    "company": "Electronic Arts",
    "title": "Associate Producer - EA SPORTS FC™ Mobile, Business Operations",
@@ -10526,45 +12038,6 @@
    ]
   },
   {
-   "id": "greenhouse:instacart:8275378",
-   "company": "Instacart",
-   "title": "Associate Product Operations Manager",
-   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
-   "region": "Remote-Canada",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 98000,
-      "max": 103500,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "$98,000 — $103,500 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "Additionally, this role is eligible for a new hire equity grant as well as annual refresh grants."
-    }
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://instacart.careers/job/?gh_jid=8275378"
-   ]
-  },
-  {
    "id": "greenhouse:instacart:8112138",
    "company": "Instacart",
    "title": "Chief of Staff, Online Grocery",
@@ -10634,39 +12107,6 @@
    ],
    "urls": [
     "https://interac.wd3.myworkdayjobs.com/en-US/Interac/job/Toronto/ERM-Product-Risk--Lead_REQ-2164"
-   ]
-  },
-  {
-   "id": "workday:interac/Interac:REQ-2161",
-   "company": "Interac",
-   "title": "Leader, LCR Strategy and Operations",
-   "location": "Toronto",
-   "region": "GTA",
-   "role_tier": "Adjacent",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 140000,
-      "max": 160000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "The hiring range for this position is $140,000 to $160,000, and you will also be eligible for our short-term incentive plan."
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://interac.wd3.myworkdayjobs.com/en-US/Interac/job/Toronto/Leader--Legal-Strategy-and-Operations_REQ-2161"
    ]
   },
   {
@@ -11646,6 +13086,56 @@
    ]
   },
   {
+   "id": "oracle_hcm:eeho/CX_45001:347727",
+   "company": "Oracle",
+   "title": "Program Manager, Learning Content Programs-NetSuite",
+   "location": "United States; Canada; Austin, TX, United States; Nashville, TN, United States",
+   "region": "Other Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 71100,
+      "max": 116800,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "CA: Hiring Range in CAD from: $71,100 to $116,800 per annum."
+     },
+     {
+      "min": 67900,
+      "max": 166100,
+      "currency": "USD",
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "US: Hiring Range in USD from: $67,900 to $166,100 per annum."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Candidates are typically placed into the range based on the preceding factors as well as internal peer equity."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "oracle_hcm"
+   ],
+   "urls": [
+    "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_45001/job/347727"
+   ]
+  },
+  {
    "id": "oracle_hcm:eeho/CX_45001:347677",
    "company": "Oracle",
    "title": "Senior Exam Development Program Manager, NetSuite Certification",
@@ -11693,6 +13183,56 @@
    ],
    "urls": [
     "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_45001/job/347677"
+   ]
+  },
+  {
+   "id": "oracle_hcm:eeho/CX_45001:347719",
+   "company": "Oracle",
+   "title": "Senior Program Manager, Learning Content Programs NetSuite",
+   "location": "United States; Canada; Austin, TX, United States; Nashville, TN, United States",
+   "region": "Other Canada",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 81700,
+      "max": 131700,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "CA: Hiring Range in CAD from: $81,700 to $131,700 per annum."
+     },
+     {
+      "min": 90100,
+      "max": 209500,
+      "currency": "USD",
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "US: Hiring Range in USD from: $90,100 to $209,500 per annum."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Candidates are typically placed into the range based on the preceding factors as well as internal peer equity."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "oracle_hcm"
+   ],
+   "urls": [
+    "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_45001/job/347719"
    ]
   },
   {
@@ -11766,6 +13306,23 @@
    ],
    "urls": [
     "https://careers.qualcomm.com/careers/job/446720845971"
+   ]
+  },
+  {
+   "id": "lever:quandri:92707fc9-eeb2-4023-8e2f-4d784a4c11da",
+   "company": "Quandri",
+   "title": "Business Operations Lead",
+   "location": "Vancouver",
+   "region": "Vancouver",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/quandri/92707fc9-eeb2-4023-8e2f-4d784a4c11da"
    ]
   },
   {
@@ -12030,6 +13587,40 @@
    ],
    "urls": [
     "https://job-boards.greenhouse.io/stackadapt/jobs/4407072009"
+   ]
+  },
+  {
+   "id": "greenhouse:stay22:4434438009",
+   "company": "Stay22",
+   "title": "Chief of Staff",
+   "location": "Montreal HQ",
+   "region": "Montreal",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/stay22/jobs/4434438009"
+   ]
+  },
+  {
+   "id": "greenhouse:stay22:4450925009",
+   "company": "Stay22",
+   "title": "Sales Strategy & Operations Manager",
+   "location": "Montreal HQ",
+   "region": "Montreal",
+   "role_tier": "Adjacent",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/stay22/jobs/4450925009"
    ]
   },
   {
@@ -12521,6 +14112,33 @@
    ],
    "urls": [
     "https://jobs.ashbyhq.com/1password/88aa605e-60a9-4a41-8879-23cb2f634d73"
+   ]
+  },
+  {
+   "id": "smartrecruiters:acumatica:744000153021549",
+   "company": "Acumatica",
+   "title": "Senior ERP Product Marketing Manager (QuickBooks Migration)",
+   "location": "Montreal, QC, CA",
+   "region": "Montreal",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [],
+    "primary": null,
+    "source": null,
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "In May of 2025, Acumatica was acquired by Vista Equity Partners, a global investment firm focused on enterprise software, data and technology-enabled businesses."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "smartrecruiters"
+   ],
+   "urls": [
+    "https://jobs.smartrecruiters.com/Acumatica/744000153021549"
    ]
   },
   {
@@ -13062,6 +14680,151 @@
    ]
   },
   {
+   "id": "greenhouse:appdirect:8796075002",
+   "company": "AppDirect",
+   "title": "Product Marketing Manager",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 94000,
+      "max": 117000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "$94,000 — $117,000 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/appdirect/jobs/8796075002"
+   ]
+  },
+  {
+   "id": "greenhouse:appdirect:8837051002",
+   "company": "AppDirect",
+   "title": "Product Marketing Manager",
+   "location": "Montreal, Canada",
+   "region": "Montreal",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/appdirect/jobs/8837051002"
+   ]
+  },
+  {
+   "id": "greenhouse:appdirect:8722383002",
+   "company": "AppDirect",
+   "title": "Product Marketing Manager",
+   "location": "Montreal, Canada",
+   "region": "Montreal",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/appdirect/jobs/8722383002"
+   ]
+  },
+  {
+   "id": "smartrecruiters:aristanetworks:744000105235805",
+   "company": "Arista Networks",
+   "title": "Technical Solutions Engineer",
+   "location": "Vancouver, BC, CA",
+   "region": "Vancouver",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 85000,
+      "max": 150000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "The new hire base pay for this role has a pay range of CAD 85,000 to 150,000."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "The pay range provided reflects base pay only and in addition certain roles may also be eligible for discretionary Arista bonuses and equity."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "smartrecruiters"
+   ],
+   "urls": [
+    "https://jobs.smartrecruiters.com/AristaNetworks/744000105235805"
+   ]
+  },
+  {
+   "id": "smartrecruiters:aristanetworks:744000155084368",
+   "company": "Arista Networks",
+   "title": "Technical Solutions Engineer - Cloud, Hyperscalers and AI networks",
+   "location": "Vancouver, BC, CA",
+   "region": "Vancouver",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 85000,
+      "max": 150000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "The new hire base pay for this role has a pay range of CAD 85,000 to 150,000."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "The pay range provided reflects base pay only and in addition certain roles may also be eligible for discretionary Arista bonuses and equity."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "smartrecruiters"
+   ],
+   "urls": [
+    "https://jobs.smartrecruiters.com/AristaNetworks/744000155084368"
+   ]
+  },
+  {
    "id": "workday:aritzia/External:R0024839",
    "company": "Aritzia",
    "title": "Digital - Senior Solution Architect / Solution Architect, Digital Architecture",
@@ -13198,6 +14961,74 @@
    ],
    "urls": [
     "https://jobs.bell.ca/ca/en/job/433038/Solutions-Architect-Professional-Services"
+   ]
+  },
+  {
+   "id": "ashby:benevity:162c4ba2-2969-4632-9812-885e2793724f",
+   "company": "Benevity",
+   "title": "Product Marketing Manager",
+   "location": "Calgary, Alberta; Vancouver, British Columbia; Toronto, Ontario",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/benevity/162c4ba2-2969-4632-9812-885e2793724f"
+   ]
+  },
+  {
+   "id": "ashby:benevity:4c1e8d7e-a487-446f-8635-85d1de2eb30d",
+   "company": "Benevity",
+   "title": "Product Marketing Manager",
+   "location": "Toronto, Ontario; Vancouver, British Columbia; Calgary, Alberta",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/benevity/4c1e8d7e-a487-446f-8635-85d1de2eb30d"
+   ]
+  },
+  {
+   "id": "ashby:benevity:a392c740-29e3-4e75-b7fc-a7c711886451",
+   "company": "Benevity",
+   "title": "Senior Manager, Product Marketing",
+   "location": "Calgary, Alberta; Vancouver, British Columbia; Canada, Remote; Toronto, Ontario",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/benevity/a392c740-29e3-4e75-b7fc-a7c711886451"
+   ]
+  },
+  {
+   "id": "ashby:benevity:7596717c-727a-4abe-9655-3f779a3f0fa9",
+   "company": "Benevity",
+   "title": "Senior Manager, Product Marketing",
+   "location": "Calgary, Alberta; Atlanta, GA; Arizona; Seattle; California; Washington, D.C.; USA, Remote",
+   "region": "Calgary",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/benevity/7596717c-727a-4abe-9655-3f779a3f0fa9"
    ]
   },
   {
@@ -13659,36 +15490,54 @@
    ]
   },
   {
-   "id": "successfactors:careers.celestica.com:1445335833",
-   "company": "Celestica",
-   "title": "Senior Solutions Architect, Services & Operations",
-   "location": "Toronto, ON, Canada",
+   "id": "lever:caseware:35366087-6670-40a2-ba0e-7eee4d4a8db0",
+   "company": "Caseware",
+   "title": "Product Analyst — Growth & GTM",
+   "location": "Toronto, ON",
    "region": "GTA",
    "role_tier": "Stretch",
    "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 125000,
-      "max": 199000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "Salary + Short Term Incentive = 125,000 - 199,000 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
    "sources": [
-    "successfactors"
+    "lever"
    ],
    "urls": [
-    "https://careers.celestica.com/job/Toronto-Senior-Solutions-Architect%2C-Services-&-Operations-ON/1445335833/"
+    "https://jobs.lever.co/caseware/35366087-6670-40a2-ba0e-7eee4d4a8db0"
+   ]
+  },
+  {
+   "id": "lever:caseware:2c75fed6-8694-486c-8aec-756d196beb1c",
+   "company": "Caseware",
+   "title": "Product Analyst, Data Platform and Analytics",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/caseware/2c75fed6-8694-486c-8aec-756d196beb1c"
+   ]
+  },
+  {
+   "id": "lever:caseware:ccece3e3-54e2-47dc-84c9-131b89eec061",
+   "company": "Caseware",
+   "title": "Solutions Consultant",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/caseware/ccece3e3-54e2-47dc-84c9-131b89eec061"
    ]
   },
   {
@@ -14485,6 +16334,33 @@
    ],
    "urls": [
     "https://interac.wd3.myworkdayjobs.com/en-US/Interac/job/Toronto/Solution-Architect_REQ-2369"
+   ]
+  },
+  {
+   "id": "ashby:jobber:49072a3c-b6d3-4c75-b6f9-8cbd86205f40",
+   "company": "Jobber",
+   "title": "Senior Solutions Engineer",
+   "location": "Edmonton; Kitchener-Waterloo; Edmonton; Toronto",
+   "region": "GTA",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [],
+    "primary": null,
+    "source": null,
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Base salary is just one part of a total compensation package that will include equity rewards, annual stipends for health and wellness, retirement savings matching, and an extended health package with fully paid premiums for body and mind."
+    }
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/jobber/49072a3c-b6d3-4c75-b6f9-8cbd86205f40"
    ]
   },
   {
@@ -15300,6 +17176,23 @@
    ]
   },
   {
+   "id": "avature:emplois.bnc.ca:36162",
+   "company": "National Bank",
+   "title": "Solutions Architect ECM",
+   "location": "Montreal, Quebec",
+   "region": "Montreal",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "avature"
+   ],
+   "urls": [
+    "https://emplois.bnc.ca/en_CA/careers/JobDetail/P6I75-ARCHITECTE-SENIOR-DE-SOLUTIONS-ECM/36162"
+   ]
+  },
+  {
    "id": "rippling:nesto:c7706ba7-2928-4b32-97a2-55be1f757b5a",
    "company": "Nesto",
    "title": "Technical Solutions Architect",
@@ -15973,45 +17866,6 @@
    ]
   },
   {
-   "id": "workday:salesforce/External_Career_Site:JR355800",
-   "company": "Salesforce",
-   "title": "Account Solution Engineer",
-   "location": "Canada - Toronto; Canada - Montreal",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 120050,
-      "max": 160580,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Ontario, Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "For Ontario-based roles, the base salary hiring range for this position is CAD 120,050 to CAD 160,580 annually."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "The range represents base salary only, and does not include company bonus, incentive for sales roles, equity or benefits, as applicable."
-    }
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/Canada---Toronto/Account-Solution-Engineer_JR355800"
-   ]
-  },
-  {
    "id": "workday:salesforce/External_Career_Site:JR356928",
    "company": "Salesforce",
    "title": "Solution Architect - (Healthcare/Life Sciences or Financial Services)",
@@ -16388,6 +18242,40 @@
    ]
   },
   {
+   "id": "lever:sophos:17629a84-3537-4127-9665-10eb62376706",
+   "company": "Sophos",
+   "title": "Director, Product Marketing, AI Solutions",
+   "location": "United States; Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": true,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/sophos/17629a84-3537-4127-9665-10eb62376706"
+   ]
+  },
+  {
+   "id": "lever:sophos:be174b49-4458-4663-906d-e8bc7e89df54",
+   "company": "Sophos",
+   "title": "Global Solutions Engineer",
+   "location": "Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/sophos/be174b49-4458-4663-906d-e8bc7e89df54"
+   ]
+  },
+  {
    "id": "greenhouse:stackadapt:4391710009",
    "company": "StackAdapt",
    "title": "Director, Product Marketing",
@@ -16689,9 +18577,75 @@
    ]
   },
   {
+   "id": "lever:trustarc:0dfbfd10-a3de-4680-bdd7-c08e499f051f",
+   "company": "TrustArc",
+   "title": "Product Marketing Manager",
+   "location": "Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 130000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "<div>Compensation: $100,000 to $130,000/year CAD</div>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/trustarc/0dfbfd10-a3de-4680-bdd7-c08e499f051f"
+   ]
+  },
+  {
+   "id": "lever:trustarc:8ad06f70-aad9-47b9-b1da-d210ef27701e",
+   "company": "TrustArc",
+   "title": "Solutions Engineer",
+   "location": "Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 115000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": ""
+     }
+    ],
+    "primary": 0,
+    "source": "field"
+   },
+   "first_seen": "2026-10-16T10:56:28+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/trustarc/8ad06f70-aad9-47b9-b1da-d210ef27701e"
+   ]
+  },
+  {
    "id": "workday:unitytech/Unity:JOBREQ-2616621",
    "company": "Unity",
-   "title": "Senior Product Marketing Manager",
+   "title": "Senior Product Marketing Manager/Gestionnaire principal(e) du marketing produit",
    "location": "Remote, USA; Montreal, Canada; San Francisco, CA, USA; Remote, Ontario, Canada; New York, NY, USA",
    "region": "Montreal",
    "role_tier": "Stretch",
