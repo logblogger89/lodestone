@@ -1,6 +1,6 @@
 ---
 name: market-check
-description: Lodestone on-request market pay check. When Ayush asks to check levels.fyi (or "market pay") for a specific role, read that company's levels.fyi page for the role's family and location, pick the matching level, and attach it to the role in the app. Never run as part of a refresh.
+description: Lodestone on-request market pay check. When Ayush asks to check levels.fyi (or "market pay") for a specific role, read that company's levels.fyi page for the role's family and location, pick the matching level, and attach it to the role in the app. Only for roles Ayush asked about: his own request in chat, or his Request market check taps in the app (answered in refresh step 3c). Never bulk or unrequested.
 ---
 
 # Market check (levels.fyi, D-054)
@@ -24,12 +24,13 @@ the paste inbox instead (he pastes the pages himself).
 
 ## Requests from the app (D-055)
 
-Ayush can tap **Request market check** on a role in the app. At the start of every session (and in `/refresh-jobs`
-step 3c), answer them:
+Ayush can tap **Request market check** on a role in the app. Each scheduled run answers them once, in `/refresh-jobs`
+step 3c (and a hand-run session can too):
 
 1. `ArtifactData list market_req` with `out_dir` set to a scratchpad folder, then
    `python3 -m lodestone market pending <that folder>`. It returns up to `daily_cap` (20, `config/market.json`)
-   requests, oldest first; the rest wait for the next day.
+   requests, oldest first, minus the levels.fyi reads already made today (New York time) in any run; the rest wait
+   for the next day.
 2. Run steps 1–3 above for each. Each request is Ayush asking about that one role, which is why this is allowed;
    never add roles he didn't request.
 3. Write each back with `ArtifactData update market_req/<id>` (if_version from the list): `status` `done`, `no_data`
