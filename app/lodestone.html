@@ -131,6 +131,12 @@ details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
 .tmeta{display:flex;flex-direction:column;gap:2px;flex:1 1 260px;min-width:0}
 .tmeta span{font-size:13px;color:var(--muted)}
 .tbtns{display:flex;gap:6px}
+.ask{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:8px 0 0;padding:8px 10px;border-radius:8px;background:var(--accent-soft);font-size:13px}
+.ask>span{flex:1 0 100%;font-weight:600}
+.meter h4{margin-bottom:8px}
+.msteps{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:0 0 6px}
+.msteps span{font-size:12px;color:var(--muted);padding-top:8px;border-top:4px solid var(--line)}
+.msteps span.on{color:var(--fg);border-top-color:var(--accent)}
 .xpways{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:8px 0}
 .xpway{display:flex;flex-direction:column;gap:6px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--surface)}
 .xpway span{font-size:13px;color:var(--muted)}
@@ -938,6 +944,7 @@ function card(j,i){
       <div class="row">${payExtras(j)}${srcLinks(j)}
         ${isNew(j)?'<span class="chip warn">New</span>':""}${cardFlags(j).map(f=>`<span class="chip warn">${esc(f)}</span>`).join("")}</div>
       ${t.status==="not"&&(S.pendingReasons===j.id||S.recent.has(j.id))?reasonsRow(j):""}
+      ${S.recent.has(j.id)?askFor(j):""}
       ${t.status&&S.recent.has(j.id)?`<p class="donenote">${{interested:"Interested: added to your pipeline.",later:`Later: back in ${S.prefs.later_days||7} days.`,not:"Not for me."}[t.status]||""} Tap the button again to undo.</p>`:""}
     </div>
     <div class="triage">${triageBtns(j)}</div>
@@ -1174,6 +1181,7 @@ function viewDetail(j){
   <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span></div>
   <div class="row actrow">${triageBtns(j)}${(j.sources||[])[0]?`<a class="btn primary" href="${esc(safeUrl(j.sources[0].url))}" target="_blank" rel="noopener">Open posting ↗</a>`:""}</div>
   ${t.status==="not"?reasonsRow(j):""}
+  ${askFor(j)}
   ${t.status==="interested"?`<div class="nextstep"><span class="note">Next steps:</span><button class="link" data-act="mreq" data-id="${esc(j.id)}">Request market check</button><button class="link" data-act="note">Add a note</button></div>`:""}
   ${(()=>{const v=((S.likes||{})[j.id]||{}).v;return `<div class="likerow"><span class="note">Tune your list:</span><button class="tbtn" data-like="1" data-id="${esc(j.id)}" aria-pressed="${v>0}">More like this</button><button class="tbtn" data-like="-1" data-id="${esc(j.id)}" aria-pressed="${v<0}">Less like this</button></div>`})()}
   ${!j.live?`<div class="chip bad">No longer live${j.closed_at?" since "+esc(new Date(parseWhen(j.closed_at)).toLocaleDateString()):""}</div>`:""}
@@ -1405,6 +1413,42 @@ async function deleteExperience(btn){
   try{await S.db.doc("profile/main").set(prof);S.profile=prof;S._editingPrefs=false;render();toast("Deleted. Your experience is no longer in Lodestone.")}
   catch(e){toast("Couldn't delete. Try again.");console.warn(e)}
 }
+/* Match quality (PRD R30, UX §8.5): what Lodestone knows about you, and the one thing that would help most next. */
+function matchQuality(){
+  const pr=S.profile||{}, tri=Object.values(S.triage).filter(t=>t&&t.status), likes=Object.values(S.likes||{}).filter(l=>l&&l.v).length;
+  const steps=[
+    {name:"Taste",ok:likes>=5||tri.length>=8,next:"Tell Lodestone what appeals: take the quick taste test",act:"taste"},
+    {name:"Experience",ok:hasExperience(pr),next:"Add your experience: upload, paste, or build it with me (2 minutes)",act:"gobuild"},
+    {name:"Daily use",ok:tri.length>=20,next:`Triage ${Math.max(0,20-tri.length)} more roles`,view:"digest"},
+    {name:"Applying",ok:tri.some(t=>t.stage&&t.stage!=="Shortlisted"),next:"Move a role you've applied to into Applied, in your Pipeline",view:"pipeline"}];
+  const level=steps.filter(x=>x.ok).length, nxt=steps.find(x=>!x.ok);
+  return {level,steps,nxt};
+}
+function qualityMeter(){
+  const q=matchQuality();
+  return `<section class="panel meter"><h4>Match quality: level ${q.level} of 4</h4>
+    <div class="msteps" role="img" aria-label="Level ${q.level} of 4">${q.steps.map(x=>`<span class="${x.ok?"on":""}">${esc(x.name)}</span>`).join("")}</div>
+    <p class="note">${q.nxt?`Next: ${q.nxt.act?`<button class="link plink" data-act="${q.nxt.act}">${esc(q.nxt.next)}</button>`:`<button class="link plink" data-view="${q.nxt.view}">${esc(q.nxt.next)}</button>`}`:"Lodestone knows enough to rank well. It keeps learning as you go."}</p></section>`;
+}
+/* One-tap questions (PRD R31, UX §8.7): asked once, at the moment they matter, on the role you just answered. */
+function askFor(j){
+  const t=tri(j.id)||{}; if(!S.canWrite||!t.status) return "";
+  if(t.status==="not"&&(t.reasons||[]).includes("Pay too low")&&!asked("minpay")){
+    const opts=[100,120,140,160,180,200,220];
+    return `<div class="ask" role="group" aria-label="Lowest base pay"><span>What's the lowest base pay you'd consider?</span>${opts.map(v=>`<button class="chip toggle" data-ask="minpay" data-v="${v*1000}">CA$${v}K</button>`).join("")}<button class="link plink" data-ask-no="minpay">Skip</button></div>`;
+  }
+  const r=j.region, regs=S.prefs.regions||[];
+  if(t.status==="interested"&&r&&r!=="Other Canada"&&!regs.includes(r)&&!asked("city-"+r)){
+    const name=REGION_SHORT[r]||r;
+    return `<div class="ask" role="group" aria-label="Add a city"><span>Add ${esc(name)} to your cities?</span><button class="chip toggle" data-ask="city" data-v="${esc(r)}">Add ${esc(name)}</button><button class="link plink" data-ask-no="city-${esc(r)}">No thanks</button></div>`;
+  }
+  return "";
+}
+async function answerAsk(kind,v){
+  const ck={...DEFAULT_PREFS.checks,...(S.prefs.checks||{})};
+  if(kind==="minpay"){const n=+v;await markAsked("minpay",{checks:{...ck,pay_yellow:n,pay_green:Math.max(ck.pay_green,n+30000)}});toast(`Saved. Roles topping out below CA$${n/1000}K now show red.`)}
+  else if(kind==="city"){const regs=[...(S.prefs.regions||[]),v];await markAsked("city-"+v,{regions:regs,checks:{...ck,green_regions:regs},dismissed_suggestions:[...(S.prefs.dismissed_suggestions||[]),"region-"+v]});toast(`Added ${REGION_SHORT[v]||v} to your cities.`)}
+}
 /* After first value (3+ roles triaged): offer the profile as an upgrade, once, dismissible. */
 const asked=id=>(S.prefs.asked||[]).includes(id);
 function markAsked(id,extra){return savePatch({asked:[...(S.prefs.asked||[]),id].slice(-200),...(extra||{})})}
@@ -1461,6 +1505,8 @@ function viewSettings(){
   const val=k=>Array.isArray(pr[k])?pr[k].join("\n"):(pr[k]||"");
   return `<div class="topbar"><h1>Profile</h1><span class="sp"></span>${freshChip()}</div>
   <p class="note">Everything Lodestone knows about you and what you want. Only you can see it. Changes apply straight away to colours and ranking; roles are re-scored against a changed profile at the next update.</p>
+  ${qualityMeter()}
+  <p class="note"><button class="link plink" data-act="reonboard">Run the quick setup again</button> to change where, what and your work status in one go.</p>
   <section class="panel"><h4>You</h4>
     ${resumeBlock(pr)}
     <div class="grid2">
@@ -1576,9 +1622,14 @@ document.addEventListener("click",e=>{
   if(d.act==="savebuild"){saveBuilder();return}
   if(d.act==="delxp"){deleteExperience(el);return}
   if(d.act==="gobuild"||d.act==="goxp"){S.xpOpen=d.act==="gobuild"?"build":"";setView("settings");if(d.act==="goxp")document.querySelector(".xpways")?.scrollIntoView({block:"center"});else document.getElementById("b-role")?.focus();return}
-  if(d.askNo){markAsked(d.askNo);return}
+  if(d.askNo){e.stopPropagation();markAsked(d.askNo);return}
+  if(d.ask){e.stopPropagation();answerAsk(d.ask,d.v);return}
   if(d.act==="obbanner"){lsSet("obBannerOff",true);render();return}
-  if(d.act==="reonboard"){S._obForce=true;S._obDone=false;S.ob=null;setView("digest");return}
+  if(d.act==="reonboard"||d.act==="taste"){   // run setup again, pre-filled with what Lodestone already knows
+    const pr=S.profile||{}, ws=pr.work_status, st=(pr.onboarding||{}).status_answer;
+    S.ob={step:d.act==="taste"?4:1,a:{cities:[...(S.prefs.regions||[])],anywhere:false,status:st||ws||"",role_text:(pr.preferences||{}).role_wanted||"",
+      families:OB_FAMILIES.filter(f=>((pr.preferences||{}).role_families||[]).includes(f[1])).map(f=>f[0]),paste:"",other_country:"",taste:{}}};
+    S._obForce=true;S._obDone=false;setView("digest");return}
   if(d.ob){obCapture();const o=obState();
     if(d.ob==="next"){o.step=Math.min(4,o.step+1);if(o.step===4)o.picks=null}
     else if(d.ob==="back") o.step=Math.max(0,o.step-1);
@@ -1610,7 +1661,7 @@ document.addEventListener("click",e=>{
   if(d.act==="mreq"){e.stopPropagation();const j=jobById(d.id);if(j)requestMarket(j);return}
   if(d.act==="saveprefs"){savePrefs();return}
   if(d.act==="resetw"){SUBS.forEach(k=>{const i=document.getElementById("w-"+k);if(i)i.value=DEFAULT_PREFS.weights[k]});updateWeightLabels();S._editingPrefs=true;return}
-  if(d.open!==undefined&&!e.target.closest(".triage,.reasons,a,select")){openJob(d.open,d.idx!=null&&d.idx!==""?+d.idx:null)}
+  if(d.open!==undefined&&!e.target.closest(".triage,.reasons,.ask,a,select")){openJob(d.open,d.idx!=null&&d.idx!==""?+d.idx:null)}
 });
 document.addEventListener("keydown",e=>{   // arrow keys move between detail tabs (ARIA tabs pattern)
   const t=e.target; if(!t||t.getAttribute("role")!=="tab"||!["ArrowLeft","ArrowRight","Home","End"].includes(e.key)) return;
