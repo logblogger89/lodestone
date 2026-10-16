@@ -101,12 +101,19 @@ details.quotes summary{cursor:pointer;font-size:12px;color:var(--muted)}
 .report .actions{border:1px solid var(--warn);border-radius:8px;padding:8px 12px;margin-top:12px}
 .archive details{border-top:1px solid var(--line);padding:10px 0}
 .archive summary{cursor:pointer}
-.card.sug{display:grid;gap:6px;cursor:default}
+.card.sug{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;cursor:default}
 .panel button.link{border:0;background:none;padding:0;cursor:pointer;color:var(--accent);font-weight:600}
 .checks{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
 .ck{display:inline-flex;align-items:center;gap:5px;font-size:12px;padding:2px 9px 2px 7px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
 .ck b{font-size:11px}
 .ck-good{background:var(--good-soft);color:var(--good)}
+.ck.tier{background:var(--surface-2);color:var(--fg);border-color:var(--line);font-weight:600}
+.ck.tier.t-core{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.flabel{font-size:12px;color:var(--muted);align-self:center}
+.legend{margin:2px 0 12px;font-size:13px;color:var(--muted)}
+.legend summary{cursor:pointer;width:max-content}
+.legend p,.legend ul{margin:8px 0 0}
+.legend li{margin:4px 0}
 .ck-warn{background:var(--warn-soft);color:var(--warn)}
 .ck-bad{background:var(--bad-soft);color:var(--bad);font-weight:600}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
@@ -128,6 +135,7 @@ a.src:hover{border-color:var(--accent);color:var(--accent)}
 .compass.core{border-color:var(--accent)} .compass.core b{color:var(--accent)}
 .compass.adjacent{border-color:var(--good)} .compass.adjacent b{color:var(--good)}
 .ring{position:relative;width:56px;height:56px}
+.ring .cap{position:absolute;left:0;right:0;top:36px;text-align:center;font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .ring svg{width:56px;height:56px;display:block}
 .ring .val{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--font-mono);font-weight:500;font-size:16px;color:var(--fg)}
 .ring .trk{stroke:var(--surface-2)} .ring .arc{stroke:var(--accent)} .ring .ndl{fill:var(--accent)}
@@ -239,9 +247,11 @@ kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);bor
 const STAGES = ["Shortlisted","Applied","Screen","Interviewing","Offer","Closed"];
 const TIERS = ["Core","Adjacent","Stretch"];
 const TIER_HELP = {Core:"Core PM role", Adjacent:"Adjacent role (TPM, program, strategy & ops, chief of staff, trust & safety)", Stretch:"Stretch role (product marketing, solutions, analytics)"};
+const TIER_NAME = {Core:"Core PM", Adjacent:"PM-adjacent", Stretch:"Stretch"};
+const TIER_WHAT = {Core:"Product manager role", Adjacent:"TPM, program, strategy & ops, chief of staff or trust & safety", Stretch:"Product marketing, solutions engineering or analytics"};
 const REGIONS = ["GTA","Waterloo Region","Remote-Canada","Ottawa","Montreal","Vancouver","Calgary","Edmonton","Other Canada"];
 const SUBS = ["role","level","domain","pathway","pay","skills","freshness"];
-const SUBLABEL = {role:"Role",level:"Level",domain:"Domain",pathway:"Pathway",pay:"Pay",skills:"Skills",freshness:"Freshness"};
+const SUBLABEL = {role:"Role",level:"Level",domain:"Domain",pathway:"Work permit",pay:"Pay",skills:"Skills",freshness:"Freshness"};
 /* A weight saved before a factor existed falls back to its default (so freshness counts for older settings). */
 const wv=(W,k)=>+(W&&W[k]!=null?W[k]:DEFAULT_PREFS_W[k])||0;
 const NOT_REASONS = ["Level too junior","Not my domain","Location","People management","Pay too low","Company"];
@@ -305,7 +315,7 @@ const postedAt = j => parseWhen(j.posted_at, parseWhen(j.last_seen));
 const postedMs = j => postedAt(j) ?? parseWhen(j.first_seen);
 
 /* ---------- formatting ---------- */
-function fmtK(n){n=+n;if(!isFinite(n)) return "";if(n<1000) return n%1?n.toFixed(2):String(n);const k=n/1000;return (k%1?k.toFixed(1).replace(/\.0$/,""):String(k))+"K"}
+function fmtK(n){n=+n;if(!isFinite(n)) return "";if(n<1000) return n%1?n.toFixed(2):String(n);return Math.round(n/1000)+"K"}
 /* One range as posted (never converted, B8): CA$126K–176K, US$137.9K–256.1K, $45–55/hr. */
 function rangeText(r){
   if(!r||(!r.min&&!r.max)) return "";
@@ -347,6 +357,16 @@ function payCard(j){
   if(estTag) return estTag+eqTag;
   return (pi.checked?`<span class="nopay">No pay in posting</span>`:`<span class="nopay">Pay not checked yet</span>`)+eqTag;
 }
+/* Card extras next to the Pay check: equity, ranges for other places, and how an estimate was made. */
+function payExtras(j){
+  const pi=payInfo(j), eq=pi.equity&&pi.equity.offered&&pi.equity.certainty!=="possible", bits=[];
+  if(pi.main&&pi.others.length){const usN=pi.others.filter(r=>r.canada===false||r.currency==="USD").length;bits.push(`+${pi.others.length} ${usN===pi.others.length?"US":"more"} range${pi.others.length>1?"s":""}`)}
+  if(!pi.main&&pi.est) bits.push(`estimate: ${pi.est.confidence} confidence`);
+  if(eq) bits.push("+ equity");
+  return bits.map(b=>`<span class="paymore">${esc(b)}</span>`).join("");
+}
+/* Scorer flags, minus the ones a colour check already shows. */
+const cardFlags=j=>((j.fit&&j.fit.flags)||[]).filter(f=>!/pay|salary|compensation|location|based|relocat|level|junior|senior|manag|old|posted/i.test(f)).slice(0,2);
 /* Highlight the numbers and the words that say what they cover, inside the quoted sentence. */
 function markQuote(q){
   return esc(q).replace(/((?:US|CA|C)?\$\s?\d[\d,]*(?:\.\d\d)?(?:\s?[kK]\b)?|\b\d{1,3}(?:,\d{3})+(?:\.\d\d)?(?:\s?(?:\$\s?)?(?:CAD|USD))?|\b\d+(?:\.\d+)?\s?%)/g,"<mark>$1</mark>")
@@ -554,32 +574,34 @@ function prefChecks(j){
     :{k:"Location",l:"warn",t:REGION_SHORT[rg]||rg||"Canada",why:"In Canada, outside your preferred locations (would mean moving)"});
   // work permit
   const pwj=pw(j), ps=+pwj.score, sig=(pwj.signals||[])[0];
-  out.push(ps>=80?{k:"Work permit",l:"good",t:sig&&sig.label==="Intra-company transfer"?"Internal transfer":sig&&sig.label.startsWith("You have an open")?"Open work permit":"Hires from abroad",why:pathwayWhy(j)||"Strong evidence they hire people from other countries"}
-    :ps<=20?{k:"Work permit",l:"bad",t:"Must already be eligible",why:pathwayWhy(j)||"The posting says no sponsorship"}
-    :{k:"Work permit",l:"warn",t:ps>=55?"Some evidence":"No information",why:pathwayWhy(j)||"No evidence either way about hiring from abroad"});
+  out.push(ps>=80?{k:"Work permit",l:"good",t:sig&&sig.label==="Intra-company transfer"?"Internal transfer":sig&&sig.label.startsWith("You have an open")?"You have an open permit":sig&&sig.label.startsWith("Sponsorship")?"Sponsorship offered":"Hires from abroad",why:pathwayWhy(j)||"Strong evidence they hire people from other countries"}
+    :ps<=20?{k:"Work permit",l:"bad",t:"No sponsorship",why:pathwayWhy(j)||"The posting says you must already be allowed to work in Canada"}
+    :ps>=55?{k:"Work permit",l:"warn",t:"Sponsors sometimes",why:pathwayWhy(j)||"A few approvals to hire from abroad, mostly non-tech roles"}
+    :{k:"Work permit",l:"warn",t:"Sponsorship unknown",why:pathwayWhy(j)||"No public record either way of hiring from abroad"});
   // pay
   const pi=payInfo(j), m=pi.main;
   if(m&&m.max&&m.currency!=="USD"){const top=m.interval==="hour"?m.max*2000:m.max, base=["base","unspecified",undefined].includes(m.kind);
-    out.push({k:"Pay",l:top>=c.pay_green?"good":top>=c.pay_yellow?"warn":"bad",t:`Up to CA$${Math.round(top/1000)}K${base?"":" incl. bonus"}`,
+    out.push({k:"Pay",l:top>=c.pay_green?"good":top>=c.pay_yellow?"warn":"bad",t:`${rangeText(m)}${base?"":" incl. bonus"}`,
       why:`Posted top of range vs your targets (green from CA$${c.pay_green/1000}K, yellow from CA$${c.pay_yellow/1000}K)`});}
-  else if(pi.est){out.push({k:"Pay",l:pi.est.max>=c.pay_green&&pi.est.confidence==="high"?"good":pi.est.max>=c.pay_yellow?"warn":"bad",   // an estimate is green only at high confidencet:`est. up to CA$${Math.round(pi.est.max/1000)}K`,
+  else if(pi.est){out.push({k:"Pay",l:pi.est.max>=c.pay_green&&pi.est.confidence==="high"?"good":pi.est.max>=c.pay_yellow?"warn":"bad",   // an estimate is green only at high confidencet:`${rangeText(pi.est)} est.`,
       why:`No Canadian range posted; Lodestone's estimate (${pi.est.confidence} confidence)`});}
-  else out.push({k:"Pay",l:"warn",t:"Not posted",why:"No Canadian pay range and not enough data to estimate"});
+  else out.push({k:"Pay",l:"warn",t:pi.ranges.length?"US pay only":"Pay not posted",why:pi.ranges.length?"The posting only lists pay for other countries":"No Canadian pay range and not enough data to estimate"});
   // level
   const L=levelNums(j);
   if(!L.length) out.push({k:"Level",l:"warn",t:"Level unclear",why:"Couldn't tell the level from the posting"});
   else{const hi=Math.max(...L), lo=Math.min(...L);
-    out.push({k:"Level",l:hi>=c.level_green?"good":hi>=c.level_yellow?"warn":"bad",t:lo===hi?`≈ Google L${hi}`:`≈ Google L${lo}–L${hi}`,why:`Your target is L${c.level_green} (L${c.level_yellow} shows yellow)`});}
+    out.push({k:"Level",l:hi>=c.level_green?"good":hi>=c.level_yellow?"warn":"bad",t:lo===hi?`Level ≈ L${hi}`:`Level ≈ L${lo}–L${hi}`,why:`Your target is L${c.level_green} (L${c.level_yellow} shows yellow)`});}
   // freshness
   const fr=freshness(j);
-  out.push(fr.days==null?{k:"Posted",l:"warn",t:"Date unknown",why:fr.why}
-    :{k:"Posted",l:fr.days<=c.fresh_green?"good":fr.days<=c.fresh_yellow?"warn":"bad",t:fr.days===0?"Today":`${fr.days}d ago`,why:fr.why});
+  out.push(fr.days==null?{k:"Posted",l:"warn",t:"Post date unknown",why:fr.why}
+    :{k:"Posted",l:fr.days<=c.fresh_green?"good":fr.days<=c.fresh_yellow?"warn":"bad",t:(fr.dated?"Posted ":"Seen ")+(fr.days===0?"today":`${fr.days}d ago`),why:fr.why});
   // people management: only when it goes against the preference
   if(managesPeople(j)) out.push({k:"Team",l:S.prefs.exclude_people_mgmt?"bad":"warn",t:"Manages people",why:"You prefer individual-contributor roles"});
   return out;
 }
+function tierTag(j){return j.tier?`<span class="ck tier t-${esc(j.tier.toLowerCase())}" title="${esc(TIER_WHAT[j.tier]||"")}">${esc(TIER_NAME[j.tier]||j.tier)}</span>`:""}
 function checkStrip(j){
-  return `<div class="checks">${prefChecks(j).map(x=>`<span class="ck ck-${x.l}" title="${esc(x.k)}: ${esc(x.why)}"><b aria-hidden="true">${CHECK_ICON[x.l]}</b><span class="sr">${x.l==="good"?"Matches":x.l==="bad"?"Doesn't match":"Partly matches"}: ${esc(x.k)}, </span>${esc(x.t)}</span>`).join("")}</div>`;
+  return `<div class="checks">${tierTag(j)}${prefChecks(j).map(x=>`<span class="ck ck-${x.l}" title="${esc(x.k)}: ${esc(x.why)}"><b aria-hidden="true">${CHECK_ICON[x.l]}</b><span class="sr">${x.l==="good"?"Matches":x.l==="bad"?"Doesn't match":"Partly matches"}: ${esc(x.k)}, </span>${esc(x.t)}</span>`).join("")}</div>`;
 }
 function checksPanel(j){
   const xs=prefChecks(j), n=xs.filter(x=>x.l==="good").length;
@@ -590,7 +612,7 @@ function checksPanel(j){
 /* Compass ring: the arc fills with the score and the needle points to true north at 100. */
 function ring(v,size){
   const r=24,c=2*Math.PI*r,off=c*(1-v/100),a=(v/100)*360-90,rad=a*Math.PI/180,nx=28+24*Math.cos(rad),ny=28+24*Math.sin(rad);
-  return `<div class="ring" title="Fit ${v} of 100"><svg viewBox="0 0 56 56" aria-hidden="true"><circle class="trk" cx="28" cy="28" r="${r}" fill="none" stroke-width="5"/><circle class="arc" cx="28" cy="28" r="${r}" fill="none" stroke-width="5" stroke-linecap="round" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" transform="rotate(-90 28 28)"/><circle class="ndl" cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="3.2"/></svg><span class="val">${v}</span></div>`;
+  return `<div class="ring" title="Fit ${v} of 100"><svg viewBox="0 0 56 56" aria-hidden="true"><circle class="trk" cx="28" cy="28" r="${r}" fill="none" stroke-width="5"/><circle class="arc" cx="28" cy="28" r="${r}" fill="none" stroke-width="5" stroke-linecap="round" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" transform="rotate(-90 28 28)"/><circle class="ndl" cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="3.2"/></svg><span class="val">${v}</span><span class="cap">fit</span></div>`;
 }
 function staleTag(j){
   const fr=freshness(j); if(fr.days==null) return "";
@@ -617,11 +639,11 @@ function card(j,i){
     ${tierCompass(j)}
     <div style="min-width:0">
       <h3>${esc(j.title)}</h3>
-      <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span>${(j.fit&&j.fit.work_mode&&j.fit.work_mode!=="unclear")?`<span>${esc(j.fit.work_mode)}</span>`:j.workplace?`<span>${esc(j.workplace)}</span>`:""}${staleTag(j)}</div>
+      <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span>${(j.fit&&j.fit.work_mode&&j.fit.work_mode!=="unclear")?`<span>${esc(j.fit.work_mode)}</span>`:j.workplace?`<span>${esc(j.workplace)}</span>`:""}</div>
       ${j.fit&&j.fit.summary?`<p class="fitsum">${esc(j.fit.summary)}</p>`:""}
       ${checkStrip(j)}
-      <div class="row">${payCard(j)}${srcLinks(j)}
-        ${isNew(j)?'<span class="chip warn">New</span>':""}${((j.fit&&j.fit.flags)||[]).slice(0,2).map(f=>`<span class="chip warn">${esc(f)}</span>`).join("")}</div>
+      <div class="row">${payExtras(j)}${srcLinks(j)}
+        ${isNew(j)?'<span class="chip warn">New</span>':""}${cardFlags(j).map(f=>`<span class="chip warn">${esc(f)}</span>`).join("")}</div>
       ${S.pendingReasons===j.id&&t.status==="not"?reasonsRow(j):""}
     </div>
     <div class="triage">${triageBtns(j)}</div>
@@ -666,7 +688,7 @@ function viewDigest(){
   let body;
   if(S.offline) body=offlineState();
   else if(!S.ready) body=`<div class="empty"><h2>Loading your jobs…</h2><p>Reading Lodestone's database.</p></div>`;
-  else if(!live.length) body=`<div class="empty"><h2>No jobs yet</h2><p>Run <kbd>/refresh-jobs</kbd> in a Claude Code session on the Lodestone repo. New roles appear here as soon as it finishes.</p></div>`;
+  else if(!live.length) body=`<div class="empty"><h2>No jobs yet</h2><p>Roles appear after the daily run (about 7am New York time).</p></div>`;
   else if(!all.length) body=`<div class="empty"><h2>Nothing matches these filters</h2><p>Try "All regions", turn on more role tiers, or clear the search.</p></div>`;
   else body=`<div class="list">
       ${fresh.length?`<div class="section-label">New since your last visit</div>`:""}
@@ -681,10 +703,15 @@ function viewDigest(){
     <input type="search" id="q" placeholder="Search title, company, team" value="${esc(S.q)}" aria-label="Search">
     <select id="region" aria-label="Region"><option value="preferred"${S.region==="preferred"?" selected":""}>My regions</option><option value="all"${S.region==="all"?" selected":""}>All of Canada</option>${REGIONS.map(r=>`<option${S.region===r?" selected":""}>${r}</option>`).join("")}</select>
     <select id="sort" aria-label="Sort"><option value="best"${S.sort==="best"?" selected":""}>Best match</option><option value="newest"${S.sort==="newest"?" selected":""}>Newest</option><option value="pay"${S.sort==="pay"?" selected":""}>Highest Canadian pay</option><option value="company"${S.sort==="company"?" selected":""}>Company</option></select>
-    ${TIERS.map(t=>`<button class="chip toggle" data-tier="${t}" aria-pressed="${S.tierOn.has(t)}" title="${esc(TIER_HELP[t])}">${t}</button>`).join("")}
+    <span class="flabel">Role type</span>${TIERS.map(t=>`<button class="chip toggle" data-tier="${t}" aria-pressed="${S.tierOn.has(t)}" title="${esc(TIER_WHAT[t])}">${esc(TIER_NAME[t])}</button>`).join("")}
   </div>
+  <details class="legend"><summary>What the colours mean</summary>
+    <p><span class="ck ck-good"><b>✓</b>green</span> matches what you want · <span class="ck ck-warn"><b>~</b>yellow</span> partly, or unknown · <span class="ck ck-bad"><b>✕</b>red</span> goes against it. Set the thresholds in your Profile.</p>
+    <ul><li><b>Work permit:</b> "Hires from abroad" = approved by the government to hire foreign workers recently; "Sponsors sometimes" = a few approvals, mostly non-tech; "Sponsorship unknown" = no public record either way; "No sponsorship" = the posting says you must already be allowed to work in Canada.</li>
+    <li><b>Role type:</b> Core PM = product manager roles; PM-adjacent = TPM, program, strategy & ops, chief of staff, trust & safety; Stretch = product marketing, solutions, analytics.</li>
+    <li><b>Fit</b> (the ring) = how well the role matches your profile, out of 100.</li></ul></details>
   ${body}
-  <p class="note">"Best match" ranks by fit score (your weights in Profile), then role tier and region for anything not scored yet. Keyboard: <kbd>J</kbd>/<kbd>K</kbd> move, <kbd>I</kbd>/<kbd>L</kbd>/<kbd>N</kbd> triage, <kbd>Enter</kbd> opens.</p>`;
+  <p class="note">"Best match" ranks by fit score (your weights in Profile), then role type and region for anything not scored yet. Keyboard: <kbd>J</kbd>/<kbd>K</kbd> move, <kbd>I</kbd>/<kbd>L</kbd>/<kbd>N</kbd> triage, <kbd>Enter</kbd> opens.</p>`;
 }
 function offlineState(){return `<div class="empty"><h2>Open Lodestone on claude.ai to see your jobs</h2><p>Your jobs and triage live in this page's private database, which only loads inside claude.ai while you're signed in.</p></div>`}
 /* Pathway signals (R10): each with its status and a link to the evidence. Signals, not immigration advice. */
@@ -712,10 +739,10 @@ function fitPanel(j){
 }
 function viewDetail(j){
   const t=tri(j.id)||{};
-  return `<div class="row" style="justify-content:space-between"><span class="chip t-${(j.tier||"").toLowerCase()}">${esc(j.tier)} · ${esc(TIER_HELP[j.tier]||"")}</span><button class="btn" data-act="close">Close</button></div>
+  return `<div class="row" style="justify-content:space-between"><span class="chip t-${(j.tier||"").toLowerCase()}">${esc(TIER_NAME[j.tier]||j.tier||"")} · ${esc(TIER_WHAT[j.tier]||"")}</span><button class="btn" data-act="close">Close</button></div>
   <h2>${esc(j.title)}</h2>
   <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span></div>
-  <div class="row">${triageBtns(j)}</div>
+  <div class="row">${triageBtns(j)}${(j.sources||[])[0]?`<a class="btn primary" href="${esc(safeUrl(j.sources[0].url))}" target="_blank" rel="noopener">Open posting ↗</a>`:""}</div>
   ${t.status==="not"?reasonsRow(j):""}
   ${!j.live?`<div class="chip bad">No longer live${j.closed_at?" since "+esc(new Date(parseWhen(j.closed_at)).toLocaleDateString()):""}</div>`:""}
   ${checksPanel(j)}
@@ -726,7 +753,7 @@ function viewDetail(j){
     ${j.department?`<dt>Team</dt><dd>${esc(j.department)}</dd>`:""}
     <dt>Posted</dt><dd>${esc(ago(postedMs(j))||"Unknown")}</dd>
     <dt>First seen</dt><dd>${esc(ago(parseWhen(j.first_seen)))}</dd>
-    <dt>Manages people</dt><dd>${j.people_mgmt?"Title suggests it":"Not from the title"}</dd>
+    <dt>Manages people</dt><dd>${managesPeople(j)?"Yes, the posting says so":"No (individual contributor)"}</dd>
   </dl></section>
   ${payPanel(j)}
   ${pathwayPanel(j)}
@@ -763,7 +790,7 @@ function viewAdd(){
   <div class="tip">Found a role on LinkedIn or anywhere else? Copy the link and paste it here. You can paste several links at once, or the job description text if the page needs a login.</div>
   <section class="panel">
     <div class="field"><label for="paste">Links or job description</label><textarea id="paste" placeholder="https://www.linkedin.com/jobs/view/..."></textarea></div>
-    <div class="row"><button class="btn primary" data-act="addjob"${S.offline?" disabled":""}>Add to inbox</button><span class="note">Lodestone reads these at your next <kbd>/refresh-jobs</kbd>, matches them to known roles, and adds new ones to the digest.</span></div>
+    <div class="row"><button class="btn primary" data-act="addjob"${S.offline?" disabled":""}>Add to inbox</button><span class="note">Lodestone reads these at the next daily run (about 7am New York time), matches them to known roles, and adds new ones to the digest.</span></div>
   </section>
   ${items.length?`<section class="panel"><h4>Inbox</h4><table class="tbl"><thead><tr><th>Added</th><th>What you pasted</th><th>Status</th></tr></thead><tbody>
     ${items.map(x=>`<tr><td class="mono">${esc(ago(parseWhen(x.created_at)))}</td><td style="overflow-wrap:anywhere">${esc(String(x.text||"").slice(0,160))}</td><td><span class="chip ${INBOX_CLASS[x.status]||""}">${esc(INBOX_LABEL[x.status]||x.status||"")}</span>${x.result?`<div class="note">${esc(x.result)}</div>`:""}${x.job_id&&S.jobs[x.job_id]?` <button class="btn" data-open="${esc(x.job_id)}">Open role</button>`:""}</td></tr>`).join("")}
@@ -773,7 +800,7 @@ function viewAdd(){
 const ROUTE_LABEL={lmia:"Government hiring list",capture:"You pasted a role",search:"Found on a job board",vc:"VC portfolio board"};
 function suggestionCard(g){
   const dec=S.codec[g.key];
-  const roles=g.roles_canada?`<div class="note"><strong>${g.roles_canada} open Canadian role${g.roles_canada>1?"s":""} in your families</strong>${(g.sample_roles||[]).length?": "+g.sample_roles.map(esc).join(" · "):""}</div>`
+  const roles=g.roles_canada?`<div class="note"><strong>${g.roles_canada} open Canadian role${g.roles_canada>1?"s":""} matching your role types</strong>${(g.sample_roles||[]).length?": "+g.sample_roles.map(esc).join(" · "):""}</div>`
     :g.board?`<div class="note">Job board found; no matching Canadian roles open right now.</div>`:`<div class="note">No hosted job board found; Claude would add its careers site.</div>`;
   const ev=Object.entries(g.routes||{}).map(([r,t])=>`<li><b>${esc(ROUTE_LABEL[r]||r)}:</b> ${esc(t)}</li>`).join("");
   const act=dec?`<div class="row"><span class="chip ${dec.decision==="approve"?"s-stated":"s-unknown"}">${dec.decision==="approve"?"Approved: joins your watchlist at the next run":"Dismissed"}</span><button class="tbtn" data-sug="undo" data-key="${esc(g.key)}">Undo</button></div>`
@@ -930,7 +957,7 @@ function freshPanel(){
     const extra=Object.entries(c).filter(([x])=>x!=="at").map(([x,v])=>`${x.replace(/_/g," ")}: ${typeof v==="object"?"…":v}`).join(" · ");
     return `<tr><td>${esc(name)}${extra?`<div class="note">${esc(extra)}</div>`:""}</td><td class="mono">${esc(ago(ms))}</td><td>${old?'<span class="chip warn">Over 7 days</span>':""}</td></tr>`};
   return `<div class="row" style="justify-content:space-between"><h2>Last updated</h2><button class="btn" data-act="close">Close</button></div>
-  <p class="note">Lodestone updates when you run <kbd>/refresh-jobs</kbd> in a Claude Code session. Anything older than 7 days is flagged.</p>
+  <p class="note">Lodestone updates every morning at about 7am New York time. Anything older than 7 days is flagged.</p>
   <section class="panel"><table class="tbl"><thead><tr><th>Component</th><th>Updated</th><th></th></tr></thead><tbody>${keys.map(row).join("")||'<tr><td colspan="3">No refresh recorded yet.</td></tr>'}
 
 </tbody></table></section>`;
