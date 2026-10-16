@@ -20,6 +20,10 @@ module.exports = {
     const cards = await h.page.locator('#view .card').count();
     h.check(cards >= 5 && cards <= 10, `Today shows a short list (${cards} roles)`);
     await h.shot('today');
+    // D-076: her settings predate role families (tiers Core + Adjacent): she keeps exactly what she had
+    const tags = await h.page.locator('#view .card .ck.tier').evaluateAll(xs => xs.map(x => [x.textContent, /t-core/.test(x.className)]));
+    h.check(tags.every(([t, core]) => (t === 'Product') === core), `Product roles are highlighted as her field, others plain (${[...new Set(tags.map(t => t[0]))].join(', ')})`);
+    h.check(!tags.some(([t]) => /analytics|Business analysis|Project|marketing|Solutions/.test(t)), 'No stretch or new families appear (she had Stretch off)');
 
     h.task('Triage two fast, then ask for more without finishing the list');
     await h.page.locator('#view .card [data-tri="interested"]').first().click(); await h.wait(250);

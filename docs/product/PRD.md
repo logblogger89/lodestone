@@ -34,7 +34,7 @@ Ayush is a Google L5 PM (operating near L6) on an H-1B in the NYC area. He wants
 ## 3. Goals and non-goals
 
 **Goals (MVP)**
-1. Surface the relevant Canadian PM and PM-adjacent roles from a broad set of sources, deduplicated, with each source visible.
+1. Surface the relevant Canadian roles in the user's field (product management first, for Ayush) and the fields next to it, from a broad set of sources, deduplicated, with each source visible.
 2. Rank roles by explainable fit to Ayush's profile, so the top of the digest is worth his time.
 3. Show pay (posted or estimated) and immigration-pathway signals (stated or inferred), clearly labelled.
 4. Make triage and pipeline tracking fast enough to do in a few spare minutes.
@@ -102,6 +102,7 @@ Ayush is a Google L5 PM (operating near L6) on an H-1B in the NYC area. He wants
 | **R29. Learning from signals** (D-067, UX §8.6) | Explicit actions plus reading time on the Job description tab (capped, with an off switch) feed ranking. Preference changes are suggested with one tap to accept, shown with their reason, and undoable. "More / less like this". About 1 in 10 cards is exploration, labelled | No preference changes silently. The off switch stops reading-time collection. The score quality check (D-062) gates any learning change. **Built P1-S6 (D-068)**: ordering with learning 70% vs 60% without, on the owner's triage |
 | **R30. Match-quality levels** (D-067, UX §8.5) | Levels 0–4 by what the system knows; a Profile meter shows the level and the next step | The meter is visible from the first visit and moves as the user acts. **Built P1-S7 (D-073)** |
 | **R31. One-tap questions in context** (D-067, UX §8.7) | Ask a preference question only when an action makes it relevant, once, dismissible | No question repeats after dismissal. Answers update the Profile. **Built P1-S7 (D-073)** |
+| **R32. Role types for any field** (D-076, UX §8.14) | Every job has one absolute family (Product management, Program management, Project management, Business analysis, Data and product analytics, Strategy and operations, Trust safety and policy, Product marketing, Solutions). The user picks the families they do and which others to see; tags name the family, highlighted when it's their field. Setup understands typed words ("business analyst"), offers pay targets that fit the field, and only families the user sees are scored | No PM-relative wording ("PM-adjacent", "Core PM") anywhere a non-PM user looks. A business analyst's first list is mostly business analysis roles, in his words. A product manager's list is unchanged. **Built (D-076)** |
 
 ### 6.2 P1: V1 (fast follow)
 
@@ -191,6 +192,8 @@ PR timeline view (C17) · interview prep pack for roles marked Interested (F27) 
 | **Market hypothesis** | Canadian employers may be reluctant to hire people outside Canada or without Canadian work experience (because of LMIA), which could limit options. *To be validated in domain research* |
 
 ## Appendix B. Default role families (D-017, user-editable)
+
+> **Superseded in part by D-076 (10-16).** The tiers below now describe Ayush's view only. Jobs carry an absolute family; "Core", "Adjacent" and "Stretch" are worked out per person from the families they pick (their own field, its related families, its stretch families), all in `config/role_taxonomy.json`. For a product manager the result matches this table.
 
 Proposed by Claude. The defaults are based on Ayush's background: enterprise AI and data platforms, trust and safety, risk and compliance, commerce, and analytics.
 
@@ -283,7 +286,7 @@ The MVP serves one user. Everything specific to that user is modeled as **data o
 | Dimension | MVP value | Extension point |
 |---|---|---|
 | User | Ayush | User profile and preferences per user. The data model is ready for multiple tenants |
-| Role family | PM plus PM-adjacent families (defined via Q-18) | A pluggable role taxonomy and title-synonym packs |
+| Role family | PM plus PM-adjacent families (defined via Q-18). **Since D-076:** nine families in one config file; each user picks their own field and which others to see | A pluggable role taxonomy and title-synonym packs (built: `config/role_taxonomy.json`) |
 | Geography | GTA plus Waterloo, then the rest of Canada | Geo packs: locations, currency, cost-of-living index, pay-transparency rules |
 | Leveling | Google ladder ↔ other companies | Leveling maps per role family, as versioned data |
 | Comp | USD→CAD with a cost-of-living adjustment and an equity liquidity discount | A comp model driven by a per-user anchor and weights |

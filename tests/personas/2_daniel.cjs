@@ -29,9 +29,10 @@ module.exports = {
     await h.page.locator('.obnav .btn.primary').click(); await h.wait(150);
 
     h.task('Role: in his own words plus two role types');
-    await h.page.fill('#ob-role', 'product marketing or product manager, fintech, 6 years');
-    await h.page.locator('[data-obf="fam"][data-v="pmm"]').click(); await h.wait(100);
-    await h.page.locator('[data-obf="fam"][data-v="pm"]').click(); await h.wait(100);
+    await h.page.fill('#ob-role', 'fintech product marketing, 6 years'); await h.wait(100);
+    h.check((await h.page.locator('[data-obf="fam"][data-v="pmm"]').getAttribute('aria-pressed')) === 'true', 'Typing "product marketing" lights up that card');
+    await h.page.locator('[data-obf="fam"][data-v="pm"]').click(); await h.wait(100);   // and he's open to product manager roles too
+    h.check((await h.page.locator('[data-obf="fam"][aria-pressed="true"]').count()) === 2, 'Tapping Product manager adds it; product marketing stays picked');
     h.check((await h.page.inputValue('#ob-role')).includes('fintech'), 'His typed words survive tapping role cards');
     await h.shot('role');
     await h.page.locator('.obnav .btn.primary').click(); await h.wait(200);
@@ -114,7 +115,10 @@ module.exports = {
     await h.click('[data-view="digest"]'); await h.wait(200);
     await h.page.locator('details.legend summary').click(); await h.wait(150);
     const legend = await h.text('details.legend');
-    h.check(/PM-adjacent/.test(legend) && /Stretch/.test(legend), 'Legend explains the role types');
+    h.check(/your field \([^)]*Product management/.test(legend) && /your field \([^)]*Product marketing/.test(legend), `Legend names his own field in his words (${legend.match(/Role type:[^\n]*/)})`);
+    h.check(!/PM-adjacent|Core PM/.test(await h.text()), 'Nothing calls his roles "PM-adjacent" or "Core PM"');
     h.check(/L5|L6|level/i.test(legend), 'Legend explains the levels shown on cards');
+    const pmm = h.page.locator('#view .ck.tier', { hasText: 'Product marketing' });
+    h.check(await pmm.count() && /t-core/.test(await pmm.first().getAttribute('class')), 'Product marketing roles carry his field\'s highlighted tag');
   }
 };

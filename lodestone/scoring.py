@@ -16,7 +16,7 @@ import json
 import re
 import shutil
 
-from . import store
+from . import rules, store
 from .appexport import job_id
 
 INBOX = store.STATE / "score_inbox"
@@ -39,6 +39,13 @@ def profile_key(profile: dict | None) -> str | None:
         return None
     profile = profile.get("data", profile)
     part = {k: profile.get(k) for k in PROFILE_KEYS}
+    pref = dict(part.get("preferences") or {})
+    pref.pop("families_shown", None)          # which other families you see changes what is scored, not how
+    pref.pop("role_families", None)           # labels mirroring `families`
+    if pref.get("families") in (None, [], rules.default_families()):
+        pref.pop("families", None)            # the default field: same scores as before families existed
+    if part.get("preferences") is not None:
+        part["preferences"] = pref
     return hashlib.sha1(json.dumps(part, sort_keys=True, default=str).encode()).hexdigest()[:12]
 
 
@@ -67,6 +74,19 @@ def _pay_summary(pay: dict | None) -> str:
     return "; ".join(out)
 
 
+def family_scope(profile: dict | None) -> set[str]:
+    """Role families worth scoring for this person (D-076): the families they do (`preferences.families`) plus the
+    ones they asked to see too (`preferences.families_shown`). Older profiles without families: the default
+    families plus everything related or a stretch, which is what was scored before."""
+    pref = ((profile or {}).get("data", profile or {}).get("preferences") or {})
+    mine = [f for f in (pref.get("families") or []) if f] or rules.default_families()
+    shown = pref.get("families_shown")
+    if shown is None:
+        fams = {f["id"]: f for f in rules.families()}
+        shown = [x for m in mine for x in fams.get(m, {}).get("related", []) + fams.get(m, {}).get("stretch", [])]
+    return set(mine) | set(shown)
+
+
 def pending_batches() -> list[str]:
     """Roles in the current batch files that haven't been ingested yet (a scorer may still be working on them)."""
     scores = store.load("scores", {})
@@ -90,9 +110,17 @@ def prepare(batch_size: int = 70, profile: dict | None = None, max_rescore: int 
     jobs = store.load("jobs", {"jobs": {}})["jobs"]
     scores = store.load("scores", {})
     todo, stale = [], []
+    scope = family_scope(profile)
+    if pkey:   # remember which field each profile version was scored for, so the app can tell when it no longer matches
+        fields = store.load("profile_fields", {})
+        pref = ((profile or {}).get("data", profile or {}).get("preferences") or {})
+        fields[pkey] = sorted(f for f in (pref.get("families") or rules.default_families()) if f)
+        store.save("profile_fields", fields)
     for key, j in jobs.items():
         if not (j.get("live") and j.get("role_tier") and not j.get("role_excluded")):
             continue
+        if "role_family" in j and j["role_family"] not in scope and not j.get("captured"):
+            continue          # a family this person doesn't look at: not worth a scoring call
         fp = _fingerprint(j, rubric)
         have = scores.get(job_id(key), {})
         if have.get("fingerprint") == fp:
@@ -119,8 +147,12 @@ def prepare(batch_size: int = 70, profile: dict | None = None, max_rescore: int 
 
 def _packet(key: str, j: dict, fp: str, pkey: str | None) -> dict:
     return {"id": job_id(key), "fingerprint": fp, "profile_key": pkey, "title": j["title"], "company": j["company"],
-                     "location": j.get("location"), "region": j.get("region"), "tier": j.get("role_tier"),
+                     "location": j.get("location"), "region": j.get("region"), "family": _family_label(j.get("role_family")),
             "pay": _pay_summary(j.get("pay")), "description": trim(j.get("description") or "") or "(no description available)"}
+
+
+def _family_label(fid: str | None) -> str:
+    return next((f["label"] for f in rules.families() if f["id"] == fid), "Other (added by you)")
 
 
 _STOP = set("the and for with own lead drive its from that this their role product manager senior staff principal".split())

@@ -1,6 +1,6 @@
-# Fit-scoring rubric (v1.0, generic wording 10-15, D-060)
+# Fit-scoring rubric (v1.0, generic wording 10-15, D-060; any role family 10-16, D-076)
 
-Used by Claude to score each role against the candidate profile (PRD Appendix E, R6–R9). Every sub-score is 0–100 with a one-line reason a person can check against the posting. **Missing information scores 50 (neutral) and says so; it never hides a job (D-021).** Weights live in `config/scoring.json` and each user's Profile; the overall score is computed in the app at read time.
+Used by Claude to score each role against the candidate profile (PRD Appendix E, R6–R9). The role anchors read relative to the candidate's own field, so a business analyst or program manager is scored as fairly as a product manager; for a product manager they are unchanged, so the version stays 1.0 and nothing is re-scored (D-076). Only roles in the families the candidate sees are scored. Every sub-score is 0–100 with a one-line reason a person can check against the posting. **Missing information scores 50 (neutral) and says so; it never hides a job (D-021).** Weights live in `config/scoring.json` and each user's Profile; the overall score is computed in the app at read time.
 
 ## Inputs
 - The candidate profile (stored in the app's private database; a working copy is passed to the scorer, never committed). Read its `current` (employer, title, level), `domains`, `preferences` (target level, domains wanted, people management, and from onboarding `role_wanted` in their own words and `role_families` picked), `skills` and `scope_signals`. Nothing about any one person is written in this rubric: everything comes from the profile. A new profile may hold only onboarding answers (no resume): score from what's there and say so in `reasons` ("based on your answers; add experience for sharper scores") rather than guessing.
@@ -10,7 +10,7 @@ Used by Claude to score each role against the candidate profile (PRD Appendix E,
 
 | Sub-score | What it measures | Anchors |
 |---|---|---|
-| **role** | Is this the kind of job the candidate does? | 95 core IC product management of a product/platform; 75 product-heavy adjacent (TPM on a product, product ops, strategy roles that own a roadmap); 50 adjacent with little product ownership (program management of operations, chief of staff); 25 stretch (product marketing, solutions/sales engineering, analytics); 5 not a product job |
+| **role** | Is this the kind of job the candidate does? The packet names the role's family (`family`, from `config/role_taxonomy.json`); the candidate's own families are `preferences.families` (none listed = product management, D-076) | 95 the candidate's own field doing the core work of it (for a product manager: IC product management of a product or platform; for a business analyst: requirements and process analysis); 75 a related family that uses their core skills (a TPM on a product, product ops or a strategy role that owns a roadmap, for a product manager; a product-facing data analyst, for a business analyst); 50 related but with little of their core work (program management of operations, chief of staff, for a product manager); 25 a stretch family (product marketing, solutions engineering, analytics, for a product manager); 5 not this kind of job at all |
 | **level** | Does the scope match the candidate's target level (profile `preferences.target_level`, on Google's scale as the common reference: L5 Senior, L6 Staff, L7 Principal; DR-1 maps other ladders)? | 95 at the target level with the right scope; 75 one level off, or a lead role with light management when the candidate wants IC; 50 unclear; 30 two levels off; 10 far off (junior, or an executive role). Use years asked, scope language (own strategy, multi-team, exec stakeholders), title, and the company's ladder |
 | **domain** | Overlap with the candidate's `domains` and `preferences.domains_wanted` (all listed domains count equally unless the profile ranks them) | 90+ direct overlap with a listed domain; 70 adjacent to one; 50 general consumer/B2B product; 25 unrelated specialist domain (hardware, clinical, gaming design) |
 | **pathway** | What the posting says about hiring people who need a Canadian work permit (DR-3) | 85 posting states visa sponsorship or relocation support; 45 says nothing; 15 posting says no sponsorship / must already be authorized to work in Canada / citizenship or clearance required. Say whether it is stated. Employer evidence (ESDC lists), intra-company transfers from the candidate's own employer and open work permits are added by Lodestone, not scored here |
@@ -25,7 +25,7 @@ Used by Claude to score each role against the candidate profile (PRD Appendix E,
 
 ## Also extract
 - `summary`: one plain sentence on what the job is ("Own the roadmap for X used by Y").
-- `level_guess`: e.g. "Senior PM (≈ L5)", "Principal PM (≈ L6)".
+- `level_guess`: e.g. "Senior PM (≈ L5)", "Senior BA (≈ L5)", "Principal TPM (≈ L7)": the role's own title family, never "PM" for a role that isn't one.
 - `people_mgmt`: true only if the posting says the role manages people.
 - `work_mode`: onsite / hybrid / remote / unclear.
 - `must_haves`: up to 4 short items.

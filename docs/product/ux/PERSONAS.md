@@ -5,19 +5,20 @@
 > app with an in-memory copy of its database; each run saves screenshots and a results file that Claude reviews by eye.
 > All five people are fictional composites. None is a real user, and none carries real personal data.
 
-## Why these five
+## Why these five (now eight)
 Each persona stresses a different part of the product promise ("the jobs that fit you, in the country you want, that
 will actually hire you", D-066), and a different way of using the app:
 
 | | Persona | Situation | Work permit | Resume | How they use it | Stresses |
 |---|---|---|---|---|---|---|
 | 1 | **Priya**, Staff PM, Seattle → Toronto | Urgent, methodical | Needs sponsorship | Ready | Desktop + iPad, daily, 10 minutes | Today list, triage speed, pipeline, pay, "why ranked" |
-| 2 | **Daniel**, product marketer, arriving in Calgary | New, anxious, unsure what fits | Open work permit (spouse) | None yet | Laptop, first visit | First-time experience, empty profile, PM-adjacent roles, paste a job |
+| 2 | **Daniel**, product marketer, arriving in Calgary | New, anxious, unsure what fits | Open work permit (spouse) | None yet | Laptop, first visit | First-time experience, empty profile, a non-PM field (product marketing), paste a job |
 | 3 | **Mei**, AI PM, permanent resident in Montreal | Not urgent, exploring the market | Doesn't need one | Ready | Desktop, weekly, browses | Companies, pay comparison, search, the work-permit layer for someone who doesn't need it |
-| 4 | **Tomás**, TPM, Mexico City | Busy, sporadic | Needs sponsorship | Half-done | Phone only, a few minutes on the bus | Mobile layout, Later, "Not for me" reasons, one-tap suggestions, catching up after days away |
+| 4 | **Tomás**, TPM, Mexico City | Busy, sporadic | Needs sponsorship | Half-done | Phone only, a few minutes on the bus | Mobile layout, Later, "Not for me" reasons, one-tap suggestions, catching up after days away, a program manager's own field |
 | 5 | **Aisha**, Principal PM, London → Toronto | Careful, privacy-minded | Needs sponsorship | Ready | Keyboard only, screen reader | Keyboard flow, focus, labels, learning controls, deleting her data |
 | 6 | **Sam**, product manager, curious but wary | Not ready to commit; skips every question | Unknown | None | Phone, a few minutes | Skipping: does everything still work with no answers, and can setup be done later? |
 | 7 | **Lena**, Group PM with a design background, Berlin → Vancouver | Discerning, judges a product by its polish | Needs sponsorship | Ready | Large desktop monitor, laptop, phone; light and dark mode | Visual consistency: type, spacing, colour, alignment, wording, every screen size and state |
+| 8 | **Omar**, senior business analyst, Toronto | Moving from banking to tech; wary of "PM tools" | Permanent resident | None in the app | Laptop, evenings, first visit | A field other than product management: setup in his words, role tags, pay targets, choosing related fields |
 
 ---
 
@@ -90,6 +91,8 @@ Half-finished resume. Uses only his phone, a few times a week.
 2. Triage with thumbs; say why not ("Pay too low", "Company").
 3. Accept a suggestion the app makes from his reasons; then undo it.
 4. Run out of today's list; get more without hunting for it.
+5. (D-075) Jump to a Profile section with the chips at the top, change one setting, save from the bar that stays in view.
+6. (D-076) See his own roles as "Program", his field, not "PM-adjacent"; filter the full list to program roles.
 
 **Delight.** Big targets, one-hand use, the app visibly learning from his "no"s.
 **Frustration.** Tiny chips, long scrolls, reasons hidden after the card disappears, losing his place.
@@ -173,6 +176,25 @@ Decoration that carries no meaning (extra borders, badges, emoji, three kinds of
 - No layout shift (cumulative movement of the list) when a toast, banner, reason row or "done" state appears.
 - Every interactive element has visible hover and focus styles; nothing with a pointer cursor lacks an action.
 
+## 8. Omar Haddad: "I'm not a product manager. Is this for me?"
+**Who.** 38, Senior Business Analyst at a Toronto bank for nine years (requirements, process redesign, payments
+projects). Permanent resident. Wants to move into a tech company or fintech as a senior BA, or a business systems or
+data-leaning analyst role. Laptop, evenings. Added 10-16 for D-076, when Ayush asked how a non-PM sees Lodestone.
+
+**Mindset.** Wary of tools "for product people". If the first screen talks PM, he leaves. Precise; reads labels.
+
+**Goals.** A list of BA roles in Toronto, at pay a BA actually earns; nearby roles (analytics, project) only if he asks.
+
+**Tasks**
+1. Set up in his own words ("senior business analyst, banking and payments") without hunting for the right card.
+2. Taste test: BA and nearby roles, not product managers.
+3. First list: his field first, tagged in his words, never "PM"; normal BA pay not marked red.
+4. Read the legend: what the tags mean, for him.
+5. In the Profile, stop seeing analytics roles; the full list and its role-type filter follow.
+
+**Delight.** "Got it: Business analysis" as he types; every tag in his language; pay that looks right.
+**Frustration.** "PM-adjacent", "Core PM", a list of product manager jobs, red pay on every ordinary BA role.
+
 ## Running the journeys
 `node scripts/persona_test.cjs [persona …]` (needs `data/state/app_export/`, made by `python3 -m lodestone export`).
 Screenshots and `results.json` go to `data/state/persona_runs/` (not committed). Each journey is a file in
@@ -181,6 +203,30 @@ notes are what Claude saw while playing the persona: *works*, *annoyance*, *bug*
 
 ## Findings log
 Newest first. Each finding names the persona, what happened, and what changed.
+
+### Round 4 (2026-10-16): Profile navigation, role types for any field; 8 personas, 169 checks, all pass (app v30)
+New tasks: Aisha uses the Profile side menu by keyboard; Tomás jumps with the phone chips and saves from the sticky bar,
+and now sees Lodestone as a program manager; Priya checks her old settings carry over; Daniel's field is product
+marketing; new persona Omar (business analyst) sets up in his own words. Lena audits the new Profile screens.
+- **Tomás, Daniel, Omar: "PM-adjacent" on their own field (the reason for D-076).** Fixed: tags name the job's family,
+  highlighted when it's yours; nothing says "PM" to someone who isn't one (checked on Omar's whole list).
+- **Omar: his roles weren't collected, and typing "business analyst" said it wasn't covered.** Fixed: three new families
+  collected; typed words light up the matching card ("Got it: Business analysis").
+- **Omar: every ordinary BA salary was red** (a senior PM's pay targets). Fixed: setup sets pay targets for the field.
+- **Tomás: his list led with product roles** because existing scores were made for a product manager. Fixed: when the
+  scored field differs, the role factor comes from closeness to his field and his field ranks first until re-scored.
+- **Omar: the daily report banner talked about a Staff PM role.** Fixed: reports written for another field don't show
+  as a banner; the Reports page says who they were written for.
+- **Daniel: tapping cards after typing toggled them off.** Fixed in the flow: typed words pre-select cards; tapping adds
+  or removes from that set.
+- **Sam (found by timing): a 3-second freeze after "Skip and browse"** from re-checking families on every role. Fixed
+  with a cheap cache; back to 1.4 s in the test harness.
+- **Lena: role chips with notes ran off a 320px screen.** Fixed: family chips wrap.
+- **Aisha: a section id clashed with a form field id** ("pf-work"), breaking the work-permit select. Fixed (sections are
+  `ps-*`).
+- **Omar: "e.g. L5, Senior PM" placeholder.** Now "e.g. Senior, or L5". "What you do" moved above "Where".
+- **Idea (not built):** reports per person once there is more than one user; level wording beyond Google's L-scale for
+  non-tech ladders.
 
 ### Round 3 (2026-10-16): Lena's design pass; 7 personas, 112 checks, all pass (app v27)
 Lena's journey audits 13 screens (Today, All to triage, the role view's three tabs, Pipeline, Add job, Reports,

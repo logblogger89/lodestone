@@ -228,7 +228,7 @@ def _probe_one(c: dict) -> dict:
     except Exception as e:
         return {"board": {"platform": ats, "slug": slug, "confidence": conf}, "probe_error": str(e)[:120]}
     ca = [p for p in posts if classify(p).in_canada]
-    roles = [p for p in ca if (r := classify_title(p.title)).tier and not r.excluded]
+    roles = [p for p in ca if (r := classify_title(p.title)).tier not in (None, "Other") and not r.excluded]   # near the default families
     return {"board": {"platform": ats, "slug": slug, "confidence": conf}, "jobs_total": len(posts), "jobs_canada": len(ca),
             "roles_canada": len(roles), "sample_roles": [f"{p.title} ({p.location_raw})"[:90] for p in roles[:4]]}
 

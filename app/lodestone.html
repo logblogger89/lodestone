@@ -202,6 +202,10 @@ button.plink{border:0;background:none;padding:0;font:inherit;color:var(--accent)
 .ck.tier{background:var(--surface-2);color:var(--fg);border-color:var(--line);font-weight:600}
 .ck.tier.t-core{background:var(--accent-soft);color:var(--accent);border-color:transparent}
 .flabel{font-size:12px;color:var(--muted);align-self:center}
+.famset{border:0;padding:0;margin:0;min-width:0}
+.famset legend{font-size:13px;font-weight:600;padding:0;margin-bottom:6px}
+.famset .chip{white-space:normal}
+.famset .chip .note{font-size:12px}
 .legend{margin:2px 0 12px;font-size:13px;color:var(--muted)}
 .legend summary{cursor:pointer;width:max-content}
 .legend p,.legend ul{margin:8px 0 0}
@@ -355,9 +359,12 @@ kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);bor
 /* ---------- constants (defaults mirror PRD/UX decisions; real values live in settings/prefs) ---------- */
 const STAGES = ["Shortlisted","Applied","Screen","Interviewing","Offer","Closed"];
 const TIERS = ["Core","Adjacent","Stretch"];
-const TIER_HELP = {Core:"Core PM role", Adjacent:"Adjacent role (TPM, program, strategy & ops, chief of staff, trust & safety)", Stretch:"Stretch role (product marketing, solutions, analytics)"};
-const TIER_NAME = {Core:"Core PM", Adjacent:"PM-adjacent", Stretch:"Stretch"};
-const TIER_WHAT = {Core:"Product manager role", Adjacent:"TPM, program, strategy & ops, chief of staff or trust & safety", Stretch:"Product marketing, solutions engineering or analytics"};
+/* Role families (D-076): every job has one absolute family ("Business analysis" is the same for everyone); how close it
+   is to you is relative to the families you do. The list comes from meta/families (config/role_taxonomy.json); this
+   copy is only used until that document arrives. Tier on a job = Core (your field), Adjacent (related), Stretch, Other. */
+const FAM_FALLBACK = [{"id":"pm","label":"Product management","tag":"Product","what":"Own a product: roadmap, priorities, launches","onboard":"Product manager","patterns":["\\bproduct manager\\b","\\bproduct mgr\\b","\\bproduct management\\b","\\bproduct lead\\b","\\bproduct owner\\b","\\bgroup product manager\\b","\\bhead of product\\b","\\bdirector of product\\b","\\bproduct director\\b","\\b(senior|staff|principal|lead|group) pm\\b","\\bpm\\b.*\\b(ai|platform|growth|payments)\\b"],"related":["program","strategy","tns"],"stretch":["pmm","solutions","analytics"],"pay":{"green":190000,"yellow":160000}},{"id":"program","label":"Program management","tag":"Program","what":"Run complex work across teams, incl. technical program management","onboard":"Program or technical program manager","patterns":["\\btechnical program manager\\b","\\btpm\\b","\\bprogram manager\\b","\\bprogram lead\\b","\\bprogram management\\b","\\bprogram director\\b","\\bdirector of programs?\\b"],"related":["project","pm","strategy","tns"],"stretch":["ba","solutions"],"pay":{"green":170000,"yellow":140000}},{"id":"project","label":"Project management","tag":"Project","what":"Deliver projects on time and on budget","onboard":"Project or delivery manager","patterns":["\\bproject manager\\b","\\bproject lead\\b","\\bproject management\\b","\\bdelivery manager\\b","\\bdelivery lead\\b","\\bpmo\\b","\\bscrum master\\b","\\bagile coach\\b","\\bimplementation manager\\b"],"related":["program","ba"],"stretch":["strategy","pm"],"pay":{"green":130000,"yellow":105000}},{"id":"pmm","label":"Product marketing","tag":"Product marketing","what":"Take products to market","onboard":"Product marketing","patterns":["\\bproduct marketing\\b","\\bproduct marketer\\b","\\bgo to market (manager|lead|strategist)\\b","\\bgtm (manager|lead|strategist)\\b"],"related":["pm","strategy"],"stretch":["solutions","analytics"],"pay":{"green":160000,"yellow":130000}},{"id":"solutions","label":"Solutions and customer engineering","tag":"Solutions","what":"Design solutions with customers, before and after the sale","onboard":"Solutions or customer engineering","patterns":["\\bsolutions? (engineer|architect|consultant)\\b","\\bcustomer engineer\\b","\\bsales engineer\\b","\\bpre ?sales (engineer|consultant)\\b"],"related":["pmm","program"],"stretch":["pm","ba"],"pay":{"green":170000,"yellow":140000}},{"id":"strategy","label":"Strategy and operations","tag":"Strategy & ops","what":"Plan and run the business with leaders, incl. product ops and chief of staff","onboard":"Strategy, operations or chief of staff","patterns":["\\bproduct operations\\b","\\bproduct ops\\b","\\bstrategy (and )?operations\\b","\\bbizops\\b","\\bbusiness operations\\b","\\bchief of staff\\b","\\bcorporate strategy\\b","\\bstrategy (manager|lead|director)\\b","\\b(trust|safety|integrity|risk|fraud|compliance|governance|policy)\\b.*\\b(product|program|strategy)\\b","\\b(product|program|strategy)\\b.*\\b(trust|safety|integrity|risk|fraud|compliance|governance|policy)\\b"],"related":["program","pm","ba","analytics"],"stretch":["project","tns"],"pay":{"green":165000,"yellow":135000}},{"id":"tns","label":"Trust, safety and policy","tag":"Trust & safety","what":"Keep users and the business safe: trust & safety, integrity, policy","onboard":"Trust & safety, risk or policy","patterns":["\\btrust (and )?safety\\b","\\bcontent policy\\b","\\bplatform policy\\b","\\bintegrity (lead|manager|analyst|specialist)\\b"],"related":["strategy","program","pm"],"stretch":["analytics"],"pay":{"green":150000,"yellow":120000}},{"id":"ba","label":"Business analysis","tag":"Business analysis","what":"Turn business needs into clear requirements and processes","onboard":"Business or systems analyst","patterns":["\\bbusiness (systems )?analyst\\b","\\bbusiness analysis\\b","\\bsystems analyst\\b","\\bprocess analyst\\b","\\brequirements analyst\\b","\\bfunctional analyst\\b","\\bbusiness architect\\b"],"related":["analytics","project","strategy"],"stretch":["pm","program"],"pay":{"green":120000,"yellow":95000}},{"id":"analytics","label":"Data and product analytics","tag":"Analytics","what":"Answer business questions with data","onboard":"Data or product analyst","patterns":["\\bproduct analytics\\b","\\bproduct analyst\\b","\\bdata analyst\\b","\\banalytics (manager|lead|engineer)\\b","\\bbusiness intelligence\\b","\\bbi (analyst|developer|lead)\\b","\\binsights (analyst|manager|lead)\\b","\\bmarketing analyst\\b"],"related":["ba","strategy"],"stretch":["pm","pmm"],"pay":{"green":130000,"yellow":105000}}];
+const FAM_EXCLUDE = ["\\bintern(ship)?\\b", "\\bco op\\b", "\\bnew grad", "\\bjunior\\b", "\\bassociate product manager\\b", "\\bapm\\b", "\\bproduct designer\\b", "\\bproject coordinator\\b", "\\bproduct support\\b", "\\bproduct specialist\\b", "\\beducator\\b", "\\bpart time\\b", "\\bseasonal\\b", "\\bentry level\\b", "\\bstudent\\b"];
+const TIER_WORD = {Core:"your field", Adjacent:"related to your field", Stretch:"a stretch from your field", Other:"outside your field"};
 const REGIONS = ["GTA","Waterloo Region","Remote-Canada","Ottawa","Montreal","Vancouver","Calgary","Edmonton","Other Canada"];
 const SUBS = ["role","level","domain","pathway","pay","skills","freshness"];
 const SUBLABEL = {role:"Role",level:"Level",domain:"Domain",pathway:"Work permit",pay:"Pay",skills:"Skills",freshness:"Freshness"};
@@ -365,7 +372,7 @@ const SUBLABEL = {role:"Role",level:"Level",domain:"Domain",pathway:"Work permit
 const wv=(W,k)=>+(W&&W[k]!=null?W[k]:DEFAULT_PREFS_W[k])||0;
 const NOT_REASONS = ["Level too junior","Not my domain","Location","People management","Pay too low","Company"];
 const DEFAULT_PREFS = {
-  regions:["GTA","Waterloo Region","Remote-Canada"], other_regions:true, tiers:["Core","Adjacent","Stretch"],
+  regions:["GTA","Waterloo Region","Remote-Canada"], other_regions:true, 
   exclude_people_mgmt:true, include_no_pay:true, digest_size:20, later_days:7, max_age_days:0,
   report_days:14, today_size:10, learn_reading:true, hidden_companies:[],
   checks:{green_regions:["GTA","Waterloo Region","Remote-Canada"],pay_green:190000,pay_yellow:160000,level_green:6,level_yellow:5,fresh_green:14,fresh_yellow:30},
@@ -392,7 +399,7 @@ const FRESH_LABEL = {jobs:"Job pulls (all sources)", source_index:"Source index"
 const S = {
   db:null, ready:false, offline:false, canWrite:true,
   jobs:{}, triage:{}, prefs:{...DEFAULT_PREFS}, companies:[], freshness:{}, inbox:[], mreq:{}, reports:[], suggestions:[], codec:{}, sugAll:false, desc:{}, cprof:{}, likes:{}, sig:{}, today:null, todayLoaded:false, triLoaded:false, prefsRaw:{}, dtab:lsGet("dtab","summary"),
-  view:"digest", open:null, sel:0, show:"today", region:"preferred", q:"", tierOn:new Set(TIERS), sort:"best",
+  view:"digest", open:null, sel:0, show:"today", region:"preferred", q:"", famOn:new Set(), sort:"best",
   coQ:"", coStatus:"all", expanded:false, yrs:"any", recent:new Set(), lastVisit:null, pendingReasons:null
 };
 const $ = (s,el=document)=>el.querySelector(s);
@@ -530,6 +537,40 @@ const payMax=j=>{const pi=payInfo(j),m=pi.main;if(!m) return pi.est?(pi.est.max|
 function where(j){return j.location||j.region||"Canada"}
 
 /* ---------- derived ---------- */
+/* Role families: which you do (prefs.families), which else you want to see (prefs.families_shown). Older settings
+   without families mean product management, with related and stretch families following the old role-type ticks. */
+function fams(){return S.families||FAM_FALLBACK}
+function famById(id){return fams().find(f=>f.id===id)||null}
+const _famRx={};
+function famRx(f){return _famRx[f.id]||(_famRx[f.id]=(f.patterns||[]).map(p=>{try{return new RegExp(p)}catch{return /(?!)/}}))}
+const normTitle=t=>String(t||"").normalize("NFKD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/\b(sr|snr)\b\.?/g,"senior").replace(/[^a-z0-9]+/g," ").trim();
+function famOfText(t){const n=normTitle(t);return (fams().find(f=>famRx(f).some(r=>r.test(n)))||{}).id||null}
+function famsInText(t){const n=normTitle(t);return fams().filter(f=>famRx(f).some(r=>r.test(n))||n.includes(normTitle(f.label))).map(f=>f.id)}
+function myFams(){const m=S.prefs.families||((S.profile||{}).preferences||{}).families;return m&&m.length?m:["pm"]}
+function relFams(mine,key){return [...new Set(mine.flatMap(m=>(famById(m)||{})[key]||[]))].filter(x=>!mine.includes(x))}
+function shownFams(){
+  if(Array.isArray(S.prefs.families_shown)) return S.prefs.families_shown;
+  const mine=myFams(), t=S.prefs.tiers||TIERS, rel=relFams(mine,"related");
+  return [...(t.includes("Adjacent")?rel:[]),...(t.includes("Stretch")?relFams(mine,"stretch").filter(x=>!rel.includes(x)):[])];
+}
+function closeTo(fid,mine){
+  if(!fid) return "Other"; mine=mine||myFams();
+  if(mine.includes(fid)) return "Core";
+  if(relFams(mine,"related").includes(fid)) return "Adjacent";
+  if(relFams(mine,"stretch").includes(fid)) return "Stretch";
+  return "Other";
+}
+/* Recomputes each job's family (older documents have none) and how close it is to you. Cheap; runs when jobs,
+   families or your Profile change. */
+function applyFamilies(){
+  const mine=myFams(), key=mine.join();
+  if(S._famKey===key&&S._famJobs===S.jobs&&S._famSrc===S.families) return;
+  S._famKey=key; S._famJobs=S.jobs; S._famSrc=S.families; S._tokc={};
+  Object.values(S.jobs).forEach(j=>{if(!j.family)j.family=famOfText(j.title)||null;j.tier=closeTo(j.family,mine)});
+}
+function famVisible(j){const f=j.family;return j.tier==="Core"||(f&&shownFams().includes(f))||(j.captured&&!f)}
+function famName(j){const f=famById(j.family);return f?f.tag:"Other"}
+function famTitle(j){const f=famById(j.family);return `${f?f.label:"Added by you"}: ${TIER_WORD[j.tier]||""}`}
 function tri(id){return S.triage[id]||null}
 function laterDue(t){return t&&t.status==="later"&&(Date.now()-(parseWhen(t.updated_at)||0))>(S.prefs.later_days||7)*DAY}
 function inPreferred(j){
@@ -538,8 +579,9 @@ function inPreferred(j){
 }
 /* What your Profile rules out (prefOk) vs. the filters on this screen (matchesBase adds them). */
 function prefOk(j){
+  applyFamilies();
   if(!j.live) return false;
-  if(!(S.prefs.tiers||TIERS).includes(j.tier)) return false;
+  if(!famVisible(j)) return false;
   if((S.prefs.hidden_companies||[]).includes(j.company)) return false;
   if(S.prefs.exclude_people_mgmt&&managesPeople(j)) return false;
   if(+S.prefs.max_age_days>0){const fr=freshness(j);if(fr.dated&&fr.days>+S.prefs.max_age_days) return false}
@@ -548,8 +590,8 @@ function prefOk(j){
 }
 function matchesBase(j){
   if(!j.live) return false;
-  if(!S.tierOn.has(j.tier)) return false;
-  if(!(S.prefs.tiers||TIERS).includes(j.tier)) return false;
+  if(S.famOn.size&&!S.famOn.has(j.family||"")) return false;
+  if(!famVisible(j)) return false;
   if((S.prefs.hidden_companies||[]).includes(j.company)) return false;
   if(S.prefs.exclude_people_mgmt&&managesPeople(j)) return false;
   if(+S.prefs.max_age_days>0){const fr=freshness(j);if(fr.dated&&fr.days>+S.prefs.max_age_days) return false}
@@ -571,7 +613,7 @@ function matches(j){
   if(S.show==="all") return true;
   return t&&t.status===S.show;
 }
-const TIER_RANK={Core:0,Adjacent:1,Stretch:2};
+const TIER_RANK={Core:0,Adjacent:1,Stretch:2,Other:3};
 const PREF_RANK=r=>{const i=(S.prefs.regions||[]).indexOf(r);return i<0?9:i};
 function sorted(list){
   const by={
@@ -626,7 +668,8 @@ function learnMap(){
   }
   S._lm={k,m}; return m;
 }
-function rankScore(j){const f=fitScore(j)??provScore(j);const l=learnMap()[j.id];return f+(l?l.adj:0)}   // provisional until scored (P1-S7)
+const FIELD_SHIFT={Core:0,Adjacent:-10,Stretch:-20,Other:-30};   // scores made for another field: your field first until re-scored (D-076)
+function rankScore(j){const f=fitScore(j)??provScore(j);const l=learnMap()[j.id];return f+(l?l.adj:0)+(j.fit&&fieldChanged(j)?FIELD_SHIFT[j.tier]||0:0)}   // provisional until scored (P1-S7)
 const SRC_TEXT={interested:"which you marked Interested",not:"which you marked Not for me",later:"which you put on Later",
   more:"which you asked to see more like",less:"which you asked to see less like",read:"whose description you read closely"};
 function learnText(j){
@@ -798,7 +841,7 @@ async function boot(){
     S.jobs=all;S._tokc={};S.ready=true;render();
   },fail);
   db.collection("meta").onSnapshot(snap=>{
-    snap.docs.forEach(d=>{const x=d.data()||{};if(d.id==="companies")S.companies=x.companies||[];if(d.id==="suggestions")S.suggestions=x.suggestions||[];if(d.id==="eval")S.evalm=x;if(d.id==="company_profiles")S.cprof=x.companies||{};if(d.id==="freshness")S.freshness=x.components||{}});
+    snap.docs.forEach(d=>{const x=d.data()||{};if(d.id==="companies")S.companies=x.companies||[];if(d.id==="suggestions")S.suggestions=x.suggestions||[];if(d.id==="eval")S.evalm=x;if(d.id==="company_profiles")S.cprof=x.companies||{};if(d.id==="freshness")S.freshness=x.components||{};if(d.id==="families"&&(x.families||[]).length)S.families=x.families});
     render();
   },fail);
   db.collection("triage").onSnapshot(snap=>{const t={};snap.docs.forEach(d=>t[d.id]=d.data());S.triage=t;S.triLoaded=true;render()},fail);
@@ -871,8 +914,13 @@ function pw(j){
 /* Pay sub-score from the viewer's own pay targets (Profile), not a fixed band. */
 function payScore(top,kind){const c={...DEFAULT_PREFS.checks,...(S.prefs.checks||{})},g=c.pay_green,y=c.pay_yellow;
   let v=top>=g*1.2?95:top>=g?80:top>=y?60:top>=y*0.8?40:20;return ["base","unspecified",undefined].includes(kind)?v:Math.max(20,v-10)}
+/* Fit scores were made for one field (fit.field; older scores: product management). If your field is different,
+   the role factor comes from how close the job is to your field until the next run re-scores it for you (D-076). */
+const ROLE_BY_TIER={Core:90,Adjacent:65,Stretch:30,Other:5};
+function fieldChanged(j){const f=(j.fit&&j.fit.field)||["pm"], m=myFams();return f.length!==m.length||f.some(x=>!m.includes(x))}
 function subVal(j,k){
   if(k==="freshness") return freshness(j).score;
+  if(k==="role"&&j.fit&&fieldChanged(j)) return ROLE_BY_TIER[j.tier]??50;
   if(k==="pathway") return +pw(j).score||0;
   if(k==="pay"){const pi=payInfo(j),m=pi.main;
     if(m&&m.max&&m.currency!=="USD") return payScore(m.interval==="hour"?m.max*2000:m.max,m.kind);
@@ -932,7 +980,7 @@ function prefChecks(j){
 /* Years of experience the posting asks for (D-064): information, not a preference check, so it stays neutral. */
 const yrsText=y=>y?(y.max&&y.max!==y.min?`${y.min}–${y.max}`:`${y.min}+`)+" yrs exp":"";
 function yearsTag(j){return j.years?`<span class="ck info" title="${esc(j.years.quote||"")}">${esc(yrsText(j.years))}</span>`:""}
-function tierTag(j){return j.tier?`<span class="ck tier t-${esc(j.tier.toLowerCase())}" title="${esc(TIER_WHAT[j.tier]||"")}">${esc(TIER_NAME[j.tier]||j.tier)}</span>`:""}
+function tierTag(j){return `<span class="ck tier t-${esc((j.tier||"other").toLowerCase())}" title="${esc(famTitle(j))}">${esc(famName(j))}</span>`}
 function checkStrip(j){
   const xs=prefChecks(j), at=xs.findIndex(x=>x.k==="Level")+1;
   return `<div class="checks">${tierTag(j)}${xs.map(x=>`<span class="ck ck-${x.l}" title="${esc(x.k)}: ${esc(x.why)}"><b aria-hidden="true">${CHECK_ICON[x.l]}</b><span class="sr">${x.l==="good"?"Matches":x.l==="bad"?"Doesn't match":"Partly matches"}: ${esc(x.k)}, </span>${esc(x.t)}</span>`).map((h,i)=>i===at-1?h+yearsTag(j):h).join("")}</div>`;
@@ -956,7 +1004,7 @@ function staleTag(j){
 function tierCompass(j){
   const v=fitScore(j); if(v!=null) return ring(v);
   const cls=(j.tier||"").toLowerCase();
-  return `<div class="compass ${cls}" title="${esc(TIER_HELP[j.tier]||"")}. Not scored yet."><span><b>${esc((j.tier||"?")[0])}</b>${esc(j.tier||"")}</span></div>`;
+  return `<div class="compass ${cls}" title="${esc(famTitle(j))}. Not scored for you yet; scored at the next update."><span><b>–</b>not scored</span></div>`;
 }
 function srcLinks(j){return `<span class="srcs">${(j.sources||[]).map(s=>`<a class="src" href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener" title="Open on ${esc(s.label)}">${esc(s.label)} ↗</a>`).join("")}</span>`}
 function triageBtns(j){
@@ -998,8 +1046,10 @@ function reportBody(r){
     ${(r.sections||[]).map(s=>`<h3>${esc(s.title)}</h3>${s.items.length?`<ul>${s.items.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>`:`<p class="note">Nothing today.</p>`}`).join("")}
     ${(r.actions||[]).length?`<div class="actions"><h3>Needs you</h3><ul>${r.actions.map(a=>`<li>${esc(a)}</li>`).join("")}</ul></div>`:""}</div>`;
 }
+/* Reports are written by the run for the field it scored (r.families; older reports: product management). */
+function reportForMe(r){const f=r.families||["pm"], m=myFams();return f.length===m.length&&f.every(x=>m.includes(x))}
 function reportBanner(){
-  const r=S.reports[0]; if(!r) return "";
+  const r=S.reports[0]; if(!r||!reportForMe(r)) return "";   // a report written for another field isn't news to you
   const age=(Date.now()-new Date(r.date+"T12:00:00"))/DAY; if(age>2) return "";
   return `<button class="rbanner" data-view="reports"><span class="rhead"><strong>Daily report · ${esc(reportDate(r))}</strong> ${esc(r.headline)}</span><small>${(r.actions||[]).length?`${r.actions.length} thing${r.actions.length>1?"s":""} need${r.actions.length>1?"":"s"} you · `:""}Read the report →</small></button>`;
 }
@@ -1007,23 +1057,19 @@ function viewReports(){
   const n=+S.prefs.report_days||14, cutoff=Date.now()-n*DAY;
   const [latest,...rest]=S.reports, past=rest.filter(r=>new Date(r.date+"T12:00:00")>=cutoff);
   const body=!latest?`<div class="empty"><h2>No reports yet</h2><p>The morning run posts a report here around 7am New York time. The 1pm and 6pm updates add to it when they find something.</p></div>`
-    :`<section class="panel"><h4>${esc(reportDate(latest))}</h4><p><strong>${esc(latest.headline)}</strong></p>${reportBody(latest)}</section>
+    :`${reportForMe(latest)?"":`<p class="tip">These reports were written for a ${esc((latest.families||["pm"]).map(f=>((famById(f)||{}).label||f).toLowerCase()).join(" and "))} search. Your own arrive once the next update has scored roles for your field.</p>`}<section class="panel"><h4>${esc(reportDate(latest))}</h4><p><strong>${esc(latest.headline)}</strong></p>${reportBody(latest)}</section>
       <section class="archive"><h2>Archive <span class="note">last ${n} days</span></h2>
       ${past.length?past.map(r=>`<details><summary><strong>${esc(reportDate(r))}</strong> · ${esc(r.headline)}</summary>${reportBody(r)}</details>`).join(""):`<p class="note">Earlier reports appear here. Change how many days to keep in view in <button class="link plink" data-view="settings">your Profile</button>.</p>`}</section>`;
   return `<div class="topbar"><h1>Reports</h1></div>${body}`;
 }
 /* ---------- Onboarding (P1-S7, PRD R26, UX §8.3): four quick questions and a taste test, no resume needed ---------- */
-const OB_FAMILIES=[["pm","Product manager","Own a product: roadmap, priorities, launches","Core"],
-  ["tpm","Program or technical program manager","Run complex work across teams","Adjacent"],
-  ["ops","Strategy, operations or chief of staff","Plan and run the business with leaders","Adjacent"],
-  ["tns","Trust & safety, risk or policy","Keep users and the business safe","Adjacent"],
-  ["pmm","Product marketing","Take products to market","Stretch"],
-  ["sol","Solutions or analytics","Work with customers or data on the product","Stretch"]];
+/* The role cards come from the family list (D-076), so a new family in config shows up here with no code change. */
+const obFamilies=()=>fams().map(f=>[f.id,f.onboard||f.label,f.what||""]);
 const OB_STATUS=[["no_permit","Yes, I'm a citizen or permanent resident","The work-permit checks step aside."],
   ["open_permit","I have an open work permit","You can work for any employer, so sponsorship doesn't matter."],
   ["needs_permit","I'll need an employer to support a work permit","Lodestone shows which employers have hired from abroad."],
   ["not_sure","Not sure","We'll treat it as needing a permit for now. You can change it any time."]];
-const OB_COVERED=/product|program|pm\b|tpm|strategy|operations|\bops\b|chief of staff|trust|safety|risk|policy|marketing|solution|analytics|platform|growth/i;
+const obCovered=t=>famsInText(t).length>0;
 function needsOnboarding(){
   if(S._obForce) return true;
   if(!S.ready||S.offline||!S.triLoaded||S.profile===undefined||S._obDone) return false;
@@ -1034,18 +1080,20 @@ function needsOnboarding(){
 function obState(){return S.ob||(S.ob={step:0,a:{cities:[],anywhere:false,status:"",role_text:"",families:[],paste:"",other_country:"",taste:{}}})}
 function tastePicks(){   // 8 real, recent roles across role types and companies: chosen cities first, then remote, then the rest of Canada
   const o=obState(), a=o.a; if(o.picks) return o.picks;
-  const tiers=new Set(a.families.length?OB_FAMILIES.filter(f=>a.families.includes(f[0])).map(f=>f[3]):TIERS);
+  const mine=obFams(a), rank=j=>mine.length?TIER_RANK[closeTo(j.family,mine)]:0;   // your field first, then related roles
   const near=j=>a.anywhere||!a.cities.length||a.cities.includes(j.region)?0:j.region==="Remote-Canada"?1:2;
-  const pool=Object.values(S.jobs).filter(j=>j.live).sort((x,y)=>(tiers.has(x.tier)?0:1)-(tiers.has(y.tier)?0:1)||near(x)-near(y)||freshness(y).score-freshness(x).score);
+  const pool=Object.values(S.jobs).filter(j=>j.live&&(!mine.length||rank(j)<2)).sort((x,y)=>rank(x)-rank(y)||near(x)-near(y)||freshness(y).score-freshness(x).score);
   const out=[],cos=new Set();
   for(const pass of [0,1]) for(const j of pool){   // one role per company first, repeats only if needed
     if(out.length>=8) break;
     if(out.includes(j.id)||(pass===0&&cos.has(j.company))) continue;
     out.push(j.id);cos.add(j.company);
   }
-  const order={Core:0,Adjacent:1,Stretch:2};   // mix role types so the test isn't eight of the same
-  return o.picks=out.sort((x,y)=>near(S.jobs[x])-near(S.jobs[y])||order[S.jobs[x].tier]-order[S.jobs[y].tier]);
+  return o.picks=out.sort((x,y)=>near(S.jobs[x])-near(S.jobs[y])||rank(S.jobs[x])-rank(S.jobs[y]));
 }
+/* The families picked in setup: the tapped cards, else whatever the typed words name ("business analyst"). */
+const heardText=h=>h.length?`Got it: ${esc(h.map(f=>(famById(f)||{}).label).join(", "))}. Tap a card below to change it.`:"";
+function obFams(a){return a.families.length||a.role_text_off?a.families:famsInText(a.role_text||"")}
 function viewOnboard(){
   const o=obState(), a=o.a, step=o.step;
   const prog=step>0?`<div class="obprog"><span class="dots" aria-hidden="true">${[1,2,3,4].map(i=>`<i class="${i<=step?"on":""}"></i>`).join("")}</span><span class="note">Step ${step} of 4</span><span class="sp"></span><button class="link plink" data-ob="skipall">Skip setup</button></div>`:"";
@@ -1067,12 +1115,13 @@ function viewOnboard(){
     ${a.status==="not_sure"?`<div class="obexplain"><p>That's common. Most people moving to Canada for a job need a work permit linked to an employer. Some employers first get government approval to hire from abroad (an LMIA); some roles and countries are exempt.</p><p>Lodestone shows which employers have hired from abroad before. This is general information, not immigration advice.</p></div>`:""}
     ${nav("Continue")}`;
   else if(step===3){
-    const off=a.role_text&&!a.families.length&&!OB_COVERED.test(a.role_text);
+    const off=a.role_text&&!a.families.length&&!obCovered(a.role_text), heard=a.role_text&&!a.families.length?famsInText(a.role_text):[];
     body=`<h2>What kind of role are you looking for?</h2><p class="obwhy">So your first list is about the work you want. Answer any way you like.</p>
-    <div class="field"><label for="ob-role">In your own words</label><input id="ob-role" value="${esc(a.role_text)}" placeholder="e.g. senior product manager, fintech, about 8 years"></div>
-    <div class="field"><span class="flabel">Or pick one or more</span><div class="obfams">${OB_FAMILIES.map(([k,l,d])=>`<button class="obopt" aria-pressed="${a.families.includes(k)}" data-obf="fam" data-v="${k}"><b>${esc(l)}</b><span>${esc(d)}</span></button>`).join("")}</div></div>
+    <div class="field"><label for="ob-role">In your own words</label><input id="ob-role" value="${esc(a.role_text)}" placeholder="e.g. senior business analyst, banking, about 8 years"></div>
+    <p class="note" id="ob-heard" aria-live="polite">${heardText(heard)}</p>
+    <div class="field"><span class="flabel">Or pick one or more</span><div class="obfams">${obFamilies().map(([k,l,d])=>`<button class="obopt" aria-pressed="${obFams(a).includes(k)}" data-obf="fam" data-v="${k}"><b>${esc(l)}</b><span>${esc(d)}</span></button>`).join("")}</div></div>
     <details class="quotes"${a.paste?" open":""}><summary>Or paste a job you'd love</summary><textarea id="ob-paste" rows="3" placeholder="A link or the job description">${esc(a.paste)}</textarea><span class="note">Lodestone adds it to your inbox and uses it as an example of what you want.</span></details>
-    ${off?`<p class="obexplain">Lodestone covers product and nearby roles today. We'll note what you're after and tell you when we cover it.</p>`:""}
+    ${off?`<p class="obexplain">Lodestone covers the role types above today. We'll note what you're after and tell you when we cover it.</p>`:""}
     ${nav("Continue")}`;
   }
   else if(step===4){
@@ -1080,7 +1129,7 @@ function viewOnboard(){
     body=`<h2>Quick taste test</h2><p class="obwhy">Tap what appeals. ${ids.length} real roles, about 20 seconds. It shapes your first list.</p>
     <div class="taste">${ids.map(id=>{const j=S.jobs[id];if(!j) return "";const v=a.taste[id];const pi=payInfo(j),m=pi.main;
       return `<div class="tcard${v?" picked":""}"><div class="tmeta"><b>${esc(j.title)}</b><span>${esc(j.company)} · ${esc(REGION_SHORT[j.region]||j.region||where(j))}</span>
-        <span class="note">${esc(TIER_NAME[j.tier]||"")}${m&&m.max&&m.currency!=="USD"?` · ${esc(rangeText(m))}`:""}</span></div>
+        <span class="note">${esc(famName(j))}${m&&m.max&&m.currency!=="USD"?` · ${esc(rangeText(m))}`:""}</span></div>
         <div class="tbtns"><button class="tbtn${v===1?" on-interested":""}" aria-pressed="${v===1}" data-obt="1" data-id="${esc(id)}">Interested</button><button class="tbtn${v===-1?" on-not":""}" aria-pressed="${v===-1}" data-obt="-1" data-id="${esc(id)}">Not for me</button></div></div>`}).join("")}</div>
     <p class="note" aria-live="polite">${n} of ${ids.length} answered</p>
     <div class="obnav"><button class="btn" data-ob="back">Back</button><span class="sp"></span><button class="link plink" data-ob="finish">Skip</button><button class="btn primary" data-ob="finish">See my list</button></div>`;
@@ -1097,16 +1146,17 @@ async function obFinish(skipped){
   obCapture();
   const o=obState(), a=o.a, now=new Date().toISOString(), tasted=Object.entries(a.taste).filter(([,v])=>v);
   const regions=a.cities.length?[...new Set([...a.cities,"Remote-Canada"])]:(S.prefs.regions||DEFAULT_PREFS.regions);   // remote roles in Canada fit any city
-  const fams=OB_FAMILIES.filter(f=>a.families.includes(f[0]));
-  const tiers=fams.length?[...new Set(fams.map(f=>f[3]))]:TIERS;
+  const fids=obFams(a), fl=fids.map(famById).filter(Boolean), shown=relFams(fids,"related");
+  const pay=fl.length?{pay_green:Math.max(...fl.map(f=>f.pay.green)),pay_yellow:Math.max(...fl.map(f=>f.pay.yellow))}:{};   // pay targets that fit the field; changeable
   const prof={...(S.profile||{version:0})};
   prof.work_status=a.status==="no_permit"||a.status==="open_permit"?a.status:"needs_permit";
-  prof.preferences={...(prof.preferences||{}),...(a.role_text?{role_wanted:a.role_text}:{}),...(fams.length?{role_families:fams.map(f=>f[1])}:{})};
+  prof.preferences={...(prof.preferences||{}),...(a.role_text?{role_wanted:a.role_text}:{}),...(fl.length?{role_families:fl.map(f=>f.label),families:fids,families_shown:shown}:{})};
   prof.onboarding={at:now,skipped:!!skipped,status_answer:a.status||null,other_country:a.other?a.other_country||"(not given)":null,
-    uncovered:a.role_text&&!fams.length&&!OB_COVERED.test(a.role_text)?a.role_text:null,taste:tasted.length};
+    uncovered:a.role_text&&!fl.length?a.role_text:null,taste:tasted.length};
   prof.onboarded_at=now; prof.version=(+prof.version||0)+1;
   S.profile=prof; S._obDone=true; S._obForce=false; S.show="today"; S.recent.clear();
-  const patch=skipped&&!a.cities.length?{}:{regions,other_regions:a.anywhere||!a.cities.length,tiers,checks:{...DEFAULT_PREFS.checks,...(S.prefs.checks||{}),green_regions:regions}};
+  const fp=fl.length?{families:fids,families_shown:shown}:{};
+  const patch=skipped&&!a.cities.length?fp:{regions,other_regions:a.anywhere||!a.cities.length,...fp,checks:{...DEFAULT_PREFS.checks,...(S.prefs.checks||{}),...pay,green_regions:regions}};
   // likes from the taste test train the ranking straight away
   const L={...S.likes};tasted.forEach(([id,v])=>{const j=S.jobs[id];L[id]={v,at:now,title:j?j.title:"",company:j?j.company:"",source:"taste"}});S.likes=L;
   S.today=null; await savePatch(patch);   // also re-renders; today's list is picked with the new answers
@@ -1150,6 +1200,14 @@ function viewToday(){
   return `${head}<div class="list">${main.map((j,i)=>card(j,i)).join("")}
     ${ex?`<div class="section-label">Something different</div><p class="explore-note">A well-scored role unlike the ones you usually pick. Your answer tells Lodestone whether to widen your list.</p>${card(ex,main.length)}`:""}</div>${moreRow}`;
 }
+/* Role-type filter on the full lists: one chip per family you see, yours first, with how many roles each has. */
+function famChips(){
+  const ids=[...myFams(),...shownFams().filter(f=>!myFams().includes(f))], n={};
+  Object.values(S.jobs).forEach(j=>{if(prefOk(j)&&isTodo(j))n[j.family||""]=(n[j.family||""]||0)+1});
+  const list=ids.filter(f=>n[f]||S.famOn.has(f));
+  if(list.length<2&&!S.famOn.size) return "";
+  return `<span class="flabel">Role type</span><button class="chip toggle" data-fam="" aria-pressed="${!S.famOn.size}">All</button>${list.map(f=>{const x=famById(f);return x?`<button class="chip toggle${myFams().includes(f)?" mine":""}" data-fam="${esc(f)}" aria-pressed="${S.famOn.has(f)}" title="${esc(x.label)}: ${esc(TIER_WORD[closeTo(f)])}">${esc(x.tag)} <span class="cnt">${n[f]||0}</span></button>`:""}).join("")}`;
+}
 function viewDigest(){
   if(needsOnboarding()) return viewOnboard();
   const all=visible(), n=S.prefs.digest_size||20;
@@ -1183,12 +1241,12 @@ function viewDigest(){
     <select id="region" aria-label="Region"><option value="preferred"${S.region==="preferred"?" selected":""}>My regions</option><option value="all"${S.region==="all"?" selected":""}>All of Canada</option>${REGIONS.map(r=>`<option${S.region===r?" selected":""}>${r}</option>`).join("")}</select>
     <select id="sort" aria-label="Sort"><option value="best"${S.sort==="best"?" selected":""}>Best match</option><option value="newest"${S.sort==="newest"?" selected":""}>Newest</option><option value="pay"${S.sort==="pay"?" selected":""}>Highest Canadian pay</option><option value="company"${S.sort==="company"?" selected":""}>Company</option></select>
     <select id="yrs" aria-label="Years of experience asked" title="Roles that don't say how many years they want are always shown">${[["any","Any experience"],["le5","Asks up to 5 years"],["le8","Asks up to 8 years"],["le10","Asks up to 10 years"],["ge5","Asks 5+ years"],["ge8","Asks 8+ years"],["ge10","Asks 10+ years"]].map(([v,l])=>`<option value="${v}"${S.yrs===v?" selected":""}>${l}</option>`).join("")}</select>
-    <span class="flabel">Role type</span>${TIERS.map(t=>`<button class="chip toggle" data-tier="${t}" aria-pressed="${S.tierOn.has(t)}" title="${esc(TIER_WHAT[t])}">${esc(TIER_NAME[t])}</button>`).join("")}
+    ${famChips()}
   </div>`}
   <details class="legend"><summary>What the colours mean</summary>
     <p><span class="ck ck-good"><b>✓</b>green</span> matches what you want · <span class="ck ck-warn"><b>~</b>yellow</span> partly, or unknown · <span class="ck ck-bad"><b>✕</b>red</span> goes against it. Set the thresholds in <button class="link plink" data-view="settings">your Profile</button>.</p>
     <ul><li><b>Work permit:</b> "Hires from abroad" = approved by the government to hire foreign workers recently; "Sponsors sometimes" = a few approvals, mostly non-tech; "Sponsorship unknown" = no public record either way; "No sponsorship" = the posting says you must already be allowed to work in Canada.</li>
-    <li><b>Role type:</b> Core PM = product manager roles; PM-adjacent = TPM, program, strategy & ops, chief of staff, trust & safety; Stretch = product marketing, solutions, analytics.</li>
+    <li><b>Role type:</b> the tag names the kind of job. <span class="ck tier t-core">${esc((famById(myFams()[0])||{}).tag||"")}</span> highlighted = your field (${esc(myFams().map(f=>(famById(f)||{}).label).filter(Boolean).join(", "))}); plain = ${shownFams().length?esc(shownFams().map(f=>(famById(f)||{}).label).filter(Boolean).join(", ")):"none yet"}, which you also asked to see. Change both in <button class="link plink" data-jump="ps-want">your Profile</button>.</li>
     <li><b>Level ≈ L6:</b> Lodestone's estimate of the role's seniority on Google's scale, used as a common yardstick: L4 mid-level, L5 Senior, L6 Staff, L7 Principal.</li>
     <li><b>Grey tags</b> are facts, not colour checks: the role type, and the years of experience the posting asks for (when it says).</li>
     <li><b>Fit</b> (the ring) = how well the role matches your profile, out of 100.</li></ul></details>
@@ -1210,7 +1268,7 @@ function pathwayPanel(j){
 function fitPanel(j){
   const f=j.fit; if(!f||!f.subs) return `<section class="panel"><h4>Fit</h4><p class="nopay">Not scored yet. It's scored at the next update (about 7am, 1pm or 6pm New York time).</p></section>`;
   const W=S.prefs.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+wv(W,k),0)||1, v=fitScore(j), fr=freshness(j);
-  const sub=k=>subVal(j,k), why=k=>k==="freshness"?fr.why:k==="pathway"?pathwayWhy(j):((f.reasons||{})[k]||"");
+  const sub=k=>subVal(j,k), why=k=>k==="freshness"?fr.why:k==="pathway"?pathwayWhy(j):k==="role"&&fieldChanged(j)?`${famName(j)}: ${TIER_WORD[j.tier]||""}. Re-scored for your field at the next update.`:((f.reasons||{})[k]||"");
   return `<section class="panel"><h4>Fit for you</h4>
     <div class="overall">${ring(v)}<p>${esc(f.summary||"")}${f.level_guess?`<br><span class="note">Level: ${esc(f.level_guess)}</span>`:""}</p></div>
     ${SUBS.map(k=>`<div class="bar"><span>${SUBLABEL[k]} <span class="w">${Math.round(wv(W,k)*100/tot)}%</span></span><div class="track"><div class="fill" style="width:${sub(k)}%"></div></div><span class="mono">${sub(k)}</span><span class="why">${esc(why(k))}</span></div>`).join("")}
@@ -1221,7 +1279,7 @@ function fitPanel(j){
 }
 function viewDetail(j){
   const t=tri(j.id)||{};
-  return `<div class="row" style="justify-content:space-between"><span class="chip t-${(j.tier||"").toLowerCase()}">${esc(TIER_NAME[j.tier]||j.tier||"")} · ${esc(TIER_WHAT[j.tier]||"")}</span><button class="btn" data-act="close">Close</button></div>
+  return `<div class="row" style="justify-content:space-between"><span class="chip t-${(j.tier||"other").toLowerCase()}">${esc(famName(j))} · ${esc(TIER_WORD[j.tier]||"")}</span><button class="btn" data-act="close">Close</button></div>
   <h2 id="dtitle" tabindex="-1">${esc(j.title)}</h2>
   <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(where(j))}</span></div>
   <div class="row actrow">${triageBtns(j)}${(j.sources||[])[0]?`<a class="btn primary" href="${esc(safeUrl(j.sources[0].url))}" target="_blank" rel="noopener">Open posting ↗</a>`:""}</div>
@@ -1568,6 +1626,8 @@ function spySections(){
 }
 window.addEventListener("scroll",()=>{if(_spy)return;_spy=requestAnimationFrame(()=>{_spy=0;spySections()})},{passive:true});
 function markDirty(){const b=document.getElementById("savebar");if(b&&!b.classList.contains("dirty")){b.classList.add("dirty");const n=document.getElementById("savenote");if(n)n.textContent="You have unsaved changes."}}
+function famAlso(){const mine=myFams(),w={Adjacent:"related",Stretch:"stretch"};
+  return fams().filter(f=>!mine.includes(f.id)).map(f=>[f,w[closeTo(f.id,mine)]||""]).sort((a,b)=>TIER_RANK[closeTo(a[0].id,mine)]-TIER_RANK[closeTo(b[0].id,mine)])}
 function viewSettings(){
   const p=S.prefs, pr=S.profile||{}, cur=pr.current||{}, pref=pr.preferences||{}, W=p.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+wv(W,k),0), ck={...DEFAULT_PREFS.checks,...(p.checks||{})};
   const val=k=>Array.isArray(pr[k])?pr[k].join("\n"):(pr[k]||"");
@@ -1582,7 +1642,7 @@ function viewSettings(){
     <div class="grid2">
       <div class="field"><label for="pf-employer">Current employer</label><input id="pf-employer" value="${esc(cur.employer||"")}" placeholder="e.g. Google"><span class="note">Used to spot internal transfers to its Canadian offices.</span></div>
       <div class="field"><label for="pf-title">Current title</label><input id="pf-title" value="${esc(cur.title||"")}"></div>
-      <div class="field"><label for="pf-level">Current level</label><input id="pf-level" value="${esc(cur.level||"")}" placeholder="e.g. L5, Senior PM"></div>
+      <div class="field"><label for="pf-level">Current level</label><input id="pf-level" value="${esc(cur.level||"")}" placeholder="e.g. Senior, or L5"></div>
       <div class="field"><label for="pf-where">Where you live now</label><input id="pf-where" value="${esc(pr.location_now||cur.location||"")}"></div>
     </div>
     <div class="field"><label for="pf-work">Work permit</label><select id="pf-work">${Object.entries(WORK_STATUS).map(([k,l])=>`<option value="${k}"${(pr.work_status||"needs_permit")===k?" selected":""}>${esc(l)}</option>`).join("")}</select>
@@ -1591,12 +1651,16 @@ function viewSettings(){
     ${PROFILE_FIELDS.map(([k,l,rows])=>`<div class="field"><label for="pf-${k}">${l}</label><textarea id="pf-${k}" rows="${rows}" style="min-height:${rows>1?110:44}px">${esc(val(k))}</textarea></div>`).join("")}
   </section>
   ${pfHead("want")}
-    <p class="note lead">Roles that match turn green on every card.</p>
+    <p class="note lead">The kind of work first, then where and at what level and pay. Roles that match turn green on every card.</p>
+    <fieldset class="field famset"><legend>What you do</legend>
+      <div class="chips">${fams().map(f=>`<label class="chip"><input type="checkbox" data-myfam="${esc(f.id)}"${myFams().includes(f.id)?" checked":""}> ${esc(f.label)}</label>`).join("")}</div>
+      <span class="note">Roles in your field get the highlighted tag and rank first.</span></fieldset>
+    <fieldset class="field famset"><legend>Also show me</legend>
+      <div class="chips">${famAlso().map(([f,why])=>`<label class="chip"><input type="checkbox" data-alsofam="${esc(f.id)}"${shownFams().includes(f.id)?" checked":""}> ${esc(f.label)}${why?` <span class="note">· ${why}</span>`:""}</label>`).join("")}</div>
+      <span class="note">Related roles are close to your field; stretch roles are a bigger move. Only roles you see here are scored for you.</span></fieldset>
     <div class="field"><label>Where (green in the colour checks)</label>
       <div class="chips">${REGIONS.filter(r=>r!=="Other Canada").map(r=>`<label class="chip"><input type="checkbox" data-region="${r}"${(p.regions||[]).includes(r)?" checked":""}> ${r}</label>`).join("")}</div>
       <div class="switch"><label for="other">Also show the rest of Canada under "My regions"</label><input type="checkbox" id="other"${p.other_regions?" checked":""}></div></div>
-    <div class="field"><label>Role types</label>
-      <div class="chips">${TIERS.map(t=>`<label class="chip"><input type="checkbox" data-ptier="${t}"${(p.tiers||[]).includes(t)?" checked":""}> ${t}</label>`).join("")}</div></div>
     <div class="field"><label for="pf-dw">Domains you want</label><textarea id="pf-dw" rows="3">${esc(pref.domains_wanted||"")}</textarea></div>
     <div class="grid2">
       <div class="field"><label for="ck-lg">Target level: green at L (or above)</label><input type="number" id="ck-lg" min="3" max="9" value="${+ck.level_green}"></div>
@@ -1655,6 +1719,7 @@ function freshPanel(){
 
 /* ---------- render ---------- */
 function render(){
+  applyFamilies();
   document.querySelectorAll("[data-view]").forEach(b=>b.setAttribute("aria-current",b.dataset.view===S.view?"page":"false"));
   const todo=Object.values(S.jobs).filter(j=>prefOk(j)&&isTodo(j)).length;   // same count as the Digest header
   $("#nc-digest").textContent=S.ready&&todo?String(todo):"";
@@ -1688,7 +1753,7 @@ document.addEventListener("click",e=>{
   if(d.tri){e.stopPropagation();const j=jobById(d.id);if(j)triage(j,d.tri);return}
   if(d.reason){e.stopPropagation();const j=jobById(d.id),t=tri(d.id)||{};const r=new Set(t.reasons||[]);r.has(d.reason)?r.delete(d.reason):r.add(d.reason);if(j)writeTriage(j,{reasons:[...r]});return}
   if(d.show){S.show=d.show;S.sel=0;S.expanded=false;S.recent.clear();render();return}
-  if(d.tier){S.tierOn.has(d.tier)?S.tierOn.delete(d.tier):S.tierOn.add(d.tier);render();return}
+  if(d.fam!==undefined){if(!d.fam)S.famOn.clear();else S.famOn.has(d.fam)?S.famOn.delete(d.fam):S.famOn.add(d.fam);S.sel=0;render();return}
   if(d.costatus){S.coStatus=d.costatus;render();return}
   if(d.act==="expand"){S.expanded=true;render();return}
   if(d.act==="moretoday"){moreToday();return}
@@ -1703,7 +1768,7 @@ document.addEventListener("click",e=>{
   if(d.act==="reonboard"||d.act==="taste"){   // run setup again, pre-filled with what Lodestone already knows
     const pr=S.profile||{}, ws=pr.work_status, st=(pr.onboarding||{}).status_answer;
     S.ob={step:d.act==="taste"?4:1,a:{cities:[...(S.prefs.regions||[])],anywhere:false,status:st||ws||"",role_text:(pr.preferences||{}).role_wanted||"",
-      families:OB_FAMILIES.filter(f=>((pr.preferences||{}).role_families||[]).includes(f[1])).map(f=>f[0]),paste:"",other_country:"",taste:{}}};
+      families:[...(S.prefs.families||(pr.preferences||{}).families||[])],paste:"",other_country:"",taste:{}}};
     S._obForce=true;S._obDone=false;setView("digest");return}
   if(d.ob){obCapture();const o=obState();
     if(d.ob==="next"){o.step=Math.min(4,o.step+1);if(o.step===4)o.picks=null}
@@ -1716,7 +1781,7 @@ document.addEventListener("click",e=>{
     else if(d.obf==="anywhere"){a.anywhere=!a.anywhere;if(a.anywhere)a.cities=[]}
     else if(d.obf==="country") a.other=v==="other";
     else if(d.obf==="status") a.status=v;
-    else if(d.obf==="fam") a.families=a.families.includes(v)?a.families.filter(x=>x!==v):[...a.families,v];
+    else if(d.obf==="fam"){if(!a.families.length)a.families=famsInText(a.role_text);a.families=a.families.includes(v)?a.families.filter(x=>x!==v):[...a.families,v];if(!a.families.length)a.role_text_off=true}
     render();return}
   if(d.obt){const t=obState().a.taste,v=+d.obt;t[d.id]=t[d.id]===v?0:v;render();return}
   if(d.sacc){acceptSuggestion(d.sacc);return}
@@ -1747,6 +1812,7 @@ document.addEventListener("keydown",e=>{   // arrow keys move between detail tab
 document.addEventListener("input",e=>{
   const t=e.target;
   if(t.id==="q"){S.q=t.value;S.sel=0;render()}
+  else if(t.id==="ob-role"){const a=obState().a;a.role_text=t.value;const n=document.getElementById("ob-heard");if(!a.families.length&&!a.role_text_off){const h=famsInText(t.value);if(n)n.innerHTML=heardText(h);document.querySelectorAll('[data-obf="fam"]').forEach(b=>b.setAttribute("aria-pressed",String(h.includes(b.dataset.v))))}}
   else if(t.id==="coq"){S.coQ=t.value;render()}
   else if(t.dataset.w){updateWeightLabels();S._editingPrefs=true;markDirty()}
   else if(S.view==="settings"&&t.closest("#view")&&!t.closest("#xp-build")){S._editingPrefs=true;markDirty()}
@@ -1769,11 +1835,12 @@ async function savePrefs(){
   if(!S.db){toast("Your profile saves inside claude.ai only.");return}
   const val=id=>document.getElementById(id);
   const regions=[...document.querySelectorAll("[data-region]")].filter(i=>i.checked).map(i=>i.dataset.region);
-  const tiers=[...document.querySelectorAll("[data-ptier]")].filter(i=>i.checked).map(i=>i.dataset.ptier);
+  const mine=[...document.querySelectorAll("[data-myfam]")].filter(i=>i.checked).map(i=>i.dataset.myfam);
+  const fmine=mine.length?mine:myFams(), also=[...document.querySelectorAll("[data-alsofam]")].filter(i=>i.checked).map(i=>i.dataset.alsofam).filter(f=>!fmine.includes(f));
   const raw={};SUBS.forEach(k=>raw[k]=+val("w-"+k).value||0);const tot=SUBS.reduce((a,k)=>a+raw[k],0)||1;
   const weights={};SUBS.forEach(k=>weights[k]=Math.round(raw[k]*100/tot));
   const clamp=(x,a,b,d)=>{x=Math.round(+x);return isFinite(x)?Math.min(b,Math.max(a,x)):d};
-  const body={...(S.prefsRaw||{}),regions,tiers:tiers.length?tiers:TIERS,other_regions:val("other").checked,exclude_people_mgmt:val("xpm").checked,
+  const body={...(S.prefsRaw||{}),regions,families:fmine,families_shown:also,other_regions:val("other").checked,exclude_people_mgmt:val("xpm").checked,
     include_no_pay:val("nopay").checked,today_size:clamp(val("tsize").value,3,30,10),learn_reading:val("lread").checked,digest_size:clamp(val("dsize").value,1,100,20),later_days:clamp(val("ldays").value,1,60,7),report_days:clamp(val("rdays").value,1,90,14),
     checks:{green_regions:regions,pay_green:clamp(val("ck-payg").value,50000,600000,190000),pay_yellow:clamp(val("ck-payy").value,30000,600000,160000),
       level_green:clamp(val("ck-lg").value,3,9,6),level_yellow:clamp(val("ck-ly").value,3,9,5),fresh_green:clamp(val("ck-fg").value,1,120,14),fresh_yellow:clamp(val("ck-fy").value,1,365,30)},max_age_days:clamp(val("maxage").value,0,365,0),weights,updated_at:new Date().toISOString()};
@@ -1781,7 +1848,7 @@ async function savePrefs(){
   prof.current={...(prof.current||{}),employer:val("pf-employer").value.trim(),title:val("pf-title").value.trim(),level:val("pf-level").value.trim()};
   prof.location_now=val("pf-where").value.trim();prof.work_status=val("pf-work").value;
   PROFILE_FIELDS.forEach(([k])=>{const v=val("pf-"+k).value.trim();prof[k]=Array.isArray((S.profile||{})[k])||k!=="headline"&&k!=="summary"?v.split("\n").map(x=>x.trim()).filter(Boolean):v});
-  prof.preferences={...(prof.preferences||{}),domains_wanted:val("pf-dw").value.trim()};
+  prof.preferences={...(prof.preferences||{}),domains_wanted:val("pf-dw").value.trim(),families:fmine,families_shown:also,role_families:fmine.map(f=>(famById(f)||{}).label).filter(Boolean)};
   const ba=document.getElementById("xp-build")&&!document.getElementById("xp-build").hidden?builderAnswers():null; if(ba) applyBuilder(prof,ba);
   const cv=val("cvtext"); if(cv&&cv.value.trim()&&cv.value.trim()!==((prof.resume||{}).text||"")) prof.resume={...(prof.resume||{}),text:cv.value.trim().slice(0,40000),uploaded_at:new Date().toISOString(),status:"uploaded"};
   prof.version=(+prof.version||0)+1;prof.edited_at=new Date().toISOString();

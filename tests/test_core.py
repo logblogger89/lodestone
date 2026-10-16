@@ -48,6 +48,27 @@ class TestRules(unittest.TestCase):
         self.assertEqual(classify_title("Product Marketing Manager").tier, "Stretch")
         self.assertIsNone(classify_title("Software Engineer").tier)
 
+    def test_families_are_absolute_and_closeness_is_relative(self):
+        from lodestone.rules import closeness
+        fam = lambda t: classify_title(t).family
+        self.assertEqual(fam("Senior Business Analyst"), "ba")
+        self.assertEqual(fam("Business Systems Analyst II"), "ba")
+        self.assertEqual(fam("Technical Program Manager"), "program")
+        self.assertEqual(fam("IT Project Manager"), "project")
+        self.assertEqual(fam("Senior Data Analyst"), "analytics")
+        self.assertEqual(fam("Program Manager, Trust & Safety"), "program")
+        self.assertEqual(fam("Chief of Staff to the CTO"), "strategy")
+        self.assertEqual(fam("Senior Product Manager, Payments"), "pm")
+        self.assertEqual(classify_title("Senior Business Analyst").tier, "Other")   # stored, though not near the default families
+        self.assertEqual(closeness("program", ["program"]), "Core")
+        self.assertEqual(closeness("pm", ["program"]), "Adjacent")
+        self.assertEqual(closeness("ba", ["program"]), "Stretch")
+        self.assertEqual(closeness("analytics", ["ba"]), "Adjacent")
+        self.assertEqual(fam("Senior Product Analyst"), "prodanalytics")
+        self.assertIsNone(closeness("analytics", ["pm"]))          # data analysts don't join a product manager's list
+        self.assertIsNone(closeness("solutions", ["ba"]))
+        self.assertTrue(classify_title("Junior Business Analyst").excluded)
+
     def test_excluded_and_people(self):
         self.assertTrue(classify_title("Associate Product Manager").excluded)
         self.assertTrue(classify_title("Product Manager Intern").excluded)

@@ -1,4 +1,4 @@
-"""CLI: python3 -m lodestone {detect,refresh,stats,index,pages,export,score,signals,inbox,market,discover,report,eval}.
+"""CLI: python3 -m lodestone {detect,refresh,reclassify,stats,index,pages,export,score,signals,inbox,market,discover,report,eval}.
 Used by the skills in .claude/skills/ and the scheduled runs (docs/ops/)."""
 from __future__ import annotations
 
@@ -15,6 +15,7 @@ def main(argv=None) -> int:
     d = sub.add_parser("detect", help="auto-detect hosted job boards for companies not yet in the source index")
     d.add_argument("--redo", action="store_true", help="re-probe companies already detected")
     r = sub.add_parser("refresh", help="pull all sources, keep Canadian roles, dedup, update liveness")
+    sub.add_parser("reclassify", help="re-read every stored role's family after a taxonomy change (D-076)")
     r.add_argument("--only", help="limit to one company name or one platform (for testing a source)")
     sub.add_parser("stats", help="print current counts and freshness")
     pg = sub.add_parser("pages", help="careers-page reader: fetch pages, or save the jobs read from one")
@@ -58,6 +59,8 @@ def main(argv=None) -> int:
     log = lambda m: print(m, file=sys.stderr)
     if a.cmd == "detect":
         out = pipeline.detect(redo=a.redo, log=log)
+    elif a.cmd == "reclassify":
+        out = pipeline.reclassify()
     elif a.cmd == "refresh":
         out = pipeline.refresh(only=a.only, log=log)
     elif a.cmd == "pages":

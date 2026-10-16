@@ -1,5 +1,9 @@
 {
-  "_doc": "Role-family pack for Product Management (D-005, D-017). Patterns are regexes matched against a normalized title (lowercase, punctuation removed, 'sr' -> 'senior'). First matching tier wins; 'exclude' is checked first.",
+  "_doc": "Role families (D-005, D-017, D-076). Each job gets ONE family, the first whose patterns match its normalized title (lowercase, punctuation removed, 'sr' -> 'senior'); 'exclude' is checked first. Families are absolute (a Business analyst role is 'Business analysis' for everyone). How close a family is to a person is relative: their own families, then each family's 'related', then 'stretch'. 'pay' is the default green/yellow pay target (CAD, top of posted range) offered when someone picks that family; they can change it. 'default_families' stands in for a profile that hasn't picked any (the first user's).",
+  "version": 2,
+  "default_families": [
+    "pm"
+  ],
   "exclude": [
     "\\bintern(ship)?\\b",
     "\\bco op\\b",
@@ -17,49 +21,304 @@
     "\\bentry level\\b",
     "\\bstudent\\b"
   ],
-  "tiers": {
-    "Core": [
-      "\\bproduct manager\\b",
-      "\\bproduct mgr\\b",
-      "\\bproduct management\\b",
-      "\\bproduct lead\\b",
-      "\\bproduct owner\\b",
-      "\\bgroup product manager\\b",
-      "\\bhead of product\\b",
-      "\\bdirector of product\\b",
-      "\\bproduct director\\b",
-      "\\b(senior|staff|principal|lead|group) pm\\b",
-      "\\bpm\\b.*\\b(ai|platform|growth|payments)\\b"
-    ],
-    "Adjacent": [
-      "\\btechnical program manager\\b",
-      "\\btpm\\b",
-      "\\bprogram manager\\b",
-      "\\bprogram lead\\b",
-      "\\bproduct operations\\b",
-      "\\bproduct ops\\b",
-      "\\bstrategy (and|&)? ?operations\\b",
-      "\\bbizops\\b",
-      "\\bbusiness operations\\b",
-      "\\bchief of staff\\b",
-      "\\b(trust|safety|integrity|risk|fraud|compliance|governance|policy)\\b.*\\b(product|program|strategy)\\b",
-      "\\b(product|program|strategy)\\b.*\\b(trust|safety|integrity|risk|fraud|compliance|governance|policy)\\b"
-    ],
-    "Stretch": [
-      "\\bproduct marketing\\b",
-      "\\bsolutions? (engineer|architect|consultant)\\b",
-      "\\bcustomer engineer\\b",
-      "\\bproduct analytics\\b",
-      "\\bproduct analyst\\b"
-    ]
-  },
+  "families": [
+    {
+      "id": "pm",
+      "label": "Product management",
+      "tag": "Product",
+      "what": "Own a product: roadmap, priorities, launches",
+      "onboard": "Product manager",
+      "patterns": [
+        "\\bproduct manager\\b",
+        "\\bproduct mgr\\b",
+        "\\bproduct management\\b",
+        "\\bproduct lead\\b",
+        "\\bproduct owner\\b",
+        "\\bgroup product manager\\b",
+        "\\bhead of product\\b",
+        "\\bdirector of product\\b",
+        "\\bproduct director\\b",
+        "\\b(senior|staff|principal|lead|group) pm\\b",
+        "\\bpm\\b.*\\b(ai|platform|growth|payments)\\b"
+      ],
+      "related": [
+        "program",
+        "strategy",
+        "tns"
+      ],
+      "stretch": [
+        "pmm",
+        "solutions",
+        "prodanalytics"
+      ],
+      "pay": {
+        "green": 190000,
+        "yellow": 160000
+      }
+    },
+    {
+      "id": "program",
+      "label": "Program management",
+      "tag": "Program",
+      "what": "Run complex work across teams, incl. technical program management",
+      "onboard": "Program or technical program manager",
+      "patterns": [
+        "\\btechnical program manager\\b",
+        "\\btpm\\b",
+        "\\bprogram manager\\b",
+        "\\bprogram lead\\b",
+        "\\bprogram management\\b",
+        "\\bprogram director\\b",
+        "\\bdirector of programs?\\b"
+      ],
+      "related": [
+        "project",
+        "pm",
+        "strategy",
+        "tns"
+      ],
+      "stretch": [
+        "ba",
+        "solutions"
+      ],
+      "pay": {
+        "green": 170000,
+        "yellow": 140000
+      }
+    },
+    {
+      "id": "project",
+      "label": "Project management",
+      "tag": "Project",
+      "what": "Deliver projects on time and on budget",
+      "onboard": "Project or delivery manager",
+      "patterns": [
+        "\\bproject manager\\b",
+        "\\bproject lead\\b",
+        "\\bproject management\\b",
+        "\\bdelivery manager\\b",
+        "\\bdelivery lead\\b",
+        "\\bpmo\\b",
+        "\\bscrum master\\b",
+        "\\bagile coach\\b",
+        "\\bimplementation manager\\b"
+      ],
+      "related": [
+        "program",
+        "ba"
+      ],
+      "stretch": [
+        "strategy",
+        "pm"
+      ],
+      "pay": {
+        "green": 130000,
+        "yellow": 105000
+      }
+    },
+    {
+      "id": "pmm",
+      "label": "Product marketing",
+      "tag": "Product marketing",
+      "what": "Take products to market",
+      "onboard": "Product marketing",
+      "patterns": [
+        "\\bproduct marketing\\b",
+        "\\bproduct marketer\\b",
+        "\\bgo to market (manager|lead|strategist)\\b",
+        "\\bgtm (manager|lead|strategist)\\b"
+      ],
+      "related": [
+        "pm",
+        "strategy"
+      ],
+      "stretch": [
+        "solutions",
+        "prodanalytics"
+      ],
+      "pay": {
+        "green": 160000,
+        "yellow": 130000
+      }
+    },
+    {
+      "id": "solutions",
+      "label": "Solutions and customer engineering",
+      "tag": "Solutions",
+      "what": "Design solutions with customers, before and after the sale",
+      "onboard": "Solutions or customer engineering",
+      "patterns": [
+        "\\bsolutions? (engineer|architect|consultant)\\b",
+        "\\bcustomer engineer\\b",
+        "\\bsales engineer\\b",
+        "\\bpre ?sales (engineer|consultant)\\b"
+      ],
+      "related": [
+        "pmm",
+        "program"
+      ],
+      "stretch": [
+        "pm",
+        "ba"
+      ],
+      "pay": {
+        "green": 170000,
+        "yellow": 140000
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy and operations",
+      "tag": "Strategy & ops",
+      "what": "Plan and run the business with leaders, incl. product ops and chief of staff",
+      "onboard": "Strategy, operations or chief of staff",
+      "patterns": [
+        "\\bproduct operations\\b",
+        "\\bproduct ops\\b",
+        "\\bstrategy (and )?operations\\b",
+        "\\bbizops\\b",
+        "\\bbusiness operations\\b",
+        "\\bchief of staff\\b",
+        "\\bcorporate strategy\\b",
+        "\\bstrategy (manager|lead|director)\\b",
+        "\\b(trust|safety|integrity|risk|fraud|compliance|governance|policy)\\b.*\\b(product|program|strategy)\\b",
+        "\\b(product|program|strategy)\\b.*\\b(trust|safety|integrity|risk|fraud|compliance|governance|policy)\\b"
+      ],
+      "related": [
+        "program",
+        "pm",
+        "ba",
+        "analytics",
+        "prodanalytics"
+      ],
+      "stretch": [
+        "project",
+        "tns"
+      ],
+      "pay": {
+        "green": 165000,
+        "yellow": 135000
+      }
+    },
+    {
+      "id": "tns",
+      "label": "Trust, safety and policy",
+      "tag": "Trust & safety",
+      "what": "Keep users and the business safe: trust & safety, integrity, policy",
+      "onboard": "Trust & safety, risk or policy",
+      "patterns": [
+        "\\btrust (and )?safety\\b",
+        "\\bcontent policy\\b",
+        "\\bplatform policy\\b",
+        "\\bintegrity (lead|manager|analyst|specialist)\\b"
+      ],
+      "related": [
+        "strategy",
+        "program",
+        "pm"
+      ],
+      "stretch": [
+        "prodanalytics",
+        "analytics"
+      ],
+      "pay": {
+        "green": 150000,
+        "yellow": 120000
+      }
+    },
+    {
+      "id": "ba",
+      "label": "Business analysis",
+      "tag": "Business analysis",
+      "what": "Turn business needs into clear requirements and processes",
+      "onboard": "Business or systems analyst",
+      "patterns": [
+        "\\bbusiness (systems )?analyst\\b",
+        "\\bbusiness analysis\\b",
+        "\\bsystems analyst\\b",
+        "\\bprocess analyst\\b",
+        "\\brequirements analyst\\b",
+        "\\bfunctional analyst\\b",
+        "\\bbusiness architect\\b"
+      ],
+      "related": [
+        "analytics",
+        "prodanalytics",
+        "project",
+        "strategy"
+      ],
+      "stretch": [
+        "pm",
+        "program"
+      ],
+      "pay": {
+        "green": 120000,
+        "yellow": 95000
+      }
+    },
+    {
+      "id": "prodanalytics",
+      "label": "Product analytics",
+      "tag": "Product analytics",
+      "what": "Measure how a product is used and what to build next",
+      "onboard": "Product analyst",
+      "patterns": [
+        "\\bproduct analytics\\b",
+        "\\bproduct analyst\\b",
+        "\\bproduct data scientist\\b",
+        "\\bproduct insights\\b"
+      ],
+      "related": [
+        "analytics",
+        "pm",
+        "ba"
+      ],
+      "stretch": [
+        "strategy",
+        "pmm"
+      ],
+      "pay": {
+        "green": 140000,
+        "yellow": 115000
+      }
+    },
+    {
+      "id": "analytics",
+      "label": "Data analytics",
+      "tag": "Data analytics",
+      "what": "Answer business questions with data and dashboards",
+      "onboard": "Data or BI analyst",
+      "patterns": [
+        "\\bdata analyst\\b",
+        "\\banalytics (manager|lead|engineer)\\b",
+        "\\bbusiness intelligence\\b",
+        "\\bbi (analyst|developer|lead)\\b",
+        "\\binsights (analyst|manager|lead)\\b",
+        "\\bmarketing analyst\\b",
+        "\\breporting analyst\\b"
+      ],
+      "related": [
+        "ba",
+        "prodanalytics",
+        "strategy"
+      ],
+      "stretch": [
+        "project"
+      ],
+      "pay": {
+        "green": 130000,
+        "yellow": 105000
+      }
+    }
+  ],
   "people_management_hints": [
     "\\bdirector\\b",
     "\\bhead of\\b",
     "\\bvp\\b",
     "\\bvice president\\b",
     "\\bmanager,? product management\\b",
-    "\\bmanager of product\\b"
+    "\\bmanager of product\\b",
+    "\\bmanager,? (program|project) management\\b"
   ],
   "exclude_hourly_below_cad": 45,
   "_doc_hourly": "Roles whose posted Canadian pay is an hourly rate below this (e.g. retail store jobs with product-sounding titles) are filtered out. Contract rates above it stay."

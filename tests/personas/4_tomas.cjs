@@ -7,7 +7,7 @@ module.exports = {
     const low = bottom(jobs, () => true, 4), cos = live(jobs).filter(j => j.company === (live(jobs)[0] || {}).company).slice(0, 2);
     return {
       'profile/main': { version: 1, headline: 'Technical program manager', work_status: 'needs_permit', current: { title: 'Senior TPM' } },
-      'settings/prefs': { regions: ['GTA', 'Vancouver', 'Remote-Canada'], other_regions: false, tiers: ['Core', 'Adjacent'], exclude_people_mgmt: true, include_no_pay: true },
+      'settings/prefs': { regions: ['GTA', 'Vancouver', 'Remote-Canada'], other_regions: false, families: ['program'], families_shown: ['pm', 'project'], exclude_people_mgmt: true, include_no_pay: true },
       ...tri(low.slice(0, 3), 'not', { reasons: ['Pay too low'] }),
       ...tri(cos, 'not', { reasons: ['Company'] }),
       ...tri(top(jobs, () => true, 2), 'later', { updated_at: daysAgo(9) }),            // came back from Later
@@ -25,6 +25,24 @@ module.exports = {
     h.check(w <= 392, `No sideways scrolling on the phone (page is ${w}px wide)`);
     const firstTop = await h.evalS(() => { const c = document.querySelector('#view .card'); return c ? Math.round(c.getBoundingClientRect().top) : 9999 });
     h.check(firstTop < 844 - 200, `A role is on screen without scrolling (first card starts at ${firstTop}px of 844)`);
+
+    h.task('His own field: program management, not "PM-adjacent"');
+    const page = await h.text();
+    h.check(!/PM-adjacent|Core PM/.test(page), 'Nothing calls his roles "PM-adjacent" or "Core PM"');
+    const tags = await h.page.locator('#view .card .ck.tier').evaluateAll(xs => xs.map(x => [x.textContent, x.className]));
+    const prog = tags.filter(([t]) => t === 'Program');
+    h.check(prog.length && prog.every(([, c]) => /t-core/.test(c)), `Program roles carry his field's highlighted tag (${prog.length} on screen)`);
+    h.check(tags.filter(([t]) => t === 'Product').every(([, c]) => !/t-core/.test(c)), 'Product roles show as related, not as his field');
+    const top3 = tags.slice(0, 3).map(([t]) => t);
+    h.check(top3.filter(t => t === 'Program').length >= 2, `His first roles are mostly program roles (${top3.join(', ')})`);
+    await h.click('[data-show="todo"]'); await h.wait(250);
+    const chips = await h.page.locator('[data-fam]').allInnerTexts();
+    h.check(/^All/.test(chips[0] || '') && /^Program/.test(chips[1] || ''), `Role-type filter starts with his field (${chips.join(' | ')})`);
+    await h.page.locator('[data-fam="program"]').click(); await h.wait(250);
+    const only = await h.page.locator('#view .card .ck.tier').allInnerTexts();
+    h.check(only.length && only.every(t => t === 'Program'), `Filtering to Program shows only program roles (${[...new Set(only)].join(', ')})`);
+    await h.shot('program-filter');
+    await h.page.locator('[data-fam=""]').click(); await h.click('[data-show="today"]'); await h.wait(250);
 
     h.task('Thumb targets');
     const sizes = await h.page.locator('#view .card .tbtn').evaluateAll(bs => bs.slice(0, 6).map(b => b.getBoundingClientRect().height));

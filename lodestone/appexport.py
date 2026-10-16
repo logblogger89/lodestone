@@ -16,7 +16,7 @@ from . import pipeline, sources, store
 from .experience import years_required
 
 OUT = store.STATE / "app_export"
-BUCKETS = 8                     # ~70 jobs per document, well under the 256 KiB document limit
+BUCKETS = 16                    # ~40-90 jobs per document, well under the 256 KiB document limit (more role families, D-076)
 DESC_BUCKETS = 32               # job descriptions (D-065): ~120 KB each, loaded only when a role is opened
 
 
@@ -30,7 +30,7 @@ def _job(key: str, j: dict) -> dict:
     return {
         "id": job_id(key), "company": j["company"], "title": j["title"], "location": j.get("location") or "",
         "region": j.get("region"), "remote": bool(j.get("remote")), "workplace": j.get("workplace"),
-        "tier": j.get("role_tier"), "people_mgmt": bool(j.get("people_mgmt_hint")),
+        "tier": j.get("role_tier"), "family": j.get("role_family"), "people_mgmt": bool(j.get("people_mgmt_hint")),
         "department": (j.get("department") or "")[:80], "pay": j.get("pay"), "pay_checked": bool(j.get("pay_checked")), "posted_at": j.get("posted_at"),
         "first_seen": j.get("first_seen"), "last_seen": j.get("last_seen"), "live": bool(j.get("live", True)),
         "closed_at": j.get("closed_at"),
@@ -49,6 +49,9 @@ def build() -> dict[str, dict[str, dict]]:
     estimates = payest.build()
     market = store.load("market_checks", {})
     sigs = store.load("signals", {"companies": {}, "window": ""})
+    fields = store.load("profile_fields", {})
+    from . import rules as _rules
+    default_field = sorted(_rules.default_families())
     from . import jdsections
     docs: dict[str, dict[str, dict]] = {"jobs": {}, "meta": {}, "desc": {f"d{i:02d}": {"jobs": {}} for i in range(DESC_BUCKETS)}}
     abouts: dict[str, list] = {}
@@ -64,8 +67,9 @@ def build() -> dict[str, dict[str, dict]]:
             rec["pay"] = {**(rec["pay"] or {"ranges": [], "primary": None, "source": None}), "market": market[rec["id"]]}
         rec["pathway"] = sigmod.pathway_for(j["company"], sc, sigs["companies"].get(j["company"]), sigs.get("window", ""))
         if sc:
-            rec["fit"] = {k: sc[k] for k in ("subs", "reasons", "summary", "level_guess", "people_mgmt", "work_mode",
-                                             "must_haves", "flags", "scored_at", "rubric")}
+            rec["fit"] = {**{k: sc[k] for k in ("subs", "reasons", "summary", "level_guess", "people_mgmt", "work_mode",
+                                                "must_haves", "flags", "scored_at", "rubric")},
+                          "field": fields.get(sc.get("profile_key") or "", default_field)}
         buckets[f"b{int(rec['id'], 16) % BUCKETS}"][rec["id"]] = rec
         desc = j.get("description") or ""
         if j.get("live") and len(desc) > 200:
@@ -90,6 +94,8 @@ def build() -> dict[str, dict[str, dict]]:
                      "status": best["status"], "canada_jobs": best.get("canada_jobs") or None,
                      "careers_url": best.get("careers_url") or "", "note": (best.get("notes") or "")[:160]})
     docs["meta"]["companies"] = {"companies": rows}
+    from . import rules
+    docs["meta"]["families"] = {"version": 2, "families": rules.families(), "default": rules.default_families()}
     written = json.loads((store.ROOT / "data" / "companies" / "summaries.json").read_text())["companies"]
     profiles = {}
     for name in sorted(set(abouts) | set(written)):   # sorted, so the same data always gives the same document

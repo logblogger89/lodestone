@@ -181,6 +181,42 @@ Asked once, at the moment they're relevant, each dismissible: first "Pay too low
 - **Track:** pipeline with nudges ("Applied 10 days ago: follow up?") and closed-posting alerts.
 - **Weekly (not built yet, §8.9):** a Monday "Your week": market changes, what Lodestone learned about you, companies to consider.
 
+### 8.14 Role types for any field (10-16, D-076)
+Ayush's question: a program manager or business analyst seeing "PM-adjacent" on their own roles is told, every day, that
+Lodestone isn't for them. Persona walk-through (PERSONAS.md round 4):
+- **Priya, Mei, Aisha, Lena (product managers):** "Core PM / PM-adjacent / Stretch" made sense. Their lists stay the same.
+- **Tomás (TPM):** his own roles were labelled "PM-adjacent" and ranked below PM roles in provisional ranking.
+- **Daniel (product marketer):** "Stretch" on his own field; the taste test was mostly PM roles.
+- **Omar (business analyst, new):** his roles weren't collected at all; typing "business analyst" in setup got "Lodestone
+  covers product and nearby roles today"; pay targets defaulted to a senior PM's, so every BA role looked underpaid.
+
+Design:
+- **One absolute family per job**, named in plain words on the tag: Product, Program, Project, Business analysis,
+  Analytics, Strategy & ops, Trust & safety, Product marketing, Solutions. **Highlighted** (accent) when it is one of
+  your fields, plain otherwise; hovering says "your field", "related to your field" or "a stretch from your field".
+- **Your field and what else to see** live in the Profile ("Choose the jobs you want" → What you do, Also show me, with
+  each other family marked related or stretch). Older settings map over unchanged: product management with related and
+  stretch families following the old role-type ticks.
+- **Setup** shows a card per family (from config) and understands typed words ("senior business analyst, banking" →
+  "Got it: Business analysis"); the taste test uses your field and related ones; finishing saves your field, shows its
+  related fields, and sets pay targets that fit the field (the highest of the fields you picked; changeable).
+- **Role-type filter** on the full lists: All, then your field, then the others you see, each with its count. Hidden on
+  Today, like the other filters.
+- **Ranking** before personal scores: your field, then related, then stretch. Only the families you see are scored.
+- **Legend** names your field and the other families you see, with a link to the Profile section.
+
+### 8.13 Profile navigation (10-16, D-075)
+- **Side menu:** while you're on the Profile, its six sections appear under "Profile" (About you, Jobs you want,
+  Ranking, Learning, Ranking check, Lists). Clicking one scrolls there and moves keyboard focus to its heading; the
+  section you're reading is highlighted as you scroll.
+- **Phones:** the same six as a row of chips that stays at the top of the Profile.
+- **Headings say what you can do there**, Google-settings style: "Tell Lodestone about your work", "Choose the jobs you
+  want", "Change how roles are ranked", "Control what Lodestone learns", "See how well the ranking fits your choices",
+  "Adjust your lists and reminders"; the meter reads "How well Lodestone knows you · Level 2 of 4". Each section opens
+  with one line on why it matters.
+- **Save changes** sits at the bottom until you edit something; then it stays in view (above the tab bar on phones)
+  with "You have unsaved changes."
+
 ### 8.12 Visual system after the design pass (10-16, D-074)
 - **Type scale:** 11 (small captions), 12 (tags, meta), 13 (secondary text), 15 (body, buttons), 16 (card titles, scores),
   18 (empty states, section titles), 22 (role title, onboarding questions), 26px (page titles); weights 400, 600, 700.

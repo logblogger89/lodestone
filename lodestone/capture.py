@@ -115,7 +115,7 @@ def add(records: list[dict]) -> list[dict]:
                "location": p.location_raw, "region": geo.region, "remote": geo.remote, "cec_credit": geo.cec_credit,
                "workplace": r.get("workplace"), "department": "", "posted_at": r.get("posted_at"),
                "pay": pay.resolve(None, p.description, p.location_raw, geo.region), "pay_field": None,
-               "pay_checked": bool(p.description), "role_tier": role.tier or "Adjacent",   # Ayush chose it: keep it
+               "pay_checked": bool(p.description), "role_tier": role.tier or "Other", "role_family": role.family,   # you chose it: keep it
                "role_excluded": False, "people_mgmt_hint": role.people_mgmt_hint,
                "role_reason": role.reason if role.tier else "added by you", "description": p.description,
                "captured": True, "label": _label(url)}

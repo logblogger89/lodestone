@@ -14,6 +14,7 @@ import datetime as dt
 import json
 import re
 
+from . import rules
 from . import store
 
 DIR = store.STATE / "reports"
@@ -48,7 +49,8 @@ def save(r: dict, today: dt.date | None = None) -> dict:
            "headline": r["headline"].strip(), "stats": {k: r.get("stats", {}).get(k) for k in STATS if k in r.get("stats", {})},
            "top": [{k: t.get(k) for k in ("id", "company", "title", "fit", "pay", "why")} for t in (r.get("top") or [])[:5]],
            "sections": [{"title": s["title"], "items": [str(i) for i in s["items"]][:30]} for s in r.get("sections") or []],
-           "actions": [str(a) for a in r.get("actions") or []][:10]}
+           "actions": [str(a) for a in r.get("actions") or []][:10],
+           "families": [str(f) for f in (r.get("families") or rules.default_families())]}   # the field it was written for (D-076)
     DIR.mkdir(parents=True, exist_ok=True)
     path = DIR / f"{doc['date']}.json"
     path.write_text(json.dumps(doc, indent=1, ensure_ascii=False))

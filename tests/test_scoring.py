@@ -41,6 +41,13 @@ class TestScoringPrepare(unittest.TestCase):
         self.assertEqual(out[0]["jobs"], 1)
         self.assertEqual(out[-1], {"profile_rescore_waiting": 4})
 
+    def test_profile_key_ignores_family_display_choices(self):
+        base = {"headline": "x", "preferences": {"domains_wanted": "AI"}}
+        same = {"headline": "x", "preferences": {"domains_wanted": "AI", "families": ["pm"], "families_shown": ["program"], "role_families": ["Product management"]}}
+        other = {"headline": "x", "preferences": {"domains_wanted": "AI", "families": ["ba"]}}
+        self.assertEqual(scoring.profile_key(base), scoring.profile_key(same))
+        self.assertNotEqual(scoring.profile_key(base), scoring.profile_key(other))
+
     def test_profile_key_ignores_the_resume_file(self):
         a = scoring.profile_key({"headline": "x", "resume": {"asset_id": "1"}})
         b = scoring.profile_key({"headline": "x", "resume": {"asset_id": "2"}})
@@ -52,6 +59,20 @@ class TestScoringPrepare(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             scoring.prepare(profile={"headline": "PM", "domains": ["AI"]}, max_rescore=2)
         self.assertTrue(scoring.prepare(profile={"headline": "PM", "domains": ["AI"]}, max_rescore=2, force=True))
+
+    def test_only_the_persons_families_are_scored(self):
+        jobs = {"pm": {"title": "Senior Product Manager", "company": "A", "live": True, "role_tier": "Core", "role_family": "pm", "description": "d"},
+                "ba": {"title": "Senior Business Analyst", "company": "A", "live": True, "role_tier": "Other", "role_family": "ba", "description": "d"},
+                "da": {"title": "Data Analyst", "company": "A", "live": True, "role_tier": "Other", "role_family": "analytics", "description": "d"},
+                "pa": {"title": "Product Analyst", "company": "A", "live": True, "role_tier": "Stretch", "role_family": "prodanalytics", "description": "d"}}
+        with mock.patch.object(scoring.store, "load", lambda n, d: {"jobs": jobs} if n == "jobs" else {}):
+            titles = lambda prof: sorted(r["title"] for b in scoring.prepare(profile=prof) if "file" in b for r in __import__("json").loads(Path(b["file"]).read_text()))
+            self.assertEqual(titles({"headline": "PM"}), ["Product Analyst", "Senior Product Manager"])   # old profile: PM plus related and stretch
+            import shutil
+            shutil.rmtree(scoring.INBOX, ignore_errors=True)
+            self.assertEqual(titles({"headline": "BA", "preferences": {"families": ["ba"], "families_shown": []}}), ["Senior Business Analyst"])
+            shutil.rmtree(scoring.INBOX, ignore_errors=True)
+            self.assertEqual(titles({"headline": "BA", "preferences": {"families": ["ba"], "families_shown": ["analytics"]}}), ["Data Analyst", "Senior Business Analyst"])
 
 
 if __name__ == "__main__":

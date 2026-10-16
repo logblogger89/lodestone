@@ -78,12 +78,12 @@ standard library only, so no installs are needed.
    fix needs that). Add a posting to `data/eval/reading_gold.json` whenever a reading mistake is found (target 50).
 6. **Push to the app (P1-S2).** The app is the private Artifact https://claude.ai/artifact/CYCv1eLACYb5joRcDo9gp7
    (source: `app/lodestone.html`). Run `python3 -m lodestone export`; it writes one JSON file per database
-   document under `data/state/app_export/` (jobs packed into buckets `jobs/b0`–`b7`, plus `meta/companies`,
+   document under `data/state/app_export/` (jobs packed into buckets `jobs/b0`–`b15`, plus `meta/companies`, `meta/families` (the role-family list, D-076),
    `meta/company_profiles`, `meta/freshness`, `meta/eval` and `meta/suggestions`) and marks each `changed` since the last
    confirmed push. Then `ArtifactData list` the `jobs`, `meta` and `desc` collections to get each document's
    `version`, and write them with `ArtifactData batch` `set` entries using `file_path` and that `if_version`
-   (omit it only for a document that doesn't exist yet). One batch is capped at 1 MiB, so send `jobs/b0–b3` in
-   one batch and `jobs/b4–b7` plus `meta/*` in a second. Job descriptions (`desc/d00–d31`, ~120–200 KB each, D-065):
+   (omit it only for a document that doesn't exist yet). One batch is capped at 1 MiB, so send the jobs buckets
+   six or seven at a time (`b0–b6`, `b7–b13`, then `b14–b15` plus `meta/*`), keeping each batch under 1 MiB. Job descriptions (`desc/d00–d31`, ~120–200 KB each, D-065):
    push only the ones `export` marks `"changed": true`, four per batch. After the batches succeed, run
    `python3 -m lodestone export --mark-pushed` (or list only the `collection/doc_id` keys that went through, if some
    failed), so anything not pushed is marked changed again next time. Never write `triage` or `settings`, and `profile` only as step 5 describes

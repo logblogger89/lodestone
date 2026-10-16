@@ -61,7 +61,7 @@ def build() -> dict[str, dict]:
         if not (j.get("live") and j.get("role_tier") and not j.get("role_excluded")):
             continue
         jid = job_id(key)
-        rows.append({"id": jid, "company": j["company"], "title": j["title"], "family": j["role_tier"],
+        rows.append({"id": jid, "company": j["company"], "title": j["title"], "family": j.get("role_family") or j["role_tier"],
                      "segment": seg.get(j["company"], ""), "level": level_of(j["title"], scores.get(jid, {}).get("level_guess")),
                      "base": _canadian_base(j.get("pay")), "has_canadian": bool((j.get("pay") or {}).get("primary") is not None)})
     pool = [r for r in rows if r["base"] and r["level"]]

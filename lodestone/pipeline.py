@@ -121,12 +121,36 @@ def _enrich(p, jobs: dict):
     return p, None
 
 
+def reclassify(jobs: dict | None = None) -> dict:
+    """Re-read every stored job's role family with the current taxonomy (cheap; run when the taxonomy changes).
+    Roles you added yourself keep a family even when their title matches none (they show as "Other")."""
+    save = jobs is None
+    if save:
+        data = store.load("jobs", {"jobs": {}})
+        jobs = data["jobs"]
+    changed = 0
+    for j in jobs.values():
+        r = classify_title(j["title"])
+        tier = r.tier or ("Other" if j.get("captured") else None)
+        new = {"role_tier": tier, "role_family": r.family, "people_mgmt_hint": r.people_mgmt_hint,
+               "role_excluded": r.excluded if not j.get("captured") else False}
+        if j.get("role_excluded") and "Hourly pay" in (j.get("role_reason") or ""):
+            new["role_excluded"] = True
+        if any(j.get(k) != v for k, v in new.items()):
+            changed += 1
+            j.update(new)
+    if save:
+        store.save("jobs", data)
+    return {"jobs": len(jobs), "changed": changed, "by_family": dict(Counter(j.get("role_family") for j in jobs.values() if j.get("role_tier") and not j.get("role_excluded")))}
+
+
 def refresh(only: str | None = None, log=print) -> dict:
     rows = sources.load()
     active = [r for r in rows if r["status"] == "active" and (not only or r["company"] == only or r["platform"] == only)]
     if not active:
         raise SystemExit("No active sources. Run: python3 -m lodestone detect")
     jobs: dict = store.load("jobs", {"jobs": {}})["jobs"]
+    reclassify(jobs)
     seen_at = store.now()
     stats = Counter()
     errors, per_source = {}, Counter()
@@ -177,7 +201,7 @@ def refresh(only: str | None = None, log=print) -> dict:
             "pay": pay.resolve(p.pay, p.description, p.location_raw, geo.region),
             "pay_field": p.pay,               # raw salary data from the job system, kept so pay can be re-read
             "pay_checked": bool(p.description or p.pay),
-            "role_tier": role.tier, "role_excluded": role.excluded,
+            "role_tier": role.tier, "role_family": role.family, "role_excluded": role.excluded,
             "people_mgmt_hint": role.people_mgmt_hint, "role_reason": role.reason,
             "description": p.description if _is_candidate(role) else "",
             "detail_api": p.extra.get("detail_api"),
@@ -191,7 +215,7 @@ def refresh(only: str | None = None, log=print) -> dict:
         if len(jobs) > before:
             job["first_seen"] = seen_at
             stats["new"] += 1
-        for k in ("title", "location", "region", "remote", "pay", "pay_field", "pay_checked", "role_tier", "role_excluded",
+        for k in ("title", "location", "region", "remote", "pay", "pay_field", "pay_checked", "role_tier", "role_family", "role_excluded",
                   "people_mgmt_hint", "role_reason", "workplace", "posted_at"):
             job[k] = rec[k]
         if rec["description"]:
@@ -228,7 +252,7 @@ def refresh(only: str | None = None, log=print) -> dict:
             stats["went_dead"] += 1
 
     candidates = [
-        {"id": jid, **{k: j[k] for k in ("company", "title", "location", "region", "role_tier",
+        {"id": jid, **{k: j.get(k) for k in ("company", "title", "location", "region", "role_tier", "role_family",
                                           "people_mgmt_hint", "pay", "first_seen")},
          "sources": [s["source"] for s in j["sightings"]], "urls": [s["url"] for s in j["sightings"]]}
         for jid, j in jobs.items()
@@ -256,6 +280,7 @@ def refresh(only: str | None = None, log=print) -> dict:
         "pay_canada": sum(1 for j in jobs.values() if j["live"] and j.get("role_tier") and not j.get("role_excluded")
                           and j.get("pay") and j["pay"].get("primary") is not None),
         "by_tier": dict(Counter(c["role_tier"] for c in candidates)),
+        "by_family": dict(Counter(c["role_family"] for c in candidates)),
         "by_region": dict(Counter(c["region"] for c in candidates)), "errors": errors,
     }
     store.mark_fresh("jobs", **{k: summary[k] for k in ("sources_ok", "sources_failed", "canada_postings", "candidates")})
@@ -272,6 +297,7 @@ def stats() -> dict:
         "active_by_platform": dict(Counter(r["platform"] for r in rows if r["status"] == "active")),
         "jobs_live": len(live), "candidates": len(cands),
         "by_tier": dict(Counter(j["role_tier"] for j in cands)),
+        "by_family": dict(Counter(j.get("role_family") for j in cands)),
         "by_region": dict(Counter(j["region"] for j in cands)),
         "by_company": dict(Counter(j["company"] for j in cands).most_common()),
         "freshness": store.load("runs", {"components": {}})["components"],
