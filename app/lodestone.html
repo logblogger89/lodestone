@@ -982,22 +982,26 @@ function needsOnboarding(){
   return !(pr.headline||pr.resume||pr.builder||(pr.current||{}).title||Object.keys(S.triage).length);   // existing users never see it
 }
 function obState(){return S.ob||(S.ob={step:0,a:{cities:[],anywhere:false,status:"",role_text:"",families:[],paste:"",other_country:"",taste:{}}})}
-function tastePicks(){   // 8 real, recent roles across role types and companies, in the cities chosen
+function tastePicks(){   // 8 real, recent roles across role types and companies: chosen cities first, then remote, then the rest of Canada
   const o=obState(), a=o.a; if(o.picks) return o.picks;
   const tiers=new Set(a.families.length?OB_FAMILIES.filter(f=>a.families.includes(f[0])).map(f=>f[3]):TIERS);
-  const inCity=j=>a.anywhere||!a.cities.length||a.cities.includes(j.region);
-  const pool=Object.values(S.jobs).filter(j=>j.live&&tiers.has(j.tier)&&inCity(j)).sort((x,y)=>freshness(y).score-freshness(x).score||(postedMs(y)||0)-(postedMs(x)||0));
-  const out=[],cos=new Set(),by={Core:[],Adjacent:[],Stretch:[]};
-  pool.forEach(j=>by[j.tier]&&by[j.tier].push(j));
-  for(let r=0;out.length<8&&r<60;r++) for(const t of TIERS){const j=by[t].find(x=>!cos.has(x.company));if(j&&out.length<8){out.push(j.id);cos.add(j.company);by[t]=by[t].filter(x=>x!==j)}}
-  return o.picks=out;
+  const near=j=>a.anywhere||!a.cities.length||a.cities.includes(j.region)?0:j.region==="Remote-Canada"?1:2;
+  const pool=Object.values(S.jobs).filter(j=>j.live).sort((x,y)=>(tiers.has(x.tier)?0:1)-(tiers.has(y.tier)?0:1)||near(x)-near(y)||freshness(y).score-freshness(x).score);
+  const out=[],cos=new Set();
+  for(const pass of [0,1]) for(const j of pool){   // one role per company first, repeats only if needed
+    if(out.length>=8) break;
+    if(out.includes(j.id)||(pass===0&&cos.has(j.company))) continue;
+    out.push(j.id);cos.add(j.company);
+  }
+  const order={Core:0,Adjacent:1,Stretch:2};   // mix role types so the test isn't eight of the same
+  return o.picks=out.sort((x,y)=>near(S.jobs[x])-near(S.jobs[y])||order[S.jobs[x].tier]-order[S.jobs[y].tier]);
 }
 function viewOnboard(){
   const o=obState(), a=o.a, step=o.step;
   const prog=step>0?`<div class="obprog"><span class="dots" aria-hidden="true">${[1,2,3,4].map(i=>`<i class="${i<=step?"on":""}"></i>`).join("")}</span><span class="note">Step ${step} of 4</span><span class="sp"></span><button class="link plink" data-ob="skipall">Skip setup</button></div>`:"";
   const nav=(label,disabled)=>`<div class="obnav"><button class="btn" data-ob="back">Back</button><span class="sp"></span><button class="link plink" data-ob="next">Skip this question</button><button class="btn primary" data-ob="next"${disabled?" disabled":""}>${label}</button></div>`;
   let body="";
-  if(step===0) body=`<p class="obkicker">Lodestone</p>
+  if(step===0) body=`<p class="obkicker">Welcome</p>
     <h1 class="obpromise">Find the jobs that fit you, in the country you want to move to, and the ones that will actually hire you.</h1>
     <p>Lodestone reads company job boards several times a day, ranks the roles for you, and shows which employers hire people from abroad. Four quick questions, about a minute. No resume needed.</p>
     <p class="obprivacy">Everything you tell Lodestone stays private to you. Nothing is shared with employers.</p>
