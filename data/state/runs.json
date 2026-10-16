@@ -153,14 +153,14 @@
    "at": "2026-10-15T12:58:55+00:00",
    "window": "2024Q1–2026Q1",
    "companies_with_lmias": 86
+  },
+  "source_index": {
+   "at": "2026-10-16T10:55:03+00:00",
+   "companies": 210,
+   "indexed": 210
   }
  },
  "history": [
-  {
-   "component": "jobs:dayforce",
-   "at": "2026-10-15T13:03:41+00:00",
-   "postings": 112
-  },
   {
    "component": "jobs:avature",
    "at": "2026-10-15T13:03:41+00:00",
@@ -412,6 +412,12 @@
    "sources_failed": 2,
    "canada_postings": 10753,
    "candidates": 545
+  },
+  {
+   "component": "source_index",
+   "at": "2026-10-16T10:55:03+00:00",
+   "companies": 210,
+   "indexed": 210
   }
  ]
 }

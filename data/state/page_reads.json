@@ -1,66 +1,66 @@
 {
  "Autoverify": {
-  "read_at": "2026-10-15T03:10:18+00:00",
+  "read_at": "2026-10-16T10:55:23+00:00",
   "jobs": [
    {
-    "title": "Photographer - Kitchener, ON (Contractor)",
+    "title": "Photographer - Kitchener, ON",
     "url": "https://secure.collage.co/jobs/autoverify/65868",
     "location": "Kitchener, ON, Canada"
    },
    {
-    "title": "Photographer - London, ON (Contractor)",
+    "title": "Photographer - London, ON",
     "url": "https://secure.collage.co/jobs/autoverify/65870",
     "location": "London, ON, Canada"
    },
    {
-    "title": "Photographer - Niagara, ON (Contractor)",
+    "title": "Photographer - Niagara, ON",
     "url": "https://secure.collage.co/jobs/autoverify/65869",
     "location": "Niagara, ON, Canada"
    },
    {
-    "title": "Photographer - Ottawa, ON (Contractor)",
+    "title": "Photographer - Ottawa, ON",
     "url": "https://secure.collage.co/jobs/autoverify/65389",
     "location": "Ottawa, ON, Canada"
    },
    {
-    "title": "Photographer - Scarborough - Whitby (Contractor)",
+    "title": "Photographer - Scarborough - Whitby",
     "url": "https://secure.collage.co/jobs/autoverify/65867",
     "location": "Toronto, ON, Canada"
    },
    {
-    "title": "Photographer - Whitby/Oshawa, ON (Contractor)",
+    "title": "Photographer - Whitby/Oshawa, ON",
     "url": "https://secure.collage.co/jobs/autoverify/65391",
     "location": "Oshawa, ON, Canada"
    },
    {
-    "title": "Photographer - Winnipeg (Contractor)",
+    "title": "Photographer - Winnipeg",
     "url": "https://secure.collage.co/jobs/autoverify/65237",
     "location": "Winnipeg, MB, Canada"
    },
    {
-    "title": "Photographer - Brampton/Mississauga, ON (Contractor)",
+    "title": "Photographer - Brampton/Mississauga, ON",
     "url": "https://secure.collage.co/jobs/autoverify/66095",
     "location": "Brampton, ON, Canada"
    }
   ]
  },
  "Digitail": {
-  "read_at": "2026-10-15T03:10:18+00:00",
+  "read_at": "2026-10-16T10:55:24+00:00",
   "jobs": [
    {
     "title": "Platform Support Engineer",
     "url": "https://digitail.factorial.com/job_posting/platform-support-engineer-325008",
-    "location": "Iasi, Romania (Hybrid)"
+    "location": "Iasi, Romania"
    },
    {
     "title": "Senior Backend Engineer",
     "url": "https://digitail.factorial.com/job_posting/senior-backend-engineer-277928",
-    "location": "Iasi, Romania (Hybrid)"
+    "location": "Iasi, Romania"
    },
    {
     "title": "Content Manager",
     "url": "https://digitail.factorial.com/job_posting/content-manager-316780",
-    "location": "Toronto, ON, Canada (Hybrid)"
+    "location": "Toronto, Canada"
    },
    {
     "title": "Account Manager",
@@ -75,7 +75,7 @@
    {
     "title": "SMB Account Executive, SaaS Veterinary (Canada/USA)",
     "url": "https://digitail.factorial.com/job_posting/smb-account-executive-saas-veterinary-canada-usa-278567",
-    "location": "Remote, Canada"
+    "location": "Remote, Canada/USA"
    },
    {
     "title": "Onboarding Specialist",
@@ -90,7 +90,7 @@
   ]
  },
  "Taalas": {
-  "read_at": "2026-10-15T03:10:18+00:00",
+  "read_at": "2026-10-16T10:55:24+00:00",
   "jobs": [
    {
     "title": "Electronics Lab Technician",
@@ -135,16 +135,11 @@
   ]
  },
  "Vidyard": {
-  "read_at": "2026-10-15T03:10:18+00:00",
+  "read_at": "2026-10-16T10:55:24+00:00",
   "jobs": [
    {
     "title": "Future Opportunities: Enterprise Account Manager",
     "url": "https://careers.kula.ai/vidyard/34567-future-opportunities-enterprise-account-manager?jobs=true",
-    "location": "Remote, Canada"
-   },
-   {
-    "title": "AI Marketing Operations Manager",
-    "url": "https://careers.kula.ai/vidyard/54553-ai-marketing-operations-manager?jobs=true",
     "location": "Remote, Canada"
    }
   ]
