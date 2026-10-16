@@ -16,6 +16,21 @@ module.exports = {
     h.note('works', 'Top pay tags: ' + pays.slice(0, 4).join(' | '));
     await h.shot('all-by-pay');
 
+    h.task('Filter by years of experience asked');
+    const before = await h.page.locator('#view .card').count();
+    await h.page.selectOption('#yrs', 'le8'); await h.wait(300);
+    const yrs = await h.evalS(() => S._order.map(j => j.years && j.years.min));
+    h.check(yrs.length > 0 && yrs.every(m => m == null || m <= 8), `"Asks up to 8 years" shows only roles asking 8 or fewer, plus ones that don't say (${yrs.length} roles)`);
+    await h.page.selectOption('#yrs', 'ge10'); await h.wait(300);
+    const yrs2 = await h.evalS(() => S._order.map(j => j.years && j.years.min));
+    h.check(yrs2.every(m => m == null || m >= 10), '"Asks 10+ years" shows only senior asks');
+    await h.shot('years-filter');
+    await h.page.selectOption('#yrs', 'any'); await h.wait(200);
+    h.check(!(await h.page.locator('#yrs').count()) === false, 'The experience filter is on the full list');
+    await h.click('[data-show="today"]'); await h.wait(200);
+    h.check(!(await h.page.locator('#yrs').count()), 'Today shows no filters');
+    await h.click('[data-show="all"]'); await h.wait(200);
+
     h.task('Search "AI" and look at one company');
     await h.page.fill('#q', 'AI'); await h.wait(300);
     const n = await h.page.locator('#view .card').count();

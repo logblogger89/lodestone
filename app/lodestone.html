@@ -88,7 +88,7 @@ a.btn{text-decoration:none;display:inline-flex;align-items:center}
 .pay small{font-family:var(--font-body);font-weight:400;color:var(--muted);font-size:12px;margin-left:4px}
 .pay.us{font-weight:400;color:var(--muted)}
 .paymore{font-size:12px;color:var(--muted)}
-.paymore+.paymore::before{content:"· "}
+.paymore+.paymore::before{content:"·";margin:0 6px}
 a.src:hover{color:var(--accent);text-decoration:underline}
 .nopay{font-size:12px;color:var(--muted)}
 .payrows{display:flex;flex-direction:column;gap:2px}
@@ -376,7 +376,7 @@ const S = {
   db:null, ready:false, offline:false, canWrite:true,
   jobs:{}, triage:{}, prefs:{...DEFAULT_PREFS}, companies:[], freshness:{}, inbox:[], mreq:{}, reports:[], suggestions:[], codec:{}, sugAll:false, desc:{}, cprof:{}, likes:{}, sig:{}, today:null, todayLoaded:false, triLoaded:false, prefsRaw:{}, dtab:lsGet("dtab","summary"),
   view:"digest", open:null, sel:0, show:"today", region:"preferred", q:"", tierOn:new Set(TIERS), sort:"best",
-  coQ:"", coStatus:"all", expanded:false, recent:new Set(), lastVisit:null, pendingReasons:null
+  coQ:"", coStatus:"all", expanded:false, yrs:"any", recent:new Set(), lastVisit:null, pendingReasons:null
 };
 const $ = (s,el=document)=>el.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -539,6 +539,10 @@ function matchesBase(j){
   if(!S.prefs.include_no_pay&&!payText(j)) return false;
   if(S.region==="preferred"){if(!inPreferred(j)) return false}
   else if(S.region!=="all"&&j.region!==S.region) return false;
+  if(S.yrs!=="any"&&j.years&&j.years.min!=null){   // roles that don't say how many years always stay (missing data never hides a job)
+    const m=+j.years.min, [op,n]=[S.yrs.slice(0,2),+S.yrs.slice(2)];
+    if(op==="le"&&m>n) return false; if(op==="ge"&&m<n) return false;
+  }
   if(S.q){const q=S.q.toLowerCase();if(!(j.title+" "+j.company+" "+j.location+" "+(j.department||"")).toLowerCase().includes(q)) return false}
   return true;
 }
@@ -762,7 +766,7 @@ function whyRanked(j){
 /* ---------- db ---------- */
 async function boot(){
   S.lastVisit=lsGet("lastVisit",null);
-  try{ const v=lsGet("ui",{}); if(v.view) S.view=v.view; if(v.sort) S.sort=v.sort; if(v.region) S.region=v.region }catch{}
+  try{ const v=lsGet("ui",{}); if(v.view) S.view=v.view; if(v.sort) S.sort=v.sort; if(v.region) S.region=v.region; if(v.yrs) S.yrs=v.yrs }catch{}
   render();
   const use=n=>{try{return Promise.resolve(window.claude?.use?.(n)??null).catch(()=>null)}catch{return Promise.resolve(null)}};
   const db=await use("db");
@@ -1147,7 +1151,7 @@ function viewDigest(){
   else if(!S.ready) body=`<div class="empty"><h2>Loading your jobs…</h2><p>Reading Lodestone's database.</p></div>`;
   else if(!live.length) body=`<div class="empty"><h2>No jobs yet</h2><p>Roles appear after the next update (about 7am, 1pm and 6pm New York time).</p></div>`;
   else if(isToday) body=obBanner()+profileNudge()+viewToday();
-  else if(!all.length) body=`<div class="empty"><h2>Nothing matches these filters</h2><p>Try "All of Canada", turn on more role types, or clear the search.</p></div>`;
+  else if(!all.length) body=`<div class="empty"><h2>Nothing matches these filters</h2><p>Try "All of Canada", turn on more role types, set experience to "Any", or clear the search.</p></div>`;
   else body=`<div class="list">
       ${fresh.length?`<div class="section-label">New since your last visit</div>`:""}
       ${first.map((j,i)=>card(j,i)).join("")}
@@ -1161,6 +1165,7 @@ function viewDigest(){
     <input type="search" id="q" placeholder="Search title, company, team" value="${esc(S.q)}" aria-label="Search">
     <select id="region" aria-label="Region"><option value="preferred"${S.region==="preferred"?" selected":""}>My regions</option><option value="all"${S.region==="all"?" selected":""}>All of Canada</option>${REGIONS.map(r=>`<option${S.region===r?" selected":""}>${r}</option>`).join("")}</select>
     <select id="sort" aria-label="Sort"><option value="best"${S.sort==="best"?" selected":""}>Best match</option><option value="newest"${S.sort==="newest"?" selected":""}>Newest</option><option value="pay"${S.sort==="pay"?" selected":""}>Highest Canadian pay</option><option value="company"${S.sort==="company"?" selected":""}>Company</option></select>
+    <select id="yrs" aria-label="Years of experience asked" title="Roles that don't say how many years they want are always shown">${[["any","Any experience"],["le5","Asks up to 5 years"],["le8","Asks up to 8 years"],["le10","Asks up to 10 years"],["ge5","Asks 5+ years"],["ge8","Asks 8+ years"],["ge10","Asks 10+ years"]].map(([v,l])=>`<option value="${v}"${S.yrs===v?" selected":""}>${l}</option>`).join("")}</select>
     <span class="flabel">Role type</span>${TIERS.map(t=>`<button class="chip toggle" data-tier="${t}" aria-pressed="${S.tierOn.has(t)}" title="${esc(TIER_WHAT[t])}">${esc(TIER_NAME[t])}</button>`).join("")}
   </div>`}
   <details class="legend"><summary>What the colours mean</summary>
@@ -1624,7 +1629,7 @@ function render(){
 /* Opening and closing a role moves keyboard focus sensibly: into the role, then back to the card you came from. */
 function openJob(id,idx){S.open=id;if(idx!=null)S.sel=idx;render();const h=document.getElementById("dtitle");if(h)h.focus()}
 function closeJob(){const id=S.open;S.open=null;render();if(id){const c=document.querySelector(`#view .card[data-open="${CSS.escape(id)}"]`);if(c)c.focus()}}
-function setView(v){S.view=v;S.open=null;S.sel=0;S._editingPrefs=false;S.recent.clear();lsSet("ui",{view:v,sort:S.sort,region:S.region});render();window.scrollTo(0,0)}
+function setView(v){S.view=v;S.open=null;S.sel=0;S._editingPrefs=false;S.recent.clear();lsSet("ui",{view:v,sort:S.sort,region:S.region,yrs:S.yrs});render();window.scrollTo(0,0)}
 function jobById(id){return S.jobs[id]}
 
 /* ---------- events ---------- */
@@ -1701,8 +1706,9 @@ document.addEventListener("input",e=>{
 });
 document.addEventListener("change",e=>{
   const t=e.target;
-  if(t.id==="region"){S.region=t.value;S.sel=0;lsSet("ui",{view:S.view,sort:S.sort,region:S.region});render()}
-  else if(t.id==="sort"){S.sort=t.value;lsSet("ui",{view:S.view,sort:S.sort,region:S.region});render()}
+  if(t.id==="region"){S.region=t.value;S.sel=0;lsSet("ui",{view:S.view,sort:S.sort,region:S.region,yrs:S.yrs});render()}
+  else if(t.id==="yrs"){S.yrs=t.value;S.sel=0;lsSet("ui",{view:S.view,sort:S.sort,region:S.region,yrs:S.yrs});render()}
+  else if(t.id==="sort"){S.sort=t.value;lsSet("ui",{view:S.view,sort:S.sort,region:S.region,yrs:S.yrs});render()}
   else if(t.id==="stage"){const j=jobById(t.dataset.id);if(j)writeTriage(j,{stage:t.value||null,...(t.value&&!tri(j.id)?.status?{status:"interested"}:{})})}
   else if(t.dataset.move!==undefined){const id=t.dataset.move,j=jobById(id),cur=tri(id)||{};
     const body={...cur,stage:t.value||null,updated_at:new Date().toISOString()};S.triage={...S.triage,[id]:body};render();
