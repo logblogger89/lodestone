@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-16T20:44:08+00:00",
- "count": 916,
+ "updated_at": "2026-10-16T21:56:50+00:00",
+ "count": 915,
  "candidates": [
   {
    "id": "ashby:1password:8151254c-b7d1-4653-87b1-7afeba176898",
@@ -3584,101 +3584,6 @@
    ]
   },
   {
-   "id": "greenhouse:faire:8864857002",
-   "company": "Faire",
-   "title": "Product Manager - Multiple Levels",
-   "location": "New York City, NY; San Francisco, CA; Toronto, ON",
-   "region": "GTA",
-   "role_tier": "Core",
-   "role_family": "pm",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 188000,
-      "max": 258500,
-      "currency": "USD",
-      "interval": "year",
-      "label": "New York, San Francisco",
-      "canada": false,
-      "kind": "base",
-      "estimated": false,
-      "quote": "- San Francisco, CA/New York City, NY: The pay range for this role is $188,000 - 258,500 USD"
-     },
-     {
-      "min": 148000,
-      "max": 203500,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Toronto, Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "- Toronto, ON: The pay range for this role is $148,000 - 203,500 CAD"
-     },
-     {
-      "min": 220000,
-      "max": 302000,
-      "currency": "USD",
-      "interval": "year",
-      "label": "New York, San Francisco",
-      "canada": false,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "- San Francisco, CA/New York City, NY: The pay range for this role is $220,000 - 302,000 USD"
-     },
-     {
-      "min": 184000,
-      "max": 253000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Toronto, Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "- Toronto, ON: The pay range for this role is $184,000 - 253,000 CAD"
-     },
-     {
-      "min": 260000,
-      "max": 357500,
-      "currency": "USD",
-      "interval": "year",
-      "label": "New York, San Francisco",
-      "canada": false,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "- San Francisco, CA/New York City, NY: The pay range for this role is $260,000 - 357,500 USD"
-     },
-     {
-      "min": 212000,
-      "max": 291500,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Toronto, Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "- Toronto, ON: The pay range for this role is $212,000 - 291,500 CAD"
-     }
-    ],
-    "primary": 1,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "This role will also be eligible for equity and benefits."
-    }
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://boards.greenhouse.io/faire/jobs/8864857002?gh_jid=8864857002"
-   ]
-  },
-  {
    "id": "dayforce:fieldeffect:695",
    "company": "Field Effect",
    "title": "Director of Product Marketing",
@@ -4611,40 +4516,6 @@
    ]
   },
   {
-   "id": "ashby:jane:2d2a4d4b-25d1-4eb8-8c3b-6cd654180015",
-   "company": "Jane App",
-   "title": "Senior PM - Communications",
-   "location": "Canada",
-   "region": "Remote-Canada",
-   "role_tier": "Core",
-   "role_family": "pm",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 117100,
-      "max": 182900,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "This role has an annual salary range of CAD $117,100 to CAD $182,900."
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "ashby"
-   ],
-   "urls": [
-    "https://jobs.ashbyhq.com/jane/2d2a4d4b-25d1-4eb8-8c3b-6cd654180015"
-   ]
-  },
-  {
    "id": "ashby:jobber:8f88e508-9c9f-4562-a602-64466aa8b0c4",
    "company": "Jobber",
    "title": "Senior Product Manager, Automations Platform",
@@ -4842,40 +4713,6 @@
    ],
    "urls": [
     "https://jobs.ashbyhq.com/jobber/2b8ae7cc-d8df-4d4f-889c-a1cd9c533c9d"
-   ]
-  },
-  {
-   "id": "ashby:koho:3e565168-cacd-40c6-a912-04e623d76f9f",
-   "company": "KOHO",
-   "title": "Senior Product Manager, Growth",
-   "location": "KOHO (CAN)",
-   "region": "Remote-Canada",
-   "role_tier": "Core",
-   "role_family": "pm",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 160000,
-      "max": 200000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Budgeted range for this job CA$160K – CA$200K"
-     }
-    ],
-    "primary": 0,
-    "source": "field"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "ashby"
-   ],
-   "urls": [
-    "https://jobs.ashbyhq.com/koho/3e565168-cacd-40c6-a912-04e623d76f9f"
    ]
   },
   {
@@ -5459,40 +5296,6 @@
    ],
    "urls": [
     "https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Toronto-Canada/Manager--Product-Management_R-289848-1"
-   ]
-  },
-  {
-   "id": "workday:mastercard/CorporateCareers:R-287184",
-   "company": "Mastercard",
-   "title": "Manager, Product Management",
-   "location": "Toronto, Canada",
-   "region": "GTA",
-   "role_tier": "Core",
-   "role_family": "pm",
-   "people_mgmt_hint": true,
-   "pay": {
-    "ranges": [
-     {
-      "min": 121000,
-      "max": 169000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Toronto, Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "Toronto, Canada: $121,000 - $169,000 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Toronto-Canada/Manager--Product-Management_R-287184"
    ]
   },
   {
@@ -8614,6 +8417,40 @@
    ]
   },
   {
+   "id": "workday:td/TD_Bank_Careers:R_1512249",
+   "company": "TD",
+   "title": "Product Owner I",
+   "location": "Toronto, Ontario",
+   "region": "GTA",
+   "role_tier": "Core",
+   "role_family": "pm",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 96900,
+      "max": 136800,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "$96,900 - $136,800 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T21:56:50+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Product-Owner-I_R_1512249"
+   ]
+  },
+  {
    "id": "workday:td/TD_Bank_Careers:R_1496435",
    "company": "TD",
    "title": "Technical Product Owner - AI & Machine Learning Solutions",
@@ -9630,6 +9467,57 @@
    ],
    "urls": [
     "https://jobs.ashbyhq.com/wealthsimple/fe45a22d-7f8d-4963-8db5-ee1639390455"
+   ]
+  },
+  {
+   "id": "workday:workday/Workday:JR-IC-000069",
+   "company": "Workday",
+   "title": "Principal Product Manager - Evisort AI",
+   "location": "USA, CA, San Francisco; Canada, BC, Vancouver; USA, CA, Pleasanton",
+   "region": "Vancouver",
+   "role_tier": "Core",
+   "role_family": "pm",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 196000,
+      "max": 294000,
+      "currency": "USD",
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Primary Location Base Pay Range: $196,000 USD - $294,000 USD"
+     },
+     {
+      "min": 162800,
+      "max": 244200,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Additional CAN Location(s) Base Pay Range: $162,800 - $244,200 CAD"
+     }
+    ],
+    "primary": 1,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "As a part of the total compensation package, this role may be eligible for the Workday Bonus Plan or a role-specific commission/bonus, as well as annual refresh stock grants."
+    }
+   },
+   "first_seen": "2026-10-16T21:56:50+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://workday.wd5.myworkdayjobs.com/en-US/Workday/job/USA-CA-San-Francisco/Principal--Product-Manager_JR-IC-000069-1"
    ]
   },
   {
@@ -14647,24 +14535,6 @@
    ]
   },
   {
-   "id": "phenom:RBCAA0088:R-0000185606",
-   "company": "RBC",
-   "title": "Program Manager - Regulatory Technology",
-   "location": "TORONTO, Ontario, Canada",
-   "region": "GTA",
-   "role_tier": "Adjacent",
-   "role_family": "program",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "phenom"
-   ],
-   "urls": [
-    "https://jobs.rbc.com/ca/en/job/R-0000185606/Program-Manager-Regulatory-Technology"
-   ]
-  },
-  {
    "id": "phenom:RBCAA0088:R-0000187581",
    "company": "RBC",
    "title": "Senior Manager, Process Transformation & Large Program Management",
@@ -15418,57 +15288,6 @@
    ]
   },
   {
-   "id": "ashby:1password:ca3d814c-946a-447a-b41a-0257fcf7e2cd",
-   "company": "1Password",
-   "title": "Data Analyst, Finance Analytics",
-   "location": "Remote (United States | Canada)",
-   "region": "Remote-Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 95000,
-      "max": 133000,
-      "currency": "USD",
-      "interval": "year",
-      "label": "United States",
-      "canada": false,
-      "kind": "base",
-      "estimated": false,
-      "quote": "USA-based roles only: The annual base salary for this role is between $95,000 USD and $133,000 USD, plus immediate participation in 1Password's benefits program (health, dental, 401k and many others), utilization of our generous paid time off, an equity grant and, where applicable, participation in our incentive programs."
-     },
-     {
-      "min": 83000,
-      "max": 116000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Canada-based roles only: The annual base salary for this role is between $83,000 CAD and $116,000 CAD, plus immediate participation in 1Password’s generous benefits program (health, dental, RRSP and many others), utilization of our generous paid time off, an equity grant and, where applicable, participation in our incentive programs."
-     }
-    ],
-    "primary": 1,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "📈 RSU program for most employees"
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "ashby"
-   ],
-   "urls": [
-    "https://jobs.ashbyhq.com/1password/ca3d814c-946a-447a-b41a-0257fcf7e2cd"
-   ]
-  },
-  {
    "id": "ashby:1password:b141ee0c-30aa-42f8-8ff7-b353f7f9d060",
    "company": "1Password",
    "title": "Principal Solutions Engineer, Emerging Technologies",
@@ -15622,57 +15441,6 @@
    ]
   },
   {
-   "id": "ashby:1password:45393747-1ed7-4eb9-bcda-4c74fe5e9824",
-   "company": "1Password",
-   "title": "Staff Data Analyst, Marketing",
-   "location": "Remote (United States | Canada)",
-   "region": "Remote-Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 149000,
-      "max": 216000,
-      "currency": "USD",
-      "interval": "year",
-      "label": "United States",
-      "canada": false,
-      "kind": "base",
-      "estimated": false,
-      "quote": "USA-based roles only: The annual base salary for this role is between $149,000 USD and $216,000 USD, plus immediate participation in 1Password's benefits program (health, dental, 401k and many others), utilization of our generous paid time off, an equity grant and, where applicable, participation in our incentive programs."
-     },
-     {
-      "min": 131000,
-      "max": 175000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Canada-based roles only: The annual base salary for this role is between $131,000 CAD and $175,000 CAD, plus immediate participation in 1Password’s generous benefits program (health, dental, RRSP and many others), utilization of our generous paid time off, an equity grant and, where applicable, participation in our incentive programs."
-     }
-    ],
-    "primary": 1,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "📈 RSU program for most employees"
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "ashby"
-   ],
-   "urls": [
-    "https://jobs.ashbyhq.com/1password/45393747-1ed7-4eb9-bcda-4c74fe5e9824"
-   ]
-  },
-  {
    "id": "smartrecruiters:acumatica:744000153021549",
    "company": "Acumatica",
    "title": "Senior ERP Product Marketing Manager (QuickBooks Migration)",
@@ -15734,126 +15502,6 @@
    ],
    "urls": [
     "https://job-boards.greenhouse.io/ada18/jobs/5266701007"
-   ]
-  },
-  {
-   "id": "greenhouse:affirm:8003170003",
-   "company": "Affirm",
-   "title": "Analytics Lead, Full Stack",
-   "location": "Remote Canada",
-   "region": "Remote-Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 145000,
-      "max": 205000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "CAN base pay range per year: $145,000 - $205,000"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "Equity Grade - 5"
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://job-boards.greenhouse.io/affirm/jobs/8003170003"
-   ]
-  },
-  {
-   "id": "greenhouse:affirm:7979912003",
-   "company": "Affirm",
-   "title": "Analytics Lead, Full Stack (Collections & Recoveries)",
-   "location": "Remote Canada",
-   "region": "Remote-Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 145000,
-      "max": 205000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "CAN base pay range per year: $145,000 - $205,000"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "Equity Grade - 5"
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://job-boards.greenhouse.io/affirm/jobs/7979912003"
-   ]
-  },
-  {
-   "id": "greenhouse:affirm:7871458003",
-   "company": "Affirm",
-   "title": "Analytics Lead, Full Stack (Strategic Revenue Insights)",
-   "location": "Remote Canada",
-   "region": "Remote-Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 145000,
-      "max": 205000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "CAN base pay range per year:  $145,000  -  $205,000"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "Equity Grade - 5"
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://job-boards.greenhouse.io/affirm/jobs/7871458003"
    ]
   },
   {
@@ -16064,206 +15712,6 @@
    ],
    "urls": [
     "https://www.amazon.jobs/en/jobs/10562384/assurance-solutions-architect-aws-security-assurance-services"
-   ]
-  },
-  {
-   "id": "amazon:amazon:10459394",
-   "company": "Amazon",
-   "title": "Business Intelligence Engineer II, SCOT - Fulfillment Optimization (FO)",
-   "location": "Vancouver, British Columbia, CAN",
-   "region": "Vancouver",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 76400,
-      "max": 127600,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Vancouver, Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "CAN, BC, Vancouver - 76,400.00 - 127,600.00 CAD annually"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "As a total compensation company, Amazon's package may include other elements such as sign-on payments and restricted stock units (RSUs)."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "amazon"
-   ],
-   "urls": [
-    "https://www.amazon.jobs/en/jobs/10459394/business-intelligence-engineer-ii-scot-fulfillment-optimization-fo"
-   ]
-  },
-  {
-   "id": "amazon:amazon:10424171",
-   "company": "Amazon",
-   "title": "Business Intelligence Engineer II, Talent Acquisition Analytics",
-   "location": "Vancouver, British Columbia, CAN",
-   "region": "Vancouver",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 76400,
-      "max": 127600,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Vancouver, Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "CAN, BC, Vancouver - 76,400.00 - 127,600.00 CAD annually"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "As a total compensation company, Amazon's package may include other elements such as sign-on payments and restricted stock units (RSUs)."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "amazon"
-   ],
-   "urls": [
-    "https://www.amazon.jobs/en/jobs/10424171/business-intelligence-engineer-ii-talent-acquisition-analytics"
-   ]
-  },
-  {
-   "id": "amazon:amazon:10557002",
-   "company": "Amazon",
-   "title": "Business Intelligence Engineer III, Talent Acquisition Analytics",
-   "location": "Vancouver, British Columbia, CAN",
-   "region": "Vancouver",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 97400,
-      "max": 162600,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Vancouver, Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "CAN, BC, Vancouver - 97,400.00 - 162,600.00 CAD annually"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "As a total compensation company, Amazon's package may include other elements such as sign-on payments and restricted stock units (RSUs)."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "amazon"
-   ],
-   "urls": [
-    "https://www.amazon.jobs/en/jobs/10557002/business-intelligence-engineer-iii-talent-acquisition-analytics"
-   ]
-  },
-  {
-   "id": "amazon:amazon:10569450",
-   "company": "Amazon",
-   "title": "Business Intelligence Engineer, Forecasting & Labs Analytics",
-   "location": "Toronto, Ontario, CAN",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 76400,
-      "max": 127600,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Toronto, Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "CAN, ON, Toronto - 76,400.00 - 127,600.00 CAD annually"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "As a total compensation company, Amazon's package may include other elements such as sign-on payments and restricted stock units (RSUs)."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "amazon"
-   ],
-   "urls": [
-    "https://www.amazon.jobs/en/jobs/10569450/business-intelligence-engineer-forecasting-labs-analytics"
-   ]
-  },
-  {
-   "id": "amazon:amazon:10576100",
-   "company": "Amazon",
-   "title": "Business Intelligence Engineer, IT PnD Data & Analytics (DnA)",
-   "location": "Vancouver, British Columbia, CAN",
-   "region": "Vancouver",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 76400,
-      "max": 127600,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Vancouver, Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "CAN, BC, Vancouver - 76,400.00 - 127,600.00 CAD annually"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "As a total compensation company, Amazon's package may include other elements such as sign-on payments and restricted stock units (RSUs)."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "amazon"
-   ],
-   "urls": [
-    "https://www.amazon.jobs/en/jobs/10576100/business-intelligence-engineer-it-pnd-data-analytics-dna"
    ]
   },
   {
@@ -16537,46 +15985,6 @@
    ],
    "urls": [
     "https://www.amazon.jobs/en/jobs/10553654/solutions-architect-architecte-de-solutions-frontier-ai-startups"
-   ]
-  },
-  {
-   "id": "amazon:amazon:3192046",
-   "company": "Amazon",
-   "title": "Sr. Business Intelligence Engineer, Forecasting and Labs Analytics",
-   "location": "Toronto, Ontario, CAN",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 97400,
-      "max": 162600,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Toronto, Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "CAN, ON, Toronto - 97,400.00 - 162,600.00 CAD annually"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "As a total compensation company, Amazon's package may include other elements such as sign-on payments and restricted stock units (RSUs)."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "amazon"
-   ],
-   "urls": [
-    "https://www.amazon.jobs/en/jobs/3192046/sr-business-intelligence-engineer-forecasting-and-labs-analytics"
    ]
   },
   {
@@ -16861,126 +16269,6 @@
    ]
   },
   {
-   "id": "workday:aritzia/External:R0025024",
-   "company": "Aritzia",
-   "title": "Information Technology - Lead Analytics Engineer, Analytics Engineering Excellence",
-   "location": "Vancouver, BC, Canada (SO - Vancouver)",
-   "region": "Vancouver",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 100000,
-      "max": 300000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "The range for roles at this level is $100,000 - $300,000 per year."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "Total compensation may include base, bonus and/or equity depending on the role, which has the potential to be greater than this range."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://aritzia.wd3.myworkdayjobs.com/en-US/External/job/Vancouver-BC-Canada-SO---Vancouver/Information-Technology---Lead-Analytics-Engineer--Analytics-Engineering-Excellence_R0025024"
-   ]
-  },
-  {
-   "id": "workday:aritzia/External:R0025546",
-   "company": "Aritzia",
-   "title": "Information Technology - Lead Analytics Engineer, Distribution Technology",
-   "location": "Delta, BC, Canada (DC01P)",
-   "region": "Other Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 100000,
-      "max": 300000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "The range for roles at this level is $100,000 - $300,000 per year."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "Total compensation may include base, bonus and/or equity depending on the role, which has the potential to be greater than this range.With comprehensive benefits, aspirational workspaces, and elevated perks and experiences — we provide it all."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://aritzia.wd3.myworkdayjobs.com/en-US/External/job/Delta-BC-Canada-DC01P/Information-Technology---Lead-Analytics-Engineer--Distribution-Technology_R0025546"
-   ]
-  },
-  {
-   "id": "workday:aritzia/External:R0025034",
-   "company": "Aritzia",
-   "title": "Information Technology - Senior Analytics Engineer/Analytics Engineer, Marketing & Transformation Technology",
-   "location": "Vancouver, BC, Canada (SO - Vancouver)",
-   "region": "Vancouver",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 100000,
-      "max": 300000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "The typical hiring range for this position is $100,000 - $300,000 per year."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "Total compensation may include base, bonus and/or equity depending on the role, which has the potential to be greater than this range."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://aritzia.wd3.myworkdayjobs.com/en-US/External/job/Vancouver-BC-Canada-SO---Vancouver/Information-Technology---Senior-Analytics-Engineer-Analytics-Engineer--Marketing---Transformation-Technology_R0025034"
-   ]
-  },
-  {
    "id": "atlassian:atlassian:27550",
    "company": "Atlassian",
    "title": "Senior Solution Consultant, Strategy Collection",
@@ -16996,46 +16284,6 @@
    ],
    "urls": [
     "https://careers-americas.icims.com/jobs/27550/senior-solution-consultant%2c-strategy-collection/job"
-   ]
-  },
-  {
-   "id": "workday:autodesk/Ext:26WD100787",
-   "company": "Autodesk",
-   "title": "Senior Data Analyst, Autodesk Education",
-   "location": "Toronto, ON, CAN",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 80000,
-      "max": 117700,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "For Canada based roles, we expect a starting base salary between $80,000 and $117,700."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "In addition to base salaries, our compensation package may include annual cash bonuses, commissions for sales roles, stock grants, and a comprehensive benefits package."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://autodesk.wd1.myworkdayjobs.com/en-US/Ext/job/Toronto-ON-CAN/Senior-Data-Analyst--Autodesk-Education_26WD100787-2"
    ]
   },
   {
@@ -17197,73 +16445,6 @@
    ]
   },
   {
-   "id": "greenhouse:block:5369959008",
-   "company": "Block (Square / Cash App)",
-   "title": "Business Intelligence Analyst",
-   "location": "Toronto, Ontario, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 135200,
-      "max": 202800,
-      "currency": "USD",
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "$135,200 — $202,800 USD"
-     },
-     {
-      "min": 125800,
-      "max": 188600,
-      "currency": "USD",
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "$125,800 — $188,600 USD"
-     },
-     {
-      "min": 119000,
-      "max": 178400,
-      "currency": "USD",
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "$119,000 — $178,400 USD"
-     },
-     {
-      "min": 108200,
-      "max": 162200,
-      "currency": "USD",
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "$108,200 — $162,200 USD"
-     }
-    ],
-    "primary": null,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "http://block.xyz/careers/jobs/5369959008?gh_jid=5369959008"
-   ]
-  },
-  {
    "id": "njoyn:cgi:J0926-1532",
    "company": "CGI",
    "title": "AI Solution Architect",
@@ -17318,47 +16499,13 @@
    ]
   },
   {
-   "id": "njoyn:cgi:J0426-2548",
-   "company": "CGI",
-   "title": "Microsoft Dynamics Technical Solution Architect",
-   "location": "Toronto, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "solutions",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 115000,
-      "max": 165000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "A reasonable estimate of the current range is $115,000–$165,000."
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "njoyn"
-   ],
-   "urls": [
-    "https://cgi.njoyn.com/CORP/xweb/xweb.asp?NTKN=c&clid=21001&Page=JobDetails&Jobid=J0426-2548&BRID=1296272&lang=1"
-   ]
-  },
-  {
    "id": "njoyn:cgi:J1026-0275",
    "company": "CGI",
    "title": "Product Analyst – Commercial / Logistics & Transportation",
    "location": "Montréal, Canada",
    "region": "Montreal",
    "role_tier": "Stretch",
-   "role_family": "analytics",
+   "role_family": "prodanalytics",
    "people_mgmt_hint": false,
    "pay": null,
    "first_seen": "2026-10-15T02:02:41+00:00",
@@ -17562,24 +16709,6 @@
    ]
   },
   {
-   "id": "njoyn:cgi:J0826-0403",
-   "company": "CGI",
-   "title": "Solution Architect – Functional",
-   "location": "Toronto, Montreal, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "solutions",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "njoyn"
-   ],
-   "urls": [
-    "https://cgi.njoyn.com/CORP/xweb/xweb.asp?NTKN=c&clid=21001&Page=JobDetails&Jobid=J0826-0403&BRID=1323584&lang=1"
-   ]
-  },
-  {
    "id": "njoyn:cgi:J1026-1481",
    "company": "CGI",
    "title": "Solution Architect, Cybersecurity",
@@ -17668,24 +16797,6 @@
    ]
   },
   {
-   "id": "njoyn:cgi:J0726-0806",
-   "company": "CGI",
-   "title": "Solutions Architect (ServiceNow)",
-   "location": "Drummondville, Canada",
-   "region": "Other Canada",
-   "role_tier": "Stretch",
-   "role_family": "solutions",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-15T02:02:41+00:00",
-   "sources": [
-    "njoyn"
-   ],
-   "urls": [
-    "https://cgi.njoyn.com/CORP/xweb/xweb.asp?NTKN=c&clid=21001&Page=JobDetails&Jobid=J0726-0806&BRID=1314854&lang=1"
-   ]
-  },
-  {
    "id": "successfactors:jobs.canadalife.com:1444505433",
    "company": "Canada Life",
    "title": "Solutions Architect (Individual Wealth - Application Delivery)",
@@ -17717,148 +16828,6 @@
    ],
    "urls": [
     "https://jobs.canadalife.com/job/Toronto-Ontario-Solutions-Architect-%28Individual-Wealth-Application-Delivery%29-ON-M5T-3M3/1444505433/"
-   ]
-  },
-  {
-   "id": "workday:canadiantirecorporation/Enterprise_External_Careers_Site:JR166882",
-   "company": "Canadian Tire (Digital)",
-   "title": "Business Data Analyst",
-   "location": "Oakville, ON",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 53000,
-      "max": 88000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Broadband Salary Range:  $53,000 – $88,000 CAD"
-     },
-     {
-      "min": 70000,
-      "max": 75000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Our typical hiring range is between $70,000 and $75,000 CAD."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "We welcome and encourage candidates from equity-seeking groups such as people who identify as racialized, Indigenous, 2SLGBTQIA+, women, people with disabilities, and beyond."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://canadiantirecorporation.wd3.myworkdayjobs.com/en-US/Enterprise_External_Careers_Site/job/Oakville-ON/Business-Data-Analyst_JR166882"
-   ]
-  },
-  {
-   "id": "workday:canadiantirecorporation/Enterprise_External_Careers_Site:JR162250",
-   "company": "Canadian Tire (Digital)",
-   "title": "Data Analyst (Two Open Roles)",
-   "location": "Mississauga, ON",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 53000,
-      "max": 88000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Our typical hiring range is between $53,000.00 and $88,000.00 per annum."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "We welcome and encourage candidates from equity-seeking groups such as people who identify as racialized, Indigenous, 2SLGBTQIA+, women, people with disabilities, and beyond."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://canadiantirecorporation.wd3.myworkdayjobs.com/en-US/Enterprise_External_Careers_Site/job/Mississauga-ON/Business-Analyst--Two-Open-Roles-_JR162250"
-   ]
-  },
-  {
-   "id": "workday:canadiantirecorporation/Enterprise_External_Careers_Site:JR163941",
-   "company": "Canadian Tire (Digital)",
-   "title": "Senior Analytics & BI Developer",
-   "location": "Toronto, ON",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 64000,
-      "max": 106000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Broadband Salary Range:  $64,000 – $106,000."
-     },
-     {
-      "min": 64000,
-      "max": 90000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Our typical hiring range  is between $64,000 and $90,000."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "We welcome and encourage candidates from equity-seeking groups such as people who identify as racialized, Indigenous, 2SLGBTQIA+, women, people with disabilities, and beyond."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://canadiantirecorporation.wd3.myworkdayjobs.com/en-US/Enterprise_External_Careers_Site/job/Toronto-ON/Sr-BI-and-Insight_JR163941"
    ]
   },
   {
@@ -17908,7 +16877,7 @@
    "location": "Toronto, ON",
    "region": "GTA",
    "role_tier": "Stretch",
-   "role_family": "analytics",
+   "role_family": "prodanalytics",
    "people_mgmt_hint": false,
    "pay": null,
    "first_seen": "2026-10-16T10:56:28+00:00",
@@ -17926,7 +16895,7 @@
    "location": "Toronto, ON",
    "region": "GTA",
    "role_tier": "Stretch",
-   "role_family": "analytics",
+   "role_family": "prodanalytics",
    "people_mgmt_hint": false,
    "pay": null,
    "first_seen": "2026-10-16T10:56:28+00:00",
@@ -17953,74 +16922,6 @@
    ],
    "urls": [
     "https://jobs.lever.co/caseware/ccece3e3-54e2-47dc-84c9-131b89eec061"
-   ]
-  },
-  {
-   "id": "successfactors:careers.celestica.com:1423157633",
-   "company": "Celestica",
-   "title": "Commercial Strategy & Analytics Manager",
-   "location": "Remote Employee Canada, ON, Canada",
-   "region": "Remote-Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 109000,
-      "max": 159000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "Salary Range: $109,000-$159,000 CAD/year"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "successfactors"
-   ],
-   "urls": [
-    "https://careers.celestica.com/job/Remote-Employee-Canada-Commercial-Strategy-&-Analytics-Manager-ON/1423157633/"
-   ]
-  },
-  {
-   "id": "successfactors:careers.celestica.com:1442049533",
-   "company": "Celestica",
-   "title": "Product Data Analyst 2",
-   "location": "Toronto, ON, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 74000,
-      "max": 112000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "Range: $74,000 - 112,000."
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "successfactors"
-   ],
-   "urls": [
-    "https://careers.celestica.com/job/Toronto-Product-Data-Analyst-2-ON/1442049533/"
    ]
   },
   {
@@ -18095,40 +16996,6 @@
    ],
    "urls": [
     "https://clio.wd3.myworkdayjobs.com/en-US/ClioCareerSite/job/Toronto/Product-Marketing-Manager--Financial-Services_REQ-5114"
-   ]
-  },
-  {
-   "id": "greenhouse:clutch:6212017004",
-   "company": "Clutch",
-   "title": "Senior Data Analyst",
-   "location": "Toronto, ON",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 100000,
-      "max": 125000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "- Salary range: $100,000 - $125,000"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://job-boards.greenhouse.io/clutch/jobs/6212017004"
    ]
   },
   {
@@ -18484,100 +17351,6 @@
    ]
   },
   {
-   "id": "workday:desjardins/Desjardins:R2612415",
-   "company": "Desjardins",
-   "title": "Data analyst, Marketing performance measurement and targeting",
-   "location": "Montréal; Lévis",
-   "region": "Montreal",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://desjardins.wd10.myworkdayjobs.com/en-US/Desjardins/job/Montral/Analyste-de-donnes--Ciblage-et-mesure-de-performance-marketing_R2612415-1"
-   ]
-  },
-  {
-   "id": "workday:desjardins/Desjardins:R2612549",
-   "company": "Desjardins",
-   "title": "Ratemaking SAS Data Analyst",
-   "location": "Lévis; Montréal; Québec",
-   "region": "Montreal",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://desjardins.wd10.myworkdayjobs.com/en-US/Desjardins/job/Lvis/Analyste-de-donnes-SAS--Tarification_R2612549"
-   ]
-  },
-  {
-   "id": "workday:desjardins/Desjardins:R2611917",
-   "company": "Desjardins",
-   "title": "Senior Advisor, Guidewire Business Intelligence and Data Modelling",
-   "location": "Lévis; Montréal; Mississauga; Aurora",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://desjardins.wd10.myworkdayjobs.com/en-US/Desjardins/job/Lvis/Conseiller-principal-ou-conseillre-principale--Intelligence-d-affaires-et-modlisation-des-donnes--Guidewire_R2611917-1"
-   ]
-  },
-  {
-   "id": "ashby:docebo:ca7d750a-29a1-4687-b344-b7afedf28f5f",
-   "company": "Docebo",
-   "title": "Data Analyst",
-   "location": "Toronto, Ontario",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 54100,
-      "max": 72100,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "CA$54.1K – CA$72.1K"
-     }
-    ],
-    "primary": 0,
-    "source": "field",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "- Empowering Our Talent Culture: We build a culture of trust and empowerment by designing our rewards and benefits with transparency, equity, and flexibility, enabling our people to do their best work and stay for the long haul."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "ashby"
-   ],
-   "urls": [
-    "https://jobs.ashbyhq.com/docebo/ca7d750a-29a1-4687-b344-b7afedf28f5f"
-   ]
-  },
-  {
    "id": "lever:eqbank:a20b80c5-53c4-4c34-b8de-c6d9208994a6",
    "company": "EQ Bank",
    "title": "AI Solutions Engineer, Technology Workplace Services",
@@ -18596,81 +17369,13 @@
    ]
   },
   {
-   "id": "avature:jobs.ea.com:215382",
-   "company": "Electronic Arts",
-   "title": "Advanced Data Analyst - EA SPORTS™ FC",
-   "location": "Vancouver, Canada",
-   "region": "Vancouver",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 114300,
-      "max": 156200,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "Victoria) *$114,300 - $156,200 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "avature"
-   ],
-   "urls": [
-    "https://jobs.ea.com/en_US/careers/JobDetail/Advanced-Analyst/215382"
-   ]
-  },
-  {
-   "id": "avature:jobs.ea.com:214116",
-   "company": "Electronic Arts",
-   "title": "Advanced Data Analyst - EA Sports FC Live",
-   "location": "Vancouver, Canada",
-   "region": "Vancouver",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 114300,
-      "max": 156200,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "Victoria) *$114,300 - $156,200 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "avature"
-   ],
-   "urls": [
-    "https://jobs.ea.com/en_US/careers/JobDetail/Advanced-Analyst/214116"
-   ]
-  },
-  {
    "id": "avature:jobs.ea.com:216170",
    "company": "Electronic Arts",
    "title": "Senior Product Analyst - EA Sports FC",
    "location": "Vancouver, Canada",
    "region": "Vancouver",
    "role_tier": "Stretch",
-   "role_family": "analytics",
+   "role_family": "prodanalytics",
    "people_mgmt_hint": false,
    "pay": {
     "ranges": [
@@ -18695,51 +17400,6 @@
    ],
    "urls": [
     "https://jobs.ea.com/en_US/careers/JobDetail/Senior-Analyst-EA-Sports-FC/216170"
-   ]
-  },
-  {
-   "id": "greenhouse:workleap:5196800007",
-   "company": "Element (Workleap)",
-   "title": "Marketing Analyst, Attribution - ShareGate",
-   "location": "Canada - Remote",
-   "region": "Remote-Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 100000,
-      "max": 130000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "ote",
-      "estimated": false,
-      "quote": "- Base salary: $100k to $130k / OTE : $110k–$140k."
-     },
-     {
-      "min": 110000,
-      "max": 140000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "ote",
-      "estimated": false,
-      "quote": "- Base salary: $100k to $130k / OTE : $110k–$140k."
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://job-boards.greenhouse.io/workleap/jobs/5196800007"
    ]
   },
   {
@@ -18774,24 +17434,6 @@
    ],
    "urls": [
     "https://jobs.ericsson.com/careers/job/563121777187978"
-   ]
-  },
-  {
-   "id": "page:evenup:1a8f00199680",
-   "company": "EvenUp",
-   "title": "Senior Analytics Engineer, RevOps",
-   "location": "Toronto (hybrid), ON, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "page"
-   ],
-   "urls": [
-    "https://jobs.ashbyhq.com/evenup/b60b16e0-b210-42ab-b104-ad0cb73ed323"
    ]
   },
   {
@@ -19167,86 +17809,6 @@
    ]
   },
   {
-   "id": "greenhouse:instacart:8115836",
-   "company": "Instacart",
-   "title": "Insights Lead, Instacart Business",
-   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
-   "region": "Remote-Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 133000,
-      "max": 140500,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "$133,000 — $140,500 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "Additionally, this role is eligible for a new hire equity grant as well as annual refresh grants."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://instacart.careers/job/?gh_jid=8115836"
-   ]
-  },
-  {
-   "id": "greenhouse:instacart:8282591",
-   "company": "Instacart",
-   "title": "Senior Financial Insights Analyst",
-   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
-   "region": "Remote-Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 126000,
-      "max": 133000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "$126,000 — $133,000 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "Additionally, this role is eligible for a new hire equity grant as well as annual refresh grants."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://instacart.careers/job/?gh_jid=8282591"
-   ]
-  },
-  {
    "id": "greenhouse:instacart:8214859",
    "company": "Instacart",
    "title": "Senior Product Marketing Manager, Instacart+",
@@ -19373,182 +17935,6 @@
    ]
   },
   {
-   "id": "ashby:jane:a00a85b2-deb7-49e9-94d6-be9bf29b95e7",
-   "company": "Jane App",
-   "title": "Senior Data Analyst",
-   "location": "Canada/US",
-   "region": "Remote-Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 100000,
-      "max": 156300,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "This role has an annual salary range of $100,000 to $156,300."
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "ashby"
-   ],
-   "urls": [
-    "https://jobs.ashbyhq.com/jane/a00a85b2-deb7-49e9-94d6-be9bf29b95e7"
-   ]
-  },
-  {
-   "id": "ashby:jane:aad68bb2-49b3-4d45-b08d-aab8076cd5c3",
-   "company": "Jane App",
-   "title": "Staff Analytics Engineer",
-   "location": "Canada/US",
-   "region": "Remote-Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 152000,
-      "max": 237500,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "- 🇨🇦 Canada: $152,000 – $237,500 (accomplished: ~$180,500 CAD)"
-     },
-     {
-      "min": 149600,
-      "max": 215100,
-      "currency": "USD",
-      "interval": "year",
-      "label": "United States",
-      "canada": false,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "- 🇺🇸 United States: $149,600 – $215,100 USD (accomplished: ~$177,700 USD)"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "This role also includes equity through our JSOP (Jane Stock Option Plan)."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "ashby"
-   ],
-   "urls": [
-    "https://jobs.ashbyhq.com/jane/aad68bb2-49b3-4d45-b08d-aab8076cd5c3"
-   ]
-  },
-  {
-   "id": "ashby:jane:50006239-8506-4b56-b78c-a8c1114bd2da",
-   "company": "Jane App",
-   "title": "Staff Product Data Analyst",
-   "location": "Canada/US",
-   "region": "Remote-Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 125200,
-      "max": 195600,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "- 🇨🇦 Canada: $125,200 – $195,600 (accomplished: ~$148,700 CAD)"
-     },
-     {
-      "min": 116800,
-      "max": 182500,
-      "currency": "USD",
-      "interval": "year",
-      "label": "United States",
-      "canada": false,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "- 🇺🇸 United States: $116,800– $182,500 USD (accomplished: ~$138,700)"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "This role also includes equity through our JSOP (Jane Stock Option Plan)."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "ashby"
-   ],
-   "urls": [
-    "https://jobs.ashbyhq.com/jane/50006239-8506-4b56-b78c-a8c1114bd2da"
-   ]
-  },
-  {
-   "id": "ashby:jobber:62a5728b-07dd-4877-b175-a87fea5944b1",
-   "company": "Jobber",
-   "title": "Senior Business Intelligence Engineer",
-   "location": "Edmonton; Vancouver; Kitchener-Waterloo; Toronto",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 125800,
-      "max": 170100,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "This role has a salary range $125,800 - $170,100 CAD CAD, designed to reflect the progression from learning the ropes to truly excelling."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "Base salary is just one part of a total compensation package that will include equity rewards, annual stipends for health and wellness, retirement savings matching, and an extended health package with fully paid premiums for body and mind."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "ashby"
-   ],
-   "urls": [
-    "https://jobs.ashbyhq.com/jobber/62a5728b-07dd-4877-b175-a87fea5944b1"
-   ]
-  },
-  {
    "id": "ashby:jobber:49072a3c-b6d3-4c75-b6f9-8cbd86205f40",
    "company": "Jobber",
    "title": "Senior Solutions Engineer",
@@ -19622,92 +18008,6 @@
    ],
    "urls": [
     "https://careers-kinaxis.icims.com/jobs/34954/solution-architect%2c-enterprise-applications/job"
-   ]
-  },
-  {
-   "id": "ashby:lightspeedhq:50acfe97-e9f3-4c5a-b507-10d69bd3d621",
-   "company": "Lightspeed Commerce",
-   "title": "Lead Data Analyst, Growth Marketing",
-   "location": "Montreal",
-   "region": "Montreal",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [],
-    "primary": null,
-    "source": null,
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "- Equity options, because this is your company too"
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "ashby"
-   ],
-   "urls": [
-    "https://jobs.ashbyhq.com/lightspeedhq/50acfe97-e9f3-4c5a-b507-10d69bd3d621"
-   ]
-  },
-  {
-   "id": "ashby:lightspeedhq:dec7d68e-e482-4835-a5ea-fab65faea95a",
-   "company": "Lightspeed Commerce",
-   "title": "Lead Data Analyst, Growth Marketing",
-   "location": "Toronto",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 105000,
-      "max": 120000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base_bonus",
-      "estimated": false,
-      "quote": "We reasonably expect the total compensation for this position to be in the range of $105,000 TO $120,000 CAD."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [],
-     "quote": "- Equity options, because this is your company too"
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "ashby"
-   ],
-   "urls": [
-    "https://jobs.ashbyhq.com/lightspeedhq/dec7d68e-e482-4835-a5ea-fab65faea95a"
-   ]
-  },
-  {
-   "id": "smartrecruiters:loblawdigital:743999679378276",
-   "company": "Loblaw Digital",
-   "title": "Business Intelligence Developer",
-   "location": "Toronto, ON, CA",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "smartrecruiters"
-   ],
-   "urls": [
-    "https://jobs.smartrecruiters.com/LoblawDigital/743999679378276"
    ]
   },
   {
@@ -19790,241 +18090,13 @@
    ]
   },
   {
-   "id": "greenhouse:lyft:8761492002",
-   "company": "Lyft",
-   "title": "Analytics Lead, Airports",
-   "location": "Toronto, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 102000,
-      "max": 127500,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Toronto, Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": true,
-      "quote": "The expected base pay range for this position in the Toronto area is CAD $102,000 - CAD $127,500, not inclusive of potential equity offering, bonus or benefits."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "The expected base pay range for this position in the Toronto area is CAD $102,000 - CAD $127,500, not inclusive of potential equity offering, bonus or benefits."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://app.careerpuck.com/job-board/lyft/job/8761492002?gh_jid=8761492002"
-   ]
-  },
-  {
-   "id": "greenhouse:lyft:8856440002",
-   "company": "Lyft",
-   "title": "Analytics Lead, Central Market Management",
-   "location": "Toronto, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 102000,
-      "max": 127500,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Toronto, Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": true,
-      "quote": "The expected base pay range for this position in the Toronto area is CAD $102,000 - CAD $127,500, not inclusive of potential equity offering, bonus or benefits."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "The expected base pay range for this position in the Toronto area is CAD $102,000 - CAD $127,500, not inclusive of potential equity offering, bonus or benefits."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://app.careerpuck.com/job-board/lyft/job/8856440002?gh_jid=8856440002"
-   ]
-  },
-  {
-   "id": "greenhouse:lyft:8648040002",
-   "company": "Lyft",
-   "title": "Analytics Lead, SCC",
-   "location": "Toronto, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 96000,
-      "max": 120000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Toronto, Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": true,
-      "quote": "The expected base pay range for this position in the Toronto area is CAD $96,000 - CAD $120,000, not inclusive of potential equity offering, bonus or benefits."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "The expected base pay range for this position in the Toronto area is CAD $96,000 - CAD $120,000, not inclusive of potential equity offering, bonus or benefits."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://app.careerpuck.com/job-board/lyft/job/8648040002?gh_jid=8648040002"
-   ]
-  },
-  {
-   "id": "greenhouse:lyft:8860284002",
-   "company": "Lyft",
-   "title": "Data Analyst, Go-To-Market Sales Insights",
-   "location": "Toronto, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [],
-    "primary": null,
-    "source": null,
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "The expected base pay range for this position in the Torornto area is CAD $102,000 - CAD $!27,500, not inclusive of potential equity offering, bonus or benefits."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://app.careerpuck.com/job-board/lyft/job/8860284002?gh_jid=8860284002"
-   ]
-  },
-  {
-   "id": "greenhouse:lyft:8555335002",
-   "company": "Lyft",
-   "title": "Data Analyst, People Analytics",
-   "location": "Toronto, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 90000,
-      "max": 112500,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Toronto, Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": true,
-      "quote": "The expected base pay range for this position in the Toronto area is CAD $90,000 - CAD $112,500, not inclusive of potential equity offering, bonus or benefits."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "The expected base pay range for this position in the Toronto area is CAD $90,000 - CAD $112,500, not inclusive of potential equity offering, bonus or benefits."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://app.careerpuck.com/job-board/lyft/job/8555335002?gh_jid=8555335002"
-   ]
-  },
-  {
-   "id": "greenhouse:lyft:8643108002",
-   "company": "Lyft",
-   "title": "Senior Financial Data Analyst (Manager)",
-   "location": "Toronto, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 122000,
-      "max": 152000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Toronto, Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": true,
-      "quote": "The expected base pay range for this position in the Toronto area is CAD $122,000 - CAD $152,000, not inclusive of potential equity offering, bonus or benefits."
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "The expected base pay range for this position in the Toronto area is CAD $122,000 - CAD $152,000, not inclusive of potential equity offering, bonus or benefits."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://app.careerpuck.com/job-board/lyft/job/8643108002?gh_jid=8643108002"
-   ]
-  },
-  {
    "id": "workday:manulife/MFCJH_Jobs:JR26090926",
    "company": "Manulife",
    "title": "Digital Product Analyst",
    "location": "Boston, Massachusetts; Toronto, Ontario",
    "region": "GTA",
    "role_tier": "Stretch",
-   "role_family": "analytics",
+   "role_family": "prodanalytics",
    "people_mgmt_hint": false,
    "pay": {
     "ranges": [
@@ -20092,7 +18164,7 @@
    "location": "Remote, Canada",
    "region": "Remote-Canada",
    "role_tier": "Stretch",
-   "role_family": "analytics",
+   "role_family": "prodanalytics",
    "people_mgmt_hint": false,
    "pay": null,
    "first_seen": "2026-10-15T02:02:41+00:00",
@@ -20619,40 +18691,6 @@
    ]
   },
   {
-   "id": "workday:moneris/Moneris:JR105984",
-   "company": "Moneris",
-   "title": "Business Data Analyst",
-   "location": "Toronto",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 71000,
-      "max": 100000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": true,
-      "quote": "Salary Range: The expected base salary range for this role is $71,000 - $100,000."
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://moneris.wd3.myworkdayjobs.com/en-US/Moneris/job/Toronto/Business-Data-Analyst_JR105984"
-   ]
-  },
-  {
    "id": "workday:moneris/Moneris:JR105972",
    "company": "Moneris",
    "title": "Product Marketing Manager",
@@ -20720,24 +18758,6 @@
    ],
    "urls": [
     "https://emplois.bnc.ca/en_CA/careers/JobDetail/P7I75-ARCHITECTE-PRINCIPAL-DE-SOLUTIONS/35463"
-   ]
-  },
-  {
-   "id": "avature:emplois.bnc.ca:35835",
-   "company": "National Bank",
-   "title": "Senior Data Analyst",
-   "location": "Montreal, Quebec",
-   "region": "Montreal",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "avature"
-   ],
-   "urls": [
-    "https://emplois.bnc.ca/en_CA/careers/JobDetail/P4A50-ANALYSTE-SENIOR-DE-LA-DONNEE/35835"
    ]
   },
   {
@@ -20831,40 +18851,6 @@
    ]
   },
   {
-   "id": "phenom:OMEOMECA:JR-8165",
-   "company": "OMERS",
-   "title": "BI & Data Analyst (12 Months Contract)",
-   "location": "Toronto, Ontario, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 72000,
-      "max": 108000,
-      "currency": null,
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": true,
-      "quote": "The expected salary range for this position is $72,000.00 - $108,000.00 per year, prorated based on the term of the contract."
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "phenom"
-   ],
-   "urls": [
-    "https://careers.omers.com/ca/en/job/JR-8165/BI-Data-Analyst-12-Months-Contract"
-   ]
-  },
-  {
    "id": "greenhouse:okta:8220791",
    "company": "Okta",
    "title": "Director of Partner Product Marketing",
@@ -20913,57 +18899,6 @@
    ],
    "urls": [
     "https://www.okta.com/company/careers/opportunity/8220791?gh_jid=8220791"
-   ]
-  },
-  {
-   "id": "greenhouse:okta:7561410",
-   "company": "Okta",
-   "title": "Signal & Growth Insights Manager",
-   "location": "Bellevue, Washington; Chicago, Illinois; Toronto, Ontario, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 128000,
-      "max": 192000,
-      "currency": "USD",
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "$128,000 — $192,000 USD"
-     },
-     {
-      "min": 116000,
-      "max": 159500,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "$116,000 — $159,500 CAD"
-     }
-    ],
-    "primary": 1,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "In addition, Okta offers equity (where applicable), bonus, and benefits, including health, dental and vision insurance, 401(k), flexible spending account, and paid leave (including PTO and parental leave) in accordance with our applicable plans and policies."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://www.okta.com/company/careers/opportunity/7561410?gh_jid=7561410"
    ]
   },
   {
@@ -21153,57 +19088,6 @@
    ]
   },
   {
-   "id": "greenhouse:okta:7902204",
-   "company": "Okta",
-   "title": "Success Insights Manager",
-   "location": "Bellevue, Washington; Chicago, Illinois; Toronto, Ontario, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 116000,
-      "max": 174000,
-      "currency": "USD",
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "ote",
-      "estimated": false,
-      "quote": "$116,000 — $174,000 USD"
-     },
-     {
-      "min": 117000,
-      "max": 160600,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "ote",
-      "estimated": false,
-      "quote": "$117,000 — $160,600 CAD"
-     }
-    ],
-    "primary": 1,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "In addition, Okta offers equity (where applicable) and benefits, including health, dental and vision insurance, 401(k), flexible spending account, and paid leave (including PTO and parental leave) in accordance with our applicable plans and policies."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://www.okta.com/company/careers/opportunity/7902204?gh_jid=7902204"
-   ]
-  },
-  {
    "id": "phenom:OPJOPEUS:52343",
    "company": "OpenText",
    "title": "Product Marketing Manager",
@@ -21329,54 +19213,6 @@
    ]
   },
   {
-   "id": "ashby:passage:d218da41-3446-4cbb-aa52-6e8f310d2127",
-   "company": "Passage",
-   "title": "Senior Analytics Engineer",
-   "location": "Toronto Ontario",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 100000,
-      "max": 150000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "C$100K to C$150K + Offers Equity"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "offered",
-     "amounts": [
-      {
-       "min": 100000,
-       "max": 150000,
-       "unit": "currency",
-       "currency": "CAD",
-       "quote": "C$100K to C$150K + Offers Equity"
-      }
-     ],
-     "quote": "C$100K to C$150K + Offers Equity"
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "ashby"
-   ],
-   "urls": [
-    "https://jobs.ashbyhq.com/passage/d218da41-3446-4cbb-aa52-6e8f310d2127"
-   ]
-  },
-  {
    "id": "ashby:procurify:8474a8c8-2f96-4b31-a368-a78ec040d3d9",
    "company": "Procurify",
    "title": "Director, Product Marketing",
@@ -21476,24 +19312,6 @@
    ],
    "urls": [
     "https://jobs.ashbyhq.com/procurify/e6871697-5416-40dd-94ef-9bcb7957e484"
-   ]
-  },
-  {
-   "id": "ultipro:PRO5004PROPH:e9299034-b1b1-4b67-ba7e-daac36ea3aca",
-   "company": "Propel Holdings",
-   "title": "Analytics Engineer, Risk",
-   "location": "Toronto, ON, CAN",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "ultipro"
-   ],
-   "urls": [
-    "https://recruiting.ultipro.ca/PRO5004PROPH/JobBoard/385f656b-0bbd-4ae7-b936-f2983728cf6e/OpportunityDetail?opportunityId=e9299034-b1b1-4b67-ba7e-daac36ea3aca"
    ]
   },
   {
@@ -21625,39 +19443,21 @@
    ]
   },
   {
-   "id": "successfactors:jobs.rogers.com:1438700100",
+   "id": "successfactors:jobs.rogers.com:1406795200",
    "company": "Rogers",
-   "title": "Digital Data Analytics Manager",
+   "title": "Senior Analyst, Product Insights",
    "location": "Toronto, ON, Canada",
    "region": "GTA",
    "role_tier": "Stretch",
-   "role_family": "analytics",
+   "role_family": "prodanalytics",
    "people_mgmt_hint": false,
    "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
+   "first_seen": "2026-10-16T21:56:50+00:00",
    "sources": [
     "successfactors"
    ],
    "urls": [
-    "https://jobs.rogers.com/job/Toronto-Digital-Data-Analytics-Manager-ON/1438700100/"
-   ]
-  },
-  {
-   "id": "successfactors:jobs.rogers.com:1439482400",
-   "company": "Rogers",
-   "title": "Senior Data Analyst",
-   "location": "Toronto, ON, Canada",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "successfactors"
-   ],
-   "urls": [
-    "https://jobs.rogers.com/job/Toronto-Senior-Data-Analyst-ON/1439482400/"
+    "https://jobs.rogers.com/job/Toronto-Senior-Analyst%2C-Product-Insights-ON/1406795200/"
    ]
   },
   {
@@ -21685,7 +19485,7 @@
    "location": "Toronto, ON, Canada",
    "region": "GTA",
    "role_tier": "Stretch",
-   "role_family": "analytics",
+   "role_family": "prodanalytics",
    "people_mgmt_hint": false,
    "pay": null,
    "first_seen": "2026-10-15T02:02:41+00:00",
@@ -21914,60 +19714,6 @@
    ]
   },
   {
-   "id": "successfactors:jobs.scotiabank.com:604949917",
-   "company": "Scotiabank",
-   "title": "Data Analyst",
-   "location": "Toronto, ON, Canada, M5H 1H1",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "successfactors"
-   ],
-   "urls": [
-    "https://jobs.scotiabank.com/job/Toronto-Data-Analyst-ON-M5H-1H1/604949917/"
-   ]
-  },
-  {
-   "id": "successfactors:jobs.scotiabank.com:607106317",
-   "company": "Scotiabank",
-   "title": "Data Analyst, Investment Data Solutions",
-   "location": "Toronto, ON, Canada, M5H 0B4",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "successfactors"
-   ],
-   "urls": [
-    "https://jobs.scotiabank.com/job/Toronto-Data-Analyst%2C-Investment-Data-Solutions-ON-M5H-0B4/607106317/"
-   ]
-  },
-  {
-   "id": "successfactors:jobs.scotiabank.com:607062717",
-   "company": "Scotiabank",
-   "title": "Senior Data Analyst",
-   "location": "Toronto, ON, Canada, M5C2V9",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "successfactors"
-   ],
-   "urls": [
-    "https://jobs.scotiabank.com/job/Toronto-Senior-Data-Analyst-ON-M5C2V9/607062717/"
-   ]
-  },
-  {
    "id": "successfactors:jobs.scotiabank.com:606873817",
    "company": "Scotiabank",
    "title": "Senior Manager, Product Marketing Strategy, Planning and Delivery, Canadian Banking",
@@ -22148,6 +19894,24 @@
    ]
   },
   {
+   "id": "shopify:shopify:95eb987e-13ca-447b-9d19-0e42aa5ce40c",
+   "company": "Shopify",
+   "title": "Staff Product Data Scientist -  Developer Productivity",
+   "location": "Remote - Americas (US and Canada)",
+   "region": "Remote-Canada",
+   "role_tier": "Stretch",
+   "role_family": "prodanalytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T21:56:50+00:00",
+   "sources": [
+    "shopify"
+   ],
+   "urls": [
+    "https://www.shopify.com/careers?ashby_jid=95eb987e-13ca-447b-9d19-0e42aa5ce40c"
+   ]
+  },
+  {
    "id": "ashby:snowflake:59b0a754-fecd-4156-9f28-1caa9cd99509",
    "company": "Snowflake",
    "title": "Senior Solution Engineer",
@@ -22293,151 +20057,6 @@
    ]
   },
   {
-   "id": "greenhouse:stackadapt:4354888009",
-   "company": "StackAdapt",
-   "title": "Lead Product Data Analyst, Mobile App User Acquisition",
-   "location": "Canada; United States",
-   "region": "Other Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 100000,
-      "max": 137500,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "$100,000 — $137,500 CAD"
-     },
-     {
-      "min": 104000,
-      "max": 143000,
-      "currency": "USD",
-      "interval": "year",
-      "label": null,
-      "canada": null,
-      "kind": "base",
-      "estimated": false,
-      "quote": "$104,000 — $143,000 USD"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "Depending on the role, candidates may also be eligible for additional compensation such as annual bonuses, commissions, equity awards, and a comprehensive benefits package."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://job-boards.greenhouse.io/stackadapt/jobs/4354888009"
-   ]
-  },
-  {
-   "id": "greenhouse:stackadapt:4297633009",
-   "company": "StackAdapt",
-   "title": "Senior Data Analyst, Business Intelligence",
-   "location": "Canada",
-   "region": "Other Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 100000,
-      "max": 137500,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "$100,000 — $137,500 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text",
-    "equity": {
-     "offered": true,
-     "certainty": "possible",
-     "amounts": [],
-     "quote": "Depending on the role, candidates may also be eligible for additional compensation such as annual bonuses, commissions, equity awards, and a comprehensive benefits package."
-    }
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://job-boards.greenhouse.io/stackadapt/jobs/4297633009"
-   ]
-  },
-  {
-   "id": "greenhouse:stay22:4380283009",
-   "company": "Stay22",
-   "title": "Data Analyst - Product & Business Analytics",
-   "location": "Montreal HQ",
-   "region": "Montreal",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://job-boards.greenhouse.io/stay22/jobs/4380283009"
-   ]
-  },
-  {
-   "id": "greenhouse:stripe:5416444",
-   "company": "Stripe",
-   "title": "Data Analyst",
-   "location": "Canada",
-   "region": "Other Canada",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://stripe.com/jobs/search?gh_jid=5416444"
-   ]
-  },
-  {
-   "id": "greenhouse:stripe:8026689",
-   "company": "Stripe",
-   "title": "Internal Audit Data Analytics Lead",
-   "location": "Toronto, New York, San Francisco, Atlanta, Seattle",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "greenhouse"
-   ],
-   "urls": [
-    "https://stripe.com/jobs/search?gh_jid=8026689"
-   ]
-  },
-  {
    "id": "greenhouse:stripe:8090203",
    "company": "Stripe",
    "title": "Product Marketing Lead, Billing",
@@ -22546,194 +20165,6 @@
    ]
   },
   {
-   "id": "workday:sunlife/Experienced-Jobs:JR00128480",
-   "company": "Sun Life",
-   "title": "Senior Data Analyst",
-   "location": "Toronto, Ontario; Waterloo, Ontario",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": null,
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://sunlife.wd3.myworkdayjobs.com/en-US/Experienced-Jobs/job/Toronto-Ontario/Senior-Data-Analyst_JR00128480"
-   ]
-  },
-  {
-   "id": "workday:td/TD_Bank_Careers:R_1513657",
-   "company": "TD",
-   "title": "Business Insights Analyst II",
-   "location": "Montréal, Québec; Toronto, Ontario",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 79100,
-      "max": 111700,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "79 100 $/$79,100 - 111 700 $/$111,700 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Montral-Qubec/Business-Insights-Analyst-II_R_1513657"
-   ]
-  },
-  {
-   "id": "workday:td/TD_Bank_Careers:R_1508752",
-   "company": "TD",
-   "title": "Business Insights Analyst II",
-   "location": "Montréal, Québec; Toronto, Ontario; 2828 Laurier Boulevard Insurance, Quebec City, Quebec",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 79100,
-      "max": 111700,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "79 100 $/$79,100 - 111 700 $/$111,700 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Montral-Qubec/Business-Insights-Analyst-II_R_1508752"
-   ]
-  },
-  {
-   "id": "workday:td/TD_Bank_Careers:R_1512744",
-   "company": "TD",
-   "title": "Business Insights Analyst II",
-   "location": "Montréal, Québec; Markham, Ontario; Toronto, Ontario",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 79100,
-      "max": 111700,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "79 100 $/$79,100 - 111 700 $/$111,700 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Montral-Qubec/Business-Insights-Analyst-II_R_1512744"
-   ]
-  },
-  {
-   "id": "workday:td/TD_Bank_Careers:R_1510923",
-   "company": "TD",
-   "title": "Business Insights Analyst II",
-   "location": "Toronto, Ontario; Mississauga, Ontario",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 81600,
-      "max": 115200,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "$81,600 - $115,200 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Business-Insights-Analyst-II_R_1510923"
-   ]
-  },
-  {
-   "id": "workday:td/TD_Bank_Careers:R_1513261",
-   "company": "TD",
-   "title": "Senior Analyst, Business Intelligence & Insights",
-   "location": "Toronto, Ontario",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 81600,
-      "max": 115200,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "unspecified",
-      "estimated": false,
-      "quote": "$81,600 - $115,200 CAD"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "workday"
-   ],
-   "urls": [
-    "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Senior-Analyst--Business-Intelligence---Insights_R_1513261-1"
-   ]
-  },
-  {
    "id": "workday:td/TD_Bank_Careers:R_1512995",
    "company": "TD",
    "title": "Solution Architect III",
@@ -22826,7 +20257,7 @@
    "location": "Canada, Toronto, Ontario",
    "region": "GTA",
    "role_tier": "Stretch",
-   "role_family": "analytics",
+   "role_family": "prodanalytics",
    "people_mgmt_hint": false,
    "pay": {
     "ranges": [
@@ -23053,40 +20484,6 @@
    ]
   },
   {
-   "id": "lever:veeva:29fabe4e-f12a-4120-aed4-ba90f057372e",
-   "company": "Veeva Systems",
-   "title": "Data Analytics Lead - Veeva Ostro",
-   "location": "Canada - Toronto",
-   "region": "GTA",
-   "role_tier": "Stretch",
-   "role_family": "analytics",
-   "people_mgmt_hint": false,
-   "pay": {
-    "ranges": [
-     {
-      "min": 200000,
-      "max": 300000,
-      "currency": "CAD",
-      "interval": "year",
-      "label": "Canada",
-      "canada": true,
-      "kind": "base",
-      "estimated": false,
-      "quote": "<li><span data-sheets-root=\"1\">Base pay: $200,000 - $300,000 CAD</span></li>"
-     }
-    ],
-    "primary": 0,
-    "source": "text"
-   },
-   "first_seen": "2026-10-16T20:44:08+00:00",
-   "sources": [
-    "lever"
-   ],
-   "urls": [
-    "https://jobs.lever.co/veeva/29fabe4e-f12a-4120-aed4-ba90f057372e"
-   ]
-  },
-  {
    "id": "ashby:wealthsimple:dc2ee546-5f93-48b9-b0aa-61b583aa5361",
    "company": "Wealthsimple",
    "title": "Lead, Motion & Product Marketing Design",
@@ -23188,6 +20585,57 @@
    ]
   },
   {
+   "id": "workday:workday/Workday:JR-0110326",
+   "company": "Workday",
+   "title": "Sr Product Data Scientist",
+   "location": "Canada, BC, Vancouver; USA, GA, Atlanta",
+   "region": "Vancouver",
+   "role_tier": "Stretch",
+   "role_family": "prodanalytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 124400,
+      "max": 186600,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Primary CAN Base Pay Range: $124,400 - $186,600 CAD"
+     },
+     {
+      "min": 148200,
+      "max": 263300,
+      "currency": "USD",
+      "interval": "year",
+      "label": "United States",
+      "canada": false,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Additional US Location(s) Base Pay Range: $148,200 USD - $263,300 USD"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "As a part of the total compensation package, this role may be eligible for the Workday Bonus Plan or a role-specific commission/bonus, as well as annual refresh stock grants."
+    }
+   },
+   "first_seen": "2026-10-16T21:56:50+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://workday.wd5.myworkdayjobs.com/en-US/Workday/job/Canada-BC-Vancouver/Sr-Product-Data-Scientist_JR-0110326"
+   ]
+  },
+  {
    "id": "hibob:xanadu:f01d41d8-8b05-4785-bd50-0b1d9d98e0f5",
    "company": "Xanadu",
    "title": "Technical Product Marketing Manager",
@@ -23268,6 +20716,228 @@
    ]
   },
   {
+   "id": "ashby:1password:ca3d814c-946a-447a-b41a-0257fcf7e2cd",
+   "company": "1Password",
+   "title": "Data Analyst, Finance Analytics",
+   "location": "Remote (United States | Canada)",
+   "region": "Remote-Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 95000,
+      "max": 133000,
+      "currency": "USD",
+      "interval": "year",
+      "label": "United States",
+      "canada": false,
+      "kind": "base",
+      "estimated": false,
+      "quote": "USA-based roles only: The annual base salary for this role is between $95,000 USD and $133,000 USD, plus immediate participation in 1Password's benefits program (health, dental, 401k and many others), utilization of our generous paid time off, an equity grant and, where applicable, participation in our incentive programs."
+     },
+     {
+      "min": 83000,
+      "max": 116000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Canada-based roles only: The annual base salary for this role is between $83,000 CAD and $116,000 CAD, plus immediate participation in 1Password’s generous benefits program (health, dental, RRSP and many others), utilization of our generous paid time off, an equity grant and, where applicable, participation in our incentive programs."
+     }
+    ],
+    "primary": 1,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "📈 RSU program for most employees"
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/1password/ca3d814c-946a-447a-b41a-0257fcf7e2cd"
+   ]
+  },
+  {
+   "id": "ashby:1password:45393747-1ed7-4eb9-bcda-4c74fe5e9824",
+   "company": "1Password",
+   "title": "Staff Data Analyst, Marketing",
+   "location": "Remote (United States | Canada)",
+   "region": "Remote-Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 149000,
+      "max": 216000,
+      "currency": "USD",
+      "interval": "year",
+      "label": "United States",
+      "canada": false,
+      "kind": "base",
+      "estimated": false,
+      "quote": "USA-based roles only: The annual base salary for this role is between $149,000 USD and $216,000 USD, plus immediate participation in 1Password's benefits program (health, dental, 401k and many others), utilization of our generous paid time off, an equity grant and, where applicable, participation in our incentive programs."
+     },
+     {
+      "min": 131000,
+      "max": 175000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Canada-based roles only: The annual base salary for this role is between $131,000 CAD and $175,000 CAD, plus immediate participation in 1Password’s generous benefits program (health, dental, RRSP and many others), utilization of our generous paid time off, an equity grant and, where applicable, participation in our incentive programs."
+     }
+    ],
+    "primary": 1,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "📈 RSU program for most employees"
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/1password/45393747-1ed7-4eb9-bcda-4c74fe5e9824"
+   ]
+  },
+  {
+   "id": "greenhouse:affirm:8003170003",
+   "company": "Affirm",
+   "title": "Analytics Lead, Full Stack",
+   "location": "Remote Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 145000,
+      "max": 205000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "CAN base pay range per year: $145,000 - $205,000"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Equity Grade - 5"
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/affirm/jobs/8003170003"
+   ]
+  },
+  {
+   "id": "greenhouse:affirm:7979912003",
+   "company": "Affirm",
+   "title": "Analytics Lead, Full Stack (Collections & Recoveries)",
+   "location": "Remote Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 145000,
+      "max": 205000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "CAN base pay range per year: $145,000 - $205,000"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Equity Grade - 5"
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/affirm/jobs/7979912003"
+   ]
+  },
+  {
+   "id": "greenhouse:affirm:7871458003",
+   "company": "Affirm",
+   "title": "Analytics Lead, Full Stack (Strategic Revenue Insights)",
+   "location": "Remote Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 145000,
+      "max": 205000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "CAN base pay range per year:  $145,000  -  $205,000"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Equity Grade - 5"
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/affirm/jobs/7871458003"
+   ]
+  },
+  {
    "id": "greenhouse:alayacare:8865478002",
    "company": "AlayaCare",
    "title": "Project Manager",
@@ -23305,6 +20975,246 @@
    ],
    "urls": [
     "https://alayacare.com/open-positions?gh_jid=8865478002"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10459394",
+   "company": "Amazon",
+   "title": "Business Intelligence Engineer II, SCOT - Fulfillment Optimization (FO)",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 76400,
+      "max": 127600,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Vancouver, Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "CAN, BC, Vancouver - 76,400.00 - 127,600.00 CAD annually"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "As a total compensation company, Amazon's package may include other elements such as sign-on payments and restricted stock units (RSUs)."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10459394/business-intelligence-engineer-ii-scot-fulfillment-optimization-fo"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10424171",
+   "company": "Amazon",
+   "title": "Business Intelligence Engineer II, Talent Acquisition Analytics",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 76400,
+      "max": 127600,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Vancouver, Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "CAN, BC, Vancouver - 76,400.00 - 127,600.00 CAD annually"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "As a total compensation company, Amazon's package may include other elements such as sign-on payments and restricted stock units (RSUs)."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10424171/business-intelligence-engineer-ii-talent-acquisition-analytics"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10557002",
+   "company": "Amazon",
+   "title": "Business Intelligence Engineer III, Talent Acquisition Analytics",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 97400,
+      "max": 162600,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Vancouver, Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "CAN, BC, Vancouver - 97,400.00 - 162,600.00 CAD annually"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "As a total compensation company, Amazon's package may include other elements such as sign-on payments and restricted stock units (RSUs)."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10557002/business-intelligence-engineer-iii-talent-acquisition-analytics"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10569450",
+   "company": "Amazon",
+   "title": "Business Intelligence Engineer, Forecasting & Labs Analytics",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 76400,
+      "max": 127600,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Toronto, Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "CAN, ON, Toronto - 76,400.00 - 127,600.00 CAD annually"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "As a total compensation company, Amazon's package may include other elements such as sign-on payments and restricted stock units (RSUs)."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10569450/business-intelligence-engineer-forecasting-labs-analytics"
+   ]
+  },
+  {
+   "id": "amazon:amazon:10576100",
+   "company": "Amazon",
+   "title": "Business Intelligence Engineer, IT PnD Data & Analytics (DnA)",
+   "location": "Vancouver, British Columbia, CAN",
+   "region": "Vancouver",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 76400,
+      "max": 127600,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Vancouver, Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "CAN, BC, Vancouver - 76,400.00 - 127,600.00 CAD annually"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "As a total compensation company, Amazon's package may include other elements such as sign-on payments and restricted stock units (RSUs)."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/10576100/business-intelligence-engineer-it-pnd-data-analytics-dna"
+   ]
+  },
+  {
+   "id": "amazon:amazon:3192046",
+   "company": "Amazon",
+   "title": "Sr. Business Intelligence Engineer, Forecasting and Labs Analytics",
+   "location": "Toronto, Ontario, CAN",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 97400,
+      "max": 162600,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Toronto, Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "CAN, ON, Toronto - 97,400.00 - 162,600.00 CAD annually"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "As a total compensation company, Amazon's package may include other elements such as sign-on payments and restricted stock units (RSUs)."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "amazon"
+   ],
+   "urls": [
+    "https://www.amazon.jobs/en/jobs/3192046/sr-business-intelligence-engineer-forecasting-and-labs-analytics"
    ]
   },
   {
@@ -23384,6 +21294,86 @@
    ]
   },
   {
+   "id": "workday:aritzia/External:R0025024",
+   "company": "Aritzia",
+   "title": "Information Technology - Lead Analytics Engineer, Analytics Engineering Excellence",
+   "location": "Vancouver, BC, Canada (SO - Vancouver)",
+   "region": "Vancouver",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 300000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "The range for roles at this level is $100,000 - $300,000 per year."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "Total compensation may include base, bonus and/or equity depending on the role, which has the potential to be greater than this range."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://aritzia.wd3.myworkdayjobs.com/en-US/External/job/Vancouver-BC-Canada-SO---Vancouver/Information-Technology---Lead-Analytics-Engineer--Analytics-Engineering-Excellence_R0025024"
+   ]
+  },
+  {
+   "id": "workday:aritzia/External:R0025546",
+   "company": "Aritzia",
+   "title": "Information Technology - Lead Analytics Engineer, Distribution Technology",
+   "location": "Delta, BC, Canada (DC01P)",
+   "region": "Other Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 300000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "The range for roles at this level is $100,000 - $300,000 per year."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "Total compensation may include base, bonus and/or equity depending on the role, which has the potential to be greater than this range.With comprehensive benefits, aspirational workspaces, and elevated perks and experiences — we provide it all."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://aritzia.wd3.myworkdayjobs.com/en-US/External/job/Delta-BC-Canada-DC01P/Information-Technology---Lead-Analytics-Engineer--Distribution-Technology_R0025546"
+   ]
+  },
+  {
    "id": "workday:aritzia/External:R0025033",
    "company": "Aritzia",
    "title": "Information Technology - Project Manager, Technology Division",
@@ -23455,6 +21445,46 @@
    ],
    "urls": [
     "https://aritzia.wd3.myworkdayjobs.com/en-US/External/job/Vancouver-BC-Canada-SO---Vancouver/Information-Technology---Senior---Solution-Systems-Analyst--Product-Business-Technology_R0025036-1"
+   ]
+  },
+  {
+   "id": "workday:aritzia/External:R0025034",
+   "company": "Aritzia",
+   "title": "Information Technology - Senior Analytics Engineer/Analytics Engineer, Marketing & Transformation Technology",
+   "location": "Vancouver, BC, Canada (SO - Vancouver)",
+   "region": "Vancouver",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 300000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "The typical hiring range for this position is $100,000 - $300,000 per year."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "Total compensation may include base, bonus and/or equity depending on the role, which has the potential to be greater than this range."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://aritzia.wd3.myworkdayjobs.com/en-US/External/job/Vancouver-BC-Canada-SO---Vancouver/Information-Technology---Senior-Analytics-Engineer-Analytics-Engineer--Marketing---Transformation-Technology_R0025034"
    ]
   },
   {
@@ -23820,6 +21850,46 @@
    ]
   },
   {
+   "id": "workday:autodesk/Ext:26WD100787",
+   "company": "Autodesk",
+   "title": "Senior Data Analyst, Autodesk Education",
+   "location": "Toronto, ON, CAN",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 80000,
+      "max": 117700,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "For Canada based roles, we expect a starting base salary between $80,000 and $117,700."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "In addition to base salaries, our compensation package may include annual cash bonuses, commissions for sales roles, stock grants, and a comprehensive benefits package."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://autodesk.wd1.myworkdayjobs.com/en-US/Ext/job/Toronto-ON-CAN/Senior-Data-Analyst--Autodesk-Education_26WD100787-2"
+   ]
+  },
+  {
    "id": "workday:bmo/External:R260027412",
    "company": "BMO",
    "title": "Director and Business Architect, Investment Management",
@@ -24007,6 +22077,91 @@
    ],
    "urls": [
     "https://jobs.bell.ca/ca/en/job/431703/Manager-Project-Management"
+   ]
+  },
+  {
+   "id": "greenhouse:block:5369959008",
+   "company": "Block (Square / Cash App)",
+   "title": "Business Intelligence Analyst",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 135200,
+      "max": 202800,
+      "currency": "USD",
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "$135,200 — $202,800 USD"
+     },
+     {
+      "min": 125800,
+      "max": 188600,
+      "currency": "USD",
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "$125,800 — $188,600 USD"
+     },
+     {
+      "min": 119000,
+      "max": 178400,
+      "currency": "USD",
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "$119,000 — $178,400 USD"
+     },
+     {
+      "min": 108200,
+      "max": 162200,
+      "currency": "USD",
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "$108,200 — $162,200 USD"
+     }
+    ],
+    "primary": null,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "http://block.xyz/careers/jobs/5369959008?gh_jid=5369959008"
+   ]
+  },
+  {
+   "id": "workable:borrowell:D3F1D6AAEC",
+   "company": "Borrowell",
+   "title": "Data Analyst",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T21:56:50+00:00",
+   "sources": [
+    "workable"
+   ],
+   "urls": [
+    "https://apply.workable.com/j/D3F1D6AAEC"
    ]
   },
   {
@@ -24816,6 +22971,57 @@
    ]
   },
   {
+   "id": "workday:canadiantirecorporation/Enterprise_External_Careers_Site:JR166882",
+   "company": "Canadian Tire (Digital)",
+   "title": "Business Data Analyst",
+   "location": "Oakville, ON",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 53000,
+      "max": 88000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Broadband Salary Range:  $53,000 – $88,000 CAD"
+     },
+     {
+      "min": 70000,
+      "max": 75000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Our typical hiring range is between $70,000 and $75,000 CAD."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "We welcome and encourage candidates from equity-seeking groups such as people who identify as racialized, Indigenous, 2SLGBTQIA+, women, people with disabilities, and beyond."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://canadiantirecorporation.wd3.myworkdayjobs.com/en-US/Enterprise_External_Careers_Site/job/Oakville-ON/Business-Data-Analyst_JR166882"
+   ]
+  },
+  {
    "id": "workday:canadiantirecorporation/Enterprise_External_Careers_Site:JR100656",
    "company": "Canadian Tire (Digital)",
    "title": "Category Business Analyst ( Evergreen)",
@@ -24853,6 +23059,97 @@
    ],
    "urls": [
     "https://canadiantirecorporation.wd3.myworkdayjobs.com/en-US/Enterprise_External_Careers_Site/job/Toronto-ON/Category-Business-Analyst---Canadian-Tire-Corporation_JR100656"
+   ]
+  },
+  {
+   "id": "workday:canadiantirecorporation/Enterprise_External_Careers_Site:JR162250",
+   "company": "Canadian Tire (Digital)",
+   "title": "Data Analyst (Two Open Roles)",
+   "location": "Mississauga, ON",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 53000,
+      "max": 88000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Our typical hiring range is between $53,000.00 and $88,000.00 per annum."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "We welcome and encourage candidates from equity-seeking groups such as people who identify as racialized, Indigenous, 2SLGBTQIA+, women, people with disabilities, and beyond."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://canadiantirecorporation.wd3.myworkdayjobs.com/en-US/Enterprise_External_Careers_Site/job/Mississauga-ON/Business-Analyst--Two-Open-Roles-_JR162250"
+   ]
+  },
+  {
+   "id": "workday:canadiantirecorporation/Enterprise_External_Careers_Site:JR163941",
+   "company": "Canadian Tire (Digital)",
+   "title": "Senior Analytics & BI Developer",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 64000,
+      "max": 106000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Broadband Salary Range:  $64,000 – $106,000."
+     },
+     {
+      "min": 64000,
+      "max": 90000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Our typical hiring range  is between $64,000 and $90,000."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "We welcome and encourage candidates from equity-seeking groups such as people who identify as racialized, Indigenous, 2SLGBTQIA+, women, people with disabilities, and beyond."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://canadiantirecorporation.wd3.myworkdayjobs.com/en-US/Enterprise_External_Careers_Site/job/Toronto-ON/Sr-BI-and-Insight_JR163941"
    ]
   },
   {
@@ -24924,6 +23221,40 @@
    ]
   },
   {
+   "id": "successfactors:careers.celestica.com:1423157633",
+   "company": "Celestica",
+   "title": "Commercial Strategy & Analytics Manager",
+   "location": "Remote Employee Canada, ON, Canada",
+   "region": "Remote-Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 109000,
+      "max": 159000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "Salary Range: $109,000-$159,000 CAD/year"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "successfactors"
+   ],
+   "urls": [
+    "https://careers.celestica.com/job/Remote-Employee-Canada-Commercial-Strategy-&-Analytics-Manager-ON/1423157633/"
+   ]
+  },
+  {
    "id": "successfactors:careers.celestica.com:1434104833",
    "company": "Celestica",
    "title": "Digital Transformation Project Manager",
@@ -24992,6 +23323,40 @@
    ]
   },
   {
+   "id": "successfactors:careers.celestica.com:1442049533",
+   "company": "Celestica",
+   "title": "Product Data Analyst 2",
+   "location": "Toronto, ON, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 74000,
+      "max": 112000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "Range: $74,000 - 112,000."
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "successfactors"
+   ],
+   "urls": [
+    "https://careers.celestica.com/job/Toronto-Product-Data-Analyst-2-ON/1442049533/"
+   ]
+  },
+  {
    "id": "successfactors:careers.celestica.com:1406662033",
    "company": "Celestica",
    "title": "SAP Senior Architect & Delivery Lead 1",
@@ -25023,6 +23388,40 @@
    ],
    "urls": [
     "https://careers.celestica.com/job/Monterrey-SAP-Senior-Architect-&-Delivery-Lead-1-ON/1406662033/"
+   ]
+  },
+  {
+   "id": "greenhouse:clutch:6212017004",
+   "company": "Clutch",
+   "title": "Senior Data Analyst",
+   "location": "Toronto, ON",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 125000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "- Salary range: $100,000 - $125,000"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/clutch/jobs/6212017004"
    ]
   },
   {
@@ -25114,6 +23513,24 @@
    ]
   },
   {
+   "id": "workday:desjardins/Desjardins:R2612415",
+   "company": "Desjardins",
+   "title": "Data analyst, Marketing performance measurement and targeting",
+   "location": "Montréal; Lévis",
+   "region": "Montreal",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://desjardins.wd10.myworkdayjobs.com/en-US/Desjardins/job/Montral/Analyste-de-donnes--Ciblage-et-mesure-de-performance-marketing_R2612415-1"
+   ]
+  },
+  {
    "id": "workday:desjardins/Desjardins:R2612067",
    "company": "Desjardins",
    "title": "Delivery coordinator, Project management",
@@ -25201,6 +23618,82 @@
    ],
    "urls": [
     "https://desjardins.wd10.myworkdayjobs.com/en-US/Desjardins/job/Montral/Contrleur-ou-contrleuse-de-projets_R2611434-1"
+   ]
+  },
+  {
+   "id": "workday:desjardins/Desjardins:R2612549",
+   "company": "Desjardins",
+   "title": "Ratemaking SAS Data Analyst",
+   "location": "Lévis; Montréal; Québec",
+   "region": "Montreal",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://desjardins.wd10.myworkdayjobs.com/en-US/Desjardins/job/Lvis/Analyste-de-donnes-SAS--Tarification_R2612549"
+   ]
+  },
+  {
+   "id": "workday:desjardins/Desjardins:R2611917",
+   "company": "Desjardins",
+   "title": "Senior Advisor, Guidewire Business Intelligence and Data Modelling",
+   "location": "Lévis; Montréal; Mississauga; Aurora",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://desjardins.wd10.myworkdayjobs.com/en-US/Desjardins/job/Lvis/Conseiller-principal-ou-conseillre-principale--Intelligence-d-affaires-et-modlisation-des-donnes--Guidewire_R2611917-1"
+   ]
+  },
+  {
+   "id": "ashby:docebo:ca7d750a-29a1-4687-b344-b7afedf28f5f",
+   "company": "Docebo",
+   "title": "Data Analyst",
+   "location": "Toronto, Ontario",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 54100,
+      "max": 72100,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "CA$54.1K – CA$72.1K"
+     }
+    ],
+    "primary": 0,
+    "source": "field",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Empowering Our Talent Culture: We build a culture of trust and empowerment by designing our rewards and benefits with transparency, equity, and flexibility, enabling our people to do their best work and stay for the long haul."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/docebo/ca7d750a-29a1-4687-b344-b7afedf28f5f"
    ]
   },
   {
@@ -25309,6 +23802,137 @@
    ],
    "urls": [
     "https://generac.wd5.myworkdayjobs.com/en-US/External/job/Pewaukee-WI---USA/Engineering-Project-Manager-II_JR17431"
+   ]
+  },
+  {
+   "id": "avature:jobs.ea.com:215382",
+   "company": "Electronic Arts",
+   "title": "Advanced Data Analyst - EA SPORTS™ FC",
+   "location": "Vancouver, Canada",
+   "region": "Vancouver",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 114300,
+      "max": 156200,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "Victoria) *$114,300 - $156,200 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "avature"
+   ],
+   "urls": [
+    "https://jobs.ea.com/en_US/careers/JobDetail/Advanced-Analyst/215382"
+   ]
+  },
+  {
+   "id": "avature:jobs.ea.com:214116",
+   "company": "Electronic Arts",
+   "title": "Advanced Data Analyst - EA Sports FC Live",
+   "location": "Vancouver, Canada",
+   "region": "Vancouver",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 114300,
+      "max": 156200,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "Victoria) *$114,300 - $156,200 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "avature"
+   ],
+   "urls": [
+    "https://jobs.ea.com/en_US/careers/JobDetail/Advanced-Analyst/214116"
+   ]
+  },
+  {
+   "id": "greenhouse:workleap:5196800007",
+   "company": "Element (Workleap)",
+   "title": "Marketing Analyst, Attribution - ShareGate",
+   "location": "Canada - Remote",
+   "region": "Remote-Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 130000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "ote",
+      "estimated": false,
+      "quote": "- Base salary: $100k to $130k / OTE : $110k–$140k."
+     },
+     {
+      "min": 110000,
+      "max": 140000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "ote",
+      "estimated": false,
+      "quote": "- Base salary: $100k to $130k / OTE : $110k–$140k."
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/workleap/jobs/5196800007"
+   ]
+  },
+  {
+   "id": "page:evenup:1a8f00199680",
+   "company": "EvenUp",
+   "title": "Senior Analytics Engineer, RevOps",
+   "location": "Toronto (hybrid), ON, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "page"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/evenup/b60b16e0-b210-42ab-b104-ad0cb73ed323"
    ]
   },
   {
@@ -25444,6 +24068,86 @@
    ]
   },
   {
+   "id": "greenhouse:instacart:8115836",
+   "company": "Instacart",
+   "title": "Insights Lead, Instacart Business",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 133000,
+      "max": 140500,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "$133,000 — $140,500 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "Additionally, this role is eligible for a new hire equity grant as well as annual refresh grants."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8115836"
+   ]
+  },
+  {
+   "id": "greenhouse:instacart:8282591",
+   "company": "Instacart",
+   "title": "Senior Financial Insights Analyst",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+   "region": "Remote-Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 126000,
+      "max": 133000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "$126,000 — $133,000 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "Additionally, this role is eligible for a new hire equity grant as well as annual refresh grants."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://instacart.careers/job/?gh_jid=8282591"
+   ]
+  },
+  {
    "id": "workday:intactfc/intactfc:R154791",
    "company": "Intact",
    "title": "Business Analyst II, OPL (Claims System Support)",
@@ -25572,6 +24276,250 @@
    ]
   },
   {
+   "id": "ashby:jane:a00a85b2-deb7-49e9-94d6-be9bf29b95e7",
+   "company": "Jane App",
+   "title": "Senior Data Analyst",
+   "location": "Canada/US",
+   "region": "Remote-Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 156300,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "This role has an annual salary range of $100,000 to $156,300."
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/jane/a00a85b2-deb7-49e9-94d6-be9bf29b95e7"
+   ]
+  },
+  {
+   "id": "ashby:jane:aad68bb2-49b3-4d45-b08d-aab8076cd5c3",
+   "company": "Jane App",
+   "title": "Staff Analytics Engineer",
+   "location": "Canada/US",
+   "region": "Remote-Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 152000,
+      "max": 237500,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "- 🇨🇦 Canada: $152,000 – $237,500 (accomplished: ~$180,500 CAD)"
+     },
+     {
+      "min": 149600,
+      "max": 215100,
+      "currency": "USD",
+      "interval": "year",
+      "label": "United States",
+      "canada": false,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "- 🇺🇸 United States: $149,600 – $215,100 USD (accomplished: ~$177,700 USD)"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "This role also includes equity through our JSOP (Jane Stock Option Plan)."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/jane/aad68bb2-49b3-4d45-b08d-aab8076cd5c3"
+   ]
+  },
+  {
+   "id": "ashby:jane:50006239-8506-4b56-b78c-a8c1114bd2da",
+   "company": "Jane App",
+   "title": "Staff Product Data Analyst",
+   "location": "Canada/US",
+   "region": "Remote-Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 125200,
+      "max": 195600,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "- 🇨🇦 Canada: $125,200 – $195,600 (accomplished: ~$148,700 CAD)"
+     },
+     {
+      "min": 116800,
+      "max": 182500,
+      "currency": "USD",
+      "interval": "year",
+      "label": "United States",
+      "canada": false,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "- 🇺🇸 United States: $116,800– $182,500 USD (accomplished: ~$138,700)"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "This role also includes equity through our JSOP (Jane Stock Option Plan)."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/jane/50006239-8506-4b56-b78c-a8c1114bd2da"
+   ]
+  },
+  {
+   "id": "ashby:jobber:62a5728b-07dd-4877-b175-a87fea5944b1",
+   "company": "Jobber",
+   "title": "Senior Business Intelligence Engineer",
+   "location": "Edmonton; Vancouver; Kitchener-Waterloo; Toronto",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 125800,
+      "max": 170100,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "This role has a salary range $125,800 - $170,100 CAD CAD, designed to reflect the progression from learning the ropes to truly excelling."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "Base salary is just one part of a total compensation package that will include equity rewards, annual stipends for health and wellness, retirement savings matching, and an extended health package with fully paid premiums for body and mind."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/jobber/62a5728b-07dd-4877-b175-a87fea5944b1"
+   ]
+  },
+  {
+   "id": "ashby:lightspeedhq:50acfe97-e9f3-4c5a-b507-10d69bd3d621",
+   "company": "Lightspeed Commerce",
+   "title": "Lead Data Analyst, Growth Marketing",
+   "location": "Montreal",
+   "region": "Montreal",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [],
+    "primary": null,
+    "source": null,
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Equity options, because this is your company too"
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/lightspeedhq/50acfe97-e9f3-4c5a-b507-10d69bd3d621"
+   ]
+  },
+  {
+   "id": "ashby:lightspeedhq:dec7d68e-e482-4835-a5ea-fab65faea95a",
+   "company": "Lightspeed Commerce",
+   "title": "Lead Data Analyst, Growth Marketing",
+   "location": "Toronto",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 105000,
+      "max": 120000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base_bonus",
+      "estimated": false,
+      "quote": "We reasonably expect the total compensation for this position to be in the range of $105,000 TO $120,000 CAD."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [],
+     "quote": "- Equity options, because this is your company too"
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/lightspeedhq/dec7d68e-e482-4835-a5ea-fab65faea95a"
+   ]
+  },
+  {
    "id": "ashby:lightspeedhq:1877ac02-4392-4305-bc6a-9a640b657c24",
    "company": "Lightspeed Commerce",
    "title": "Senior Business Analyst, Voice of Customer Insights",
@@ -25640,6 +24588,24 @@
    ]
   },
   {
+   "id": "smartrecruiters:loblawdigital:743999679378276",
+   "company": "Loblaw Digital",
+   "title": "Business Intelligence Developer",
+   "location": "Toronto, ON, CA",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "smartrecruiters"
+   ],
+   "urls": [
+    "https://jobs.smartrecruiters.com/LoblawDigital/743999679378276"
+   ]
+  },
+  {
    "id": "avature:careers.lululemon.com:62191",
    "company": "Lululemon",
    "title": "Supply Chain Project Manager | Contract until October 2027",
@@ -25671,6 +24637,234 @@
    ],
    "urls": [
     "https://careers.lululemon.com/en_US/careers/JobDetail/Supply-Chain-Project-Manager-Contract-until-October-2027/62191"
+   ]
+  },
+  {
+   "id": "greenhouse:lyft:8761492002",
+   "company": "Lyft",
+   "title": "Analytics Lead, Airports",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 102000,
+      "max": 127500,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Toronto, Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": true,
+      "quote": "The expected base pay range for this position in the Toronto area is CAD $102,000 - CAD $127,500, not inclusive of potential equity offering, bonus or benefits."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "The expected base pay range for this position in the Toronto area is CAD $102,000 - CAD $127,500, not inclusive of potential equity offering, bonus or benefits."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://app.careerpuck.com/job-board/lyft/job/8761492002?gh_jid=8761492002"
+   ]
+  },
+  {
+   "id": "greenhouse:lyft:8856440002",
+   "company": "Lyft",
+   "title": "Analytics Lead, Central Market Management",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 102000,
+      "max": 127500,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Toronto, Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": true,
+      "quote": "The expected base pay range for this position in the Toronto area is CAD $102,000 - CAD $127,500, not inclusive of potential equity offering, bonus or benefits."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "The expected base pay range for this position in the Toronto area is CAD $102,000 - CAD $127,500, not inclusive of potential equity offering, bonus or benefits."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://app.careerpuck.com/job-board/lyft/job/8856440002?gh_jid=8856440002"
+   ]
+  },
+  {
+   "id": "greenhouse:lyft:8648040002",
+   "company": "Lyft",
+   "title": "Analytics Lead, SCC",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 96000,
+      "max": 120000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Toronto, Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": true,
+      "quote": "The expected base pay range for this position in the Toronto area is CAD $96,000 - CAD $120,000, not inclusive of potential equity offering, bonus or benefits."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "The expected base pay range for this position in the Toronto area is CAD $96,000 - CAD $120,000, not inclusive of potential equity offering, bonus or benefits."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://app.careerpuck.com/job-board/lyft/job/8648040002?gh_jid=8648040002"
+   ]
+  },
+  {
+   "id": "greenhouse:lyft:8860284002",
+   "company": "Lyft",
+   "title": "Data Analyst, Go-To-Market Sales Insights",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [],
+    "primary": null,
+    "source": null,
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "The expected base pay range for this position in the Torornto area is CAD $102,000 - CAD $!27,500, not inclusive of potential equity offering, bonus or benefits."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://app.careerpuck.com/job-board/lyft/job/8860284002?gh_jid=8860284002"
+   ]
+  },
+  {
+   "id": "greenhouse:lyft:8555335002",
+   "company": "Lyft",
+   "title": "Data Analyst, People Analytics",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 90000,
+      "max": 112500,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Toronto, Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": true,
+      "quote": "The expected base pay range for this position in the Toronto area is CAD $90,000 - CAD $112,500, not inclusive of potential equity offering, bonus or benefits."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "The expected base pay range for this position in the Toronto area is CAD $90,000 - CAD $112,500, not inclusive of potential equity offering, bonus or benefits."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://app.careerpuck.com/job-board/lyft/job/8555335002?gh_jid=8555335002"
+   ]
+  },
+  {
+   "id": "greenhouse:lyft:8643108002",
+   "company": "Lyft",
+   "title": "Senior Financial Data Analyst (Manager)",
+   "location": "Toronto, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 122000,
+      "max": 152000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Toronto, Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": true,
+      "quote": "The expected base pay range for this position in the Toronto area is CAD $122,000 - CAD $152,000, not inclusive of potential equity offering, bonus or benefits."
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "The expected base pay range for this position in the Toronto area is CAD $122,000 - CAD $152,000, not inclusive of potential equity offering, bonus or benefits."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://app.careerpuck.com/job-board/lyft/job/8643108002?gh_jid=8643108002"
    ]
   },
   {
@@ -25962,6 +25156,40 @@
    ]
   },
   {
+   "id": "workday:moneris/Moneris:JR105984",
+   "company": "Moneris",
+   "title": "Business Data Analyst",
+   "location": "Toronto",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 71000,
+      "max": 100000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": true,
+      "quote": "Salary Range: The expected base salary range for this role is $71,000 - $100,000."
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://moneris.wd3.myworkdayjobs.com/en-US/Moneris/job/Toronto/Business-Data-Analyst_JR105984"
+   ]
+  },
+  {
    "id": "workday:moneris/Moneris:JR106035",
    "company": "Moneris",
    "title": "Project Manager - PMO",
@@ -26084,6 +25312,24 @@
    ]
   },
   {
+   "id": "avature:emplois.bnc.ca:35835",
+   "company": "National Bank",
+   "title": "Senior Data Analyst",
+   "location": "Montreal, Quebec",
+   "region": "Montreal",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "avature"
+   ],
+   "urls": [
+    "https://emplois.bnc.ca/en_CA/careers/JobDetail/P4A50-ANALYSTE-SENIOR-DE-LA-DONNEE/35835"
+   ]
+  },
+  {
    "id": "rippling:nesto:ff891f3b-e767-454a-b9aa-436722cde8c8",
    "company": "Nesto",
    "title": "Product Implementation Manager, SaaS Delivery",
@@ -26099,6 +25345,40 @@
    ],
    "urls": [
     "https://ats.rippling.com/nesto/jobs/ff891f3b-e767-454a-b9aa-436722cde8c8"
+   ]
+  },
+  {
+   "id": "phenom:OMEOMECA:JR-8165",
+   "company": "OMERS",
+   "title": "BI & Data Analyst (12 Months Contract)",
+   "location": "Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 72000,
+      "max": 108000,
+      "currency": null,
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": true,
+      "quote": "The expected salary range for this position is $72,000.00 - $108,000.00 per year, prorated based on the term of the contract."
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "phenom"
+   ],
+   "urls": [
+    "https://careers.omers.com/ca/en/job/JR-8165/BI-Data-Analyst-12-Months-Contract"
    ]
   },
   {
@@ -26133,6 +25413,108 @@
    ],
    "urls": [
     "https://careers.omers.com/ca/en/job/JR-8319/Senior-Business-Analyst-Data-Integration-Performance-Platform-12-Month-Contract"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:7561410",
+   "company": "Okta",
+   "title": "Signal & Growth Insights Manager",
+   "location": "Bellevue, Washington; Chicago, Illinois; Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 128000,
+      "max": 192000,
+      "currency": "USD",
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "$128,000 — $192,000 USD"
+     },
+     {
+      "min": 116000,
+      "max": 159500,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "$116,000 — $159,500 CAD"
+     }
+    ],
+    "primary": 1,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "In addition, Okta offers equity (where applicable), bonus, and benefits, including health, dental and vision insurance, 401(k), flexible spending account, and paid leave (including PTO and parental leave) in accordance with our applicable plans and policies."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/7561410?gh_jid=7561410"
+   ]
+  },
+  {
+   "id": "greenhouse:okta:7902204",
+   "company": "Okta",
+   "title": "Success Insights Manager",
+   "location": "Bellevue, Washington; Chicago, Illinois; Toronto, Ontario, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 116000,
+      "max": 174000,
+      "currency": "USD",
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "ote",
+      "estimated": false,
+      "quote": "$116,000 — $174,000 USD"
+     },
+     {
+      "min": 117000,
+      "max": 160600,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "ote",
+      "estimated": false,
+      "quote": "$117,000 — $160,600 CAD"
+     }
+    ],
+    "primary": 1,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "In addition, Okta offers equity (where applicable) and benefits, including health, dental and vision insurance, 401(k), flexible spending account, and paid leave (including PTO and parental leave) in accordance with our applicable plans and policies."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://www.okta.com/company/careers/opportunity/7902204?gh_jid=7902204"
    ]
   },
   {
@@ -26342,6 +25724,54 @@
    ]
   },
   {
+   "id": "ashby:passage:d218da41-3446-4cbb-aa52-6e8f310d2127",
+   "company": "Passage",
+   "title": "Senior Analytics Engineer",
+   "location": "Toronto Ontario",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 150000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "C$100K to C$150K + Offers Equity"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "offered",
+     "amounts": [
+      {
+       "min": 100000,
+       "max": 150000,
+       "unit": "currency",
+       "currency": "CAD",
+       "quote": "C$100K to C$150K + Offers Equity"
+      }
+     ],
+     "quote": "C$100K to C$150K + Offers Equity"
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "ashby"
+   ],
+   "urls": [
+    "https://jobs.ashbyhq.com/passage/d218da41-3446-4cbb-aa52-6e8f310d2127"
+   ]
+  },
+  {
    "id": "jibe:flyporter:5450",
    "company": "Porter Airlines",
    "title": "Business Analyst",
@@ -26357,6 +25787,24 @@
    ],
    "urls": [
     "https://careers.flyporter.com/careers-home/jobs/5450"
+   ]
+  },
+  {
+   "id": "ultipro:PRO5004PROPH:e9299034-b1b1-4b67-ba7e-daac36ea3aca",
+   "company": "Propel Holdings",
+   "title": "Analytics Engineer, Risk",
+   "location": "Toronto, ON, CAN",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "ultipro"
+   ],
+   "urls": [
+    "https://recruiting.ultipro.ca/PRO5004PROPH/JobBoard/385f656b-0bbd-4ae7-b936-f2983728cf6e/OpportunityDetail?opportunityId=e9299034-b1b1-4b67-ba7e-daac36ea3aca"
    ]
   },
   {
@@ -26497,6 +25945,42 @@
    ],
    "urls": [
     "https://jobs.rbc.com/ca/en/job/R-0000178664/Senior-Project-Manager-Regulatory-Risk-Remediation"
+   ]
+  },
+  {
+   "id": "successfactors:jobs.rogers.com:1438700100",
+   "company": "Rogers",
+   "title": "Digital Data Analytics Manager",
+   "location": "Toronto, ON, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "successfactors"
+   ],
+   "urls": [
+    "https://jobs.rogers.com/job/Toronto-Digital-Data-Analytics-Manager-ON/1438700100/"
+   ]
+  },
+  {
+   "id": "successfactors:jobs.rogers.com:1439482400",
+   "company": "Rogers",
+   "title": "Senior Data Analyst",
+   "location": "Toronto, ON, Canada",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "successfactors"
+   ],
+   "urls": [
+    "https://jobs.rogers.com/job/Toronto-Senior-Data-Analyst-ON/1439482400/"
    ]
   },
   {
@@ -26677,6 +26161,42 @@
    ],
    "urls": [
     "https://jobs.scotiabank.com/job/Toronto-Business-Systems-Analyst-with-Equities-ON-M5H1H1/601141017/"
+   ]
+  },
+  {
+   "id": "successfactors:jobs.scotiabank.com:604949917",
+   "company": "Scotiabank",
+   "title": "Data Analyst",
+   "location": "Toronto, ON, Canada, M5H 1H1",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "successfactors"
+   ],
+   "urls": [
+    "https://jobs.scotiabank.com/job/Toronto-Data-Analyst-ON-M5H-1H1/604949917/"
+   ]
+  },
+  {
+   "id": "successfactors:jobs.scotiabank.com:607106317",
+   "company": "Scotiabank",
+   "title": "Data Analyst, Investment Data Solutions",
+   "location": "Toronto, ON, Canada, M5H 0B4",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "successfactors"
+   ],
+   "urls": [
+    "https://jobs.scotiabank.com/job/Toronto-Data-Analyst%2C-Investment-Data-Solutions-ON-M5H-0B4/607106317/"
    ]
   },
   {
@@ -26914,6 +26434,24 @@
    ]
   },
   {
+   "id": "successfactors:jobs.scotiabank.com:607062717",
+   "company": "Scotiabank",
+   "title": "Senior Data Analyst",
+   "location": "Toronto, ON, Canada, M5C2V9",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "successfactors"
+   ],
+   "urls": [
+    "https://jobs.scotiabank.com/job/Toronto-Senior-Data-Analyst-ON-M5C2V9/607062717/"
+   ]
+  },
+  {
    "id": "successfactors:jobs.scotiabank.com:602450117",
    "company": "Scotiabank",
    "title": "Senior Delivery Lead",
@@ -26983,6 +26521,24 @@
    ],
    "urls": [
     "https://jobs.scotiabank.com/job/Toronto-Senior-Delivery-Manager%2C-Capital-Markets-ON-M5H-0B4/603228617/"
+   ]
+  },
+  {
+   "id": "successfactors:jobs.scotiabank.com:604435317",
+   "company": "Scotiabank",
+   "title": "Senior Reporting Analyst, Financial & Regulatory Reporting",
+   "location": "Toronto, ON, Canada, M5J2M4",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T21:56:50+00:00",
+   "sources": [
+    "successfactors"
+   ],
+   "urls": [
+    "https://jobs.scotiabank.com/job/Toronto-Senior-Reporting-Analyst%2C-Financial-&-Regulatory-Reporting-ON-M5J2M4/604435317/"
    ]
   },
   {
@@ -27083,6 +26639,305 @@
    ],
    "urls": [
     "https://jobs.scotiabank.com/job/Toronto-Technical-Business-Analyst-%28xVA-Technology%29-ON-M5H-1H1/606659917/"
+   ]
+  },
+  {
+   "id": "greenhouse:stackadapt:4354888009",
+   "company": "StackAdapt",
+   "title": "Lead Product Data Analyst, Mobile App User Acquisition",
+   "location": "Canada; United States",
+   "region": "Other Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 137500,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "$100,000 — $137,500 CAD"
+     },
+     {
+      "min": 104000,
+      "max": 143000,
+      "currency": "USD",
+      "interval": "year",
+      "label": null,
+      "canada": null,
+      "kind": "base",
+      "estimated": false,
+      "quote": "$104,000 — $143,000 USD"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "Depending on the role, candidates may also be eligible for additional compensation such as annual bonuses, commissions, equity awards, and a comprehensive benefits package."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/stackadapt/jobs/4354888009"
+   ]
+  },
+  {
+   "id": "greenhouse:stackadapt:4297633009",
+   "company": "StackAdapt",
+   "title": "Senior Data Analyst, Business Intelligence",
+   "location": "Canada",
+   "region": "Other Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 100000,
+      "max": 137500,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "$100,000 — $137,500 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text",
+    "equity": {
+     "offered": true,
+     "certainty": "possible",
+     "amounts": [],
+     "quote": "Depending on the role, candidates may also be eligible for additional compensation such as annual bonuses, commissions, equity awards, and a comprehensive benefits package."
+    }
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/stackadapt/jobs/4297633009"
+   ]
+  },
+  {
+   "id": "greenhouse:stay22:4380283009",
+   "company": "Stay22",
+   "title": "Data Analyst - Product & Business Analytics",
+   "location": "Montreal HQ",
+   "region": "Montreal",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://job-boards.greenhouse.io/stay22/jobs/4380283009"
+   ]
+  },
+  {
+   "id": "greenhouse:stripe:5416444",
+   "company": "Stripe",
+   "title": "Data Analyst",
+   "location": "Canada",
+   "region": "Other Canada",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://stripe.com/jobs/search?gh_jid=5416444"
+   ]
+  },
+  {
+   "id": "greenhouse:stripe:8026689",
+   "company": "Stripe",
+   "title": "Internal Audit Data Analytics Lead",
+   "location": "Toronto, New York, San Francisco, Atlanta, Seattle",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "greenhouse"
+   ],
+   "urls": [
+    "https://stripe.com/jobs/search?gh_jid=8026689"
+   ]
+  },
+  {
+   "id": "workday:sunlife/Experienced-Jobs:JR00128480",
+   "company": "Sun Life",
+   "title": "Senior Data Analyst",
+   "location": "Toronto, Ontario; Waterloo, Ontario",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": null,
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://sunlife.wd3.myworkdayjobs.com/en-US/Experienced-Jobs/job/Toronto-Ontario/Senior-Data-Analyst_JR00128480"
+   ]
+  },
+  {
+   "id": "workday:td/TD_Bank_Careers:R_1513657",
+   "company": "TD",
+   "title": "Business Insights Analyst II",
+   "location": "Montréal, Québec; Toronto, Ontario",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 79100,
+      "max": 111700,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "79 100 $/$79,100 - 111 700 $/$111,700 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Montral-Qubec/Business-Insights-Analyst-II_R_1513657"
+   ]
+  },
+  {
+   "id": "workday:td/TD_Bank_Careers:R_1508752",
+   "company": "TD",
+   "title": "Business Insights Analyst II",
+   "location": "Montréal, Québec; Toronto, Ontario; 2828 Laurier Boulevard Insurance, Quebec City, Quebec",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 79100,
+      "max": 111700,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "79 100 $/$79,100 - 111 700 $/$111,700 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Montral-Qubec/Business-Insights-Analyst-II_R_1508752"
+   ]
+  },
+  {
+   "id": "workday:td/TD_Bank_Careers:R_1512744",
+   "company": "TD",
+   "title": "Business Insights Analyst II",
+   "location": "Montréal, Québec; Markham, Ontario; Toronto, Ontario",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 79100,
+      "max": 111700,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "79 100 $/$79,100 - 111 700 $/$111,700 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Montral-Qubec/Business-Insights-Analyst-II_R_1512744"
+   ]
+  },
+  {
+   "id": "workday:td/TD_Bank_Careers:R_1510923",
+   "company": "TD",
+   "title": "Business Insights Analyst II",
+   "location": "Toronto, Ontario; Mississauga, Ontario",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 81600,
+      "max": 115200,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "$81,600 - $115,200 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Business-Insights-Analyst-II_R_1510923"
    ]
   },
   {
@@ -27253,6 +27108,40 @@
    ],
    "urls": [
     "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Project-Delivery-Manager_R_1514804"
+   ]
+  },
+  {
+   "id": "workday:td/TD_Bank_Careers:R_1513261",
+   "company": "TD",
+   "title": "Senior Analyst, Business Intelligence & Insights",
+   "location": "Toronto, Ontario",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 81600,
+      "max": 115200,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "unspecified",
+      "estimated": false,
+      "quote": "$81,600 - $115,200 CAD"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "workday"
+   ],
+   "urls": [
+    "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Senior-Analyst--Business-Intelligence---Insights_R_1513261-1"
    ]
   },
   {
@@ -28139,6 +28028,40 @@
    ],
    "urls": [
     "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=4ed2be93-8bc5-40e2-915f-931884eac404&ccId=19000101_000001&jobId=9201151246800_1&lang=en_CA"
+   ]
+  },
+  {
+   "id": "lever:veeva:29fabe4e-f12a-4120-aed4-ba90f057372e",
+   "company": "Veeva Systems",
+   "title": "Data Analytics Lead - Veeva Ostro",
+   "location": "Canada - Toronto",
+   "region": "GTA",
+   "role_tier": "Other",
+   "role_family": "analytics",
+   "people_mgmt_hint": false,
+   "pay": {
+    "ranges": [
+     {
+      "min": 200000,
+      "max": 300000,
+      "currency": "CAD",
+      "interval": "year",
+      "label": "Canada",
+      "canada": true,
+      "kind": "base",
+      "estimated": false,
+      "quote": "<li><span data-sheets-root=\"1\">Base pay: $200,000 - $300,000 CAD</span></li>"
+     }
+    ],
+    "primary": 0,
+    "source": "text"
+   },
+   "first_seen": "2026-10-16T20:44:08+00:00",
+   "sources": [
+    "lever"
+   ],
+   "urls": [
+    "https://jobs.lever.co/veeva/29fabe4e-f12a-4120-aed4-ba90f057372e"
    ]
   },
   {

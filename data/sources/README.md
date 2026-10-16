@@ -46,112 +46,112 @@ Canada counts are from the last refresh.
 
 | Company | Segment | Job system | Status | Canada roles | Careers site | Notes |
 |---|---|---|---|---|---|---|
-| 1Password | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 46 |  |  |
+| 1Password | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 49 |  |  |
 | Achievers | Canadian SaaS and scale-ups | Lever | ✅ Pulled | 11 |  |  |
 | Acumatica | Enterprise SaaS | SmartRecruiters | ✅ Pulled | 3 |  | Approved by Ayush from discovery |
 | Ada | Canadian AI and deep tech | Greenhouse | ✅ Pulled | 5 | [open](https://www.ada.cx/careers) | Greenhouse slug 'ada18' (board name 'Ada'). ada.cx returns 403 to curl. Canada roles listed as 'Remote - Canada'. |
 | Adobe | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 4 | [open](https://adobe.wd5.myworkdayjobs.com/external_experienced) | locationCountry=a30a87ed25634629aa6c3958aa2b91ea (Canada, 4). Separate site 'external_university' exists for students. |
 | Affirm | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 76 |  |  |
 | Air Canada | Banks, insurers, telcos and large enterprises (Workday-heavy) | Phenom | ✅ Pulled | 0 | [open](https://careers.aircanada.com/ca/en) | Phenom /widgets refineSearch (refNum AIPACICA). Country values uppercase ('CANADA'). |
-| AlayaCare | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 19 |  |  |
-| Amazon | Big tech / US tech with Canadian offices | Amazon Jobs | ✅ Pulled | 433 | [open](https://www.amazon.jobs/en/search?country=CAN) | amazon.jobs search JSON |
-| AMD | Big tech / US tech with Canadian offices | Jibe (iCIMS) | ✅ Pulled | 125 | [open](https://careers.amd.com/careers-home/jobs) | Jibe (iCIMS Jibe) public JSON API: jobs[].data.{title,full_location,country,req_id}; paginate with page=N, limit<=100. Not Workday (amd.wd1 … |
-| American Express | Big tech / US tech with Canadian offices | Oracle Recruiting | ✅ Pulled | 6 | [open](https://careers.americanexpress.com/en/sites/CX_1) | Oracle Recruiting Cloud behind careers.americanexpress.com. location=Canada returned 9 (Toronto/ON). |
+| AlayaCare | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 18 |  |  |
+| Amazon | Big tech / US tech with Canadian offices | Amazon Jobs | ✅ Pulled | 427 | [open](https://www.amazon.jobs/en/search?country=CAN) | amazon.jobs search JSON |
+| AMD | Big tech / US tech with Canadian offices | Jibe (iCIMS) | ✅ Pulled | 122 | [open](https://careers.amd.com/careers-home/jobs) | Jibe (iCIMS Jibe) public JSON API: jobs[].data.{title,full_location,country,req_id}; paginate with page=N, limit<=100. Not Workday (amd.wd1 … |
+| American Express | Big tech / US tech with Canadian offices | Oracle Recruiting | ✅ Pulled | 8 | [open](https://careers.americanexpress.com/en/sites/CX_1) | Oracle Recruiting Cloud behind careers.americanexpress.com. location=Canada returned 9 (Toronto/ON). |
 | AppDirect | Enterprise SaaS | Greenhouse | ✅ Pulled | 52 | [open](https://careers.inovia.vc/companies/appdirect) | Approved by Ayush from discovery |
-| Apple | Big tech / US tech with Canadian offices | Apple Jobs | ✅ Pulled | 31 | [open](https://jobs.apple.com/en-ca/search?location=canada-CANC) | Search page embeds job data; mostly retail roles in Canada |
+| Apple | Big tech / US tech with Canadian offices | Apple Jobs | ✅ Pulled | 35 | [open](https://jobs.apple.com/en-ca/search?location=canada-CANC) | Search page embeds job data; mostly retail roles in Canada |
 | ApplyBoard | Canadian SaaS and scale-ups | Workday | ✅ Pulled | 3 | [open](https://www.applyboard.com/careers) | Linked from careers page. locationCountry facet Canada id a30a87ed25634629aa6c3958aa2b91ea (3 jobs; most roles are India/international recru… |
 | Arctic Wolf | Canadian SaaS and scale-ups | Workday | ✅ Pulled | 3 | [open](https://arcticwolf.com/company/careers/) | No country facet; use 'locations' facet ids: Remote, Canada f6cfbd603ca11001f6248a5f81c80000 (10), Waterloo, ON, CAN f6cfbd603ca11001f6242e0… |
 | Arista Networks | Telecom and networking | SmartRecruiters | ✅ Pulled | 24 |  | Approved by Ayush from discovery |
 | Aritzia | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 214 | [open](https://aritzia.wd3.myworkdayjobs.com/External) | Canada facet Location_Country a30a87ed25634629aa6c3958aa2b91ea. Mostly retail; support office = location 'Vancouver, BC, Canada (SO - Vancou… |
 | Armilla AI | Canadian AI and deep tech | Rippling | ✅ Pulled | 3 | [open](https://www.armilla.ai/careers) | Rippling ATS embed (data-job-board-id='armilla-ai' on Webflow careers page). JSON array; workLocation.label 'Toronto, Canada'. |
-| Ashby | Enterprise SaaS | Ashby | ✅ Pulled | 23 |  | Approved by Ayush from discovery |
+| Ashby | Enterprise SaaS | Ashby | ✅ Pulled | 24 |  | Approved by Ayush from discovery |
 | Assent | Canadian SaaS and scale-ups | SmartRecruiters | ✅ Pulled | 7 |  |  |
 | Atlassian | Big tech / US tech with Canadian offices | Atlassian Careers | ✅ Pulled | 14 | [open](https://www.atlassian.com/company/careers/all-jobs) | Single GET returns all listings as a JSON array (title, locations[], category, overview HTML, portalJobPost.portalUrl to iCIMS globalcareers… |
-| Autodesk | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 111 | [open](https://autodesk.wd1.myworkdayjobs.com/Ext) | locationCountry=a30a87ed25634629aa6c3958aa2b91ea (Canada, 112, includes many 'Offsite/Home' province entries). Toronto University Ave 18, Mo… |
+| Autodesk | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 112 | [open](https://autodesk.wd1.myworkdayjobs.com/Ext) | locationCountry=a30a87ed25634629aa6c3958aa2b91ea (Canada, 112, includes many 'Offsite/Home' province entries). Toronto University Ave 18, Mo… |
 | Autoverify | Canadian SaaS and scale-ups | Careers page (read by Claude) | ✅ Pulled | 8 | [open](https://www.autoverify.com/careers/) | No feed: Claude reads the careers page each refresh (D-043). Careers page links to Collage ATS board secure.collage.co/jobs/autoverify (HTML… |
 | Ava Industries | Canadian SaaS and scale-ups | BambooHR | ✅ Pulled | 1 | [open](https://www.avaindustries.ca/careers) | Careers page embeds BambooHR (avaindustries.bamboohr.com). JSON list currently has only a 'General Interest Application' (Canada). |
 | Axonify | Canadian SaaS and scale-ups | Gem | ✅ Pulled | 6 | [open](https://www.axonify.com/careers/) | Careers page links jobs.gem.com/axonify. Gem public job board API, Greenhouse-like schema (title, location.name, offices[].location.name, ab… |
 | Beacon Software | Canadian AI and deep tech | Ashby | ✅ Pulled | 24 |  |  |
-| Bell | Banks, insurers, telcos and large enterprises (Workday-heavy) | Phenom | ✅ Pulled | 92 | [open](https://jobs.bell.ca/ca/en) | Phenom /widgets refineSearch (refNum BECACA). All Canada. Count seems low vs Bell's size; may exclude some brands/union roles. |
+| Bell | Banks, insurers, telcos and large enterprises (Workday-heavy) | Phenom | ✅ Pulled | 97 | [open](https://jobs.bell.ca/ca/en) | Phenom /widgets refineSearch (refNum BECACA). All Canada. Count seems low vs Bell's size; may exclude some brands/union roles. |
 | BenchSci | Canadian AI and deep tech | Lever | ✅ Pulled | 0 | [open](https://jobs.lever.co/benchsci) | Board exists but had 0 openings on 2026-10-15; pulled so new roles show up. Lever board 'benchsci' (linked from benchsci.com/careers) is liv… |
 | Benevity | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 18 |  | Approved by Ayush from discovery |
 | BlackBerry | Canadian SaaS and scale-ups | Workday | ✅ Pulled | 14 | [open](https://www.blackberry.com/us/en/company/careers) | Two sites on same tenant: BlackBerry (24 total, 15 Canada) and QNX (19 total, 12 Canada). 'Country' facet Canada id a30a87ed25634629aa6c3958… |
 | BlackBerry | Canadian SaaS and scale-ups | Workday | ✅ Pulled | 11 | [open](https://www.blackberry.com/us/en/company/careers) | second site on the same tenant (QNX) |
-| Block (Square / Cash App) | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 16 |  |  |
-| Blue J | Canadian AI and deep tech | Gem | ✅ Pulled | 16 | [open](https://www.bluej.com/careers) | Gem ATS (jobs.gem.com/blue-j). Public Gem job board API returns a JSON array; location.name e.g. 'Toronto, Canada', 'Ontario, Canada', 'Cana… |
-| BMO | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 520 | [open](https://bmo.wd3.myworkdayjobs.com/External) | Canada facet: Country id a30a87ed25634629aa6c3958aa2b91ea. |
+| Block (Square / Cash App) | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 14 |  |  |
+| Blue J | Canadian AI and deep tech | Gem | ✅ Pulled | 17 | [open](https://www.bluej.com/careers) | Gem ATS (jobs.gem.com/blue-j). Public Gem job board API returns a JSON array; location.name e.g. 'Toronto, Canada', 'Ontario, Canada', 'Cana… |
+| BMO | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 564 | [open](https://bmo.wd3.myworkdayjobs.com/External) | Canada facet: Country id a30a87ed25634629aa6c3958aa2b91ea. |
 | Borealis AI (RBC) | Canadian AI and deep tech | Via parent company | ✋ Paste only | 8 | [open](https://rbcborealis.com/careers/) | Jobs are posted on RBC's site and picked up there. Now 'RBC Borealis'; careers page links jobs.rbc.com/ca/en/rbc-borealis (Phenom front-end … |
 | Borrowell | Canadian fintech and payments | Workable | ✅ Pulled | 3 | [open](https://borrowell.com/careers) | Careers page links apply.workable.com/borrowell. Workable API returned Cloudflare 429 (error 1015 rate limit) from this proxy during researc… |
 | Botpress | AI applications | Workable | ✅ Pulled | 8 | [open](https://botpress.com/careers) | Careers page embeds Workable; widget API apply.workable.com/api/v1/widget/accounts/botpress returned 8 jobs, all Montreal, Canada (EN+FR dup… |
-| Canada Life | Banks, insurers, telcos and large enterprises (Workday-heavy) | SuccessFactors | ✅ Pulled | 95 | [open](https://jobs.canadalife.com/go/All-Jobs/9170201/) | SAP SuccessFactors RMK (company thegreatweP2). /googlefeed.xml returns full RSS (94 items incl. EN/FR duplicates; HTML search says 71 unique… |
-| Canadian Tire (Digital) | Canadian SaaS and scale-ups | Workday | ✅ Pulled | 121 | [open](https://canadiantirecorporation.wd3.myworkdayjobs.com/Enterprise_External_Careers_Site) | Corporate sites (corp.canadiantire.ca) are bot-blocked (403); site name found via the tenant's robots.txt sitemap. Covers CTC, Sport Chek, M… |
+| Canada Life | Banks, insurers, telcos and large enterprises (Workday-heavy) | SuccessFactors | ✅ Pulled | 111 | [open](https://jobs.canadalife.com/go/All-Jobs/9170201/) | SAP SuccessFactors RMK (company thegreatweP2). /googlefeed.xml returns full RSS (94 items incl. EN/FR duplicates; HTML search says 71 unique… |
+| Canadian Tire (Digital) | Canadian SaaS and scale-ups | Workday | ✅ Pulled | 130 | [open](https://canadiantirecorporation.wd3.myworkdayjobs.com/Enterprise_External_Careers_Site) | Corporate sites (corp.canadiantire.ca) are bot-blocked (403); site name found via the tenant's robots.txt sitemap. Covers CTC, Sport Chek, M… |
 | Capital One | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 54 | [open](https://capitalone.wd12.myworkdayjobs.com/Capital_One) | No Canada location facet in top facets; searchText 'Toronto' returns 56 (keyword match, may include non-Toronto). Filter on locationsText in… |
 | Caseware | Canadian SaaS and scale-ups | Lever | ✅ Pulled | 26 |  | Approved by Ayush from discovery |
-| Celestica | Canadian SaaS and scale-ups | SuccessFactors | ✅ Pulled | 110 | [open](https://careers.celestica.com/) | SAP SuccessFactors Recruiting Marketing (RMK) site. HTML search results 25/page via startrow; 'Results 1 – 25 of N'. RSS feed exists but ret… |
-| Cerebras | AI infrastructure | Ashby | ✅ Pulled | 23 |  | Approved by Ayush from discovery |
+| Celestica | Canadian SaaS and scale-ups | SuccessFactors | ✅ Pulled | 112 | [open](https://careers.celestica.com/) | SAP SuccessFactors Recruiting Marketing (RMK) site. HTML search results 25/page via startrow; 'Results 1 – 25 of N'. RSS feed exists but ret… |
+| Cerebras | AI infrastructure | Ashby | ✅ Pulled | 21 |  | Approved by Ayush from discovery |
 | Certn | Trust and safety | Careers page (read by Claude) | ✅ Pulled | 3 | [open](https://certn.co/careers/) | No feed: certn.co/careers loads widget certn.onrender.com/widget.js which reads this JSON list (title, location, comp, url). Jobs are on the… |
-| CGI | Canadian SaaS and scale-ups | njoyn | ✅ Pulled | 474 | [open](https://www.cgi.com/en/careers) | Njoyn (Cyberimpact) xweb job listing, HTML table rows (JobID, title, category, city, country), 50/page, 'Page X of N'. Country filter needs … |
+| CGI | Canadian SaaS and scale-ups | njoyn | ✅ Pulled | 50 | [open](https://www.cgi.com/en/careers) | Njoyn (Cyberimpact) xweb job listing, HTML table rows (JobID, title, category, city, country), 50/page, 'Page X of N'. Country filter needs … |
 | ChargeLab | Canadian SaaS and scale-ups | SmartRecruiters | ✅ Pulled | 2 |  |  |
 | Chimoney | Canadian fintech and payments | html_only | ✋ Paste only |  | [open](https://chimoney.io) | No machine-readable feed. No careers page (chimoney.io/careers 404) and no ATS board found. Jobs posted on Wellfound (no public API; mostly … |
-| CIBC | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 368 | [open](https://cibc.wd3.myworkdayjobs.com/search) | Canada facet: Country id a30a87ed25634629aa6c3958aa2b91ea. |
-| Cisco | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 14 | [open](https://cisco.wd5.myworkdayjobs.com/Cisco_Careers) | No country facet; Canada count is sum of city location facets (Toronto 4, Ottawa 6, Kanata 9, Vancouver 8, etc.). Toronto id 026fa05becb0100… |
+| CIBC | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 410 | [open](https://cibc.wd3.myworkdayjobs.com/search) | Canada facet: Country id a30a87ed25634629aa6c3958aa2b91ea. |
+| Cisco | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 15 | [open](https://cisco.wd5.myworkdayjobs.com/Cisco_Careers) | No country facet; Canada count is sum of city location facets (Toronto 4, Ottawa 6, Kanata 9, Vancouver 8, etc.). Toronto id 026fa05becb0100… |
 | Clearco | Canadian fintech and payments | Ashby | ✅ Pulled | 6 |  |  |
-| Clio | Canadian SaaS and scale-ups | Workday | ✅ Pulled | 19 | [open](https://www.clio.com/about/careers/) | Site name found in the Workday tenant's robots.txt. clio.com is behind a Cloudflare JS challenge (403 to curl). Job URLs are clio.com/about/… |
+| Clio | Canadian SaaS and scale-ups | Workday | ✅ Pulled | 20 | [open](https://www.clio.com/about/careers/) | Site name found in the Workday tenant's robots.txt. clio.com is behind a Cloudflare JS challenge (403 to curl). Job URLs are clio.com/about/… |
 | Cloudflare | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 0 |  |  |
 | Clutch | Consumer tech and marketplaces | Greenhouse | ✅ Pulled | 80 | [open](https://jobs.realventures.com/companies/clutch-canada-2) | Approved by Ayush from discovery |
-| CN | Banks, insurers, telcos and large enterprises (Workday-heavy) | SuccessFactors | ✅ Pulled | 60 | [open](https://careers.cn.ca) | SuccessFactors RMK new-style JSON search API works here (totalJobs, jobSearchResult[], 10/page via pageNumber). Mostly Canada plus some US. |
-| Cohere | Canadian AI and deep tech | Ashby | ✅ Pulled | 50 |  |  |
-| Coinbase | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 9 |  |  |
+| CN | Banks, insurers, telcos and large enterprises (Workday-heavy) | SuccessFactors | ✅ Pulled | 66 | [open](https://careers.cn.ca) | SuccessFactors RMK new-style JSON search API works here (totalJobs, jobSearchResult[], 10/page via pageNumber). Mostly Canada plus some US. |
+| Cohere | Canadian AI and deep tech | Ashby | ✅ Pulled | 49 |  |  |
+| Coinbase | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 7 |  |  |
 | Constellation Software | Canadian SaaS and scale-ups | none | ✋ Paste only |  | [open](https://www.csisoftware.com/) | No machine-readable feed. Holding company: csisoftware.com has no careers page (/careers 404; nav only has acquisition criteria, IR, operati… |
-| Coursera | Consumer tech and marketplaces | Greenhouse | ✅ Pulled | 5 |  | Approved by Ayush from discovery |
-| Coveo | Canadian AI and deep tech | Coveo Careers | ✅ Pulled | 41 | [open](https://www.coveo.com/en/company/careers/open-positions) | Coveo dogfoods its own search (Coveo for Sitecore REST proxy, no token needed). Jobs are synced from Greenhouse (z95xname = Greenhouse job i… |
-| CPP Investments | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 36 | [open](https://cppib.wd10.myworkdayjobs.com/CPPInvestments) | cppinvestments.com is bot-protected (202 challenge); tenant/site found by probing. Canada facet locationMainGroup>locationCountry a30a87ed25… |
+| Coursera | Consumer tech and marketplaces | Greenhouse | ✅ Pulled | 4 |  | Approved by Ayush from discovery |
+| Coveo | Canadian AI and deep tech | Coveo Careers | ✅ Pulled | 42 | [open](https://www.coveo.com/en/company/careers/open-positions) | Coveo dogfoods its own search (Coveo for Sitecore REST proxy, no token needed). Jobs are synced from Greenhouse (z95xname = Greenhouse job i… |
+| CPP Investments | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 37 | [open](https://cppib.wd10.myworkdayjobs.com/CPPInvestments) | cppinvestments.com is bot-protected (202 challenge); tenant/site found by probing. Canada facet locationMainGroup>locationCountry a30a87ed25… |
 | CyberQP | Canadian SaaS and scale-ups | none | ✋ Paste only |  | [open](https://www.cyberqp.ai/about#careers) | No machine-readable feed. Rebranded to cyberqp.ai. Careers section has no job board, only careers@cyberqp.com email. No ATS found (bamboohr/… |
-| D2L | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 8 |  |  |
+| D2L | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 10 |  |  |
 | Dapper Labs | Canadian SaaS and scale-ups | none | ✋ Paste only |  | [open](https://www.dapperlabs.com/careers) | No machine-readable feed. Careers page explicitly says 'We don't use a portal' - apply by emailing careers@dapperlabs.com. No job listings o… |
 | Databricks | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 21 |  |  |
 | Dayforce (Ceridian) | Canadian SaaS and scale-ups | Dayforce | ✋ Paste only |  | [open](https://www.dayforce.com/who-we-are/careers) | Site blocks automated visitors (checked 2026-10-15); paste roles from LinkedIn. Careers page (dayforce.com/who-we-are/careers) links jobs.da… |
 | Deep Genomics | Canadian AI and deep tech | Lever | ✅ Pulled | 1 |  |  |
 | Definity | Banks, insurers, telcos and large enterprises (Workday-heavy) | teamtailor | ✋ Paste only |  | [open](https://careers.definityfinancial.com/jobs) | Site blocks automated visitors (checked 2026-10-15); paste roles from LinkedIn. Job URLs look like Teamtailor (/jobs/{id}-{slug}, e.g. 12710… |
-| Desjardins | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 48 | [open](https://desjardins.wd10.myworkdayjobs.com/en-US/Desjardins) | Linked from desjardins.com/en/careers. No country facet exposed; effectively all Canada (mostly Quebec, many French-language postings). |
-| Dialogue | Canadian SaaS and scale-ups | Rippling | ✅ Pulled | 55 | [open](https://www.dialogue.co/en/careers) | Rippling ATS embed (data-job-board-id=dialogue-en). v1 returns flat list of all jobs; v2 is paginated (pageSize 20) with structured location… |
+| Desjardins | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 46 | [open](https://desjardins.wd10.myworkdayjobs.com/en-US/Desjardins) | Linked from desjardins.com/en/careers. No country facet exposed; effectively all Canada (mostly Quebec, many French-language postings). |
+| Dialogue | Canadian SaaS and scale-ups | Rippling | ✅ Pulled | 57 | [open](https://www.dialogue.co/en/careers) | Rippling ATS embed (data-job-board-id=dialogue-en). v1 returns flat list of all jobs; v2 is paginated (pageSize 20) with structured location… |
 | Digitail | Canadian SaaS and scale-ups | Careers page (read by Claude) | ✅ Pulled | 2 | [open](https://digitail.com/careers/) | No feed: Claude reads the careers page each refresh (D-043). Careers page links Factorial HR job page digitail.factorialhr.com (server-rende… |
 | Docebo | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 25 |  | Approved by Ayush from discovery |
 | Dominion Dynamics | Canadian AI and deep tech | Ashby | ✅ Pulled | 17 | [open](https://dominion-dynamics.com) | Ashby slug has a space: 'Dominion Dynamics' (URL-encode as Dominion%20Dynamics); found via Georgian portfolio job board. Main site dominiond… |
-| DoorDash | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 39 | [open](https://careersatdoordash.com/) | Canadian roles live on separate Greenhouse board 'doordashcanada' (37 jobs, >=25 with Canada/Toronto in location). 'doordashusa' (458) and '… |
+| DoorDash | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 40 | [open](https://careersatdoordash.com/) | Canadian roles live on separate Greenhouse board 'doordashcanada' (37 jobs, >=25 with Canada/Toronto in location). 'doordashusa' (458) and '… |
 | Dye & Durham | Canadian fintech and payments | Dayforce | ✅ Pulled | 12 | [open](https://careers.dyedurham.com/) | careers.dyedurham.com links Dayforce portal jobs.dayforcehcm.com/en-GB/dyedurham/CANDIDATEPORTAL. Same cookie + CSRF flow as eSentire; filte… |
 | Ecobee (Generac) | Canadian SaaS and scale-ups | Workday | ✅ Pulled | 11 | [open](https://www.ecobee.com/en-ca/careers/) | ecobee careers redirect to careers.generac.com/en/brands/ecobee (Cloudflare challenge, 403 to curl); jobs live in Generac's Workday 'Externa… |
-| Electronic Arts | Big tech / US tech with Canadian offices | Avature | ✅ Pulled | 168 | [open](https://jobs.ea.com/en_US/careers) | Avature ATS (not Workday). RSS feed works but returns only the latest 20 items (query params ignored). Full list needs HTML paging of Search… |
-| Element (Workleap) | Canadian AI and deep tech | Greenhouse | ✅ Pulled | 5 | [open](https://workleap.com/careers) | Element (now Workleap, formerly GSoft) uses Greenhouse slug 'workleap'. Only 5 open roles, all Canada (Montreal/remote). |
+| Electronic Arts | Big tech / US tech with Canadian offices | Avature | ✅ Pulled | 174 | [open](https://jobs.ea.com/en_US/careers) | Avature ATS (not Workday). RSS feed works but returns only the latest 20 items (query params ignored). Full list needs HTML paging of Search… |
+| Element (Workleap) | Canadian AI and deep tech | Greenhouse | ✅ Pulled | 6 | [open](https://workleap.com/careers) | Element (now Workleap, formerly GSoft) uses Greenhouse slug 'workleap'. Only 5 open roles, all Canada (Montreal/remote). |
 | Encircle | Canadian SaaS and scale-ups | BambooHR | ✅ Pulled | 3 | [open](https://www.encircleapp.com/careers) | BambooHR subdomain 'encircleapp' (careers page 404s; found by probing). atsLocation.country='Canada' on all 3. |
-| Epic Games | Consumer tech and marketplaces | Greenhouse | ✅ Pulled | 24 |  | Approved by Ayush from discovery |
-| EQ Bank | Canadian fintech and payments | Lever | ✅ Pulled | 84 |  |  |
-| Ericsson | Telecom and networking | Eightfold | ✅ Pulled | 30 | [open](https://jobs.ericsson.com/careers) | Eightfold PCSX /api/pcsx/search (browser UA). location=Canada count 30 (Ottawa, Toronto, Mississauga); global 564. ericsson.com returns 403. |
+| Epic Games | Consumer tech and marketplaces | Greenhouse | ✅ Pulled | 21 |  | Approved by Ayush from discovery |
+| EQ Bank | Canadian fintech and payments | Lever | ✅ Pulled | 85 |  |  |
+| Ericsson | Telecom and networking | Eightfold | ✅ Pulled | 29 | [open](https://jobs.ericsson.com/careers) | Eightfold PCSX /api/pcsx/search (browser UA). location=Canada count 30 (Ottawa, Toronto, Mississauga); global 564. ericsson.com returns 403. |
 | eSentire | Canadian SaaS and scale-ups | Dayforce | ✅ Pulled | 9 | [open](https://www.esentire.com/company/careers) | Dayforce Candidate Portal (Next.js). Needs session: GET https://jobs.dayforcehcm.com/en-US/esentire/CANDIDATEPORTAL (cookie jar), GET /api/a… |
 | EvenUp | AI applications | Careers page (read by Claude) | ✅ Pulled | 27 | [open](https://www.evenuplaw.com/careers) | Hosted Ashby board works but public posting API returns 404, so the ashby adapter can't be used. Hosted-board GraphQL (jobs.ashbyhq.com/api/… |
 | Expedia Group | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 4 | [open](https://expedia.wd108.myworkdayjobs.com/search) | Workday on wd108. Canada location facets: Vancouver c553432013ba103bbc5a5b73ca3b4f39 (3), Montreal c553432013ba103bbc5865be3e4f4d99 (4). |
 | Fable | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 0 |  |  |
-| Faire | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 18 |  |  |
+| Faire | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 17 |  |  |
 | Fairly AI | Canadian AI and deep tech | none | ✋ Paste only |  | [open](https://www.fairly.ai) | No machine-readable feed. fairly.ai/careers 404; no ATS link on homepage; no greenhouse/lever/ashby/workable/gem/rippling/bamboohr/recruitee… |
 | Fellow | AI applications | Greenhouse | ✅ Pulled | 0 | [open](https://careers.inovia.vc/companies/fellow-2-842f8800-77a3-4e17-a03e-fdba3aeea256) | Approved by Ayush from discovery |
 | Field Effect | Canadian SaaS and scale-ups | Dayforce | ✅ Pulled | 3 | [open](https://fieldeffect.com/careers) | Dayforce Candidate Portal; same cookie+CSRF flow as eSentire. All 3 roles in Canada (incl. Director of Product Marketing). |
 | Fintel Connect | Canadian fintech and payments | BambooHR | ✅ Pulled | 2 | [open](https://fintelconnect.com/careers) | BambooHR subdomain 'fintelconnect' (site returns 403 to curl; found by probing). All roles Vancouver, incl. Head of Product. |
 | Flare | Canadian SaaS and scale-ups | BambooHR | ✅ Pulled | 9 | [open](https://flare.io/company/careers) | Careers page links flare.bamboohr.com. GET /careers/list with Accept: application/json returns result[] with location.city/state (Canadian r… |
-| Flipp | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 11 |  |  |
+| Flipp | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 8 |  |  |
 | Float | Canadian fintech and payments | Ashby | ✅ Pulled | 21 |  |  |
-| Ford (Canada R&I) | Big tech / US tech with Canadian offices | Oracle Recruiting | ✅ Pulled | 32 | [open](https://efds.fa.em5.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1) | corporate.ford.com is bot-blocked (403) but Oracle REST API is open. location=Canada gives 30 (mostly Oakville plant; Ottawa R&I roles prese… |
-| Fortinet | Cybersecurity | Oracle Recruiting | ✅ Pulled | 132 | [open](https://www.fortinet.com/corporate/careers) | Careers page links Oracle CX_2001. TotalJobsCount 1020; location=Canada 132 (Burnaby majority, Ottawa, Toronto, Montreal, Calgary). Radius s… |
+| Ford (Canada R&I) | Big tech / US tech with Canadian offices | Oracle Recruiting | ✅ Pulled | 29 | [open](https://efds.fa.em5.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1) | corporate.ford.com is bot-blocked (403) but Oracle REST API is open. location=Canada gives 30 (mostly Oakville plant; Ottawa R&I roles prese… |
+| Fortinet | Cybersecurity | Oracle Recruiting | ✅ Pulled | 130 | [open](https://www.fortinet.com/corporate/careers) | Careers page links Oracle CX_2001. TotalJobsCount 1020; location=Canada 132 (Burnaby majority, Ottawa, Toronto, Montreal, Calgary). Radius s… |
 | FreshBooks | Canadian SaaS and scale-ups | Gem | ✅ Pulled | 2 | [open](https://www.freshbooks.com/careers) | Careers page links jobs.gem.com/freshbooks. Gem public job board API (Greenhouse-like schema); location may be empty, check offices[]. Some … |
 | FriedmannAI | Canadian fintech and payments | none | ✋ Paste only |  | [open](https://www.friedmann.ai) | No machine-readable feed. AI financial-planning SaaS for Canadian advisors (friedmann.ai). No careers page (careers path redirects to homepa… |
 | Fullscript | Canadian SaaS and scale-ups | Lever | ✅ Pulled | 11 |  |  |
-| General Motors (Canadian Technical Centre) | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 42 | [open](https://generalmotors.wd5.myworkdayjobs.com/Careers_GM) | Location_Country=a30a87ed25634629aa6c3958aa2b91ea (Canada 42); Markham 36, Oshawa 20 (multi-location). |
+| General Motors (Canadian Technical Centre) | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 41 | [open](https://generalmotors.wd5.myworkdayjobs.com/Careers_GM) | Location_Country=a30a87ed25634629aa6c3958aa2b91ea (Canada 42); Markham 36, Oshawa 20 (multi-location). |
 | GitLab | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 73 |  |  |
 | Glean | Canadian AI and deep tech | SmartRecruiters | ✅ Pulled | 0 |  |  |
 | Google | Big tech / US tech with Canadian offices | Google Careers | ✅ Pulled | 69 | [open](https://www.google.com/about/careers/applications/jobs/results?location=Canada) | Careers page embeds job data; parsed from the page |
 | Greenhouse | Enterprise SaaS | Greenhouse | ✅ Pulled | 3 |  | Approved by Ayush from discovery |
 | Guidepoint | Information services | Greenhouse | ✅ Pulled | 4 | [open](https://job-boards.greenhouse.io/guidepoint/jobs/8402652002) | Approved by Ayush from discovery |
 | HeyGen | AI applications | Greenhouse | ✅ Pulled | 9 |  | Approved by Ayush from discovery |
-| Hootsuite | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 1 |  |  |
+| Hootsuite | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 0 |  |  |
 | Hopper | Canadian AI and deep tech | Ashby | ✅ Pulled | 6 |  |  |
 | HostPapa | Canadian SaaS and scale-ups | JazzHR | ✅ Pulled | 1 | [open](https://www.hostpapa.ca/careers/) | JazzHR XML feed. hostpapa.ca blocks curl (403). JazzHR board 'HostPapa, Inc. - Career Page' at hostpapa.applytojob.com (found by probing); s… |
 | Hydro One | Banks, insurers, telcos and large enterprises (Workday-heavy) | SuccessFactors | ✅ Pulled | 33 | [open](https://jobs.hydroone.com) | SuccessFactors RMK; /sitemap.xml is a full RSS feed. JSON v1 API errors. All Ontario. |
@@ -160,58 +160,58 @@ Canada counts are from the last refresh.
 | Indigo | Banks, insurers, telcos and large enterprises (Workday-heavy) | Greenhouse | ✅ Pulled | 0 |  |  |
 | Info-Tech Research Group | Canadian SaaS and scale-ups | UKG Pro | ✅ Pulled | 34 | [open](https://www.infotech.com/about/careers) | UKG Pro (UltiPro) Recruiting board linked from careers page. No auth needed. Response: totalCount, opportunities[].Locations[].Address.Count… |
 | Instacart | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 49 |  |  |
-| Intact | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 49 | [open](https://careers.intactfc.com/jobs) | careers.intactfc.com is a Paradox front-end; its job pages apply via intactfc.wd3.myworkdayjobs.com/intactfc. No country facet; all sampled … |
-| Intel | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 7 | [open](https://intel.wd1.myworkdayjobs.com/External) | Only Canada facet visible: locations 'Canada, Toronto' id 1e4a4eb3adf1019f4237e975bf81b3ce (8). |
+| Intact | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 52 | [open](https://careers.intactfc.com/jobs) | careers.intactfc.com is a Paradox front-end; its job pages apply via intactfc.wd3.myworkdayjobs.com/intactfc. No country facet; all sampled … |
+| Intel | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 8 | [open](https://intel.wd1.myworkdayjobs.com/External) | Only Canada facet visible: locations 'Canada, Toronto' id 1e4a4eb3adf1019f4237e975bf81b3ce (8). |
 | Interac | Canadian fintech and payments | Workday | ✅ Pulled | 69 | [open](https://www.interac.ca/en/company/careers/careers-at-interac/) | Workday; no Canada country facet returned (single-country employer), assume all Canadian (Toronto). |
-| Intuit | Big tech / US tech with Canadian offices | TalentBrew | ✅ Pulled | 18 | [open](https://jobs.intuit.com/search-jobs/Canada) | Radancy TalentBrew front end (company 27595); ATS is Avature (intuit.avature.net). Endpoint returns JSON whose 'results' field is HTML: pars… |
-| Jane App | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 23 |  | verified 2026-10-14: board lists Canadian roles |
-| Jobber | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 39 |  | Approved by Ayush from discovery |
+| Intuit | Big tech / US tech with Canadian offices | TalentBrew | ✅ Pulled | 17 | [open](https://jobs.intuit.com/search-jobs/Canada) | Radancy TalentBrew front end (company 27595); ATS is Avature (intuit.avature.net). Endpoint returns JSON whose 'results' field is HTML: pars… |
+| Jane App | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 20 |  | verified 2026-10-14: board lists Canadian roles |
+| Jobber | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 40 |  | Approved by Ayush from discovery |
 | Karoo | Canadian AI and deep tech | none | ✋ Paste only |  | [open](https://www.karoo.ca) | No machine-readable feed. YC W25 fintech (AI lending), Toronto, team of 3. Website is karoo.ca (karoo.ai is a parked lander); /careers 404; … |
 | Kijiji (Adevinta) | Canadian SaaS and scale-ups | unknown | ✋ Paste only |  | [open](https://adevinta.com/careers/jobs/) | No machine-readable feed. kijiji.ca has no careers page (404). Parent Adevinta's WordPress job board (adevinta.com/wp-json/wp/v2/job, admin-… |
-| Kinaxis | Canadian SaaS and scale-ups | iCIMS | ✅ Pulled | 51 | [open](https://www.kinaxis.com/en/careers) | kinaxis.com/en/open-positions redirects to iCIMS. No JSON API; parse HTML search pages (pr=0..N, 'Page 1 of 3'), job links jobs/{id}/{slug}/… |
+| Kinaxis | Canadian SaaS and scale-ups | iCIMS | ✅ Pulled | 52 | [open](https://www.kinaxis.com/en/careers) | kinaxis.com/en/open-positions redirects to iCIMS. No JSON API; parse HTML search pages (pr=0..N, 'Page 1 of 3'), job links jobs/{id}/{slug}/… |
 | Kira (Litera) | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 0 |  |  |
-| Klue | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 9 |  |  |
-| KOHO | Canadian fintech and payments | Ashby | ✅ Pulled | 7 |  |  |
-| Later | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 24 |  |  |
+| Klue | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 8 |  |  |
+| KOHO | Canadian fintech and payments | Ashby | ✅ Pulled | 6 |  |  |
+| Later | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 23 |  |  |
 | Layer 6 (TD) | Canadian AI and deep tech | Via parent company | ✋ Paste only | 15 | [open](https://layer6.ai/careers/) | Jobs are posted on TD's site and picked up there. TD Bank Workday (all TD: 1676 total, 926 Canada). No Layer 6 facet; searchText 'Layer 6' g… |
-| League | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 6 | [open](https://league.com/careers) | Greenhouse board slug 'leagueinc' (found by slug probing; league.com blocks curl with 403). 9 of 11 in Toronto/Canada (one 'Canada/US/UK'). |
+| League | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 4 | [open](https://league.com/careers) | Greenhouse board slug 'leagueinc' (found by slug probing; league.com blocks curl with 403). 9 of 11 in Toronto/Canada (one 'Canada/US/UK'). |
 | Legora | Big tech / US tech with Canadian offices | Ashby | ✅ Pulled | 9 |  |  |
 | LG AI Research | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 0 |  |  |
-| Lightspeed Commerce | Canadian fintech and payments | Ashby | ✅ Pulled | 73 | [open](https://www.lightspeedhq.com/careers/) | Ashby slug 'lightspeedhq' (slug 'lightspeed' is a different org with 5 jobs). Canada: Montreal 45, Toronto 18, Remote in Canada 4, Ottawa 3,… |
+| Lightspeed Commerce | Canadian fintech and payments | Ashby | ✅ Pulled | 75 | [open](https://www.lightspeedhq.com/careers/) | Ashby slug 'lightspeedhq' (slug 'lightspeed' is a different org with 5 jobs). Canada: Montreal 45, Toronto 18, Remote in Canada 4, Ottawa 3,… |
 | Loblaw Digital | Canadian SaaS and scale-ups | SmartRecruiters | ✅ Pulled | 4 |  |  |
 | LoginRadius | Cybersecurity | Careers page (read by Claude) | ✅ Pulled | 0 | [open](https://www.loginradius.com/careers) | Zoho Recruit (India DC) found in site JS. 6 open jobs, mostly Hyderabad/India plus 2 remote with no country; 0 Canada. Don't use apis-9gw.pa… |
-| Loopio | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 14 |  |  |
-| Lululemon | Banks, insurers, telcos and large enterprises (Workday-heavy) | Avature | ✅ Pulled | 252 | [open](https://careers.lululemon.com/en_US/careers/SearchJobs/) | Avature portal (not in enum). HTML search results, 10/page via jobOffset; country select field 1173, Canada=15150 -> 'of 254 results'. Unfil… |
+| Loopio | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 13 |  |  |
+| Lululemon | Banks, insurers, telcos and large enterprises (Workday-heavy) | Avature | ✅ Pulled | 251 | [open](https://careers.lululemon.com/en_US/careers/SearchJobs/) | Avature portal (not in enum). HTML search results, 10/page via jobOffset; country select field 1173, Canada=15150 -> 'of 254 results'. Unfil… |
 | Lyft | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 78 |  |  |
-| Magnet Forensics | Canadian SaaS and scale-ups | Lever | ✅ Pulled | 19 |  |  |
-| Manulife | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 157 | [open](https://manulife.wd3.myworkdayjobs.com/MFCJH_Jobs) | Canada facet: Location_Country id a30a87ed25634629aa6c3958aa2b91ea. Global board (incl. John Hancock/Asia). |
+| Magnet Forensics | Canadian SaaS and scale-ups | Lever | ✅ Pulled | 18 |  |  |
+| Manulife | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 171 | [open](https://manulife.wd3.myworkdayjobs.com/MFCJH_Jobs) | Canada facet: Location_Country id a30a87ed25634629aa6c3958aa2b91ea. Global board (incl. John Hancock/Asia). |
 | Maple | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 0 |  |  |
-| Mastercard | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 57 | [open](https://mastercard.wd1.myworkdayjobs.com/CorporateCareers) | No country facet seen; city facets: Toronto abb6e89c39b847c49cb2958e421072b3 (37), Toronto (Ethoca) bea842055ec0010f8fa2f063710e65dd (10), V… |
+| Mastercard | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 56 | [open](https://mastercard.wd1.myworkdayjobs.com/CorporateCareers) | No country facet seen; city facets: Toronto abb6e89c39b847c49cb2958e421072b3 (37), Toronto (Ethoca) bea842055ec0010f8fa2f063710e65dd (10), V… |
 | Maximizer | Enterprise SaaS | Greenhouse | ✅ Pulled | 4 |  | Approved by Ayush from discovery |
-| Mecka AI | Canadian AI and deep tech | Ashby | ✅ Pulled | 31 | [open](https://www.mecka.ai/careers) | Ashby slug includes the dot: 'mecka.ai'. Locations: Toronto GTA 29, New York 25. Toronto presence verified. |
+| Mecka AI | Canadian AI and deep tech | Ashby | ✅ Pulled | 30 | [open](https://www.mecka.ai/careers) | Ashby slug includes the dot: 'mecka.ai'. Locations: Toronto GTA 29, New York 25. Toronto presence verified. |
 | Medfar | Health tech | SmartRecruiters | ✅ Pulled | 31 |  | Approved by Ayush from discovery |
 | Meta | Big tech / US tech with Canadian offices | Meta Careers | ✅ Pulled | 7 | [open](https://www.metacareers.com/jobsearch/) | GraphQL behind the careers site; query id looked up each run |
-| Microsoft | Big tech / US tech with Canadian offices | Eightfold | ✅ Pulled | 55 | [open](https://apply.careers.microsoft.com/careers?location=Canada) | Eightfold API; rate-limited, pulled slowly |
-| Mila | Canadian AI and deep tech | Workable | ✅ Pulled | 14 | [open](https://mila.quebec/en/careers) | Careers page links apply.workable.com/mila-2 (4 links). Workable API returned Cloudflare 429 (error 1015) from this proxy throughout researc… |
+| Microsoft | Big tech / US tech with Canadian offices | Eightfold | ✅ Pulled | 56 | [open](https://apply.careers.microsoft.com/careers?location=Canada) | Eightfold API; rate-limited, pulled slowly |
+| Mila | Canadian AI and deep tech | Workable | ✅ Pulled | 15 | [open](https://mila.quebec/en/careers) | Careers page links apply.workable.com/mila-2 (4 links). Workable API returned Cloudflare 429 (error 1015) from this proxy throughout researc… |
 | Miovision | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 16 |  |  |
 | Mogo | Canadian fintech and payments | JazzHR | ✅ Pulled | 5 | [open](https://www.orion-digital.com/careers) | Mogo appears rebranded as Orion Digital (mogo.ca/careers redirects). JazzHR (mogo.applytojob.com); XML feed app.jazz.co/feeds/export/jobs/mo… |
-| Moneris | Canadian fintech and payments | Workday | ✅ Pulled | 39 | [open](https://www.moneris.com/en/careers) | Workday found by probing (moneris.com returns 403 to curl). No country facet; BusinessUnit facet values like 'Technology (Canada)', 'Product… |
+| Moneris | Canadian fintech and payments | Workday | ✅ Pulled | 42 | [open](https://www.moneris.com/en/careers) | Workday found by probing (moneris.com returns 403 to curl). No country facet; BusinessUnit facet values like 'Technology (Canada)', 'Product… |
 | National Bank | Banks, insurers, telcos and large enterprises (Workday-heavy) | Avature | ✅ Pulled | 324 | [open](https://emplois.bnc.ca/en_CA/careers/SearchJobs/) | Avature portal (emplois.bnc.ca). HTML search shows 'of 414'; mostly Canada (some NBF US/intl). /SearchJobs/feed/ RSS returns only 20 items. … |
 | Neo Financial | Canadian fintech and payments | Ashby | ✅ Pulled | 56 |  |  |
-| Nesto | Canadian fintech and payments | Rippling | ✅ Pulled | 44 | [open](https://www.nesto.ca/careers/) | Rippling ATS (ats.rippling.com/nesto). JSON array; workLocation.label e.g. 'Canada', 'Remote (Canada)', 'Montreal, Canada'. |
+| Nesto | Canadian fintech and payments | Rippling | ✅ Pulled | 43 | [open](https://www.nesto.ca/careers/) | Rippling ATS (ats.rippling.com/nesto). JSON array; workLocation.label e.g. 'Canada', 'Remote (Canada)', 'Montreal, Canada'. |
 | Netomi | AI applications | Lever | ✅ Pulled | 2 | [open](https://jobs.lever.co/netomi) | Approved by Ayush from discovery |
-| Novisto | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 9 | [open](https://novisto.com/company/careers/job-openings) | Greenhouse embed for=novisto78 on job-openings page. 18 jobs; 9 Montreal/Toronto, rest London/Dubai. |
+| Novisto | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 8 | [open](https://novisto.com/company/careers/job-openings) | Greenhouse embed for=novisto78 on job-openings page. 18 jobs; 9 Montreal/Toronto, rest London/Dubai. |
 | Nuvei | Canadian fintech and payments | Workable | ✅ Pulled | 11 | [open](https://www.nuvei.com/careers) | Workable widget API works with numeric account id 378737 (apply.workable.com/api/v1/widget/accounts/378737). Global employer: US 11, Canada … |
-| Nvidia | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 10 | [open](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite) | total capped at 2000 in response. Canada facet locationHierarchy1=2fcb99c455831013ea529c3b93ba3236 (10); Canada,Toronto locations id 4205b82… |
-| Okta | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 78 |  |  |
-| OMERS | Banks, insurers, telcos and large enterprises (Workday-heavy) | Phenom | ✅ Pulled | 57 | [open](https://careers.omers.com/ca/en) | Phenom /widgets refineSearch (refNum OMEOMECA). Country agg: Canada 54, UK 5, US 3, AU 2. |
+| Nvidia | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 11 | [open](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite) | total capped at 2000 in response. Canada facet locationHierarchy1=2fcb99c455831013ea529c3b93ba3236 (10); Canada,Toronto locations id 4205b82… |
+| Okta | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 81 |  |  |
+| OMERS | Banks, insurers, telcos and large enterprises (Workday-heavy) | Phenom | ✅ Pulled | 59 | [open](https://careers.omers.com/ca/en) | Phenom /widgets refineSearch (refNum OMEOMECA). Country agg: Canada 54, UK 5, US 3, AU 2. |
 | Ontario Teachers' Pension Plan | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 30 | [open](https://otppb.wd3.myworkdayjobs.com/OntarioTeachers_Careers) | Linked from otpp.com careers. No country facet; locations facet 'Toronto, Canada' id b6f626b7ab7701a0ae5ecf057c39295f = 30 (rest London/HK/S… |
-| OpenText | Canadian SaaS and scale-ups | Phenom | ✅ Pulled | 117 | [open](https://careers.opentext.com/us/en) | Phenom People site; POST /widgets with ddoKey refineSearch. Country facet values are ISO3 ('CAN'), NOT 'Canada' (returns 0). Paginate with f… |
+| OpenText | Canadian SaaS and scale-ups | Phenom | ✅ Pulled | 119 | [open](https://careers.opentext.com/us/en) | Phenom People site; POST /widgets with ddoKey refineSearch. Country facet values are ISO3 ('CAN'), NOT 'Canada' (returns 0). Paginate with f… |
 | Oracle | Big tech / US tech with Canadian offices | Oracle Recruiting | ✅ Pulled | 15 | [open](https://careers.oracle.com/jobs/#en/sites/jobsearch) | TotalJobsCount in items[0]. location=Canada returned 12 (radius-based, a couple US 'Remote' rows mixed in). Add expand=locationsFacet + face… |
 | Ownr (RBC) | Canadian fintech and payments | Via parent company | ✋ Paste only | 594 | [open](https://jobs.rbc.com/) | Jobs are posted on RBC's site and picked up there. Ownr is an RBC Ventures business with no own careers page (ownr.co/careers redirects to a… |
 | PartnerStack | Canadian SaaS and scale-ups | Greenhouse | ⏸ Paused |  | [open](https://partnerstack.com/company) | partnerstack.com/careers redirects to job-boards.greenhouse.io/partnerstack, which says 'The job board you were viewing is no longer active'… |
 | Passage | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 5 |  | Approved by Ayush from discovery |
-| Payments Canada | Canadian fintech and payments | Dayforce | ✅ Pulled | 6 | [open](https://www.payments.ca/connect/payments-canada-careers) | Dayforce; careers page links legacy can62e2.dayforcehcm.com/CandidatePortal/en-US/paymentscanada which redirects to jobs.dayforcehcm.com. Al… |
+| Payments Canada | Canadian fintech and payments | Dayforce | ✅ Pulled | 5 | [open](https://www.payments.ca/connect/payments-canada-careers) | Dayforce; careers page links legacy can62e2.dayforcehcm.com/CandidatePortal/en-US/paymentscanada which redirects to jobs.dayforcehcm.com. Al… |
 | PayPal | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 1 | [open](https://paypal.wd1.myworkdayjobs.com/jobs) | locations 'Toronto, Ontario, Canada' id bcdc9518960a019b87f6b4a92d249098 (1). |
 | Paystone | Canadian fintech and payments | JazzHR | ✅ Pulled | 1 | [open](https://www.paystone.com/careers) | JazzHR (paystone.applytojob.com); XML feed verified, but current 3 roles are Jakarta, Ho Chi Minh City, Mexico City (offshore dev). 0 Canada… |
 | Photonic | Canadian AI and deep tech | Careers page (read by Claude) | ✅ Pulled | 15 | [open](https://careers.photonic.com/jobs) | Pinpoint ATS (no adapter). Clean JSON at careers.photonic.com/postings.json: 16 jobs; 14 'British Columbia, Canada' (Coquitlam), 1 Remote (C… |
@@ -219,30 +219,30 @@ Canada counts are from the last refresh.
 | Plooto | Canadian fintech and payments | Lever | ✅ Pulled | 1 |  |  |
 | Plotly | Data and AI platforms | Ashby | ✅ Pulled | 2 | [open](https://jobs.realventures.com/companies/plotly) | Approved by Ayush from discovery |
 | PolicyMe | Canadian fintech and payments | Lever | ✅ Pulled | 10 |  |  |
-| Porter Airlines | Banks, insurers, telcos and large enterprises (Workday-heavy) | Jibe (iCIMS) | ✅ Pulled | 52 | [open](https://careers.flyporter.com/careers-home) | careers.flyporter.com is an iCIMS (Jibe) career site; its JSON API /api/jobs?page=&limit= returns totalCount and jobs[].data (title, city, c… |
+| Porter Airlines | Banks, insurers, telcos and large enterprises (Workday-heavy) | Jibe (iCIMS) | ✅ Pulled | 50 | [open](https://careers.flyporter.com/careers-home) | careers.flyporter.com is an iCIMS (Jibe) career site; its JSON API /api/jobs?page=&limit= returns totalCount and jobs[].data (title, city, c… |
 | Potloc | Canadian SaaS and scale-ups | Lever | ✅ Pulled | 1 | [open](https://potloc.com/en/careers) | Lever slug is case-sensitive: 'Potloc' works, 'potloc' returns Document not found. 3 postings; 1 Canada ('Paris or Montréal' open applicatio… |
 | Private AI | Canadian AI and deep tech | BambooHR | ✅ Pulled | 0 | [open](https://www.getlimina.ai/en/careers) | Board exists but had 0 openings on 2026-10-15; pulled so new roles show up. Private AI rebranded as Limina (private-ai.com redirects to getl… |
-| Procurify | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 12 |  |  |
-| Propel Holdings | Canadian fintech and payments | UKG Pro | ✅ Pulled | 10 | [open](https://www.propelholdings.com/careers/) | UKG Pro / UltiPro Recruiting (recruiting.ultipro.ca). Response opportunities[], totalCount; Locations[].Address.Country.Code (CAN 10, GBR 5)… |
-| Qualcomm | Big tech / US tech with Canadian offices | Eightfold | ✅ Pulled | 94 | [open](https://careers.qualcomm.com/careers) | Eightfold PCSX endpoint (old /api/apply/v2/jobs returns 403 'Not authorized for PCSX'). Needs a browser User-Agent or returns 'Please try ag… |
+| Procurify | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 13 |  |  |
+| Propel Holdings | Canadian fintech and payments | UKG Pro | ✅ Pulled | 8 | [open](https://www.propelholdings.com/careers/) | UKG Pro / UltiPro Recruiting (recruiting.ultipro.ca). Response opportunities[], totalCount; Locations[].Address.Country.Code (CAN 10, GBR 5)… |
+| Qualcomm | Big tech / US tech with Canadian offices | Eightfold | ✅ Pulled | 98 | [open](https://careers.qualcomm.com/careers) | Eightfold PCSX endpoint (old /api/apply/v2/jobs returns 403 'Not authorized for PCSX'). Needs a browser User-Agent or returns 'Please try ag… |
 | Quandri | AI applications | Lever | ✅ Pulled | 14 |  | Approved by Ayush from discovery |
-| Questrade | Canadian fintech and payments | Dayforce | ✅ Pulled | 65 | [open](https://www.questrade.com/about-us/careers) | Dayforce (jobs.dayforcehcm.com/qfg/CANDIDATEPORTAL). 403 without next-auth CSRF cookie+header. 25 per page; page with paginationStart 0/25/5… |
+| Questrade | Canadian fintech and payments | Dayforce | ✅ Pulled | 67 | [open](https://www.questrade.com/about-us/careers) | Dayforce (jobs.dayforcehcm.com/qfg/CANDIDATEPORTAL). 403 without next-auth CSRF cookie+header. 25 per page; page with paginationStart 0/25/5… |
 | Quora | Consumer tech and marketplaces | Ashby | ✅ Pulled | 8 |  | Approved by Ayush from discovery |
 | Ratehub | Canadian fintech and payments | JazzHR | ✅ Pulled | 11 | [open](https://www.ratehub.ca/careers) | JazzHR (ratehubinc.applytojob.com); XML feed. Toronto 6, Calgary 2, BC remote 1, Quebec City 1. |
-| RBC | Banks, insurers, telcos and large enterprises (Workday-heavy) | Phenom | ✅ Pulled | 570 | [open](https://jobs.rbc.com/ca/en) | Phenom /widgets refineSearch; response refineSearch.totalHits, data.jobs; paginate with from/size. Country filter: selected_fields {"country… |
+| RBC | Banks, insurers, telcos and large enterprises (Workday-heavy) | Phenom | ✅ Pulled | 604 | [open](https://jobs.rbc.com/ca/en) | Phenom /widgets refineSearch; response refineSearch.totalHits, data.jobs; paginate with from/size. Country filter: selected_fields {"country… |
 | Reddit | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 11 |  |  |
 | Resolver (Kroll) | Canadian SaaS and scale-ups | unknown | ✋ Paste only |  | [open](https://careers.kroll.com/en/listing-page?keyword=resolver&location=) | Site blocks automated visitors (checked 2026-10-15); paste roles from LinkedIn. No machine-readable feed. resolver.com/careers returns 403 (… |
 | Rewind | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 3 |  |  |
-| Rippling | Big tech / US tech with Canadian offices | Rippling | ✅ Pulled | 7 | [open](https://ats.rippling.com/rippling/jobs) | Rippling ATS public board API; returns full array (uuid,name,department,url,workLocation.label). Canada = workLocation 'Toronto, Canada' (7)… |
-| Rogers | Banks, insurers, telcos and large enterprises (Workday-heavy) | SuccessFactors | ✅ Pulled | 192 | [open](https://jobs.rogers.com) | SuccessFactors RMK; /sitemap.xml returns full RSS feed (served in fr_CA locale channel title; 192 items). JSON v1 API errors. All Canada. |
+| Rippling | Big tech / US tech with Canadian offices | Rippling | ✅ Pulled | 8 | [open](https://ats.rippling.com/rippling/jobs) | Rippling ATS public board API; returns full array (uuid,name,department,url,workLocation.label). Canada = workLocation 'Toronto, Canada' (7)… |
+| Rogers | Banks, insurers, telcos and large enterprises (Workday-heavy) | SuccessFactors | ✅ Pulled | 191 | [open](https://jobs.rogers.com) | SuccessFactors RMK; /sitemap.xml returns full RSS feed (served in fr_CA locale channel title; 192 items). JSON v1 API errors. All Canada. |
 | Rootly | Canadian AI and deep tech | Gem | ✅ Pulled | 14 | [open](https://rootly.com/careers) | Gem ATS (jobs.gem.com/rootly). Toronto, Canada 14, Canada - Remote 1; 2 non-Canada. |
 | Rose Rocket | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 0 | [open](https://www.roserocket.com/careers) | Board exists but had 0 openings on 2026-10-15; pulled so new roles show up. Careers page 'View Open Roles' links jobs.ashbyhq.com/Rose%20Roc… |
 | Ross Video | Canadian SaaS and scale-ups | iCIMS | ✋ Paste only |  | [open](https://www.rossvideo.com/company/careers/) | Site blocks automated visitors (checked 2026-10-15); paste roles from LinkedIn. Careers page links ross-video.ttcportals.com (iCIMS-style ta… |
 | Salesforce | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 51 | [open](https://salesforce.wd12.myworkdayjobs.com/External_Career_Site) | Canada country facet CF_-_REC_-_LRV_-_Job_Posting_Anchor_-_Country_from_Job_Posting_Location_Extended=a30a87ed25634629aa6c3958aa2b91ea (54).… |
 | Samsung AI Center | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 14 | [open](https://sec.wd3.myworkdayjobs.com/Samsung_Careers) | Samsung global Workday. Location_Country=a30a87ed25634629aa6c3958aa2b91ea (Canada 15) but these are Samsung Electronics Canada (Mississauga … |
-| Scotiabank | Banks, insurers, telcos and large enterprises (Workday-heavy) | SuccessFactors | ✅ Pulled | 1163 | [open](https://jobs.scotiabank.com) | SAP SuccessFactors RMK. /sitemap.xml is actually a full RSS feed of all postings (~38MB, incl. descriptions); titles end with '(City, PROV, … |
-| ServiceNow | Big tech / US tech with Canadian offices | SmartRecruiters | ✅ Pulled | 15 |  |  |
-| Shakepay | Canadian fintech and payments | Greenhouse | ✅ Pulled | 9 |  |  |
+| Scotiabank | Banks, insurers, telcos and large enterprises (Workday-heavy) | SuccessFactors | ✅ Pulled | 1181 | [open](https://jobs.scotiabank.com) | SAP SuccessFactors RMK. /sitemap.xml is actually a full RSS feed of all postings (~38MB, incl. descriptions); titles end with '(City, PROV, … |
+| ServiceNow | Big tech / US tech with Canadian offices | SmartRecruiters | ✅ Pulled | 17 |  |  |
+| Shakepay | Canadian fintech and payments | Greenhouse | ✅ Pulled | 10 |  |  |
 | Shopify | Canadian SaaS and scale-ups | Shopify Careers | ✅ Pulled | 87 | [open](https://www.shopify.com/careers) | Shopify uses Ashby behind its own site (links ?ashby_jid=), but no public posting-api slug works. GET https://www.shopify.com/careers.data r… |
 | Signal 1 | Canadian AI and deep tech | BambooHR | ✅ Pulled | 7 | [open](https://signal1.ai/careers/) | BambooHR; GET /careers/list with Accept: application/json returns result[]; all 7 in Ontario. |
 | Simplii (CIBC) | Banks, insurers, telcos and large enterprises (Workday-heavy) | Via parent company | ✋ Paste only | 1 | [open](https://cibc.wd3.myworkdayjobs.com/search) | Jobs are posted on CIBC's site and picked up there. Simplii Financial is a CIBC division with no separate careers site; roles post on CIBC W… |
@@ -250,49 +250,49 @@ Canada counts are from the last refresh.
 | Snowflake | Big tech / US tech with Canadian offices | Ashby | ✅ Pulled | 8 |  |  |
 | Solace | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 0 |  |  |
 | Sonder (verify) | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 0 |  |  |
-| Sophos | Cybersecurity | Lever | ✅ Pulled | 18 |  | Approved by Ayush from discovery |
+| Sophos | Cybersecurity | Lever | ✅ Pulled | 17 |  | Approved by Ayush from discovery |
 | Spotify | Big tech / US tech with Canadian offices | Lever | ✅ Pulled | 1 |  |  |
-| StackAdapt | Canadian AI and deep tech | Greenhouse | ✅ Pulled | 45 |  |  |
+| StackAdapt | Canadian AI and deep tech | Greenhouse | ✅ Pulled | 46 |  |  |
 | Stay22 | Consumer tech and marketplaces | Greenhouse | ✅ Pulled | 14 | [open](https://jobs.realventures.com/companies/stay22) | Approved by Ayush from discovery |
 | Stripe | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 58 |  |  |
-| Sun Life | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 88 | [open](https://sunlife.wd3.myworkdayjobs.com/Experienced-Jobs) | Canada facet: Location_Country id a30a87ed25634629aa6c3958aa2b91ea. Separate student site likely exists. |
+| Sun Life | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 96 | [open](https://sunlife.wd3.myworkdayjobs.com/Experienced-Jobs) | Canada facet: Location_Country id a30a87ed25634629aa6c3958aa2b91ea. Separate student site likely exists. |
 | Taalas | Canadian AI and deep tech | Careers page (read by Claude) | ✅ Pulled | 8 | [open](https://taalas.com/position/) | No feed: Claude reads the careers page each refresh (D-043). WordPress site; 8 positions listed as links https://taalas.com/position/{slug}/… |
 | Talking Computers | Canadian AI and deep tech | none | ✋ Paste only |  | [open](https://talkingcomputers.ai) | No machine-readable feed. YC W26, team of 2 (YC lists Toronto). No careers page (/careers 404), no YC job postings, no ATS board found. Not … |
 | Tangerine (Scotiabank) | Banks, insurers, telcos and large enterprises (Workday-heavy) | Via parent company | ✋ Paste only | 25 | [open](https://jobs.scotiabank.com/go/Tangerine/2407617/) | Jobs are posted on Scotiabank's site and picked up there. Tangerine hires through Scotiabank's SuccessFactors site (tangerine.ca/en/careers … |
-| TD | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 867 | [open](https://td.wd3.myworkdayjobs.com/TD_Bank_Careers) | Canada facet: locationMainGroup>locationCountry id a30a87ed25634629aa6c3958aa2b91ea. |
+| TD | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 921 | [open](https://td.wd3.myworkdayjobs.com/TD_Bank_Careers) | Canada facet: locationMainGroup>locationCountry id a30a87ed25634629aa6c3958aa2b91ea. |
 | TELUS (Digital / Health) | Banks, insurers, telcos and large enterprises (Workday-heavy) | SuccessFactors | ✅ Pulled | 221 | [open](https://careers.telus.com) | Main TELUS: SAP SuccessFactors RMK; /googlefeed.xml is a full RSS (217 items incl. EN/FR dupes; HTML search says 166), mostly retail/Koodo. … |
-| TELUS (Digital / Health) | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 111 | [open](https://careers.telus.com) | TELUS Health board |
-| Tenstorrent | Canadian AI and deep tech | Greenhouse | ✅ Pulled | 45 |  |  |
-| Thinkific | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 1 |  |  |
-| Thomson Reuters | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 70 | [open](https://thomsonreuters.wd5.myworkdayjobs.com/External_Career_Site) | Location_Country=a30a87ed25634629aa6c3958aa2b91ea (Canada, 69). |
+| TELUS (Digital / Health) | Banks, insurers, telcos and large enterprises (Workday-heavy) | Workday | ✅ Pulled | 106 | [open](https://careers.telus.com) | TELUS Health board |
+| Tenstorrent | Canadian AI and deep tech | Greenhouse | ✅ Pulled | 44 |  |  |
+| Thinkific | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 2 |  |  |
+| Thomson Reuters | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 69 | [open](https://thomsonreuters.wd5.myworkdayjobs.com/External_Career_Site) | Location_Country=a30a87ed25634629aa6c3958aa2b91ea (Canada, 69). |
 | Top Hat | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 3 |  |  |
 | TrackTik | Canadian SaaS and scale-ups | Lever | ✅ Pulled | 6 |  | Approved by Ayush from discovery |
-| Trulioo | Canadian fintech and payments | Ashby | ✅ Pulled | 17 |  |  |
-| TrustArc | Privacy, risk and compliance | Lever | ✅ Pulled | 3 |  | Approved by Ayush from discovery |
-| Twilio | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 6 |  |  |
+| Trulioo | Canadian fintech and payments | Ashby | ✅ Pulled | 16 |  |  |
+| TrustArc | Privacy, risk and compliance | Lever | ✅ Pulled | 4 |  | Approved by Ayush from discovery |
+| Twilio | Big tech / US tech with Canadian offices | Greenhouse | ✅ Pulled | 7 |  |  |
 | Uber | Big tech / US tech with Canadian offices | SmartRecruiters | ✅ Pulled | 0 |  |  |
 | Uberflip | Canadian SaaS and scale-ups | Lever | ✅ Pulled | 0 | [open](https://www.uberflip.com/careers/) | Board exists but had 0 openings on 2026-10-15; pulled so new roles show up. Careers page links jobs.lever.co/uberflip; API returns HTTP 200 … |
-| Ubisoft | Big tech / US tech with Canadian offices | SmartRecruiters | ✅ Pulled | 137 | [open](https://www.ubisoft.com/en-us/company/careers) | SmartRecruiters company id 'Ubisoft2' (case-sensitive). country=ca filter gives 142. |
+| Ubisoft | Big tech / US tech with Canadian offices | SmartRecruiters | ✅ Pulled | 136 | [open](https://www.ubisoft.com/en-us/company/careers) | SmartRecruiters company id 'Ubisoft2' (case-sensitive). country=ca filter gives 142. |
 | Unbounce | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 1 |  |  |
-| Unity | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 25 | [open](https://unity.com/careers/positions) | Tenant is 'unitytech' (not unity). No country facet; Canada sum of location facets: Montreal 2ff1c6eb46eb1001a8bc2cd1ca8d0000 (22), Toronto … |
+| Unity | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 26 | [open](https://unity.com/careers/positions) | Tenant is 'unitytech' (not unity). No country facet; Canada sum of location facets: Montreal 2ff1c6eb46eb1001a8bc2cd1ca8d0000 (22), Toronto … |
 | Untether AI | Canadian AI and deep tech | none | ✋ Paste only |  | [open](https://www.untether.ai/careers) | No machine-readable feed. Defunct: shut down June 2025, engineering team acqui-hired by AMD (roles now via AMD careers). Site fails TLS hand… |
 | Validere | Canadian SaaS and scale-ups | Dover | ✅ Pulled | 2 | [open](https://www.validere.com/careers) | Careers page links Dover careers page (client id bc0385b5-...). Undocumented Dover JSON: {count,next,results[{title,locations[{location_opti… |
 | Varicent | Canadian AI and deep tech | Greenhouse | ✅ Pulled | 12 |  |  |
-| Vector Institute | Canadian AI and deep tech | ADP | ✅ Pulled | 5 | [open](https://vectorinstitute.ai/about/careers/open-positions/) | ADP Workforce Now career center. Response jobRequisitions[], meta.totalNumber; requisitionLocations[].address.cityName (Toronto). Use $top/$… |
+| Vector Institute | Canadian AI and deep tech | ADP | ✅ Pulled | 6 | [open](https://vectorinstitute.ai/about/careers/open-positions/) | ADP Workforce Now career center. Response jobRequisitions[], meta.totalNumber; requisitionLocations[].address.cityName (Toronto). Use $top/$… |
 | Veeva Systems | Enterprise SaaS | Lever | ✅ Pulled | 25 | [open](https://jobs.lever.co/veeva) | Approved by Ayush from discovery |
 | Verafin (Nasdaq) | Canadian fintech and payments | Workday | ✅ Pulled | 3 | [open](https://www.nasdaq.com/about/careers) | Nasdaq Workday (verafin.com 403 to curl). All Nasdaq: 175 total/18 Canada (St. John's 4, Toronto 3, Montreal 1). searchText 'Verafin' = 4 (3… |
 | Vidyard | Canadian SaaS and scale-ups | Careers page (read by Claude) | ✅ Pulled | 1 | [open](https://www.vidyard.com/careers/) | No feed: Claude reads the careers page each refresh (D-043). Careers page links Kula ATS board careers.kula.ai/vidyard. No JSON API found (N… |
-| Visa | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 12 | [open](https://visa.wd5.myworkdayjobs.com/Visa) | corporate.visa.com/en/jobs now redirects to Workday (SmartRecruiters 'Visa' is empty). locationCountry=a30a87ed25634629aa6c3958aa2b91ea (Can… |
-| Visier | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 6 |  |  |
-| Waabi | Canadian AI and deep tech | Lever | ✅ Pulled | 50 |  |  |
+| Visa | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 13 | [open](https://visa.wd5.myworkdayjobs.com/Visa) | corporate.visa.com/en/jobs now redirects to Workday (SmartRecruiters 'Visa' is empty). locationCountry=a30a87ed25634629aa6c3958aa2b91ea (Can… |
+| Visier | Canadian SaaS and scale-ups | Ashby | ✅ Pulled | 5 |  |  |
+| Waabi | Canadian AI and deep tech | Lever | ✅ Pulled | 48 |  |  |
 | Wattpad (Naver) | Canadian SaaS and scale-ups | Lever | ✅ Pulled | 2 |  |  |
 | Wave (H&R Block) | Canadian fintech and payments | Lever | ✅ Pulled | 7 | [open](https://www.waveapps.com/about-us/culture) | Lever slug 'waveapps' (found by probing). 6 postings, all Canada/Toronto. |
-| Wealthsimple | Canadian fintech and payments | Ashby | ✅ Pulled | 46 |  |  |
+| Wealthsimple | Canadian fintech and payments | Ashby | ✅ Pulled | 48 |  |  |
 | WestJet | Banks, insurers, telcos and large enterprises (Workday-heavy) | Dayforce | ✋ Paste only |  | [open](https://jobs.dayforcehcm.com/en-CA/WestJet/CANDIDATEPORTAL) | Site blocks automated visitors (checked 2026-10-15); paste roles from LinkedIn. Linked from westjet.com/en-ca/careers. Dayforce candidate po… |
-| Workday | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 35 | [open](https://workday.wd5.myworkdayjobs.com/Workday) | Location_Country=a30a87ed25634629aa6c3958aa2b91ea (Canada, 38); Vancouver 34, Toronto 4. |
-| Workleap | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 5 |  |  |
-| Xanadu | Canadian AI and deep tech | HiBob | ✅ Pulled | 69 | [open](https://www.xanadu.ai/careers/) | HiBob careers site (found in Gatsby careers chunk). Requires header companyidentifier: xanadu else 401. Response jobAdDetails[] with site (T… |
-| Zafin | Canadian fintech and payments | Greenhouse | ✅ Pulled | 9 | [open](https://zafin.com/careers/) | Greenhouse slug 'zafinlabsamericasinc' (found via search for job-boards.greenhouse.io links). zafin.com returns 403 to curl. Canada roles mo… |
+| Workday | Big tech / US tech with Canadian offices | Workday | ✅ Pulled | 37 | [open](https://workday.wd5.myworkdayjobs.com/Workday) | Location_Country=a30a87ed25634629aa6c3958aa2b91ea (Canada, 38); Vancouver 34, Toronto 4. |
+| Workleap | Canadian SaaS and scale-ups | Greenhouse | ✅ Pulled | 6 |  |  |
+| Xanadu | Canadian AI and deep tech | HiBob | ✅ Pulled | 71 | [open](https://www.xanadu.ai/careers/) | HiBob careers site (found in Gatsby careers chunk). Requires header companyidentifier: xanadu else 401. Response jobAdDetails[] with site (T… |
+| Zafin | Canadian fintech and payments | Greenhouse | ✅ Pulled | 12 | [open](https://zafin.com/careers/) | Greenhouse slug 'zafinlabsamericasinc' (found via search for job-boards.greenhouse.io links). zafin.com returns 403 to curl. Canada roles mo… |
 | Zapier | Big tech / US tech with Canadian offices | Ashby | ✅ Pulled | 0 |  |  |
 | Zeffy | Canadian fintech and payments | Careers page (read by Claude) | ✅ Pulled | 2 | [open](https://www.zeffy.com/home/careers) | Kula ATS (no adapter), linked from zeffy.com/home/careers. Server-rendered page: 3 jobs; 2 Montreal (Customer Support Specialist, Staff Soft… |
 | Zip | Big tech / US tech with Canadian offices | Ashby | ✅ Pulled | 19 |  |  |

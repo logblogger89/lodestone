@@ -19,7 +19,8 @@
     "\\bpart time\\b",
     "\\bseasonal\\b",
     "\\bentry level\\b",
-    "\\bstudent\\b"
+    "\\bstudent\\b",
+    "\\b(software|backend|frontend|front end|full stack|fullstack|data|machine learning|ml|devops|site reliability|qa|test) engineer\\b"
   ],
   "families": [
     {
@@ -207,10 +208,8 @@
       "what": "Keep users and the business safe: trust & safety, integrity, policy",
       "onboard": "Trust & safety, risk or policy",
       "patterns": [
-        "\\btrust (and )?safety\\b",
-        "\\bcontent policy\\b",
-        "\\bplatform policy\\b",
-        "\\bintegrity (lead|manager|analyst|specialist)\\b"
+        "\\btrust (and )?safety (lead|manager|specialist|analyst|strategist|policy|operations)\\b",
+        "\\b(content|platform) policy (lead|manager|specialist)\\b"
       ],
       "related": [
         "strategy",
@@ -264,9 +263,7 @@
       "onboard": "Product analyst",
       "patterns": [
         "\\bproduct analytics\\b",
-        "\\bproduct analyst\\b",
-        "\\bproduct data scientist\\b",
-        "\\bproduct insights\\b"
+        "\\bproduct analyst\\b"
       ],
       "related": [
         "analytics",
