@@ -10,6 +10,11 @@ standard library only, so no installs are needed.
 
 ## Steps
 
+0. **App health (D-079).** `ArtifactData get health/app` (the app saves it when Ayush opens it). Flag it in the report's
+   "Problems", and fix it first, if `visible` is 0 while `live` is above 0, `errors` is above 0 (read `last_errors`),
+   `version` is older than the published app (`APP_VERSION` in `app/lodestone.html`), or `no_relevance` is above 0. If
+   `at` is more than 2 days old, just note that the app hasn't been opened. Never mark an app release "done" until a
+   health note from the new version shows roles visible and no errors.
 1. **Network check (D-038).** `python3 scripts/check_network.py`
    If any domain is blocked, carry on with everything that works and tell Ayush which domains failed, with the
    click-by-click fix (Claude Code environment settings → Network access → Full, or add the domain to the allowlist).

@@ -387,7 +387,12 @@ const DEFAULT_PREFS_W = DEFAULT_PREFS.weights;
 /* Freshness (computed here, so it changes daily without re-scoring): older postings are more likely filled.
    Uses the posting date; when a site gives none, the day Lodestone first saw the role, capped lower because
    the role may be older than that. */
+const _freshC=new WeakMap();   // per job, per hour: freshness only changes with the date
 function freshness(j){
+  const hr=Math.floor(Date.now()/3600000), c=_freshC.get(j); if(c&&c.hr===hr) return c.v;
+  const v=freshness0(j); _freshC.set(j,{hr,v}); return v;
+}
+function freshness0(j){
   const posted=postedAt(j), seen=parseWhen(j.first_seen), ms=posted??seen;
   if(ms==null) return {score:50,days:null,why:"Posting date unknown"};
   const d=Math.max(0,Math.round((Date.now()-ms)/DAY));
@@ -401,6 +406,13 @@ const FRESH_LABEL = {jobs:"Job pulls (all sources)", source_index:"Source index"
   scoring:"Fit scoring", signals:"Pathway signals (ESDC)", discovery:"Company discovery", profile:"Your profile"};
 
 /* ---------- state ---------- */
+/* Resilience (D-079, after the 10-17 outage): a version stamp, every script error captured (not just logged), a health
+   note the scheduled runs read, a fail-safe for missing ranking data, and a safety net when a screen fails to draw. */
+const APP_VERSION = "34";
+const ERRS = [];
+function noteError(where,e){const m=String((e&&e.message)||e||"error").slice(0,160);ERRS.push({where,m,at:new Date().toISOString()});if(ERRS.length>20)ERRS.shift();console.warn(where,e)}
+window.addEventListener("error",e=>noteError("script",e.error||e.message));
+window.addEventListener("unhandledrejection",e=>noteError("promise",e.reason));
 const S = {
   db:null, ready:false, offline:false, canWrite:true,
   jobs:{}, triage:{}, prefs:{...DEFAULT_PREFS}, companies:[], freshness:{}, inbox:[], mreq:{}, reports:[], suggestions:[], codec:{}, sugAll:false, desc:{}, cprof:{}, likes:{}, sig:{}, today:null, todayLoaded:false, triLoaded:false, prefsRaw:{}, dtab:lsGet("dtab","summary"),
@@ -552,7 +564,11 @@ const normTitle=t=>String(t||"").normalize("NFKD").replace(/[\u0300-\u036f]/g,""
 function famOfText(t){const n=normTitle(t);return (fams().find(f=>famRx(f).some(r=>r.test(n)))||{}).id||null}
 function famsInText(t){const n=normTitle(t);return fams().filter(f=>famRx(f).some(r=>r.test(n))||n.includes(normTitle(f.label))).map(f=>f.id)}
 function myFams(){const m=S.prefs.families||((S.profile||{}).preferences||{}).families;return m&&m.length?m:["pm"]}
-function relFams(mine,key){return [...new Set(mine.flatMap(m=>(famById(m)||{})[key]||[]))].filter(x=>!mine.includes(x))}
+const _relC=new Map();
+function relFams(mine,key){   // cached per field and family list: called for every job on every render
+  if(S._relSrc!==S.families){_relC.clear();S._relSrc=S.families}
+  const k=mine.join()+"|"+key; if(_relC.has(k)) return _relC.get(k);
+  const v=[...new Set(mine.flatMap(m=>(famById(m)||{})[key]||[]))].filter(x=>!mine.includes(x)); if(_relC.size>200)_relC.clear(); _relC.set(k,v); return v}
 function shownFams(){
   if(Array.isArray(S.prefs.families_shown)) return S.prefs.families_shown;
   const mine=myFams(), t=S.prefs.tiers||TIERS, rel=relFams(mine,"related");
@@ -577,14 +593,14 @@ function applyFamilies(){
   const mine=myFams(), shown=shownFams(), key=mine.join()+"|"+shown.join();
   if(S._famKey===key&&S._famJobs===S.jobs&&S._famSrc===S.families) return;
   S._famKey=key; S._famJobs=S.jobs; S._famSrc=S.families; S._tokc={};
-  Object.values(S.jobs).forEach(j=>{
+  Object.values(S.jobs).forEach(j=>{try{
     if(!j.aff||!Object.keys(j.aff).length){const f=j.family||famOfText(j.title);j.aff=f?{[f]:AFF_PRIOR}:{};j.aff_src="title"}
     if(!j.family||!(j.family in j.aff)) j.family=Object.keys(j.aff).sort((a,b)=>j.aff[b]-j.aff[a])[0]||null;
     const [r,via]=relevance(j.aff,mine,shown); j.rel=Math.round(r); j.via=via;
     j.tier=r>=AFF_SHOWN?closeTo(via,mine):"Other";
-  });
+  }catch(e){if(!S._famErr){S._famErr=1;noteError("relevance",e)}}});
 }
-function famVisible(j){return j.rel>=AFF_SHOWN||!!j.captured}
+function famVisible(j){return j.rel==null||j.rel>=AFF_SHOWN||!!j.captured}   // no relevance worked out: show it (missing data never hides a job, D-021)
 function alsoFam(j){if(j.aff_src!=="read") return null;const o=Object.keys(j.aff).filter(f=>f!==j.family&&j.aff[f]>=AFF_ALSO).sort((a,b)=>j.aff[b]-j.aff[a]);return o[0]||null}
 function famName(j){const f=famById(j.family), a=famById(alsoFam(j));return (f?f.tag:"Other")+(a?` · also ${a.tag}`:"")}
 function famTitle(j){
@@ -863,7 +879,9 @@ async function boot(){
   use("assets").then(a=>{S.assets=a;if(S.view==="settings"&&!S._editingPrefs)render()});   // resume upload (owner only)
   const fail=e=>{console.warn(e);if(e&&e.code==="revoked"){S.offline=true;render()}};
   db.collection("jobs").onSnapshot(snap=>{
-    const all={};snap.docs.forEach(d=>Object.assign(all,(d.data()||{}).jobs||{}));
+    // The database delivers frozen objects (runtime contract db.d.ts); the app adds its own fields to each job (relevance,
+    // type, closeness), so it works on its own copies. Writing onto delivered data throws in strict mode (10-17 outage).
+    const all={};snap.docs.forEach(d=>{const js=(d.data()||{}).jobs||{};for(const id in js) all[id]={...js[id]}});
     S.jobs=all;S._tokc={};S.ready=true;render();
   },fail);
   db.collection("meta").onSnapshot(snap=>{
@@ -945,7 +963,9 @@ function payScore(top,kind){const c={...DEFAULT_PREFS.checks,...(S.prefs.checks|
    the role factor comes from how close the job is to your field until the next run re-scores it for you (D-076). */
 function roleWhy(j){const v=famById(j.via);return v?`${v.label}: ${j.aff[j.via]} of 100 of this job${j.via===j.family?"":` (its main type is ${(famById(j.family)||{}).label||"another"})`}, ${TIER_WORD[j.tier]||""}.`:"Not the kind of work you picked."}
 /* Company types you'd rather avoid (prefs.avoid_types, D-077): the domain factor is capped unless pay is top of range. */
-function coType(name){const c=(S.companies||[]).find(x=>x.name===name);return c&&c.type||null}
+function coType(name){   // a lookup table built once per company list, not a scan per job
+  if(S._coTypeSrc!==S.companies){S._coTypeSrc=S.companies;S._coType=new Map((S.companies||[]).filter(c=>c.type).map(c=>[c.name,c.type]))}
+  return S._coType.get(name)||null}
 function avoidHit(j){const t=coType(j.company);if(!t||!(S.prefs.avoid_types||[]).includes(t)) return false;
   const m=payInfo(j).main, ck={...DEFAULT_PREFS.checks,...(S.prefs.checks||{})};return !(m&&m.max&&m.currency!=="USD"&&m.max>=ck.pay_green)}
 function fieldChanged(j){const f=(j.fit&&j.fit.field)||["pm"], m=myFams();return f.length!==m.length||f.some(x=>!m.includes(x))}
@@ -1546,7 +1566,7 @@ function applyBuilder(prof,a){   // instant value from the answers; the next run
   prof.builder={answers:a,status:"new",saved_at:new Date().toISOString()};
   prof.current={...(prof.current||{})};
   if(a.role&&!prof.current.title) prof.current.title=a.role;
-  if(a.years&&isFinite(+a.years)) prof.experience_years=+a.years;
+  if(a.years&&isFinite(+a.years)) prof.experience_years={...(typeof prof.experience_years==="object"&&prof.experience_years||{}),total:+a.years};
   if(a.domains&&!(prof.domains||[]).length) prof.domains=list(a.domains);
   if(a.tools&&!(prof.skills||[]).length) prof.skills=list(a.tools);
   if(a.win&&!(prof.scope_signals||[]).length) prof.scope_signals=[a.win];
@@ -1803,6 +1823,14 @@ function freshPanel(){
 
 /* ---------- render ---------- */
 function render(){
+  try{renderInner()}
+  catch(e){   // a screen that fails to draw shows a way out instead of a blank page; the error goes into the health note
+    noteError("render:"+S.view,e);
+    try{$("#view").innerHTML=`<div class="empty" role="alert"><h2>Something went wrong showing this page</h2><p>Your data is safe. Lodestone has noted the problem and it is checked at the next update.</p><div class="row" style="justify-content:center"><button class="btn primary" data-act="reload">Reload</button><button class="btn" data-view="${S.view==="digest"?"settings":"digest"}">Go to ${S.view==="digest"?"Profile":"Digest"}</button></div></div>`}catch{}
+  }
+  healthCheck();
+}
+function renderInner(){
   applyFamilies();
   document.querySelectorAll("[data-view]").forEach(b=>b.setAttribute("aria-current",b.dataset.view===S.view?"page":"false"));
   const todo=Object.values(S.jobs).filter(j=>prefOk(j)&&isTodo(j)).length;   // same count as the Digest header
@@ -1818,8 +1846,25 @@ function render(){
   else if(S.open&&S.jobs[S.open]) ov.innerHTML=`<div class="scrim" data-act="close"></div><aside class="drawer" role="dialog" aria-label="${esc(S.jobs[S.open].title)}">${viewDetail(S.jobs[S.open])}</aside>`;
   else ov.innerHTML="";
   if(keepId)   // after both the page and the role panel are redrawn, so focus survives a live update
-    {const el=document.getElementById(keepId);if(el&&el!==active){el.focus();try{el.setSelectionRange(caret,caret)}catch{}}}
+    {const el=document.getElementById(keepId);if(el&&el!==active){el.focus({preventScroll:true});try{el.setSelectionRange(caret,caret)}catch{}}}   // never jump the page
   trackReading();
+}
+/* Health note (D-079): saved to health/app when something material changes (at most once a minute), read by every
+   scheduled run, which flags "no roles visible", script errors or an old version. Counts only, no personal data. */
+let _healthLast="", _healthAt=0, _healthT=0;
+function healthCheck(){
+  if(!S.ready||!S.triLoaded||!S.todayLoaded||!S.db||!S.canWrite) return;
+  clearTimeout(_healthT); _healthT=setTimeout(()=>{try{
+    const js=Object.values(S.jobs), live=js.filter(j=>j.live).length, vis=js.filter(j=>prefOk(j)).length, todo=js.filter(j=>prefOk(j)&&isTodo(j)).length;
+    const h={version:APP_VERSION,jobs:js.length,live,visible:vis,to_triage:todo,today:(S.today&&S.today.ids||[]).length,no_relevance:js.filter(j=>j.live&&j.rel==null).length,
+      errors:ERRS.length,last_errors:ERRS.slice(-3).map(e=>`${e.where}: ${e.m}`),browser:(navigator.userAgent.match(/(Firefox|Edg|Chrome|Safari)\/[\d.]+/)||[""])[0],
+      view:S.view};
+    const key=JSON.stringify(h), now=Date.now();
+    if(key===_healthLast&&now-_healthAt<6*3600*1000) return;
+    if(now-_healthAt<60*1000&&_healthLast) return;
+    _healthLast=key;_healthAt=now;
+    S.db.doc("health/app").set({...h,at:new Date().toISOString()}).catch(()=>{});
+  }catch(e){}},1500);
 }
 /* Opening and closing a role moves keyboard focus sensibly: into the role, then back to the card you came from. */
 function openJob(id,idx){S.open=id;if(idx!=null)S.sel=idx;render();const h=document.getElementById("dtitle");if(h)h.focus()}
@@ -1851,6 +1896,7 @@ document.addEventListener("click",e=>{
   if(d.act==="obbanner"){lsSet("obBannerOff",true);render();return}
   if(d.act==="addrole"){const L=document.getElementById("rolelist");if(L){const n=L.querySelectorAll(".rolerow").length;L.insertAdjacentHTML("beforeend",roleRow({},"n"+Date.now()).replace(/Role n\d+/g,"Role "+(n+1)));L.lastElementChild.querySelector("input").focus();S._editingPrefs=true;markDirty()}return}
   if(d.act==="rmrole"){const r=el.closest(".rolerow");if(r){r.remove();S._editingPrefs=true;markDirty()}return}
+  if(d.act==="reload"){location.reload();return}
   if(d.act==="nudge-later"){lsSet("nudgeDay",todayKey());render();return}
   if(d.nudgeStatus){lsSet("nudgeDay",todayKey());const prof={...(S.profile||{version:0}),work_status:d.nudgeStatus};prof.version=(+prof.version||0)+1;S.profile=prof;render();
     if(S.db&&S.canWrite)S.db.doc("profile/main").set(prof).then(()=>toast("Saved. Work-permit checks now follow your answer.")).catch(()=>toast("Couldn't save. Try again."));return}

@@ -23,13 +23,17 @@ function loadExport() {
 // The fake database: the same calls the app makes on window.claude.use("db"), backed by a plain object, with live listeners.
 const MOCK = `(() => {
   const store = window.__seed || {}; const subs = [];
-  const SHARED = /^(jobs|desc|meta|reports)[/]/;   // the user's own docs survive a reload, like the real database
+  const SHARED = /^(jobs|desc|meta|reports|health)[/]/;   // the user's own docs survive a reload, like the real database
   try { const kept = JSON.parse(sessionStorage.getItem('__userdocs') || 'null'); if (kept) { Object.keys(store).filter(k => !SHARED.test(k)).forEach(k => delete store[k]); Object.assign(store, kept) } } catch (e) {}
   const persist = () => { try { sessionStorage.setItem('__userdocs', JSON.stringify(Object.fromEntries(Object.entries(store).filter(([k]) => !SHARED.test(k))))) } catch (e) {} };
   const clone = x => x == null ? x : JSON.parse(JSON.stringify(x));
+  // Like the real claude.ai database (runtime contract 0.2.80, db.d.ts): delivered snapshots and their data() are frozen,
+  // all the way down. The app runs in strict mode, so any write to them throws, exactly as it would for a real user (10-17).
+  const deepFreeze = o => { if (o && typeof o === 'object' && !Object.isFrozen(o)) { Object.freeze(o); for (const k of Object.keys(o)) deepFreeze(o[k]) } return o };
+  const frozen = x => deepFreeze(clone(x));
   const docsIn = c => Object.keys(store).filter(k => k.startsWith(c + '/') && !k.slice(c.length + 1).includes('/'))
-    .map(k => ({ id: k.slice(c.length + 1), exists: true, data: () => clone(store[k]) }));
-  const snapDoc = p => ({ id: p.split('/').pop(), exists: p in store, data: () => clone(store[p]) });
+    .map(k => { const d = frozen(store[k]); return Object.freeze({ id: k.slice(c.length + 1), exists: true, data: () => d }) });
+  const snapDoc = p => { const d = p in store ? frozen(store[p]) : undefined; return Object.freeze({ id: p.split('/').pop(), exists: p in store, data: () => d }) };
   const notify = () => { persist(); setTimeout(() => subs.forEach(s => s()), 0) };
   const writes = window.__writes = [];
   const db = {
@@ -100,7 +104,8 @@ function helpers(page, persona, out, log) {
         if (typeof S === 'undefined' || !S.ready) return null;
         const js = Object.values(S.jobs), todo = js.filter(j => prefOk(j) && inPreferred(j) && isTodo(j)).length, T = S.today;
         return { todo, ids: T && T.ids ? T.ids.length : null, missing: T && T.ids ? T.ids.filter(id => !S.jobs[id]).length : 0,
-                 famsOk: myFams().every(f => famById(f)), visibleNoRel: js.filter(j => prefOk(j) && j.rel == null && !j.captured).length };
+                 famsOk: myFams().every(f => famById(f)), visibleNoRel: js.filter(j => prefOk(j) && j.rel == null && !j.captured).length,
+                 visible: js.filter(j => prefOk(j)).length, live: js.filter(j => j.live).length, errors: ERRS.length };
       });
       if (inv) {
         h.task('Invariants');
@@ -108,7 +113,12 @@ function helpers(page, persona, out, log) {
         h.check(inv.ids === null || inv.todo === 0 || inv.ids > 0, `Today is never empty while matching roles exist (${inv.todo} matching, ${inv.ids} in Today)`);
         h.check(inv.missing === 0, `Every role in Today still exists (${inv.missing} missing)`);
         h.check(inv.famsOk, 'Saved role types are all known types');
-        h.check(inv.visibleNoRel === 0, `Every visible role has a relevance score (${inv.visibleNoRel} without)`);
+        h.check(p.id === 'resilience' || inv.visibleNoRel === 0, `Every visible role has a relevance score (${inv.visibleNoRel} without)`);
+        h.check(inv.live === 0 || inv.visible > 0, `Roles are visible (${inv.visible} of ${inv.live} live)`);
+        h.check(inv.errors === 0 || p.id === 'resilience', `No errors captured by the app (${inv.errors})`);
+        await page.waitForTimeout(1700);
+        const hn = await page.evaluate(() => window.__store['health/app'] || null);
+        h.check(p.id === 'resilience' || (hn && hn.visible > 0 && hn.version), `The app saved a health note (${hn ? `v${hn.version}, ${hn.visible} visible, ${hn.errors} errors` : 'none'})`);
       }
     } catch (e) { h.task('Invariants'); h.check(false, 'Invariant check failed to run: ' + e.message.split('\n')[0]) }
     res.pageErrors = errs; if (errs.length) failed++;

@@ -223,7 +223,7 @@ exactly this state. Fictional; mirrors the owner's real state without his data.
 3. Run setup again: his field, cities and work status are pre-selected; nothing he set is reset.
 4. Take the taste test: mostly his field, nothing he already answered; his list is full afterwards and after a reload.
 
-## Monkey test
+## Monkey and resilience tests
 `tests/personas/11_monkey.cjs`: 300 seeded random taps on every safe button, from three starting points (long-time
 user, brand-new user, phone), checking after every tap that there is no script error, the page isn't blank and Today
 isn't empty while roles match. After every persona's journey, the runner also checks invariants: no script errors,
@@ -238,6 +238,19 @@ notes are what Claude saw while playing the persona: *works*, *annoyance*, *bug*
 
 ## Findings log
 Newest first. Each finding names the persona, what happened, and what changed.
+
+### Round 7 (2026-10-17): the "no jobs" outage; 12 journeys, 336 checks, all pass (app v34)
+Postmortem: `docs/eng/postmortems/2026-10-17-no-jobs-displayed.md`. The harness now freezes everything the imitation
+database delivers, like the real one, and reproduced the outage before the fix.
+- **Everyone: no roles at all** (the app wrote onto frozen database objects). Fixed: the app works on its own copies;
+  roles without a relevance score are shown, not hidden; a screen that fails shows "Something went wrong" with a way out.
+- **New persona "resilience"** breaks things on purpose (relevance failing for every role, a crashing screen) and checks
+  the safety nets and the health note.
+- **Monkey test speed check found:** "Skip and browse" took 4.7 s (a company lookup scanned the whole list per role;
+  now 1.5 s including the test's own wait), and a tap on a covered button counted as slow (test fixed).
+- **Aisha: the page jumped back up whenever it redrew** (restoring focus scrolled to the focused heading). Fixed.
+- **Every journey now ends with invariant checks:** no script errors, roles visible, Today not empty while roles match,
+  every Today role exists, a health note saved.
 
 ### Round 6 (2026-10-17): Ayush's three bugs; 10 personas + monkey test, 274 checks, all pass (app v33)
 Ayush ran setup again from his Profile and took the taste test. Replayed with a local copy of his real settings (never

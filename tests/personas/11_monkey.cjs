@@ -18,13 +18,15 @@ module.exports = {
       h.task(`100 random taps: ${label}`);
       if (mode === 'new') { await h.page.evaluate(() => { sessionStorage.clear(); localStorage.clear() }); await h.page.evaluate(() => { for (const k of Object.keys(window.__store)) if (!/^(jobs|desc|meta|reports)\//.test(k)) delete window.__store[k] }); await h.page.reload(); await h.wait(1200) }
       if (mode === 'phone') { await h.page.setViewportSize({ width: 390, height: 844 }) }
-      let bad = [], taps = 0;
+      let bad = [], taps = 0, slow = 0, slowest = '';
       for (let i = 0; i < 100; i++) {
         const els = await h.page.locator(SAFE.map(s => s + ':visible').join(',')).all();
         if (!els.length) { bad.push(`step ${i}: nothing to tap`); break }
         const el = els[Math.floor(rnd() * els.length)];
         const what = (await el.evaluate(e => (e.getAttribute('data-act') || Object.keys(e.dataset)[0] || e.tagName) + ':' + (e.textContent || '').trim().slice(0, 20)).catch(() => '?'));
-        await el.click({ timeout: 1500, trial: false }).catch(() => {}); taps++;
+        const t0 = Date.now(); const landed = await el.click({ timeout: 1500 }).then(() => true, () => false); taps++;   // a button under an open panel can't be tapped: not a delay
+        await h.page.evaluate(() => new Promise(r => requestAnimationFrame(r)));   // the app has finished responding
+        const took = Date.now() - t0; if (landed && took > slow) { slow = took; slowest = what }
         await h.wait(60);
         const st = await h.page.evaluate(() => {
           if (typeof S === 'undefined') return { ok: false, why: 'app gone' };
@@ -38,6 +40,7 @@ module.exports = {
         if (errs.length) { bad.push(`step ${i} after ${what}: script error ${errs[0]}`); errs.length = 0 }
       }
       h.check(!bad.length, `${taps} taps with no breakage (${bad.slice(0, 2).join(' | ')})`);
+      h.check(slow < 1600, `Every tap responds within 1.6 s (slowest ${slow} ms: ${slowest})`);
       await h.shot(label.replace(/[^a-z]+/g, '-'));
     }
   }
