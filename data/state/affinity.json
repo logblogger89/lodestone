@@ -3567,5 +3567,2367 @@
   },
   "why": "Compliance program lead: AML, sanctions, privacy and regulatory plan execution",
   "at": "2026-10-17T02:15:17+00:00"
+ },
+ "bc07ae601ac5": {
+  "fingerprint": "8985126bd42c36a0",
+  "aff": {
+   "program": 95,
+   "project": 35,
+   "strategy": 30
+  },
+  "why": "Manages a team of TPMs in a new R&D PMO; builds planning cadences with product and eng leaders",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "1b9140d03779": {
+  "fingerprint": "c81ae56ff29c318f",
+  "aff": {
+   "program": 92,
+   "project": 50,
+   "strategy": 50,
+   "revops": 35
+  },
+  "why": "Runs GTM transformation programs end to end: plans, governance, dependencies, risks",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "cf2d15cf1705": {
+  "fingerprint": "34297836e15db663",
+  "aff": {
+   "pm": 90,
+   "pmm": 45,
+   "program": 25,
+   "solutions": 25
+  },
+  "why": "Owns lifecycle and roadmap of embedded solutions, voice of customer, leads GTM for launches",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "9b545e6bb895": {
+  "fingerprint": "34297836e15db663",
+  "aff": {
+   "pm": 90,
+   "pmm": 45,
+   "program": 25,
+   "solutions": 25
+  },
+  "why": "Owns lifecycle and roadmap of embedded solutions, voice of customer, leads GTM for launches",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "82c5768a7926": {
+  "fingerprint": "81f0a0cf4293939d",
+  "aff": {
+   "analytics": 40,
+   "legal": 35,
+   "finance": 25,
+   "strategy": 25
+  },
+  "why": "Second-line credit risk oversight and portfolio analytics; risk work, not mainly a listed family",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "3cdb1a7a9402": {
+  "fingerprint": "82757bba3f5c7c7b",
+  "aff": {
+   "pmm": 92,
+   "marketing": 40,
+   "strategy": 20
+  },
+  "why": "Owns competitive positioning, field assets and thought leadership for AI/agentic category",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "14cdc542172a": {
+  "fingerprint": "889a90cc9b8d7cb6",
+  "aff": {
+   "strategy": 92,
+   "program": 35,
+   "analytics": 20,
+   "finance": 20
+  },
+  "why": "Chief of staff for Audit leadership: strategy, KPIs, governance routines, exec materials",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "007df56443f2": {
+  "fingerprint": "3e48b248c7630fb6",
+  "aff": {
+   "program": 80,
+   "strategy": 45,
+   "design": 30,
+   "project": 30
+  },
+  "why": "Design ops program manager driving AI tool adoption and design system change management",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "33be3636b228": {
+  "fingerprint": "8b9b55826a25bc03",
+  "aff": {
+   "pmm": 75,
+   "program": 65,
+   "project": 35,
+   "revops": 30,
+   "marketing": 30
+  },
+  "why": "Runs GTM launch readiness and launch process across marketing, enablement and product",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "cc1d1b3a3ac3": {
+  "fingerprint": "fe5137c99988634a",
+  "aff": {
+   "solutions": 90,
+   "ba": 35,
+   "project": 30
+  },
+  "why": "Leads customer workstreams designing Salesforce solutions in professional services",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "a761d69e9d24": {
+  "fingerprint": "d61a69cea4690a60",
+  "aff": {
+   "solutions": 35,
+   "ba": 25
+  },
+  "why": "Internal technical architect for Treasury systems incl. data pipelines; mostly engineering work",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "a6cd5ed96197": {
+  "fingerprint": "b318b5bc971003d7",
+  "aff": {
+   "pm": 75,
+   "strategy": 30,
+   "program": 30,
+   "solutions": 25
+  },
+  "why": "Leads IAM product management team and roadmap plus architecture and governance functions",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "97ee04a995fd": {
+  "fingerprint": "b0779c0db109a20c",
+  "aff": {
+   "solutions": 40,
+   "strategy": 25,
+   "program": 25
+  },
+  "why": "Internal enterprise architect for capital markets tech; architecture-heavy, mostly engineering",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "a1faa8365619": {
+  "fingerprint": "73c83e58ca36e046",
+  "aff": {
+   "pmm": 95,
+   "marketing": 35
+  },
+  "why": "Owns positioning, launches, enablement and competitive intel for Stripe data products",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "bda6b69e4e53": {
+  "fingerprint": "77ebdf091d65ce67",
+  "aff": {
+   "pmm": 92,
+   "marketing": 35,
+   "strategy": 20
+  },
+  "why": "Product marketer: messaging, market research, competitive analysis and sales enablement",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "ced199abc386": {
+  "fingerprint": "da0875043335e204",
+  "aff": {
+   "program": 92,
+   "project": 35
+  },
+  "why": "Technical program manager driving data center deployment programs across HW, SW and ops",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "a2047387d317": {
+  "fingerprint": "ecebb34a67fd7e39",
+  "aff": {
+   "strategy": 85,
+   "analytics": 60,
+   "finance": 25
+  },
+  "why": "Pricing S&O: dashboards, pricing and inventory frameworks, exec reporting and execution",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "099f382d23de": {
+  "fingerprint": "6ee00a81a705a88e",
+  "aff": {
+   "pmm": 95,
+   "marketing": 40
+  },
+  "why": "Leads positioning, messaging and GTM for the AI security portfolio as an IC",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "64219401fae2": {
+  "fingerprint": "4763e61046685d08",
+  "aff": {
+   "solutions": 85,
+   "custsuccess": 40
+  },
+  "why": "Post-sale advisory consultant guiding enterprise customers to value on Atlassian products",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "de28a2f130db": {
+  "fingerprint": "1a8bc6c0d2ee9817",
+  "aff": {
+   "pmm": 95,
+   "marketing": 50
+  },
+  "why": "Leads team of ads product marketers: narrative, launches, voice of advertiser into roadmap",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "f95bf3fdf641": {
+  "fingerprint": "21d1ee031a635b00",
+  "aff": {
+   "program": 88,
+   "project": 55,
+   "revops": 25
+  },
+  "why": "TPM delivering AI, Salesforce and sales enablement initiatives across business and tech",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "de580f8d83f5": {
+  "fingerprint": "fd83a3dd3af2f0fe",
+  "aff": {
+   "pmm": 60,
+   "strategy": 60,
+   "pm": 55,
+   "sales": 40,
+   "marketing": 30
+  },
+  "why": "Product growth: commercialization, GTM, partnerships and growth strategy for life products",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "5ea2709ef1e6": {
+  "fingerprint": "06da9ff363266c5b",
+  "aff": {
+   "solutions": 75,
+   "custsuccess": 50
+  },
+  "why": "Customer-facing architect delivering proactive services, assessments and guidance post-sale",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "8e4d0cec601a": {
+  "fingerprint": "53fbd6b3c174e8e3",
+  "aff": {
+   "solutions": 80,
+   "custsuccess": 30
+  },
+  "why": "Customer-facing cloud/AI architect leading technical engagements, pilots and delivery",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "31d49d22e76d": {
+  "fingerprint": "b1e2dec3ceb77738",
+  "aff": {
+   "pm": 88,
+   "pmm": 30,
+   "strategy": 40,
+   "finance": 25
+  },
+  "why": "Owns insurance product portfolio: strategy, lifecycle, pricing and commercialization",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "558739fad521": {
+  "fingerprint": "f7d17545e00ef81d",
+  "aff": {
+   "pmm": 85,
+   "marketing": 65,
+   "sales": 35
+  },
+  "why": "Leads partner product marketing: joint messaging, co-marketing and partner pipeline",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "48c25f22bd1c": {
+  "fingerprint": "fb2be88b746bda41",
+  "aff": {
+   "program": 75,
+   "strategy": 50,
+   "pmm": 40,
+   "revops": 40
+  },
+  "why": "Despite title, a program manager aligning services to GTM growth programs and enablement",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "eb1e8ea6eeaf": {
+  "fingerprint": "14752f3620a9f472",
+  "aff": {
+   "pmm": 95,
+   "marketing": 40
+  },
+  "why": "Product marketer owning GTM, positioning and launches for payments portfolio",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "a1e07de7f554": {
+  "fingerprint": "3218e0101abe98ce",
+  "aff": {
+   "pm": 85,
+   "strategy": 35,
+   "program": 25
+  },
+  "why": "Exec owning product and tech roadmap for a digital bank; leads PMs, engineers, designers",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "08447403abf4": {
+  "fingerprint": "91ef361fcdc9b0e6",
+  "aff": {
+   "pmm": 85,
+   "marketing": 60
+  },
+  "why": "Segment product marketer: startup messaging, campaign content and sales enablement",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "ec1150b2525f": {
+  "fingerprint": "1be86ed0450fdfc2",
+  "aff": {
+   "program": 95,
+   "strategy": 40,
+   "project": 35
+  },
+  "why": "Owns integrated commercialization plan, dependencies, risks and weekly operating cadence",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "86dc00046146": {
+  "fingerprint": "d6e6c606d6988a0a",
+  "aff": {
+   "prodanalytics": 92,
+   "analytics": 65
+  },
+  "why": "Defines product metrics, builds dashboards, partners with PMs to measure features",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "e6aa2a5f913b": {
+  "fingerprint": "716fbd24bc18afbe",
+  "aff": {
+   "strategy": 80,
+   "revops": 30,
+   "analytics": 25
+  },
+  "why": "No description; judged from title: business operations lead",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "2f15dc2499ea": {
+  "fingerprint": "1c14e7ea83f544ba",
+  "aff": {
+   "solutions": 75,
+   "legal": 50
+  },
+  "why": "Customer-facing architect for cloud security compliance and GRC requirements",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "858b4d892c44": {
+  "fingerprint": "fdfc5c39a99c0c3a",
+  "aff": {
+   "solutions": 60
+  },
+  "why": "Thin description; judged from title: cloud solution architect at a consultancy",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "198e32384636": {
+  "fingerprint": "0e4c197fb1ca6d0c",
+  "aff": {
+   "strategy": 90,
+   "legal": 40,
+   "finance": 35,
+   "analytics": 20
+  },
+  "why": "Leads strategic planning, performance, governance and risk for a lending business",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "8495d7a84e04": {
+  "fingerprint": "bf165fb455da1861",
+  "aff": {
+   "pm": 65,
+   "ba": 55,
+   "project": 45,
+   "program": 25
+  },
+  "why": "Product owner for card systems: backlog, user stories, implementation and change support",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "c66ad0a4dbcf": {
+  "fingerprint": "f4810753deea490f",
+  "aff": {
+   "program": 92,
+   "project": 30
+  },
+  "why": "TPM driving cross-team platform and runtime engineering initiatives",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "55f2423d1e8f": {
+  "fingerprint": "18d30c7e5c044c4a",
+  "aff": {
+   "program": 80,
+   "strategy": 60,
+   "ba": 45,
+   "project": 30
+  },
+  "why": "Program manager building governance and operating model for carrier ecosystem",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "29de594977b1": {
+  "fingerprint": "e16934a6809b04c5",
+  "aff": {
+   "ba": 45,
+   "project": 20
+  },
+  "why": "Business analysis plus hands-on AI/automation building for IT services; partly engineering",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "f976e21e3217": {
+  "fingerprint": "81707ec4ba45dadb",
+  "aff": {
+   "program": 85,
+   "strategy": 35,
+   "design": 30,
+   "project": 30
+  },
+  "why": "Design program manager running design org programs, tooling, vendors and AI workflows",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "d481c67106e9": {
+  "fingerprint": "2801a52db2af8d10",
+  "aff": {
+   "revops": 85,
+   "program": 50,
+   "sales": 25
+  },
+  "why": "Owns sales enablement programs, playbooks, certifications and enablement KPIs",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "b585b50e220a": {
+  "fingerprint": "e6c0d6ea4606b026",
+  "aff": {
+   "pm": 88,
+   "strategy": 40,
+   "pmm": 30
+  },
+  "why": "Owns a financial product line: vision, roadmap, pricing, performance and compliance",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "50a6355cbb87": {
+  "fingerprint": "f544dce58f1cb639",
+  "aff": {
+   "strategy": 92,
+   "analytics": 45,
+   "marketing": 20
+  },
+  "why": "Consumer S&O: pricing, growth initiatives, analysis and cross-functional execution",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "5dc4e4fd4116": {
+  "fingerprint": "12242846684c0d53",
+  "aff": {
+   "solutions": 92,
+   "sales": 40
+  },
+  "why": "Presales solution engineer owning technical win: demos, POCs and workshops",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "b7a5fad012b8": {
+  "fingerprint": "100f158ed509701c",
+  "aff": {
+   "program": 65,
+   "revops": 60,
+   "pmm": 55,
+   "project": 25,
+   "marketing": 25
+  },
+  "why": "Despite title, runs services market readiness: offer launches, seller enablement, assets",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "784caa97c0e9": {
+  "fingerprint": "3cc13b4df6cdbe60",
+  "aff": {
+   "pm": 55,
+   "ba": 55,
+   "analytics": 40,
+   "prodanalytics": 30
+  },
+  "why": "Supports data product roadmap: requirements, user stories, backlog and vendor work",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "8ca0eb95b517": {
+  "fingerprint": "3dd29cf09c7de628",
+  "aff": {
+   "ba": 55,
+   "project": 45,
+   "pm": 40,
+   "program": 35,
+   "analytics": 25
+  },
+  "why": "Supports AML transformation delivery: design docs, coordination, data analysis",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "81dbaee4dd88": {
+  "fingerprint": "458c73b6dcdb5a29",
+  "aff": {
+   "program": 95,
+   "strategy": 40,
+   "pm": 30
+  },
+  "why": "Owns integrated robotaxi program plan, risks, launch readiness and exec reporting",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "16958ee18fa5": {
+  "fingerprint": "a6386fcf0a261688",
+  "aff": {
+   "pmm": 70,
+   "pm": 55,
+   "prodanalytics": 45
+  },
+  "why": "Takes products to market: target user, positioning, pricing, beta, launch, feedback",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "af889474d715": {
+  "fingerprint": "7b0b9ac6376f429f",
+  "aff": {
+   "strategy": 85,
+   "analytics": 60,
+   "finance": 25
+  },
+  "why": "Pricing S&O: dashboards, pricing and inventory frameworks, exec reporting and execution",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "fa9d16c90e29": {
+  "fingerprint": "961daf9d26037916",
+  "aff": {
+   "solutions": 90,
+   "sales": 20
+  },
+  "why": "Customer-facing architect for frontier AI startups; feeds patterns back to product teams",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "ef36125d2769": {
+  "fingerprint": "5246171860f45a96",
+  "aff": {
+   "pm": 70,
+   "ba": 35,
+   "analytics": 35,
+   "strategy": 30,
+   "finance": 25
+  },
+  "why": "Bank product manager: chequing strategy, pricing, performance and lifecycle",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "cdfddd9139a4": {
+  "fingerprint": "1b6868c7273bd9c3",
+  "aff": {
+   "analytics": 60,
+   "pm": 55,
+   "strategy": 45,
+   "program": 30,
+   "marketing": 25
+  },
+  "why": "Owns leads acquisition program with heavy forecasting, reporting and funnel analytics",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "03e50fb90f6a": {
+  "fingerprint": "0e752820e873f327",
+  "aff": {
+   "solutions": 90,
+   "ba": 40,
+   "project": 30
+  },
+  "why": "Professional services architect designing and delivering customer search/AI solutions",
+  "at": "2026-10-17T10:54:36+00:00"
+ },
+ "124fa9bd8c56": {
+  "fingerprint": "46fc1970a205f087",
+  "aff": {
+   "pm": 80,
+   "project": 40,
+   "pmm": 20
+  },
+  "why": "Supports a group benefits product portfolio: launches, market research, governance",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "ac8c304f07e6": {
+  "fingerprint": "dc44e36865dbf86e",
+  "aff": {
+   "solutions": 25,
+   "ba": 20
+  },
+  "why": "Hands-on internal data architect; engineering work, not one of these families",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "2bf782417522": {
+  "fingerprint": "b1add490a6ffbab9",
+  "aff": {
+   "solutions": 88,
+   "project": 50,
+   "custsuccess": 40
+  },
+  "why": "Leads customer migration engagements to go-live as trusted technical advisor",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "b1971ebfe0dd": {
+  "fingerprint": "dc182acbef2385db",
+  "aff": {
+   "revops": 75,
+   "pm": 50,
+   "program": 30,
+   "marketing": 20
+  },
+  "why": "Business owner of sales enablement platform: rollout, content governance, adoption",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "5c3a9cf05379": {
+  "fingerprint": "482bcdb7f00f3197",
+  "aff": {
+   "solutions": 85,
+   "sales": 40
+  },
+  "why": "No description; judged from title: partner-facing solution architect",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "9b66305e814a": {
+  "fingerprint": "9b4180ae5ee59328",
+  "aff": {
+   "solutions": 90,
+   "sales": 40
+  },
+  "why": "No description; from title: pre-sales solution engineer for enterprise merchants",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "62167b451a4c": {
+  "fingerprint": "a3992debcc151656",
+  "aff": {
+   "pm": 90,
+   "ba": 35,
+   "program": 25,
+   "strategy": 25
+  },
+  "why": "Owns liquidity product lifecycle: requirements, roadmap input, launches, market analysis",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "47d610267abc": {
+  "fingerprint": "38bdcb0a68a5407e",
+  "aff": {
+   "solutions": 80,
+   "sales": 45,
+   "pm": 30,
+   "program": 25
+  },
+  "why": "Owns technical strategy and integrations with strategic partners; no quota; shapes product",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "4ae3c0dfd849": {
+  "fingerprint": "64b95799c192c76c",
+  "aff": {
+   "pmm": 92,
+   "marketing": 45
+  },
+  "why": "Positioning, launches and adoption programs for privacy products",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "dddf5c3451df": {
+  "fingerprint": "97426eba0f7f08d8",
+  "aff": {
+   "solutions": 90,
+   "sales": 40
+  },
+  "why": "Pre-sales SecOps specialist: demos, architecture talks, supports sales strategy",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "cc2953934963": {
+  "fingerprint": "27c76ea7fefe3da8",
+  "aff": {
+   "solutions": 80
+  },
+  "why": "Cloud security consulting: customer blueprints, paid services, POCs; fairly technical",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "487971125583": {
+  "fingerprint": "44ac91d09ddb87f6",
+  "aff": {
+   "program": 95,
+   "project": 40,
+   "strategy": 25
+  },
+  "why": "Leads a TPM team driving multi-year technical programs and cross-team execution",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "96aec053b8b0": {
+  "fingerprint": "80a909d672749940",
+  "aff": {
+   "legal": 75,
+   "strategy": 30,
+   "program": 25,
+   "project": 15
+  },
+  "why": "Compliance testing, risk assessment and monitoring for a regulatory compliance program",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "d73a2f49744c": {
+  "fingerprint": "5edbe67fcf3eede7",
+  "aff": {
+   "solutions": 75,
+   "strategy": 20
+  },
+  "why": "Description is only site navigation; from title: AI cloud solution architect at a consultancy",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "7c18d1136fe9": {
+  "fingerprint": "943fc7c5706beae2",
+  "aff": {
+   "pmm": 95,
+   "marketing": 45
+  },
+  "why": "Owns commerce positioning, messaging, launches and GTM with demand gen",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "3a21a44a861b": {
+  "fingerprint": "a854433d1c157602",
+  "aff": {
+   "strategy": 55,
+   "revops": 35,
+   "program": 45,
+   "sales": 30
+  },
+  "why": "Commercial management for EA SPORTS: distribution, offers, revenue forecasting across teams",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "da7301f2b65f": {
+  "fingerprint": "12cead976154af8c",
+  "aff": {
+   "pmm": 92,
+   "marketing": 50
+  },
+  "why": "Positioning and GTM for Instacart+ membership; lifecycle and growth marketing ties",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "19bcc9c4bab6": {
+  "fingerprint": "32516456b7fbf0bb",
+  "aff": {
+   "pm": 80,
+   "ba": 40,
+   "program": 15
+  },
+  "why": "Product owner for detection engineering: vision, backlog, release priorities",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "90ea1f5ace35": {
+  "fingerprint": "d218a51d3b641b87",
+  "aff": {
+   "program": 80,
+   "strategy": 35,
+   "project": 40
+  },
+  "why": "No description; from title: runs a founders-in-residence program at an AI institute",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "9a0bcb3f2b79": {
+  "fingerprint": "f0ad3b7718597035",
+  "aff": {
+   "pm": 80,
+   "ba": 40,
+   "project": 20
+  },
+  "why": "Product owner for CI/CD tooling: vision, MVP, backlog by value, stakeholder buy-in",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "1a3ae2cc13a3": {
+  "fingerprint": "ceccd3a414f7b358",
+  "aff": {
+   "program": 90,
+   "project": 55,
+   "strategy": 30,
+   "ba": 20
+  },
+  "why": "Portfolio intake, prioritization, governance and delivery of investment tech initiatives",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "483db362519f": {
+  "fingerprint": "873acfbed69a3a97",
+  "aff": {
+   "solutions": 85,
+   "sales": 40
+  },
+  "why": "No description; from title: partner-facing solutions architect for cross-border and tax",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "b58b16fea3d3": {
+  "fingerprint": "138721c3773ec6d0",
+  "aff": {
+   "pm": 92,
+   "program": 20
+  },
+  "why": "Fibe TV product strategy, roadmap, launches and optimization across devices",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "39d9752b6999": {
+  "fingerprint": "622763575532b55a",
+  "aff": {
+   "program": 80,
+   "people": 50,
+   "strategy": 45,
+   "finance": 15
+  },
+  "why": "Runs workforce planning cycles and governance across Finance, HR and business units",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "37101f0779ed": {
+  "fingerprint": "d0edb18591a2f338",
+  "aff": {
+   "strategy": 80,
+   "pmm": 45,
+   "pm": 35,
+   "sales": 15
+  },
+  "why": "Industry strategy and GTM for AEC project delivery: market sizing, value props, partners",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "706b5804c1c7": {
+  "fingerprint": "e044ab8e60cf66c8",
+  "aff": {
+   "solutions": 65,
+   "pm": 15
+  },
+  "why": "Client-facing solution architecture for a fund accounting platform; technical authority",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "c6a7315ff77c": {
+  "fingerprint": "8117e699f318fcd3",
+  "aff": {
+   "solutions": 55
+  },
+  "why": "Solution architecture for digital banking apps; hands-on technical, some client context",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "bedb7bdc1601": {
+  "fingerprint": "cadef4e7ab262128",
+  "aff": {
+   "solutions": 60,
+   "strategy": 20
+  },
+  "why": "Enterprise solution architecture and roadmaps for clients; trusted advisor role",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "0406264c3cdb": {
+  "fingerprint": "b2238cd426273763",
+  "aff": {
+   "strategy": 95,
+   "people": 40,
+   "program": 45
+  },
+  "why": "Operationalizes People Experience strategy: plans, operating rhythms, reports to CoS",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "56f90c51536a": {
+  "fingerprint": "da97a63557cf71e7",
+  "aff": {
+   "pm": 45,
+   "uxr": 45,
+   "program": 30,
+   "strategy": 25
+  },
+  "why": "Leads FC player-experience quality: playtesting, research and competitive analysis",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "86a59a550ef0": {
+  "fingerprint": "9f77a070c1538240",
+  "aff": {
+   "pm": 80,
+   "ba": 45,
+   "program": 15
+  },
+  "why": "Product owner for identity governance: vision, roadmap, backlog, requirements",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "8e405ac56d2e": {
+  "fingerprint": "0cd7a794358d5f15",
+  "aff": {
+   "program": 95,
+   "project": 40
+  },
+  "why": "Owns delivery, governance, roadmap and capacity for cloud platform programs",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "4c958be5a45f": {
+  "fingerprint": "c269569459c04488",
+  "aff": {
+   "pmm": 95,
+   "marketing": 50
+  },
+  "why": "Leads NetSuite product marketing org: portfolio positioning, launches, competitive narrative",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "b95b95521369": {
+  "fingerprint": "5d4c21ad3f819a3d",
+  "aff": {
+   "solutions": 90,
+   "sales": 40
+  },
+  "why": "No description; from title: pre-sales solution engineer for mid-market merchants",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "f6919850d499": {
+  "fingerprint": "e1ec53be5113c56c",
+  "aff": {
+   "pmm": 95,
+   "marketing": 45,
+   "pm": 15
+  },
+  "why": "Owns Billing GTM, positioning, launches and adoption; leads a PMM team",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "454ec1c3638e": {
+  "fingerprint": "a670d9d7d006149e",
+  "aff": {
+   "program": 90,
+   "project": 60
+  },
+  "why": "Owns schedule and budget for quantum hardware delivery and a DARPA program",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "9aa3cfa6d149": {
+  "fingerprint": "705f947f76f51bf7",
+  "aff": {
+   "program": 85,
+   "project": 55
+  },
+  "why": "Runs Windows Security co-engineering programs with Microsoft and OEMs; schedules, risks",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "4c2bb3c7ad09": {
+  "fingerprint": "23afe36e9335bff6",
+  "aff": {
+   "solutions": 85,
+   "sales": 45
+  },
+  "why": "Description truncated; from title: pre-sales solution engineer for Confluent at IBM",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "b982d6fa8642": {
+  "fingerprint": "609c99550d29b900",
+  "aff": {
+   "strategy": 75,
+   "finance": 30,
+   "project": 35,
+   "program": 30
+  },
+  "why": "Real estate portfolio strategy: business cases, options analysis, executive decisions",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "3f14c40c17af": {
+  "fingerprint": "f4e704944a0ea44a",
+  "aff": {
+   "revops": 80,
+   "strategy": 65,
+   "analytics": 30
+  },
+  "why": "Sales planning: segmentation, account assignment and quotas for Amazon Ads sellers",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "934707650b1f": {
+  "fingerprint": "90a79fab05ed6f80",
+  "aff": {
+   "solutions": 60
+  },
+  "why": "Architecture advisor for a client's tech ecosystem; technical design and modernization",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "45bba67f347b": {
+  "fingerprint": "913eabdeb3f7f2e6",
+  "aff": {
+   "analytics": 45,
+   "legal": 35,
+   "strategy": 30,
+   "finance": 15
+  },
+  "why": "Second-line credit risk oversight: challenge, analytics and portfolio monitoring",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "e901230cf6aa": {
+  "fingerprint": "65bc5c514e0a8bc5",
+  "aff": {
+   "program": 85,
+   "pm": 30,
+   "strategy": 25
+  },
+  "why": "Cyber program manager: network security roadmap, standards, prioritization, dependencies",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "18ec979b3de6": {
+  "fingerprint": "60079c31d85a7c12",
+  "aff": {
+   "pm": 65,
+   "ba": 45,
+   "program": 15
+  },
+  "why": "Description is only site navigation; from title: product owner for SAP integrations",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "b4147775cc05": {
+  "fingerprint": "42c52704f9bec194",
+  "aff": {
+   "pmm": 95,
+   "marketing": 45,
+   "strategy": 15
+  },
+  "why": "Leads B2B enterprise product marketing: positioning and GTM for retailers and brands",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "0077c4917e03": {
+  "fingerprint": "d20fe3f002e33829",
+  "aff": {
+   "solutions": 40
+  },
+  "why": "Internal payments solution architect; design-focused technical role, not customer-facing",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "0384eadc28d4": {
+  "fingerprint": "725ace76d0276a44",
+  "aff": {
+   "solutions": 60,
+   "ba": 55,
+   "people": 25,
+   "strategy": 25
+  },
+  "why": "Bridges People teams and IT: turns HR needs into AI-enabled systems and processes",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "29fb2b4750b8": {
+  "fingerprint": "59c405bef444dc8a",
+  "aff": {
+   "program": 75,
+   "strategy": 50,
+   "project": 45
+  },
+  "why": "Program governance and portfolio planning for a commercial financing transformation",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "54df032d0943": {
+  "fingerprint": "fad7ecf79aeebebc",
+  "aff": {
+   "custsuccess": 80,
+   "program": 60,
+   "strategy": 20
+  },
+  "why": "Designs and runs client success programs for adoption, value and retention",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "1d4cc40518a3": {
+  "fingerprint": "81cf68b2169a24ed",
+  "aff": {
+   "custsuccess": 80,
+   "program": 60,
+   "strategy": 20
+  },
+  "why": "Designs and runs client success programs for adoption, value and retention",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "2409396791e9": {
+  "fingerprint": "e8eaa5d31cc3bb3d",
+  "aff": {
+   "pmm": 95,
+   "marketing": 45,
+   "pm": 20
+  },
+  "why": "Positioning, GTM, pricing input for trading products; voice of customer to roadmap",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "6f52c4cc6ada": {
+  "fingerprint": "18d98d2b84c4e47a",
+  "aff": {
+   "pm": 40,
+   "legal": 55,
+   "program": 30,
+   "ba": 30
+  },
+  "why": "Tax operations product lead: FATCA/CRS compliance, controls and change across the bank",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "6c46c9b37bd1": {
+  "fingerprint": "878a5b77c29b35a3",
+  "aff": {
+   "pm": 70,
+   "ba": 40,
+   "strategy": 35,
+   "program": 25
+  },
+  "why": "Product owner for FX operations platform: backlog, process design, KPIs, compliance",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "a0931cb9896c": {
+  "fingerprint": "6663e398238447f7",
+  "aff": {
+   "solutions": 92,
+   "sales": 40
+  },
+  "why": "Pre-sales: technical discovery, demos, POCs and RFPs with sales",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "c650bb8e0506": {
+  "fingerprint": "2a9cd2b694711076",
+  "aff": {
+   "solutions": 90,
+   "sales": 45
+  },
+  "why": "Pre-sales consultant: discovery with CS leaders and custom demos alongside AEs",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "49f2e2e6826a": {
+  "fingerprint": "0f8683c879b224d9",
+  "aff": {
+   "program": 80,
+   "project": 70,
+   "custsuccess": 25
+  },
+  "why": "Oversees consulting project delivery across accounts; supports PMs on time and budget",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "ac790ce5b1e9": {
+  "fingerprint": "ea0f005dee5ba6c0",
+  "aff": {
+   "pmm": 95,
+   "marketing": 45,
+   "strategy": 20
+  },
+  "why": "Leads commercialization and GTM for US Home Care: positioning, segments, enablement",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "c73b7c39ceef": {
+  "fingerprint": "192cc3b0824f7518",
+  "aff": {
+   "marketing": 70,
+   "program": 55,
+   "revops": 35,
+   "sales": 25
+  },
+  "why": "Runs pipeline-generation campaigns across marketing, partners and sellers",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "a54423079a8d": {
+  "fingerprint": "d79df4b515a24e45",
+  "aff": {
+   "program": 75,
+   "project": 35
+  },
+  "why": "Vendor enablement programs for data center hardware: qualification, KPIs, risks",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "fd0e9e64580a": {
+  "fingerprint": "897802105fa038af",
+  "aff": {
+   "ba": 75,
+   "pm": 35,
+   "prodanalytics": 10
+  },
+  "why": "Liaison turning logistics business needs into requirements; feasibility and facilitation",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "1a249fc6a5b1": {
+  "fingerprint": "551582b4bcad3f36",
+  "aff": {
+   "program": 95,
+   "project": 45
+  },
+  "why": "Owns end-to-end delivery of hardware product programs: dependencies, risks, schedule",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "fd80c1237b35": {
+  "fingerprint": "0711ae14d3e7cca2",
+  "aff": {
+   "solutions": 40,
+   "strategy": 20
+  },
+  "why": "Internal architecture strategy lead for Group Benefits; mostly technical leadership",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "33c441411098": {
+  "fingerprint": "f2b43f76ff69f485",
+  "aff": {
+   "program": 60,
+   "strategy": 30,
+   "project": 15
+  },
+  "why": "Owns Jira tooling strategy and workflows for an engineering org; process-heavy TPM",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "a4d3d8885d2d": {
+  "fingerprint": "39c436b5929e3e08",
+  "aff": {
+   "solutions": 75,
+   "sales": 35,
+   "pmm": 30
+  },
+  "why": "Finance-domain expert enabling partner consultants to position and demo Workday AI",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "35c7ddd58cf3": {
+  "fingerprint": "e15767a93320655e",
+  "aff": {
+   "solutions": 35
+  },
+  "why": "Internal data and AI architecture lead; mostly technical design, not customer-facing",
+  "at": "2026-10-17T10:54:37+00:00"
+ },
+ "6ff7794e37c4": {
+  "fingerprint": "f1c8ef9f6ea2b7fb",
+  "aff": {
+   "program": 55,
+   "sales": 50,
+   "strategy": 35,
+   "revops": 25
+  },
+  "why": "Runs global training-partner program: partner recruiting, KPIs, business reviews with sales/channel",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "7eec66cf5982": {
+  "fingerprint": "570652c548578d5d",
+  "aff": {
+   "solutions": 95,
+   "sales": 30
+  },
+  "why": "Pre-sales technical advisor: discovery, demos, evaluations alongside account executives",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "f095a7aacbaf": {
+  "fingerprint": "cce36438fa08ef53",
+  "aff": {
+   "solutions": 65,
+   "ba": 25
+  },
+  "why": "No description: judged from title; CGI consulting solution architect for client delivery",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "727b61633c79": {
+  "fingerprint": "8dbd4aab4417ebc0",
+  "aff": {
+   "pmm": 95,
+   "marketing": 40,
+   "pm": 25
+  },
+  "why": "Owns positioning, messaging, market research and GTM for hardware/software products",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "5d599f5b5516": {
+  "fingerprint": "a41e9fa64055495c",
+  "aff": {
+   "solutions": 25
+  },
+  "why": "Internal GenAI architecture for the bank; mostly engineering design, not these families",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "63a2e6e8cb79": {
+  "fingerprint": "fa9123726f8c8faa",
+  "aff": {
+   "solutions": 45,
+   "ba": 25
+  },
+  "why": "Designs platform solution blueprints from business requirements; largely technical architecture",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "69daf9cf57a6": {
+  "fingerprint": "6970aafc810a7fe1",
+  "aff": {
+   "solutions": 95,
+   "sales": 30
+  },
+  "why": "Pre-sales solution engineer: discovery, demos and solution design with sales teams",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "ae048f4234be": {
+  "fingerprint": "c92457ab795db7f2",
+  "aff": {
+   "solutions": 90,
+   "sales": 35,
+   "ba": 25
+  },
+  "why": "Pre-sales architect for pension/benefits deals: discovery, solution design, finalist pitches",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "20e4160d02a8": {
+  "fingerprint": "45bf54a1dcac3750",
+  "aff": {
+   "solutions": 90,
+   "sales": 25
+  },
+  "why": "Senior SE for MSSP partners and AI security: discovery, design workshops, proofs of value",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "c66b4c6ce760": {
+  "fingerprint": "d6f10410b904ed63",
+  "aff": {
+   "pm": 95,
+   "strategy": 30
+  },
+  "why": "Leads endpoint product line: strategy, roadmap, financial targets, cross-sell",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "c3d600df08ba": {
+  "fingerprint": "556cfa9bcea21b40",
+  "aff": {
+   "pmm": 95,
+   "marketing": 45,
+   "pm": 20
+  },
+  "why": "Leads product marketing function: adoption, positioning and launches across products",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "4dc90b4e253d": {
+  "fingerprint": "9847622f077b8ca2",
+  "aff": {
+   "solutions": 45,
+   "ba": 35
+  },
+  "why": "No description: judged from title; likely enterprise-apps solution architecture",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "259b18898712": {
+  "fingerprint": "6733b434a48591a5",
+  "aff": {
+   "program": 75,
+   "strategy": 35,
+   "legal": 20
+  },
+  "why": "Thin description: judged from title; runs supplier risk and relationship program",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "f2f604fd5458": {
+  "fingerprint": "46eb99b78559a8ae",
+  "aff": {
+   "program": 95,
+   "project": 40
+  },
+  "why": "TPM driving schedules, dependencies and risks for silicon software/validation delivery",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "13ded43c03de": {
+  "fingerprint": "ae931ca3497549c9",
+  "aff": {
+   "program": 95,
+   "project": 40
+  },
+  "why": "TPM driving schedules, dependencies and risks for silicon software/validation delivery",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "e83e232d0b44": {
+  "fingerprint": "822f93c5f62317ac",
+  "aff": {
+   "solutions": 20,
+   "ba": 15
+  },
+  "why": "Engineering lead for CPQ implementations (code reviews, design); engineering, not these families",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "c1efd816b4eb": {
+  "fingerprint": "eb75a870fa6fc12c",
+  "aff": {
+   "program": 85,
+   "project": 50,
+   "strategy": 25
+  },
+  "why": "Runs learning-content program portfolio: intake, scoping, schedules, operating model",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "683bb3186bca": {
+  "fingerprint": "8c235a1a79583233",
+  "aff": {
+   "program": 65,
+   "people": 40,
+   "project": 35,
+   "strategy": 30
+  },
+  "why": "Leads national training programs and team; learning strategy and portfolio governance",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "1e9c55c66c55": {
+  "fingerprint": "f14a8273da3e1613",
+  "aff": {
+   "solutions": 70,
+   "custsuccess": 65,
+   "sales": 25
+  },
+  "why": "Consults ad-tech customers post-sale: onboarding, training, campaign optimization",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "f22b55e33c1b": {
+  "fingerprint": "f5f03b33f897557b",
+  "aff": {
+   "solutions": 20
+  },
+  "why": "Internal digital technical architecture and developer enablement; engineering work",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "c2c95aa585bc": {
+  "fingerprint": "43b6708530c255f3",
+  "aff": {
+   "solutions": 25
+  },
+  "why": "Internal IT solution architecture for banking platforms; engineering work, not these families",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "f80f68cb428e": {
+  "fingerprint": "810d8d5e265349e0",
+  "aff": {
+   "solutions": 60,
+   "ba": 30
+  },
+  "why": "No description: judged from title; SAP solution architecture for consulting clients",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "9b7c6576da56": {
+  "fingerprint": "cb815899acb66407",
+  "aff": {
+   "pmm": 95,
+   "marketing": 45,
+   "pm": 20
+  },
+  "why": "Leads product marketing: GTM, positioning, enablement, analyst relations, launches",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "d6941b26bf99": {
+  "fingerprint": "410b2a01d3124487",
+  "aff": {
+   "program": 90,
+   "project": 50
+  },
+  "why": "TPM accountable for SDLC delivery of insurance tech initiatives: scope, schedule, risk",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "6b77ad4aa4ef": {
+  "fingerprint": "bd1e3d35b3a5ada3",
+  "aff": {
+   "program": 90,
+   "project": 50
+  },
+  "why": "TPM leading cross-team insurance technology initiatives end to end",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "9e31db31f98b": {
+  "fingerprint": "d5a516128f5356f1",
+  "aff": {
+   "program": 90,
+   "project": 50,
+   "pm": 20
+  },
+  "why": "TPM delivering health and wellness tech initiatives across marketing, product and IT",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "7425dd8c7ba8": {
+  "fingerprint": "9f167d489f2dc5c3",
+  "aff": {
+   "solutions": 20,
+   "analytics": 15
+  },
+  "why": "Data architecture design for investments domain; engineering, not these families",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "0432e79d4f8c": {
+  "fingerprint": "bc40f3c824bc6a85",
+  "aff": {
+   "solutions": 20,
+   "analytics": 15
+  },
+  "why": "Data architecture design for investments domain; engineering, not these families",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "a82ce74b4cf8": {
+  "fingerprint": "2ac27a09144a2ddd",
+  "aff": {
+   "solutions": 25,
+   "program": 15
+  },
+  "why": "Leads internal solution architecture practice; engineering architecture, not these families",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "cb9a9e8a777a": {
+  "fingerprint": "d586ee209c7818e4",
+  "aff": {
+   "analytics": 55,
+   "custsuccess": 45,
+   "program": 35,
+   "uxr": 20,
+   "prodanalytics": 20
+  },
+  "why": "Runs client feedback/VoC program: survey platform admin, CX dashboards and insights",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "b7c5cdc98993": {
+  "fingerprint": "cd4a2db0d6ac326b",
+  "aff": {
+   "custsuccess": 70,
+   "program": 60,
+   "strategy": 40,
+   "revops": 20
+  },
+  "why": "Designs and runs client success programs: onboarding, adoption, retention frameworks",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "599ccbc6c198": {
+  "fingerprint": "b9901e56ba8f6fea",
+  "aff": {
+   "solutions": 95,
+   "sales": 35
+  },
+  "why": "Pre-sales solution consultant demonstrating NetSuite ERP to executive prospects",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "1589438593a0": {
+  "fingerprint": "c3503f2d75b46c99",
+  "aff": {
+   "pmm": 95,
+   "marketing": 45
+  },
+  "why": "Leads PMM team; owns positioning, messaging architecture and GTM programs",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "ca49399ac879": {
+  "fingerprint": "1685538057f8bdcd",
+  "aff": {
+   "program": 90,
+   "project": 50
+  },
+  "why": "Runs customer-facing semiconductor programs: schedules, risks, SoW delivery",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "90cdc7646ad9": {
+  "fingerprint": "4341a915abff2f27",
+  "aff": {
+   "pm": 25,
+   "solutions": 15
+  },
+  "why": "Windows platform principal engineer and technical owner; engineering, not these families",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "a3d2d16fa6a2": {
+  "fingerprint": "acb89b10afab71b5",
+  "aff": {
+   "strategy": 85,
+   "revops": 60,
+   "analytics": 30,
+   "project": 25
+  },
+  "why": "Works with VP Sales on strategic projects, process optimization and performance analysis",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "1686ff774e6c": {
+  "fingerprint": "1a0d17808d040522",
+  "aff": {
+   "ba": 90,
+   "project": 30,
+   "program": 25,
+   "analytics": 20
+  },
+  "why": "Gathers requirements, documents processes and user stories for investment platforms",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "bc2e8dbf07aa": {
+  "fingerprint": "dde96d6ab1ef8d70",
+  "aff": {
+   "program": 55,
+   "strategy": 55,
+   "analytics": 45
+  },
+  "why": "Leads transportation volume and peak-event planning; scenarios and recommendations to leaders",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "a86cd1523e18": {
+  "fingerprint": "903abcb578fb017f",
+  "aff": {
+   "program": 90,
+   "project": 60
+  },
+  "why": "TPM running network engineering projects: schedules, risks, cross-team delivery",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "28569434277c": {
+  "fingerprint": "4c0ece2bb9f32635",
+  "aff": {
+   "program": 90,
+   "project": 60
+  },
+  "why": "TPM running network engineering projects: schedules, risks, cross-team delivery",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "70a919cee475": {
+  "fingerprint": "5f7ee1803fd0f714",
+  "aff": {
+   "solutions": 60,
+   "project": 20
+  },
+  "why": "Post-sale implementation consultant; hands-on JS development for customer deployments",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "f865c7dfe31d": {
+  "fingerprint": "fd753a1e73345534",
+  "aff": {
+   "solutions": 55,
+   "pm": 25
+  },
+  "why": "No description: judged from title; solution architecture for supply chain product",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "c9ea854c9e02": {
+  "fingerprint": "bac5408aca000845",
+  "aff": {
+   "pmm": 90,
+   "marketing": 45
+  },
+  "why": "Product marketing: positioning, launches and GTM for backup SaaS",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "1ae4fdcf0ec8": {
+  "fingerprint": "c93bb11916177a7c",
+  "aff": {
+   "pm": 55,
+   "project": 45,
+   "strategy": 30,
+   "finance": 25
+  },
+  "why": "Owns data-center infrastructure product lifecycle: costs, vendors, backlog, KPIs",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "d52c7f8e831c": {
+  "fingerprint": "cc8d74a5f65669c8",
+  "aff": {
+   "program": 90,
+   "project": 55,
+   "custsuccess": 35
+  },
+  "why": "Leads large client delivery programs: workstreams, dependencies, risks, exec governance",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "2421d6493143": {
+  "fingerprint": "b29db46ffeed1359",
+  "aff": {
+   "solutions": 80,
+   "custsuccess": 50,
+   "project": 35
+  },
+  "why": "Leads customer onboarding and ERP implementation; configures product to requirements",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "57e9fce39393": {
+  "fingerprint": "fc3be9f32996f47b",
+  "aff": {
+   "pmm": 90,
+   "marketing": 50
+  },
+  "why": "Owns positioning, messaging and content strategy for a migration program",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "8163111596b1": {
+  "fingerprint": "51b4a5aefb502219",
+  "aff": {
+   "revops": 85,
+   "strategy": 55,
+   "analytics": 30
+  },
+  "why": "Sales ops: territory planning, pipeline forecasting, CRM hygiene and deal desk",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "8ddce3c2782b": {
+  "fingerprint": "c7c07ee09c2871e5",
+  "aff": {
+   "program": 90,
+   "project": 65
+  },
+  "why": "TPM single-threaded owner for data-center capacity delivery across teams",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "97bd007881b0": {
+  "fingerprint": "386d861ebf6df2cf",
+  "aff": {
+   "custsuccess": 55,
+   "program": 55,
+   "marketing": 30,
+   "project": 25
+  },
+  "why": "Owns customer live-learning program: workshops, calendar, presenters, direction",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "43578162ea76": {
+  "fingerprint": "6963659bd2af7979",
+  "aff": {
+   "solutions": 25,
+   "ba": 15
+  },
+  "why": "Internal application solution architecture; engineering work, not these families",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "793324fd41aa": {
+  "fingerprint": "f11032659d1fa8a6",
+  "aff": {
+   "solutions": 25
+  },
+  "why": "Azure cloud network architecture and implementation; engineering, not these families",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "a00914cab567": {
+  "fingerprint": "5306f388a4befa46",
+  "aff": {
+   "solutions": 25
+  },
+  "why": "No description: judged from title; infrastructure/storage architecture, engineering work",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "04f213bc9c1a": {
+  "fingerprint": "e212b863ee860904",
+  "aff": {
+   "solutions": 90,
+   "custsuccess": 30,
+   "sales": 25
+  },
+  "why": "Solutions engineer: technical demos, customer implementations and integrations",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "5b0681e3c10e": {
+  "fingerprint": "be08f71d005ca584",
+  "aff": {
+   "pm": 65,
+   "strategy": 40,
+   "pmm": 35,
+   "sales": 35
+  },
+  "why": "Category product manager owning strategy, sales targets and profitability with channels",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "4f7f5405f272": {
+  "fingerprint": "400012a4f48a9849",
+  "aff": {
+   "pm": 65,
+   "pmm": 40,
+   "strategy": 40,
+   "sales": 30
+  },
+  "why": "Owns product line-up, launch timing, pricing and forecasts for local market",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "731cde1eb62a": {
+  "fingerprint": "95702319bbe9d97b",
+  "aff": {
+   "program": 60,
+   "strategy": 40,
+   "analytics": 35,
+   "project": 30
+  },
+  "why": "Drives internal AI initiatives across teams; builds tools, tracks projects, ad hoc analysis",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "96ec3d669f80": {
+  "fingerprint": "8c129cd5100f8574",
+  "aff": {
+   "pmm": 95,
+   "marketing": 40
+  },
+  "why": "Owns GTM, positioning and launches for procurement suite; buyer and win/loss research",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "a3d6af03f16a": {
+  "fingerprint": "caac2445381ab92b",
+  "aff": {
+   "pmm": 95,
+   "marketing": 40
+  },
+  "why": "Owns business-unit GTM, positioning, launches and PMM success metrics",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "2b75ff3e8b6f": {
+  "fingerprint": "a7ce4b2b9cee62b7",
+  "aff": {
+   "pmm": 95,
+   "marketing": 40
+  },
+  "why": "Leads messaging, GTM strategy, launches and sales enablement",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "34ca79431d23": {
+  "fingerprint": "a7ce4b2b9cee62b7",
+  "aff": {
+   "pmm": 95,
+   "marketing": 40,
+   "pm": 20,
+   "sales": 15
+  },
+  "why": "Positions and launches products with Product, Sales and Marketing",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "8a2c31c0ce4f": {
+  "fingerprint": "450215b06a41dd79",
+  "aff": {
+   "program": 70,
+   "sales": 55,
+   "marketing": 30,
+   "strategy": 30
+  },
+  "why": "Runs ecosystem programs and manages strategic partners and developer community",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "acc3fecfa3e3": {
+  "fingerprint": "450215b06a41dd79",
+  "aff": {
+   "program": 70,
+   "sales": 55,
+   "marketing": 30,
+   "strategy": 30
+  },
+  "why": "Runs ecosystem programs and manages strategic partners and developer community",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "3c438f08dc6c": {
+  "fingerprint": "f1e499c345e088c9",
+  "aff": {
+   "solutions": 25,
+   "project": 15
+  },
+  "why": "Hands-on infrastructure engineering (Nutanix/VMware); not customer solutions work",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "5c2fe978b77f": {
+  "fingerprint": "4e6fb4f3c3461bd1",
+  "aff": {
+   "program": 60,
+   "project": 50,
+   "analytics": 45,
+   "people": 40,
+   "strategy": 40,
+   "ba": 40
+  },
+  "why": "Runs HR transformation programs plus data analysis and process/tech design",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "5568fe61cb9c": {
+  "fingerprint": "84b2fa1361d8813d",
+  "aff": {
+   "solutions": 25,
+   "ba": 15
+  },
+  "why": "Internal technical architect for a document AI platform; engineering-type work",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "10159b3a7826": {
+  "fingerprint": "b8f03815afd62d92",
+  "aff": {
+   "custsuccess": 45,
+   "solutions": 45,
+   "ba": 35,
+   "finance": 25
+  },
+  "why": "Supports advisors on planning tools: UAT, coaching, docs; internal solutions support",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "cf3132b31f2b": {
+  "fingerprint": "b18c57a77a294df1",
+  "aff": {
+   "program": 70,
+   "people": 50,
+   "strategy": 45,
+   "project": 40,
+   "custsuccess": 30
+  },
+  "why": "Runs EOR HR ops programs: processes, country launches, enablement, support tooling",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "98daee4df8bb": {
+  "fingerprint": "957c58d6f32c773b",
+  "aff": {
+   "marketing": 85,
+   "pmm": 55,
+   "strategy": 20,
+   "analytics": 15
+  },
+  "why": "Plans and delivers acquisition and engagement campaigns; mostly marketing",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "001c70d11b60": {
+  "fingerprint": "202c99b757d99152",
+  "aff": {
+   "legal": 75,
+   "program": 35,
+   "project": 30,
+   "strategy": 25,
+   "ba": 25
+  },
+  "why": "Regulatory governance and controls for the Volcker program; compliance work",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "4de4d113ce7d": {
+  "fingerprint": "411aeb207e91245f",
+  "aff": {
+   "solutions": 25,
+   "ba": 15
+  },
+  "why": "Internal solution architecture and design specs; engineering-type work",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "948b20e14b27": {
+  "fingerprint": "be2eba5b1ac2a634",
+  "aff": {
+   "program": 90,
+   "project": 40,
+   "solutions": 30
+  },
+  "why": "Technical program owner for an OEM integration across engineering teams",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "e748277207b1": {
+  "fingerprint": "b7a86edd41135f43",
+  "aff": {
+   "solutions": 20
+  },
+  "why": "Cybersecurity architecture and tooling; engineering work, not these families",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "1f44982d27f0": {
+  "fingerprint": "f76c3f1941bd0b50",
+  "aff": {
+   "solutions": 92,
+   "sales": 40,
+   "custsuccess": 20
+  },
+  "why": "Pre-sales technical engineer driving AI product adoption with customers",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "888b2b06e946": {
+  "fingerprint": "8f7444973c3137a5",
+  "aff": {
+   "solutions": 25,
+   "ba": 15
+  },
+  "why": "Internal enterprise solution architecture; engineering-type work",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "4613ae4f03e8": {
+  "fingerprint": "a75ec8ec2db4f232",
+  "aff": {
+   "solutions": 55,
+   "ba": 35,
+   "project": 20
+  },
+  "why": "Client-facing ServiceNow architect leading design and functional analysis",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "babd5c8ede52": {
+  "fingerprint": "e52cfdad8c4d63e0",
+  "aff": {
+   "strategy": 92,
+   "analytics": 40,
+   "pm": 20,
+   "prodanalytics": 20
+  },
+  "why": "Marketplace strategy and operations levers using data and unit economics",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "4bf8f69a55fc": {
+  "fingerprint": "898c01d629dcf026",
+  "aff": {
+   "strategy": 90,
+   "pm": 35,
+   "analytics": 35,
+   "sales": 15
+  },
+  "why": "S&O growing a delivery offering: launches, merchant strategy, financial models",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "81c646de3217": {
+  "fingerprint": "9284dc922933623e",
+  "aff": {
+   "pmm": 92,
+   "marketing": 40,
+   "sales": 25
+  },
+  "why": "Product marketing via partner channels: positioning, launches, sales enablement",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "c6fccb933e6a": {
+  "fingerprint": "e176937d8abb0baf",
+  "aff": {
+   "custsuccess": 45,
+   "solutions": 45,
+   "ba": 35,
+   "finance": 25
+  },
+  "why": "Supports advisors on planning tools: UAT, coaching, docs; internal solutions support",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "3c171c7374ab": {
+  "fingerprint": "461be05aa6d14463",
+  "aff": {
+   "pmm": 95,
+   "marketing": 40
+  },
+  "why": "Leads a product marketing team: messaging, GTM and launches",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "e8696fa92f97": {
+  "fingerprint": "461be05aa6d14463",
+  "aff": {
+   "pmm": 95,
+   "marketing": 40
+  },
+  "why": "Leads a product marketing team: messaging, GTM and launches",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "adc25a76ee47": {
+  "fingerprint": "f1ff221c63a46bf9",
+  "aff": {
+   "solutions": 25
+  },
+  "why": "Technical .NET/Azure architecture for a client app; thin description, engineering-type",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "fdcd2c0331a0": {
+  "fingerprint": "2ff0b0d31f8e38ad",
+  "aff": {
+   "pmm": 95,
+   "marketing": 50
+  },
+  "why": "Leads product marketing for Commerce: positioning, GTM, team leadership",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "ed655b1eb9ed": {
+  "fingerprint": "dc1588cde1deb949",
+  "aff": {
+   "solutions": 85,
+   "ba": 40,
+   "custsuccess": 30,
+   "project": 25
+  },
+  "why": "Partner-facing solutions engineer: requirements, integrations, onboarding",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "37869283b7b7": {
+  "fingerprint": "f363a7ef18f29057",
+  "aff": {
+   "solutions": 95,
+   "sales": 45
+  },
+  "why": "Pre-sales solutions consultant winning competitive deals with finance buyers",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "3f4ff7edb4b1": {
+  "fingerprint": "f509ca88dde7e415",
+  "aff": {
+   "solutions": 90,
+   "sales": 40
+  },
+  "why": "Designs custom IoT solutions with enterprise clients alongside AEs; sales targets",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "3dbe1add317d": {
+  "fingerprint": "c329f41cf469d313",
+  "aff": {
+   "pmm": 95,
+   "marketing": 40
+  },
+  "why": "Contract product marketer owning positioning, launches and enablement",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "cb404f4a313e": {
+  "fingerprint": "3c5309f8e41a4432",
+  "aff": {
+   "revops": 90,
+   "strategy": 40,
+   "finance": 35,
+   "sales": 20
+  },
+  "why": "Leads Deal Desk and pricing operations: approvals, quote-to-booking, CPQ",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "89004293d695": {
+  "fingerprint": "915520fab3b6efaf",
+  "aff": {
+   "pmm": 95,
+   "marketing": 55,
+   "pm": 20
+  },
+  "why": "Heads the product marketing function: positioning, launches, enablement",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "baed91bb68b1": {
+  "fingerprint": "3d372d1d7ebd387d",
+  "aff": {
+   "pmm": 92,
+   "marketing": 45,
+   "solutions": 20
+  },
+  "why": "Technical product marketing for a developer framework: messaging and GTM",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "2d42958b08d1": {
+  "fingerprint": "6d963c7a20b45a11",
+  "aff": {
+   "revops": 80,
+   "program": 50,
+   "people": 20
+  },
+  "why": "Runs sales enablement programs and content for sales teams",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "f1cbc4bed3fc": {
+  "fingerprint": "97dbd28b7dce5d9e",
+  "aff": {
+   "solutions": 25,
+   "ba": 25
+  },
+  "why": "Internal ECM solution architect: designs, estimates, workshops; engineering-type",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "7e08d54de1fa": {
+  "fingerprint": "02fa4302da1d8c2f",
+  "aff": {
+   "design": 95,
+   "uxr": 30,
+   "pm": 25
+  },
+  "why": "Leads product design; no description, judged from title",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "c811ad5a829d": {
+  "fingerprint": "cd5fb0a21c134e7a",
+  "aff": {
+   "pmm": 95,
+   "marketing": 45
+  },
+  "why": "Product marketing manager: customer-centric positioning and launches",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "6b6ecc1e36ac": {
+  "fingerprint": "24c1e4bf52db03af",
+  "aff": {
+   "revops": 80,
+   "strategy": 45,
+   "ba": 35,
+   "solutions": 30,
+   "analytics": 20
+  },
+  "why": "Operations partner for the SA team: tooling, workflows, reporting",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "93c3033aeaa2": {
+  "fingerprint": "4b1c63a985673a29",
+  "aff": {
+   "program": 80,
+   "project": 45,
+   "strategy": 20,
+   "custsuccess": 15
+  },
+  "why": "Runs a certification exam portfolio: governance, workstreams, dependencies",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "47bb2b7b830c": {
+  "fingerprint": "e8bdbc000ae4fe15",
+  "aff": {
+   "solutions": 25
+  },
+  "why": "Senior software developer building partner integrations; engineering work",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "e9ca12362c5e": {
+  "fingerprint": "10aa6d79bf78939f",
+  "aff": {
+   "solutions": 88,
+   "ba": 30,
+   "custsuccess": 20
+  },
+  "why": "Forward-deployed architect designing solutions with customers post-sale",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "514c59c0c197": {
+  "fingerprint": "ff57fc610df580fd",
+  "aff": {
+   "solutions": 92,
+   "sales": 30
+  },
+  "why": "Pre-sales technical escalation for SEs, scoping and presenting solutions",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "308f85301860": {
+  "fingerprint": "4d32e4cecc408d1e",
+  "aff": {
+   "pmm": 95,
+   "marketing": 45
+  },
+  "why": "Sole product marketer for a business unit: positioning, GTM, launches",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "c2d2335ec2d9": {
+  "fingerprint": "ee9b9b6abfeb2ccc",
+  "aff": {
+   "pm": 70,
+   "ba": 60,
+   "revops": 45,
+   "program": 20
+  },
+  "why": "Owns backlog and priorities for internal Salesforce CRM platform",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "1e8723166642": {
+  "fingerprint": "2c668f84056eddd6",
+  "aff": {
+   "strategy": 90,
+   "finance": 35,
+   "analytics": 30
+  },
+  "why": "Graduate rotation in corporate strategy and transformation",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "b7a8d379c859": {
+  "fingerprint": "18f4e2118977f378",
+  "aff": {
+   "design": 60,
+   "marketing": 45,
+   "pmm": 35
+  },
+  "why": "Motion and visual design for product marketing surfaces and launches",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "891e6331d2c5": {
+  "fingerprint": "f2870bfea9edb9fd",
+  "aff": {
+   "solutions": 95,
+   "sales": 40
+  },
+  "why": "Pre-sales solutions consultant guiding customer software evaluations",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "fa0eda92f91d": {
+  "fingerprint": "a38c7ec551741175",
+  "aff": {
+   "solutions": 92,
+   "sales": 35
+  },
+  "why": "Pre-sales solutions engineer for an edtech platform",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "9a98f7abbdda": {
+  "fingerprint": "f27ea4accdbe9a6d",
+  "aff": {
+   "custsuccess": 90,
+   "solutions": 35,
+   "sales": 30
+  },
+  "why": "Scaled customer success: adoption, retention and renewals for SMB customers",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "05e3a669d8e3": {
+  "fingerprint": "ba2a1675bbb8f4a2",
+  "aff": {
+   "pmm": 88,
+   "marketing": 40,
+   "program": 30,
+   "pm": 20
+  },
+  "why": "Release marketing and GTM enablement; coordinates release collateral",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "affe979cd1f7": {
+  "fingerprint": "c370fcbfc9e0e8a9",
+  "aff": {
+   "solutions": 88,
+   "ba": 45,
+   "project": 25,
+   "custsuccess": 20
+  },
+  "why": "Professional services consultant designing Salesforce solutions for clients",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "9d5a758cd0b3": {
+  "fingerprint": "f2582cb3d13f214e",
+  "aff": {
+   "program": 80,
+   "project": 55
+  },
+  "why": "Runs learning content production programs from intake to publication",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "9e9be1c79e4b": {
+  "fingerprint": "7e3117a88d37c7df",
+  "aff": {
+   "pmm": 95,
+   "marketing": 40,
+   "revops": 20
+  },
+  "why": "Product marketing for US Home Care: positioning, releases, enablement",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "d7586df21fc9": {
+  "fingerprint": "b94eef6dec2ec3fa",
+  "aff": {
+   "program": 70,
+   "project": 45,
+   "strategy": 40,
+   "sales": 35,
+   "ba": 30,
+   "revops": 30
+  },
+  "why": "Runs sales-driving programs with dealers, merchandising and operations",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "355f82878380": {
+  "fingerprint": "daf2603585cb4045",
+  "aff": {
+   "prodanalytics": 88,
+   "analytics": 75
+  },
+  "why": "Data analyst for a live game mode, informing product and production",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "e1d62687ac8e": {
+  "fingerprint": "9544598f8e6d4932",
+  "aff": {
+   "pmm": 90,
+   "marketing": 50
+  },
+  "why": "Product marketing support: storytelling, GTM planning, market intelligence",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "3e6efde044fa": {
+  "fingerprint": "6cefcd69ba0b5627",
+  "aff": {
+   "solutions": 80,
+   "analytics": 20
+  },
+  "why": "Customer-facing architect designing telecom analytics solutions",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "1daa9e18a038": {
+  "fingerprint": "b20527f8bd6fa2da",
+  "aff": {
+   "program": 90,
+   "project": 70
+  },
+  "why": "Owns end-to-end delivery of a national data centre build program",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "156f619a47e4": {
+  "fingerprint": "71ee015a04224eab",
+  "aff": {
+   "solutions": 25,
+   "ba": 20
+  },
+  "why": "ServiceNow platform developer/engineer; engineering-type work",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "6ea914be6441": {
+  "fingerprint": "cdbcf2623068ceb9",
+  "aff": {
+   "ba": 60,
+   "finance": 45,
+   "strategy": 35,
+   "project": 20
+  },
+  "why": "Manages finance rules system team: requirements, UAT, reporting",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "f28a888cee84": {
+  "fingerprint": "d0fcb9cc27f53846",
+  "aff": {
+   "program": 55,
+   "legal": 50,
+   "people": 25,
+   "project": 25
+  },
+  "why": "Runs corporate workplace safety policy, standards and audit programs",
+  "at": "2026-10-17T10:57:03+00:00"
+ },
+ "694e0c490d89": {
+  "fingerprint": "82f9baa24f2f5c60",
+  "aff": {
+   "strategy": 60,
+   "project": 50,
+   "program": 35,
+   "prodanalytics": 25
+  },
+  "why": "Business ops producer on a mobile game; description thin, judged mostly from title",
+  "at": "2026-10-17T10:57:03+00:00"
  }
 }
