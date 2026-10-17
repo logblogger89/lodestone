@@ -158,24 +158,14 @@
    "at": "2026-10-16T10:55:03+00:00",
    "companies": 210,
    "indexed": 210
+  },
+  "affinity": {
+   "at": "2026-10-17T02:10:20+00:00",
+   "read": 0,
+   "waiting": 510
   }
  },
  "history": [
-  {
-   "component": "jobs:dayforce",
-   "at": "2026-10-16T20:48:52+00:00",
-   "postings": 113
-  },
-  {
-   "component": "jobs:avature",
-   "at": "2026-10-16T20:48:52+00:00",
-   "postings": 1020
-  },
-  {
-   "component": "jobs:eightfold",
-   "at": "2026-10-16T20:48:52+00:00",
-   "postings": 177
-  },
   {
    "component": "jobs:google",
    "at": "2026-10-16T20:48:52+00:00",
@@ -417,6 +407,24 @@
    "at": "2026-10-16T22:05:07+00:00",
    "rubric": "1.0",
    "scored": 691
+  },
+  {
+   "component": "affinity",
+   "at": "2026-10-17T02:09:50+00:00",
+   "read": 0,
+   "waiting": 510
+  },
+  {
+   "component": "affinity",
+   "at": "2026-10-17T02:10:08+00:00",
+   "read": 0,
+   "waiting": 510
+  },
+  {
+   "component": "affinity",
+   "at": "2026-10-17T02:10:20+00:00",
+   "read": 0,
+   "waiting": 510
   }
  ]
 }

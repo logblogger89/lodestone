@@ -5,7 +5,7 @@ module.exports = {
   viewport: { width: 1280, height: 860 },
   seed: jobs => ({
     'profile/main': { version: 3, headline: 'Staff PM, payments platform', current: { employer: 'Contoso Pay', title: 'Staff Product Manager', level: 'L6' },
-      work_status: 'needs_permit', domains: ['Payments', 'Platform', 'AI'], preferences: { domains_wanted: 'payments, platform, AI agents' } },
+      work_status: 'needs_permit', domains: ['Payments', 'Platform', 'AI'], preferences: { domains_wanted: 'payments, platform, AI agents. Not keen on traditional brick-and-mortar banks unless pay is top of range.' } },
     'settings/prefs': { regions: ['GTA', 'Waterloo Region'], other_regions: false, tiers: ['Core', 'Adjacent'], exclude_people_mgmt: false, include_no_pay: true,
       checks: { green_regions: ['GTA', 'Waterloo Region'], pay_green: 200000, pay_yellow: 170000, level_green: 6, level_yellow: 5, fresh_green: 14, fresh_yellow: 30 } },
     ...tri(top(jobs, j => /platform|ai/i.test(j.title), 3), 'interested'),
@@ -57,6 +57,20 @@ module.exports = {
     h.check((await h.writes()).some(x => x[1].startsWith('likes/')), '"More like this" saved');
     await h.shot('detail-after-actions');
     await h.page.keyboard.press('Escape'); await h.wait(200);
+
+    h.task('Her note about banks applies now, not after re-scoring');
+    await h.click('[data-view="digest"]'); await h.click('[data-show="todo"]'); await h.wait(250);
+    const rankOf = () => h.evalS(() => { const o = S._order || []; const i = o.findIndex(j => ['RBC', 'TD', 'BMO', 'Scotiabank', 'CIBC', 'Manulife', 'Sun Life'].includes(j.company)); return i });
+    const before = await rankOf();
+    const sug = h.page.locator('[data-sacc="avoid-fi"]');
+    h.check(await sug.count(), 'Lodestone offers to apply her Profile note about traditional banks');
+    if (await sug.count()) { await sug.first().click(); await h.wait(400) }
+    h.check(((await h.store())['settings/prefs'].avoid_types || []).includes('traditional_fi'), 'Accepting it saves the preference');
+    const after = await rankOf();
+    h.check(after === -1 || before === -1 || after > before, `The first traditional bank role moves down (from #${before + 1} to #${after + 1})`);
+    await h.click('[data-view="settings"]'); await h.wait(250);
+    h.check(await h.page.locator('#avoidfi').isChecked(), 'The Profile shows the setting, so she can turn it off');
+    await h.click('[data-view="digest"]'); await h.click('[data-show="today"]'); await h.wait(200);
 
     h.task('Pipeline shows the applied role');
     await h.click('[data-view="pipeline"]'); await h.wait(250);

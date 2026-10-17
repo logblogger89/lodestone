@@ -46,6 +46,12 @@ standard library only, so no installs are needed.
    (freshness, R11a), and updates each source's Canada count in the index. One broken source never
    stops the run; failures are listed under `errors`. Fix or pause failing sources.
    Then `python3 -m lodestone index` to refresh the readable index (`data/sources/README.md`).
+4b. **Type scores (D-077).** `python3 -m lodestone affinity prepare` writes batches (60 roles each) of live roles whose
+   current posting hasn't been read for type scores: the best-scored first, then the newest, at most 400 a day across
+   runs (it reports how many wait). Read each batch against `docs/eng/TYPE_SCORES.md` (one reader per batch, 2 at a time,
+   same model as scoring; give each its own copy of its batch), then `python3 -m lodestone affinity ingest <results.json>`.
+   Like `score prepare`, it refuses to replace batches not yet ingested. Do this before step 5: which roles are scored
+   for someone depends on these type scores. Once the backlog is caught up, each run reads only the day's new roles.
 5. **Profile and score (P1-S3, D-060).** Read the profile: `ArtifactData get profile/main` with `out_dir` in the
    scratchpad (never the repo). **If `resume.status` is `uploaded`**, read the resume: `Artifact` `read` with the app URL and
    `path` = `resume.asset_id` (or use `resume.text`), and fill in the profile from it: `headline`, `summary`, `current`
@@ -71,7 +77,8 @@ standard library only, so no installs are needed.
    (`triage` collection): roles marked Interested should rank high, "Not for me" low.
 5b. **Score quality check (P1-S5).** Once a day, in the morning run (update runs skip it, so the history isn't
    crowded with near-identical entries), and before and after any scoring change. `ArtifactData list triage` and `get settings/prefs` with `out_dir` (scratchpad), then
-   `python3 -m lodestone eval ranking <triage folder> --prefs <prefs file> --profile <profile file>` and
+   `python3 -m lodestone eval ranking <triage folder> --prefs <prefs file> --profile <profile file>`,
+   `python3 -m lodestone eval types` (type scores against `data/eval/type_gold.json`; add a posting whenever a type is wrong) and
    `python3 -m lodestone eval reading`. Put the one-line results in the report ("9 of 9 Interested in the top 25; Interested
    beat Later/Not 59% of the time; reading 100% on 22 postings"). **Gate:** before changing the rubric, scoring rules or
    the pay reader, run both checks before and after; don't ship a change that lowers either (say so in the report if a

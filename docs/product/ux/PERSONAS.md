@@ -5,7 +5,7 @@
 > app with an in-memory copy of its database; each run saves screenshots and a results file that Claude reviews by eye.
 > All five people are fictional composites. None is a real user, and none carries real personal data.
 
-## Why these five (now eight)
+## Why these five (now nine)
 Each persona stresses a different part of the product promise ("the jobs that fit you, in the country you want, that
 will actually hire you", D-066), and a different way of using the app:
 
@@ -18,6 +18,7 @@ will actually hire you", D-066), and a different way of using the app:
 | 5 | **Aisha**, Principal PM, London → Toronto | Careful, privacy-minded | Needs sponsorship | Ready | Keyboard only, screen reader | Keyboard flow, focus, labels, learning controls, deleting her data |
 | 6 | **Sam**, product manager, curious but wary | Not ready to commit; skips every question | Unknown | None | Phone, a few minutes | Skipping: does everything still work with no answers, and can setup be done later? |
 | 7 | **Lena**, Group PM with a design background, Berlin → Vancouver | Discerning, judges a product by its polish | Needs sponsorship | Ready | Large desktop monitor, laptop, phone; light and dark mode | Visual consistency: type, spacing, colour, alignment, wording, every screen size and state |
+| 9 | **Kai**, IT project manager, Halifax | Curious, shares little at first | Not said | None | Laptop, a few minutes | Role-first setup, ranking on role type only, gentle nudges, the meter |
 | 8 | **Omar**, senior business analyst, Toronto | Moving from banking to tech; wary of "PM tools" | Permanent resident | None in the app | Laptop, evenings, first visit | A field other than product management: setup in his words, role tags, pay targets, choosing related fields |
 
 ---
@@ -195,6 +196,21 @@ data-leaning analyst role. Laptop, evenings. Added 10-16 for D-076, when Ayush a
 **Delight.** "Got it: Business analysis" as he types; every tag in his language; pay that looks right.
 **Frustration.** "PM-adjacent", "Core PM", a list of product manager jobs, red pay on every ordinary BA role.
 
+## 9. Kai Tremblay: "Just show me something"
+**Who.** 34, IT project manager in Halifax at a regional insurer, curious about tech roles anywhere in Canada. Not ready
+to share much. Laptop, a few minutes at lunch. Added 10-17 for D-077 (role-first setup).
+
+**Mindset.** Will answer one question, not five. Will share more if the app proves useful first.
+
+**Tasks**
+1. Pick a role type and see jobs immediately, with nothing else asked.
+2. Understand what the list is based on.
+3. Get at most one gentle nudge a day; say "Not now" and not see it again today.
+4. Next day, answer where and work status from the nudge; see the meter move.
+
+**Delight.** A real list after one tap; nudges that ask for one thing at a time.
+**Frustration.** Forms before value; red warnings about things never asked; nagging.
+
 ## Running the journeys
 `node scripts/persona_test.cjs [persona …]` (needs `data/state/app_export/`, made by `python3 -m lodestone export`).
 Screenshots and `results.json` go to `data/state/persona_runs/` (not committed). Each journey is a file in
@@ -203,6 +219,23 @@ notes are what Claude saw while playing the persona: *works*, *annoyance*, *bug*
 
 ## Findings log
 Newest first. Each finding names the persona, what happened, and what changed.
+
+### Round 5 (2026-10-17): type scores and role-first setup; 9 personas, 201 checks, all pass (app v32)
+New: persona Kai (one answer, then nudges). Daniel and Omar now answer the role first and take the taste test from the
+first-list banner; Sam skips each question of the new 3-step setup; Tomás sees hybrid jobs ("Program · also Product")
+and jobs titled otherwise but with real program work; Priya (whose Profile says she'd avoid traditional banks) accepts
+the one-tap suggestion and bank roles move down. Lena audits the new role step.
+- **Kai: a red "No sponsorship" tag before being asked about work status.** Fixed: status "not set" keeps work-permit
+  tags as information only.
+- **Kai (phone): "Show my jobs" sat below ten role cards.** Fixed: setup buttons stay pinned above the tab bar.
+- **Kai: ordinary project-manager pay showed red.** Lowered the project family's default pay targets (CA$115K/90K).
+- **Tomás: filtering to Program showed a card tagged only "Strategy & ops".** Fixed: a second type is shown from 50,
+  the same threshold the filter uses.
+- **Priya: accepting the bank suggestion rebuilt Today mid-session.** Fixed: re-ranking preferences don't reshuffle
+  today's list; only ones that hide roles do.
+- **Readers' notes on type scores (400 roles):** 10 postings had no usable description (EvenUp, Kinaxis, Shopify,
+  Certn, Lululemon) and were scored from the title, marked so; several "Product Manager" titles were really threat
+  research, pricing analysis, service operations or customer solution design, and now rank by that work.
 
 ### Round 4 (2026-10-16): Profile navigation, role types for any field; 8 personas, 169 checks, all pass (app v30)
 New tasks: Aisha uses the Profile side menu by keyboard; Tomás jumps with the phone chips and saves from the sticky bar,

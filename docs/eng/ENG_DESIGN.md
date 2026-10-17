@@ -189,7 +189,7 @@ class SourceAdapter(Protocol):
 
 | Stage | What | Where |
 |---|---|---|
-| 0. Rules | Location, work mode and role family (title taxonomy in `config/role_taxonomy.json`: one absolute family per job, closeness relative to each person's picked families, D-076; `python3 -m lodestone reclassify` after a taxonomy change). Cheap, transparent. **Missing data never excludes a job** (D-021) | Python |
+| 0. Rules | Location, work mode and role family (title taxonomy in `config/role_taxonomy.json`: one absolute family per job, closeness relative to each person's picked families, D-076; `python3 -m lodestone reclassify` after a taxonomy change). Cheap, transparent. **D-077:** the title family is only a first guess; Claude reads each description once for type scores (0–100 per family, `lodestone/affinity.py`, `docs/eng/TYPE_SCORES.md`, refresh step 4b), and relevance to a person decides what is shown and scored. **Missing data never excludes a job** (D-021) | Python |
 | 1. Parse | JD → `job_parses` via structured outputs (strict JSON schema): family, tier, level signals, domain, must-haves, people management, pay, immigration mentions | Claude (model per §12 decision) |
 | 2. Score | Profile + parsed JD → six sub-scores (0–100) plus one-line reasons, also via structured outputs. The profile and instructions sit in a **cached prompt prefix**, so per-job input stays small | Claude |
 | 3. Rank | Overall score = user-weighted blend, computed at read time from `preferences.weights` (instant re-rank, D-026) | Postgres/API |

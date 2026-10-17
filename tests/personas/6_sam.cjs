@@ -30,13 +30,15 @@ module.exports = {
     h.check(/Run the quick setup again/.test(p), 'Setup can be started from the Profile later');
     await h.shot('profile');
     await h.click('[data-act="reonboard"]'); await h.wait(250);
-    h.check(/Step 1 of 4/.test(await h.text()), 'Running setup again starts at the first question');
-    await h.page.locator('.obnav [data-ob="next"].link').click(); await h.wait(150);
-    await h.page.locator('.obnav [data-ob="next"].link').click(); await h.wait(150);
-    await h.page.locator('.obnav [data-ob="next"].link').click(); await h.wait(150);
-    h.check(await h.page.locator('.tcard').count() > 0, 'Skipping each question still reaches the taste test');
-    await h.page.locator('.obnav [data-ob="finish"].link').click(); await h.wait(400);
-    h.check(/left today/.test(await h.text()), 'Skipping the taste test lands on the list');
+    h.check(/Step 1 of 3/.test(await h.text()), 'Running setup again starts at the first question (role type)');
+    await h.tap('Answer 2 more quick questions');                                  // skips the role question
+    await h.page.locator('.obnav [data-ob="next"].link').click(); await h.wait(150); // skips where
+    h.check(/Step 3 of 3/.test(await h.text()), 'Skipping each question still moves forward');
+    await h.page.locator('.obnav [data-ob="finish"].link').click(); await h.wait(400); // skips work status
+    h.check(/left today/.test(await h.text()), 'Skipping the last question lands on the list');
+    const st = await h.store(), pr = st['profile/main'] || {};
+    h.check(pr.work_status === 'unknown', 'Work status stays "not set", not guessed');
+    h.check(!(await h.page.locator('#view .card .ck-bad', { hasText: 'No sponsorship' }).count()), 'With no work status, work-permit tags are never red');
     const w = await h.evalS(() => document.documentElement.scrollWidth);
     h.check(w <= 392, `No sideways scrolling (${w}px)`);
   }

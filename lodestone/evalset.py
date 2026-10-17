@@ -17,6 +17,7 @@ import json
 import re
 from pathlib import Path
 
+from . import rules
 from . import scoring, store
 
 GOLD = store.ROOT / "data" / "eval" / "reading_gold.json"
@@ -81,7 +82,33 @@ def _pay_score(top, kind, checks):
     return v if kind in ("base", "unspecified", None) else max(20, v - 10)
 
 
-def sub(j, k, now, checks, profile):
+def _role_from_types(j, prefs):
+    """Same as the app (D-077): once Claude has read a job's type scores, the role factor is its relevance to you."""
+    from . import affinity
+    if j.get("aff_src") != "read" or not j.get("aff"):
+        return None
+    prefs = prefs or {}
+    mine = prefs.get("families") or rules.default_families()
+    return round(affinity.relevance(j["aff"], mine, prefs.get("families_shown"))[0])
+
+
+def _avoid_hit(j, prefs, checks):
+    avoid = (prefs or {}).get("avoid_types") or []
+    if not avoid:
+        return False
+    types = json.loads((store.ROOT / "config" / "company_types.json").read_text())["types"]
+    if not any(j.get("company") in types.get(t, {}).get("companies", []) for t in avoid):
+        return False
+    p = j.get("pay") or {}
+    m = p["ranges"][p["primary"]] if p.get("ranges") and p.get("primary") is not None else None
+    return not (m and m.get("max") and m.get("currency") != "USD" and m["max"] >= checks["pay_green"])
+
+
+def sub(j, k, now, checks, profile, prefs=None):
+    if k == "role" and (v := _role_from_types(j, prefs)) is not None:
+        return float(v)
+    if k == "domain" and _avoid_hit(j, prefs, checks):
+        return float(min(35, ((j.get("fit") or {}).get("subs") or {}).get("domain") or 35))
     if k == "freshness":
         return freshness(j, now)
     if k == "pathway":
@@ -104,7 +131,7 @@ def fit(j, prefs=None, profile=None, now=None):
     checks = {**DEFAULT_CHECKS, **(prefs.get("checks") or {})}
     now = now or dt.datetime.now(dt.timezone.utc).timestamp()
     t = sum(W[k] for k in SUBS)
-    return round(sum(W[k] * sub(j, k, now, checks, profile) for k in SUBS) / t) if t else None
+    return round(sum(W[k] * sub(j, k, now, checks, profile, prefs) for k in SUBS) / t) if t else None
 
 
 # ---------- 1. ranking ----------
@@ -149,6 +176,23 @@ def ranking(triage: dict[str, dict], jobs: dict[str, dict], prefs=None, profile=
                    for i in sorted(pos, key=lambda i: rank[i]) if rank[i] > 25][:5],
         "enough_labels": len(pos) >= 10 and len(neg) >= 10,
     }
+
+
+# ---------- 1b. role types (D-077) ----------
+def types() -> dict:
+    """Top type score vs the hand-checked main type (data/eval/type_gold.json), and the title guess for comparison."""
+    from .appexport import job_id
+    gold = json.loads((store.ROOT / "data" / "eval" / "type_gold.json").read_text())["postings"]
+    jobs = {job_id(k): j for k, j in store.load("jobs", {"jobs": {}})["jobs"].items()}
+    aff = store.load("affinity", {})
+    read = [g for g in gold if (aff.get(g["id"]) or {}).get("aff")]
+    top = lambda a: max(a, key=a.get)
+    ok_read = [g for g in read if top(aff[g["id"]]["aff"]) in g["main"]]
+    ok_title = [g for g in gold if (jobs.get(g["id"]) or {}).get("role_family") in g["main"]]
+    pct = lambda a, b: round(len(a) / len(b), 3) if b else None
+    return {"postings": len(gold), "read": len(read), "type_scores_accuracy": pct(ok_read, read), "title_guess_accuracy": pct(ok_title, gold),
+            "misses": [{"title": g["title"], "company": g["company"], "main": g["main"], "got": top(aff[g["id"]]["aff"])}
+                       for g in read if g not in ok_read][:5]}
 
 
 # ---------- 2. reading ----------

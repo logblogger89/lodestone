@@ -1,0 +1,3571 @@
+{
+ "2a3470721ce6": {
+  "fingerprint": "0cbccadff1201449",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns roadmap for Clio's core case management product",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "cc2b58ab9393": {
+  "fingerprint": "69f026bb570b32c2",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Pre-sales cloud architect: demos, POCs, technical win with Sales",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "0851afc44ae0": {
+  "fingerprint": "f5e39f211b344a43",
+  "aff": {
+   "solutions": 92,
+   "project": 25
+  },
+  "why": "Consulting architect leading customer solution engagements in financial services",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "10b3cc80ecea": {
+  "fingerprint": "a65875204e75b839",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Founding PM owning self-serve onboarding and activation experiences",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "6c09473d1329": {
+  "fingerprint": "cd7591a10d04e382",
+  "aff": {
+   "pm": 92,
+   "pmm": 35
+  },
+  "why": "Owns EDR product strategy, roadmap and some go-to-market execution",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "964391df2d25": {
+  "fingerprint": "88de85b468b4b9e9",
+  "aff": {
+   "pm": 90,
+   "program": 25
+  },
+  "why": "Technical PM defining endpoint security roadmap and requirements with engineering",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "7ef2d2d5f3cc": {
+  "fingerprint": "d8be9bb8b47d6ef5",
+  "aff": {
+   "pm": 90
+  },
+  "why": "No description; judged from title: product manager",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "ee64c1faaaf0": {
+  "fingerprint": "bfaafe014d20c2a5",
+  "aff": {
+   "pm": 85,
+   "program": 45,
+   "strategy": 30
+  },
+  "why": "Owns cross-platform member experience roadmap; manages delivery risks and partners",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "3725891d12f0": {
+  "fingerprint": "b58139055b758f2a",
+  "aff": {
+   "solutions": 85,
+   "pm": 35,
+   "pmm": 30
+  },
+  "why": "Field solutions engineer for emerging tech; feeds product direction",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "9dedcfee8abd": {
+  "fingerprint": "eb95cbf08a7d95ba",
+  "aff": {
+   "solutions": 80,
+   "tns": 40
+  },
+  "why": "Customer-facing security/compliance (GRC) consultant on AWS",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "98336a3bf687": {
+  "fingerprint": "fcf23c7e8a3dbe67",
+  "aff": {
+   "program": 60,
+   "strategy": 60,
+   "pm": 30
+  },
+  "why": "Leads shipping/returns program and ops strategy across retail and supply chain",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "2aa9345d5812": {
+  "fingerprint": "6e61bc90ce8cee3a",
+  "aff": {
+   "pm": 88,
+   "ba": 30
+  },
+  "why": "Technical PM sizing and prioritizing AI solutions for business units",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "34f7f2e751ba": {
+  "fingerprint": "142901bd2f01fbd1",
+  "aff": {
+   "pm": 90
+  },
+  "why": "No description; judged from title: product manager, demand planning",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "4e817ffdccf6": {
+  "fingerprint": "3333bd7b6d979345",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns strategy and roadmap for healthcare connectivity products",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "5499f8b40799": {
+  "fingerprint": "ebcdc9ae89b91af1",
+  "aff": {
+   "pm": 92
+  },
+  "why": "PM for audit workflow platform features and AI capabilities",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "b540835937dc": {
+  "fingerprint": "c8dd1814abfa2dd1",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Technical PM owning APIs, webhooks and integration tooling roadmap",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "b38d7a781b76": {
+  "fingerprint": "6db366c8bb6bb443",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Defines, designs and delivers Veeva's LIMS product",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "1f58be7fc337": {
+  "fingerprint": "f25f24d413af4458",
+  "aff": {
+   "solutions": 80,
+   "tns": 40
+  },
+  "why": "Customer-facing security/compliance (GRC) consultant on AWS",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "fee7511a84c1": {
+  "fingerprint": "f28c2a81f3d468e3",
+  "aff": {
+   "strategy": 60,
+   "pm": 50,
+   "analytics": 45,
+   "pmm": 40
+  },
+  "why": "Pricing strategy and analysis for enterprise sales; not a classic product role",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "e78f415e2c9a": {
+  "fingerprint": "b831986a3478d90d",
+  "aff": {
+   "pm": 75,
+   "program": 55,
+   "strategy": 45
+  },
+  "why": "Owns IT services portfolio roadmap, governance and investment prioritization",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "a66c7c52683e": {
+  "fingerprint": "0b7769a8f4d8ea93",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Leads AI product strategy and delivery for claims teams",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "9616e13ef9e4": {
+  "fingerprint": "35eb502926d762ab",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns strategy, roadmap and lifecycle of Graykey forensic product",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "329c75a89c7f": {
+  "fingerprint": "7a61b1ade742250f",
+  "aff": {
+   "pm": 75,
+   "ba": 45,
+   "project": 30
+  },
+  "why": "Product owner for finance regulatory capital transformation backlog",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "f7c22908afb5": {
+  "fingerprint": "45bdcb77f9a2acb6",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Leads multi-tenant SaaS communications product end to end",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "5b7ed52f0439": {
+  "fingerprint": "5a068452ea16a0f2",
+  "aff": {
+   "pm": 75,
+   "ba": 45,
+   "project": 25
+  },
+  "why": "Product owner for trading platforms; defines requirements, manages QA team",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "03a3a61f8a8f": {
+  "fingerprint": "e464f4476fb2c345",
+  "aff": {
+   "pm": 75,
+   "prodanalytics": 60,
+   "analytics": 40
+  },
+  "why": "eCommerce PM driving priorities from funnel analytics and KPIs",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "4183e2d279b7": {
+  "fingerprint": "38ac7ee97cb2dd44",
+  "aff": {
+   "solutions": 70,
+   "pm": 60,
+   "pmm": 45
+  },
+  "why": "Hybrid PM/solutions role: positions, demos and drives AI product adoption",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "e5877c066fb0": {
+  "fingerprint": "de116a1c40785699",
+  "aff": {
+   "pm": 85,
+   "project": 30
+  },
+  "why": "PM owning workforce management squad backlog and delivery",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "4bd0cfcbbe68": {
+  "fingerprint": "77b1623d23a26843",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns roadmap for Vault CRM Campaign Manager",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "cf66e26f104c": {
+  "fingerprint": "8744aa1e26809ba5",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Builds, launches and grows Veeva MedInquiry",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "98c7f1509429": {
+  "fingerprint": "1b029fd4aa8ffdab",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Owns bulk fulfilment product roadmap, PRFAQs and requirements",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "0440cb45c332": {
+  "fingerprint": "4081639e869ac237",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Owns bulk fulfilment product roadmap, PRFAQs and requirements",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "755ab9be2167": {
+  "fingerprint": "74093cbe022ecca9",
+  "aff": {
+   "program": 95,
+   "strategy": 55
+  },
+  "why": "Leads cross-functional GTM transformation programs and governance",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "50f0355e1585": {
+  "fingerprint": "e063d57c0a8ded04",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns AI-assisted experience roadmap on M&E Flow platform",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "d7d1beb51963": {
+  "fingerprint": "7db3e3fc219ed6f8",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Owns a key part of the tax research product roadmap",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "422ea4b76b37": {
+  "fingerprint": "904f459e4f3937dd",
+  "aff": {
+   "pm": 85,
+   "pmm": 30
+  },
+  "why": "Accountable for application roadmap, with sales and marketing focus; thin description",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "d54e2308d04c": {
+  "fingerprint": "b33665a1b2a359b9",
+  "aff": {
+   "pm": 85,
+   "project": 35
+  },
+  "why": "Leads virtual account product development, launch and projects",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "4e52ae310686": {
+  "fingerprint": "1a8da9087e15c478",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Pre-sales data/AI solutions architect with account executives",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "64c2e928d34a": {
+  "fingerprint": "181c61b7395d6c58",
+  "aff": {
+   "solutions": 92
+  },
+  "why": "Enterprise pre-sales architect setting technical account strategy",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "dd458d85c6e3": {
+  "fingerprint": "7365f8f6f98d2042",
+  "aff": {
+   "pm": 60,
+   "ba": 55,
+   "project": 40,
+   "prodanalytics": 40
+  },
+  "why": "Digital product analyst: requirements, backlog, delivery plans, performance analysis",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "2f6468ee3811": {
+  "fingerprint": "209f34744cd482ef",
+  "aff": {
+   "pm": 92,
+   "program": 40
+  },
+  "why": "Leads PM team for internal agentic AI platform; runs operating cadence",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "c7796beb24cb": {
+  "fingerprint": "bf7348665ef75924",
+  "aff": {
+   "pm": 88
+  },
+  "why": "Owns strategy, roadmap and adoption for enterprise platform products",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "9da96f87819d": {
+  "fingerprint": "91eb80f4e8ceb244",
+  "aff": {
+   "pm": 85,
+   "program": 40
+  },
+  "why": "Owns platform roadmap and backlog; also delivery governance across markets",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "e686869ae4b8": {
+  "fingerprint": "03dee4602638027d",
+  "aff": {
+   "program": 95,
+   "project": 40
+  },
+  "why": "End-to-end program management, planning and risk across delivery workstreams",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "5968d9a86a52": {
+  "fingerprint": "749109b5061df9ad",
+  "aff": {
+   "strategy": 95
+  },
+  "why": "Chief of Staff to CEO driving strategic alignment and execution",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "081dd60236e9": {
+  "fingerprint": "e366d2f382dabe20",
+  "aff": {
+   "pm": 85,
+   "program": 40
+  },
+  "why": "Owns platform roadmap and backlog; also delivery governance across markets",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "12337b589eb7": {
+  "fingerprint": "bb0898a763ce1a16",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Technical PM defining native integration quality and roadmap",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "74b0f0d938cd": {
+  "fingerprint": "4f0cd61a40969a6c",
+  "aff": {
+   "pm": 72,
+   "ba": 30
+  },
+  "why": "Hands-on technical product strategy and roadmap for identity platform",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "2f18636ac183": {
+  "fingerprint": "e0b3547f9889d386",
+  "aff": {
+   "program": 92,
+   "project": 60
+  },
+  "why": "Leads planning and delivery of strategic payments programs on time and budget",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "2e5112428830": {
+  "fingerprint": "fefe4ecb9020db40",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Pre-sales solutions architect for financial services customers",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "3d627e60043d": {
+  "fingerprint": "da4070673aa7ab5a",
+  "aff": {
+   "program": 92
+  },
+  "why": "TPM driving mobile release and quality programs across many teams",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "13054030cfa6": {
+  "fingerprint": "70df2ee827cedd80",
+  "aff": {
+   "program": 88,
+   "project": 45,
+   "ba": 30
+  },
+  "why": "TPM gathering requirements and driving end-to-end delivery across teams",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "1525449767fd": {
+  "fingerprint": "29edfcb0544a45ca",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Embedded product lead owning outcomes for portfolio companies",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "0b81383bd19d": {
+  "fingerprint": "566c7fe2aef32e6f",
+  "aff": {
+   "strategy": 60,
+   "pm": 50,
+   "analytics": 45,
+   "pmm": 40
+  },
+  "why": "Pricing strategy and analysis for enterprise sales; not a classic product role",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "5557cf6ef6ee": {
+  "fingerprint": "29219178d6f5b47a",
+  "aff": {
+   "pm": 88
+  },
+  "why": "Live service game product manager for EA SPORTS FC",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "1177b9f8f852": {
+  "fingerprint": "87376e1bdf16cd5d",
+  "aff": {
+   "strategy": 75,
+   "pm": 55,
+   "prodanalytics": 45
+  },
+  "why": "Product ops: data-driven decisions on what to build for cards",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "b15bc6e6998a": {
+  "fingerprint": "bd3df43354b77f78",
+  "aff": {
+   "program": 85,
+   "strategy": 55
+  },
+  "why": "Defines and drives adoption of company-wide product development lifecycle",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "b1b4cea14fa4": {
+  "fingerprint": "81c52847ac6b43d8",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Leads product strategy and team for OpenText Communications portfolio",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "55c5061351ce": {
+  "fingerprint": "c5a5ebe49c3d9e59",
+  "aff": {
+   "tns": 80,
+   "strategy": 45,
+   "analytics": 30
+  },
+  "why": "Application fraud risk strategy, controls and trend monitoring",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "3c68b1fa418d": {
+  "fingerprint": "b1ff2817d2426bd1",
+  "aff": {
+   "strategy": 90,
+   "pm": 45
+  },
+  "why": "Product strategy: board narrative, portfolio and pricing decisions with CPO",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "83824e8d93a4": {
+  "fingerprint": "481b38de1ca9a9c9",
+  "aff": {
+   "strategy": 92,
+   "project": 35
+  },
+  "why": "Chief of Staff to CEO: comms, operating cadence, priority workstreams",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "3272555b1d23": {
+  "fingerprint": "3ba681d07c6a15bd",
+  "aff": {
+   "strategy": 90,
+   "analytics": 40
+  },
+  "why": "Enterprise strategy: analysis, models and planning for executives",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "c1250bb88c0d": {
+  "fingerprint": "0f89a2f8318b6e00",
+  "aff": {
+   "solutions": 92
+  },
+  "why": "Partner-facing solutions architect owning Alexa+ integrations",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "be93c1fdcb0b": {
+  "fingerprint": "6d364a706e8652f5",
+  "aff": {
+   "program": 95
+  },
+  "why": "TPM driving GenAI programs from research to production",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "197f6d1fdbc2": {
+  "fingerprint": "e625c6faf2daba2a",
+  "aff": {
+   "program": 95,
+   "strategy": 55
+  },
+  "why": "Leads cross-functional GTM transformation programs and governance",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "826acc2f0fcd": {
+  "fingerprint": "f00479d209e508ee",
+  "aff": {
+   "strategy": 60,
+   "tns": 45,
+   "program": 35
+  },
+  "why": "First-line risk programs, reporting and governance support",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "37e8e470bbc1": {
+  "fingerprint": "966f49f818695ac6",
+  "aff": {
+   "pm": 92
+  },
+  "why": "No description; judged from title: head of product",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "1c74f749fffb": {
+  "fingerprint": "748e268ffd45858d",
+  "aff": {
+   "program": 95
+  },
+  "why": "Leads end-to-end technical programs across product, eng and security",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "e95e77b6be63": {
+  "fingerprint": "d9b08c326c990f57",
+  "aff": {
+   "program": 60,
+   "project": 45,
+   "strategy": 30
+  },
+  "why": "Delivery readiness gates and change-risk governance across the lifecycle",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "35748e3630a3": {
+  "fingerprint": "e5a789bad7ad2e6d",
+  "aff": {
+   "tns": 70,
+   "analytics": 30,
+   "pm": 25
+  },
+  "why": "Titled PM but work is cyber threat intelligence research and reports",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "668a3186464c": {
+  "fingerprint": "240093c21a96da3f",
+  "aff": {
+   "solutions": 90
+  },
+  "why": "Customer-facing cloud security architect for Microsoft customers",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "84651b43e0ca": {
+  "fingerprint": "ad40e5e0b794da43",
+  "aff": {
+   "pm": 80,
+   "ba": 40,
+   "project": 30
+  },
+  "why": "Product owner for commercial treasury digital features and backlog",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "615cb1925bcb": {
+  "fingerprint": "24455c264ea1eac6",
+  "aff": {
+   "pm": 75,
+   "solutions": 50,
+   "program": 40,
+   "ba": 35
+  },
+  "why": "Forward-deployed TPM: customer requirements to scoped delivery",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "e49fd6398ffd": {
+  "fingerprint": "c86c7c3c17a4fef2",
+  "aff": {
+   "strategy": 85,
+   "pm": 40
+  },
+  "why": "No description; judged from title: product operations lead, growth",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "9f050fd6683c": {
+  "fingerprint": "f683df2854f6f049",
+  "aff": {
+   "pm": 70,
+   "ba": 50,
+   "analytics": 30
+  },
+  "why": "Product owner for reporting platform backlog and user stories",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "1820e4ab7317": {
+  "fingerprint": "6955c1df9710ae07",
+  "aff": {
+   "strategy": 95
+  },
+  "why": "Strategy and operations partner to Visa Canada CMS leadership",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "20eb073ac14b": {
+  "fingerprint": "5c94c3315f217f1f",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Defines and delivers SAP ERP integration strategy for Veeva Quality",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "4b4f677fad96": {
+  "fingerprint": "5b975684eac92bcb",
+  "aff": {
+   "pmm": 95
+  },
+  "why": "Product marketing lead for Enterprise Password Manager",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "3187654dbdbb": {
+  "fingerprint": "67121e9c049d8bb8",
+  "aff": {
+   "program": 95
+  },
+  "why": "TPM owning delivery and launch readiness for Alexa features",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "0333c3a5bbda": {
+  "fingerprint": "98fa66ee1ffadc8d",
+  "aff": {
+   "pm": 88
+  },
+  "why": "Owns roaming product development, launch and lifecycle",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "514a16bc06dd": {
+  "fingerprint": "aba7520ca3a081a1",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Leads home financing product strategy, roadmap and team",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "c14e085eeb06": {
+  "fingerprint": "e367c7eb634f7b31",
+  "aff": {
+   "solutions": 80
+  },
+  "why": "Description is only site navigation; judged from title: AI solution architect",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "22d870b80658": {
+  "fingerprint": "4efd3f0972b93284",
+  "aff": {
+   "strategy": 85,
+   "analytics": 30
+  },
+  "why": "Corporate strategy, OKRs and business cases; builds automations too",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "00fad4ec7cca": {
+  "fingerprint": "8b2678e4a196b5c7",
+  "aff": {
+   "program": 90,
+   "solutions": 40
+  },
+  "why": "Customer-facing TPM delivering AI programs for government customers",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "b98a911567fc": {
+  "fingerprint": "4f53505be0209e6c",
+  "aff": {
+   "program": 90,
+   "project": 50,
+   "solutions": 35
+  },
+  "why": "Customer-facing TPM managing enterprise AI delivery schedules",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "98e068c3dd57": {
+  "fingerprint": "14f4cbf31abd5d56",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Pre-sales data/AI solutions architect with account executives",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "4e621ab53447": {
+  "fingerprint": "2270a3cf63e6b89e",
+  "aff": {
+   "pm": 75,
+   "ba": 35,
+   "project": 35
+  },
+  "why": "Product owner representing client in projects with BA and devs",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "c18cfb60201a": {
+  "fingerprint": "ce28bf1b1df28094",
+  "aff": {
+   "program": 90,
+   "strategy": 50
+  },
+  "why": "Drives cross-studio strategic programs and operations",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "4d5aa8437828": {
+  "fingerprint": "ec5e11a7857ab499",
+  "aff": {
+   "program": 85,
+   "strategy": 55
+  },
+  "why": "Defines and drives adoption of company-wide product development lifecycle",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "60c079d4a2ac": {
+  "fingerprint": "462ad7b1b92378ef",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Technical sales engineer for agentic AI apps on Azure",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "ba5496e6b324": {
+  "fingerprint": "be1b798b568c7640",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Technical sales engineer for data platform: POCs and workshops",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "a16766ca4edb": {
+  "fingerprint": "8931026a3f0838d2",
+  "aff": {
+   "program": 92
+  },
+  "why": "TPM driving cross-functional platform infrastructure programs",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "cb7946cc7f47": {
+  "fingerprint": "d25e98e76e553bac",
+  "aff": {
+   "prodanalytics": 25,
+   "analytics": 15
+  },
+  "why": "Hands-on AI engineering lead building analytics agents; not an analyst role",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "f93381e11586": {
+  "fingerprint": "9d00ef79a72ed333",
+  "aff": {
+   "pm": 70,
+   "strategy": 45,
+   "program": 40
+  },
+  "why": "Product ops PM owning operational health and fixes of digital platform",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "d92c4f524f38": {
+  "fingerprint": "bb4405bb0f8019bf",
+  "aff": {
+   "program": 92,
+   "strategy": 40
+  },
+  "why": "TPM running planning programs and process change",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "564d44333148": {
+  "fingerprint": "41da385f6c4017f6",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Solutions architect advising startups on AWS",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "213a820dd485": {
+  "fingerprint": "2ed4e489782c0f0f",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Enterprise solutions architect designing cloud solutions with customers",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "2b68805c71e1": {
+  "fingerprint": "530cc27931caf9ac",
+  "aff": {
+   "pm": 80,
+   "program": 50
+  },
+  "why": "Principal PM for GenAI product; heavy cross-team orchestration",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "4d3e3d8ed53e": {
+  "fingerprint": "86371068de4cd10b",
+  "aff": {
+   "program": 92,
+   "project": 65
+  },
+  "why": "Leads AI program portfolio and supervises project managers",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "8f81974832a1": {
+  "fingerprint": "8944ee5068855e71",
+  "aff": {
+   "pm": 85,
+   "program": 40
+  },
+  "why": "Product strategy and roadmap for tokenized payments; coordinates delivery",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "c37cc93bf03b": {
+  "fingerprint": "3f971801a0ee7dc1",
+  "aff": {
+   "pm": 70,
+   "strategy": 50,
+   "pmm": 45,
+   "solutions": 35
+  },
+  "why": "Leads loyalty consulting product strategy and go-to-market",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "fa09a70d7680": {
+  "fingerprint": "843eced6e8e80c44",
+  "aff": {
+   "program": 85,
+   "project": 50,
+   "strategy": 35
+  },
+  "why": "TPM turning data needs into field capture programs and plans",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "5fc42e1cf644": {
+  "fingerprint": "95664c410722c062",
+  "aff": {
+   "solutions": 85
+  },
+  "why": "Post-sale cloud architect for mission-critical customer solutions",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "91f54550d269": {
+  "fingerprint": "3d6ff360aae27df0",
+  "aff": {
+   "pm": 80,
+   "pmm": 45,
+   "solutions": 30
+  },
+  "why": "Product manages packaged professional services offerings",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "e25e6b1cf474": {
+  "fingerprint": "f1c7165f7ccae6b2",
+  "aff": {
+   "pm": 70,
+   "ba": 50,
+   "program": 30
+  },
+  "why": "Product owner for automation/integration solutions; intake and backlog",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "6a0507af07cf": {
+  "fingerprint": "a234a5675b574974",
+  "aff": {
+   "pm": 88
+  },
+  "why": "Owns data-integration roadmap for wealth CRM",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "efea5f2bdffd": {
+  "fingerprint": "6eb787c90c1dd400",
+  "aff": {
+   "strategy": 95
+  },
+  "why": "Chief of Staff: operating cadence and cross-team alignment for leaders",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "73ba9ea129ab": {
+  "fingerprint": "0c156e7186bedac1",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Pre-sales engineer designing merchant integrations",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "8c57bba9da13": {
+  "fingerprint": "2810ed2a5a9caa99",
+  "aff": {
+   "solutions": 92
+  },
+  "why": "Specialist solutions architect for WorkSpaces and applied AI",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "b6a21d0f93c7": {
+  "fingerprint": "10b519a7bd092016",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Drives end-to-end development and launch of consumer products",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "98c9190c19ac": {
+  "fingerprint": "9fc1225aea991716",
+  "aff": {
+   "tns": 60,
+   "strategy": 35
+  },
+  "why": "Second-line product risk oversight for payment systems",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "969c0498dc5e": {
+  "fingerprint": "4e85322cc099ca58",
+  "aff": {
+   "program": 70,
+   "strategy": 60,
+   "analytics": 30
+  },
+  "why": "Senior TPM defining FinOps strategy and cost programs",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "f3e66f269eb9": {
+  "fingerprint": "02a48c0578f69048",
+  "aff": {
+   "program": 70,
+   "strategy": 60,
+   "analytics": 30
+  },
+  "why": "Senior TPM defining FinOps strategy and cost programs",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "0a9b3d18b636": {
+  "fingerprint": "e7101583d9502c34",
+  "aff": {
+   "pm": 80
+  },
+  "why": "Description is only page navigation; judged from title: PM manager",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "5a278c92beb2": {
+  "fingerprint": "8abafb5c781b2c13",
+  "aff": {
+   "pm": 88,
+   "project": 30
+  },
+  "why": "Owns corporate website and AEM platform roadmap and launches",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "5cc7b064b928": {
+  "fingerprint": "c577914887f9da5e",
+  "aff": {
+   "tns": 75,
+   "program": 65
+  },
+  "why": "Runs privacy and responsible-AI program across legal, product, security",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "59fddf966cca": {
+  "fingerprint": "c3c38b1589ebcb34",
+  "aff": {
+   "pm": 70,
+   "strategy": 50,
+   "program": 40
+  },
+  "why": "Owns enterprise data products strategy and roadmap",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "6814bf0397eb": {
+  "fingerprint": "4a58f5c0e65c2a6a",
+  "aff": {
+   "program": 85,
+   "project": 55,
+   "strategy": 45
+  },
+  "why": "Leads governance of large process transformation programs",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "262e6432cca8": {
+  "fingerprint": "11ff1a1d16c59720",
+  "aff": {
+   "pm": 85
+  },
+  "why": "Product owner for AEC data features, working with customers",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "528a8e86cf60": {
+  "fingerprint": "c4207eec084cc6d2",
+  "aff": {
+   "solutions": 85
+  },
+  "why": "Forward-deployed AI solutions architect and consultant",
+  "at": "2026-10-17T02:14:14+00:00"
+ },
+ "c4bd47d1ec10": {
+  "fingerprint": "3e5a4f5f5ac22547",
+  "aff": {
+   "solutions": 88
+  },
+  "why": "Consulting AI/ML solution architect: client needs, architectures, PoCs",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "88fa53e1a5cf": {
+  "fingerprint": "e60010e8c766c1c1",
+  "aff": {
+   "program": 80,
+   "strategy": 55,
+   "project": 45
+  },
+  "why": "Integration office: workstreams, governance and executive reporting",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "780fae635dbd": {
+  "fingerprint": "ff243ab946345181",
+  "aff": {
+   "ba": 55,
+   "pm": 50,
+   "program": 45,
+   "strategy": 40
+  },
+  "why": "Titled PM but mostly service operations, processes and readiness",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "66fd10e81f32": {
+  "fingerprint": "ea22de360453a7ee",
+  "aff": {
+   "pmm": 95
+  },
+  "why": "Product marketer for Okta access management and security",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "421d2dcd95ad": {
+  "fingerprint": "49cd96abba226718",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Leads product requirements for autonomy hardware platform",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "bf4fc600c273": {
+  "fingerprint": "3397d05341ff44b5",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Builds and grows Vault Medical connections product",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "632815ead602": {
+  "fingerprint": "430b03e275ed1032",
+  "aff": {
+   "pm": 85,
+   "project": 35
+  },
+  "why": "Product owner leading a pod's roadmap, backlog and delivery",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "1e818bc3ff43": {
+  "fingerprint": "31b583dd93e3deaa",
+  "aff": {
+   "program": 92
+  },
+  "why": "Engineering program manager for App Store; thin description",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "9a7780977c69": {
+  "fingerprint": "41a85407b8f1b8bf",
+  "aff": {
+   "program": 65,
+   "strategy": 35,
+   "pm": 30
+  },
+  "why": "Runs developer enablement programs, communities and docs hub",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "500b02b40f92": {
+  "fingerprint": "f00c8025f406481b",
+  "aff": {
+   "program": 88,
+   "project": 40,
+   "tns": 25
+  },
+  "why": "TPM delivering cybersecurity initiatives",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "f1fc2cfee47a": {
+  "fingerprint": "175347a279c84a4a",
+  "aff": {
+   "pm": 80,
+   "ba": 35
+  },
+  "why": "Associate product owner for IVR platform migration and features",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "33ea2fd33533": {
+  "fingerprint": "72f8b48cab62f84b",
+  "aff": {
+   "pm": 70,
+   "analytics": 45,
+   "strategy": 45
+  },
+  "why": "Broker-channel product P&L, pricing and analytics",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "eabd591f3ffd": {
+  "fingerprint": "7b6f648633f9cf27",
+  "aff": {
+   "strategy": 55,
+   "program": 50,
+   "analytics": 35
+  },
+  "why": "Leads multi-year risk data strategy and transformation",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "c3cee788425d": {
+  "fingerprint": "70172c00afd945f3",
+  "aff": {
+   "program": 92,
+   "strategy": 55
+  },
+  "why": "Runs CCO-level programs across sales and customer teams",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "e421ee6907c3": {
+  "fingerprint": "cc5b7777328b2f1f",
+  "aff": {
+   "pm": 65,
+   "program": 35,
+   "ba": 35
+  },
+  "why": "Junior product role supporting requirements and delivery tracking",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "8cb1ccd5bb4d": {
+  "fingerprint": "c125da8320f00f06",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Solution engineer running customer envisioning and AI engagements",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "ff45e0284d6c": {
+  "fingerprint": "a772929c9812fb1c",
+  "aff": {
+   "pmm": 95
+  },
+  "why": "Leads go-to-market for Okta Device Access",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "38ccfa6d522a": {
+  "fingerprint": "2b8b10139bbf479d",
+  "aff": {
+   "pm": 70,
+   "ba": 55,
+   "analytics": 35
+  },
+  "why": "Data product owner: requirements, roadmap and data solutions",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "116a38f21e12": {
+  "fingerprint": "045f34b8f482b15d",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Head of Product leading GPMs for customer experience platform",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "357fb409fbf5": {
+  "fingerprint": "e2a957c6a91395aa",
+  "aff": {
+   "analytics": 70,
+   "ba": 40,
+   "pm": 30
+  },
+  "why": "Titled product role but mostly data analysis and dashboard reporting",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "a0cb137a8be3": {
+  "fingerprint": "9a3dcfbf922550b4",
+  "aff": {
+   "solutions": 65
+  },
+  "why": "Forward-deployed GenAI engineer building AI systems with customers",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "b4d2a7e6eed9": {
+  "fingerprint": "da36a58f2726808a",
+  "aff": {
+   "pmm": 95
+  },
+  "why": "Leads product marketing team and GTM strategy",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "3a0c6d814360": {
+  "fingerprint": "e8ce9670ccf3daaa",
+  "aff": {
+   "program": 95,
+   "strategy": 45
+  },
+  "why": "Leads large bank transformation programs and governance",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "eda170fd8562": {
+  "fingerprint": "f021f452ac4ea99f",
+  "aff": {
+   "strategy": 90,
+   "analytics": 40
+  },
+  "why": "Enterprise strategy: analysis, models and planning for executives",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "af76a2af68a7": {
+  "fingerprint": "4756338369d90e94",
+  "aff": {
+   "program": 75,
+   "solutions": 45
+  },
+  "why": "Technical program lead and customer liaison for HW/SW delivery",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "cb6001bcbfe1": {
+  "fingerprint": "c6cf823a4e0e23c8",
+  "aff": {
+   "program": 75,
+   "tns": 45,
+   "project": 40
+  },
+  "why": "Runs AV partner audit and compliance programs",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "4690cfc61b6b": {
+  "fingerprint": "44130737abec373b",
+  "aff": {
+   "program": 92,
+   "project": 50
+  },
+  "why": "TPM leading cross-functional communications platform initiatives",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "32bffd52c9a8": {
+  "fingerprint": "138d6db931323d7a",
+  "aff": {
+   "solutions": 90
+  },
+  "why": "Customer-facing cloud security architect for Microsoft customers",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "8739e01a77d1": {
+  "fingerprint": "ebd247c1299759c1",
+  "aff": {
+   "solutions": 92
+  },
+  "why": "Customer-facing data and AI cloud solution architect",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "015e5319c4a1": {
+  "fingerprint": "914081efda06ebf6",
+  "aff": {
+   "solutions": 92
+  },
+  "why": "Customer-facing data and AI cloud solution architect",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "540efea55fef": {
+  "fingerprint": "8bff87810f3e3a0f",
+  "aff": {
+   "solutions": 92
+  },
+  "why": "Customer-facing data and analytics cloud solution architect",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "7040fed278d0": {
+  "fingerprint": "95ab95a6e1eab4e1",
+  "aff": {
+   "program": 95
+  },
+  "why": "Owns integrated product plan and delivery across HW/SW teams",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "d7acf34a5965": {
+  "fingerprint": "66c42cc22f925e77",
+  "aff": {
+   "solutions": 40,
+   "ba": 25
+  },
+  "why": "Internal hands-on data/AI architect; mainly engineering, not customer solutions",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "a0f603790cea": {
+  "fingerprint": "ba9745b93a1a6604",
+  "aff": {
+   "solutions": 30,
+   "tns": 25
+  },
+  "why": "Internal security architecture guidance; mainly engineering work",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "22ba044875f2": {
+  "fingerprint": "b643260ec3a70bff",
+  "aff": {
+   "program": 60,
+   "analytics": 40,
+   "strategy": 35
+  },
+  "why": "Hands-on TPM driving AI adoption and self-serve data tooling",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "b786e88b6f89": {
+  "fingerprint": "33a5a49b9ecdfcb1",
+  "aff": {
+   "pmm": 95,
+   "pm": 30
+  },
+  "why": "Product marketing across lifecycle: GTM, launches, adoption",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "dcf1d1adacbf": {
+  "fingerprint": "0bc8ecc015ae5237",
+  "aff": {
+   "pmm": 95,
+   "pm": 30
+  },
+  "why": "Owns GTM strategy and execution for Link and Financial Connections",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "932ef67e14e0": {
+  "fingerprint": "05a9e50588611065",
+  "aff": {
+   "program": 88,
+   "tns": 30,
+   "strategy": 35
+  },
+  "why": "Directs cyber security program delivery, roadmap and budget",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "212f6996002e": {
+  "fingerprint": "289c9fec7f5b1012",
+  "aff": {
+   "pm": 85,
+   "ba": 30
+  },
+  "why": "Senior product owner for healthcare SaaS domains",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "2fdd40695cf1": {
+  "fingerprint": "8d2ef0390c943350",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Pre-sales engineer for enterprise security customers",
+  "at": "2026-10-17T02:14:15+00:00"
+ },
+ "0766e018143e": {
+  "fingerprint": "e1fdb70536aa5076",
+  "aff": {
+   "pm": 95,
+   "program": 25
+  },
+  "why": "Owns vision, strategy and roadmap for Fabric/Azure data integration",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "64e8ab548c20": {
+  "fingerprint": "a92cc1e22e122756",
+  "aff": {
+   "pm": 92,
+   "program": 30,
+   "prodanalytics": 30,
+   "analytics": 25
+  },
+  "why": "Technical PM owning roadmap for ads reporting data products; measurement domain",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "856e02ff9869": {
+  "fingerprint": "a495c1947c2ed9f1",
+  "aff": {
+   "pm": 93,
+   "program": 30,
+   "tns": 25
+  },
+  "why": "Owns payments platform strategy and roadmap incl. payment controls",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "4b6192be0707": {
+  "fingerprint": "42f48e27b2743905",
+  "aff": {
+   "pm": 93,
+   "prodanalytics": 30,
+   "analytics": 25
+  },
+  "why": "Owns the attribution product stack with eng/design; measurement-heavy domain",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "4de21eddf151": {
+  "fingerprint": "eda070976349eac7",
+  "aff": {
+   "pm": 93,
+   "prodanalytics": 30,
+   "analytics": 25
+  },
+  "why": "Owns measurement products proving ad value; roadmap with dedicated team",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "6f9ed284e673": {
+  "fingerprint": "c254e5ccb9c6237a",
+  "aff": {
+   "pm": 93,
+   "program": 30,
+   "strategy": 30
+  },
+  "why": "Owns multi-year Auth0 platform infrastructure strategy and roadmap",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "a828a82f74b6": {
+  "fingerprint": "cf117cc6a1814c52",
+  "aff": {
+   "pm": 95,
+   "program": 25
+  },
+  "why": "Owns AI agent product roadmap and launches at Workday",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "becd1f2b48a8": {
+  "fingerprint": "a02280057ecc8f64",
+  "aff": {
+   "pm": 93,
+   "program": 30
+  },
+  "why": "Technical PM owning end-to-end lifecycle of AI customer service products",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "c30dc3808474": {
+  "fingerprint": "53544bb47e433175",
+  "aff": {
+   "pm": 75,
+   "program": 55,
+   "strategy": 40,
+   "tns": 35,
+   "pmm": 30
+  },
+  "why": "Incubates and scales agentic trust products; heavy cross-team execution and go-to-market",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "e34170e40ebf": {
+  "fingerprint": "0bb8165204973512",
+  "aff": {
+   "pm": 95,
+   "pmm": 25
+  },
+  "why": "Owns B2B/ABM marketing product portfolio end to end",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9ebee2dc2dcb": {
+  "fingerprint": "ffc39f85cf980c01",
+  "aff": {
+   "pm": 93,
+   "program": 35,
+   "strategy": 30
+  },
+  "why": "Single-threaded owner launching Affirm's bank deposit product and operations",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "84a90ee8ed8f": {
+  "fingerprint": "5804e07c1c50907c",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Sets product direction for consumer credit experiences across teams",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9addc257daa0": {
+  "fingerprint": "3943eb63dfc11e42",
+  "aff": {
+   "pm": 95,
+   "solutions": 20
+  },
+  "why": "Owns North's integrations surface end to end",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "b22b74e7ac11": {
+  "fingerprint": "4a8d238ada080ec2",
+  "aff": {
+   "pm": 93,
+   "strategy": 30,
+   "pmm": 25
+  },
+  "why": "0-to-1 PM defining packaging, pricing and launch of an API marketplace",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "a658be876bb5": {
+  "fingerprint": "10a263917b0bbe0b",
+  "aff": {
+   "pm": 95,
+   "tns": 20
+  },
+  "why": "Owns vision and roadmap for Auth0 agentic security products",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "0c3259855252": {
+  "fingerprint": "e9d648128215e7ea",
+  "aff": {
+   "pm": 92,
+   "program": 30
+  },
+  "why": "Technical PM owning lifecycle and adoption of shared AI primitives",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d3c47c916c30": {
+  "fingerprint": "05ad097a353b72f5",
+  "aff": {
+   "pm": 80,
+   "strategy": 55,
+   "program": 35
+  },
+  "why": "Owns AI strategy, portfolio and roadmap; leads AI products to launch",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "e3bea8bcd8e9": {
+  "fingerprint": "8a1639e797056ab6",
+  "aff": {
+   "pm": 95,
+   "prodanalytics": 20
+  },
+  "why": "Owns retailer app platform and insights products",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "b0946ee4357e": {
+  "fingerprint": "f893c16fd317a601",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Drives roadmap for Auth0 AI agent identity products",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d2424d8544c0": {
+  "fingerprint": "47df5fc308446796",
+  "aff": {
+   "pm": 88,
+   "program": 35,
+   "strategy": 30
+  },
+  "why": "Internal PM owning developer productivity as a product; drives adoption across eng",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "867313c50e15": {
+  "fingerprint": "15202b8f53cd02f6",
+  "aff": {
+   "pm": 93,
+   "tns": 25
+  },
+  "why": "Owns onboarding and compliance products for senders and numbers",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "8e1083a22d85": {
+  "fingerprint": "db826b8b728bb44a",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns autonomous AI agent product lines at Workday",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "1ce5e0322c79": {
+  "fingerprint": "97e303487d0aa1e3",
+  "aff": {
+   "pm": 95,
+   "pmm": 20
+  },
+  "why": "Builds and launches Affirm's consumer loyalty program from scratch",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "4e1d264e922f": {
+  "fingerprint": "577f0cb9994b8bcd",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns Jobber's AI automations platform and roadmap",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "91b645298884": {
+  "fingerprint": "4d5ddb595557aa43",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns Evisort document intelligence AI product strategy",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "ad7ba0b21712": {
+  "fingerprint": "de7f2685a022c590",
+  "aff": {
+   "pm": 92,
+   "strategy": 30,
+   "pmm": 25
+  },
+  "why": "Leads strategy and launch of a self-serve managed North offering",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "cdabfda35899": {
+  "fingerprint": "cdbe14e4d2fa83a9",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns vision and roadmap for AI products in personal banking",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9a0b276b88bc": {
+  "fingerprint": "8b4e8d29bada13c8",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns AI creative production product for advertisers",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "ac92a634d9dc": {
+  "fingerprint": "894569613dd95d48",
+  "aff": {
+   "pm": 85,
+   "strategy": 25
+  },
+  "why": "Hands-on product leader defining new platform experiences via AI prototypes",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f7bd59f07a1a": {
+  "fingerprint": "020f91459b417333",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns roadmap for the customer-facing conversational AI agent (chat and voice)",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "eced91d76c51": {
+  "fingerprint": "e0d71cd3393badca",
+  "aff": {
+   "pm": 93,
+   "solutions": 20
+  },
+  "why": "Sets vision for retailer customization and extensibility products",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "b8e547ef5eae": {
+  "fingerprint": "a23d10837c451bb7",
+  "aff": {
+   "pm": 93,
+   "program": 25
+  },
+  "why": "Defines and executes roadmap for Enterprise AI platform capabilities",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "5c4ed8eb82a4": {
+  "fingerprint": "ed74e43cf22602f4",
+  "aff": {
+   "pm": 92,
+   "tns": 55
+  },
+  "why": "Owns roadmap for AI financial crimes controls and investigator tools",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9f14647cf574": {
+  "fingerprint": "84b643d69e181f49",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns authentication policy roadmap and prioritization",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "246e3b401752": {
+  "fingerprint": "4ac1db15679efd10",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Technical PM owning agent runtime and context engineering for North",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d99a23cd6540": {
+  "fingerprint": "40e72ef474ad2b54",
+  "aff": {
+   "pm": 75,
+   "solutions": 60,
+   "program": 35,
+   "ba": 30
+  },
+  "why": "Product owner for enterprise AI deployments: scoping, requirements, delivery, adoption",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "4afa8993d1db": {
+  "fingerprint": "150306d1e07d61d7",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns commerce product lines for Thinkific Plus",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "69cff397fe31": {
+  "fingerprint": "794b16c5b3346d14",
+  "aff": {
+   "pm": 93,
+   "tns": 50
+  },
+  "why": "Owns KYC fraud and risk product lifecycle and roadmap",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "6cccd7f94efd": {
+  "fingerprint": "2a2dce63c34df664",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Defines strategy and roadmap for device security capabilities",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d0577d1aafe2": {
+  "fingerprint": "b08fbc188f7cfd33",
+  "aff": {
+   "pm": 92,
+   "program": 25
+  },
+  "why": "Leads PM team owning shared core services platform strategy",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "4fbd432d599f": {
+  "fingerprint": "07f6fe33cd81025e",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Leads roadmap for SaaS Manager enterprise readiness and modernization",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d105682fbc5a": {
+  "fingerprint": "af953b4fe702252d",
+  "aff": {
+   "pm": 88,
+   "analytics": 35,
+   "ba": 35
+  },
+  "why": "Data product manager owning roadmap; translates strategy into data requirements",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "7a51cdb5bb24": {
+  "fingerprint": "c2754930cf9ff08a",
+  "aff": {
+   "pm": 95,
+   "pmm": 30
+  },
+  "why": "Owns AI product strategy, roadmap and commercial outcome",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "1982c0d2a406": {
+  "fingerprint": "4819f5ab0a3f7dbb",
+  "aff": {
+   "pm": 92,
+   "analytics": 30,
+   "prodanalytics": 20
+  },
+  "why": "Owns support agent tools and customer care data foundation",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f03b68b1fae5": {
+  "fingerprint": "48a0eaf4630049f3",
+  "aff": {
+   "pm": 70,
+   "program": 55,
+   "project": 40
+  },
+  "why": "Technical product owner leading ML teams and driving technical delivery of AI systems",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "68829dbbc45c": {
+  "fingerprint": "32b216f71b1e7de9",
+  "aff": {
+   "pm": 92,
+   "tns": 55
+  },
+  "why": "Platform PM for fraud prevention rules and investigation tooling",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "11749d559158": {
+  "fingerprint": "c324bc809bd18796",
+  "aff": {
+   "pm": 95,
+   "strategy": 30
+  },
+  "why": "Discovers, validates and launches new fintech products 0-to-1",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "db570443584f": {
+  "fingerprint": "6d4e606142ed377b",
+  "aff": {
+   "pm": 92,
+   "pmm": 25,
+   "solutions": 20
+  },
+  "why": "Owns roadmap for partner integrations driving merchant growth",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "c54ad6ee15f6": {
+  "fingerprint": "22a7ad817b0a7453",
+  "aff": {
+   "pm": 95,
+   "pmm": 20
+  },
+  "why": "Owns merchant pricing products and roadmap",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f712ff0ad783": {
+  "fingerprint": "be2a54c0ee1cadce",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns authentication factor product roadmap for Auth0",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f005eb0e9a95": {
+  "fingerprint": "619be9165829ea79",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Incubates and grows new Okta Customer Identity capabilities",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "3ba79b2dc582": {
+  "fingerprint": "94ddf5a568620aa1",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns roadmap for Okta Device Access for Windows",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "11908cfe583d": {
+  "fingerprint": "58af69f898bec4a3",
+  "aff": {
+   "pm": 80,
+   "program": 40,
+   "tns": 25
+  },
+  "why": "Shapes company-wide security product strategy, partnering with feature teams",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "0241e5d0935e": {
+  "fingerprint": "75ad19bf1713f8bf",
+  "aff": {
+   "pm": 95,
+   "prodanalytics": 25
+  },
+  "why": "Owns checkout terms/payment selection experience and experiments",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "7242cad7cd1c": {
+  "fingerprint": "673c037b60bc92bd",
+  "aff": {
+   "pm": 95,
+   "prodanalytics": 20
+  },
+  "why": "Owns consumer repayment experiences and experiments",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9a1a719a03f5": {
+  "fingerprint": "da3b4edb1190b313",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Technical PM owning strategy and roadmap for AWS SQS/SNS/MQ",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f01de139c955": {
+  "fingerprint": "fa57090ecf906863",
+  "aff": {
+   "pm": 92,
+   "tns": 50,
+   "pmm": 20
+  },
+  "why": "Leads token fraud prevention products; prioritizes roadmap",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9477be049fc7": {
+  "fingerprint": "a0ad3930a61ec19c",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns Stripe mobile app strategy and roadmap",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "cd3464f0dd62": {
+  "fingerprint": "a339072049d4e427",
+  "aff": {
+   "pm": 90,
+   "program": 30
+  },
+  "why": "Owns frontend platform strategy and modernization roadmap",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "c1c506d9ebf7": {
+  "fingerprint": "422a6fa404259881",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns vision and roadmap for contract intelligence AI features",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "630a9526e348": {
+  "fingerprint": "343d83c2608a4071",
+  "aff": {
+   "pm": 90,
+   "program": 25
+  },
+  "why": "Owns vision and roadmap for AI-powered software delivery and governance capabilities",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "20e039f2f0f9": {
+  "fingerprint": "d569d806ad519320",
+  "aff": {
+   "pm": 92,
+   "strategy": 35
+  },
+  "why": "Owns the Canadian market across the product portfolio; invest decisions and ROI",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "c17bd1a775b2": {
+  "fingerprint": "bc84ef8ff580cdcf",
+  "aff": {
+   "pm": 88,
+   "ba": 30,
+   "analytics": 25
+  },
+  "why": "Owns data quality features for a healthcare claims data platform; writes requirements",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "154c2ae9c6a5": {
+  "fingerprint": "ffe4f8fc68ac3c27",
+  "aff": {
+   "pm": 88,
+   "ba": 30,
+   "program": 30
+  },
+  "why": "Technical PM prioritizing features for contact center products; synthesizes requirements",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "45e3194ca9bd": {
+  "fingerprint": "47db2949a226bc06",
+  "aff": {
+   "pm": 93,
+   "solutions": 20,
+   "pmm": 20
+  },
+  "why": "Owns 0-to-1 ad formats domain; product partner to sales for new advertisers",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "acce55d2c532": {
+  "fingerprint": "14fe2ea49164a716",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Sets commercial product strategy and roadmap; 0-to-1 discovery to launch",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "283ef998b06d": {
+  "fingerprint": "0a5793eb625b3905",
+  "aff": {
+   "pm": 95,
+   "strategy": 25,
+   "pmm": 25
+  },
+  "why": "Owns serverless roadmap, pricing and business model with eng and marketing",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9a46fbeed2a0": {
+  "fingerprint": "25d3dadb457b034f",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns strategy and roadmap for Revit core platform capabilities",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "1f59f1bdfb49": {
+  "fingerprint": "4e5eb7730bbecbdb",
+  "aff": {
+   "pm": 85,
+   "ba": 45,
+   "program": 35
+  },
+  "why": "Leads internal business platforms; turns business needs into requirements and drives execution",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "3970f017c31c": {
+  "fingerprint": "1282186e1d9c2a6b",
+  "aff": {
+   "pm": 92,
+   "tns": 25
+  },
+  "why": "Owns vision and roadmap for identity data and insights products",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "1da6681a70c5": {
+  "fingerprint": "a39e063a701952b3",
+  "aff": {
+   "pm": 90,
+   "pmm": 30,
+   "tns": 25
+  },
+  "why": "Leads dispute-reduction products in market; roadmap, requirements and go-to-market",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "c27c95e11d17": {
+  "fingerprint": "b4ff397438d1e104",
+  "aff": {
+   "pm": 85,
+   "tns": 50,
+   "pmm": 20
+  },
+  "why": "Supports account protection products against takeover and synthetic fraud",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "735e56da20dd": {
+  "fingerprint": "279eab02fa8e711f",
+  "aff": {
+   "pm": 95,
+   "tns": 20
+  },
+  "why": "Defines strategy and roadmap for identity threat detection products",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "a8f077a9e6b1": {
+  "fingerprint": "266bc8291d8f4c04",
+  "aff": {
+   "pm": 88,
+   "ba": 25,
+   "program": 25
+  },
+  "why": "AI product owner: vision, roadmap and backlog for wealth advisor AI",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f8f36cb1f14e": {
+  "fingerprint": "bef808208ee2ff9f",
+  "aff": {
+   "pm": 85,
+   "analytics": 30,
+   "program": 30,
+   "ba": 25
+  },
+  "why": "Leads data product portfolio and PM team on a Databricks platform",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "427ee7c64f16": {
+  "fingerprint": "378676cecc881183",
+  "aff": {
+   "pm": 92,
+   "tns": 30
+  },
+  "why": "Owns strategy for AI evaluation and governance capabilities (quality, safety, risk)",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f0a24d3ef557": {
+  "fingerprint": "17e905ffd3997a60",
+  "aff": {
+   "program": 95,
+   "pm": 35
+  },
+  "why": "Owns delivery of largest cross-team data programs; shapes roadmap too",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "1d0023a8e3b4": {
+  "fingerprint": "996089f409b0decb",
+  "aff": {
+   "program": 92,
+   "pm": 40
+  },
+  "why": "TPM driving multi-quarter ads initiatives with some ownership of what gets built",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "8ffa50dc6b9c": {
+  "fingerprint": "c6828628d7bcb917",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Leads strategy and roadmap for Jobber's AI voice receptionist products",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "da864626f39a": {
+  "fingerprint": "60d3d0367a97ecf5",
+  "aff": {
+   "pm": 93,
+   "pmm": 30,
+   "prodanalytics": 25
+  },
+  "why": "Owns AI Teammate growth model: onboarding, activation, adoption metrics",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "e6dff86d266f": {
+  "fingerprint": "4578bf30770ff35b",
+  "aff": {
+   "pm": 93,
+   "prodanalytics": 35
+  },
+  "why": "Owns growth funnel with high-velocity experimentation program",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "0c5af5873996": {
+  "fingerprint": "be97b9eac3ae1c16",
+  "aff": {
+   "pm": 92,
+   "program": 25
+  },
+  "why": "Owns supplier integrations roadmap; accountable for squad delivery",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "6ece77f65a78": {
+  "fingerprint": "fbbf2523d2fc2e49",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns Alexa Canada roadmap, requirements and customer experience",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "7529e650b9fb": {
+  "fingerprint": "a882cf88e029b32f",
+  "aff": {
+   "pm": 93
+  },
+  "why": "Owns the PLG platform layer (accounts, caps, trials, signals)",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "eeb35137acff": {
+  "fingerprint": "8164ec7c06ccd10b",
+  "aff": {
+   "pm": 95,
+   "pmm": 20
+  },
+  "why": "Defines vision, roadmap, pricing and launch for a lifecycle context graph",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "708790a0520d": {
+  "fingerprint": "417e639dbfa14836",
+  "aff": {
+   "pm": 93,
+   "prodanalytics": 20,
+   "analytics": 20
+  },
+  "why": "Owns advertiser tools for understanding campaign value and reporting",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "72f74a9cd5af": {
+  "fingerprint": "17ec6f0ecb40a42e",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Leads 0-to-1 vision, roadmap and execution for a new financial product",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d19f796fcf1e": {
+  "fingerprint": "5760054214d714f7",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Product management for Documentum enterprise content software",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "2f9aa8820957": {
+  "fingerprint": "f53597c93ba622f6",
+  "aff": {
+   "pm": 80,
+   "program": 40,
+   "analytics": 35,
+   "strategy": 25
+  },
+  "why": "Leads media data platform roadmap, data products and cross-team delivery",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9f0889e1d370": {
+  "fingerprint": "e726cb0b324e8e00",
+  "aff": {
+   "pm": 92,
+   "program": 25
+  },
+  "why": "Leads PM team owning shared core services platform strategy",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "037a155378f2": {
+  "fingerprint": "15934c690d69be73",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns connectivity platform: bank linking and public API",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f47e78f76f55": {
+  "fingerprint": "c345e0c1ad064332",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Defines and delivers solutions in a core procurement product area",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d8143613c523": {
+  "fingerprint": "28c59053f939e929",
+  "aff": {
+   "pm": 90,
+   "strategy": 30,
+   "pmm": 25
+  },
+  "why": "Drives product strategy for seller distribution and marketplace growth",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "7efa2fdcbb1c": {
+  "fingerprint": "02d2be8cbb8ffab7",
+  "aff": {
+   "pm": 93,
+   "program": 25
+  },
+  "why": "Owns Alexa Canada roadmap, requirements and launches",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "b44f03c40b49": {
+  "fingerprint": "5ae6c20870e75538",
+  "aff": {
+   "pm": 85,
+   "strategy": 45
+  },
+  "why": "Owns vision, strategy, roadmap and adoption of capital markets AI products",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "8c63e1a0da3e": {
+  "fingerprint": "b6a8f2e5ccb97c00",
+  "aff": {
+   "pm": 85,
+   "strategy": 25
+  },
+  "why": "Thin description: manages insurance data products and product strategy",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "36b8aa235ec4": {
+  "fingerprint": "bc7b779dd9197d42",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Lead PM shaping B2B collaboration platform product",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "175a916f50b8": {
+  "fingerprint": "b584d47fa8b01473",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns strategy and roadmap for accounts and multi-product adoption",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "34f8045c5655": {
+  "fingerprint": "ce75b7b4b3124396",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Technical PM designing and delivering AI agent products for life sciences",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "1120a3461bea": {
+  "fingerprint": "8327554ba5e1d567",
+  "aff": {
+   "pm": 88,
+   "analytics": 30,
+   "program": 25
+  },
+  "why": "Leads merchant analytics product strategy and teams",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "50152ceea7dd": {
+  "fingerprint": "0d46e6fbc8102ef8",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns and executes product strategies for consumer financial products",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "88ef8b990ec3": {
+  "fingerprint": "60b70039ec37d660",
+  "aff": {
+   "pm": 92,
+   "ba": 25
+  },
+  "why": "Full product ownership of the billing and pricing system; heavy stakeholder mgmt",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "52fbddaeafb2": {
+  "fingerprint": "7d2e57a5edeea874",
+  "aff": {
+   "pm": 93,
+   "program": 25
+  },
+  "why": "Defines vision for end-to-end AI software factory experience across teams",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "da81d4af4f4a": {
+  "fingerprint": "35ac52e7e5d65f06",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns test and code coverage product from discovery to adoption",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "72b62349ccc2": {
+  "fingerprint": "a8907e71639141ef",
+  "aff": {
+   "pm": 90
+  },
+  "why": "Thin description; judged from title: senior PM for cluster linking",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "10f5ba905cd6": {
+  "fingerprint": "a5a0d6546463cd94",
+  "aff": {
+   "pm": 93
+  },
+  "why": "Owns catalog attribute strategy, governance and data accuracy",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "6d8a3e9b30c1": {
+  "fingerprint": "5219ded5bb313119",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns strategy and roadmap for fulfillment order quality",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f05e5677e1a4": {
+  "fingerprint": "bdf9978655bb5f61",
+  "aff": {
+   "pm": 90,
+   "program": 25
+  },
+  "why": "Technical PM setting vision and roadmap for real-time payment platforms",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "8b125c1c61b2": {
+  "fingerprint": "98c321c1aa85fe36",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns 3-5 year vision and roadmap for traffic signal priority portfolio",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f3a3fc2513e3": {
+  "fingerprint": "8280a5875db97ce9",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Product management for enterprise content services",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "aa5f95f50757": {
+  "fingerprint": "8280a5875db97ce9",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Product management for enterprise content services",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "828999526c3e": {
+  "fingerprint": "9e8e2228ec3e9834",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns roadmap for high-net-worth tiers and consolidation experiences",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "0b2e63a632b4": {
+  "fingerprint": "eab1cb3d2524cc19",
+  "aff": {
+   "pm": 93
+  },
+  "why": "Product strategy and execution for audit workflow platform",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9ca8a392789e": {
+  "fingerprint": "3a417284b2bd83d3",
+  "aff": {
+   "pm": 90
+  },
+  "why": "Technical PM for applied science AI products in audit",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "3a94891368f9": {
+  "fingerprint": "3f9ab861cfebd888",
+  "aff": {
+   "pm": 90
+  },
+  "why": "No description; judged from title: PM for AI orchestration",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "662d49b34371": {
+  "fingerprint": "d129a23a7b8cc0fa",
+  "aff": {
+   "pm": 93,
+   "pmm": 25,
+   "prodanalytics": 25
+  },
+  "why": "Owns product-led growth strategy for AI software factory adoption",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9f787fc399ea": {
+  "fingerprint": "86fdbc3e208ace2c",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns a mortgage servicing product substream",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "955edf4764a3": {
+  "fingerprint": "0673b32e8f64bb9a",
+  "aff": {
+   "pm": 85,
+   "program": 45
+  },
+  "why": "Senior PM leading cross-squad initiatives, specs and end-to-end delivery",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "4723b158d358": {
+  "fingerprint": "cf947ce451ebefe4",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns product strategy for the everyday banking portfolio",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "3619c14dee57": {
+  "fingerprint": "ddf6bcc60d22d73c",
+  "aff": {
+   "pm": 90,
+   "ba": 25,
+   "program": 25
+  },
+  "why": "Defines wealth product strategy and roadmap; leads agile teams",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "a28d20b09cd7": {
+  "fingerprint": "873e390de17ebc3b",
+  "aff": {
+   "pm": 88,
+   "ba": 35
+  },
+  "why": "Owns digital advice roadmap and backlog; gathers business requirements",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "fae8ffdfc736": {
+  "fingerprint": "312ed7969928616c",
+  "aff": {
+   "pm": 93,
+   "tns": 45
+  },
+  "why": "Owns business verification (KYB) product that stops bad actors at onboarding",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "51c2a4db6036": {
+  "fingerprint": "1d7e7517ba311d4a",
+  "aff": {
+   "pm": 93,
+   "ba": 25
+  },
+  "why": "Owns core features of an AI regulated-content authoring product",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d7e1b78626ad": {
+  "fingerprint": "fb3fcf6206d90b4a",
+  "aff": {
+   "pm": 90
+  },
+  "why": "No description; judged from title: PM for data products",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "ea985c6552c2": {
+  "fingerprint": "9d0d08f8415cdae4",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns admin workflows roadmap for enterprise password manager",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "1f23b9d424ee": {
+  "fingerprint": "e54cb7a7d67abbb7",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Defines and executes roadmap for internal ML platform",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "73eec7000e23": {
+  "fingerprint": "8e48e5488ea3a233",
+  "aff": {
+   "pm": 88,
+   "ba": 30,
+   "strategy": 25
+  },
+  "why": "Owns internal HR/workplace tech domain: strategy, requirements, adoption",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "ab7175f1b8d4": {
+  "fingerprint": "2cb56e905595f630",
+  "aff": {
+   "pm": 85,
+   "strategy": 30
+  },
+  "why": "Owns AI product portfolio prioritization and roadmap for operations use cases",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "5be893edabeb": {
+  "fingerprint": "43e242e706777622",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns the customer-facing conversational AI agent (chat and voice)",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "57ae41dd6ff4": {
+  "fingerprint": "11eae833bb3c8383",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns the Magnet One platform domain end to end",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "52f69c6cd7da": {
+  "fingerprint": "69f79283cc6efd54",
+  "aff": {
+   "pm": 93
+  },
+  "why": "Owns UI framework, design system and accessibility platform roadmap",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "2c11fc647979": {
+  "fingerprint": "dbc3206227e2752d",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Defines and evolves a portfolio of content management solutions",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d0e74f5130b7": {
+  "fingerprint": "8d56ef894e6615a4",
+  "aff": {
+   "pm": 93,
+   "pmm": 25
+  },
+  "why": "Shapes strategy, roadmap and market success across Experience Cloud",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "8b10f4db22b7": {
+  "fingerprint": "a13ecc0970248616",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns strategy and execution for Jobber Supply",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "1a2f1a67d8cf": {
+  "fingerprint": "ad81f26cbe453cd8",
+  "aff": {
+   "pm": 95
+  },
+  "why": "End-to-end product accountability across a carbon accounting suite",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "75ee19d3cdfe": {
+  "fingerprint": "89dda97970090f47",
+  "aff": {
+   "pm": 85
+  },
+  "why": "Thin description: drives product strategy and roadmap for FX trading",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "895db85569c9": {
+  "fingerprint": "7a21bc10b75ced26",
+  "aff": {
+   "pm": 75,
+   "pmm": 45,
+   "strategy": 45
+  },
+  "why": "Drives SME segment growth via solution commercialization, value props and distribution",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "13fb8caddc31": {
+  "fingerprint": "64aaf8b5a2c6ac6f",
+  "aff": {
+   "pm": 70,
+   "ba": 45,
+   "analytics": 40,
+   "project": 35,
+   "program": 30
+  },
+  "why": "Lending decision-model product: governance, backlog, analysis and project delivery",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "fac0069dc0f8": {
+  "fingerprint": "2769e5ac414d917a",
+  "aff": {
+   "pm": 95,
+   "pmm": 20
+  },
+  "why": "Owns vision and lifecycle for analytical solutions incl. commercialization",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d48456d5d0cb": {
+  "fingerprint": "16891d6ab7d056c5",
+  "aff": {
+   "pm": 90
+  },
+  "why": "No description; judged from title: PM for first-mile AI",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "3d9f287d70c7": {
+  "fingerprint": "b56d8f6c6e0dc792",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Owns roadmap for analytics data platform infrastructure",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "1121ed6f0b01": {
+  "fingerprint": "82eb40c2a3c2472d",
+  "aff": {
+   "pm": 75,
+   "strategy": 40,
+   "tns": 35,
+   "program": 35
+  },
+  "why": "Leads operational risk (eGRC) product ecosystem, roadmap and operating model",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "3cb5dce22587": {
+  "fingerprint": "4ac2702d77805e31",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Develops roadmap and priorities for a fintech product area",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "18ef7f221975": {
+  "fingerprint": "e033f1c42c4776b7",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Defines AI-native source code and spec-driven product experiences",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "ae8a077c64e1": {
+  "fingerprint": "efbb8a2324543562",
+  "aff": {
+   "pm": 93,
+   "pmm": 20
+  },
+  "why": "Owns strategy and execution of a new enterprise DFIR offering",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "3fc7722a0e64": {
+  "fingerprint": "54d3cec7be886688",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Lead PM for content services platforms",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9cffba9ef6a4": {
+  "fingerprint": "912fd7e2ac2280a8",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Technical PM owning ML platform roadmap for internal scientists",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d10cac3bc18d": {
+  "fingerprint": "220a6fb16b57500e",
+  "aff": {
+   "pm": 92
+  },
+  "why": "Technical PM designing AI agent solutions for medical affairs",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "b3ca0deb6966": {
+  "fingerprint": "5f7c6d002147ee49",
+  "aff": {
+   "pm": 93
+  },
+  "why": "Owns AI search product, measuring and improving search quality",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "6fc9b1173723": {
+  "fingerprint": "e840206096353a70",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Drives strategy and execution for core forensics product",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9e8232af59c3": {
+  "fingerprint": "466f759bfe0c4970",
+  "aff": {
+   "pm": 88,
+   "strategy": 20
+  },
+  "why": "Owns roadmap and delivery of digital support and chatbot products",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "bd7281d58c69": {
+  "fingerprint": "ebb65961b895eefc",
+  "aff": {
+   "pm": 85,
+   "prodanalytics": 30,
+   "project": 25
+  },
+  "why": "Data-driven PM manager; runs sprint ceremonies and product insights",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "37fa6fe4424f": {
+  "fingerprint": "e7fdecfa4eb34fba",
+  "aff": {
+   "pm": 93,
+   "ba": 25
+  },
+  "why": "Technical PM owning vision, roadmap and backlog for platform capabilities",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "ca941f45175b": {
+  "fingerprint": "e97b010fd10cb241",
+  "aff": {
+   "pm": 85,
+   "strategy": 40,
+   "solutions": 25
+  },
+  "why": "Leads ecosystem strategy, partner program and marketplace",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "ac6ecad353af": {
+  "fingerprint": "49c6f1886c1881cb",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Sets product vision and owns roadmap across web, mobile and MCP",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9190fab16865": {
+  "fingerprint": "1fc1e2c83fc4b4ce",
+  "aff": {
+   "pm": 93
+  },
+  "why": "Leads MDM integration features from ideation to delivery",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "54e6455944a3": {
+  "fingerprint": "da4752b757542601",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns strategy and roadmap for PromoMats capabilities",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "1f15a9016de8": {
+  "fingerprint": "cd70e3c4610be687",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns product direction for DAST security testing capabilities",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "3a5e4916f5da": {
+  "fingerprint": "f29264cd2aa98317",
+  "aff": {
+   "program": 85,
+   "strategy": 70,
+   "project": 30
+  },
+  "why": "PMO lead: cross-functional execution, governance and operating rhythm for SME business",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "8490126f92b6": {
+  "fingerprint": "0133843ecb5569db",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Product manager owning customer discovery and roadmap",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "4e3d35a932e5": {
+  "fingerprint": "b4cdfa66e0ade105",
+  "aff": {
+   "strategy": 92,
+   "program": 50
+  },
+  "why": "Chief of Staff to Chief AI Officer: planning, budget, operating rhythm",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f12ed03ec46b": {
+  "fingerprint": "511380a3ce4627f4",
+  "aff": {
+   "pm": 93
+  },
+  "why": "Owns roadmap for due diligence and legal filings portfolio",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "4d2e6f8ac8b3": {
+  "fingerprint": "c15fb386370783b4",
+  "aff": {
+   "pm": 90,
+   "tns": 45
+  },
+  "why": "Owns credit and risk infrastructure incl. fraud, AML and disputes",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "21e24c43e931": {
+  "fingerprint": "3f931a27c210fadc",
+  "aff": {
+   "pm": 93
+  },
+  "why": "Owns money movement rails, ledgering and card infrastructure",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "2a196de03169": {
+  "fingerprint": "7026a31f40a196a3",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Leads Logistics product org; multi-year vision and strategy",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f15508f13e0f": {
+  "fingerprint": "d04af18173377f9f",
+  "aff": {
+   "pm": 90
+  },
+  "why": "No description; judged from title: platform PM",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "7f4a61e635aa": {
+  "fingerprint": "3ed7941b9a20fe9e",
+  "aff": {
+   "pm": 88,
+   "program": 30,
+   "ba": 30
+  },
+  "why": "Owns vision, roadmap and backlog for wealth onboarding transformation",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "742308ab0dba": {
+  "fingerprint": "8f04bd17091f84ec",
+  "aff": {
+   "pm": 95,
+   "prodanalytics": 20
+  },
+  "why": "Leads discovery, search and personalization product strategy",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9cde01af425f": {
+  "fingerprint": "dc248b9b9e1d312b",
+  "aff": {
+   "strategy": 92,
+   "program": 30
+  },
+  "why": "Owns corporate strategic blueprint and guides execution with exec team",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d45bc05c6a13": {
+  "fingerprint": "0d45e5e0d9f5a99a",
+  "aff": {
+   "program": 92,
+   "pm": 35
+  },
+  "why": "Drives large cross-team catalog programs; defines roadmaps and plans",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "7b77acc87bbc": {
+  "fingerprint": "6f2a8b4a83a67dac",
+  "aff": {
+   "pm": 80,
+   "program": 45,
+   "strategy": 30
+  },
+  "why": "Owns enterprise observability strategy and roadmap across three teams",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "21fc765396f2": {
+  "fingerprint": "ac1710adf4bb5f85",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns accounting integrations product end to end",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9fdacaccdc78": {
+  "fingerprint": "14203ebddfb0ee8c",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns accounting and bookkeeping product for law firms",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "c3d365591166": {
+  "fingerprint": "5e052223486a726e",
+  "aff": {
+   "pm": 70,
+   "tns": 45,
+   "ba": 40,
+   "project": 30
+  },
+  "why": "Product owner for financial crimes projects: backlog, analysis, stakeholders",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "b384e6c61cb5": {
+  "fingerprint": "569bc93875b8ea1f",
+  "aff": {
+   "pm": 90,
+   "prodanalytics": 30
+  },
+  "why": "Senior game PM shaping product strategy from player understanding",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9fb1cb680c12": {
+  "fingerprint": "73c9aa5071a9cea2",
+  "aff": {
+   "pm": 88
+  },
+  "why": "Description is page chrome only; judged from title: content management PM",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d164686c122e": {
+  "fingerprint": "ceb819f3fcb08e42",
+  "aff": {
+   "pm": 85,
+   "tns": 30,
+   "analytics": 25
+  },
+  "why": "Product requirements, backlog and KPI tooling for attribute verification",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "6c0bc5968ce4": {
+  "fingerprint": "845a83c9a8e38826",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns roadmap for device access admin experience and lifecycle",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "a2f137eb6d7e": {
+  "fingerprint": "ccc408895a9cfc10",
+  "aff": {
+   "pm": 80,
+   "program": 35,
+   "project": 25
+  },
+  "why": "Owns internal cloud security capability roadmap, vendor selection and rollout",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f76cd17f1694": {
+  "fingerprint": "c560ea92a215d680",
+  "aff": {
+   "pm": 85,
+   "analytics": 35,
+   "ba": 25
+  },
+  "why": "Manages data product lifecycle, governance and KPIs",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "81d15c0d5f6a": {
+  "fingerprint": "67e8a830d7bb2cf2",
+  "aff": {
+   "pm": 90,
+   "ba": 25
+  },
+  "why": "Technical PM on core platform roadmap; requirements and backlog with eng",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d6132edbcdd9": {
+  "fingerprint": "530a51c801a74cab",
+  "aff": {
+   "pm": 90,
+   "ba": 25
+  },
+  "why": "Technical PM on core platform roadmap; requirements and backlog with eng",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d9001cf8d370": {
+  "fingerprint": "b87067b83ff87db1",
+  "aff": {
+   "pm": 90
+  },
+  "why": "Hands-on technical PM designing and delivering AI agents for quality cloud",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "b95ef0c90334": {
+  "fingerprint": "fbcf347ff65aeee4",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Leads product vision, roadmap and outcomes for developer and AI portfolio",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "2a434371bfaa": {
+  "fingerprint": "4065d7727f6796d1",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns product strategy and roadmap for recognition milestones and celebrations",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "38939b274903": {
+  "fingerprint": "4626dd17cda71c88",
+  "aff": {
+   "pm": 95,
+   "prodanalytics": 20
+  },
+  "why": "Owns strategy, research and roadmap for a key platform area",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "7cf5b385b6ba": {
+  "fingerprint": "151f2b12a8cb51d9",
+  "aff": {
+   "pm": 85,
+   "ba": 30,
+   "analytics": 25
+  },
+  "why": "Product owner shaping AI-enabled capabilities for commercial banking",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "c65d25728e78": {
+  "fingerprint": "2f93f9ff2337cbbe",
+  "aff": {
+   "strategy": 65,
+   "pm": 60,
+   "program": 35
+  },
+  "why": "AI strategy, business cases and portfolio backlog; supports AI product delivery",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "29e66f346586": {
+  "fingerprint": "0fd438e349b004bb",
+  "aff": {
+   "pm": 90,
+   "ba": 25
+  },
+  "why": "Technical PM owning query execution roadmap; gathers and reconciles requirements",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f7bdbe1d2442": {
+  "fingerprint": "4e7dc95c89c62974",
+  "aff": {
+   "strategy": 92,
+   "analytics": 40,
+   "pm": 40,
+   "prodanalytics": 30
+  },
+  "why": "Owns DashPass Canada business: strategy, experiments, data deep dives",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "c8368948ce55": {
+  "fingerprint": "075151859ecfe3f7",
+  "aff": {
+   "pm": 80,
+   "strategy": 45
+  },
+  "why": "Shapes payment acceptance strategy, pilots and capabilities",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "5400f412694b": {
+  "fingerprint": "8bd6021ba433c0ec",
+  "aff": {
+   "pm": 70,
+   "prodanalytics": 55,
+   "analytics": 45
+  },
+  "why": "Data-driven PM analyzing product adoption and usage to guide roadmap",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "a41f078bf227": {
+  "fingerprint": "1641a2347c633358",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns discovery and delivery of credit card products",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9e766e0750c3": {
+  "fingerprint": "82de9e1377eb0bf7",
+  "aff": {
+   "pm": 80,
+   "program": 30,
+   "project": 25
+  },
+  "why": "Owns internal IAM platform roadmap, vendor selection and rollout",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "c952bc235f0e": {
+  "fingerprint": "9318872f1964376c",
+  "aff": {
+   "pm": 85,
+   "program": 40,
+   "strategy": 25
+  },
+  "why": "Leads decisioning/next-best-action capability roadmap and transformation workstreams",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "960b51315d35": {
+  "fingerprint": "0d6906bc773da752",
+  "aff": {
+   "pm": 90
+  },
+  "why": "No description; judged from title: product management",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f9f74d9b5027": {
+  "fingerprint": "da03fd9eac5b6a69",
+  "aff": {
+   "pm": 93
+  },
+  "why": "Defines UX-focused product strategy and requirements for AI workflows",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "6a838f69009c": {
+  "fingerprint": "5d450778d688b8a0",
+  "aff": {
+   "strategy": 92,
+   "analytics": 40,
+   "project": 25
+  },
+  "why": "Strategy and ops generalist driving analyses and initiatives in financial services",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "6a8a646b12d2": {
+  "fingerprint": "f1d86e1d02a4e720",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Defines, designs and delivers regulatory information management features",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d2504d4d9a27": {
+  "fingerprint": "964fe1adc835cf09",
+  "aff": {
+   "pm": 90
+  },
+  "why": "Hands-on technical PM designing AI agents for quality docs and training",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "422b761d72fc": {
+  "fingerprint": "336a30ced794b925",
+  "aff": {
+   "pm": 90
+  },
+  "why": "No description; judged from title: PM for launch experience",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "687e0f4d9f3c": {
+  "fingerprint": "75580bfc32907624",
+  "aff": {
+   "pm": 93,
+   "prodanalytics": 30
+  },
+  "why": "Owns vision, roadmap and performance for live-service game initiatives",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d30479847859": {
+  "fingerprint": "d349b49f7a7d1423",
+  "aff": {
+   "strategy": 92,
+   "program": 50
+  },
+  "why": "Chief of Staff to GM: people, operations and programs for product org",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "67b2e2ec04d4": {
+  "fingerprint": "aecf08bd5521df0c",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Technical presales solution engineer for Azure AI apps",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "39277d65308d": {
+  "fingerprint": "a4df7b8860360cf5",
+  "aff": {
+   "program": 88,
+   "strategy": 35,
+   "analytics": 30,
+   "project": 25
+  },
+  "why": "TPM for capacity planning: demand forecasting, supply chain and CapEx",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "a6c31646962b": {
+  "fingerprint": "8eac26e4cabff7e4",
+  "aff": {
+   "program": 75,
+   "tns": 70,
+   "analytics": 35,
+   "pm": 35
+  },
+  "why": "Runs ML brand-protection detection programs; abuse patterns and false positives",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "08c7f3b9102c": {
+  "fingerprint": "74e7c0aac2f8f2bc",
+  "aff": {
+   "solutions": 80,
+   "pm": 45,
+   "ba": 40,
+   "project": 30
+  },
+  "why": "Customer-facing: designs and deploys agentic AI solutions for enterprise clients",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "b65aac3edb53": {
+  "fingerprint": "828e173822eaccf4",
+  "aff": {
+   "pm": 85,
+   "ba": 30,
+   "program": 25
+  },
+  "why": "Owns ESG methodology/content change lifecycle in the platform",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "240c73246072": {
+  "fingerprint": "97de8c51642ef7b7",
+  "aff": {
+   "pm": 92,
+   "pmm": 25
+  },
+  "why": "Defines product requirements and launches for a SOC platform",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f21f998e3ab9": {
+  "fingerprint": "91291076ff739267",
+  "aff": {
+   "tns": 75,
+   "strategy": 50,
+   "analytics": 50
+  },
+  "why": "Defines fraud risk strategy and controls; analyzes fraud trends",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "1c777e0bc9da": {
+  "fingerprint": "d4088b76c5767f2a",
+  "aff": {
+   "program": 95
+  },
+  "why": "Leads complex multi-team technical programs",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "b2f1f2860bbf": {
+  "fingerprint": "9ccc28e56183d6dc",
+  "aff": {
+   "program": 93
+  },
+  "why": "Defines and delivers Alexa+ programs; risks, escalations and mechanisms",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "193b368aab2b": {
+  "fingerprint": "83c8ecf2af6da748",
+  "aff": {
+   "program": 92,
+   "pm": 25
+  },
+  "why": "Leads Alexa communications initiatives across teams",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "eaebb713b547": {
+  "fingerprint": "990636ccb7c51dc8",
+  "aff": {
+   "pm": 80,
+   "ba": 35,
+   "program": 30,
+   "project": 25
+  },
+  "why": "PM for customer onboarding journey; requirements, backlog and process design",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "281fe7729aac": {
+  "fingerprint": "242ec12e5879dcbd",
+  "aff": {
+   "program": 75,
+   "project": 50,
+   "solutions": 45,
+   "strategy": 35
+  },
+  "why": "Leads customer migration programs for disputes modernization",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "edd8bf461bba": {
+  "fingerprint": "567b2e63e21a330d",
+  "aff": {
+   "pm": 92
+  },
+  "why": "General talent pool for product management roles",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "3c5ff0935bc2": {
+  "fingerprint": "6143552991018d41",
+  "aff": {
+   "ba": 65,
+   "pm": 55,
+   "project": 50
+  },
+  "why": "Liaison capturing trading-app business requirements and driving on-time delivery",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "672fca6d79e7": {
+  "fingerprint": "e6d2262de9a30190",
+  "aff": {
+   "pm": 88,
+   "ba": 30
+  },
+  "why": "Digital product owner: vision, roadmap and backlog for wealth digital",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "f1e50af8067d": {
+  "fingerprint": "68529c64cb22d9db",
+  "aff": {
+   "pm": 93
+  },
+  "why": "Drives mobile platform roadmap for developers",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "ecc86e53939a": {
+  "fingerprint": "31d9dc0a96b7c99c",
+  "aff": {
+   "program": 88,
+   "pm": 45
+  },
+  "why": "Defines strategy and delivers large fulfillment quality programs",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "9e45dd63467b": {
+  "fingerprint": "d809c4cf34a21709",
+  "aff": {
+   "pm": 90,
+   "ba": 25
+  },
+  "why": "Technical PM on platform roadmap; requirements and backlog with eng",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "925a1fe660c6": {
+  "fingerprint": "dfda80c0813ac39f",
+  "aff": {
+   "program": 95,
+   "project": 30
+  },
+  "why": "Manages AI launch programs end to end; dependencies and visibility",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "c51f5c882d71": {
+  "fingerprint": "3ded16ae6e3a3c1a",
+  "aff": {
+   "pm": 90
+  },
+  "why": "No description; judged from title: senior PM",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "5ecce1ff0cea": {
+  "fingerprint": "dc19acdfd1a7a5a5",
+  "aff": {
+   "tns": 70,
+   "strategy": 55,
+   "program": 45,
+   "project": 35,
+   "analytics": 30
+  },
+  "why": "Leads commercial card fraud strategy initiatives, business cases and reporting",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "c8c4093418e0": {
+  "fingerprint": "3e7d0b4d0be5afe6",
+  "aff": {
+   "pm": 88
+  },
+  "why": "Thin description: senior PM translating business and clinical needs",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "7367e358a0c6": {
+  "fingerprint": "04e6b275cb627bd8",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Presales solutions architect for financial services accounts",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "76abf20ed984": {
+  "fingerprint": "680d6d9d054299ba",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Presales solutions architect for financial services accounts",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "8f6635349cdd": {
+  "fingerprint": "42297861e727cbda",
+  "aff": {
+   "pm": 70,
+   "pmm": 55,
+   "solutions": 40,
+   "strategy": 35
+  },
+  "why": "Leads loyalty consulting product portfolio, positioning and go-to-market",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "b02f80a01242": {
+  "fingerprint": "55a5c92bd61d37fd",
+  "aff": {
+   "pm": 88,
+   "ba": 35
+  },
+  "why": "Owns the Salesforce platform what and why for business operations",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "655f992467e6": {
+  "fingerprint": "9d38dc399fda96fd",
+  "aff": {
+   "pm": 93,
+   "prodanalytics": 25
+  },
+  "why": "Owns vision, roadmap and metrics for wireline eCommerce journeys",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "d74c25fc7cd5": {
+  "fingerprint": "fc47b3ed76aacdcb",
+  "aff": {
+   "pm": 70,
+   "program": 40,
+   "project": 40,
+   "tns": 20
+  },
+  "why": "Delivery-focused PM for internal AI security tooling; backlog and milestones",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "121bb191fa63": {
+  "fingerprint": "9a6a49c3234554db",
+  "aff": {
+   "program": 90
+  },
+  "why": "No description; judged from title: staff TPM",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "8300a7a083a4": {
+  "fingerprint": "184c70e1c5f485b2",
+  "aff": {
+   "solutions": 95
+  },
+  "why": "Presales solution engineer: demos, POCs and deal support",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "e1bf62196682": {
+  "fingerprint": "97f0e904ad968df7",
+  "aff": {
+   "pm": 90
+  },
+  "why": "Owns strategy and roadmap for digital support and self-serve journeys",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "1cc125c24ab8": {
+  "fingerprint": "cd8a04e2b384b61d",
+  "aff": {
+   "strategy": 85,
+   "pmm": 35,
+   "program": 35,
+   "project": 25
+  },
+  "why": "Owns GTM operations for a product line: segmentation, rollout and field enablement",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "567fc603c5a5": {
+  "fingerprint": "350d45a9304944cc",
+  "aff": {
+   "pm": 93,
+   "prodanalytics": 30
+  },
+  "why": "Owns onboarding experience, PLG motion and adoption metrics",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "e31d3c8b52de": {
+  "fingerprint": "b3d2d247c80ef346",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Owns product strategy for financial reporting solutions",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "c47bbf35e8a5": {
+  "fingerprint": "17f82c2bb806c011",
+  "aff": {
+   "program": 92,
+   "project": 35
+  },
+  "why": "Platform TPM managing delivery of cloud, dev tools and data platforms",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "36b6697e848e": {
+  "fingerprint": "1cce708f984c46b5",
+  "aff": {
+   "pm": 85,
+   "strategy": 40,
+   "pmm": 35,
+   "solutions": 25
+  },
+  "why": "Drives growth for a new AI business: target customers, design partners, GTM",
+  "at": "2026-10-17T02:15:17+00:00"
+ },
+ "610b452e02e3": {
+  "fingerprint": "d1b150e56548c176",
+  "aff": {
+   "tns": 70,
+   "program": 60,
+   "strategy": 25
+  },
+  "why": "Compliance program lead: AML, sanctions, privacy and regulatory plan execution",
+  "at": "2026-10-17T02:15:17+00:00"
+ }
+}

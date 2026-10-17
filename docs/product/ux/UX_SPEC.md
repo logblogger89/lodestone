@@ -181,6 +181,29 @@ Asked once, at the moment they're relevant, each dismissible: first "Pay too low
 - **Track:** pipeline with nudges ("Applied 10 days ago: follow up?") and closed-posting alerts.
 - **Weekly (not built yet, §8.9):** a Monday "Your week": market changes, what Lodestone learned about you, companies to consider.
 
+### 8.15 Type scores and role-first setup (10-17, D-077)
+Ayush's questions: a "Program Manager" job can really be product work (and the reverse), so a job can be more than one
+type; and the simplest setup is to ask only the role type, rank on that, and nudge for the rest.
+- **Type scores:** each job has 0–100 per role family, from Claude reading the description once (`docs/eng/TYPE_SCORES.md`);
+  until then the title gives a first guess (85 for the family it names, marked "estimated from the title").
+  Relevance to you = the best type score over your families and the ones you asked to see (related ×0.85, others ×0.7).
+  Shown, and scored for you, from 50. The tag shows the main type plus "also X" when a second type is 50+; hovering
+  lists the scores. The role-type filter counts a job under every type it scores 50+ on. The "role" part of fit comes
+  from relevance once types are read, so changing your field is instant.
+- **Setup:** welcome → **role type first** ("What kind of role?", cards or own words) → **Show my jobs**, or "Answer 2
+  more quick questions" (where, work status; each skippable, "Show my jobs now" always visible). Taste test moved out
+  of setup: a link on the first-list banner and a nudge. Not answered: all of Canada; work status "not set", and
+  work-permit tags never turn red (information only). On phones the setup buttons stay pinned above the tab bar.
+- **Level 1 ranking** (role type only): relevance, then freshness, then whether pay is posted; the banner says
+  "Ranked by role type only. Each thing you add sharpens it."
+- **Nudges:** one small card in Today at a time, at most one a day ("Not now" and answering both count): where (after
+  3 answers, if not set) → work status (one tap) → experience → taste test (after 8). Never a pop-up.
+- **Meter:** Role type → Where & work status → Experience → Taste & daily use.
+- **Re-scoring:** only experience, domains, skills, target level or field trigger it; best matches first, 150 a day;
+  the Profile's ranking check says how many wait and roughly how long. Everything else applies instantly.
+- **Company types (config):** "Rank traditional banks, insurers and pension funds lower unless their pay is top of
+  range" in the Profile; offered as a one-tap suggestion when the Profile text says so.
+
 ### 8.14 Role types for any field (10-16, D-076)
 Ayush's question: a program manager or business analyst seeing "PM-adjacent" on their own roles is told, every day, that
 Lodestone isn't for them. Persona walk-through (PERSONAS.md round 4):

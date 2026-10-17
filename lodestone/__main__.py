@@ -1,4 +1,4 @@
-"""CLI: python3 -m lodestone {detect,refresh,reclassify,stats,index,pages,export,score,signals,inbox,market,discover,report,eval}.
+"""CLI: python3 -m lodestone {detect,refresh,reclassify,affinity,stats,index,pages,export,score,signals,inbox,market,discover,report,eval}.
 Used by the skills in .claude/skills/ and the scheduled runs (docs/ops/)."""
 from __future__ import annotations
 
@@ -29,6 +29,12 @@ def main(argv=None) -> int:
     sc.add_argument("--profile", help="prepare: the app's profile/main JSON (scratchpad); re-scores roles scored against an older profile")
     sc.add_argument("--max-rescore", type=int, default=150, help="prepare: daily cap on profile-change re-scores")
     sc.add_argument("--force", action="store_true", help="prepare: replace batches even if some aren't ingested yet")
+    af = sub.add_parser("affinity", help="type scores (D-077): prepare batches for Claude to read, or ingest the results")
+    af.add_argument("action", choices=["prepare", "ingest"])
+    af.add_argument("file", nargs="?", help="results JSON (a list) for ingest")
+    af.add_argument("--batch", type=int, default=60)
+    af.add_argument("--cap", type=int, default=400, help="prepare: most jobs read per day, across runs")
+    af.add_argument("--force", action="store_true", help="prepare: replace batches even if some aren't ingested yet")
     sg = sub.add_parser("signals", help="load ESDC positive-LMIA lists into per-company pathway signals")
     sg.add_argument("action", choices=["load"])
     ib = sub.add_parser("inbox", help="paste inbox: prepare pasted items for Claude, or add the jobs Claude read")
@@ -45,7 +51,7 @@ def main(argv=None) -> int:
     dc.add_argument("--limit", type=int)
     dc.add_argument("--all", action="store_true", help="probe: re-probe candidates already probed")
     ev = sub.add_parser("eval", help="score quality check: ranking against triage, reading against the hand-checked set")
-    ev.add_argument("action", choices=["ranking", "reading"])
+    ev.add_argument("action", choices=["ranking", "reading", "types"])
     ev.add_argument("folder", nargs="?", help="ranking: triage documents saved with ArtifactData list out_dir")
     ev.add_argument("--prefs", help="ranking: settings/prefs JSON")
     ev.add_argument("--profile", help="ranking: profile/main JSON")
@@ -79,6 +85,14 @@ def main(argv=None) -> int:
             if not a.file:
                 ap.error("score ingest needs a results file")
             out = scoring.ingest(json.load(open(a.file)))
+    elif a.cmd == "affinity":
+        from . import affinity
+        if a.action == "prepare":
+            out = affinity.prepare(a.batch, a.cap, a.force)
+        else:
+            if not a.file:
+                ap.error("affinity ingest needs a results file")
+            out = affinity.ingest(json.load(open(a.file)))
     elif a.cmd == "signals":
         from . import signals
         out = signals.load(log=log)
@@ -97,6 +111,8 @@ def main(argv=None) -> int:
                 ap.error("eval ranking needs the triage folder")
             ld = lambda f: (lambda d: d.get("data", d))(json.load(open(f))) if f else None
             res = evalset.ranking(evalset._load_dir(a.folder), evalset._app_jobs(), ld(a.prefs), ld(a.profile))
+        elif a.action == "types":
+            res = evalset.types()
         else:
             res = evalset.reading()
         out = evalset.record(a.action, res)

@@ -33,8 +33,29 @@ PROFILE_KEYS = ("headline", "summary", "domains", "skills", "scope_signals", "ro
                 "preferences", "work_status")
 
 
+# Profile parts the app applies itself, instantly, without re-scoring (D-077): where you want to work, people
+# management, which other families you see (and their labels), work status (pathway is computed in the app).
+APP_SIDE_PREFS = ("families_shown", "role_families", "locations", "people_management", "updated")
+
+
 def profile_key(profile: dict | None) -> str | None:
-    """Short hash of the parts of a profile that change scores (not the resume file or app settings)."""
+    """Short hash of the parts of a profile that Claude's fit scores depend on (experience, domains, skills, target
+    level, field). Changes the app applies itself (APP_SIDE_PREFS, work status) don't change it, so they cost no
+    re-scoring."""
+    if not profile:
+        return None
+    profile = profile.get("data", profile)
+    part = {k: profile.get(k) for k in PROFILE_KEYS if k != "work_status"}
+    pref = {k: v for k, v in (part.get("preferences") or {}).items() if k not in APP_SIDE_PREFS}
+    if pref.get("families") in (None, [], rules.default_families()):
+        pref.pop("families", None)            # the default field: same scores as before families existed
+    if part.get("preferences") is not None:
+        part["preferences"] = pref
+    return hashlib.sha1(json.dumps({"v": 2, **part}, sort_keys=True, default=str).encode()).hexdigest()[:12]
+
+
+def legacy_key(profile: dict | None) -> str | None:
+    """The key before D-077, so scores already made for this exact profile still count as current."""
     if not profile:
         return None
     profile = profile.get("data", profile)
@@ -74,6 +95,20 @@ def _pay_summary(pay: dict | None) -> str:
     return "; ".join(out)
 
 
+def in_scope(key: str, j: dict, profile: dict | None, stored_aff: dict | None = None) -> bool:
+    """Worth a scoring call for this person (D-077): the job's type scores make it relevant to the families they do or
+    asked to see (affinity.relevance >= affinity.SHOWN_AT). Roles you added yourself always count."""
+    from . import affinity
+    if j.get("captured"):
+        return True
+    pref = ((profile or {}).get("data", profile or {}).get("preferences") or {})
+    mine = [f for f in (pref.get("families") or []) if f] or rules.default_families()
+    aff, _ = affinity.for_job(key, j, stored_aff)
+    if not aff and "role_family" not in j:
+        return True           # older stored jobs not yet classified: keep the old behaviour
+    return affinity.relevance(aff, mine, pref.get("families_shown"))[0] >= affinity.SHOWN_AT
+
+
 def family_scope(profile: dict | None) -> set[str]:
     """Role families worth scoring for this person (D-076): the families they do (`preferences.families`) plus the
     ones they asked to see too (`preferences.families_shown`). Older profiles without families: the default
@@ -106,11 +141,12 @@ def prepare(batch_size: int = 70, profile: dict | None = None, max_rescore: int 
         raise RuntimeError(f"{len(left)} roles in the current batches aren't ingested yet; ingest their results first, "
                            "or pass --force if those scorers have stopped")
     rubric = config()["rubric_version"]
-    pkey = profile_key(profile)
+    pkey, lkey = profile_key(profile), legacy_key(profile)
     jobs = store.load("jobs", {"jobs": {}})["jobs"]
     scores = store.load("scores", {})
+    stored_aff = store.load("affinity", {})
     todo, stale = [], []
-    scope = family_scope(profile)
+    migrated = 0
     if pkey:   # remember which field each profile version was scored for, so the app can tell when it no longer matches
         fields = store.load("profile_fields", {})
         pref = ((profile or {}).get("data", profile or {}).get("preferences") or {})
@@ -119,19 +155,25 @@ def prepare(batch_size: int = 70, profile: dict | None = None, max_rescore: int 
     for key, j in jobs.items():
         if not (j.get("live") and j.get("role_tier") and not j.get("role_excluded")):
             continue
-        if "role_family" in j and j["role_family"] not in scope and not j.get("captured"):
-            continue          # a family this person doesn't look at: not worth a scoring call
+        if not in_scope(key, j, profile, stored_aff):
+            continue          # not the kind of work this person looks at: not worth a scoring call
         fp = _fingerprint(j, rubric)
         have = scores.get(job_id(key), {})
         if have.get("fingerprint") == fp:
+            if pkey and lkey and have.get("profile_key") == lkey and lkey != pkey:
+                have["profile_key"] = pkey     # scored for this same profile under the old key: still current
+                migrated += 1
             if not pkey or have.get("profile_key") == pkey:
                 continue
-            stale.append((j.get("first_seen") or "", key, fp))     # same job, older profile: re-score within the daily cap
+            subs = have.get("subs") or {}      # same job, older profile: re-score within the daily cap, best first
+            stale.append((sum(subs.values()) / len(subs) if subs else 0, j.get("first_seen") or "", key, fp))
             continue
         todo.append((key, fp))
+    if migrated:
+        store.save("scores", scores)
     stale.sort(reverse=True)
     max_rescore = max(0, max_rescore - store.count_today("rescore_log"))   # the cap is per day, across all runs
-    todo += [(k, fp) for _, k, fp in stale[:max_rescore]]
+    todo += [(k, fp) for _, _, k, fp in stale[:max_rescore]]
     todo = [_packet(key, jobs[key], fp, pkey) for key, fp in todo]
     shutil.rmtree(INBOX, ignore_errors=True)
     INBOX.mkdir(parents=True)
@@ -142,6 +184,7 @@ def prepare(batch_size: int = 70, profile: dict | None = None, max_rescore: int 
         out.append({"file": str(path), "jobs": len(todo[n:n + batch_size])})
     if len(stale) > max_rescore:
         out.append({"profile_rescore_waiting": len(stale) - max_rescore})
+    store.mark_fresh("rescore", waiting=max(0, len(stale) - max_rescore), cap=150, this_run=min(len(stale), max_rescore))
     return out
 
 

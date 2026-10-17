@@ -14,8 +14,19 @@ module.exports = {
     h.check(!(await h.page.locator('#view .card').count()), 'No ranked list before he has said anything');
     await h.tap('Get started');
 
-    h.task('Where: Calgary');
-    h.check(/Step 1 of 4/.test(await h.text()), 'Progress shows step 1 of 4');
+    h.task('Role first: in his own words plus a second role type');
+    h.check(/Step 1 of 3/.test(await h.text()), 'Progress shows step 1 of 3, starting with the role');
+    await h.page.fill('#ob-role', 'fintech product marketing, 6 years'); await h.wait(100);
+    h.check((await h.page.locator('[data-obf="fam"][data-v="pmm"]').getAttribute('aria-pressed')) === 'true', 'Typing "product marketing" lights up that card');
+    await h.page.locator('[data-obf="fam"][data-v="pm"]').click(); await h.wait(100);   // and he's open to product manager roles too
+    h.check((await h.page.locator('[data-obf="fam"][aria-pressed="true"]').count()) === 2, 'Tapping Product manager adds it; product marketing stays picked');
+    h.check((await h.page.inputValue('#ob-role')).includes('fintech'), 'His typed words survive tapping role cards');
+    h.check(await h.page.getByRole('button', { name: 'Show my jobs' }).count(), 'He could see his jobs right away');
+    await h.shot('role');
+    await h.tap('Answer 2 more quick questions'); await h.wait(150);
+
+    h.task('Where: Calgary (optional)');
+    h.check(/Step 2 of 3 · optional/.test(await h.text()), 'The next steps say they are optional');
     await h.page.locator('[data-obf="city"][data-v="Calgary"]').click(); await h.wait(150);
     h.check((await h.page.locator('[data-obf="city"][data-v="Calgary"]').getAttribute('aria-pressed')) === 'true', 'Calgary is selected');
     await h.shot('where');
@@ -26,18 +37,10 @@ module.exports = {
     h.check(/not immigration advice/i.test(await h.text()), '"Not sure" shows a short plain explainer, with the not-advice line');
     await h.shot('status-not-sure');
     await h.page.locator('[data-obf="status"][data-v="open_permit"]').click(); await h.wait(150);
-    await h.page.locator('.obnav .btn.primary').click(); await h.wait(150);
+    await h.page.locator('.obnav .btn.primary').click(); await h.wait(500);
 
-    h.task('Role: in his own words plus two role types');
-    await h.page.fill('#ob-role', 'fintech product marketing, 6 years'); await h.wait(100);
-    h.check((await h.page.locator('[data-obf="fam"][data-v="pmm"]').getAttribute('aria-pressed')) === 'true', 'Typing "product marketing" lights up that card');
-    await h.page.locator('[data-obf="fam"][data-v="pm"]').click(); await h.wait(100);   // and he's open to product manager roles too
-    h.check((await h.page.locator('[data-obf="fam"][aria-pressed="true"]').count()) === 2, 'Tapping Product manager adds it; product marketing stays picked');
-    h.check((await h.page.inputValue('#ob-role')).includes('fintech'), 'His typed words survive tapping role cards');
-    await h.shot('role');
-    await h.page.locator('.obnav .btn.primary').click(); await h.wait(200);
-
-    h.task('Taste test: eight real roles, then his list');
+    h.task('Taste test from the first-list banner');
+    await h.page.getByRole('button', { name: 'Take the 20-second taste test' }).click(); await h.wait(300);
     const tc = await h.page.locator('.tcard').count();
     h.check(tc >= 6 && tc <= 8, `Taste test shows up to 8 roles (${tc})`);
     const metas = await h.page.locator('.tcard .tmeta').allInnerTexts();

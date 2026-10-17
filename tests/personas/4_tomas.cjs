@@ -30,19 +30,25 @@ module.exports = {
     const page = await h.text();
     h.check(!/PM-adjacent|Core PM/.test(page), 'Nothing calls his roles "PM-adjacent" or "Core PM"');
     const tags = await h.page.locator('#view .card .ck.tier').evaluateAll(xs => xs.map(x => [x.textContent, x.className]));
-    const prog = tags.filter(([t]) => t === 'Program');
+    const prog = tags.filter(([t]) => /^Program/.test(t));
     h.check(prog.length && prog.every(([, c]) => /t-core/.test(c)), `Program roles carry his field's highlighted tag (${prog.length} on screen)`);
-    h.check(tags.filter(([t]) => t === 'Product').every(([, c]) => !/t-core/.test(c)), 'Product roles show as related, not as his field');
+    h.check(tags.filter(([t]) => t === 'Product').every(([, c]) => !/t-core/.test(c)), 'Pure product roles show as related, not as his field');
     const top3 = tags.slice(0, 3).map(([t]) => t);
-    h.check(top3.filter(t => t === 'Program').length >= 2, `His first roles are mostly program roles (${top3.join(', ')})`);
+    h.check(top3.filter(t => /^Program/.test(t)).length >= 2, `His first roles are mostly program roles (${top3.join(', ')})`);
     await h.click('[data-show="todo"]'); await h.wait(250);
     const chips = await h.page.locator('[data-fam]').allInnerTexts();
     h.check(/^All/.test(chips[0] || '') && /^Program/.test(chips[1] || ''), `Role-type filter starts with his field (${chips.join(' | ')})`);
     await h.page.locator('[data-fam="program"]').click(); await h.wait(250);
     const only = await h.page.locator('#view .card .ck.tier').allInnerTexts();
-    h.check(only.length && only.every(t => t === 'Program'), `Filtering to Program shows only program roles (${[...new Set(only)].join(', ')})`);
+    h.check(only.length && only.every(t => /\bProgram\b/.test(t)), `Filtering to Program shows only program roles (${[...new Set(only)].join(', ')})`);
     await h.shot('program-filter');
-    await h.page.locator('[data-fam=""]').click(); await h.click('[data-show="today"]'); await h.wait(250);
+    await h.page.locator('[data-fam=""]').click(); await h.wait(250);
+    // D-077: a job can be more than one type; Claude read the descriptions
+    const also = await h.page.locator('#view .card .ck.tier', { hasText: '· also' }).allInnerTexts();
+    h.check(also.length > 0, `Hybrid jobs show both types (${also.slice(0, 3).join(' | ')})`);
+    const pmLike = await h.evalS(() => Object.values(S.jobs).filter(j => j.live && j.aff_src === 'read' && j.family !== 'program' && (j.aff.program || 0) >= 50 && prefOk(j)).length);
+    h.check(pmLike > 0, `Jobs titled otherwise but with real program work reach his list (${pmLike})`);
+    await h.click('[data-show="today"]'); await h.wait(250);
 
     h.task('Thumb targets');
     const sizes = await h.page.locator('#view .card .tbtn').evaluateAll(bs => bs.slice(0, 6).map(b => b.getBoundingClientRect().height));

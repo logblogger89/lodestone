@@ -1,0 +1,257 @@
+{
+ "_doc": "Hand-checked role types (D-077): for each posting, the family (or families) its main work belongs to, judged from the description. `python3 -m lodestone eval types` compares Claude's type scores (top family) and the title guess against it. Add a posting whenever a type is found to be wrong (target 50).",
+ "postings": [
+  {
+   "id": "780fae635dbd",
+   "company": "Interac",
+   "title": "Product Manager",
+   "main": [
+    "ba",
+    "pm"
+   ]
+  },
+  {
+   "id": "55c5061351ce",
+   "company": "Scotiabank",
+   "title": "Senior Manager, Fraud & Risk Strategy",
+   "main": [
+    "tns",
+    "strategy"
+   ]
+  },
+  {
+   "id": "c30dc3808474",
+   "company": "Mastercard",
+   "title": "Director – Agentic Trust Product Acceleration",
+   "main": [
+    "pm"
+   ]
+  },
+  {
+   "id": "4183e2d279b7",
+   "company": "Workday",
+   "title": "Product Manager - Activation & Deployment, Evisort AI",
+   "main": [
+    "solutions",
+    "pm"
+   ]
+  },
+  {
+   "id": "dd458d85c6e3",
+   "company": "Manulife",
+   "title": "Digital Product Analyst",
+   "main": [
+    "pm",
+    "ba"
+   ]
+  },
+  {
+   "id": "c65d25728e78",
+   "company": "BMO",
+   "title": "Manager – AI Strategy & Product Management",
+   "main": [
+    "strategy",
+    "pm"
+   ]
+  },
+  {
+   "id": "5cc7b064b928",
+   "company": "Visier",
+   "title": "Privacy and AI Program Manager",
+   "main": [
+    "tns",
+    "program"
+   ]
+  },
+  {
+   "id": "281fe7729aac",
+   "company": "Mastercard",
+   "title": "Director, Product Operations - Disputes Modernization & Customer Migration (Multiple Openings)",
+   "main": [
+    "program"
+   ]
+  },
+  {
+   "id": "e95e77b6be63",
+   "company": "Interac",
+   "title": "Product Readiness & Change Risk, Lead",
+   "main": [
+    "program",
+    "project"
+   ]
+  },
+  {
+   "id": "88fa53e1a5cf",
+   "company": "EQ Bank",
+   "title": "Lead, Program Governance & Enablement",
+   "main": [
+    "program"
+   ]
+  },
+  {
+   "id": "fee7511a84c1",
+   "company": "Bell",
+   "title": "Senior Product Manager, Strategic Pricing",
+   "main": [
+    "strategy",
+    "pm"
+   ]
+  },
+  {
+   "id": "08c7f3b9102c",
+   "company": "Netomi",
+   "title": "Sr. Agentic Product Manager (North America)",
+   "main": [
+    "solutions"
+   ]
+  },
+  {
+   "id": "0b81383bd19d",
+   "company": "Bell",
+   "title": "Product Manager, Strategic Pricing",
+   "main": [
+    "strategy",
+    "pm"
+   ]
+  },
+  {
+   "id": "610b452e02e3",
+   "company": "Block (Square / Cash App)",
+   "title": "Regulatory Program Lead, Canada",
+   "main": [
+    "tns",
+    "program"
+   ]
+  },
+  {
+   "id": "35748e3630a3",
+   "company": "Mastercard",
+   "title": "Product Manager, Payment Threat Intelligence",
+   "main": [
+    "tns"
+   ]
+  },
+  {
+   "id": "98c9190c19ac",
+   "company": "Interac",
+   "title": "ERM Product Risk, Lead",
+   "main": [
+    "tns",
+    "strategy"
+   ]
+  },
+  {
+   "id": "735e56da20dd",
+   "company": "Okta",
+   "title": "Director Product Manager - Okta Identity Threat Detection and Response Products",
+   "main": [
+    "pm"
+   ]
+  },
+  {
+   "id": "2f6468ee3811",
+   "company": "RBC",
+   "title": "Senior Director, AI Product Management",
+   "main": [
+    "pm"
+   ]
+  },
+  {
+   "id": "a0cb137a8be3",
+   "company": "ServiceNow",
+   "title": "Forward Deployed Solution Engineer – Applied AI FDE",
+   "main": [
+    "solutions"
+   ]
+  },
+  {
+   "id": "13054030cfa6",
+   "company": "Amazon",
+   "title": "Senior Technical Program Manager, Fulfillment Execution",
+   "main": [
+    "program"
+   ]
+  },
+  {
+   "id": "9cffba9ef6a4",
+   "company": "Coveo",
+   "title": "Senior Technical Product Manager, ML Platform",
+   "main": [
+    "pm"
+   ]
+  },
+  {
+   "id": "427ee7c64f16",
+   "company": "RBC",
+   "title": "Principal Technical Product Manager, Evaluations & Governance",
+   "main": [
+    "pm"
+   ]
+  },
+  {
+   "id": "d7d1beb51963",
+   "company": "Blue J",
+   "title": "Product Manager",
+   "main": [
+    "pm"
+   ]
+  },
+  {
+   "id": "ca941f45175b",
+   "company": "Caseware",
+   "title": "Director of Product — Ecosystem",
+   "main": [
+    "pm"
+   ]
+  },
+  {
+   "id": "9f050fd6683c",
+   "company": "TELUS (Digital / Health)",
+   "title": "Bilingual Software Product Owner (100% remote)",
+   "main": [
+    "pm",
+    "ba"
+   ]
+  },
+  {
+   "id": "f1fc2cfee47a",
+   "company": "BMO",
+   "title": "Associate Product Owner - IVR (Remote)",
+   "main": [
+    "pm"
+   ]
+  },
+  {
+   "id": "29e66f346586",
+   "company": "Coveo",
+   "title": "Senior Technical Product Manager",
+   "main": [
+    "pm"
+   ]
+  },
+  {
+   "id": "7cf5b385b6ba",
+   "company": "BMO",
+   "title": "Product Owner, AI & Analytics",
+   "main": [
+    "pm"
+   ]
+  },
+  {
+   "id": "4d2e6f8ac8b3",
+   "company": "Float",
+   "title": "Senior Product Manager, Credit & Risk Engineering",
+   "main": [
+    "pm"
+   ]
+  },
+  {
+   "id": "422ea4b76b37",
+   "company": "CGI",
+   "title": "Product Manager / Owner - PVR",
+   "main": [
+    "pm"
+   ]
+  }
+ ]
+}

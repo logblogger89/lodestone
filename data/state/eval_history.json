@@ -404,6 +404,16 @@
     }
    ],
    "enough_labels": true
+  },
+  {
+   "at": "2026-10-17T02:17:05+00:00",
+   "kind": "types",
+   "rubric": "1.0",
+   "postings": 30,
+   "read": 30,
+   "type_scores_accuracy": 1.0,
+   "title_guess_accuracy": 0.767,
+   "misses": []
   }
  ]
 }

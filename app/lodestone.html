@@ -304,6 +304,7 @@ kbd{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);bor
   .tabbar{display:grid;grid-template-columns:repeat(6,1fr);position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:6px max(6px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(6px,env(safe-area-inset-left,0px));z-index:15}
   .tabbar button{border:0;background:none;min-height:48px;font-size:11px;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer}
   .tabbar button[aria-current="page"]{color:var(--accent);font-weight:600}
+  .obnav{position:sticky;bottom:calc(60px + env(safe-area-inset-bottom,0px));z-index:6;background:var(--bg);padding:10px 0 12px;margin:0;border-top:1px solid var(--line);row-gap:8px}
   .jumpbar{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;position:sticky;top:0;z-index:6;background:var(--bg);margin:0 -16px;padding:8px 16px;border-bottom:1px solid var(--line)}
   .jumpbar::-webkit-scrollbar{display:none}
   .jumpbar button{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:6px 12px;font-size:13px;min-height:36px;cursor:pointer}
@@ -362,7 +363,7 @@ const TIERS = ["Core","Adjacent","Stretch"];
 /* Role families (D-076): every job has one absolute family ("Business analysis" is the same for everyone); how close it
    is to you is relative to the families you do. The list comes from meta/families (config/role_taxonomy.json); this
    copy is only used until that document arrives. Tier on a job = Core (your field), Adjacent (related), Stretch, Other. */
-const FAM_FALLBACK = [{"id":"pm","label":"Product management","tag":"Product","what":"Own a product: roadmap, priorities, launches","onboard":"Product manager","patterns":["\\bproduct manager\\b","\\bproduct mgr\\b","\\bproduct management\\b","\\bproduct lead\\b","\\bproduct owner\\b","\\bgroup product manager\\b","\\bhead of product\\b","\\bdirector of product\\b","\\bproduct director\\b","\\b(senior|staff|principal|lead|group) pm\\b","\\bpm\\b.*\\b(ai|platform|growth|payments)\\b"],"related":["program","strategy","tns"],"stretch":["pmm","solutions","analytics"],"pay":{"green":190000,"yellow":160000}},{"id":"program","label":"Program management","tag":"Program","what":"Run complex work across teams, incl. technical program management","onboard":"Program or technical program manager","patterns":["\\btechnical program manager\\b","\\btpm\\b","\\bprogram manager\\b","\\bprogram lead\\b","\\bprogram management\\b","\\bprogram director\\b","\\bdirector of programs?\\b"],"related":["project","pm","strategy","tns"],"stretch":["ba","solutions"],"pay":{"green":170000,"yellow":140000}},{"id":"project","label":"Project management","tag":"Project","what":"Deliver projects on time and on budget","onboard":"Project or delivery manager","patterns":["\\bproject manager\\b","\\bproject lead\\b","\\bproject management\\b","\\bdelivery manager\\b","\\bdelivery lead\\b","\\bpmo\\b","\\bscrum master\\b","\\bagile coach\\b","\\bimplementation manager\\b"],"related":["program","ba"],"stretch":["strategy","pm"],"pay":{"green":130000,"yellow":105000}},{"id":"pmm","label":"Product marketing","tag":"Product marketing","what":"Take products to market","onboard":"Product marketing","patterns":["\\bproduct marketing\\b","\\bproduct marketer\\b","\\bgo to market (manager|lead|strategist)\\b","\\bgtm (manager|lead|strategist)\\b"],"related":["pm","strategy"],"stretch":["solutions","analytics"],"pay":{"green":160000,"yellow":130000}},{"id":"solutions","label":"Solutions and customer engineering","tag":"Solutions","what":"Design solutions with customers, before and after the sale","onboard":"Solutions or customer engineering","patterns":["\\bsolutions? (engineer|architect|consultant)\\b","\\bcustomer engineer\\b","\\bsales engineer\\b","\\bpre ?sales (engineer|consultant)\\b"],"related":["pmm","program"],"stretch":["pm","ba"],"pay":{"green":170000,"yellow":140000}},{"id":"strategy","label":"Strategy and operations","tag":"Strategy & ops","what":"Plan and run the business with leaders, incl. product ops and chief of staff","onboard":"Strategy, operations or chief of staff","patterns":["\\bproduct operations\\b","\\bproduct ops\\b","\\bstrategy (and )?operations\\b","\\bbizops\\b","\\bbusiness operations\\b","\\bchief of staff\\b","\\bcorporate strategy\\b","\\bstrategy (manager|lead|director)\\b","\\b(trust|safety|integrity|risk|fraud|compliance|governance|policy)\\b.*\\b(product|program|strategy)\\b","\\b(product|program|strategy)\\b.*\\b(trust|safety|integrity|risk|fraud|compliance|governance|policy)\\b"],"related":["program","pm","ba","analytics"],"stretch":["project","tns"],"pay":{"green":165000,"yellow":135000}},{"id":"tns","label":"Trust, safety and policy","tag":"Trust & safety","what":"Keep users and the business safe: trust & safety, integrity, policy","onboard":"Trust & safety, risk or policy","patterns":["\\btrust (and )?safety\\b","\\bcontent policy\\b","\\bplatform policy\\b","\\bintegrity (lead|manager|analyst|specialist)\\b"],"related":["strategy","program","pm"],"stretch":["analytics"],"pay":{"green":150000,"yellow":120000}},{"id":"ba","label":"Business analysis","tag":"Business analysis","what":"Turn business needs into clear requirements and processes","onboard":"Business or systems analyst","patterns":["\\bbusiness (systems )?analyst\\b","\\bbusiness analysis\\b","\\bsystems analyst\\b","\\bprocess analyst\\b","\\brequirements analyst\\b","\\bfunctional analyst\\b","\\bbusiness architect\\b"],"related":["analytics","project","strategy"],"stretch":["pm","program"],"pay":{"green":120000,"yellow":95000}},{"id":"analytics","label":"Data and product analytics","tag":"Analytics","what":"Answer business questions with data","onboard":"Data or product analyst","patterns":["\\bproduct analytics\\b","\\bproduct analyst\\b","\\bdata analyst\\b","\\banalytics (manager|lead|engineer)\\b","\\bbusiness intelligence\\b","\\bbi (analyst|developer|lead)\\b","\\binsights (analyst|manager|lead)\\b","\\bmarketing analyst\\b"],"related":["ba","strategy"],"stretch":["pm","pmm"],"pay":{"green":130000,"yellow":105000}}];
+const FAM_FALLBACK = [{"id":"pm","label":"Product management","tag":"Product","what":"Own a product: roadmap, priorities, launches","onboard":"Product manager","patterns":["\\bproduct manager\\b","\\bproduct mgr\\b","\\bproduct management\\b","\\bproduct lead\\b","\\bproduct owner\\b","\\bgroup product manager\\b","\\bhead of product\\b","\\bdirector of product\\b","\\bproduct director\\b","\\b(senior|staff|principal|lead|group) pm\\b","\\bpm\\b.*\\b(ai|platform|growth|payments)\\b"],"related":["program","strategy","tns"],"stretch":["pmm","solutions","prodanalytics"],"pay":{"green":190000,"yellow":160000}},{"id":"program","label":"Program management","tag":"Program","what":"Run complex work across teams, incl. technical program management","onboard":"Program or technical program manager","patterns":["\\btechnical program manager\\b","\\btpm\\b","\\bprogram manager\\b","\\bprogram lead\\b","\\bprogram management\\b","\\bprogram director\\b","\\bdirector of programs?\\b"],"related":["project","pm","strategy","tns"],"stretch":["ba","solutions"],"pay":{"green":170000,"yellow":140000}},{"id":"project","label":"Project management","tag":"Project","what":"Deliver projects on time and on budget","onboard":"Project or delivery manager","patterns":["\\bproject manager\\b","\\bproject lead\\b","\\bproject management\\b","\\bdelivery manager\\b","\\bdelivery lead\\b","\\bpmo\\b","\\bscrum master\\b","\\bagile coach\\b","\\bimplementation manager\\b"],"related":["program","ba"],"stretch":["strategy","pm"],"pay":{"green":115000,"yellow":90000}},{"id":"pmm","label":"Product marketing","tag":"Product marketing","what":"Take products to market","onboard":"Product marketing","patterns":["\\bproduct marketing\\b","\\bproduct marketer\\b","\\bgo to market (manager|lead|strategist)\\b","\\bgtm (manager|lead|strategist)\\b"],"related":["pm","strategy"],"stretch":["solutions","prodanalytics"],"pay":{"green":160000,"yellow":130000}},{"id":"solutions","label":"Solutions and customer engineering","tag":"Solutions","what":"Design solutions with customers, before and after the sale","onboard":"Solutions or customer engineering","patterns":["\\bsolutions? (engineer|architect|consultant)\\b","\\bcustomer engineer\\b","\\bsales engineer\\b","\\bpre ?sales (engineer|consultant)\\b"],"related":["pmm","program"],"stretch":["pm","ba"],"pay":{"green":170000,"yellow":140000}},{"id":"strategy","label":"Strategy and operations","tag":"Strategy & ops","what":"Plan and run the business with leaders, incl. product ops and chief of staff","onboard":"Strategy, operations or chief of staff","patterns":["\\bproduct operations\\b","\\bproduct ops\\b","\\bstrategy (and )?operations\\b","\\bbizops\\b","\\bbusiness operations\\b","\\bchief of staff\\b","\\bcorporate strategy\\b","\\bstrategy (manager|lead|director)\\b","\\b(trust|safety|integrity|risk|fraud|compliance|governance|policy)\\b.*\\b(product|program|strategy)\\b","\\b(product|program|strategy)\\b.*\\b(trust|safety|integrity|risk|fraud|compliance|governance|policy)\\b"],"related":["program","pm","ba","analytics","prodanalytics"],"stretch":["project","tns"],"pay":{"green":165000,"yellow":135000}},{"id":"tns","label":"Trust, safety and policy","tag":"Trust & safety","what":"Keep users and the business safe: trust & safety, integrity, policy","onboard":"Trust & safety, risk or policy","patterns":["\\btrust (and )?safety (lead|manager|specialist|analyst|strategist|policy|operations)\\b","\\b(content|platform) policy (lead|manager|specialist)\\b"],"related":["strategy","program","pm"],"stretch":["prodanalytics","analytics"],"pay":{"green":150000,"yellow":120000}},{"id":"ba","label":"Business analysis","tag":"Business analysis","what":"Turn business needs into clear requirements and processes","onboard":"Business or systems analyst","patterns":["\\bbusiness (systems )?analyst\\b","\\bbusiness analysis\\b","\\bsystems analyst\\b","\\bprocess analyst\\b","\\brequirements analyst\\b","\\bfunctional analyst\\b","\\bbusiness architect\\b"],"related":["analytics","prodanalytics","project","strategy"],"stretch":["pm","program"],"pay":{"green":120000,"yellow":95000}},{"id":"prodanalytics","label":"Product analytics","tag":"Product analytics","what":"Measure how a product is used and what to build next","onboard":"Product analyst","patterns":["\\bproduct analytics\\b","\\bproduct analyst\\b"],"related":["analytics","pm","ba"],"stretch":["strategy","pmm"],"pay":{"green":140000,"yellow":115000}},{"id":"analytics","label":"Data analytics","tag":"Data analytics","what":"Answer business questions with data and dashboards","onboard":"Data or BI analyst","patterns":["\\bdata analyst\\b","\\banalytics (manager|lead|engineer)\\b","\\bbusiness intelligence\\b","\\bbi (analyst|developer|lead)\\b","\\binsights (analyst|manager|lead)\\b","\\bmarketing analyst\\b","\\breporting analyst\\b"],"related":["ba","prodanalytics","strategy"],"stretch":["project"],"pay":{"green":130000,"yellow":105000}}];
 const FAM_EXCLUDE = ["\\bintern(ship)?\\b", "\\bco op\\b", "\\bnew grad", "\\bjunior\\b", "\\bassociate product manager\\b", "\\bapm\\b", "\\bproduct designer\\b", "\\bproject coordinator\\b", "\\bproduct support\\b", "\\bproduct specialist\\b", "\\beducator\\b", "\\bpart time\\b", "\\bseasonal\\b", "\\bentry level\\b", "\\bstudent\\b"];
 const TIER_WORD = {Core:"your field", Adjacent:"related to your field", Stretch:"a stretch from your field", Other:"outside your field"};
 const REGIONS = ["GTA","Waterloo Region","Remote-Canada","Ottawa","Montreal","Vancouver","Calgary","Edmonton","Other Canada"];
@@ -560,17 +561,32 @@ function closeTo(fid,mine){
   if(relFams(mine,"stretch").includes(fid)) return "Stretch";
   return "Other";
 }
-/* Recomputes each job's family (older documents have none) and how close it is to you. Cheap; runs when jobs,
-   families or your Profile change. */
+/* Type scores (D-077): j.aff = how much of the job is each kind of work, 0-100 (j.aff_src "read" = Claude read the
+   description; "title" = a first guess from the title, 85 for the family it names). A job can be more than one type.
+   Relevance to you = the best type score over the families you do and the ones you asked to see, related ones x0.85,
+   stretch and others x0.7 (lodestone/affinity.py does the same). Shown, and scored for you, from 50. */
+const AFF_W={Core:1,Adjacent:0.85,Stretch:0.7,Other:0.7}, AFF_SHOWN=50, AFF_ALSO=50, AFF_PRIOR=85;
+function relevance(aff,mine,shown){let best=0,via=null;new Set([...mine,...shown]).forEach(f=>{const v=(aff[f]||0)*AFF_W[closeTo(f,mine)];if(v>best){best=v;via=f}});return [best,via]}
+/* Recomputes each job's type scores (older documents have none), relevance and how close it is to you. Cheap; runs
+   when jobs, families or your Profile change. */
 function applyFamilies(){
-  const mine=myFams(), key=mine.join();
+  const mine=myFams(), shown=shownFams(), key=mine.join()+"|"+shown.join();
   if(S._famKey===key&&S._famJobs===S.jobs&&S._famSrc===S.families) return;
   S._famKey=key; S._famJobs=S.jobs; S._famSrc=S.families; S._tokc={};
-  Object.values(S.jobs).forEach(j=>{if(!j.family)j.family=famOfText(j.title)||null;j.tier=closeTo(j.family,mine)});
+  Object.values(S.jobs).forEach(j=>{
+    if(!j.aff||!Object.keys(j.aff).length){const f=j.family||famOfText(j.title);j.aff=f?{[f]:AFF_PRIOR}:{};j.aff_src="title"}
+    if(!j.family||!(j.family in j.aff)) j.family=Object.keys(j.aff).sort((a,b)=>j.aff[b]-j.aff[a])[0]||null;
+    const [r,via]=relevance(j.aff,mine,shown); j.rel=Math.round(r); j.via=via;
+    j.tier=r>=AFF_SHOWN?closeTo(via,mine):"Other";
+  });
 }
-function famVisible(j){const f=j.family;return j.tier==="Core"||(f&&shownFams().includes(f))||(j.captured&&!f)}
-function famName(j){const f=famById(j.family);return f?f.tag:"Other"}
-function famTitle(j){const f=famById(j.family);return `${f?f.label:"Added by you"}: ${TIER_WORD[j.tier]||""}`}
+function famVisible(j){return j.rel>=AFF_SHOWN||!!j.captured}
+function alsoFam(j){if(j.aff_src!=="read") return null;const o=Object.keys(j.aff).filter(f=>f!==j.family&&j.aff[f]>=AFF_ALSO).sort((a,b)=>j.aff[b]-j.aff[a]);return o[0]||null}
+function famName(j){const f=famById(j.family), a=famById(alsoFam(j));return (f?f.tag:"Other")+(a?` · also ${a.tag}`:"")}
+function famTitle(j){
+  const parts=Object.keys(j.aff||{}).sort((a,b)=>j.aff[b]-j.aff[a]).slice(0,3).map(f=>`${(famById(f)||{}).label||f} ${j.aff[f]}`);
+  return `${parts.join(", ")||"Added by you"}${j.aff_src==="title"?" (estimated from the title)":""}. For you: ${TIER_WORD[j.tier]||""}`;
+}
 function tri(id){return S.triage[id]||null}
 function laterDue(t){return t&&t.status==="later"&&(Date.now()-(parseWhen(t.updated_at)||0))>(S.prefs.later_days||7)*DAY}
 function inPreferred(j){
@@ -590,7 +606,7 @@ function prefOk(j){
 }
 function matchesBase(j){
   if(!j.live) return false;
-  if(S.famOn.size&&!S.famOn.has(j.family||"")) return false;
+  if(S.famOn.size&&![...S.famOn].some(f=>(j.aff||{})[f]>=AFF_SHOWN)) return false;
   if(!famVisible(j)) return false;
   if((S.prefs.hidden_companies||[]).includes(j.company)) return false;
   if(S.prefs.exclude_people_mgmt&&managesPeople(j)) return false;
@@ -747,12 +763,16 @@ function suggestionsList(){
   Object.entries(S.triage).forEach(([id,t])=>{const j=S.jobs[id];if(t&&t.status==="interested"&&j&&j.region&&j.region!=="Other Canada"&&!regs.includes(j.region))byR[j.region]=(byR[j.region]||0)+1});
   Object.entries(byR).filter(([,n])=>n>=2).forEach(([r,n])=>out.push({id:"region-"+r,text:`Add ${REGION_SHORT[r]||r} to your preferred locations`,why:`You marked ${n} roles there Interested.`,
     patch:{regions:[...regs,r],checks:{...ck,green_regions:[...regs,r]}}}));
+  const dw=String(((S.profile||{}).preferences||{}).domains_wanted||"");
+  if(/brick|traditional/i.test(dw)&&/financ|bank|insur/i.test(dw)&&!(P.avoid_types||[]).includes("traditional_fi"))   // your own note, applied now instead of after re-scoring
+    out.push({id:"avoid-fi",text:"Rank traditional banks and insurers lower now",why:"Your Profile says you'd rather not work at one unless pay is top of range. This applies it straight away; pay at or above your green target still counts in full.",
+      patch:{avoid_types:[...(P.avoid_types||[]),"traditional_fi"]}});
   return out.filter(s=>!seen.has(s.id));
 }
 async function savePatch(patch){   // changes only the given settings; everything else in settings/prefs stays as saved
   const body={...(S.prefsRaw||{}),...patch,updated_at:new Date().toISOString()};
   S.prefsRaw=body;S.prefs={...DEFAULT_PREFS,...body};S._editingPrefs=false;
-  if(["regions","hidden_companies","exclude_people_mgmt","tiers"].some(k=>k in patch)) refreshToday();
+  if(["regions","hidden_companies","exclude_people_mgmt","tiers","families","families_shown"].some(k=>k in patch)) refreshToday();
   render();
   if(!S.db||!S.canWrite){toast("Open Lodestone signed in as its owner to save this.");return false}
   try{await S.db.doc("settings/prefs").set(body);return true}catch(e){toast("Couldn't save. Try again.");console.warn(e);return false}
@@ -841,7 +861,7 @@ async function boot(){
     S.jobs=all;S._tokc={};S.ready=true;render();
   },fail);
   db.collection("meta").onSnapshot(snap=>{
-    snap.docs.forEach(d=>{const x=d.data()||{};if(d.id==="companies")S.companies=x.companies||[];if(d.id==="suggestions")S.suggestions=x.suggestions||[];if(d.id==="eval")S.evalm=x;if(d.id==="company_profiles")S.cprof=x.companies||{};if(d.id==="freshness")S.freshness=x.components||{};if(d.id==="families"&&(x.families||[]).length)S.families=x.families;if(d.id==="layout"&&+x.desc_buckets&&+x.desc_buckets!==S.descN){S.descN=+x.desc_buckets;S.desc={}}});
+    snap.docs.forEach(d=>{const x=d.data()||{};if(d.id==="companies"){S.companies=x.companies||[];S.ctypes=x.types||{}};if(d.id==="suggestions")S.suggestions=x.suggestions||[];if(d.id==="eval")S.evalm=x;if(d.id==="company_profiles")S.cprof=x.companies||{};if(d.id==="freshness"){S.freshness=x.components||{};S.rescore=x.rescore||null;S.affStat=x.affinity||null};if(d.id==="families"&&(x.families||[]).length)S.families=x.families;if(d.id==="layout"&&+x.desc_buckets&&+x.desc_buckets!==S.descN){S.descN=+x.desc_buckets;S.desc={}}});
     render();
   },fail);
   db.collection("triage").onSnapshot(snap=>{const t={};snap.docs.forEach(d=>t[d.id]=d.data());S.triage=t;S.triLoaded=true;render()},fail);
@@ -895,8 +915,9 @@ function fitScore(j){
 /* The viewer's own routes come from their profile, never from code (D-060): a transfer from their current
    employer, or an open work permit that makes sponsorship irrelevant. */
 const coKey=x=>String(x||"").toLowerCase().replace(/&/g," and ").replace(/\b(inc|ltd|llc|corp|corporation|company|co|ulc|canada)\b/g,"").replace(/[^a-z0-9]/g,"");
-const WORK_STATUS={needs_permit:"I'll need an employer to support a work permit",open_permit:"I have an open work permit (I can work for any employer in Canada)",
+const WORK_STATUS={unknown:"Not set yet (work-permit checks show as information only)",needs_permit:"I'll need an employer to support a work permit",open_permit:"I have an open work permit (I can work for any employer in Canada)",
   no_permit:"I'm a Canadian citizen or permanent resident (no work permit needed)"};
+const statusUnknown=()=>(S.profile||{}).work_status==="unknown";
 const permitFree=()=>["open_permit","no_permit"].includes((S.profile||{}).work_status);
 function pw(j){
   const base=j.pathway||{score:45,signals:[]}, prof=S.profile||{}, emp=((prof.current||{}).employer||"").trim();
@@ -916,11 +937,16 @@ function payScore(top,kind){const c={...DEFAULT_PREFS.checks,...(S.prefs.checks|
   let v=top>=g*1.2?95:top>=g?80:top>=y?60:top>=y*0.8?40:20;return ["base","unspecified",undefined].includes(kind)?v:Math.max(20,v-10)}
 /* Fit scores were made for one field (fit.field; older scores: product management). If your field is different,
    the role factor comes from how close the job is to your field until the next run re-scores it for you (D-076). */
-const ROLE_BY_TIER={Core:90,Adjacent:65,Stretch:30,Other:5};
+function roleWhy(j){const v=famById(j.via);return v?`${v.label}: ${j.aff[j.via]} of 100 of this job${j.via===j.family?"":` (its main type is ${(famById(j.family)||{}).label||"another"})`}, ${TIER_WORD[j.tier]||""}.`:"Not the kind of work you picked."}
+/* Company types you'd rather avoid (prefs.avoid_types, D-077): the domain factor is capped unless pay is top of range. */
+function coType(name){const c=(S.companies||[]).find(x=>x.name===name);return c&&c.type||null}
+function avoidHit(j){const t=coType(j.company);if(!t||!(S.prefs.avoid_types||[]).includes(t)) return false;
+  const m=payInfo(j).main, ck={...DEFAULT_PREFS.checks,...(S.prefs.checks||{})};return !(m&&m.max&&m.currency!=="USD"&&m.max>=ck.pay_green)}
 function fieldChanged(j){const f=(j.fit&&j.fit.field)||["pm"], m=myFams();return f.length!==m.length||f.some(x=>!m.includes(x))}
 function subVal(j,k){
   if(k==="freshness") return freshness(j).score;
-  if(k==="role"&&j.fit&&fieldChanged(j)) return ROLE_BY_TIER[j.tier]??50;
+  if(k==="role"&&(j.aff_src==="read"||(j.fit&&fieldChanged(j)))) return j.rel||0;   // from type scores: instant when your field changes
+  if(k==="domain"&&avoidHit(j)) return Math.min(35,+((j.fit&&j.fit.subs)||{}).domain||35);
   if(k==="pathway") return +pw(j).score||0;
   if(k==="pay"){const pi=payInfo(j),m=pi.main;
     if(m&&m.max&&m.currency!=="USD") return payScore(m.interval==="hour"?m.max*2000:m.max,m.kind);
@@ -952,7 +978,7 @@ function prefChecks(j){
   const pwj=pw(j), ps=+pwj.score, sig=(pwj.signals||[])[0];
   if(permitFree()&&ps>=80){}   // nothing to check: you can work for any employer (a posting limited to citizens still shows red)
   else out.push(ps>=80?{k:"Work permit",l:"good",t:sig&&sig.label==="Intra-company transfer"?"Internal transfer":sig&&sig.label.startsWith("You have an open")?"You have an open permit":sig&&sig.label.startsWith("Sponsorship")?"Sponsorship offered":"Hires from abroad",why:pathwayWhy(j)||"Strong evidence they hire people from other countries"}
-    :ps<=20?{k:"Work permit",l:"bad",t:"No sponsorship",why:pathwayWhy(j)||"The posting says you must already be allowed to work in Canada"}
+    :ps<=20?{k:"Work permit",l:statusUnknown()?"warn":"bad",t:"No sponsorship",why:(statusUnknown()?"Information only until you say whether you need a work permit. ":"")+(pathwayWhy(j)||"The posting says you must already be allowed to work in Canada")}
     :ps>=55?{k:"Work permit",l:"warn",t:"Sponsors sometimes",why:pathwayWhy(j)||"A few approvals to hire from abroad, mostly non-tech roles"}
     :{k:"Work permit",l:"warn",t:"Sponsorship unknown",why:pathwayWhy(j)||"No public record either way of hiring from abroad"});
   // pay
@@ -1096,25 +1122,25 @@ const heardText=h=>h.length?`Got it: ${esc(h.map(f=>(famById(f)||{}).label).join
 function obFams(a){return a.families.length||a.role_text_off?a.families:famsInText(a.role_text||"")}
 function viewOnboard(){
   const o=obState(), a=o.a, step=o.step;
-  const prog=step>0?`<div class="obprog"><span class="dots" aria-hidden="true">${[1,2,3,4].map(i=>`<i class="${i<=step?"on":""}"></i>`).join("")}</span><span class="note">Step ${step} of 4</span><span class="sp"></span><button class="link plink" data-ob="skipall">Skip setup</button></div>`:"";
+  const prog=step>0&&step<4?`<div class="obprog"><span class="dots" aria-hidden="true">${[1,2,3].map(i=>`<i class="${i<=step?"on":""}"></i>`).join("")}</span><span class="note">Step ${step} of 3${step>1?" · optional":""}</span><span class="sp"></span><button class="link plink" data-ob="${step===1?"skipall":"finish"}">${step===1?"Skip setup":"Show my jobs now"}</button></div>`:"";
   const nav=(label,disabled)=>`<div class="obnav"><button class="btn" data-ob="back">Back</button><span class="sp"></span><button class="link plink" data-ob="next">Skip this question</button><button class="btn primary" data-ob="next"${disabled?" disabled":""}>${label}</button></div>`;
   let body="";
   if(step===0) body=`<p class="obkicker">Welcome</p>
     <h1 class="obpromise">Find the jobs that fit you, in the country you want to move to, and the ones that will actually hire you.</h1>
-    <p>Lodestone reads company job boards several times a day, ranks the roles for you, and shows which employers hire people from abroad. Four quick questions, about a minute. No resume needed.</p>
+    <p>Lodestone reads company job boards several times a day, ranks the roles for you, and shows which employers hire people from abroad. One question to start: what kind of role. Everything else is optional. No resume needed.</p>
     <p class="obprivacy">Everything you tell Lodestone stays private to you. Nothing is shared with employers.</p>
     <div class="row"><button class="btn primary" data-ob="next">Get started</button><button class="btn" data-ob="skipall">Skip and browse</button></div>`;
-  else if(step===1) body=`<h2>Where do you want to work?</h2><p class="obwhy">So your list shows roles you could actually take.</p>
+  else if(step===2) body=`<h2>Where do you want to work?</h2><p class="obwhy">So your list shows roles you could actually take.</p>
     <div class="field"><span class="flabel">Country</span><div class="chips"><button class="chip toggle" aria-pressed="${!a.other}" data-obf="country" data-v="ca">Canada</button><button class="chip toggle" aria-pressed="${!!a.other}" data-obf="country" data-v="other">Somewhere else</button></div>
     ${a.other?`<div class="field"><label for="ob-country">Which country?</label><input id="ob-country" value="${esc(a.other_country)}" placeholder="e.g. Germany"><span class="note">Lodestone covers Canada today. We'll note where you'd like next; meanwhile you can explore Canada.</span></div>`:""}</div>
     <div class="field"><span class="flabel">Cities</span><div class="chips">${REGIONS.filter(r=>r!=="Other Canada"&&r!=="Remote-Canada").map(r=>`<button class="chip toggle" aria-pressed="${a.cities.includes(r)}" data-obf="city" data-v="${esc(r)}">${esc(REGION_SHORT[r]||r)}</button>`).join("")}
       <button class="chip toggle" aria-pressed="${a.anywhere}" data-obf="anywhere">Anywhere in Canada</button></div>
       <span class="note">Pick as many as you like; remote roles in Canada are always included. None picked means anywhere.</span></div>${nav("Continue")}`;
-  else if(step===2) body=`<h2>Can you already work in Canada?</h2><p class="obwhy">We use this only to show which employers hire people from abroad.</p>
+  else if(step===3) body=`<h2>Can you already work in Canada?</h2><p class="obwhy">We use this only to show which employers hire people from abroad.</p>
     <div class="obopts" role="radiogroup" aria-label="Work permit">${OB_STATUS.map(([k,l,d])=>`<button class="obopt" role="radio" aria-checked="${a.status===k}" data-obf="status" data-v="${k}"><b>${esc(l)}</b><span>${esc(d)}</span></button>`).join("")}</div>
     ${a.status==="not_sure"?`<div class="obexplain"><p>That's common. Most people moving to Canada for a job need a work permit linked to an employer. Some employers first get government approval to hire from abroad (an LMIA); some roles and countries are exempt.</p><p>Lodestone shows which employers have hired from abroad before. This is general information, not immigration advice.</p></div>`:""}
-    ${nav("Continue")}`;
-  else if(step===3){
+    <div class="obnav"><button class="btn" data-ob="back">Back</button><span class="sp"></span><button class="link plink" data-ob="finish">Skip this question</button><button class="btn primary" data-ob="finish">Show my jobs</button></div>`;
+  else if(step===1){
     const off=a.role_text&&!a.families.length&&!obCovered(a.role_text), heard=a.role_text&&!a.families.length?famsInText(a.role_text):[];
     body=`<h2>What kind of role are you looking for?</h2><p class="obwhy">So your first list is about the work you want. Answer any way you like.</p>
     <div class="field"><label for="ob-role">In your own words</label><input id="ob-role" value="${esc(a.role_text)}" placeholder="e.g. senior business analyst, banking, about 8 years"></div>
@@ -1122,7 +1148,8 @@ function viewOnboard(){
     <div class="field"><span class="flabel">Or pick one or more</span><div class="obfams">${obFamilies().map(([k,l,d])=>`<button class="obopt" aria-pressed="${obFams(a).includes(k)}" data-obf="fam" data-v="${k}"><b>${esc(l)}</b><span>${esc(d)}</span></button>`).join("")}</div></div>
     <details class="quotes"${a.paste?" open":""}><summary>Or paste a job you'd love</summary><textarea id="ob-paste" rows="3" placeholder="A link or the job description">${esc(a.paste)}</textarea><span class="note">Lodestone adds it to your inbox and uses it as an example of what you want.</span></details>
     ${off?`<p class="obexplain">Lodestone covers the role types above today. We'll note what you're after and tell you when we cover it.</p>`:""}
-    ${nav("Continue")}`;
+    <div class="obnav"><button class="btn" data-ob="back">Back</button><span class="sp"></span><button class="btn" data-ob="next">Answer 2 more quick questions</button><button class="btn primary" data-ob="finish">Show my jobs</button></div>
+    <p class="note">You can see your jobs now: they're ranked by role type first. Where you want to work and whether you need a work permit sharpen the list, any time.</p>`;
   }
   else if(step===4){
     const ids=tastePicks(), n=Object.keys(a.taste).length;
@@ -1142,21 +1169,29 @@ function obCapture(){   // keep typed answers when moving between steps
   if(g("ob-role")) a.role_text=g("ob-role").value.trim();
   if(g("ob-paste")) a.paste=g("ob-paste").value.trim();
 }
+/* Run setup again, pre-filled with what Lodestone already knows (from the Profile, a nudge, or the meter). */
+function startSetup(step){
+  const pr=S.profile||{}, ob=pr.onboarding||{}, ws=pr.work_status, st=ob.status_answer;
+  S.ob={step,a:{cities:ob.where_set===false?[]:[...(S.prefs.regions||[])].filter(r=>r!=="Remote-Canada"),anywhere:false,status:st||(ws&&ws!=="unknown"?ws:""),role_text:(pr.preferences||{}).role_wanted||"",
+    families:[...(S.prefs.families||(pr.preferences||{}).families||[])],paste:"",other_country:"",taste:{}}};
+  S._obForce=true;S._obDone=false;setView("digest");
+}
 async function obFinish(skipped){
   obCapture();
   const o=obState(), a=o.a, now=new Date().toISOString(), tasted=Object.entries(a.taste).filter(([,v])=>v);
-  const regions=a.cities.length?[...new Set([...a.cities,"Remote-Canada"])]:(S.prefs.regions||DEFAULT_PREFS.regions);   // remote roles in Canada fit any city
+  const whereSet=a.cities.length>0||a.anywhere;   // not answered: all of Canada, plus remote (D-077)
+  const regions=a.cities.length?[...new Set([...a.cities,"Remote-Canada"])]:REGIONS.filter(r=>r!=="Other Canada");   // remote roles in Canada fit any city
   const fids=obFams(a), fl=fids.map(famById).filter(Boolean), shown=relFams(fids,"related");
   const pay=fl.length?{pay_green:Math.max(...fl.map(f=>f.pay.green)),pay_yellow:Math.max(...fl.map(f=>f.pay.yellow))}:{};   // pay targets that fit the field; changeable
   const prof={...(S.profile||{version:0})};
-  prof.work_status=a.status==="no_permit"||a.status==="open_permit"?a.status:"needs_permit";
+  prof.work_status=a.status==="no_permit"||a.status==="open_permit"?a.status:a.status?"needs_permit":(prof.work_status||"unknown");   // not answered: unknown, shown as information only
   prof.preferences={...(prof.preferences||{}),...(a.role_text?{role_wanted:a.role_text}:{}),...(fl.length?{role_families:fl.map(f=>f.label),families:fids,families_shown:shown}:{})};
-  prof.onboarding={at:now,skipped:!!skipped,status_answer:a.status||null,other_country:a.other?a.other_country||"(not given)":null,
+  prof.onboarding={...(prof.onboarding||{}),at:now,skipped:!!skipped,status_answer:a.status||null,where_set:whereSet,other_country:a.other?a.other_country||"(not given)":null,
     uncovered:a.role_text&&!fl.length?a.role_text:null,taste:tasted.length};
   prof.onboarded_at=now; prof.version=(+prof.version||0)+1;
   S.profile=prof; S._obDone=true; S._obForce=false; S.show="today"; S.recent.clear();
   const fp=fl.length?{families:fids,families_shown:shown}:{};
-  const patch=skipped&&!a.cities.length?fp:{regions,other_regions:a.anywhere||!a.cities.length,...fp,checks:{...DEFAULT_PREFS.checks,...(S.prefs.checks||{}),...pay,green_regions:regions}};
+  const patch={regions,other_regions:true,...fp,checks:{...DEFAULT_PREFS.checks,...(S.prefs.checks||{}),...pay,green_regions:regions}};
   // likes from the taste test train the ranking straight away
   const L={...S.likes};tasted.forEach(([id,v])=>{const j=S.jobs[id];L[id]={v,at:now,title:j?j.title:"",company:j?j.company:"",source:"taste"}});S.likes=L;
   S.today=null; await savePatch(patch);   // also re-renders; today's list is picked with the new answers
@@ -1168,15 +1203,20 @@ async function obFinish(skipped){
   }catch(e){toast("Couldn't save everything. Try again from your Profile.");console.warn(e)}
 }
 /* After setup: say honestly what the list is based on until the next run scores roles for this person. */
+const likesN=()=>Object.values(S.likes||{}).filter(l=>l&&l.v).length;
 function obBanner(){
   const pr=S.profile||{}, at=parseWhen(pr.onboarded_at); if(!at||lsGet("obBannerOff",false)) return "";
   const scored=parseWhen((S.freshness.scoring||{}).at); if(scored&&scored>at) return "";
   if(Date.now()-at>2*DAY) return "";
-  const ob=pr.onboarding||{}, answers=[pr.work_status,(pr.preferences||{}).role_wanted||(pr.preferences||{}).role_families,S.prefs.regions].filter(Boolean).length;
-  return `<div class="obbanner" role="status"><div><strong>Your first list</strong><span>Based on ${ob.skipped?"default settings":`${answers} answers`}${ob.taste?` and ${ob.taste} taps`:""}. Your personal fit scores arrive at the next update (within about 6 hours), and the list gets sharper as you use it.</span></div><button class="btn" data-act="obbanner">Got it</button></div>`;
+  const ob=pr.onboarding||{}, pref=pr.preferences||{}, role=(pref.families||[]).length>0, where=ob.where_set!==false, status=pr.work_status&&pr.work_status!=="unknown";
+  const basis=role&&!where&&!status?"Ranked by role type only. Each thing you add sharpens it"
+    :!role&&ob.skipped?"Based on default settings":`Based on your role type${where?", where you want to work":""}${status?" and your work status":""}${ob.taste?` and ${ob.taste} taps`:""}`;
+  return `<div class="obbanner" role="status"><div><strong>Your first list</strong><span>${basis}. Your personal fit scores arrive at the next update (within about 6 hours), and the list gets sharper as you use it.${likesN()<3?` <button class="link plink" data-act="taste">Take the 20-second taste test</button>`:""}</span></div><button class="btn" data-act="obbanner">Got it</button></div>`;
 }
 /* Until a role is scored for you: rank by role type, freshness and (through learning) the taste test. */
-function provScore(j){return Math.round(({Core:60,Adjacent:55,Stretch:48}[j.tier]||48)*0.8+freshness(j).score*0.2)}
+/* Before a role is scored for you: how well its type matches yours, then how recent it is, then whether pay is posted
+   (D-077, "level 1" ranking). Kept in the range scored roles use, so unscored ones don't jump above them. */
+function provScore(j){return Math.round((30+(j.rel||0)*0.35)*0.75+freshness(j).score*0.2+(payText(j)?5:0))}
 function viewToday(){
   ensureToday();
   const T=S.today;
@@ -1203,7 +1243,7 @@ function viewToday(){
 /* Role-type filter on the full lists: one chip per family you see, yours first, with how many roles each has. */
 function famChips(){
   const ids=[...myFams(),...shownFams().filter(f=>!myFams().includes(f))], n={};
-  Object.values(S.jobs).forEach(j=>{if(prefOk(j)&&isTodo(j))n[j.family||""]=(n[j.family||""]||0)+1});
+  Object.values(S.jobs).forEach(j=>{if(prefOk(j)&&isTodo(j))Object.keys(j.aff||{}).filter(f=>j.aff[f]>=AFF_SHOWN).forEach(f=>n[f]=(n[f]||0)+1)});   // a job can count under two types
   const list=ids.filter(f=>n[f]||S.famOn.has(f));
   if(list.length<2&&!S.famOn.size) return "";
   return `<span class="flabel">Role type</span><button class="chip toggle" data-fam="" aria-pressed="${!S.famOn.size}">All</button>${list.map(f=>{const x=famById(f);return x?`<button class="chip toggle${myFams().includes(f)?" mine":""}" data-fam="${esc(f)}" aria-pressed="${S.famOn.has(f)}" title="${esc(x.label)}: ${esc(TIER_WORD[closeTo(f)])}">${esc(x.tag)} <span class="cnt">${n[f]||0}</span></button>`:""}).join("")}`;
@@ -1268,7 +1308,7 @@ function pathwayPanel(j){
 function fitPanel(j){
   const f=j.fit; if(!f||!f.subs) return `<section class="panel"><h4>Fit</h4><p class="nopay">Not scored yet. It's scored at the next update (about 7am, 1pm or 6pm New York time).</p></section>`;
   const W=S.prefs.weights||DEFAULT_PREFS.weights, tot=SUBS.reduce((a,k)=>a+wv(W,k),0)||1, v=fitScore(j), fr=freshness(j);
-  const sub=k=>subVal(j,k), why=k=>k==="freshness"?fr.why:k==="pathway"?pathwayWhy(j):k==="role"&&fieldChanged(j)?`${famName(j)}: ${TIER_WORD[j.tier]||""}. Re-scored for your field at the next update.`:((f.reasons||{})[k]||"");
+  const sub=k=>subVal(j,k), why=k=>k==="freshness"?fr.why:k==="pathway"?pathwayWhy(j):k==="role"&&(j.aff_src==="read"||fieldChanged(j))?roleWhy(j):k==="domain"&&avoidHit(j)?`${(S.ctypes||{})[coType(j.company)]||"This kind of company"}: you'd consider these only at top-of-range pay.`:((f.reasons||{})[k]||"");
   return `<section class="panel"><h4>Fit for you</h4>
     <div class="overall">${ring(v)}<p>${esc(f.summary||"")}${f.level_guess?`<br><span class="note">Level: ${esc(f.level_guess)}</span>`:""}</p></div>
     ${SUBS.map(k=>`<div class="bar"><span>${SUBLABEL[k]} <span class="w">${Math.round(wv(W,k)*100/tot)}%</span></span><div class="track"><div class="fill" style="width:${sub(k)}%"></div></div><span class="mono">${sub(k)}</span><span class="why">${esc(why(k))}</span></div>`).join("")}
@@ -1518,11 +1558,12 @@ async function deleteExperience(btn){
 /* Match quality (PRD R30, UX §8.5): what Lodestone knows about you, and the one thing that would help most next. */
 function matchQuality(){
   const pr=S.profile||{}, tri=Object.values(S.triage).filter(t=>t&&t.status), likes=Object.values(S.likes||{}).filter(l=>l&&l.v).length;
-  const steps=[
-    {name:"Taste",ok:likes>=5||tri.length>=8,next:"Tell Lodestone what appeals: take the quick taste test",act:"taste"},
+  const ob=pr.onboarding||{}, pref=pr.preferences||{};
+  const steps=[   // D-077: the order setup and the nudges follow
+    {name:"Role type",ok:!!((S.prefs.families||pref.families||[]).length||pref.role_wanted||pr.headline),next:"Tell Lodestone what kind of role you want",act:"reonboard"},
+    {name:"Where & work status",ok:ob.where_set!==false&&!!pr.work_status&&pr.work_status!=="unknown",next:"Say where you want to work and whether you need a work permit",act:"nudge-where"},
     {name:"Experience",ok:hasExperience(pr),next:"Add your experience: upload, paste, or build it with me (2 minutes)",act:"gobuild"},
-    {name:"Daily use",ok:tri.length>=20,next:`Triage ${Math.max(0,20-tri.length)} more roles`,view:"digest"},
-    {name:"Applying",ok:tri.some(t=>t.stage&&t.stage!=="Shortlisted"),next:"Move a role you've applied to into Applied, in your Pipeline",view:"pipeline"}];
+    {name:"Taste & daily use",ok:likes>=5||tri.length>=20,next:likes<5?"Tell Lodestone what appeals: take the quick taste test":`Triage ${Math.max(0,20-tri.length)} more roles`,...(likes<5?{act:"taste"}:{view:"digest"})}];
   const level=steps.filter(x=>x.ok).length, nxt=steps.find(x=>!x.ok);
   return {level,steps,nxt};
 }
@@ -1554,11 +1595,21 @@ async function answerAsk(kind,v){
 /* After first value (3+ roles triaged): offer the profile as an upgrade, once, dismissible. */
 const asked=id=>(S.prefs.asked||[]).includes(id);
 function markAsked(id,extra){return savePatch({asked:[...(S.prefs.asked||[]),id].slice(-200),...(extra||{})})}
+/* Nudges (D-077): one small card at a time in Today, at most one a day ("Not now" and answering both count), each
+   asking for the next thing that would sharpen the list, in the meter's order. Never a pop-up. */
 function profileNudge(){
-  if(!S.ready||!S.canWrite||asked("profile-nudge")||hasExperience(S.profile)) return "";
-  if(Object.values(S.triage).filter(t=>t&&t.status).length<3) return "";
-  return `<div class="sbanner nudge" role="region" aria-label="Sharper matches"><div><strong>Want sharper matches?</strong><span class="note">Add your experience and Lodestone scores every role against it. A rough draft is fine, and no resume is needed.</span></div>
-    <button class="btn primary" data-act="gobuild">Build it with me</button><button class="btn" data-act="goxp">Upload or paste</button><button class="btn" data-ask-no="profile-nudge">Not now</button></div>`;
+  if(!S.ready||!S.canWrite||lsGet("nudgeDay","")===todayKey()) return "";
+  const pr=S.profile||{}, ob=pr.onboarding||{}, n=Object.values(S.triage).filter(t=>t&&t.status).length, likes=Object.values(S.likes||{}).filter(l=>l&&l.v).length;
+  const later=`<button class="btn" data-act="nudge-later">Not now</button>`;
+  if(n>=3&&ob.where_set===false) return `<div class="sbanner nudge" role="region" aria-label="Where you want to work"><div><strong>Where do you want to work?</strong><span class="note">Your list covers all of Canada for now. Pick cities and roles near them come first.</span></div>
+    <button class="btn primary" data-act="nudge-where">Choose cities</button>${later}</div>`;
+  if(n>=3&&pr.work_status==="unknown") return `<div class="sbanner nudge" role="region" aria-label="Work permit"><div><strong>Can you already work in Canada?</strong><span class="note">So Lodestone can show which employers hire people from abroad, only when it matters to you.</span></div>
+    ${OB_STATUS.filter(([k])=>k!=="not_sure").map(([k,l])=>`<button class="btn" data-nudge-status="${k}">${esc(l.replace(/^(Yes, |I have an |I'll need an employer to support a )/,"").replace(/^./,c=>c.toUpperCase()))}</button>`).join("")}${later}</div>`;
+  if(n>=3&&!hasExperience(pr)&&!asked("profile-nudge")) return `<div class="sbanner nudge" role="region" aria-label="Sharper matches"><div><strong>Want sharper matches?</strong><span class="note">Add your experience and Lodestone scores every role against it. A rough draft is fine, and no resume is needed.</span></div>
+    <button class="btn primary" data-act="gobuild">Build it with me</button><button class="btn" data-act="goxp">Upload or paste</button>${later}</div>`;
+  if(n>=8&&likes<3) return `<div class="sbanner nudge" role="region" aria-label="Taste test"><div><strong>Show Lodestone what appeals</strong><span class="note">Eight real roles, about 20 seconds. It teaches the ranking your taste.</span></div>
+    <button class="btn primary" data-act="taste">Take the taste test</button>${later}</div>`;
+  return "";
 }
 async function uploadResume(file){
   if(!file) return;
@@ -1592,7 +1643,11 @@ function qualityPanel(){
   const pct=x=>x==null?"–":Math.round(x*100)+"%";
   const acc=rd&&rd.accuracy?Object.entries(rd.accuracy).filter(([,v])=>v!=null):[];
   const NAMES={pay:"pay amounts",pay_kind:"pay type",region:"location",people_mgmt:"people management",level:"level",years:"years of experience",excluded:"filtering out non-roles"};
-  return `${pfHead("check")}
+  const rs=S.rescore, af=S.affStat;
+  const fresh=rs&&rs.waiting>0?`<p class="note">${rs.waiting} roles still to be re-scored for your latest Profile, best matches first, about ${rs.cap||150} a day (roughly ${Math.ceil(rs.waiting/(rs.cap||150))} more day${Math.ceil(rs.waiting/(rs.cap||150))===1?"":"s"}). Your top roles are already up to date. Where you want to work, pay targets and role types apply straight away.</p>`
+    :rs?`<p class="note">All fit scores match your latest Profile.</p>`:"";
+  const affLine=af&&af.waiting>0?`<p class="note">Lodestone has read ${af.read} roles to see what kinds of work they are; ${af.waiting} more to go (up to 400 a day). Until then their type is guessed from the title.</p>`:"";
+  return `${pfHead("check")}${fresh}${affLine}
     <dl class="facts">
       <dt>Your picks</dt><dd>${r.pos?`<b>${r.top25} of ${r.pos}</b> roles you marked Interested are in Lodestone's top 25 (of ${r.ranked}).`:"Mark roles Interested to see how they rank."}</dd>
       <dt>Order</dt><dd>${r.pairwise!=null?`Interested roles score above your Later / Not for me roles <b>${pct(r.pairwise)}</b> of the time (50% would be a coin flip).${r.learned!=null?` With what Lodestone learned from your choices: <b>${pct(r.learned)}</b>.`:""}`:"Needs at least one Interested and one Later or Not for me role."}</dd>
@@ -1669,6 +1724,7 @@ function viewSettings(){
       <div class="field"><label for="ck-payy">Pay: yellow from (CA$)</label><input type="number" id="ck-payy" step="5000" value="${+ck.pay_yellow}"></div>
     </div>
     <p class="note">Levels use Google's scale as a common reference (L5 Senior, L6 Staff, L7 Principal or Senior Staff).</p>
+    <div class="switch"><label for="avoidfi">Rank traditional banks, insurers and pension funds lower unless their pay is top of range</label><input type="checkbox" id="avoidfi"${(p.avoid_types||[]).includes("traditional_fi")?" checked":""}></div>
     <div class="switch"><label for="xpm">Hide roles that manage people</label><input type="checkbox" id="xpm"${p.exclude_people_mgmt?" checked":""}></div>
     <div class="switch"><label for="nopay">Include roles with no Canadian pay range</label><input type="checkbox" id="nopay"${p.include_no_pay?" checked":""}></div>
   </section>
@@ -1765,13 +1821,13 @@ document.addEventListener("click",e=>{
   if(d.askNo){e.stopPropagation();markAsked(d.askNo);return}
   if(d.ask){e.stopPropagation();answerAsk(d.ask,d.v);return}
   if(d.act==="obbanner"){lsSet("obBannerOff",true);render();return}
-  if(d.act==="reonboard"||d.act==="taste"){   // run setup again, pre-filled with what Lodestone already knows
-    const pr=S.profile||{}, ws=pr.work_status, st=(pr.onboarding||{}).status_answer;
-    S.ob={step:d.act==="taste"?4:1,a:{cities:[...(S.prefs.regions||[])],anywhere:false,status:st||ws||"",role_text:(pr.preferences||{}).role_wanted||"",
-      families:[...(S.prefs.families||(pr.preferences||{}).families||[])],paste:"",other_country:"",taste:{}}};
-    S._obForce=true;S._obDone=false;setView("digest");return}
+  if(d.act==="nudge-later"){lsSet("nudgeDay",todayKey());render();return}
+  if(d.nudgeStatus){lsSet("nudgeDay",todayKey());const prof={...(S.profile||{version:0}),work_status:d.nudgeStatus};prof.version=(+prof.version||0)+1;S.profile=prof;render();
+    if(S.db&&S.canWrite)S.db.doc("profile/main").set(prof).then(()=>toast("Saved. Work-permit checks now follow your answer.")).catch(()=>toast("Couldn't save. Try again."));return}
+  if(d.act==="nudge-where"){lsSet("nudgeDay",todayKey());startSetup(2);return}
+  if(d.act==="reonboard"||d.act==="taste"){startSetup(d.act==="taste"?4:1);return}
   if(d.ob){obCapture();const o=obState();
-    if(d.ob==="next"){o.step=Math.min(4,o.step+1);if(o.step===4)o.picks=null}
+    if(d.ob==="next"){if(o.step>=3){obFinish(false);return}o.step=o.step+1}
     else if(d.ob==="back") o.step=Math.max(0,o.step-1);
     else if(d.ob==="finish") obFinish(false);
     else if(d.ob==="skipall") obFinish(true);
@@ -1840,7 +1896,8 @@ async function savePrefs(){
   const raw={};SUBS.forEach(k=>raw[k]=+val("w-"+k).value||0);const tot=SUBS.reduce((a,k)=>a+raw[k],0)||1;
   const weights={};SUBS.forEach(k=>weights[k]=Math.round(raw[k]*100/tot));
   const clamp=(x,a,b,d)=>{x=Math.round(+x);return isFinite(x)?Math.min(b,Math.max(a,x)):d};
-  const body={...(S.prefsRaw||{}),regions,families:fmine,families_shown:also,other_regions:val("other").checked,exclude_people_mgmt:val("xpm").checked,
+  const avoid=[...(S.prefs.avoid_types||[]).filter(t=>t!=="traditional_fi"),...(val("avoidfi").checked?["traditional_fi"]:[])];
+  const body={...(S.prefsRaw||{}),regions,families:fmine,families_shown:also,avoid_types:avoid,other_regions:val("other").checked,exclude_people_mgmt:val("xpm").checked,
     include_no_pay:val("nopay").checked,today_size:clamp(val("tsize").value,3,30,10),learn_reading:val("lread").checked,digest_size:clamp(val("dsize").value,1,100,20),later_days:clamp(val("ldays").value,1,60,7),report_days:clamp(val("rdays").value,1,90,14),
     checks:{green_regions:regions,pay_green:clamp(val("ck-payg").value,50000,600000,190000),pay_yellow:clamp(val("ck-payy").value,30000,600000,160000),
       level_green:clamp(val("ck-lg").value,3,9,6),level_yellow:clamp(val("ck-ly").value,3,9,5),fresh_green:clamp(val("ck-fg").value,1,120,14),fresh_yellow:clamp(val("ck-fy").value,1,365,30)},max_age_days:clamp(val("maxage").value,0,365,0),weights,updated_at:new Date().toISOString()};

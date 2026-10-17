@@ -60,7 +60,8 @@ module.exports = {
       ['profile-ranking', async () => { await p.evaluate(() => jumpTo('ps-rank')); await h.wait(500) }],
       ['profile-unsaved', async () => { await p.evaluate(() => { markDirty(); window.scrollTo(0, 0) }); await h.wait(200) }],
       ['setup', async () => { await nav('digest'); await p.evaluate(() => { S._obForce = true; S.ob = null; render() }) }],
-      ['setup-status', async () => { await p.evaluate(() => { S.ob.step = 2; S.ob.a.status = 'not_sure'; render() }) }],
+      ['setup-role', async () => { await p.evaluate(() => { S.ob.step = 1; S.ob.a.role_text = 'senior business analyst'; render() }) }],
+      ['setup-status', async () => { await p.evaluate(() => { S.ob.step = 3; S.ob.a.status = 'not_sure'; render() }) }],
       ['empty-search', async () => { await p.evaluate(() => { S._obForce = false; S._obDone = true; S.show = 'all'; S.q = 'zzzzqq'; setView('digest') }) }],
     ];
     const findings = {};

@@ -1,0 +1,35 @@
+{
+  "_doc": "Company types the app can use for preferences (D-077), e.g. 'prefer not traditional banks and insurers unless pay is top of range'. Data, not code (D-005).",
+  "types": {
+    "traditional_fi": {
+      "label": "Traditional banks, insurers and pension funds",
+      "companies": [
+        "BMO",
+        "Canada Life",
+        "CIBC",
+        "CPP Investments",
+        "Definity",
+        "Desjardins",
+        "Intact",
+        "Manulife",
+        "National Bank",
+        "OMERS",
+        "Ontario Teachers' Pension Plan",
+        "RBC",
+        "Scotiabank",
+        "Simplii (CIBC)",
+        "Sun Life",
+        "Tangerine (Scotiabank)",
+        "TD",
+        "Capital One",
+        "Equitable Bank",
+        "ATB Financial",
+        "Laurentian Bank",
+        "Co-operators",
+        "Aviva",
+        "Great-West Lifeco",
+        "Brookfield"
+      ]
+    }
+  }
+}

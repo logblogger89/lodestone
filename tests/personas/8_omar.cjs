@@ -12,10 +12,6 @@ module.exports = {
   async run(h) {
     h.task('Setup in his own words');
     await h.tap('Get started');
-    await h.page.locator('[data-obf="city"][data-v="GTA"]').click(); await h.wait(120);
-    await h.page.locator('.obnav .btn.primary').click(); await h.wait(150);
-    await h.page.locator('[data-obf="status"][data-v="no_permit"]').click(); await h.wait(120);
-    await h.page.locator('.obnav .btn.primary').click(); await h.wait(150);
     const cards = await h.page.locator('.obfams .obopt b').allInnerTexts();
     h.check(cards.some(c => /business or systems analyst/i.test(c)), `The role cards include business analysts (${cards.length} cards)`);
     h.check(cards.some(c => /project/i.test(c)) && cards.some(c => /data or BI analyst/i.test(c)), 'and project managers and data analysts');
@@ -25,7 +21,12 @@ module.exports = {
     h.check(!/covers product and nearby roles/i.test(await h.text()), 'He is not told his role isn\'t covered');
     h.check((await h.page.locator('[data-obf="fam"][data-v="ba"]').getAttribute('aria-pressed')) === 'true', 'The business analyst card lights up as he types');
     await h.shot('role-typed');
-    await h.page.locator('.obnav .btn.primary').click(); await h.wait(250);
+    await h.tap('Answer 2 more quick questions');
+    await h.page.locator('[data-obf="city"][data-v="GTA"]').click(); await h.wait(120);
+    await h.page.locator('.obnav .btn.primary').click(); await h.wait(150);
+    await h.page.locator('[data-obf="status"][data-v="no_permit"]').click(); await h.wait(120);
+    await h.page.locator('.obnav .btn.primary').click(); await h.wait(400);
+    await h.page.getByRole('button', { name: 'Take the 20-second taste test' }).click(); await h.wait(300);
 
     h.task('Taste test: his kind of work, not product management');
     const metas = await h.page.locator('.tcard .tmeta').allInnerTexts();

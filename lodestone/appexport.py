@@ -57,10 +57,16 @@ def build() -> dict[str, dict[str, dict]]:
     docs: dict[str, dict[str, dict]] = {"jobs": {}, "meta": {}, "desc": {f"d{i:02d}": {"jobs": {}} for i in range(DESC_BUCKETS)}}
     abouts: dict[str, list] = {}
     buckets = {f"b{i}": {} for i in range(BUCKETS)}
+    from . import affinity
+    stored_aff = store.load("affinity", {})
     for key, j in jobs.items():
         if not j.get("role_tier") or j.get("role_excluded"):
             continue
         rec = _job(key, j)
+        aff, src = affinity.for_job(key, j, stored_aff)
+        rec["aff"], rec["aff_src"] = aff, src            # type scores (D-077); "title" = a first guess from the title
+        if aff:
+            rec["family"] = max(aff, key=aff.get)
         sc = scores.get(rec["id"])
         if rec["id"] in estimates:
             rec["pay"] = {**(rec["pay"] or {"ranges": [], "primary": None, "source": None}), "estimate": estimates[rec["id"]]}
@@ -84,17 +90,20 @@ def build() -> dict[str, dict[str, dict]]:
         docs["jobs"][b] = {"jobs": items}
 
     runs = store.load("runs", {"components": {}})["components"]
-    docs["meta"]["freshness"] = {"components": runs}
+    docs["meta"]["freshness"] = {"components": {k: v for k, v in runs.items() if k not in ("rescore", "affinity")},
+                                 "rescore": runs.get("rescore"), "affinity": runs.get("affinity")}
 
     seg = {r["company"].strip(): r.get("segment", "") for r in pipeline.employers()}
+    ctypes = json.loads((store.ROOT / "config" / "company_types.json").read_text())["types"]
+    kind = {c: t for t, v in ctypes.items() for c in v["companies"]}
     rows = []
     for name, rs in sorted(sources.by_company(sources.load()).items(), key=lambda kv: kv[0].lower()):
         best = next((r for r in rs if r["status"] == "active"), rs[0])
-        rows.append({"name": name, "segment": seg.get(name, ""),
+        rows.append({"name": name, "segment": seg.get(name, ""), **({"type": kind[name]} if name in kind else {}),
                      "system": sources.PLATFORM_LABELS.get(best["platform"], best["platform"]),
                      "status": best["status"], "canada_jobs": best.get("canada_jobs") or None,
                      "careers_url": best.get("careers_url") or "", "note": (best.get("notes") or "")[:160]})
-    docs["meta"]["companies"] = {"companies": rows}
+    docs["meta"]["companies"] = {"companies": rows, "types": {t: v["label"] for t, v in ctypes.items()}}
     from . import rules
     docs["meta"]["layout"] = {"desc_buckets": DESC_BUCKETS, "job_buckets": BUCKETS}
     docs["meta"]["families"] = {"version": 2, "families": rules.families(), "default": rules.default_families()}
