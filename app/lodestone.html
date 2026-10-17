@@ -203,6 +203,10 @@ button.plink{border:0;background:none;padding:0;font:inherit;color:var(--accent)
 .ck.tier.t-core{background:var(--accent-soft);color:var(--accent);border-color:transparent}
 .flabel{font-size:12px;color:var(--muted);align-self:center}
 .famset{border:0;padding:0;margin:0;min-width:0}
+.rolerow{border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
+.rolegrid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,2fr) minmax(0,1fr);gap:8px 12px}
+@media (max-width:560px){.rolegrid{grid-template-columns:1fr}}
+.rolerow .link{align-self:flex-start}
 .famset legend{font-size:13px;font-weight:600;padding:0;margin-bottom:6px}
 .famset .chip{white-space:normal}
 .famset .chip .note{font-size:12px}
@@ -722,9 +726,11 @@ function stackPick(n,taken,explore){
   return {ids,explore:ex};
 }
 function ensureToday(){
-  if(!S.ready||!S.triLoaded||!S.todayLoaded) return;
-  if(todayValid(S.today)) return;
+  if(!S.ready||!S.triLoaded||!S.todayLoaded||!Object.keys(S.jobs).length) return;
+  const T=S.today, broken=todayValid(T)&&(!T.ids.length||T.ids.every(id=>!S.jobs[id]));   // an empty or stale list repairs itself (10-17)
+  if(todayValid(T)&&!broken) return;
   const p=stackPick(todaySize(),new Set(),true);
+  if(broken&&!p.ids.length) return;            // nothing fits right now: leave it, don't rewrite on every render
   S.today={date:todayKey(),ids:p.ids,explore:p.explore,built_at:new Date().toISOString()};
   if(S.db&&S.canWrite) S.db.doc("settings/today").set(S.today).catch(e=>console.warn(e));
 }
@@ -1104,19 +1110,23 @@ function needsOnboarding(){
   return !(pr.headline||pr.resume||pr.builder||(pr.current||{}).title||Object.keys(S.triage).length);   // existing users never see it
 }
 function obState(){return S.ob||(S.ob={step:0,a:{cities:[],anywhere:false,status:"",role_text:"",families:[],paste:"",other_country:"",taste:{}}})}
-function tastePicks(){   // 8 real, recent roles across role types and companies: chosen cities first, then remote, then the rest of Canada
+/* Taste test (D-077 fix, 10-17): 8 real roles you haven't answered yet, mostly in your field (6, one per company), plus
+   2 from related fields for contrast; chosen cities first. Your field = what setup picked, else what Lodestone already
+   knows (existing users default to product management), else, for someone who skipped the role question, a mix. */
+function tastePicks(){
   const o=obState(), a=o.a; if(o.picks) return o.picks;
-  const mine=obFams(a), rank=j=>mine.length?TIER_RANK[closeTo(j.family,mine)]:0;   // your field first, then related roles
+  const mine=obFams(a).length?obFams(a):fieldKnown()?myFams():[], rel=mine.length?relFams(mine,"related"):[];
+  const own=j=>mine.some(f=>((j.aff||{})[f]||0)>=60), relv=j=>rel.some(f=>((j.aff||{})[f]||0)>=60);
   const near=j=>a.anywhere||!a.cities.length||a.cities.includes(j.region)?0:j.region==="Remote-Canada"?1:2;
-  const pool=Object.values(S.jobs).filter(j=>j.live&&(!mine.length||rank(j)<2)).sort((x,y)=>rank(x)-rank(y)||near(x)-near(y)||freshness(y).score-freshness(x).score);
-  const out=[],cos=new Set();
-  for(const pass of [0,1]) for(const j of pool){   // one role per company first, repeats only if needed
-    if(out.length>=8) break;
-    if(out.includes(j.id)||(pass===0&&cos.has(j.company))) continue;
-    out.push(j.id);cos.add(j.company);
-  }
-  return o.picks=out.sort((x,y)=>near(S.jobs[x])-near(S.jobs[y])||rank(S.jobs[x])-rank(S.jobs[y]));
+  const fresh=j=>!(tri(j.id)||{}).status&&!(S.likes||{})[j.id];
+  const order=(x,y)=>near(x)-near(y)||(avoidHit(x)-avoidHit(y))||(rankScore(y)-rankScore(x))||freshness(y).score-freshness(x).score;   // nearby, not a company type you avoid, best fit
+  const pick=(list,n,out,cos)=>{for(const pass of [0,1]) for(const j of list){if(out.length>=n) return;if(out.includes(j.id)||(pass===0&&cos.has(j.company))) continue;out.push(j.id);cos.add(j.company)}};
+  const live=Object.values(S.jobs).filter(j=>j.live&&fresh(j)), out=[], cos=new Set();
+  if(mine.length){pick(live.filter(own).sort(order),6,out,cos);pick(live.filter(j=>!own(j)&&relv(j)).sort(order),8,out,cos);pick(live.filter(own).sort(order),8,out,cos)}
+  else pick(live.sort(order),8,out,cos);
+  return o.picks=out;
 }
+const fieldKnown=()=>!!((S.prefs.families||((S.profile||{}).preferences||{}).families||[]).length||(S.profile||{}).headline);
 /* The families picked in setup: the tapped cards, else whatever the typed words name ("business analyst"). */
 const heardText=h=>h.length?`Got it: ${esc(h.map(f=>(famById(f)||{}).label).join(", "))}. Tap a card below to change it.`:"";
 function obFams(a){return a.families.length||a.role_text_off?a.families:famsInText(a.role_text||"")}
@@ -1173,7 +1183,7 @@ function obCapture(){   // keep typed answers when moving between steps
 function startSetup(step){
   const pr=S.profile||{}, ob=pr.onboarding||{}, ws=pr.work_status, st=ob.status_answer;
   S.ob={step,a:{cities:ob.where_set===false?[]:[...(S.prefs.regions||[])].filter(r=>r!=="Remote-Canada"),anywhere:false,status:st||(ws&&ws!=="unknown"?ws:""),role_text:(pr.preferences||{}).role_wanted||"",
-    families:[...(S.prefs.families||(pr.preferences||{}).families||[])],paste:"",other_country:"",taste:{}}};
+    families:[...(S.prefs.families||(pr.preferences||{}).families||(fieldKnown()?myFams():[]))],paste:"",other_country:"",taste:{}}};   // your field is pre-selected
   S._obForce=true;S._obDone=false;setView("digest");
 }
 async function obFinish(skipped){
@@ -1181,8 +1191,9 @@ async function obFinish(skipped){
   const o=obState(), a=o.a, now=new Date().toISOString(), tasted=Object.entries(a.taste).filter(([,v])=>v);
   const whereSet=a.cities.length>0||a.anywhere;   // not answered: all of Canada, plus remote (D-077)
   const regions=a.cities.length?[...new Set([...a.cities,"Remote-Canada"])]:REGIONS.filter(r=>r!=="Other Canada");   // remote roles in Canada fit any city
-  const fids=obFams(a), fl=fids.map(famById).filter(Boolean), shown=relFams(fids,"related");
-  const pay=fl.length?{pay_green:Math.max(...fl.map(f=>f.pay.green)),pay_yellow:Math.max(...fl.map(f=>f.pay.yellow))}:{};   // pay targets that fit the field; changeable
+  const fids=obFams(a), fl=fids.map(famById).filter(Boolean), same=fl.length&&[...fids].sort().join()===[...myFams()].sort().join()&&fieldKnown();
+  const shown=same?shownFams():relFams(fids,"related");   // same field as before: keep the other types you chose to see
+  const pay=fl.length&&(!same||!(S.prefsRaw||{}).checks)?{pay_green:Math.max(...fl.map(f=>f.pay.green)),pay_yellow:Math.max(...fl.map(f=>f.pay.yellow))}:{};   // pay targets that fit the field; changeable
   const prof={...(S.profile||{version:0})};
   prof.work_status=a.status==="no_permit"||a.status==="open_permit"?a.status:a.status?"needs_permit":(prof.work_status||"unknown");   // not answered: unknown, shown as information only
   prof.preferences={...(prof.preferences||{}),...(a.role_text?{role_wanted:a.role_text}:{}),...(fl.length?{role_families:fl.map(f=>f.label),families:fids,families_shown:shown}:{})};
@@ -1191,7 +1202,8 @@ async function obFinish(skipped){
   prof.onboarded_at=now; prof.version=(+prof.version||0)+1;
   S.profile=prof; S._obDone=true; S._obForce=false; S.show="today"; S.recent.clear();
   const fp=fl.length?{families:fids,families_shown:shown}:{};
-  const patch={regions,other_regions:true,...fp,checks:{...DEFAULT_PREFS.checks,...(S.prefs.checks||{}),...pay,green_regions:regions}};
+  const keepOther=S.prefsRaw&&"other_regions" in S.prefsRaw?!!S.prefsRaw.other_regions:false;
+  const patch={regions,other_regions:!a.cities.length||a.anywhere?true:keepOther,...fp,checks:{...DEFAULT_PREFS.checks,...(S.prefs.checks||{}),...pay,green_regions:regions}};
   // likes from the taste test train the ranking straight away
   const L={...S.likes};tasted.forEach(([id,v])=>{const j=S.jobs[id];L[id]={v,at:now,title:j?j.title:"",company:j?j.company:"",source:"taste"}});S.likes=L;
   S.today=null; await savePatch(patch);   // also re-renders; today's list is picked with the new answers
@@ -1681,6 +1693,21 @@ function spySections(){
 }
 window.addEventListener("scroll",()=>{if(_spy)return;_spy=requestAnimationFrame(()=>{_spy=0;spySections()})},{passive:true});
 function markDirty(){const b=document.getElementById("savebar");if(b&&!b.classList.contains("dirty")){b.classList.add("dirty");const n=document.getElementById("savenote");if(n)n.textContent="You have unsaved changes."}}
+/* Your roles, education and years (from your resume or Build it with me), shown and editable (10-17). */
+const roleRow=(r,i)=>`<div class="rolerow" data-i="${i}" role="group" aria-label="Role ${i+1}"><div class="rolegrid">
+  <div class="field"><label for="rr-t-${i}">Title</label><input id="rr-t-${i}" data-rr="title" value="${esc(r.title||"")}"></div>
+  <div class="field"><label for="rr-c-${i}">Company</label><input id="rr-c-${i}" data-rr="company" value="${esc(r.company||"")}"></div>
+  <div class="field"><label for="rr-y-${i}">Years</label><input id="rr-y-${i}" data-rr="years" value="${esc(r.years||"")}" placeholder="e.g. 2020-2023"></div></div>
+  <div class="field"><label for="rr-f-${i}">What you did</label><textarea id="rr-f-${i}" data-rr="focus" rows="2">${esc(r.focus||"")}</textarea></div>
+  <button class="link" data-act="rmrole" aria-label="Remove role ${i+1}">Remove this role</button></div>`;
+function rolesBlock(pr){
+  const roles=Array.isArray(pr.roles)?pr.roles:[], ey=pr.experience_years||{}, edu=Array.isArray(pr.education)?pr.education.join("\n"):(pr.education||"");
+  return `<h4 class="understood">Your roles</h4><p class="note">${roles.length?`${roles.length} role${roles.length===1?"":"s"}, most recent first. Lodestone scores every job against these.`:"No roles yet. Add them here, or upload or paste your resume above and they're filled in at the next update."}</p>
+    <div id="rolelist">${roles.map(roleRow).join("")}</div>
+    <div class="row"><button class="btn" data-act="addrole">Add a role</button></div>
+    <div class="grid2"><div class="field"><label for="pf-yrs">Years of experience in total</label><input id="pf-yrs" type="number" min="0" max="60" value="${esc(ey.total??"")}"></div>
+      <div class="field"><label for="pf-edu">Education (one per line)</label><textarea id="pf-edu" rows="2">${esc(edu)}</textarea></div></div>`;
+}
 function famAlso(){const mine=myFams(),w={Adjacent:"related",Stretch:"stretch"};
   return fams().filter(f=>!mine.includes(f.id)).map(f=>[f,w[closeTo(f.id,mine)]||""]).sort((a,b)=>TIER_RANK[closeTo(a[0].id,mine)]-TIER_RANK[closeTo(b[0].id,mine)])}
 function viewSettings(){
@@ -1700,6 +1727,7 @@ function viewSettings(){
       <div class="field"><label for="pf-level">Current level</label><input id="pf-level" value="${esc(cur.level||"")}" placeholder="e.g. Senior, or L5"></div>
       <div class="field"><label for="pf-where">Where you live now</label><input id="pf-where" value="${esc(pr.location_now||cur.location||"")}"></div>
     </div>
+    ${rolesBlock(pr)}
     <div class="field"><label for="pf-work">Work permit</label><select id="pf-work">${Object.entries(WORK_STATUS).map(([k,l])=>`<option value="${k}"${(pr.work_status||"needs_permit")===k?" selected":""}>${esc(l)}</option>`).join("")}</select>
       <span class="note">Lodestone is built first for people who need a work permit for Canada. If you don't need one, the work-permit checks step aside.</span></div>
     ${(pr.resume&&pr.resume.status==="read")||(pr.builder&&pr.builder.status==="read")?`<h4 class="understood">Here's what we understood</h4><p class="note">Every line is editable. Fix anything that's wrong or undersells you; your edits are kept.</p>`:""}
@@ -1821,6 +1849,8 @@ document.addEventListener("click",e=>{
   if(d.askNo){e.stopPropagation();markAsked(d.askNo);return}
   if(d.ask){e.stopPropagation();answerAsk(d.ask,d.v);return}
   if(d.act==="obbanner"){lsSet("obBannerOff",true);render();return}
+  if(d.act==="addrole"){const L=document.getElementById("rolelist");if(L){const n=L.querySelectorAll(".rolerow").length;L.insertAdjacentHTML("beforeend",roleRow({},"n"+Date.now()).replace(/Role n\d+/g,"Role "+(n+1)));L.lastElementChild.querySelector("input").focus();S._editingPrefs=true;markDirty()}return}
+  if(d.act==="rmrole"){const r=el.closest(".rolerow");if(r){r.remove();S._editingPrefs=true;markDirty()}return}
   if(d.act==="nudge-later"){lsSet("nudgeDay",todayKey());render();return}
   if(d.nudgeStatus){lsSet("nudgeDay",todayKey());const prof={...(S.profile||{version:0}),work_status:d.nudgeStatus};prof.version=(+prof.version||0)+1;S.profile=prof;render();
     if(S.db&&S.canWrite)S.db.doc("profile/main").set(prof).then(()=>toast("Saved. Work-permit checks now follow your answer.")).catch(()=>toast("Couldn't save. Try again."));return}
@@ -1904,6 +1934,11 @@ async function savePrefs(){
   const prof={...(S.profile||{version:0})};
   prof.current={...(prof.current||{}),employer:val("pf-employer").value.trim(),title:val("pf-title").value.trim(),level:val("pf-level").value.trim()};
   prof.location_now=val("pf-where").value.trim();prof.work_status=val("pf-work").value;
+  if(document.getElementById("rolelist")){
+    prof.roles=[...document.querySelectorAll("#rolelist .rolerow")].map(row=>{const o={...(/^\d+$/.test(row.dataset.i)?((S.profile||{}).roles||[])[+row.dataset.i]:null)||{}};row.querySelectorAll("[data-rr]").forEach(x=>o[x.dataset.rr]=x.value.trim());return o}).filter(r=>r.title||r.company);
+    const y=val("pf-yrs").value.trim(); prof.experience_years={...(prof.experience_years||{}),total:y===""?undefined:Math.max(0,Math.min(60,+y))};
+    prof.education=val("pf-edu").value.split("\n").map(x=>x.trim()).filter(Boolean);
+  }
   PROFILE_FIELDS.forEach(([k])=>{const v=val("pf-"+k).value.trim();prof[k]=Array.isArray((S.profile||{})[k])||k!=="headline"&&k!=="summary"?v.split("\n").map(x=>x.trim()).filter(Boolean):v});
   prof.preferences={...(prof.preferences||{}),domains_wanted:val("pf-dw").value.trim(),families:fmine,families_shown:also,role_families:fmine.map(f=>(famById(f)||{}).label).filter(Boolean)};
   const ba=document.getElementById("xp-build")&&!document.getElementById("xp-build").hidden?builderAnswers():null; if(ba) applyBuilder(prof,ba);

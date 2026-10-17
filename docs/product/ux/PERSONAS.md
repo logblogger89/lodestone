@@ -5,7 +5,7 @@
 > app with an in-memory copy of its database; each run saves screenshots and a results file that Claude reviews by eye.
 > All five people are fictional composites. None is a real user, and none carries real personal data.
 
-## Why these five (now nine)
+## Why these five (now ten)
 Each persona stresses a different part of the product promise ("the jobs that fit you, in the country you want, that
 will actually hire you", D-066), and a different way of using the app:
 
@@ -18,6 +18,7 @@ will actually hire you", D-066), and a different way of using the app:
 | 5 | **Aisha**, Principal PM, London → Toronto | Careful, privacy-minded | Needs sponsorship | Ready | Keyboard only, screen reader | Keyboard flow, focus, labels, learning controls, deleting her data |
 | 6 | **Sam**, product manager, curious but wary | Not ready to commit; skips every question | Unknown | None | Phone, a few minutes | Skipping: does everything still work with no answers, and can setup be done later? |
 | 7 | **Lena**, Group PM with a design background, Berlin → Vancouver | Discerning, judges a product by its polish | Needs sponsorship | Ready | Large desktop monitor, laptop, phone; light and dark mode | Visual consistency: type, spacing, colour, alignment, wording, every screen size and state |
+| 10 | **Ravi**, senior PM, long-time user | Settled, uses it daily | Needs sponsorship | Read from resume | Laptop | Older settings carried forward: re-running setup, taste test, roles on the Profile, a broken Today list |
 | 9 | **Kai**, IT project manager, Halifax | Curious, shares little at first | Not said | None | Laptop, a few minutes | Role-first setup, ranking on role type only, gentle nudges, the meter |
 | 8 | **Omar**, senior business analyst, Toronto | Moving from banking to tech; wary of "PM tools" | Permanent resident | None in the app | Laptop, evenings, first visit | A field other than product management: setup in his words, role tags, pay targets, choosing related fields |
 
@@ -211,6 +212,24 @@ to share much. Laptop, a few minutes at lunch. Added 10-17 for D-077 (role-first
 **Delight.** A real list after one tap; nudges that ask for one thing at a time.
 **Frustration.** Forms before value; red warnings about things never asked; nagging.
 
+## 10. Ravi Menon: "I've been using this for weeks"
+**Who.** 37, senior PM, a long-time user set up before role types existed (no field saved, older settings, roles
+read from his resume, his own pay targets, "rest of Canada" off). Laptop. Added 10-17 after Ayush hit three bugs in
+exactly this state. Fictional; mirrors the owner's real state without his data.
+
+**Tasks**
+1. Open the app on a day whose saved Today list came out empty: it should repair itself.
+2. See and edit his past roles, education and years on the Profile.
+3. Run setup again: his field, cities and work status are pre-selected; nothing he set is reset.
+4. Take the taste test: mostly his field, nothing he already answered; his list is full afterwards and after a reload.
+
+## Monkey test
+`tests/personas/11_monkey.cjs`: 300 seeded random taps on every safe button, from three starting points (long-time
+user, brand-new user, phone), checking after every tap that there is no script error, the page isn't blank and Today
+isn't empty while roles match. After every persona's journey, the runner also checks invariants: no script errors,
+Today never empty while matching roles exist, every role in Today exists, saved role types are known, every visible
+role has a relevance score.
+
 ## Running the journeys
 `node scripts/persona_test.cjs [persona …]` (needs `data/state/app_export/`, made by `python3 -m lodestone export`).
 Screenshots and `results.json` go to `data/state/persona_runs/` (not committed). Each journey is a file in
@@ -219,6 +238,22 @@ notes are what Claude saw while playing the persona: *works*, *annoyance*, *bug*
 
 ## Findings log
 Newest first. Each finding names the persona, what happened, and what changed.
+
+### Round 6 (2026-10-17): Ayush's three bugs; 10 personas + monkey test, 274 checks, all pass (app v33)
+Ayush ran setup again from his Profile and took the taste test. Replayed with a local copy of his real settings (never
+committed), then built persona Ravi from the same state.
+- **Taste test showed mostly non-PM roles.** His Profile never stored a field (PM was assumed), so setup and the taste
+  test saw "no field" and showed the newest roles of every kind. Fixed: existing users' field is pre-selected and saved
+  explicitly; the taste test shows 6 roles from your field and 2 related ones, nothing you already answered, nearby
+  first, not company types you avoid, best fit first.
+- **Digest empty after the taste test.** Today was saved with no roles, so the app said "You've reviewed your top
+  matches" when he hadn't. Fixed: an empty or stale Today rebuilds itself; never written empty while roles match.
+  The exact moment it was saved empty couldn't be reproduced; the repair and the new invariant checks cover it.
+- **"Why don't I see any roles on my profile?"** His 7 past roles (and education, years) were stored but never shown.
+  Fixed: "Your roles" on the Profile, editable (add, remove, edit; the rest of each role kept).
+- **Found while fixing:** running setup again reset custom pay targets to the field's defaults and turned on "rest of
+  Canada". Fixed: same field keeps your pay targets and the other types you see; cities chosen keep your setting.
+- **Proof the tests would have caught it:** Ravi's journey against the previous version fails 4 of its first 5 checks.
 
 ### Round 5 (2026-10-17): type scores and role-first setup; 9 personas, 201 checks, all pass (app v32)
 New: persona Kai (one answer, then nudges). Daniel and Omar now answer the role first and take the taste test from the

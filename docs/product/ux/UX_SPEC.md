@@ -201,6 +201,9 @@ type; and the simplest setup is to ask only the role type, rank on that, and nud
 - **Meter:** Role type → Where & work status → Experience → Taste & daily use.
 - **Re-scoring:** only experience, domains, skills, target level or field trigger it; best matches first, 150 a day;
   the Profile's ranking check says how many wait and roughly how long. Everything else applies instantly.
+- **Fixes 10-17 (D-078):** the taste test shows 6 roles from your field (pre-selected for existing users) and 2 related,
+  none already answered; Today repairs itself if saved empty; the Profile shows your past roles, education and years,
+  editable; running setup again keeps your pay targets, "rest of Canada" setting and the other types you see.
 - **Company types (config):** "Rank traditional banks, insurers and pension funds lower unless their pay is top of
   range" in the Profile; offered as a one-tap suggestion when the Profile text says so.
 
