@@ -16,7 +16,7 @@ def main(argv=None) -> int:
     d.add_argument("--redo", action="store_true", help="re-probe companies already detected")
     r = sub.add_parser("refresh", help="pull all sources, keep Canadian roles, dedup, update liveness")
     sub.add_parser("reclassify", help="re-read every stored role's family after a taxonomy change (D-076)")
-    r.add_argument("--only", help="limit to one company name or one platform (for testing a source)")
+    r.add_argument("--only", help="limit to one company name or platform, or several separated by | (testing a source, pulling a new wave)")
     sub.add_parser("stats", help="print current counts and freshness")
     pg = sub.add_parser("pages", help="careers-page reader: fetch pages, or save the jobs read from one")
     pg.add_argument("action", choices=["fetch", "save"])

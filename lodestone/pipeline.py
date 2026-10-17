@@ -146,7 +146,8 @@ def reclassify(jobs: dict | None = None) -> dict:
 
 def refresh(only: str | None = None, log=print) -> dict:
     rows = sources.load()
-    active = [r for r in rows if r["status"] == "active" and (not only or r["company"] == only or r["platform"] == only)]
+    pick = set(only.split("|")) if only else None          # one name, or several separated by "|" (a new wave)
+    active = [r for r in rows if r["status"] == "active" and (not pick or r["company"] in pick or r["platform"] in pick)]
     if not active:
         raise SystemExit("No active sources. Run: python3 -m lodestone detect")
     jobs: dict = store.load("jobs", {"jobs": {}})["jobs"]
