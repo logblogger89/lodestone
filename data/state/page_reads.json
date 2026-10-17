@@ -1,6 +1,6 @@
 {
  "Autoverify": {
-  "read_at": "2026-10-16T21:56:37+00:00",
+  "read_at": "2026-10-17T11:18:59+00:00",
   "jobs": [
    {
     "title": "Photographer - Kitchener, ON",
@@ -33,7 +33,7 @@
     "location": "Oshawa, ON, Canada"
    },
    {
-    "title": "Photographer - Winnipeg, ON",
+    "title": "Photographer - Winnipeg",
     "url": "https://secure.collage.co/jobs/autoverify/65237",
     "location": "Winnipeg, MB, Canada"
    },
@@ -45,7 +45,7 @@
   ]
  },
  "Digitail": {
-  "read_at": "2026-10-16T21:56:37+00:00",
+  "read_at": "2026-10-17T11:18:59+00:00",
   "jobs": [
    {
     "title": "Platform Support Engineer",
@@ -75,7 +75,7 @@
    {
     "title": "SMB Account Executive, SaaS Veterinary (Canada/USA)",
     "url": "https://digitail.factorial.com/job_posting/smb-account-executive-saas-veterinary-canada-usa-278567",
-    "location": "Remote, Canada/USA"
+    "location": "Remote (Canada/USA)"
    },
    {
     "title": "Onboarding Specialist",
@@ -90,7 +90,7 @@
   ]
  },
  "Taalas": {
-  "read_at": "2026-10-16T21:56:37+00:00",
+  "read_at": "2026-10-17T11:19:00+00:00",
   "jobs": [
    {
     "title": "Electronics Lab Technician",
@@ -135,14 +135,8 @@
   ]
  },
  "Vidyard": {
-  "read_at": "2026-10-16T21:56:38+00:00",
-  "jobs": [
-   {
-    "title": "Future Opportunities: Enterprise Account Manager",
-    "url": "https://careers.kula.ai/vidyard/34567-future-opportunities-enterprise-account-manager?jobs=true",
-    "location": "Canada (Remote)"
-   }
-  ]
+  "read_at": "2026-10-17T11:19:12+00:00",
+  "jobs": []
  },
  "Certn": {
   "read_at": "2026-10-16T11:04:20+00:00",
@@ -420,96 +414,15 @@
   ]
  },
  "LoginRadius": {
-  "read_at": "2026-10-16T11:04:21+00:00",
+  "read_at": "2026-10-17T11:19:00+00:00",
   "jobs": []
  },
  "Photonic": {
-  "read_at": "2026-10-16T11:04:21+00:00",
-  "jobs": [
-   {
-    "title": "Optical Engineer (Ph.D. / Early Career)",
-    "url": "https://careers.photonic.com/en/postings/b633a2b0-0acb-4090-9066-eb4312752eb7",
-    "location": "Coquitlam, BC, Canada (Hybrid)"
-   },
-   {
-    "title": "Optical Packaging & Assembly Engineer",
-    "url": "https://careers.photonic.com/en/postings/7e7c7b3f-d977-4843-be23-782a8bbb2365",
-    "location": "Coquitlam, BC, Canada (Onsite)"
-   },
-   {
-    "title": "VP, Hardware",
-    "url": "https://careers.photonic.com/en/postings/4cbd1e5d-f8bd-432c-820c-a66e85e45753",
-    "location": "Coquitlam, BC, Canada (Hybrid)"
-   },
-   {
-    "title": "VP, Systems",
-    "url": "https://careers.photonic.com/en/postings/32af5504-ed22-43b1-9e74-a2f7192a0c75",
-    "location": "Coquitlam, BC, Canada (Hybrid)"
-   },
-   {
-    "title": "SVP, Development and Engineering",
-    "url": "https://careers.photonic.com/en/postings/6b1d8f8d-7bdd-4c8e-a6aa-586e75c2a49f",
-    "location": "Coquitlam, BC, Canada (Hybrid)"
-   },
-   {
-    "title": "Senior Systems Administrator",
-    "url": "https://careers.photonic.com/en/postings/a3b55582-ced7-4991-b6d5-3d7a0f66c949",
-    "location": "Coquitlam, BC, Canada (Onsite)"
-   },
-   {
-    "title": "Technician Team Manager",
-    "url": "https://careers.photonic.com/en/postings/d77286c8-0b74-45f8-9b2b-d05c4b7e9767",
-    "location": "Coquitlam, BC, Canada (Onsite)"
-   },
-   {
-    "title": "Senior Quantum Error Correction (QEC) Developer",
-    "url": "https://careers.photonic.com/en/postings/3faa5d30-f7e4-4ca0-9035-91a238cb842d",
-    "location": "Coquitlam, BC, Canada (Hybrid)"
-   },
-   {
-    "title": "VP, Finance",
-    "url": "https://careers.photonic.com/en/postings/e29b2107-1d32-4f61-a896-1dbb522144b7",
-    "location": "Coquitlam, BC, Canada (Hybrid)"
-   },
-   {
-    "title": "Photonic Test Engineer",
-    "url": "https://careers.photonic.com/en/postings/99e7b5b7-12db-4882-840f-2eee9524ec84",
-    "location": "Coquitlam, BC, Canada (Onsite)"
-   },
-   {
-    "title": "Senior Foundry Integration Engineer",
-    "url": "https://careers.photonic.com/en/postings/242adc5a-c5b0-452d-b1cb-ded9b8aa9e09",
-    "location": "Remote, Canada"
-   },
-   {
-    "title": "Senior Foundry Integration Engineer",
-    "url": "https://careers.photonic.com/en/postings/7a06fb7e-f0a5-4ba4-8462-83306396269e",
-    "location": "Remote (USA)"
-   },
-   {
-    "title": "Senior Manager, Strategic Initiatives",
-    "url": "https://careers.photonic.com/en/postings/7dada66e-f0cf-4760-bea2-702adfe923b7",
-    "location": "Coquitlam, BC, Canada (Hybrid)"
-   },
-   {
-    "title": "Quantum Engineer (Qubit System Performance)",
-    "url": "https://careers.photonic.com/en/postings/5e216520-9635-4777-9f6c-a1204c856099",
-    "location": "Coquitlam, BC, Canada (Hybrid)"
-   },
-   {
-    "title": "Staff Quantum Engineer (Qubit System Performance)",
-    "url": "https://careers.photonic.com/en/postings/aa3b2abc-e511-40f1-a529-caf64221ea59",
-    "location": "Coquitlam, BC, Canada (Hybrid)"
-   },
-   {
-    "title": "Director, Mechanical Engineering",
-    "url": "https://careers.photonic.com/en/postings/6a36bf86-9ec8-4980-9efe-0460b26e778f",
-    "location": "Coquitlam, BC, Canada (Onsite)"
-   }
-  ]
+  "read_at": "2026-10-17T11:19:00+00:00",
+  "jobs": []
  },
  "Zeffy": {
-  "read_at": "2026-10-16T21:56:38+00:00",
+  "read_at": "2026-10-17T11:19:00+00:00",
   "jobs": [
    {
     "title": "Customer Support Specialist",
@@ -524,7 +437,7 @@
    {
     "title": "Fraud Operations Specialist",
     "url": "https://careers.kula.ai/zeffy/34025-operations-specialist",
-    "location": "Paris, France"
+    "location": "Paris, Île-de-France, France"
    }
   ]
  }

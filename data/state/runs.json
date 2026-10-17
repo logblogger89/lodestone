@@ -145,9 +145,9 @@
    "postings": 81
   },
   "scoring": {
-   "at": "2026-10-16T22:05:07+00:00",
+   "at": "2026-10-17T11:24:18+00:00",
    "rubric": "1.0",
-   "scored": 691
+   "scored": 761
   },
   "signals": {
    "at": "2026-10-15T12:58:55+00:00",
@@ -155,36 +155,23 @@
    "companies_with_lmias": 86
   },
   "source_index": {
-   "at": "2026-10-16T10:55:03+00:00",
-   "companies": 210,
-   "indexed": 210
+   "at": "2026-10-17T11:18:29+00:00",
+   "companies": 412,
+   "indexed": 412
   },
   "affinity": {
    "at": "2026-10-17T07:43:35+00:00",
    "read": 400,
    "waiting": 1201
+  },
+  "rescore": {
+   "at": "2026-10-17T11:19:30+00:00",
+   "waiting": 378,
+   "cap": 150,
+   "this_run": 150
   }
  },
  "history": [
-  {
-   "component": "jobs:hibob",
-   "at": "2026-10-17T07:42:15+00:00",
-   "postings": 81
-  },
-  {
-   "component": "jobs",
-   "at": "2026-10-17T07:42:15+00:00",
-   "sources_ok": 254,
-   "sources_failed": 38,
-   "canada_postings": 8299,
-   "candidates": 1998
-  },
-  {
-   "component": "affinity",
-   "at": "2026-10-17T07:43:35+00:00",
-   "read": 400,
-   "waiting": 1201
-  },
   {
    "component": "jobs:ashby",
    "at": "2026-10-17T11:08:33+00:00",
@@ -425,6 +412,25 @@
    "sources_failed": 0,
    "canada_postings": 651,
    "candidates": 2600
+  },
+  {
+   "component": "source_index",
+   "at": "2026-10-17T11:18:29+00:00",
+   "companies": 412,
+   "indexed": 412
+  },
+  {
+   "component": "rescore",
+   "at": "2026-10-17T11:19:30+00:00",
+   "waiting": 378,
+   "cap": 150,
+   "this_run": 150
+  },
+  {
+   "component": "scoring",
+   "at": "2026-10-17T11:24:18+00:00",
+   "rubric": "1.0",
+   "scored": 761
   }
  ]
 }

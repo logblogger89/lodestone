@@ -46,10 +46,12 @@ standard library only, so no installs are needed.
    approved company that needs source research (step 2) waits for the next morning run.
 3c. **Market check requests (D-055).** Answer the app's `market_req` requests per `.claude/skills/market-check/SKILL.md`
    (only the roles Ayush requested; `market pending` enforces the cap of 20 reads a day across all runs).
-4. **Refresh.** `python3 -m lodestone refresh` (or `--only <company or platform>` to test one source)
+4. **Refresh.** `python3 -m lodestone refresh` (or `--only <company or platform>` to test one source; several names
+   separated by `|` pull a new wave)
    Writes `data/state/jobs.json`, `data/state/candidates_to_score.json` and `data/state/runs.json`
    (freshness, R11a), and updates each source's Canada count in the index. One broken source never
-   stops the run; failures are listed under `errors`. Fix or pause failing sources.
+   stops the run; failures are listed under `errors`. Fix or pause failing sources. "down for scheduled maintenance"
+   (Workday's weekly window, Friday night to Saturday morning ET) needs no fix: those jobs stay live until the next run.
    Then `python3 -m lodestone index` to refresh the readable index (`data/sources/README.md`).
 4b. **Type scores (D-077).** `python3 -m lodestone affinity prepare` writes batches (60 roles each) of live roles whose
    current posting hasn't been read for type scores: the best-scored first, then the newest, at most 400 a day across

@@ -8543,7 +8543,7 @@
   "spare": {
    "name": "Spare",
    "routes": {
-    "vc": "Inovia Capital portfolio; 201–1,000 staff; 3 open jobs; Vancouver, BC, Canada"
+    "vc": "Inovia Capital portfolio; 201–1,000 staff; 2 open jobs; Vancouver, BC, Canada"
    },
    "status": "reviewed",
    "first_found": "2026-10-15T08:45:15+00:00",
@@ -8691,7 +8691,7 @@
   "bdc": {
    "name": "BDC ",
    "routes": {
-    "vc": "Communitech portfolio; 1,000+ staff; 45 open jobs; Toronto, ON, Canada, Calgary, AB, Canada"
+    "vc": "Communitech portfolio; 1,000+ staff; 35 open jobs; Toronto, ON, Canada, Calgary, AB, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8751,7 +8751,7 @@
   "dematic": {
    "name": "Dematic",
    "routes": {
-    "vc": "Communitech portfolio; size unknown; 20 open jobs; Mississauga, ON, Canada"
+    "vc": "Communitech portfolio; size unknown; 12 open jobs; Mississauga, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8839,7 +8839,7 @@
   "kpmg": {
    "name": "KPMG Canada",
    "routes": {
-    "vc": "Communitech portfolio; size unknown; 438 open jobs; Toronto, ON, Canada, Calgary, AB, Canada",
+    "vc": "Communitech portfolio; size unknown; 434 open jobs; Toronto, ON, Canada, Calgary, AB, Canada",
     "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "skipped",
@@ -8872,7 +8872,7 @@
   "lug-sports-group": {
    "name": "LUG Sports Group Inc.",
    "routes": {
-    "vc": "Communitech portfolio; 201–1,000 staff; 3 open jobs; Toronto, ON, Canada"
+    "vc": "Communitech portfolio; 201–1,000 staff; 2 open jobs; Toronto, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -9273,7 +9273,7 @@
   "vantage": {
    "name": "Vantage",
    "routes": {
-    "vc": "Real Ventures portfolio; 51–200 staff; 4 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
+    "vc": "Real Ventures portfolio; 51–200 staff; 5 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:32+00:00",
@@ -9687,7 +9687,7 @@
   "slack": {
    "name": "Slack",
    "routes": {
-    "vc": "Accel (Canadian locations only) portfolio; 1,000+ staff; 20 open jobs; Vancouver, BC, Canada",
+    "vc": "Accel (Canadian locations only) portfolio; 1,000+ staff; 19 open jobs; Vancouver, BC, Canada",
     "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
    },
    "status": "new",
@@ -9946,7 +9946,7 @@
   "relay": {
    "name": "Relay",
    "routes": {
-    "vc": "General Catalyst (Canadian locations only) portfolio; 201–1,000 staff; 46 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
+    "vc": "General Catalyst (Canadian locations only) portfolio; 201–1,000 staff; 47 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
    },
    "status": "new",
    "first_found": "2026-10-17T07:22:23+00:00",
@@ -10346,7 +10346,7 @@
   "lansweeper": {
    "name": "Lansweeper",
    "routes": {
-    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 20 open jobs; Montreal, QC, Canada, Montréal, QC, Canada"
+    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 19 open jobs; Montreal, QC, Canada, Montréal, QC, Canada"
    },
    "status": "new",
    "first_found": "2026-10-17T07:23:20+00:00",
@@ -10386,7 +10386,7 @@
   "mirantis": {
    "name": "Mirantis",
    "routes": {
-    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 100 open jobs; Kitchener, ON, Canada"
+    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 99 open jobs; Kitchener, ON, Canada"
    },
    "status": "new",
    "first_found": "2026-10-17T07:23:20+00:00",
@@ -16097,5 +16097,5 @@
    "verdict": "skip"
   }
  },
- "updated_at": "2026-10-17T07:37:03+00:00"
+ "updated_at": "2026-10-17T11:23:46+00:00"
 }

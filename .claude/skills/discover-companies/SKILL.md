@@ -30,4 +30,10 @@ Nothing joins the watchlist without Ayush's approval in the app (Companies > Sug
    `python3 -m lodestone discover apply <folder>`. Approved companies join `data/seed/watchlist_seed.csv` and, when
    their board is confirmed, the source index; for `needs_source_research` companies, find their careers site and add
    a source row (refresh-jobs step 2). Re-export suggestions so decided ones drop off.
+8b. **Direct adds (only when Ayush asks, D-080).** When Ayush asks for companies to be added without the in-app
+   approval (as for the 10-17 wide net), research each careers site, list them as `{company, platform, feed,
+   careers_url, skip}`, run `python3 scripts/verify_sources.py <out.json> <research.json>` (pulls every feed and counts
+   Canadian and business-facing roles), keep the verified rows with Canadian roles and add them with
+   `python3 scripts/add_sources.py <rows.json> <segments.json>`. Same skip rules as step 6. Then pull just the new ones:
+   `python3 -m lodestone refresh --only "A|B|C"`.
 9. Commit `data/state/discovery.json`, the seed, the source index and config; push; tracker change-log line.
