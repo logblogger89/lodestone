@@ -52,6 +52,8 @@ def fetch(url: str, *, timeout: float = 25, retries: int = 1, method: str = "GET
         req = urllib.request.Request(url, data=data, headers=hdrs, method=method)
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
+                if "maintenance" in resp.geturl():   # Workday's weekly window redirects every site to a notice page
+                    raise ConnectionError(f"{urllib.parse.urlsplit(url).netloc} is down for scheduled maintenance")
                 return resp.read().decode("utf-8", errors="replace")
         except urllib.error.HTTPError as e:
             if e.code in (429, 500, 502, 503, 504) and attempt < retries:

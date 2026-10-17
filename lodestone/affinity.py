@@ -69,7 +69,8 @@ def pending_batches() -> list[str]:
     stored = store.load("affinity", {})
     left = []
     for f in sorted(INBOX.glob("batch_*.json")) if INBOX.exists() else []:
-        for r in json.loads(f.read_text()):
+        data = json.loads(f.read_text())
+        for r in data["jobs"] if isinstance(data, dict) else data:      # batch files are {"families", "jobs"}
             if (stored.get(r["id"]) or {}).get("fingerprint") != r["fingerprint"]:
                 left.append(r["id"])
     return left

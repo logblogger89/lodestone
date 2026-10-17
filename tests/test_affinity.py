@@ -34,6 +34,13 @@ class TestAffinity(unittest.TestCase):
             self.assertEqual(sorted(out["rejected"]), ["b", "c"])
             self.assertEqual(saved["affinity"]["a"]["aff"], {"pm": 90})      # tiny scores dropped
 
+    def test_pending_reads_batch_files(self):
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(affinity, "INBOX", Path(d)), \
+                mock.patch.object(affinity.store, "load", lambda n, dflt: {"a": {"fingerprint": "f"}}):
+            (Path(d) / "batch_00.json").write_text('{"families": [], "jobs": [{"id": "a", "fingerprint": "f"}, '
+                                                   '{"id": "b", "fingerprint": "g"}]}')
+            self.assertEqual(affinity.pending_batches(), ["b"])
+
 
 class TestProfileKey(unittest.TestCase):
     def test_app_side_changes_cost_no_rescoring(self):
