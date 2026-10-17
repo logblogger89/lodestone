@@ -5929,5 +5929,1454 @@
   },
   "why": "Business ops producer on a mobile game; description thin, judged mostly from title",
   "at": "2026-10-17T10:57:03+00:00"
+ },
+ "ae204a90f43a": {
+  "fingerprint": "f9c40019310556bc",
+  "aff": {
+   "program": 80,
+   "project": 75,
+   "pm": 25,
+   "ba": 20
+  },
+  "why": "Runs multi-workstream certification exam delivery: plans, risks, dependencies, approvals",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "143c9a6571f9": {
+  "fingerprint": "5ea81f83fa2e8c1a",
+  "aff": {
+   "program": 60,
+   "project": 40,
+   "strategy": 50,
+   "sales": 25
+  },
+  "why": "Runs delivery-partner onboarding, vetting and rescue coverage; ops process work with BD",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "8354caf5fa95": {
+  "fingerprint": "7e5b4cc3ffec6a23",
+  "aff": {
+   "program": 40,
+   "project": 40,
+   "strategy": 35
+  },
+  "why": "Clinical lead for nurse practitioners; leads clinical ops projects and protocols",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "ac42b3806d54": {
+  "fingerprint": "a53ed8f8e583da77",
+  "aff": {
+   "custsuccess": 55,
+   "solutions": 45
+  },
+  "why": "Tier 3 network support/escalation engineer troubleshooting customer issues; support-heavy",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "ae3dbe840a88": {
+  "fingerprint": "1d391dd88bd3e3de",
+  "aff": {
+   "custsuccess": 55,
+   "solutions": 45
+  },
+  "why": "Tier 3 network support/escalation engineer troubleshooting customer issues; support-heavy",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "b7c8459ce4ad": {
+  "fingerprint": "dcc1e2a3af2cae2d",
+  "aff": {
+   "revops": 70,
+   "program": 55,
+   "people": 30,
+   "project": 30
+  },
+  "why": "Designs and measures sales enablement programs tied to GTM goals: ramp, win rates",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "98f0f8eda13f": {
+  "fingerprint": "09429cac0a8d2a57",
+  "aff": {
+   "program": 60,
+   "people": 50,
+   "project": 35
+  },
+  "why": "Designs, governs and measures learning programs across the org; L&D program management",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "44375ed243f8": {
+  "fingerprint": "69efd6f1d4151f20",
+  "aff": {
+   "strategy": 50,
+   "project": 20,
+   "analytics": 25,
+   "ba": 25
+  },
+  "why": "Runs reverse logistics and returns ops: SOPs, KPIs, stakeholder coordination",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "9cdc90bfd02c": {
+  "fingerprint": "6952abef675db820",
+  "aff": {
+   "program": 45,
+   "project": 40,
+   "strategy": 35,
+   "ba": 25
+  },
+  "why": "Supply chain materials planning with customers, procurement and production; ops-heavy",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "27608c7f558c": {
+  "fingerprint": "ad3881ccb46ab636",
+  "aff": {
+   "solutions": 75,
+   "custsuccess": 65,
+   "sales": 25
+  },
+  "why": "Owns technical post-sale lifecycle for strategic accounts: implementation, adoption",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "37d6c5348799": {
+  "fingerprint": "f812c9eaf5526df5",
+  "aff": {
+   "sales": 90
+  },
+  "why": "Outbound prospecting and pipeline generation for the sales team",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "4951b4669ebe": {
+  "fingerprint": "c8e8654773d74131",
+  "aff": {
+   "revops": 90,
+   "finance": 25,
+   "legal": 15
+  },
+  "why": "Structures and approves deals, pricing and quoting process as deal desk analyst",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "a0af28cc0879": {
+  "fingerprint": "35b1ccc3d3873a29",
+  "aff": {
+   "marketing": 90,
+   "pmm": 30
+  },
+  "why": "Leads media relations, narrative and external comms for the brand",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "2084b1ad11ba": {
+  "fingerprint": "173569e45c51ddf8",
+  "aff": {
+   "legal": 95
+  },
+  "why": "Senior corporate counsel leading commercial and corporate legal work",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "90f8a0c2ee91": {
+  "fingerprint": "ebe2dd545e5f60a8",
+  "aff": {
+   "custsuccess": 75,
+   "marketing": 60,
+   "prodanalytics": 20
+  },
+  "why": "Owns digital customer success journeys and lifecycle campaigns for adoption",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "323aa4cb1148": {
+  "fingerprint": "ac0119a1f124235a",
+  "aff": {
+   "sales": 95
+  },
+  "why": "SMB account executive closing new business in Toronto; title-based",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "74bb5f1bcc44": {
+  "fingerprint": "cb9cda2c1e31478c",
+  "aff": {
+   "revops": 95,
+   "strategy": 40
+  },
+  "why": "Leads global field sales ops: forecasting, pipeline, planning, productivity",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "5bd9de9894f1": {
+  "fingerprint": "7f3d01915ea5535c",
+  "aff": {
+   "custsuccess": 85,
+   "sales": 40
+  },
+  "why": "Drives adoption, rollouts and expansion for a book of customer accounts",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "2dbebf44c61d": {
+  "fingerprint": "0b1240cbb7c6a5a2",
+  "aff": {
+   "finance": 90,
+   "analytics": 30,
+   "strategy": 30
+  },
+  "why": "Owns marketplace P&L: forecasting, modeling and financial insight",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "9dca0980ca02": {
+  "fingerprint": "cdb2a886d739cecd",
+  "aff": {
+   "revops": 90,
+   "finance": 25,
+   "legal": 15
+  },
+  "why": "Senior deal desk: structures deals with Sales, Legal and Finance; builds process",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "896787455d5c": {
+  "fingerprint": "d85cec6224d3e4bf",
+  "aff": {
+   "revops": 90,
+   "analytics": 25
+  },
+  "why": "Sales operations specialist supporting the sales org's processes and tools; title-based",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "e845617afb18": {
+  "fingerprint": "b303a29e2142131b",
+  "aff": {
+   "custsuccess": 70,
+   "sales": 65
+  },
+  "why": "Owns a book of ~60 customers: renewals, health, and expansion targets",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "e9ec4cf5088b": {
+  "fingerprint": "7e297916605c6944",
+  "aff": {
+   "sales": 90,
+   "strategy": 20
+  },
+  "why": "Partner co-sell lead: sources deals with AEs and partners, shapes ecosystem GTM",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "f38f2eba5f1c": {
+  "fingerprint": "09c8db8dbeaf325d",
+  "aff": {
+   "marketing": 90,
+   "pmm": 30
+  },
+  "why": "Owns brand campaign strategy from brief through launch to drive demand",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "3096c2b25e63": {
+  "fingerprint": "47bc4bfb9e63191d",
+  "aff": {
+   "legal": 90,
+   "tns": 20
+  },
+  "why": "Compliance advisory for the card program, partnering with Product and Ops",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "4a0919f14c2e": {
+  "fingerprint": "41a669d8857556e7",
+  "aff": {
+   "solutions": 75,
+   "custsuccess": 50,
+   "program": 20
+  },
+  "why": "Technical account management for merchant integrations: monitoring, triage, SLAs",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "ff3040b5bbe8": {
+  "fingerprint": "8ca9830d3ec72cd6",
+  "aff": {
+   "design": 90,
+   "marketing": 20
+  },
+  "why": "Visual design: motion, illustration, visual systems across product and brand",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "4b68fadd90ba": {
+  "fingerprint": "7c25c45eaee19136",
+  "aff": {
+   "finance": 95
+  },
+  "why": "Controller owning North American financial reporting and accounting",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "db6f18b17aa0": {
+  "fingerprint": "d31d8ce08dc7eeb9",
+  "aff": {
+   "people": 95
+  },
+  "why": "Strategic HR business partner to the revenue org: ER, org design, workforce plans",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "6822335e71ac": {
+  "fingerprint": "4797bd2ab9fbbacf",
+  "aff": {
+   "finance": 90
+  },
+  "why": "Treasury specialist: bank reconciliations and treasury processes",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "b707b63e7673": {
+  "fingerprint": "66ba5ddd42fd37be",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Public-sector account executive selling AI services; new logos and expansion",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "6ff6e68c9151": {
+  "fingerprint": "b7c3b280c404e20e",
+  "aff": {
+   "custsuccess": 90,
+   "sales": 15
+  },
+  "why": "Customer success rep driving adoption, training and support for dealers and farmers",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "ff0e16cc9dc9": {
+  "fingerprint": "6f9d1b8757ba46a5",
+  "aff": {
+   "pm": 90,
+   "program": 25
+  },
+  "why": "Owns the technical roadmap of the AI platform: capabilities, cost, trade-offs",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "9d6f491b56c7": {
+  "fingerprint": "03f488bd4e786c39",
+  "aff": {
+   "custsuccess": 40,
+   "program": 30,
+   "project": 30,
+   "strategy": 30
+  },
+  "why": "Manages 24/7 IT ops engineers keeping office infra running; support ops leadership",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "99951c4958c5": {
+  "fingerprint": "5bdb815453069d93",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Enterprise AE driving AWS revenue and adoption in strategic accounts",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "5fa94c03a45a": {
+  "fingerprint": "abfba54162a878f9",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Ads account executive selling to SMB advertisers; new and existing revenue",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "110e3749ae66": {
+  "fingerprint": "fe9feb572fa6534b",
+  "aff": {
+   "finance": 95,
+   "strategy": 25
+  },
+  "why": "Finance partner to fulfillment centers: planning, controllership, cost decisions",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "2b0ab9689e12": {
+  "fingerprint": "e9cc7a8ae715fce7",
+  "aff": {
+   "custsuccess": 85,
+   "solutions": 45,
+   "sales": 30,
+   "strategy": 25
+  },
+  "why": "Owns success of ISV accounts through cloud/AI transformation; outcomes-focused CSM",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "5c276b4bc7be": {
+  "fingerprint": "e9cc7a8ae715fce7",
+  "aff": {
+   "custsuccess": 85,
+   "solutions": 45,
+   "sales": 30,
+   "strategy": 25
+  },
+  "why": "Owns success of ISV accounts through cloud/AI transformation; outcomes-focused CSM",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "c068aad17a31": {
+  "fingerprint": "803fd97745f91c74",
+  "aff": {
+   "sales": 90,
+   "custsuccess": 30
+  },
+  "why": "Ads account manager growing revenue from theatrical/streaming advertisers",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "c975048a79f4": {
+  "fingerprint": "19dfe80ab443bd5f",
+  "aff": {
+   "solutions": 75,
+   "custsuccess": 65,
+   "sales": 20
+  },
+  "why": "AWS TAM: technical advisor post-sale driving adoption and operational health; not sales",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "7123fa9e568b": {
+  "fingerprint": "df0334addcf3ab9a",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Enterprise account manager owning territory revenue targets for banks",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "e8a8db84ad12": {
+  "fingerprint": "5767541f82653689",
+  "aff": {
+   "solutions": 75,
+   "custsuccess": 65,
+   "sales": 20
+  },
+  "why": "AWS TAM: technical advisor post-sale driving adoption and operational health; not sales",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "89f969e408e0": {
+  "fingerprint": "92a1fed76c9dacd4",
+  "aff": {
+   "solutions": 75,
+   "custsuccess": 65,
+   "sales": 20
+  },
+  "why": "AWS TAM: technical advisor post-sale driving adoption and operational health; not sales",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "86042a3f13cb": {
+  "fingerprint": "7d5ce3149fa587df",
+  "aff": {
+   "people": 95
+  },
+  "why": "HR business partner for hourly workforce: talent, engagement, PXT processes",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "9f0c7ec0ba80": {
+  "fingerprint": "2989ed507f69b429",
+  "aff": {
+   "custsuccess": 85,
+   "solutions": 45,
+   "sales": 30,
+   "strategy": 25
+  },
+  "why": "Owns success of ISV accounts through cloud/AI transformation; outcomes-focused CSM",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "053b48a6d94b": {
+  "fingerprint": "27e90d0248bf726b",
+  "aff": {
+   "solutions": 75,
+   "custsuccess": 65,
+   "sales": 20
+  },
+  "why": "AWS TAM for public sector: post-sale technical advisor driving adoption; not sales",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "5a15e0ced527": {
+  "fingerprint": "85a0a7f12ee45c33",
+  "aff": {
+   "finance": 90,
+   "analytics": 30
+  },
+  "why": "Finance partner for fulfillment network: cost analysis, planning, controllership",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "a231dd4dc78d": {
+  "fingerprint": "0536d536047c8d4e",
+  "aff": {
+   "sales": 90,
+   "custsuccess": 30
+  },
+  "why": "Ads account manager growing revenue from CPG advertisers",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "148ecb34977d": {
+  "fingerprint": "0efe6fa72457a267",
+  "aff": {
+   "design": 95,
+   "uxr": 20
+  },
+  "why": "End-to-end UX design for high-volume hiring workflows with PM and research",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "ff881957aaba": {
+  "fingerprint": "d98c03c93238205f",
+  "aff": {
+   "sales": 90,
+   "custsuccess": 30
+  },
+  "why": "Ads account manager growing revenue from CPG advertisers",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "fd6593ff0fd4": {
+  "fingerprint": "3eb17f087aae0292",
+  "aff": {
+   "strategy": 55,
+   "analytics": 40,
+   "program": 30,
+   "ba": 20
+  },
+  "why": "S&OP supply chain management: inventory, capacity, network ops planning; not sales",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "0f84814bd5b6": {
+  "fingerprint": "85006d3c1504d313",
+  "aff": {
+   "finance": 95
+  },
+  "why": "FP&A finance manager: business planning and reporting for fulfillment network",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "7204db1aeeb2": {
+  "fingerprint": "2172be4062b1883e",
+  "aff": {
+   "solutions": 75,
+   "custsuccess": 65,
+   "sales": 20
+  },
+  "why": "AWS TAM for ISVs: post-sale technical advisor driving adoption; not sales",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "d8369c537c41": {
+  "fingerprint": "35f6af3c2d7082d2",
+  "aff": {
+   "custsuccess": 75,
+   "solutions": 40
+  },
+  "why": "Leads an enterprise support team of technical engineers for AWS customers",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "711356f9b6e9": {
+  "fingerprint": "886b05e31466eafc",
+  "aff": {
+   "solutions": 75,
+   "custsuccess": 65,
+   "sales": 20
+  },
+  "why": "AWS TAM: technical advisor post-sale driving adoption and operational health; not sales",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "d5fe726fb98e": {
+  "fingerprint": "9faf435421aaa766",
+  "aff": {
+   "design": 95,
+   "uxr": 20
+  },
+  "why": "End-to-end UX design for high-volume hiring workflows with PM and research",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "3db4d509beb9": {
+  "fingerprint": "dcf6415e9a110015",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Cloud sales rep owning a territory: prospecting and growing AWS adoption",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "aa71b21f2052": {
+  "fingerprint": "a85aeabf0e63000e",
+  "aff": {
+   "sales": 95,
+   "people": 15
+  },
+  "why": "Leads a financial-services enterprise sales team driving AWS revenue",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "076dcb36dc70": {
+  "fingerprint": "00bad17a1e449070",
+  "aff": {
+   "sales": 85,
+   "marketing": 25,
+   "custsuccess": 30
+  },
+  "why": "Ads account manager growing advertiser revenue with data-driven marketing advice",
+  "at": "2026-10-17T10:58:18+00:00"
+ },
+ "4aece8e960c6": {
+  "fingerprint": "eccf8b74bf3326b0",
+  "aff": {
+   "sales": 90,
+   "solutions": 35,
+   "custsuccess": 30
+  },
+  "why": "BDR growing Amazon Key with property owners; prospecting plus tailored solutions",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "5165e8d9d62b": {
+  "fingerprint": "7026981a02031a89",
+  "aff": {
+   "finance": 90,
+   "strategy": 45,
+   "analytics": 30
+  },
+  "why": "Stands up FP&A and reporting for inbound logistics; strategic finance partner",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "e5c2c7444e0c": {
+  "fingerprint": "8a771006a98aede1",
+  "aff": {
+   "finance": 90,
+   "strategy": 40
+  },
+  "why": "Owns agency revenue planning and modeling for Ads international; finance partner",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "70cda39cb139": {
+  "fingerprint": "90945c1d43225f98",
+  "aff": {
+   "finance": 90,
+   "analytics": 35,
+   "strategy": 30
+  },
+  "why": "Finance partner for Canada fulfillment: planning, performance reporting, economics",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "863b8859938f": {
+  "fingerprint": "a2593f72cb5d1f54",
+  "aff": {
+   "finance": 95,
+   "analytics": 25
+  },
+  "why": "FP&A analyst: 1-3 year plans, month-end close, cost entitlement projects",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "49e61c95d32e": {
+  "fingerprint": "261fd6f7d05724a2",
+  "aff": {
+   "people": 95
+  },
+  "why": "HR generalist partnering with leaders on talent, engagement and HR processes",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "2a2d11eb9ee0": {
+  "fingerprint": "6a6c71a68e4b0fd0",
+  "aff": {
+   "sales": 95,
+   "custsuccess": 20
+  },
+  "why": "Mid-market AE selling Amazon Business to Canadian companies",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "d4ab7773c3d5": {
+  "fingerprint": "2600519e890b3c36",
+  "aff": {
+   "solutions": 75,
+   "custsuccess": 70,
+   "sales": 15
+  },
+  "why": "AWS TAM: post-sale technical advisor driving adoption and healthy customer environments",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "356e2b8dd36c": {
+  "fingerprint": "00a0cbb0ffdbc722",
+  "aff": {
+   "sales": 95,
+   "solutions": 30
+  },
+  "why": "Hunter role owning security pipeline and revenue with CISOs across a territory",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "6db895b129ca": {
+  "fingerprint": "13a4e296ee3eb94a",
+  "aff": {
+   "sales": 95,
+   "solutions": 25,
+   "custsuccess": 20
+  },
+  "why": "Enterprise account manager driving AWS revenue in banking accounts",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "65c559443a29": {
+  "fingerprint": "8bd562de7aaa5436",
+  "aff": {
+   "finance": 90,
+   "strategy": 40,
+   "analytics": 25
+  },
+  "why": "Retail finance partner: planning, insights and profitability for Canada Stores",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "ac9ffa205e9d": {
+  "fingerprint": "de7a192fd5883b7d",
+  "aff": {
+   "program": 15,
+   "project": 15
+  },
+  "why": "Chip micro-architecture design lead; hardware engineering, not these kinds of work",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "be2036031ea8": {
+  "fingerprint": "3cf8b12fb627be4d",
+  "aff": {
+   "program": 15,
+   "project": 15
+  },
+  "why": "Manages silicon RTL design team; hardware engineering, not these kinds of work",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "85e058b2ccf0": {
+  "fingerprint": "9894ad8f7c9d2841",
+  "aff": {
+   "pmm": 35,
+   "marketing": 30,
+   "solutions": 20
+  },
+  "why": "Builds AI/graphics demos and Python pipelines for marketing; mostly hands-on engineering",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "683d97f5796f": {
+  "fingerprint": "1835a8b4001de512",
+  "aff": {
+   "tns": 20
+  },
+  "why": "Fellowship doing AI safety research and engineering; research, not these kinds of work",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "5211cdeba332": {
+  "fingerprint": "a8c26da73c51d2ac",
+  "aff": {
+   "tns": 25,
+   "strategy": 20
+  },
+  "why": "4-month economics and policy research fellowship; research, not these kinds of work",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "d20038c31d5e": {
+  "fingerprint": "17b987484e8798d6",
+  "aff": {
+   "sales": 95,
+   "solutions": 25
+  },
+  "why": "Leads public-sector sales of Claude to Canadian governments; owns revenue",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "77aaefd7a3ba": {
+  "fingerprint": "3e76aa2bd85a35f2",
+  "aff": {
+   "sales": 90,
+   "marketing": 20,
+   "solutions": 30
+  },
+  "why": "Drives Microsoft AI solution sales via partners; pipeline, quota, webinars",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "cbeb28d5ac1e": {
+  "fingerprint": "e28f5445bed23a38",
+  "aff": {
+   "sales": 95
+  },
+  "why": "BDR prospecting and qualifying partner-channel opportunities for ITCloud",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "33757a704de0": {
+  "fingerprint": "3cd294e926c667ca",
+  "aff": {
+   "custsuccess": 95,
+   "sales": 20
+  },
+  "why": "First CSM for Devs.ai: owns onboarding, adoption, renewals and support experience",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "a3b96b20598d": {
+  "fingerprint": "537247d332f06c9a",
+  "aff": {
+   "sales": 95,
+   "solutions": 25
+  },
+  "why": "Enterprise AE selling energy management services; consultative sales",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "b3dd613eaff7": {
+  "fingerprint": "afef0bb65ccfb663",
+  "aff": {
+   "marketing": 90,
+   "revops": 30
+  },
+  "why": "Runs automated multi-channel outbound, lifecycle and ABM campaigns for pipeline",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "dfb2f521e598": {
+  "fingerprint": "f4497a83d36f7679",
+  "aff": {
+   "marketing": 90,
+   "pmm": 40
+  },
+  "why": "BU marketing manager owning integrated marketing plans for Firstbase",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "2c1cd7f17f09": {
+  "fingerprint": "42cd1448ec08c8b2",
+  "aff": {
+   "revops": 85,
+   "marketing": 50,
+   "analytics": 30
+  },
+  "why": "Owns lead management and martech stack to improve pipeline; marketing ops",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "cbd830e57c2d": {
+  "fingerprint": "e9333993b715cf01",
+  "aff": {
+   "revops": 85,
+   "analytics": 55
+  },
+  "why": "GTM reporting, forecasting models and ad-hoc analysis for revenue leaders",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "d57fff5725a6": {
+  "fingerprint": "615b288dc5c390a4",
+  "aff": {
+   "people": 85,
+   "strategy": 15
+  },
+  "why": "Supports retail store leaders on people processes and employee experience",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "d3a9619bb46a": {
+  "fingerprint": "9fdcefed69243580",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Territory account manager selling Arista networking in a region",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "9c21a5195b59": {
+  "fingerprint": "067036980a2b2a80",
+  "aff": {
+   "sales": 95,
+   "solutions": 20
+  },
+  "why": "Major account manager selling networking to large enterprise accounts",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "8eb2a5eda0ff": {
+  "fingerprint": "cacd78babbf6ff6e",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Player-coach leading account managers and partners to hit Ontario revenue",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "b5bcf1fdf403": {
+  "fingerprint": "afe0b26cabd764b2",
+  "aff": {
+   "pm": 95,
+   "pmm": 20
+  },
+  "why": "0-to-1 Lead PM defining AI service management product line, roadmap and launches",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "6485fca6e91c": {
+  "fingerprint": "14d0c1afdf6285ed",
+  "aff": {
+   "design": 95,
+   "uxr": 25,
+   "pm": 15
+  },
+  "why": "Product designer owning core product design from inception to post-launch",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "3dbd3414b2c8": {
+  "fingerprint": "661396d4af938417",
+  "aff": {
+   "analytics": 40,
+   "prodanalytics": 25
+  },
+  "why": "Analytics engineer building governed datasets and metrics; data engineering mostly",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "b51538dcb400": {
+  "fingerprint": "35c7cd5f9a8738c3",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Technical PM owning integrations platform roadmap, APIs and developer ecosystem",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "7e098d63b4f3": {
+  "fingerprint": "3de9fc99b61b93d1",
+  "aff": {
+   "program": 95,
+   "strategy": 45,
+   "project": 30
+  },
+  "why": "Security TPM running programs, planning and operating rhythm across Security org",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "40ab91b3c0ee": {
+  "fingerprint": "2bb83aca4ec8e64a",
+  "aff": {
+   "design": 90,
+   "pm": 35
+  },
+  "why": "Product designer at Ashby; also part PM, consultant and design system owner",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "a990e4a56ad3": {
+  "fingerprint": "81e063a280918f07",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Mid-market AE selling Ashby recruiting software in the West",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "2d1d93de900b": {
+  "fingerprint": "0ebef7f58e29f376",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Enterprise AE selling Ashby to large companies in the East",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "3a6b9a857e97": {
+  "fingerprint": "e0cd3ef868d5c95a",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Enterprise AE selling Ashby to large companies in the West",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "893e768834a2": {
+  "fingerprint": "afb60556644fb97d",
+  "aff": {
+   "design": 90,
+   "pm": 35
+  },
+  "why": "Staff designer at Ashby; also part PM, consultant and design system owner",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "e11580c0b1dc": {
+  "fingerprint": "108a33204d392e58",
+  "aff": {
+   "custsuccess": 95,
+   "sales": 20
+  },
+  "why": "Strategic CSM managing ~20 enterprise accounts' adoption and health",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "28fa1be6ac30": {
+  "fingerprint": "230caea3a8908d5b",
+  "aff": {
+   "analytics": 95,
+   "prodanalytics": 30,
+   "revops": 20
+  },
+  "why": "Manages Ashby's data analysts; team quality, prioritization and AI self-serve",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "8081864f0f89": {
+  "fingerprint": "ba10cc1c3a86a0b8",
+  "aff": {
+   "custsuccess": 95
+  },
+  "why": "Term CSM supporting adoption and value for compliance software customers",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "61ab267c3aeb": {
+  "fingerprint": "82845218ff74e543",
+  "aff": {
+   "custsuccess": 95,
+   "sales": 15
+  },
+  "why": "Senior CSM driving adoption, health and retention for compliance software",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "35628a676290": {
+  "fingerprint": "63a4813eddf2e474",
+  "aff": {
+   "custsuccess": 95,
+   "sales": 15
+  },
+  "why": "Senior CSM driving adoption, health and retention for compliance software",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "cddffa9a5007": {
+  "fingerprint": "4262cc4914c7ab21",
+  "aff": {
+   "sales": 95,
+   "solutions": 30
+  },
+  "why": "Solution sales exec driving Jira Service Management adoption in named accounts",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "c2d20d51323d": {
+  "fingerprint": "1aaef4af7ba7eebb",
+  "aff": {
+   "sales": 95,
+   "custsuccess": 20
+  },
+  "why": "Mid-market AE expanding Fortune 1000 accounts and hitting revenue targets",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "4cdb20d15ab4": {
+  "fingerprint": "a0ff77fc2721495f",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Manages enterprise AE team; thin description, judged from title",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "cc59838de9f6": {
+  "fingerprint": "09713e77e6f25e7c",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Enterprise AE selling frontline enablement platform to new named accounts",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "3ebe66d63ce9": {
+  "fingerprint": "4502f79bfa9a95c1",
+  "aff": {
+   "design": 95,
+   "uxr": 30
+  },
+  "why": "Senior product designer shaping UX from ideation to launch",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "0e6ad1ee6d46": {
+  "fingerprint": "b0c8004ce9a2306d",
+  "aff": {
+   "revops": 95,
+   "analytics": 40,
+   "strategy": 30
+  },
+  "why": "Leads RevOps: GTM systems, processes, reporting and insights for leadership",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "4587bbe025c9": {
+  "fingerprint": "243f067192b58d6f",
+  "aff": {
+   "legal": 90,
+   "project": 25
+  },
+  "why": "Paralegal running post-close legal integration and governance for acquisitions",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "d2f6ffbc4b55": {
+  "fingerprint": "c99fa7f95202f0a1",
+  "aff": {
+   "people": 95
+  },
+  "why": "HR business partner supporting leaders across portfolio companies",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "e45b666158b3": {
+  "fingerprint": "8528920f57bdfad4",
+  "aff": {
+   "people": 95
+  },
+  "why": "Senior technical recruiter hiring engineers for Beacon",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "db7218f38826": {
+  "fingerprint": "818e94215cd9e5c8",
+  "aff": {
+   "people": 90
+  },
+  "why": "Technical sourcer finding engineering candidates",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "fc87ba9bbbe7": {
+  "fingerprint": "497a50efdae2f718",
+  "aff": {
+   "finance": 95
+  },
+  "why": "Accounting manager owning close and consolidation across 10-15 portfolio companies",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "eb839768430f": {
+  "fingerprint": "51d131978423c386",
+  "aff": {
+   "finance": 95,
+   "legal": 15
+  },
+  "why": "Owns Canadian and US tax compliance, provision and transaction tax",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "11d12f2de8c0": {
+  "fingerprint": "e612181f0307def3",
+  "aff": {
+   "people": 95
+  },
+  "why": "Generalist recruiter hiring across Beacon portfolio companies",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "7cd10a6cbb2a": {
+  "fingerprint": "ca7ccb6ebac21d8d",
+  "aff": {
+   "finance": 85,
+   "strategy": 65
+  },
+  "why": "First strategic finance hire: capital allocation, value creation, CFO-like partner",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "4645f775fbd7": {
+  "fingerprint": "3bd77a3c9da08abc",
+  "aff": {
+   "people": 90
+  },
+  "why": "New-grad HR rotation program; title-based judgment from thin description",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "2a950840467b": {
+  "fingerprint": "71f29e3babc46f3d",
+  "aff": {
+   "people": 95
+  },
+  "why": "Talent acquisition consultant recruiting for Bell",
+  "at": "2026-10-17T10:58:28+00:00"
+ },
+ "8de080cfb7fd": {
+  "fingerprint": "736ba77425150ba6",
+  "aff": {
+   "marketing": 85,
+   "sales": 55,
+   "project": 40,
+   "pmm": 35,
+   "analytics": 15
+  },
+  "why": "Leads marketing/sales strategy and campaigns for media services; negotiates partner offers",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "933e7b131bc2": {
+  "fingerprint": "459f4fa767cac049",
+  "aff": {
+   "finance": 95,
+   "strategy": 20
+  },
+  "why": "FP&A for corporate groups: close, forecasting, budgeting, executive reporting",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "2bfd2dfa69da": {
+  "fingerprint": "c2b79799d72fc69e",
+  "aff": {
+   "finance": 92,
+   "analytics": 25,
+   "strategy": 15
+  },
+  "why": "Financial analyst for wireless product team: close, forecasts, ad hoc analysis",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "ae891775336c": {
+  "fingerprint": "f094e3214a3e0bee",
+  "aff": {
+   "finance": 95
+  },
+  "why": "Financial close controller manager: month-end close and process transformation",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "9fa1ac06547f": {
+  "fingerprint": "81e3d0fbc663ddff",
+  "aff": {
+   "sales": 85,
+   "solutions": 45
+  },
+  "why": "Specialist sales of cybersecurity solutions to large enterprise clients",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "315ae0ed3555": {
+  "fingerprint": "830731d173f5b4ad",
+  "aff": {
+   "sales": 85,
+   "custsuccess": 15
+  },
+  "why": "Two-year rotational B2B enterprise sales graduate program",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "7bb628c631d4": {
+  "fingerprint": "10c1ddb2662e834f",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Senior sales exec owning public sector ICT accounts and pipeline",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "fa26c07d7d2f": {
+  "fingerprint": "427877d4fe549444",
+  "aff": {
+   "finance": 95,
+   "legal": 20
+  },
+  "why": "Senior tax manager in BCE tax group: income and indirect tax matters",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "40caf95dd804": {
+  "fingerprint": "9076e3b051186af6",
+  "aff": {
+   "sales": 85,
+   "custsuccess": 20
+  },
+  "why": "Field rep driving sales through retail partners; trains store staff",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "8bce6dd0d61f": {
+  "fingerprint": "a318654571b2201d",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Enterprise SaaS AE owning full new-logo sales cycle",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "7697f593e8d6": {
+  "fingerprint": "a7d8fef67ae24960",
+  "aff": {
+   "sales": 90
+  },
+  "why": "Outbound BDR prospecting merchants and qualifying for AEs",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "2c2bdfd5ae88": {
+  "fingerprint": "195c2166d246d175",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Mid-market AE winning new sellers end to end",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "be836302b542": {
+  "fingerprint": "514408c5e5169462",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Mid-market AE winning new sellers end to end",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "7095e0876aa6": {
+  "fingerprint": "feb5079915511d2e",
+  "aff": {
+   "sales": 95
+  },
+  "why": "SMB AE converting inbound leads and sourcing new deals",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "cf6e660c1fd1": {
+  "fingerprint": "736d7007e63f5061",
+  "aff": {
+   "sales": 70,
+   "custsuccess": 65
+  },
+  "why": "Account manager growing and retaining SMB merchant book; cross-sell and education",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "b40c43c79d32": {
+  "fingerprint": "9a3501a1302f5ecf",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Field territory AE: in-person prospecting, demos and closing",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "9dde6e5223c2": {
+  "fingerprint": "cc08d30d71f59020",
+  "aff": {
+   "design": 95,
+   "uxr": 20
+  },
+  "why": "Senior product designer for tax research product and design system",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "c7084e04cf90": {
+  "fingerprint": "743ae7a4a7202270",
+  "aff": {
+   "sales": 80,
+   "custsuccess": 45
+  },
+  "why": "Expansion account manager growing existing mid-market accounts",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "37d7cc72020a": {
+  "fingerprint": "cfa076ea2f73a659",
+  "aff": {
+   "sales": 85,
+   "custsuccess": 35
+  },
+  "why": "Expansion AM driving seat growth across high-volume SMB book",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "4744b7a42ebb": {
+  "fingerprint": "1c9509e4321d14ba",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Enterprise AE driving strategic new business deals",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "1083a30758ff": {
+  "fingerprint": "283659230775c346",
+  "aff": {
+   "custsuccess": 92,
+   "sales": 30
+  },
+  "why": "CSM for SMB book: adoption, retention and expansion",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "d36bd7f09629": {
+  "fingerprint": "ae22bbaf7b65fd03",
+  "aff": {
+   "sales": 90,
+   "marketing": 15
+  },
+  "why": "Inbound SDR qualifying leads and booking meetings for AEs",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "8c806b084cbf": {
+  "fingerprint": "79568862c6fcdbdc",
+  "aff": {
+   "marketing": 95,
+   "revops": 20,
+   "pmm": 20
+  },
+  "why": "Leads demand gen, events and partner marketing; owns pipeline growth",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "faa1f5377301": {
+  "fingerprint": "049f228f6f5ae735",
+  "aff": {
+   "sales": 80,
+   "solutions": 45,
+   "strategy": 20
+  },
+  "why": "Enterprise AE selling AI capability-building engagements to execs",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "a27f2979d272": {
+  "fingerprint": "8cefa8b979006c51",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Leads PM team owning in-product messaging channels: adoption, roadmap",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "5ed8e6072430": {
+  "fingerprint": "6e183976301775f4",
+  "aff": {
+   "design": 92,
+   "uxr": 30
+  },
+  "why": "Senior product designer for data integration experiences; some user research",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "1d61eda53bf8": {
+  "fingerprint": "6e183976301775f4",
+  "aff": {
+   "design": 92,
+   "uxr": 30
+  },
+  "why": "Senior product designer for data integration experiences; some user research",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "8304aabffd77": {
+  "fingerprint": "fda302cfabd81954",
+  "aff": {
+   "pm": 95,
+   "pmm": 15
+  },
+  "why": "Owns AI Intelligence product vision, roadmap, metrics and launches",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "408265af46f9": {
+  "fingerprint": "0cbf9713172d4dcf",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Commercial AE owning full sales cycle",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "35ab76ec4cf7": {
+  "fingerprint": "1a010a90749e138a",
+  "aff": {
+   "sales": 95
+  },
+  "why": "Enterprise AE owning full enterprise sales cycle",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "26b0c94ef509": {
+  "fingerprint": "4c896b2c7f6cadda",
+  "aff": {
+   "sales": 85,
+   "people": 20,
+   "revops": 15
+  },
+  "why": "Manages SDR team: coaching, hiring, quota attainment",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "798af6243c26": {
+  "fingerprint": "541b675fe4f2348e",
+  "aff": {
+   "sales": 90
+  },
+  "why": "Outbound SDR prospecting companies for Brex",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "c71e742d4691": {
+  "fingerprint": "5b1fe5cc76d23c1f",
+  "aff": {
+   "strategy": 75,
+   "pm": 40,
+   "program": 35,
+   "custsuccess": 25,
+   "pmm": 20
+  },
+  "why": "Leads product ops: launch readiness, help center, knowledge base",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "f949bcf82562": {
+  "fingerprint": "a507b01a229fd765",
+  "aff": {
+   "revops": 80,
+   "marketing": 50
+  },
+  "why": "Owns GTM systems and lead routing for marketing ops",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "25eb8adba314": {
+  "fingerprint": "e3957289e29dec99",
+  "aff": {
+   "people": 95
+  },
+  "why": "Technical recruiter: sourcing, screening and closing engineering hires",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "8e6dcb15bb78": {
+  "fingerprint": "29db030bb1f01cf7",
+  "aff": {
+   "people": 95
+  },
+  "why": "Technical sourcer finding engineering talent",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "04fc0f84ce95": {
+  "fingerprint": "a9b9452d897e7d3b",
+  "aff": {
+   "people": 95
+  },
+  "why": "Senior technical sourcer owning sourcing strategy for multiple orgs",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "2ae05cfe105f": {
+  "fingerprint": "015921d057ccc4d8",
+  "aff": {
+   "pm": 95
+  },
+  "why": "Staff PM owning multi-quarter product vision and cross-functional launches",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "c3ff8b6d4a4a": {
+  "fingerprint": "d4dc4a5cd4bd378c",
+  "aff": {
+   "pm": 90,
+   "revops": 25
+  },
+  "why": "Staff PM building GTM tooling and infrastructure to drive revenue growth",
+  "at": "2026-10-17T10:59:59+00:00"
+ },
+ "bbcd5a5604ca": {
+  "fingerprint": "072b8a7561f2a8c4",
+  "aff": {
+   "sales": 75,
+   "custsuccess": 55
+  },
+  "why": "Group benefits AE: new business plus managing in-force accounts",
+  "at": "2026-10-17T10:59:59+00:00"
  }
 }
