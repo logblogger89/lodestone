@@ -18,6 +18,12 @@ careers.inovia.vc            https://careers.inovia.vc/companies                
 communitech.getro.com        https://communitech.getro.com/companies                              Communitech board (discovery)
 careers.diagram.ca           https://careers.diagram.ca/companies                                 Diagram portfolio board (discovery)
 jobs.realventures.com        https://jobs.realventures.com/companies                              Real Ventures portfolio board (discovery)
+careers.georgian.io          https://careers.georgian.io/companies                                Georgian portfolio board (discovery)
+careers.brightspark.com      https://careers.brightspark.com/companies                            Brightspark portfolio board (discovery)
+jobs.accel.com               https://jobs.accel.com/companies                                     Accel portfolio board, Canadian companies only (discovery)
+jobs.generalcatalyst.com     https://jobs.generalcatalyst.com/companies                           General Catalyst portfolio board, Canadian companies only (discovery)
+jobs.insightpartners.com     https://jobs.insightpartners.com/companies                           Insight Partners portfolio board, Canadian companies only (discovery)
+jobs.ggvc.com                https://jobs.ggvc.com/companies                                      Notable Capital portfolio board, Canadian companies only (discovery)
 www.levels.fyi               https://www.levels.fyi/companies/shopify/salaries/product-manager    Market pay pages, read only when Ayush asks about a role (Q-22; terms forbid scheduled/automated reading)
 # Not needed by refresh: www.canada.ca (IRCC/ESDC reference pages). It doesn't respond to cloud servers,
 # but these links open fine in Ayush's browser. ESDC data comes from open.canada.ca.

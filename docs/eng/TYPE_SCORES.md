@@ -32,7 +32,15 @@ A JSON list, one object per job, same order: `{"id", "fingerprint" (copy both ex
   questions answered with data. Strategy and operations = plans and runs the business with leaders (incl. product ops,
   chief of staff). Trust, safety and policy = keeps users and the business safe (abuse, integrity, content policy).
   Product marketing = positions and launches products to market. Solutions = designs solutions with customers, before
-  or after the sale.
+  or after the sale. Since D-080 also: Marketing = grows the business (brand, demand, content, lifecycle,
+  partner marketing). Sales and partnerships = wins and grows customers and partners (AEs, account managers, BD).
+  Customer success and support = keeps customers successful (onboarding, success, support leadership). Revenue and sales
+  operations = runs the go-to-market machine (sales/marketing/revenue ops, enablement, deal desk). Finance = FP&A,
+  accounting, treasury, tax. People and talent = recruiting, HR business partners, people operations. Legal and
+  compliance = counsel, privacy, regulatory and compliance. Product and UX design = product, UX, UI and content design.
+  UX research = user research that shapes what gets built.
+- Engineering and science jobs (software, data or ML engineers, data scientists) are not these kinds of work: every
+  family below 30.
 - A people manager of a team doing X still scores high for X.
 - Not one of these kinds of work at all (e.g. a software engineer who happens to sit in a product team): every family
   below 30, and say so in `why`.

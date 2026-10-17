@@ -11,7 +11,6 @@
     "\\bjunior\\b",
     "\\bassociate product manager\\b",
     "\\bapm\\b",
-    "\\bproduct designer\\b",
     "\\bproject coordinator\\b",
     "\\bproduct support\\b",
     "\\bproduct specialist\\b",
@@ -20,7 +19,22 @@
     "\\bseasonal\\b",
     "\\bentry level\\b",
     "\\bstudent\\b",
-    "\\b(software|backend|frontend|front end|full stack|fullstack|data|machine learning|ml|devops|site reliability|qa|test) engineer\\b"
+    "\\b(software|backend|frontend|front end|full stack|fullstack|data|machine learning|ml|devops|site reliability|qa|test) engineer\\b",
+    "\\bstore (manager|associate|lead|supervisor|operations|team)\\b",
+    "\\bassistant store\\b",
+    "\\bretail (associate|sales|store|supervisor)\\b",
+    "\\bsales associate\\b",
+    "\\bkey ?holder\\b",
+    "\\bcashier\\b",
+    "\\bwarehouse\\b",
+    "\\bdriver\\b",
+    "\\bcall cent(er|re)\\b",
+    "\\bbarista\\b",
+    "\\bmerchandiser\\b",
+    "\\bteller\\b",
+    "\\b(software|backend|frontend|front end|full stack|fullstack|data|machine learning|ml|devops|site reliability|qa|test|security|network|cloud|platform|mobile|ios|android|embedded|hardware|firmware|systems) (engineer|developer)\\b",
+    "\\bengineering manager\\b",
+    "\\bscientist\\b"
   ],
   "families": [
     {
@@ -55,7 +69,8 @@
       "pay": {
         "green": 190000,
         "yellow": 160000
-      }
+      },
+      "group": "Product and delivery"
     },
     {
       "id": "program",
@@ -85,7 +100,8 @@
       "pay": {
         "green": 170000,
         "yellow": 140000
-      }
+      },
+      "group": "Product and delivery"
     },
     {
       "id": "project",
@@ -115,7 +131,8 @@
       "pay": {
         "green": 115000,
         "yellow": 90000
-      }
+      },
+      "group": "Product and delivery"
     },
     {
       "id": "pmm",
@@ -140,7 +157,8 @@
       "pay": {
         "green": 160000,
         "yellow": 130000
-      }
+      },
+      "group": "Go-to-market"
     },
     {
       "id": "solutions",
@@ -165,7 +183,8 @@
       "pay": {
         "green": 170000,
         "yellow": 140000
-      }
+      },
+      "group": "Go-to-market"
     },
     {
       "id": "strategy",
@@ -199,7 +218,8 @@
       "pay": {
         "green": 165000,
         "yellow": 135000
-      }
+      },
+      "group": "Business and operations"
     },
     {
       "id": "tns",
@@ -223,7 +243,8 @@
       "pay": {
         "green": 150000,
         "yellow": 120000
-      }
+      },
+      "group": "Business and operations"
     },
     {
       "id": "ba",
@@ -253,7 +274,8 @@
       "pay": {
         "green": 120000,
         "yellow": 95000
-      }
+      },
+      "group": "Product and delivery"
     },
     {
       "id": "prodanalytics",
@@ -277,7 +299,8 @@
       "pay": {
         "green": 140000,
         "yellow": 115000
-      }
+      },
+      "group": "Data and design"
     },
     {
       "id": "analytics",
@@ -305,7 +328,304 @@
       "pay": {
         "green": 130000,
         "yellow": 105000
-      }
+      },
+      "group": "Data and design"
+    },
+    {
+      "id": "marketing",
+      "label": "Marketing",
+      "tag": "Marketing",
+      "what": "Grow the business: brand, demand, content, lifecycle, partnerships marketing",
+      "onboard": "Marketing",
+      "patterns": [
+        "\\bmarketing (manager|lead|director|head|specialist|strategist|operations|programs?)\\b",
+        "\\b(growth|demand generation|demand gen|lifecycle|performance|brand|content|digital|field|partner|channel|product led growth|community|social media|influencer|email) marketing\\b",
+        "\\bgrowth (manager|lead|marketer)\\b",
+        "\\bmarketer\\b",
+        "\\bbrand (manager|lead|strategist)\\b",
+        "\\bcontent (strategist|marketing|lead)\\b",
+        "\\bcommunications (manager|lead|director|specialist)\\b",
+        "\\bhead of (marketing|growth|brand|communications)\\b",
+        "\\bvp,? marketing\\b",
+        "\\bseo (manager|lead|specialist)\\b",
+        "\\b(director|head|vp|manager|lead|senior manager),? (of )?(marketing|growth|communications|brand)\\b"
+      ],
+      "related": [
+        "pmm",
+        "sales",
+        "analytics"
+      ],
+      "stretch": [
+        "custsuccess",
+        "design"
+      ],
+      "pay": {
+        "green": 140000,
+        "yellow": 115000
+      },
+      "group": "Go-to-market"
+    },
+    {
+      "id": "sales",
+      "label": "Sales and partnerships",
+      "tag": "Sales",
+      "what": "Win and grow customers and partners: account executives, account managers, business development",
+      "onboard": "Sales, account management or partnerships",
+      "patterns": [
+        "\\baccount executive\\b",
+        "\\baccount (manager|director)\\b",
+        "\\bsales (manager|director|lead|executive|representative|development|specialist)\\b",
+        "\\bbusiness development\\b",
+        "\\b(sdr|bdr)\\b",
+        "\\b(partnerships?|alliances?|channel) (manager|lead|director|executive)\\b",
+        "\\bhead of (sales|partnerships|business development)\\b",
+        "\\benterprise sales\\b",
+        "\\bclient (partner|executive|director)\\b",
+        "\\bvp,? sales\\b",
+        "\\b(director|head|vp|manager|lead|senior manager),? (of )?(partnerships|business development|sales|alliances)\\b"
+      ],
+      "related": [
+        "custsuccess",
+        "solutions",
+        "revops"
+      ],
+      "stretch": [
+        "marketing",
+        "pmm"
+      ],
+      "pay": {
+        "green": 170000,
+        "yellow": 130000
+      },
+      "group": "Go-to-market"
+    },
+    {
+      "id": "custsuccess",
+      "label": "Customer success and support",
+      "tag": "Customer success",
+      "what": "Keep customers successful: onboarding, success, support leadership",
+      "onboard": "Customer success or support",
+      "patterns": [
+        "\\bcustomer success\\b",
+        "\\bclient success\\b",
+        "\\bcustomer experience (manager|lead|director)\\b",
+        "\\bonboarding (manager|specialist|lead)\\b",
+        "\\b(customer|technical) support (manager|lead|director|specialist|engineer)\\b",
+        "\\bsupport (manager|lead|operations)\\b",
+        "\\bcustomer (support|care) specialist\\b",
+        "\\bclient (services|relationship) (manager|lead|director)\\b",
+        "\\bcustomer operations\\b",
+        "\\brenewals? (manager|specialist)\\b"
+      ],
+      "related": [
+        "sales",
+        "solutions"
+      ],
+      "stretch": [
+        "program",
+        "project"
+      ],
+      "pay": {
+        "green": 120000,
+        "yellow": 95000
+      },
+      "group": "Go-to-market"
+    },
+    {
+      "id": "revops",
+      "label": "Revenue and sales operations",
+      "tag": "Revenue ops",
+      "what": "Run the go-to-market machine: sales, marketing and revenue operations, enablement",
+      "onboard": "Revenue, sales or marketing operations",
+      "patterns": [
+        "\\brevenue operations\\b",
+        "\\brevops\\b",
+        "\\bsales operations\\b",
+        "\\bmarketing operations\\b",
+        "\\bgo to market operations\\b",
+        "\\bgtm operations\\b",
+        "\\bsales enablement\\b",
+        "\\bdeal desk\\b",
+        "\\bsales strategy\\b",
+        "\\bcrm (manager|administrator|lead)\\b",
+        "\\bsalesforce (administrator|admin|manager)\\b",
+        "\\bcommissions? (analyst|manager)\\b"
+      ],
+      "related": [
+        "strategy",
+        "analytics",
+        "sales"
+      ],
+      "stretch": [
+        "finance",
+        "ba"
+      ],
+      "pay": {
+        "green": 140000,
+        "yellow": 115000
+      },
+      "group": "Go-to-market"
+    },
+    {
+      "id": "finance",
+      "label": "Finance",
+      "tag": "Finance",
+      "what": "Plan and run the money: FP&A, accounting, treasury, tax",
+      "onboard": "Finance or FP&A",
+      "patterns": [
+        "\\bfp ?a\\b",
+        "\\bfinancial (analyst|planning|controller|reporting)\\b",
+        "\\bfinance (manager|director|lead|business partner|analyst)\\b",
+        "\\bcontroller\\b",
+        "\\baccountant\\b",
+        "\\baccounting (manager|lead|analyst)\\b",
+        "\\btreasury\\b",
+        "\\btax (manager|analyst|director|lead)\\b",
+        "\\bpayroll (manager|specialist|lead)\\b",
+        "\\bhead of finance\\b",
+        "\\bvp,? finance\\b",
+        "\\bcfo\\b",
+        "\\binvestor relations\\b",
+        "\\bbilling (manager|analyst|operations)\\b",
+        "\\b(director|head|vp|manager|lead|senior manager),? (of )?(finance|fp ?a|accounting)\\b"
+      ],
+      "related": [
+        "strategy",
+        "revops",
+        "analytics"
+      ],
+      "stretch": [
+        "ba"
+      ],
+      "pay": {
+        "green": 140000,
+        "yellow": 115000
+      },
+      "group": "Business and operations"
+    },
+    {
+      "id": "people",
+      "label": "People and talent",
+      "tag": "People",
+      "what": "Hire and grow the team: recruiting, HR business partners, people operations",
+      "onboard": "People, HR or recruiting",
+      "patterns": [
+        "\\b(technical )?recruit(er|ing manager|ing lead|ment)\\b",
+        "\\btalent (acquisition|partner|manager|lead|operations)\\b",
+        "\\bhr (business partner|manager|generalist|lead|director|operations)\\b",
+        "\\bhuman resources\\b",
+        "\\bpeople (operations|partner|business partner|manager|lead|director|experience|analytics|programs?)\\b",
+        "\\bhead of people\\b",
+        "\\bcompensation (manager|analyst|partner)\\b",
+        "\\btotal rewards\\b",
+        "\\blearning (and|&) development\\b",
+        "\\bl ?d (manager|specialist|lead)\\b",
+        "\\bsourcer\\b"
+      ],
+      "related": [
+        "strategy"
+      ],
+      "stretch": [
+        "program",
+        "project"
+      ],
+      "pay": {
+        "green": 130000,
+        "yellow": 105000
+      },
+      "group": "Business and operations"
+    },
+    {
+      "id": "legal",
+      "label": "Legal and compliance",
+      "tag": "Legal & compliance",
+      "what": "Keep the company on the right side of law and regulation: counsel, privacy, compliance",
+      "onboard": "Legal, privacy or compliance",
+      "patterns": [
+        "\\b(legal|corporate|commercial|product|privacy|employment|general) counsel\\b",
+        "\\blawyer\\b",
+        "\\bparalegal\\b",
+        "\\blegal (operations|manager|director|specialist)\\b",
+        "\\bcompliance (manager|analyst|officer|lead|director|specialist)\\b",
+        "\\bprivacy (manager|analyst|officer|lead|program)\\b",
+        "\\bregulatory (affairs|compliance|manager|lead)\\b",
+        "\\baml (analyst|manager|specialist)\\b",
+        "\\bkyc (analyst|specialist|manager)\\b",
+        "\\bcontracts? (manager|specialist|administrator)\\b"
+      ],
+      "related": [
+        "tns"
+      ],
+      "stretch": [
+        "strategy"
+      ],
+      "pay": {
+        "green": 170000,
+        "yellow": 140000
+      },
+      "group": "Business and operations"
+    },
+    {
+      "id": "design",
+      "label": "Product and UX design",
+      "tag": "Design",
+      "what": "Design products people love: product, UX, UI and content design",
+      "onboard": "Product, UX or content design",
+      "patterns": [
+        "\\bproduct designer\\b",
+        "\\bux (designer|lead|manager|director)\\b",
+        "\\bui ?/? ?ux\\b",
+        "\\bux ?/? ?ui\\b",
+        "\\bui designer\\b",
+        "\\binteraction designer\\b",
+        "\\bcontent designer\\b",
+        "\\bux writer\\b",
+        "\\bdesign (lead|manager|director|systems)\\b",
+        "\\bhead of design\\b",
+        "\\bvisual designer\\b",
+        "\\bservice designer\\b"
+      ],
+      "related": [
+        "uxr",
+        "pm"
+      ],
+      "stretch": [
+        "pmm"
+      ],
+      "pay": {
+        "green": 150000,
+        "yellow": 120000
+      },
+      "group": "Data and design"
+    },
+    {
+      "id": "uxr",
+      "label": "UX research",
+      "tag": "UX research",
+      "what": "Understand users: research that shapes what gets built",
+      "onboard": "UX or user research",
+      "patterns": [
+        "\\bux research(er)?\\b",
+        "\\buser research(er)?\\b",
+        "\\bdesign research(er)?\\b",
+        "\\bresearch operations\\b",
+        "\\bresearchops\\b",
+        "\\bqualitative researcher\\b",
+        "\\bcustomer insights (manager|researcher|lead)\\b"
+      ],
+      "related": [
+        "design",
+        "prodanalytics",
+        "pm"
+      ],
+      "stretch": [
+        "ba"
+      ],
+      "pay": {
+        "green": 140000,
+        "yellow": 115000
+      },
+      "group": "Data and design"
     }
   ],
   "people_management_hints": [
@@ -318,5 +638,11 @@
     "\\bmanager,? (program|project) management\\b"
   ],
   "exclude_hourly_below_cad": 45,
-  "_doc_hourly": "Roles whose posted Canadian pay is an hourly rate below this (e.g. retail store jobs with product-sounding titles) are filtered out. Contract rates above it stay."
+  "_doc_hourly": "Roles whose posted Canadian pay is an hourly rate below this (e.g. retail store jobs with product-sounding titles) are filtered out. Contract rates above it stay.",
+  "groups": [
+    "Product and delivery",
+    "Go-to-market",
+    "Business and operations",
+    "Data and design"
+  ]
 }

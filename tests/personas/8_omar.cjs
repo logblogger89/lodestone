@@ -15,6 +15,9 @@ module.exports = {
     const cards = await h.page.locator('.obfams .obopt b').allInnerTexts();
     h.check(cards.some(c => /business or systems analyst/i.test(c)), `The role cards include business analysts (${cards.length} cards)`);
     h.check(cards.some(c => /project/i.test(c)) && cards.some(c => /data or BI analyst/i.test(c)), 'and project managers and data analysts');
+    const groups = await h.page.locator('.obgroup').allInnerTexts();
+    h.check(groups.length === 4, `Role cards are grouped under ${groups.length} headings (${groups.join(', ')})`);
+    h.check(['Marketing', 'Sales, account management or partnerships', 'Finance or FP&A', 'Product, UX or content design'].every(t => cards.includes(t)), 'Business-facing types beyond product are offered (marketing, sales, finance, design)');
     await h.page.fill('#ob-role', 'senior business analyst, banking and payments, 9 years'); await h.wait(150);
     const heard = await h.text('#ob-heard');
     h.check(/Business analysis/.test(heard), `Typing "business analyst" is understood without tapping a card ("${heard.trim()}")`);

@@ -240,7 +240,8 @@
   "behaviour-interactive": {
    "name": "Behaviour Interactive Inc.",
    "routes": {
-    "lmia": "24 approved tech/product hires 2024Q2–2026Q1 (22 via Global Talent Stream); Quebec; top roles: Software developers and programmers, Advertising, marketing and public relations managers"
+    "lmia": "24 approved tech/product hires 2024Q2–2026Q1 (22 via Global Talent Stream); Quebec; top roles: Software developers and programmers, Advertising, marketing and public relations managers",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:30:23+00:00",
@@ -253,7 +254,8 @@
    "probed_at": "2026-10-15T08:30:51+00:00",
    "kind": "product",
    "why": "Game studio; product roles are game design, outside your families.",
-   "verdict": "skip"
+   "verdict": "skip",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "blache-yong": {
    "name": "Blache & Yong inc.",
@@ -1451,7 +1453,8 @@
   "accenture": {
    "name": "Accenture Inc.",
    "routes": {
-    "lmia": "11 approved tech/product hires 2024Q2–2026Q1 (9 via Global Talent Stream); Ontario; top roles: Software engineers and designers, Computer and information systems managers"
+    "lmia": "11 approved tech/product hires 2024Q2–2026Q1 (9 via Global Talent Stream); Ontario; top roles: Software engineers and designers, Computer and information systems managers",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:30:23+00:00",
@@ -1464,7 +1467,8 @@
    "probed_at": "2026-10-15T08:31:43+00:00",
    "kind": "services",
    "why": "IT consulting, staffing or government employer: few in-house product roles.",
-   "verdict": "skip"
+   "verdict": "skip",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "accion-labs": {
    "name": "Accion Labs Canada Inc.",
@@ -2211,7 +2215,8 @@
   "ringcentral": {
    "name": "RingCentral Canada Inc.",
    "routes": {
-    "lmia": "11 approved tech/product hires 2024Q2–2026Q1 (9 via Global Talent Stream); Ontario; top roles: Software engineers and designers, Computer and information systems managers"
+    "lmia": "11 approved tech/product hires 2024Q2–2026Q1 (9 via Global Talent Stream); Ontario; top roles: Software engineers and designers, Computer and information systems managers",
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
    },
    "status": "reviewed",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -2227,12 +2232,14 @@
    "why": "Cloud communications SaaS with a Toronto office; sponsors tech hires.",
    "brand": "RingCentral",
    "verdict": "suggest",
-   "display": "RingCentral"
+   "display": "RingCentral",
+   "segment_hint": "Big tech / US tech with Canadian offices"
   },
   "ripple": {
    "name": "Ripple Canada Ltd.",
    "routes": {
-    "lmia": "7 approved tech/product hires 2024Q2–2025Q3 (5 via Global Talent Stream); Ontario; top roles: Software engineers and designers, Data scientists"
+    "lmia": "7 approved tech/product hires 2024Q2–2025Q3 (5 via Global Talent Stream); Ontario; top roles: Software engineers and designers, Data scientists",
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -2250,7 +2257,8 @@
    "jobs_canada": 3,
    "roles_canada": 0,
    "sample_roles": [],
-   "probed_at": "2026-10-15T08:32:43+00:00"
+   "probed_at": "2026-10-15T08:32:43+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
   },
   "rockfort-consulting": {
    "name": "Rockfort Consulting Inc.",
@@ -2508,7 +2516,8 @@
   "tech-mahindra": {
    "name": "Tech Mahindra Limited",
    "routes": {
-    "lmia": "4 approved tech/product hires 2024Q2–2024Q3 (3 via Global Talent Stream); Ontario; top roles: Computer and information systems managers, Business system specialists"
+    "lmia": "4 approved tech/product hires 2024Q2–2024Q3 (3 via Global Talent Stream); Ontario; top roles: Computer and information systems managers, Business system specialists",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -2518,7 +2527,8 @@
    "lmia_tech": 4,
    "lmia_gts": 3,
    "board": null,
-   "probed_at": "2026-10-15T08:34:22+00:00"
+   "probed_at": "2026-10-15T08:34:22+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "telus-mobility": {
    "name": "TELUS Mobility",
@@ -2635,7 +2645,8 @@
   "vetster": {
    "name": "Vetster Inc",
    "routes": {
-    "lmia": "2 approved tech/product hires 2024Q2–2025Q1 (2 via Global Talent Stream); Ontario; top roles: Software engineers and designers"
+    "lmia": "2 approved tech/product hires 2024Q2–2025Q1 (2 via Global Talent Stream); Ontario; top roles: Software engineers and designers",
+    "vc": "Brightspark Ventures portfolio; 51–200 staff; 9 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -2645,7 +2656,10 @@
    "lmia_tech": 2,
    "lmia_gts": 2,
    "board": null,
-   "probed_at": "2026-10-15T08:37:54+00:00"
+   "probed_at": "2026-10-15T08:37:54+00:00",
+   "careers_url": "https://careers.brightspark.com/companies/vetster",
+   "domain": "vetster.com",
+   "about": "Vetster is an innovative pet wellness platform that connects pet parents to a marketplace of licensed veterinary professionals for video, chat, and voice-enabled appointments."
   },
   "virtusa-consulting-services": {
    "name": "Virtusa Consulting & Services Inc.",
@@ -2855,7 +2869,8 @@
   "garmin": {
    "name": "Garmin Canada Inc.",
    "routes": {
-    "lmia": "3 approved tech/product hires 2024Q2–2025Q1 (3 via Global Talent Stream); Alberta; top roles: Software developers and programmers"
+    "lmia": "3 approved tech/product hires 2024Q2–2025Q1 (3 via Global Talent Stream); Alberta; top roles: Software developers and programmers",
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -2865,7 +2880,8 @@
    "lmia_tech": 3,
    "lmia_gts": 3,
    "board": null,
-   "probed_at": "2026-10-15T08:35:45+00:00"
+   "probed_at": "2026-10-15T08:35:45+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
   },
   "netvance-system": {
    "name": "NETVANCE SYSTEM INC.",
@@ -4324,7 +4340,8 @@
   "rakuten-kobo": {
    "name": "Rakuten Kobo Inc.",
    "routes": {
-    "lmia": "4 approved tech/product hires 2024Q3–2025Q3 (3 via Global Talent Stream); Ontario; top roles: Software engineers and designers, Professional occupations in advertising, marketing and public relations"
+    "lmia": "4 approved tech/product hires 2024Q3–2025Q3 (3 via Global Talent Stream); Ontario; top roles: Software engineers and designers, Professional occupations in advertising, marketing and public relations",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -4334,7 +4351,8 @@
    "lmia_tech": 4,
    "lmia_gts": 3,
    "board": null,
-   "probed_at": "2026-10-15T08:34:34+00:00"
+   "probed_at": "2026-10-15T08:34:34+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "shorewise-consulting": {
    "name": "ShoreWise Consulting LLC",
@@ -4417,7 +4435,8 @@
   "textnow": {
    "name": "TextNow",
    "routes": {
-    "lmia": "3 approved tech/product hires 2024Q3–2025Q1 (3 via Global Talent Stream); Ontario; top roles: Software developers and programmers, Web developers and programmers"
+    "lmia": "3 approved tech/product hires 2024Q3–2025Q1 (3 via Global Talent Stream); Ontario; top roles: Software developers and programmers, Web developers and programmers",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -4427,7 +4446,8 @@
    "lmia_tech": 3,
    "lmia_gts": 3,
    "board": null,
-   "probed_at": "2026-10-15T08:36:19+00:00"
+   "probed_at": "2026-10-15T08:36:19+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "tsmc-design-technology": {
    "name": "TSMC Design Technology Canada Inc",
@@ -4447,7 +4467,8 @@
   "voiceflow": {
    "name": "VOICEFLOW, INC.",
    "routes": {
-    "lmia": "3 approved tech/product hires 2024Q3–2025Q4 (2 via Global Talent Stream); Ontario; top roles: Business system specialists, Software engineers and designers"
+    "lmia": "3 approved tech/product hires 2024Q3–2025Q4 (2 via Global Talent Stream); Ontario; top roles: Business system specialists, Software engineers and designers",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -4457,7 +4478,8 @@
    "lmia_tech": 3,
    "lmia_gts": 2,
    "board": null,
-   "probed_at": "2026-10-15T08:36:19+00:00"
+   "probed_at": "2026-10-15T08:36:19+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "vuereal": {
    "name": "VueReal Inc",
@@ -4653,7 +4675,8 @@
   "avigilon": {
    "name": "Avigilon Corporation",
    "routes": {
-    "lmia": "2 approved tech/product hires 2024Q3–2025Q4 (2 via Global Talent Stream); British Columbia; top roles: Software engineers and designers, Software developers and programmers"
+    "lmia": "2 approved tech/product hires 2024Q3–2025Q4 (2 via Global Talent Stream); British Columbia; top roles: Software engineers and designers, Software developers and programmers",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -4663,7 +4686,8 @@
    "lmia_tech": 2,
    "lmia_gts": 2,
    "board": null,
-   "probed_at": "2026-10-15T08:38:58+00:00"
+   "probed_at": "2026-10-15T08:38:58+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "bam-management-holdings": {
    "name": "BAM Management Canada Holdings, Inc.",
@@ -4683,7 +4707,8 @@
   "dialpad": {
    "name": "Dialpad Canada",
    "routes": {
-    "lmia": "3 approved tech/product hires 2024Q3–2025Q2 (2 via Global Talent Stream); British Columbia; top roles: Software engineers and designers, Data scientists"
+    "lmia": "3 approved tech/product hires 2024Q3–2025Q2 (2 via Global Talent Stream); British Columbia; top roles: Software engineers and designers, Data scientists",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -4701,7 +4726,8 @@
    "jobs_canada": 9,
    "roles_canada": 0,
    "sample_roles": [],
-   "probed_at": "2026-10-15T08:36:19+00:00"
+   "probed_at": "2026-10-15T08:36:19+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "gusto": {
    "name": "Gusto Canada ULC",
@@ -4949,7 +4975,8 @@
   "plusgrade": {
    "name": "Plusgrade Inc.",
    "routes": {
-    "lmia": "3 approved tech/product hires 2024Q4–2025Q3 (3 via Global Talent Stream); Quebec; top roles: Software developers and programmers, Web designers"
+    "lmia": "3 approved tech/product hires 2024Q4–2025Q3 (3 via Global Talent Stream); Quebec; top roles: Software developers and programmers, Web designers",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -4959,7 +4986,8 @@
    "lmia_tech": 3,
    "lmia_gts": 3,
    "board": null,
-   "probed_at": "2026-10-15T08:36:19+00:00"
+   "probed_at": "2026-10-15T08:36:19+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "recursion": {
    "name": "Recursion Canada Inc",
@@ -5224,7 +5252,8 @@
   "ciena": {
    "name": "Ciena Corp",
    "routes": {
-    "lmia": "7 approved tech/product hires 2024Q4–2026Q1 (5 via Global Talent Stream); Ontario; top roles: Software engineers and designers, Computer engineers (except software engineers and designers)"
+    "lmia": "7 approved tech/product hires 2024Q4–2026Q1 (5 via Global Talent Stream); Ontario; top roles: Software engineers and designers, Computer engineers (except software engineers and designers)",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -5234,7 +5263,8 @@
    "lmia_tech": 7,
    "lmia_gts": 5,
    "board": null,
-   "probed_at": "2026-10-15T08:32:43+00:00"
+   "probed_at": "2026-10-15T08:32:43+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "clientserver-tech-systems": {
    "name": "Clientserver Tech Systems Inc.",
@@ -5418,7 +5448,8 @@
   "nokia": {
    "name": "Nokia",
    "routes": {
-    "lmia": "36 approved tech/product hires 2024Q4–2026Q1 (28 via Global Talent Stream); Ontario; top roles: Software engineers and designers, Computer engineers (except software engineers and designers)"
+    "lmia": "36 approved tech/product hires 2024Q4–2026Q1 (28 via Global Talent Stream); Ontario; top roles: Software engineers and designers, Computer engineers (except software engineers and designers)",
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
    },
    "status": "reviewed",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -5434,7 +5465,8 @@
    "why": "Ottawa/Kanata network R&D; product roles in cloud and networking software; regular sponsor.",
    "brand": "Nokia",
    "verdict": "suggest",
-   "display": "Nokia"
+   "display": "Nokia",
+   "segment_hint": "Big tech / US tech with Canadian offices"
   },
   "passage": {
    "name": "Passage Inc.",
@@ -6391,7 +6423,8 @@
   "cohesity": {
    "name": "Cohesity Canada Inc",
    "routes": {
-    "lmia": "4 approved tech/product hires 2025Q1–2025Q4 (4 via Global Talent Stream); Ontario; top roles: Software engineers and designers"
+    "lmia": "4 approved tech/product hires 2025Q1–2025Q4 (4 via Global Talent Stream); Ontario; top roles: Software engineers and designers",
+    "vc": "Accel (Canadian locations only) portfolio; 1,000+ staff; 167 open jobs; Toronto, ON, Canada"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -6401,7 +6434,10 @@
    "lmia_tech": 4,
    "lmia_gts": 4,
    "board": null,
-   "probed_at": "2026-10-15T08:35:07+00:00"
+   "probed_at": "2026-10-15T08:35:07+00:00",
+   "careers_url": "https://jobs.accel.com/companies/cohesity",
+   "domain": "cohesity.com",
+   "about": "Cohesity is a company that provides AI-powered data security and management solutions. Their platform, Cohesity Data Cloud, helps customers secure, manage, and extract value from their data. It's available as both on-premise software and cl"
   },
   "edge-signal": {
    "name": "Edge Signal Corporation",
@@ -6673,7 +6709,8 @@
   "skipthedishes": {
    "name": "SkipTheDishes",
    "routes": {
-    "lmia": "10 approved tech/product hires 2025Q1–2026Q1 (9 via Global Talent Stream); Manitoba; top roles: Software developers and programmers, Software engineers and designers"
+    "lmia": "10 approved tech/product hires 2025Q1–2026Q1 (9 via Global Talent Stream); Manitoba; top roles: Software developers and programmers, Software engineers and designers",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "reviewed",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -6689,7 +6726,8 @@
    "why": "Winnipeg food-delivery marketplace (Just Eat Takeaway); product roles in marketplace and trust.",
    "brand": "SkipTheDishes",
    "verdict": "suggest",
-   "display": "SkipTheDishes"
+   "display": "SkipTheDishes",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "digital-fractal-technologies": {
    "name": "Digital Fractal Technologies Inc.",
@@ -6949,7 +6987,8 @@
   "beneva": {
    "name": "Beneva",
    "routes": {
-    "lmia": "2 approved tech/product hires 2025Q2–2025Q3 (2 via Global Talent Stream); Quebec; top roles: Information systems specialists, Software developers and programmers"
+    "lmia": "2 approved tech/product hires 2025Q2–2025Q3 (2 via Global Talent Stream); Quebec; top roles: Information systems specialists, Software developers and programmers",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -6959,12 +6998,14 @@
    "lmia_tech": 2,
    "lmia_gts": 2,
    "board": null,
-   "probed_at": "2026-10-15T08:39:50+00:00"
+   "probed_at": "2026-10-15T08:39:50+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "busbud": {
    "name": "Busbud",
    "routes": {
-    "lmia": "2 approved tech/product hires 2025Q2–2025Q2 (2 via Global Talent Stream); Quebec; top roles: Web developers and programmers"
+    "lmia": "2 approved tech/product hires 2025Q2–2025Q2 (2 via Global Talent Stream); Quebec; top roles: Web developers and programmers",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:24+00:00",
@@ -6974,7 +7015,8 @@
    "lmia_tech": 2,
    "lmia_gts": 2,
    "board": null,
-   "probed_at": "2026-10-15T08:39:50+00:00"
+   "probed_at": "2026-10-15T08:39:50+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "chrome": {
    "name": "Chrome Inc.",
@@ -7587,7 +7629,8 @@
   "sap": {
    "name": "SAP Canada Inc",
    "routes": {
-    "lmia": "3 approved tech/product hires 2025Q3–2026Q1 (2 via Global Talent Stream); Ontario; top roles: Computer and information systems managers, Web developers and programmers"
+    "lmia": "3 approved tech/product hires 2025Q3–2026Q1 (2 via Global Talent Stream); Ontario; top roles: Computer and information systems managers, Web developers and programmers",
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:25+00:00",
@@ -7597,7 +7640,8 @@
    "lmia_tech": 3,
    "lmia_gts": 2,
    "board": null,
-   "probed_at": "2026-10-15T08:37:15+00:00"
+   "probed_at": "2026-10-15T08:37:15+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
   },
   "verily": {
    "name": "Verily Canada",
@@ -7647,7 +7691,8 @@
   "roblox": {
    "name": "Roblox Canada",
    "routes": {
-    "lmia": "2 approved tech/product hires 2025Q3–2025Q4 (2 via Global Talent Stream); British Columbia; top roles: Software developers and programmers, Software engineers and designers"
+    "lmia": "2 approved tech/product hires 2025Q3–2025Q4 (2 via Global Talent Stream); British Columbia; top roles: Software developers and programmers, Software engineers and designers",
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:25+00:00",
@@ -7665,7 +7710,8 @@
    "jobs_canada": 1,
    "roles_canada": 0,
    "sample_roles": [],
-   "probed_at": "2026-10-15T08:40:10+00:00"
+   "probed_at": "2026-10-15T08:40:10+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
   },
   "transperfect": {
    "name": "Transperfect",
@@ -7768,7 +7814,8 @@
   "phreesia": {
    "name": "Phreesia Inc.",
    "routes": {
-    "lmia": "7 approved tech/product hires 2025Q4–2026Q1; Ontario; top roles: Software engineers and designers, Software developers and programmers"
+    "lmia": "7 approved tech/product hires 2025Q4–2026Q1; Ontario; top roles: Software engineers and designers, Software developers and programmers",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "new",
    "first_found": "2026-10-15T08:30:25+00:00",
@@ -7778,7 +7825,8 @@
    "lmia_tech": 7,
    "lmia_gts": 0,
    "board": null,
-   "probed_at": "2026-10-15T08:32:43+00:00"
+   "probed_at": "2026-10-15T08:32:43+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "bit-complete": {
    "name": "Bit Complete Inc.",
@@ -8170,7 +8218,8 @@
    "name": "Mejuri",
    "routes": {
     "search": "Senior Product Manager (contract), Toronto (web search)",
-    "vc": "Real Ventures portfolio; 201–1,000 staff; 174 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
+    "vc": "Real Ventures portfolio; 201–1,000 staff; 173 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:42:46+00:00",
@@ -8188,7 +8237,8 @@
    "sample_roles": [],
    "probed_at": "2026-10-15T08:45:47+00:00",
    "why": "Jewelry retailer; PM role found was a short contract.",
-   "verdict": "skip"
+   "verdict": "skip",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "greenhouse-software": {
    "name": "Greenhouse Software",
@@ -8484,7 +8534,8 @@
   "symend": {
    "name": "Symend",
    "routes": {
-    "vc": "Inovia Capital portfolio; 51–200 staff; 2 open jobs; Calgary, AB, Canada"
+    "vc": "Inovia Capital portfolio; 51–200 staff; 2 open jobs; Calgary, AB, Canada",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "reviewed",
    "first_found": "2026-10-15T08:45:15+00:00",
@@ -8497,7 +8548,8 @@
    "why": "Calgary behavioural-science platform for collections; fintech product roles.",
    "brand": "Symend",
    "verdict": "suggest",
-   "display": "Symend"
+   "display": "Symend",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "talent-com": {
    "name": "Talent.com",
@@ -8525,7 +8577,7 @@
   "vital-bio": {
    "name": "Vital Bio",
    "routes": {
-    "vc": "Inovia Capital portfolio; 51–200 staff; 13 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
+    "vc": "Inovia Capital portfolio; 51–200 staff; 15 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:15+00:00",
@@ -8558,7 +8610,7 @@
   "bdc": {
    "name": "BDC ",
    "routes": {
-    "vc": "Communitech portfolio; 1,000+ staff; 44 open jobs; Toronto, ON, Canada, Calgary, AB, Canada"
+    "vc": "Communitech portfolio; 1,000+ staff; 45 open jobs; Toronto, ON, Canada, Calgary, AB, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8573,7 +8625,7 @@
   "city-kitchener": {
    "name": "City of Kitchener",
    "routes": {
-    "vc": "Communitech portfolio; 1,000+ staff; 8 open jobs; Kitchener, ON, Canada"
+    "vc": "Communitech portfolio; 1,000+ staff; 7 open jobs; Kitchener, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8588,7 +8640,7 @@
   "city-waterloo": {
    "name": "City of Waterloo",
    "routes": {
-    "vc": "Communitech portfolio; 201–1,000 staff; 6 open jobs; Waterloo, ON, Canada"
+    "vc": "Communitech portfolio; 201–1,000 staff; 7 open jobs; Waterloo, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8603,7 +8655,7 @@
   "conestoga-college": {
    "name": "Conestoga College",
    "routes": {
-    "vc": "Communitech portfolio; 1,000+ staff; 8 open jobs; Kitchener, ON, Canada"
+    "vc": "Communitech portfolio; 1,000+ staff; 7 open jobs; Kitchener, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8618,7 +8670,7 @@
   "dematic": {
    "name": "Dematic",
    "routes": {
-    "vc": "Communitech portfolio; size unknown; 18 open jobs; Mississauga, ON, Canada"
+    "vc": "Communitech portfolio; size unknown; 20 open jobs; Mississauga, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8633,7 +8685,8 @@
   "ey": {
    "name": "EY",
    "routes": {
-    "vc": "Communitech portfolio; size unknown; 27 open jobs; Toronto, ON, Canada, Calgary, AB, Canada"
+    "vc": "Communitech portfolio; size unknown; 50 open jobs; Toronto, ON, Canada, Calgary, AB, Canada",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8644,7 +8697,8 @@
    "probed_at": "2026-10-15T08:45:51+00:00",
    "kind": "services",
    "why": "Professional services.",
-   "verdict": "skip"
+   "verdict": "skip",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "fidus-systems": {
    "name": "Fidus Systems",
@@ -8704,7 +8758,8 @@
   "kpmg": {
    "name": "KPMG Canada",
    "routes": {
-    "vc": "Communitech portfolio; size unknown; 441 open jobs; Toronto, ON, Canada, Calgary, AB, Canada"
+    "vc": "Communitech portfolio; size unknown; 438 open jobs; Toronto, ON, Canada, Calgary, AB, Canada",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8715,12 +8770,13 @@
    "probed_at": "2026-10-15T08:45:55+00:00",
    "kind": "services",
    "why": "Professional services.",
-   "verdict": "skip"
+   "verdict": "skip",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "lerners-llp": {
    "name": "Lerners LLP",
    "routes": {
-    "vc": "Communitech portfolio; 201–1,000 staff; 8 open jobs; London, ON, Canada"
+    "vc": "Communitech portfolio; 201–1,000 staff; 9 open jobs; London, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8750,7 +8806,7 @@
   "perimeter-institute": {
    "name": "Perimeter Institute",
    "routes": {
-    "vc": "Communitech portfolio; 201–1,000 staff; 39 open jobs; Waterloo, ON, Canada, Waterloo, CA, USA"
+    "vc": "Communitech portfolio; 201–1,000 staff; 42 open jobs; Waterloo, ON, Canada, Waterloo, CA, USA"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8780,7 +8836,7 @@
   "toronto-metropolitan-university": {
    "name": "Toronto Metropolitan University",
    "routes": {
-    "vc": "Communitech portfolio; 1,000+ staff; 109 open jobs; Toronto, ON, Canada"
+    "vc": "Communitech portfolio; 1,000+ staff; 108 open jobs; Toronto, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8795,7 +8851,7 @@
   "university-waterloo": {
    "name": "University of Waterloo (UW)",
    "routes": {
-    "vc": "Communitech portfolio; size unknown; 105 open jobs; Waterloo, ON, Canada"
+    "vc": "Communitech portfolio; size unknown; 100 open jobs; Waterloo, ON, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:20+00:00",
@@ -8825,7 +8881,7 @@
   "veritree": {
    "name": "veritree",
    "routes": {
-    "vc": "Diagram portfolio; 51–200 staff; 6 open jobs; Vancouver, BC, Canada"
+    "vc": "Diagram portfolio; 51–200 staff; 5 open jobs; Vancouver, BC, Canada"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:23+00:00",
@@ -8855,7 +8911,8 @@
   "avidbots": {
    "name": "Avidbots",
    "routes": {
-    "vc": "Real Ventures portfolio; 51–200 staff; 12 open jobs; Kitchener, ON, Canada, Ottawa, ON, Canada"
+    "vc": "Real Ventures portfolio; 51–200 staff; 12 open jobs; Kitchener, ON, Canada, Ottawa, ON, Canada",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:32+00:00",
@@ -8865,7 +8922,8 @@
    "board": null,
    "probed_at": "2026-10-15T08:46:02+00:00",
    "why": "Cleaning robots; hardware-led.",
-   "verdict": "skip"
+   "verdict": "skip",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "blockstream": {
    "name": "Blockstream",
@@ -8954,7 +9012,8 @@
   "landr": {
    "name": "LANDR",
    "routes": {
-    "vc": "Real Ventures portfolio; 51–200 staff; 4 open jobs; Montreal, QC, Canada, Montréal, QC, Canada"
+    "vc": "Real Ventures portfolio; 51–200 staff; 3 open jobs; Montreal, QC, Canada, Montréal, QC, Canada",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
    },
    "status": "skipped",
    "first_found": "2026-10-15T08:45:32+00:00",
@@ -8964,7 +9023,8 @@
    "board": null,
    "probed_at": "2026-10-15T08:46:02+00:00",
    "why": "Music production app; outside your domains.",
-   "verdict": "skip"
+   "verdict": "skip",
+   "segment_hint": "Canadian SaaS and scale-ups"
   },
   "loginradius": {
    "name": "LoginRadius",
@@ -9173,7 +9233,7 @@
   "pine": {
    "name": "Pine",
    "routes": {
-    "vc": "Inovia Capital portfolio; 51–200 staff; 3 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
+    "vc": "Inovia Capital portfolio; 51–200 staff; 4 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
    },
    "status": "reviewed",
    "first_found": "2026-10-16T11:05:51+00:00",
@@ -9265,7 +9325,3984 @@
    "brand": "WitnessAI",
    "verdict": "suggest",
    "display": "WitnessAI"
+  },
+  "optable": {
+   "name": "Optable",
+   "routes": {
+    "vc": "Brightspark Ventures portfolio; 51–200 staff; 2 open jobs; Montréal-Nord, Montreal, QC, Canada, Montreal, QC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:20:26+00:00",
+   "careers_url": "https://careers.brightspark.com/companies/optable",
+   "domain": "optable.co",
+   "about": "Optable is a data collaboration and clean room solution designed for the advertising ecosystem in the age of privacy. The product was inspired by the radical transformation in how audience data is governed, connected, and activated. Optable"
+  },
+  "cloudera": {
+   "name": "Cloudera",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 1,000+ staff; 52 open jobs; Toronto, ON, Canada, Vancouver, BC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/cloudera-2",
+   "domain": "cloudera.com",
+   "about": "Cloudera develops a data management and analytics platform. They specialize in delivering a hybrid data platform with secure data management and cloud-native data analytics. They provide software subscriptions and public cloud services. The"
+  },
+  "flywire": {
+   "name": "Flywire",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 1,000+ staff; 13 open jobs; Toronto, ON, Canada, Vancouver, BC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/flywire-com",
+   "domain": "flywire.com",
+   "about": "Flywire is a payments enablement and software company. It combines its proprietary payments network, next-gen payments platform, and vertical-specific software to deliver the most important and complex payments for clients and their custome"
+  },
+  "forgerock": {
+   "name": "Forgerock",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 201–1,000 staff; 56 open jobs; Vancouver, BC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/forgerock",
+   "domain": "forgerock.com",
+   "about": "ForgeRock is a multinational software company that develops commercial open-source identity and access management products. The company is transforming the way organizations interact securely with customers, employees, devices, and things. "
+  },
+  "friends-electric": {
+   "name": "Friends Electric",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 201–1,000 staff; 8 open jobs; Toronto, ON, Canada, Ottawa, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/friends-electric-2",
+   "domain": "ada.support",
+   "about": "Ada is the brand interaction platform that helps you purposefully automate conversations with each customer and employee, saving costs and growing revenue without betraying the brand you promised to be.\n\nWith Ada’s technology, we believe ea"
+  },
+  "lightspeed": {
+   "name": "Lightspeed",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 1,000+ staff; 128 open jobs; Toronto, ON, Canada, Montreal, QC, Canada",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/lightspeed-2-66ea6e12-7c39-4826-9c09-a08e11eabdb6",
+   "domain": "lightspeedhq.com",
+   "about": "Lightspeed Commerce develops a unified point of sale and payments platform for retail and hospitality businesses. Its cloud solution transforms and unifies online and physical operations, multichannel sales, expansion to new locations, glob",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "linkedin": {
+   "name": "LinkedIn",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; size unknown; 258 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/linkedin-3-496a6401-d340-42f0-8d7a-d62312522866",
+   "domain": "linkedin.com",
+   "about": "LinkedIn is a professional network that connects professionals to enhance productivity and success. With a diversified revenue model that includes solutions for talent, marketing, sales, and premium subscriptions, the company supports busin"
+  },
+  "lookout": {
+   "name": "Lookout",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 201–1,000 staff; 2 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/lookout",
+   "domain": "lookout.com",
+   "about": "Lookout, Inc. is the endpoint to cloud security company purpose-built for the intersection of enterprise and personal data. We safeguard data across devices, apps, networks, and clouds through our unified, cloud-native security platform — a"
+  },
+  "mason": {
+   "name": "Mason",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 51–200 staff; 4 open jobs; Oakville, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/mason-2-7aae1a46-c9c8-459e-8119-d1feea4d1f77",
+   "domain": "kubric.io",
+   "about": "Kubric brings an all-in-one design toolkit to power the needs of fast-growing brands and e-commerce teams. Use Kubric's design editor and management system to help you run modern, fresh e-commerce storefronts. Create high-quality banners, G"
+  },
+  "nimble-storage": {
+   "name": "Nimble Storage",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 201–1,000 staff; 1574 open jobs; Ontario, CA, USA"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/nimble-storage-2",
+   "domain": "nimblestorage.com",
+   "about": "Nimble Storage solutions are built on the idea that enterprises should not have to compromise between performance, capacity, ease of management, and price. Nimble's patented Cache Accelerated Sequential Layout (CASL) architecture, designed "
+  },
+  "ofx": {
+   "name": "Ofx",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 201–1,000 staff; 4 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/ofx-2-89e1a70f-c43f-42fd-8c55-f27a08b27c1b",
+   "domain": "ofx.com",
+   "about": "OFX is a global provider of online international payment services for personal and business customers, formerly known as the OzForex Group Limited. Established in 1998 with the aim of providing clients with a better deal, there are OFX offi"
+  },
+  "pagerduty": {
+   "name": "PagerDuty",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 1,000+ staff; 59 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/pagerduty",
+   "domain": "pagerduty.com",
+   "about": "PagerDuty is an operations performance platform that provides visibility and actionable intelligence throughout the incident lifecycle. Its SaaS solution helps over 10,000 global customers, including Comcast, eHarmony, and Slack, respond to"
+  },
+  "podium": {
+   "name": "Podium",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 1,000+ staff; 59 open jobs; Gatineau, QC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/podium",
+   "domain": "podium.com",
+   "about": "Podium is a computer software company that offers a customer communication platform for businesses that interact with customers on a local level. It features an interaction management platform that utilizes messaging features designed for b"
+  },
+  "qualtrics": {
+   "name": "Qualtrics",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; size unknown; 81 open jobs; Toronto, ON, Canada",
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/qualtrics",
+   "domain": "qualtrics.com",
+   "about": "Qualtrics is a single system of record for all experience data, managing customer, product, employee, and brand experiences on one platform. The company's experience data, also called X-data, allows organizations to manage the four core exp",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "rovio": {
+   "name": "Rovio",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 201–1,000 staff; 1 open jobs; Montreal, QC, Canada, Montréal, QC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/rovio",
+   "domain": "rovio.com",
+   "about": "Rovio Entertainment Corporation provides achievements or rewards, as well they can be played alone, in teams, or online by amateurs or players. Players may have an audience of non-players, such as when people are entertained by watching a c"
+  },
+  "segment": {
+   "name": "Segment",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 201–1,000 staff; 135 open jobs; Vancouver, BC, Canada",
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/segment",
+   "domain": "segment.com",
+   "about": "Segment provides the customer data infrastructure that helps businesses put their customers first. Using Segment, companies can collect, unify, and connect their first-party data to over 200 marketing, analytics, and data warehouse tools.\n\n",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "slack": {
+   "name": "Slack",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 1,000+ staff; 20 open jobs; Vancouver, BC, Canada",
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/slack",
+   "domain": "slack.com",
+   "about": "Slack is a cloud-based communication and collaboration platform for teams. It allows users to exchange messages, share files, and integrate with various business tools and services. Slack is commonly used across various industries, from tec",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "snyk": {
+   "name": "Snyk",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 1,000+ staff; 18 open jobs; Ottawa, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/snyk",
+   "domain": "snyk.io",
+   "about": "Snyk enables developers to build secure applications while helping security teams keep pace with digital demands. Its developer-first platform secures apps from code to cloud, boosting productivity, growth, and security."
+  },
+  "speak": {
+   "name": "Speak",
+   "routes": {
+    "vc": "Accel (Canadian locations only) portfolio; 201–1,000 staff; 34 open jobs; Scarborough, Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.accel.com/companies/speak-2-f92afcf4-4fb5-4760-a019-a6cb6cf8c90f",
+   "domain": "speak.com",
+   "about": "Speak is a developer of a mobile language-learning application focused on English learning. The application uses speech recognition technology to support conversational practice in real-world contexts. It enables users to improve spoken Eng"
+  },
+  "tailscale": {
+   "name": "Tailscale",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 59 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:21:25+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/tailscale",
+   "domain": "tailscale.com",
+   "about": "Tailscale develops a software-defined networking platform that simplifies the creation of secure private networks using the WireGuard protocol. Its solution enables devices to connect directly through peer-to-peer mesh networking, reducing "
+  },
+  "alpha-9-oncology": {
+   "name": "Alpha-9 Oncology",
+   "routes": {
+    "vc": "General Catalyst (Canadian locations only) portfolio; 51–200 staff; 4 open jobs; Vancouver, BC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:22:23+00:00",
+   "careers_url": "https://jobs.generalcatalyst.com/companies/alpha-9-oncology",
+   "domain": "a9oncology.com",
+   "about": "Operator of a radiopharmaceutical company intended to improve the diagnosis and treatment of metastatic cancer. The company develops imaging and therapeutic molecules for solid and hematologic malignancies by using proprietary technology, e"
+  },
+  "commure": {
+   "name": "Commure",
+   "routes": {
+    "vc": "General Catalyst (Canadian locations only) portfolio; 1,000+ staff; 82 open jobs; Montreal, QC, Canada, Montréal, QC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:22:23+00:00",
+   "careers_url": "https://jobs.generalcatalyst.com/companies/commure",
+   "domain": "commure.com",
+   "about": "Commure develops and operates a healthcare technology platform that supports hospital and health system operations. The company offers interconnected applications for ambient AI-assisted clinical documentation, revenue cycle automation, sta"
+  },
+  "finni-health": {
+   "name": "Finni Health",
+   "routes": {
+    "vc": "General Catalyst (Canadian locations only) portfolio; 51–200 staff; 149 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:22:23+00:00",
+   "careers_url": "https://jobs.generalcatalyst.com/companies/finni-health",
+   "domain": "finnihealth.com",
+   "about": "Finni enables passionate ABA providers to start and grow their own in-network practices. We empower providers to go independent in as little as 30 days and offer a complete full-stack solution to run their practice."
+  },
+  "flashfood": {
+   "name": "Flashfood",
+   "routes": {
+    "vc": "General Catalyst (Canadian locations only) portfolio; 51–200 staff; 4 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:22:23+00:00",
+   "careers_url": "https://jobs.generalcatalyst.com/companies/flashfood",
+   "domain": "flashfood.com",
+   "about": "Flashfood is the app for grocery's best deals. As a certified B-Corp, our mission is to feed families, not landfills. Our marketplace connects food retailers in North America who have products that are near-expiry or surplus that may have b"
+  },
+  "hubspot": {
+   "name": "HubSpot",
+   "routes": {
+    "vc": "General Catalyst (Canadian locations only) portfolio; size unknown; 1 open jobs; Toronto, ON, Canada",
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:22:23+00:00",
+   "careers_url": "https://jobs.generalcatalyst.com/companies/hubspot",
+   "domain": "hubspot.com",
+   "about": "HubSpot offers cloud-based inbound marketing software to help businesses improve online marketing. Its tools include social media management, blogging, SEO, email marketing, automation, and analytics. The platform also features a sales appl",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "mark43": {
+   "name": "Mark43",
+   "routes": {
+    "vc": "General Catalyst (Canadian locations only) portfolio; 201–1,000 staff; 30 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:22:23+00:00",
+   "careers_url": "https://jobs.generalcatalyst.com/companies/mark43-2",
+   "domain": "mark43.com",
+   "about": "Mark43 creates the next generation of law enforcement software that allows police to collect, manage, analyze, and share information. Mark43 offers advanced analytics tools that allow agencies to gain insights from their data, improving dec"
+  },
+  "ping-identity": {
+   "name": "Ping Identity",
+   "routes": {
+    "vc": "General Catalyst (Canadian locations only) portfolio; 1,000+ staff; 56 open jobs; Vancouver, BC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:22:23+00:00",
+   "careers_url": "https://jobs.generalcatalyst.com/companies/ping-identity",
+   "domain": "pingidentity.com",
+   "about": "Ping Identity provides cloud-based identity management software for companies and government organizations. They help enterprises achieve Zero Trust identity-defined security and more personalized, streamlined user experiences. The Ping Int"
+  },
+  "relay": {
+   "name": "Relay",
+   "routes": {
+    "vc": "General Catalyst (Canadian locations only) portfolio; 201–1,000 staff; 46 open jobs; North York, Toronto, ON, Canada, Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:22:23+00:00",
+   "careers_url": "https://jobs.generalcatalyst.com/companies/relay-2-55ff0b72-3815-4654-a7c2-9ddffe26b2d6",
+   "domain": "relayfi.com",
+   "about": "Relay is an all-in-one, collaborative business banking and money management platform that helps small businesses and their teams take control of their cash flow and get crystal clear on what they’re earning, spending, and saving.\n\nWith Rela"
+  },
+  "teladoc-health": {
+   "name": "Teladoc Health",
+   "routes": {
+    "vc": "General Catalyst (Canadian locations only) portfolio; size unknown; 58 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:22:23+00:00",
+   "careers_url": "https://jobs.generalcatalyst.com/companies/teladoc-health",
+   "domain": "teladochealth.com",
+   "about": "Teladoc Health is a virtual health provider with a telehealth platform delivering 24-hour, on-demand healthcare via mobile devices, the Internet, video, and phone."
+  },
+  "thoughtspot": {
+   "name": "ThoughtSpot",
+   "routes": {
+    "vc": "General Catalyst (Canadian locations only) portfolio; 1,000+ staff; 74 open jobs; Vancouver, BC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:22:23+00:00",
+   "careers_url": "https://jobs.generalcatalyst.com/companies/thoughtspot",
+   "domain": "thoughtspot.com",
+   "about": "ThoughtSpot is the AI-native Intelligence Platform for every enterprise. Our mission is to create a more fact-driven world by empowering everyone to explore any data, ask any question, and uncover actionable insights faster—leading to growt"
+  },
+  "a-place-for-mom": {
+   "name": "A Place for Mom",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 1,000+ staff; 192 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/a-place-for-mom",
+   "domain": "aplaceformom.com",
+   "about": "A Place for Mom provides free, dedicated senior care guidance for caregivers and their families. The company helps families navigate the complex and often urgent process of finding senior living and home care by connecting them with persona"
+  },
+  "alteryx": {
+   "name": "Alteryx",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 1,000+ staff; 64 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/alteryx-2",
+   "domain": "alteryx.com",
+   "about": "Alteryx, Inc. is a leading analytics automation company based in Irvine, California, specializing in empowering organizations to make data-driven decisions. Founded in 1997, Alteryx offers a comprehensive analytics platform that simplifies "
+  },
+  "ayar-labs": {
+   "name": "Ayar Labs",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 51–200 staff; 72 open jobs; Emeryville, ON N0R, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/ayar-labs",
+   "domain": "ayarlabs.com",
+   "about": "Ayar Labs uses silicon photonics and microring-based architectures to increase bandwidth, reduce latency, and improve power efficiency in accelerator and XPU environments. The company’s TeraPHY optical engine integrates UCIe-based optical c"
+  },
+  "bizzabo": {
+   "name": "Bizzabo",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 51–200 staff; 2 open jobs; Montreal, QC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/bizzabo",
+   "domain": "bizzabo.com",
+   "about": "Bizzabo powers immersive in-person, virtual, and hybrid experiences. The Bizzabo Event Experience OS is a data-rich open platform that allows Event Experience Leaders to manage events, engage audiences, activate communities, and deliver pow"
+  },
+  "bringg": {
+   "name": "Bringg",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 51–200 staff; 2 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/bringg",
+   "domain": "bringg.com",
+   "about": "Bringg is the delivery management platform market leader, serving over 800 customers globally. We manage and unify the last mile delivery operations, providing access to large delivery networks and supporting multiple delivery and return mo"
+  },
+  "colab-software": {
+   "name": "CoLab Software",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 51–200 staff; 21 open jobs; St. John's, NL, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/colab-software",
+   "domain": "colabsoftware.com",
+   "about": "CoLab is a Design Engagement System that helps engineering teams make better technical decisions, faster. By combining AI-powered design checks with real-time collaboration, CoLab turns every review into a structured, searchable knowledge d"
+  },
+  "diligent": {
+   "name": "Diligent",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 1,000+ staff; 60 open jobs; Montreal, QC, Canada, Montréal, QC, Canada",
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/diligent",
+   "domain": "diligent.com",
+   "about": "Diligent is a leading provider of governance, risk management, and compliance software solutions. Established to enhance the effectiveness of boards and leadership teams, Diligent’s platform enables organizations to streamline their governa",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "docker": {
+   "name": "Docker",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 1,000+ staff; 68 open jobs; Kitchener, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/docker",
+   "domain": "docker.com",
+   "about": "Docker helps millions of developers efficiently and collaboratively build, share, and run applications. The Docker collaborative application development platform provides developers with an unmatched experience for an integrated, reliable, "
+  },
+  "exiger": {
+   "name": "Exiger",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 59 open jobs; Toronto, ON, Canada, Vancouver, BC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/exiger",
+   "domain": "exiger.com",
+   "about": "Exiger provides technology-enabled risk and compliance services to help heavily regulated firms, critical infrastructure organizations, defense contractors, financial institutions, and government agencies navigate risk and compliance."
+  },
+  "ezcater": {
+   "name": "ezCater",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 23 open jobs; Vancouver, BC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/ezcater",
+   "domain": "ezcater.com",
+   "about": "ezCater is an online catering marketplace that allows individuals to order food from local caterers. ezCater is headquartered in Boston, Massachusetts, and is co-founded by Briscoe Rodgers and Stefania Mallett in August 2007."
+  },
+  "facilityos": {
+   "name": "FacilityOS",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 51–200 staff; 15 open jobs; Downsview, North York, ON, Canada, York Mills, North York, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/facilityos",
+   "domain": "facilityos.com",
+   "about": "FacilityOS specializes in facility management and provides visitor management software solutions."
+  },
+  "fanatics": {
+   "name": "Fanatics",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; size unknown; 15 open jobs; Toronto, ON, Canada, Montreal, QC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/fanatics",
+   "domain": "fanaticsinc.com",
+   "about": "Fanatics is a global sports platform that redefines the way fans buy, bet, and collect. The company has evolved from a traditional licensed apparel retailer into a multi-vertical sports ecosystem serving more than 100 million fans worldwide"
+  },
+  "hivebrite": {
+   "name": "Hivebrite",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 51–200 staff; 1 open jobs; Mississauga, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/hivebrite-2",
+   "domain": "hivebrite.io",
+   "about": "Hivebrite is the leading platform for networking, learning, and cause-driven communities. Its fully branded, highly customizable SaaS solution enables organizations to: • Centralize engagement in one branded hub • Deliver personalized exper"
+  },
+  "jasper": {
+   "name": "Jasper",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 9 open jobs; Montreal, QC, Canada, Montréal, QC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/jasper-2-0a3cc38f-003d-4be8-a185-7ad8395bfd72",
+   "domain": "jasper.ai",
+   "about": "Jasper is an AI copilot for marketing teams, providing generative AI tools for creating content 10X faster. Trusted by 100,000+ innovative companies, Jasper ensures brand consistency and relevance in content creation."
+  },
+  "keyfactor": {
+   "name": "Keyfactor",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 33 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/keyfactor",
+   "domain": "keyfactor.com",
+   "about": "Keyfactor is a trusted provider of PKI and machine identity management solutions, ensuring secure and unique identities for devices, workloads, and digital transactions globally."
+  },
+  "klir": {
+   "name": "Klir",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 51–200 staff; 15 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/klir-2",
+   "domain": "klir.com",
+   "about": "Klir is the Operational Data Hub for water utilities — the connected center where sampling, monitoring, and operational workflows finally live in one place. For years, Drinking Water, Wastewater, and Pretreatment programs have been managed "
+  },
+  "knak": {
+   "name": "Knak",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 51–200 staff; 8 open jobs; Ottawa, ON, Canada, Ontario, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/knak",
+   "domain": "knak.com",
+   "about": "Knak is an email and landing page creation platform used by some of the world's largest companies. Knak empowers individuals and teams to create and collaborate on beautiful, responsive, on-brand emails without having to touch a line of cod"
+  },
+  "kyverna-therapeutics": {
+   "name": "Kyverna Therapeutics",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 51–200 staff; 38 open jobs; Emeryville, ON N0R, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/kyverna-therapeutics",
+   "domain": "kyvernatx.com",
+   "about": "KYVERNA is pioneering a new class of treatments and potential cures for serious autoimmune diseases. The company's therapeutic platform combines advanced T-cell engineering and synthetic biology technologies to suppress and eliminate the au"
+  },
+  "lansweeper": {
+   "name": "Lansweeper",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 20 open jobs; Montreal, QC, Canada, Montréal, QC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/lansweeper",
+   "domain": "lansweeper.com",
+   "about": "Managing IT has never been a bigger challenge. Hardware, software, and users can be anywhere at any time, making IT environments extremely dynamic and often complex. A seemingly simple question has become terribly difficult to answer: ‘Who "
+  },
+  "litmus-automation": {
+   "name": "Litmus Automation",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 51–200 staff; 32 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/litmus-automation",
+   "domain": "litmusautomation.com",
+   "about": "Litmus is an IIoT company that enables data collection, analytics, and management with an Intelligent Edge Computing Platform for Industrial IoT. It provides the solution to transform critical edge data into actionable intelligence that can"
+  },
+  "mirantis": {
+   "name": "Mirantis",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 100 open jobs; Kitchener, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/mirantis",
+   "domain": "mirantis.com",
+   "about": "Mirantis develops cloud infrastructure and container management software that enables organizations to build, operate, and scale applications across multi-cloud, hybrid, and edge environments. The company provides platforms based on open-so"
+  },
+  "motive": {
+   "name": "Motive",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 1,000+ staff; 146 open jobs; Vancouver, BC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/motive-2",
+   "domain": "gomotive.com",
+   "about": "Motive develops technology that connects and automates physical operations for businesses across various industries. The company provides a platform that combines telematics, fleet management, compliance tools, equipment monitoring, and AI-"
+  },
+  "sedna": {
+   "name": "Sedna",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 51–200 staff; 14 open jobs; Vancouver, BC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/sedna",
+   "domain": "sedna.com",
+   "about": "Sedna is comprised of two products - Stream and Pulse - providing a data-driven communication platform specifically designed to transform the shipping and supply chain industry. By effectively managing complexity, it streamlines processes a"
+  },
+  "semperis": {
+   "name": "Semperis",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 25 open jobs; Ottawa, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/semperis",
+   "domain": "semperis.com",
+   "about": "Semperis is an enterprise identity protection company that enables organizations to quickly recover from accidental or malicious changes and disasters that compromise Active Directory, on-premises, and on-cloud. The Semperis directory servi"
+  },
+  "sprypoint": {
+   "name": "Sprypoint",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 6 open jobs; Charlottetown, PE, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/sprypoint-2",
+   "domain": "sprypoint.com",
+   "about": "SpryPoint builds amazing cloud-based enterprise software for electric, water, gas, and telecom utilities. We give utilities the tools they need to provide top-tier customer service while improving operational efficiency and enabling a world"
+  },
+  "tigera": {
+   "name": "Tigera",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 51–200 staff; 7 open jobs; Vancouver, BC, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/tigera",
+   "domain": "tigera.io",
+   "about": "Tigera secures and governs AI workloads and agents across the enterprise, wherever they run, by providing deep visibility and enforcement control. The company’s offerings secure AI workloads and agents across 1M+ clusters in multicloud and "
+  },
+  "udemy": {
+   "name": "Udemy",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 1,000+ staff; 21 open jobs; Trenton,Ontario, Canada",
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/udemy",
+   "domain": "udemy.com",
+   "about": "Udemy is a global marketplace for teaching and learning, connecting millions of students to the skills they need to succeed.",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "veeam-software": {
+   "name": "Veeam Software",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; size unknown; 415 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/veeam-software",
+   "domain": "veeam.com",
+   "about": "Veeam Software is an information technology company that specializes in backup, disaster recovery, and data management solutions for cloud, virtual, and physical environments. It is one of the leading providers of data resilience solutions "
+  },
+  "vts": {
+   "name": "VTS",
+   "routes": {
+    "vc": "Insight Partners (Canadian locations only) portfolio; 201–1,000 staff; 16 open jobs; Toronto, ON, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:20+00:00",
+   "careers_url": "https://jobs.insightpartners.com/companies/vts-2",
+   "domain": "vts.com",
+   "about": "VTS is a commercial real estate technology company that provides software for leasing, asset management, property management, and tenant engagement. Its platform helps real estate owners and operators manage property data and make more info"
+  },
+  "nozomi-networks": {
+   "name": "Nozomi Networks",
+   "routes": {
+    "vc": "Notable Capital (Canadian locations only) portfolio; 201–1,000 staff; 26 open jobs; Calgary, AB, Canada"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:23:29+00:00",
+   "careers_url": "https://jobs.ggvc.com/companies/nozomi-networks",
+   "domain": "nozominetworks.com",
+   "about": "Nozomi Networks offers a cybersecurity platform that protects Operational Technology (OT), Internet of Things (IoT), and cyber-physical systems through unified visibility, threat detection, and automated remediation. Nozomi Networks deliver"
+  },
+  "tableau": {
+   "name": "Tableau",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "airbnb": {
+   "name": "Airbnb",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "netflix": {
+   "name": "Netflix",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "zendesk": {
+   "name": "Zendesk",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "dell-technologies": {
+   "name": "Dell Technologies",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "hp": {
+   "name": "HP",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "samsung-research": {
+   "name": "Samsung Research",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "datadog": {
+   "name": "Datadog",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "mongodb": {
+   "name": "MongoDB",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "elastic": {
+   "name": "Elastic",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "confluent": {
+   "name": "Confluent",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "github": {
+   "name": "GitHub",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "expedia": {
+   "name": "Expedia",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "booking-com": {
+   "name": "Booking.com",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "wayfair": {
+   "name": "Wayfair",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "splunk": {
+   "name": "Splunk",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "broadcom": {
+   "name": "Broadcom",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "palo-alto-networks": {
+   "name": "Palo Alto Networks",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "crowdstrike": {
+   "name": "CrowdStrike",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "zscaler": {
+   "name": "Zscaler",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "rapid7": {
+   "name": "Rapid7",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "fiserv": {
+   "name": "Fiserv",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "fis": {
+   "name": "FIS",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "broadridge": {
+   "name": "Broadridge",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "equifax": {
+   "name": "Equifax",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "transunion": {
+   "name": "TransUnion",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "moody-s": {
+   "name": "Moody's",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "s-p-global": {
+   "name": "S&P Global",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "bloomberg": {
+   "name": "Bloomberg",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "morningstar": {
+   "name": "Morningstar",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "wolters-kluwer": {
+   "name": "Wolters Kluwer",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "lexisnexis": {
+   "name": "LexisNexis",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "kraken": {
+   "name": "Kraken",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "plaid": {
+   "name": "Plaid",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "brex": {
+   "name": "Brex",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "ramp": {
+   "name": "Ramp",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "klarna": {
+   "name": "Klarna",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "wise": {
+   "name": "Wise",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "revolut": {
+   "name": "Revolut",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "toast": {
+   "name": "Toast",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "figma": {
+   "name": "Figma",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "notion": {
+   "name": "Notion",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "canva": {
+   "name": "Canva",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "miro": {
+   "name": "Miro",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "asana": {
+   "name": "Asana",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "dropbox": {
+   "name": "Dropbox",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "box": {
+   "name": "Box",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "docusign": {
+   "name": "DocuSign",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "zoom": {
+   "name": "Zoom",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "calendly": {
+   "name": "Calendly",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "grammarly": {
+   "name": "Grammarly",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "duolingo": {
+   "name": "Duolingo",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "linkedin-learning": {
+   "name": "LinkedIn Learning",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "indeed-flex": {
+   "name": "Indeed Flex",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "ziprecruiter": {
+   "name": "ZipRecruiter",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "writer": {
+   "name": "Writer",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "scale-ai": {
+   "name": "Scale AI",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "openai": {
+   "name": "OpenAI",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "anthropic": {
+   "name": "Anthropic",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "hugging-face": {
+   "name": "Hugging Face",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "groq": {
+   "name": "Groq",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "sambanova": {
+   "name": "SambaNova",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "lightmatter": {
+   "name": "Lightmatter",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "rivian": {
+   "name": "Rivian",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "tesla": {
+   "name": "Tesla",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "motorola-solutions": {
+   "name": "Motorola Solutions",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "siemens": {
+   "name": "Siemens",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "siemens-healthineers": {
+   "name": "Siemens Healthineers",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "philips": {
+   "name": "Philips",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "ge-healthcare": {
+   "name": "GE HealthCare",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "honeywell": {
+   "name": "Honeywell",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "johnson-controls": {
+   "name": "Johnson Controls",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "schneider-electric": {
+   "name": "Schneider Electric",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "abb": {
+   "name": "ABB",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "bosch": {
+   "name": "Bosch",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "accenture-song": {
+   "name": "Accenture Song",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "riot-games": {
+   "name": "Riot Games",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "activision-blizzard": {
+   "name": "Activision Blizzard",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "take-two": {
+   "name": "Take-Two",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "zynga": {
+   "name": "Zynga",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "warner-bros-games": {
+   "name": "Warner Bros. Games",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "square-enix": {
+   "name": "Square Enix",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "bandai-namco": {
+   "name": "Bandai Namco",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "keywords-studios": {
+   "name": "Keywords Studios",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "netflix-games": {
+   "name": "Netflix Games",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "amazon-games": {
+   "name": "Amazon Games",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "sony-interactive-entertainment": {
+   "name": "Sony Interactive Entertainment",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "pokemon": {
+   "name": "Pokemon",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "niantic": {
+   "name": "Niantic",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "discord": {
+   "name": "Discord",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "yelp": {
+   "name": "Yelp",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "etsy": {
+   "name": "Etsy",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "ebay": {
+   "name": "eBay",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "shopify-plus": {
+   "name": "Shopify Plus",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "squarespace": {
+   "name": "Squarespace",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "wix": {
+   "name": "Wix",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "godaddy": {
+   "name": "GoDaddy",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "automattic": {
+   "name": "Automattic",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "vimeo": {
+   "name": "Vimeo",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "mailchimp": {
+   "name": "Mailchimp",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "klaviyo": {
+   "name": "Klaviyo",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "braze": {
+   "name": "Braze",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "iterable": {
+   "name": "Iterable",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "amplitude": {
+   "name": "Amplitude",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "mixpanel": {
+   "name": "Mixpanel",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "optimizely": {
+   "name": "Optimizely",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "contentful": {
+   "name": "Contentful",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "sitecore": {
+   "name": "Sitecore",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "acquia": {
+   "name": "Acquia",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "celonis": {
+   "name": "Celonis",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "uipath": {
+   "name": "UiPath",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "automation-anywhere": {
+   "name": "Automation Anywhere",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "gong": {
+   "name": "Gong",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "outreach": {
+   "name": "Outreach",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "salesloft": {
+   "name": "Salesloft",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "clari": {
+   "name": "Clari",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "6sense": {
+   "name": "6sense",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "zoominfo": {
+   "name": "ZoomInfo",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "seismic": {
+   "name": "Seismic",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "highspot": {
+   "name": "Highspot",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "gainsight": {
+   "name": "Gainsight",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "totango": {
+   "name": "Totango",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "churnzero": {
+   "name": "ChurnZero",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "pendo": {
+   "name": "Pendo",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "fullstory": {
+   "name": "FullStory",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "hotjar": {
+   "name": "Hotjar",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "sprinklr": {
+   "name": "Sprinklr",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "sprout-social": {
+   "name": "Sprout Social",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "meltwater": {
+   "name": "Meltwater",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "cision": {
+   "name": "Cision",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "medallia": {
+   "name": "Medallia",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "surveymonkey": {
+   "name": "SurveyMonkey",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "typeform": {
+   "name": "Typeform",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "airtable": {
+   "name": "Airtable",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "smartsheet": {
+   "name": "Smartsheet",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "monday-com": {
+   "name": "Monday.com",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "clickup": {
+   "name": "ClickUp",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "wrike": {
+   "name": "Wrike",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "procore": {
+   "name": "Procore",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "autodesk-construction-cloud": {
+   "name": "Autodesk Construction Cloud",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "trimble": {
+   "name": "Trimble",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "bentley-systems": {
+   "name": "Bentley Systems",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "ptc": {
+   "name": "PTC",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "dassault-systemes": {
+   "name": "Dassault Systemes",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "ansys": {
+   "name": "Ansys",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "esri": {
+   "name": "Esri",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "medidata": {
+   "name": "Medidata",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "iqvia": {
+   "name": "IQVIA",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "cerner": {
+   "name": "Cerner",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "epic-systems": {
+   "name": "Epic Systems",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "athenahealth": {
+   "name": "Athenahealth",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "teladoc": {
+   "name": "Teladoc",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "doximity": {
+   "name": "Doximity",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "zocdoc": {
+   "name": "Zocdoc",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "hims-hers": {
+   "name": "Hims & Hers",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "ro": {
+   "name": "Ro",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "calm": {
+   "name": "Calm",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "headspace": {
+   "name": "Headspace",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "peloton": {
+   "name": "Peloton",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "strava": {
+   "name": "Strava",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "whoop": {
+   "name": "Whoop",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "oura": {
+   "name": "Oura",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "fitbit": {
+   "name": "Fitbit",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Big tech / US tech with Canadian offices"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Big tech / US tech with Canadian offices"
+  },
+  "descartes-systems": {
+   "name": "Descartes Systems",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "vena-solutions": {
+   "name": "Vena Solutions",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "ritual": {
+   "name": "Ritual",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "geotab": {
+   "name": "Geotab",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "bonfire": {
+   "name": "Bonfire",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "igloo-software": {
+   "name": "Igloo Software",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "absolute-software": {
+   "name": "Absolute Software",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "bench-accounting": {
+   "name": "Bench Accounting",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "dooly": {
+   "name": "Dooly",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "elastic-path": {
+   "name": "Elastic Path",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "tealbook": {
+   "name": "Tealbook",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "humi": {
+   "name": "Humi",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "auvik": {
+   "name": "Auvik",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "pythian": {
+   "name": "Pythian",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "sangoma": {
+   "name": "Sangoma",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "tulip-retail": {
+   "name": "Tulip Retail",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "nulogy": {
+   "name": "Nulogy",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "influitive": {
+   "name": "Influitive",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "paymentus": {
+   "name": "Paymentus",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "lendesk": {
+   "name": "Lendesk",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "pointclickcare": {
+   "name": "PointClickCare",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "touchbistro": {
+   "name": "TouchBistro",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "knix": {
+   "name": "Knix",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "article": {
+   "name": "Article",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "indochino": {
+   "name": "Indochino",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "frank-oak": {
+   "name": "Frank And Oak",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "hockeystick": {
+   "name": "Hockeystick",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "properly": {
+   "name": "Properly",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "wealthica": {
+   "name": "Wealthica",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "swift-medical": {
+   "name": "Swift Medical",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "pockethealth": {
+   "name": "PocketHealth",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "think-research": {
+   "name": "Think Research",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "felix-health": {
+   "name": "Felix Health",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "mindbridge": {
+   "name": "MindBridge",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "klipfolio": {
+   "name": "Klipfolio",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "solink": {
+   "name": "Solink",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "mitel": {
+   "name": "Mitel",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "martello-technologies": {
+   "name": "Martello Technologies",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "prontoforms": {
+   "name": "ProntoForms",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "truecontext": {
+   "name": "TrueContext",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "telesat": {
+   "name": "Telesat",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "kepler-communications": {
+   "name": "Kepler Communications",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "mda-space": {
+   "name": "MDA Space",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "points": {
+   "name": "Points",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "flinks": {
+   "name": "Flinks",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "unito": {
+   "name": "Unito",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "classcraft": {
+   "name": "Classcraft",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "valsoft": {
+   "name": "Valsoft",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "moment-factory": {
+   "name": "Moment Factory",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "ludia": {
+   "name": "Ludia",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "thunder-lotus": {
+   "name": "Thunder Lotus",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "eidos-montreal": {
+   "name": "Eidos Montreal",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "relic-entertainment": {
+   "name": "Relic Entertainment",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "kabam": {
+   "name": "Kabam",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "phoenix-labs": {
+   "name": "Phoenix Labs",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "blackbird-interactive": {
+   "name": "Blackbird Interactive",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "digital-extremes": {
+   "name": "Digital Extremes",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "uken-games": {
+   "name": "Uken Games",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "inflexion-games": {
+   "name": "Inflexion Games",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "bioware": {
+   "name": "BioWare",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "coalition": {
+   "name": "The Coalition",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "bardel-entertainment": {
+   "name": "Bardel Entertainment",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "global-relay": {
+   "name": "Global Relay",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "copperleaf": {
+   "name": "Copperleaf",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "semios": {
+   "name": "Semios",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "sanctuary-ai": {
+   "name": "Sanctuary AI",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "d-wave": {
+   "name": "D-Wave",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "photon": {
+   "name": "Photon",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "kardium": {
+   "name": "Kardium",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "metaoptima": {
+   "name": "MetaOptima",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "spring-financial": {
+   "name": "Spring Financial",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "galvanize": {
+   "name": "Galvanize",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "plenty-fish": {
+   "name": "Plenty of Fish",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "blackline-safety": {
+   "name": "Blackline Safety",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "showpass": {
+   "name": "Showpass",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "helcim": {
+   "name": "Helcim",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "showbie": {
+   "name": "Showbie",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "attabotics": {
+   "name": "Attabotics",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "arcurve": {
+   "name": "Arcurve",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "enverus": {
+   "name": "Enverus",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "pason-systems": {
+   "name": "Pason Systems",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "vault-technologies": {
+   "name": "Vault Technologies",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "solium": {
+   "name": "Solium",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "shareworks": {
+   "name": "Shareworks",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "wawanesa": {
+   "name": "Wawanesa",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "allstate": {
+   "name": "Allstate Canada",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "aviva": {
+   "name": "Aviva Canada",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "operators": {
+   "name": "Co-operators",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "ia-financial-group": {
+   "name": "iA Financial Group",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "equitable-bank": {
+   "name": "Equitable Bank",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "atb-financial": {
+   "name": "ATB Financial",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "coast-capital-savings": {
+   "name": "Coast Capital Savings",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "vancity": {
+   "name": "Vancity",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "meridian-credit-union": {
+   "name": "Meridian Credit Union",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "alterna-savings": {
+   "name": "Alterna Savings",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "coinsquare": {
+   "name": "Coinsquare",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "bitbuy": {
+   "name": "Bitbuy",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "ndax": {
+   "name": "NDAX",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "wealthsimple-crypto": {
+   "name": "Wealthsimple Crypto",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "finastra": {
+   "name": "Finastra",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "global-payments": {
+   "name": "Global Payments",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "cibc-mellon": {
+   "name": "CIBC Mellon",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "computershare": {
+   "name": "Computershare",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "coconut-software": {
+   "name": "Coconut Software",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "nuula": {
+   "name": "Nuula",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "hubdoc": {
+   "name": "Hubdoc",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "wagepoint": {
+   "name": "Wagepoint",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "ratesdotca": {
+   "name": "Ratesdotca",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "dyne": {
+   "name": "Dyne",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "inkblot": {
+   "name": "Inkblot",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "mindbeacon": {
+   "name": "Mindbeacon",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "tranquility": {
+   "name": "Tranquility",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "juniper-health": {
+   "name": "Juniper Health",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "kindred-health": {
+   "name": "Kindred Health",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "cloud-dx": {
+   "name": "Cloud DX",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "medstack": {
+   "name": "MedStack",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "well-health": {
+   "name": "WELL Health",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "cloudmd": {
+   "name": "CloudMD",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "hinge-health": {
+   "name": "Hinge Health",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "babylon-health": {
+   "name": "Babylon Health",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "videotron": {
+   "name": "Videotron",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "cogeco": {
+   "name": "Cogeco",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "freedom-mobile": {
+   "name": "Freedom Mobile",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "eastlink": {
+   "name": "Eastlink",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "shaw": {
+   "name": "Shaw",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "distributel": {
+   "name": "Distributel",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "drives": {
+   "name": "Canada Drives",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "autotrader-ca": {
+   "name": "AutoTrader.ca",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "openlane": {
+   "name": "OPENLANE",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "cdk-global": {
+   "name": "CDK Global",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "dealer-fx": {
+   "name": "Dealer-FX",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "cargurus": {
+   "name": "CarGurus",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "goodfood": {
+   "name": "Goodfood",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "cymax": {
+   "name": "Cymax",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "well-ca": {
+   "name": "Well.ca",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "rover": {
+   "name": "Rover",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "nanoleaf": {
+   "name": "Nanoleaf",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "myant": {
+   "name": "Myant",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "muse": {
+   "name": "Muse",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "interaxon": {
+   "name": "Interaxon",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "thalmic": {
+   "name": "Thalmic",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "north": {
+   "name": "North",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "kik": {
+   "name": "Kik",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "sortable": {
+   "name": "Sortable",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "sandvine": {
+   "name": "Sandvine",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "dejero": {
+   "name": "Dejero",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "clearpath-robotics": {
+   "name": "Clearpath Robotics",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "otto-motors": {
+   "name": "OTTO Motors",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "maplesoft": {
+   "name": "Maplesoft",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "fanduel": {
+   "name": "FanDuel",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "draftkings": {
+   "name": "DraftKings",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "thescore": {
+   "name": "theScore",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "pointsbet": {
+   "name": "PointsBet",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "score-media-gaming": {
+   "name": "Score Media and Gaming",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "1qbit": {
+   "name": "1QBit",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "altaml": {
+   "name": "AltaML",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "applied-brain-research": {
+   "name": "Applied Brain Research",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "ideogram": {
+   "name": "Ideogram",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "amii": {
+   "name": "Amii",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "element-ai": {
+   "name": "Element AI",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "darwin-ai": {
+   "name": "Darwin AI",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "mindgrasp": {
+   "name": "Mindgrasp",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "stack-ai": {
+   "name": "Stack AI",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "taiv": {
+   "name": "Taiv",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "aisle-24": {
+   "name": "Aisle 24",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "swap-commerce": {
+   "name": "Swap Commerce",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "ritual-technologies": {
+   "name": "Ritual Technologies",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "wealthsimple-invest": {
+   "name": "Wealthsimple Invest",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "juno": {
+   "name": "Juno",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "lighthouse-labs": {
+   "name": "Lighthouse Labs",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "brainstation": {
+   "name": "BrainStation",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "bitfarms": {
+   "name": "Bitfarms",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "hut-8": {
+   "name": "Hut 8",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "galaxy-digital": {
+   "name": "Galaxy Digital",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "wonder": {
+   "name": "Wonder",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "uber-eats": {
+   "name": "Uber Eats",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "plato": {
+   "name": "Plato",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "faire-wholesale": {
+   "name": "Faire Wholesale",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "fiix": {
+   "name": "Fiix",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "rockwell-automation": {
+   "name": "Rockwell Automation",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "hatch": {
+   "name": "Hatch",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "cognizant": {
+   "name": "Cognizant",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "thoughtworks": {
+   "name": "Thoughtworks",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "slalom": {
+   "name": "Slalom",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "publicis-sapient": {
+   "name": "Publicis Sapient",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "deloitte-digital": {
+   "name": "Deloitte Digital",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "pwc": {
+   "name": "PwC Canada",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "capco": {
+   "name": "Capco",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "infosys": {
+   "name": "Infosys",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "wipro": {
+   "name": "Wipro",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "tcs": {
+   "name": "TCS",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "hcltech": {
+   "name": "HCLTech",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "ciklum": {
+   "name": "Ciklum",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "epam": {
+   "name": "EPAM",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "globant": {
+   "name": "Globant",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "endava": {
+   "name": "Endava",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "nagarro": {
+   "name": "Nagarro",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "3pillar": {
+   "name": "3Pillar",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "kin-carta": {
+   "name": "Kin + Carta",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "myplanet": {
+   "name": "Myplanet",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "rangle-io": {
+   "name": "Rangle.io",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "konrad-group": {
+   "name": "Konrad Group",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "arctouch": {
+   "name": "ArcTouch",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
+  },
+  "polar": {
+   "name": "Polar",
+   "routes": {
+    "list": "Claude's wide-net list (10-17): Canadian SaaS and scale-ups"
+   },
+   "status": "new",
+   "first_found": "2026-10-17T07:24:12+00:00",
+   "segment_hint": "Canadian SaaS and scale-ups"
   }
  },
- "updated_at": "2026-10-16T11:07:01+00:00"
+ "updated_at": "2026-10-17T07:24:12+00:00"
 }

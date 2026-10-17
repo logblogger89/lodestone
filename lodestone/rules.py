@@ -38,6 +38,11 @@ def families() -> list[dict]:
     return [dict(f) for f in _cfg()["raw"]["families"]]
 
 
+def groups() -> list[str]:
+    """Headings the app groups role types under (setup cards, Profile)."""
+    return list(_cfg()["raw"].get("groups") or [])
+
+
 def default_families() -> list[str]:
     return list(_cfg()["raw"].get("default_families") or ["pm"])
 

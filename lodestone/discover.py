@@ -207,8 +207,8 @@ def add(items: list[dict]) -> dict:
     d = _load()
     n = 0
     for it in items:
-        if it.get("name") and it.get("route") in ("search", "vc", "capture", "lmia"):
-            _merge(d, it["name"], it["route"], it.get("evidence", ""), careers_url=it.get("url"))
+        if it.get("name") and it.get("route") in ("search", "vc", "capture", "lmia", "list"):
+            _merge(d, it["name"], it["route"], it.get("evidence", ""), careers_url=it.get("url"), **({"segment_hint": it["segment"]} if it.get("segment") else {}))
             n += 1
     _save(d)
     return {"added_or_updated": n, "total_candidates": len(d["candidates"])}
@@ -228,9 +228,11 @@ def _probe_one(c: dict) -> dict:
     except Exception as e:
         return {"board": {"platform": ats, "slug": slug, "confidence": conf}, "probe_error": str(e)[:120]}
     ca = [p for p in posts if classify(p).in_canada]
-    roles = [p for p in ca if (r := classify_title(p.title)).tier not in (None, "Other") and not r.excluded]   # near the default families
+    biz = [p for p in ca if (r := classify_title(p.title)).family and not r.excluded]                    # any business-facing family (D-080)
+    roles = [p for p in biz if classify_title(p.title).tier not in (None, "Other")]                      # near the default families
     return {"board": {"platform": ats, "slug": slug, "confidence": conf}, "jobs_total": len(posts), "jobs_canada": len(ca),
-            "roles_canada": len(roles), "sample_roles": [f"{p.title} ({p.location_raw})"[:90] for p in roles[:4]]}
+            "roles_canada": len(roles), "business_roles_canada": len(biz),
+            "sample_roles": [f"{p.title} ({p.location_raw})"[:90] for p in (roles or biz)[:4]]}
 
 
 def probe(limit: int | None = None, only_new: bool = True) -> dict:

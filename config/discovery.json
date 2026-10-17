@@ -16,6 +16,30 @@
     {
       "name": "Real Ventures",
       "url": "https://jobs.realventures.com"
+    },
+    {
+      "name": "Georgian",
+      "url": "https://careers.georgian.io"
+    },
+    {
+      "name": "Brightspark Ventures",
+      "url": "https://careers.brightspark.com"
+    },
+    {
+      "name": "Accel (Canadian locations only)",
+      "url": "https://jobs.accel.com"
+    },
+    {
+      "name": "General Catalyst (Canadian locations only)",
+      "url": "https://jobs.generalcatalyst.com"
+    },
+    {
+      "name": "Insight Partners (Canadian locations only)",
+      "url": "https://jobs.insightpartners.com"
+    },
+    {
+      "name": "Notable Capital (Canadian locations only)",
+      "url": "https://jobs.ggvc.com"
     }
   ],
   "lmia_min_tech_hires": 5,
