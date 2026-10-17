@@ -287,7 +287,8 @@ def export() -> dict:
 
 
 def apply(folder: str) -> dict:
-    """Ayush's decisions from the app (`company_decisions` docs saved with ArtifactData list out_dir)."""
+    """Ayush's decisions from the app (`company_decisions` docs saved with ArtifactData list out_dir), or a folder of
+    {"decision": "approve", "note"} files when he asked for companies to be added directly (D-080)."""
     from pathlib import Path
     d = _load()
     seed_rows = store.read_seed()
@@ -311,7 +312,7 @@ def apply(folder: str) -> dict:
             if b and b.get("confidence") == "high":
                 rows.append({"company": name, "platform": b["platform"], "feed": {"slug": b["slug"]}, "status": "active",
                              "verified_at": store.now()[:10], "found_by": "discovery", "careers_url": c.get("careers_url") or "",
-                             "notes": "Approved by Ayush from discovery"})
+                             "notes": dec.get("note") or "Approved by Ayush from discovery"})
             c["status"] = "approved"
             approved.append(name)
     if approved:
